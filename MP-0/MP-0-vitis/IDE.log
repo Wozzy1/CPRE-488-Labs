@@ -1,0 +1,20 @@
+17:22:59 INFO  : Registering command handlers for Vitis TCF services
+17:22:59 INFO  : Launching XSCT server: xsct.bat -n  -interactive X:\cpre488\MP-0\MP-0-vitis\temp_xsdb_launch_script.tcl
+17:23:01 INFO  : XSCT server has started successfully.
+17:23:01 INFO  : plnx-install-location is set to ''
+17:23:02 INFO  : Platform repository initialization has completed.
+17:23:03 INFO  : Successfully done setting XSCT server connection channel  
+17:23:03 INFO  : Successfully done query RDI_DATADIR 
+17:23:03 INFO  : Successfully done setting workspace for the tool. 
+17:27:26 INFO  : Result from executing command 'getProjects': design_1_wrapper
+17:27:26 INFO  : Result from executing command 'getPlatforms': 
+17:27:28 INFO  : Platform 'design_1_wrapper' is added to custom repositories.
+17:27:34 INFO  : Platform 'design_1_wrapper' is added to custom repositories.
+17:33:47 INFO  : Launching XSCT server: xsct.bat -n  -interactive X:\cpre488\MP-0\MP-0-vitis\temp_xsdb_launch_script.tcl
+17:33:48 INFO  : XSCT server has started successfully.
+17:33:48 INFO  : plnx-install-location is set to ''
+17:33:48 INFO  : Successfully done setting XSCT server connection channel  
+17:33:48 INFO  : Successfully done setting workspace for the tool. 
+17:33:50 INFO  : Registering command handlers for Vitis TCF services
+17:33:50 INFO  : Platform repository initialization has completed.
+17:33:50 INFO  : Successfully done query RDI_DATADIR 

@@ -1,0 +1,1426 @@
+TRACE::2026-01-27.17:27:11::SCWPlatform::Trying to open the hw design at X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:11::SCWPlatform::DSA given X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:11::SCWPlatform::DSA absoulate path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:12::SCWPlatform::DSA directory X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw
+TRACE::2026-01-27.17:27:12::SCWPlatform:: Platform Path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:12::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2026-01-27.17:27:12::SCWPlatform::Do not have an existing db opened. 
+TRACE::2026-01-27.17:27:14::SCWPlatform::Opened new HwDB with name design_1_wrapper_0
+TRACE::2026-01-27.17:27:14::SCWWriter::formatted JSON is {
+	"platformName":	"design_1_wrapper",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"design_1_wrapper",
+	"platHandOff":	"X:/cpre488/MP-0/MP-0/design_1_wrapper.xsa",
+	"platIntHandOff":	"<platformDir>/hw/design_1_wrapper.xsa",
+	"deviceType":	"zynq",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	""
+}
+TRACE::2026-01-27.17:27:14::SCWWriter::formatted JSON is {
+	"platformName":	"design_1_wrapper",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"design_1_wrapper",
+	"platHandOff":	"X:/cpre488/MP-0/MP-0/design_1_wrapper.xsa",
+	"platIntHandOff":	"<platformDir>/hw/design_1_wrapper.xsa",
+	"deviceType":	"zynq",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"design_1_wrapper",
+	"systems":	[{
+			"systemName":	"design_1_wrapper",
+			"systemDesc":	"design_1_wrapper",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"design_1_wrapper"
+		}]
+}
+TRACE::2026-01-27.17:27:14::SCWPlatform::Boot application domains not present, creating them
+TRACE::2026-01-27.17:27:14::SCWDomain::checking for install qemu data   : 
+TRACE::2026-01-27.17:27:14::SCWDomain:: Using the QEMU Data from install at  : C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/
+TRACE::2026-01-27.17:27:14::SCWDomain:: Using the QEMU args  from install at  : C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt
+TRACE::2026-01-27.17:27:14::SCWPlatform::Trying to open the hw design at X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:14::SCWPlatform::DSA given X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:14::SCWPlatform::DSA absoulate path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:14::SCWPlatform::DSA directory X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw
+TRACE::2026-01-27.17:27:14::SCWPlatform:: Platform Path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:14::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2026-01-27.17:27:14::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2026-01-27.17:27:14::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2026-01-27.17:27:14::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-01-27.17:27:14::SCWPlatform::Trying to open the hw design at X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:14::SCWPlatform::DSA given X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:14::SCWPlatform::DSA absoulate path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:14::SCWPlatform::DSA directory X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw
+TRACE::2026-01-27.17:27:14::SCWPlatform:: Platform Path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:14::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2026-01-27.17:27:14::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2026-01-27.17:27:14::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2026-01-27.17:27:14::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-01-27.17:27:14::SCWPlatform::Trying to open the hw design at X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:14::SCWPlatform::DSA given X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:14::SCWPlatform::DSA absoulate path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:14::SCWPlatform::DSA directory X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw
+TRACE::2026-01-27.17:27:14::SCWPlatform:: Platform Path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:14::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2026-01-27.17:27:14::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2026-01-27.17:27:14::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2026-01-27.17:27:14::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-01-27.17:27:14::SCWPlatform::Boot application domain added for zynq_fsbl
+TRACE::2026-01-27.17:27:14::SCWPlatform::Generating the sources  .
+TRACE::2026-01-27.17:27:14::SCWBDomain::Generating boot domain sources.
+TRACE::2026-01-27.17:27:14::SCWBDomain:: Generating the zynq_fsbl Application.
+TRACE::2026-01-27.17:27:14::SCWPlatform::Trying to open the hw design at X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:14::SCWPlatform::DSA given X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:14::SCWPlatform::DSA absoulate path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:14::SCWPlatform::DSA directory X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw
+TRACE::2026-01-27.17:27:14::SCWPlatform:: Platform Path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:14::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2026-01-27.17:27:14::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2026-01-27.17:27:14::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2026-01-27.17:27:14::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-01-27.17:27:14::SCWMssOS::Checking the sw design at  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-01-27.17:27:14::SCWMssOS::DEBUG:  swdes dump  
+TRACE::2026-01-27.17:27:14::SCWMssOS::No sw design opened at  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-01-27.17:27:14::SCWMssOS::mss does not exists at X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-01-27.17:27:14::SCWMssOS::Creating sw design at  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-01-27.17:27:14::SCWMssOS::Adding the swdes entry, created swdb X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss with des name X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-01-27.17:27:14::SCWMssOS::updating the scw layer changes to swdes at   X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-01-27.17:27:14::SCWMssOS::Writing mss at X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-01-27.17:27:14::SCWMssOS::Completed writing the mss file at X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp
+TRACE::2026-01-27.17:27:14::SCWMssOS::Picking up changes from newly written mss file into SCW Layer. 
+TRACE::2026-01-27.17:27:14::SCWMssOS::Updated the changes from newly written mss file into SCW Layer. 
+TRACE::2026-01-27.17:27:14::SCWBDomain::Completed writing the mss file at X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp
+TRACE::2026-01-27.17:27:22::SCWPlatform::Generating sources Done.
+TRACE::2026-01-27.17:27:22::SCWPlatform::Trying to open the hw design at X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:22::SCWPlatform::DSA given X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:22::SCWPlatform::DSA absoulate path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:22::SCWPlatform::DSA directory X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw
+TRACE::2026-01-27.17:27:22::SCWPlatform:: Platform Path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:22::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2026-01-27.17:27:22::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2026-01-27.17:27:22::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2026-01-27.17:27:22::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-01-27.17:27:22::SCWMssOS::Checking the sw design at  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-01-27.17:27:22::SCWMssOS::DEBUG:  swdes dump  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss||
+
+KEYINFO::2026-01-27.17:27:22::SCWMssOS::Could not open the swdb for X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+KEYINFO::2026-01-27.17:27:22::SCWMssOS::Could not open the sw design at  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+ERROR: [Hsi 55-1558] Software Design X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss is not found
+
+TRACE::2026-01-27.17:27:22::SCWMssOS::Cleared the swdb table entry
+TRACE::2026-01-27.17:27:22::SCWMssOS::No sw design opened at  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-01-27.17:27:22::SCWMssOS::mss exists loading the mss file  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-01-27.17:27:22::SCWMssOS::Opened the sw design from mss  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-01-27.17:27:22::SCWMssOS::Adding the swdes entry X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss with des name system
+TRACE::2026-01-27.17:27:22::SCWMssOS::updating the scw layer about changes
+TRACE::2026-01-27.17:27:22::SCWMssOS::Opened the sw design.  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-01-27.17:27:22::SCWMssOS::Saving the mss changes X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-01-27.17:27:22::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2026-01-27.17:27:22::SCWMssOS::Completed writemss as part of save.
+TRACE::2026-01-27.17:27:22::SCWMssOS::Commit changes completed.
+TRACE::2026-01-27.17:27:22::SCWPlatform::Trying to open the hw design at X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:22::SCWPlatform::DSA given X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:22::SCWPlatform::DSA absoulate path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:22::SCWPlatform::DSA directory X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw
+TRACE::2026-01-27.17:27:22::SCWPlatform:: Platform Path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:22::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2026-01-27.17:27:22::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2026-01-27.17:27:22::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2026-01-27.17:27:22::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-01-27.17:27:22::SCWMssOS::Checking the sw design at  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-01-27.17:27:22::SCWMssOS::DEBUG:  swdes dump  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2026-01-27.17:27:22::SCWMssOS::Sw design exists and opened at  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-01-27.17:27:22::SCWPlatform::Trying to open the hw design at X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:22::SCWPlatform::DSA given X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:22::SCWPlatform::DSA absoulate path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:22::SCWPlatform::DSA directory X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw
+TRACE::2026-01-27.17:27:22::SCWPlatform:: Platform Path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:22::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2026-01-27.17:27:22::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2026-01-27.17:27:22::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2026-01-27.17:27:22::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-01-27.17:27:22::SCWMssOS::Checking the sw design at  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-01-27.17:27:22::SCWMssOS::DEBUG:  swdes dump  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2026-01-27.17:27:22::SCWMssOS::Sw design exists and opened at  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-01-27.17:27:22::SCWPlatform::Trying to open the hw design at X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:22::SCWPlatform::DSA given X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:22::SCWPlatform::DSA absoulate path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:22::SCWPlatform::DSA directory X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw
+TRACE::2026-01-27.17:27:22::SCWPlatform:: Platform Path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:22::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2026-01-27.17:27:22::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2026-01-27.17:27:22::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2026-01-27.17:27:22::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-01-27.17:27:22::SCWMssOS::Checking the sw design at  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-01-27.17:27:22::SCWMssOS::DEBUG:  swdes dump  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2026-01-27.17:27:22::SCWMssOS::Sw design exists and opened at  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-01-27.17:27:22::SCWWriter::formatted JSON is {
+	"platformName":	"design_1_wrapper",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"design_1_wrapper",
+	"platHandOff":	"X:/cpre488/MP-0/MP-0/design_1_wrapper.xsa",
+	"platIntHandOff":	"<platformDir>/hw/design_1_wrapper.xsa",
+	"deviceType":	"zynq",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"platFsblTarget":	"ps7_cortexa9_0",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"fsblExtraCompilerFlags":	"-MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard ",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"design_1_wrapper",
+	"systems":	[{
+			"systemName":	"design_1_wrapper",
+			"systemDesc":	"design_1_wrapper",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"design_1_wrapper",
+			"sysActiveDom":	"zynq_fsbl",
+			"sysDefaultDom":	"",
+			"domains":	[{
+					"domainName":	"zynq_fsbl",
+					"domainDispName":	"zynq_fsbl",
+					"domainDesc":	"FSBL Application BSP - Auto Generated.",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.2",
+					"mssFile":	"",
+					"md5Digest":	"d070912764dbc9091b0675940dbd0d2a",
+					"compatibleApp":	"zynq_fsbl",
+					"domType":	"bootDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:4.3", "xilrsa:1.6"],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+TRACE::2026-01-27.17:27:22::SCWMssOS::Saving the mss changes X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-01-27.17:27:22::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2026-01-27.17:27:22::SCWMssOS::Completed writemss as part of save.
+TRACE::2026-01-27.17:27:22::SCWMssOS::Commit changes completed.
+TRACE::2026-01-27.17:27:22::SCWPlatform::Trying to open the hw design at X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:22::SCWPlatform::DSA given X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:22::SCWPlatform::DSA absoulate path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:22::SCWPlatform::DSA directory X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw
+TRACE::2026-01-27.17:27:22::SCWPlatform:: Platform Path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:22::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2026-01-27.17:27:22::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2026-01-27.17:27:22::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2026-01-27.17:27:22::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-01-27.17:27:22::SCWMssOS::Checking the sw design at  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-01-27.17:27:22::SCWMssOS::DEBUG:  swdes dump  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2026-01-27.17:27:22::SCWMssOS::Sw design exists and opened at  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-01-27.17:27:22::SCWPlatform::Trying to open the hw design at X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:22::SCWPlatform::DSA given X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:22::SCWPlatform::DSA absoulate path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:22::SCWPlatform::DSA directory X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw
+TRACE::2026-01-27.17:27:22::SCWPlatform:: Platform Path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:22::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2026-01-27.17:27:22::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2026-01-27.17:27:22::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2026-01-27.17:27:22::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-01-27.17:27:22::SCWMssOS::Checking the sw design at  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-01-27.17:27:22::SCWMssOS::DEBUG:  swdes dump  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2026-01-27.17:27:22::SCWMssOS::Sw design exists and opened at  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-01-27.17:27:22::SCWPlatform::Trying to open the hw design at X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:22::SCWPlatform::DSA given X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:22::SCWPlatform::DSA absoulate path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:22::SCWPlatform::DSA directory X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw
+TRACE::2026-01-27.17:27:22::SCWPlatform:: Platform Path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:22::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2026-01-27.17:27:22::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2026-01-27.17:27:22::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2026-01-27.17:27:22::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-01-27.17:27:22::SCWMssOS::Checking the sw design at  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-01-27.17:27:22::SCWMssOS::DEBUG:  swdes dump  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2026-01-27.17:27:22::SCWMssOS::Sw design exists and opened at  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-01-27.17:27:22::SCWWriter::formatted JSON is {
+	"platformName":	"design_1_wrapper",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"design_1_wrapper",
+	"platHandOff":	"X:/cpre488/MP-0/MP-0/design_1_wrapper.xsa",
+	"platIntHandOff":	"<platformDir>/hw/design_1_wrapper.xsa",
+	"deviceType":	"zynq",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"platFsblTarget":	"ps7_cortexa9_0",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"fsblExtraCompilerFlags":	"-MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard ",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"design_1_wrapper",
+	"systems":	[{
+			"systemName":	"design_1_wrapper",
+			"systemDesc":	"design_1_wrapper",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"design_1_wrapper",
+			"sysActiveDom":	"zynq_fsbl",
+			"sysDefaultDom":	"",
+			"domains":	[{
+					"domainName":	"zynq_fsbl",
+					"domainDispName":	"zynq_fsbl",
+					"domainDesc":	"FSBL Application BSP - Auto Generated.",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.2",
+					"mssFile":	"",
+					"md5Digest":	"d070912764dbc9091b0675940dbd0d2a",
+					"compatibleApp":	"zynq_fsbl",
+					"domType":	"bootDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:4.3", "xilrsa:1.6"],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+TRACE::2026-01-27.17:27:23::SCWDomain::checking for install qemu data   : 
+TRACE::2026-01-27.17:27:23::SCWDomain:: Using the QEMU Data from install at  : C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/
+TRACE::2026-01-27.17:27:23::SCWDomain:: Using the QEMU args  from install at  : C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt
+TRACE::2026-01-27.17:27:23::SCWPlatform::Trying to open the hw design at X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:23::SCWPlatform::DSA given X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:23::SCWPlatform::DSA absoulate path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:23::SCWPlatform::DSA directory X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw
+TRACE::2026-01-27.17:27:23::SCWPlatform:: Platform Path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:23::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2026-01-27.17:27:23::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2026-01-27.17:27:23::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2026-01-27.17:27:23::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-01-27.17:27:23::SCWPlatform::Trying to open the hw design at X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:23::SCWPlatform::DSA given X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:23::SCWPlatform::DSA absoulate path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:23::SCWPlatform::DSA directory X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw
+TRACE::2026-01-27.17:27:23::SCWPlatform:: Platform Path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:23::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2026-01-27.17:27:23::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2026-01-27.17:27:23::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2026-01-27.17:27:23::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-01-27.17:27:23::SCWPlatform::Trying to open the hw design at X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:23::SCWPlatform::DSA given X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:23::SCWPlatform::DSA absoulate path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:23::SCWPlatform::DSA directory X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw
+TRACE::2026-01-27.17:27:23::SCWPlatform:: Platform Path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:23::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2026-01-27.17:27:23::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2026-01-27.17:27:23::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2026-01-27.17:27:23::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-01-27.17:27:23::SCWMssOS::Checking the sw design at  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss
+TRACE::2026-01-27.17:27:23::SCWMssOS::DEBUG:  swdes dump  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2026-01-27.17:27:23::SCWMssOS::No sw design opened at  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss
+TRACE::2026-01-27.17:27:23::SCWMssOS::mss does not exists at X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss
+TRACE::2026-01-27.17:27:23::SCWMssOS::Creating sw design at  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss
+TRACE::2026-01-27.17:27:23::SCWMssOS::Adding the swdes entry, created swdb X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss with des name X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss
+TRACE::2026-01-27.17:27:23::SCWMssOS::updating the scw layer changes to swdes at   X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss
+TRACE::2026-01-27.17:27:23::SCWMssOS::Writing mss at X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss
+TRACE::2026-01-27.17:27:23::SCWMssOS::Completed writing the mss file at X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp
+TRACE::2026-01-27.17:27:23::SCWMssOS::Picking up changes from newly written mss file into SCW Layer. 
+TRACE::2026-01-27.17:27:23::SCWMssOS::Updated the changes from newly written mss file into SCW Layer. 
+TRACE::2026-01-27.17:27:23::SCWMssOS::Completed writing the mss file at X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp
+TRACE::2026-01-27.17:27:23::SCWMssOS::Forcing BSP Sources regeneration.
+TRACE::2026-01-27.17:27:26::SCWMssOS::Saving the mss changes X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-01-27.17:27:26::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2026-01-27.17:27:26::SCWMssOS::Completed writemss as part of save.
+TRACE::2026-01-27.17:27:26::SCWMssOS::Commit changes completed.
+TRACE::2026-01-27.17:27:26::SCWMssOS::Saving the mss changes X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss
+TRACE::2026-01-27.17:27:26::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2026-01-27.17:27:26::SCWMssOS::Running validate of swdbs.
+KEYINFO::2026-01-27.17:27:26::SCWMssOS::Could not open the swdb for X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss
+KEYINFO::2026-01-27.17:27:26::SCWMssOS::Could not open the sw design at  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss
+ERROR: [Hsi 55-1558] Software Design X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss is not found
+
+TRACE::2026-01-27.17:27:26::SCWMssOS::Cleared the swdb table entry
+TRACE::2026-01-27.17:27:26::SCWMssOS::Adding the swdes entry, mss present, able to open swdb X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss with des name system_0
+TRACE::2026-01-27.17:27:26::SCWMssOS::Writing the mss file completed X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss
+TRACE::2026-01-27.17:27:26::SCWMssOS::Commit changes completed.
+TRACE::2026-01-27.17:27:26::SCWPlatform::Trying to open the hw design at X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:26::SCWPlatform::DSA given X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:26::SCWPlatform::DSA absoulate path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:26::SCWPlatform::DSA directory X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw
+TRACE::2026-01-27.17:27:26::SCWPlatform:: Platform Path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:26::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2026-01-27.17:27:26::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2026-01-27.17:27:26::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2026-01-27.17:27:26::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-01-27.17:27:26::SCWMssOS::Checking the sw design at  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-01-27.17:27:26::SCWMssOS::DEBUG:  swdes dump  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss|system_0||
+X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2026-01-27.17:27:26::SCWMssOS::Sw design exists and opened at  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-01-27.17:27:26::SCWPlatform::Trying to open the hw design at X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:26::SCWPlatform::DSA given X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:26::SCWPlatform::DSA absoulate path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:26::SCWPlatform::DSA directory X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw
+TRACE::2026-01-27.17:27:26::SCWPlatform:: Platform Path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:26::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2026-01-27.17:27:26::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2026-01-27.17:27:26::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2026-01-27.17:27:26::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-01-27.17:27:26::SCWMssOS::Checking the sw design at  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-01-27.17:27:26::SCWMssOS::DEBUG:  swdes dump  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss|system_0||
+X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2026-01-27.17:27:26::SCWMssOS::Sw design exists and opened at  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-01-27.17:27:26::SCWPlatform::Trying to open the hw design at X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:26::SCWPlatform::DSA given X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:26::SCWPlatform::DSA absoulate path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:26::SCWPlatform::DSA directory X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw
+TRACE::2026-01-27.17:27:26::SCWPlatform:: Platform Path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:26::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2026-01-27.17:27:26::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2026-01-27.17:27:26::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2026-01-27.17:27:26::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-01-27.17:27:26::SCWMssOS::Checking the sw design at  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-01-27.17:27:26::SCWMssOS::DEBUG:  swdes dump  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss|system_0||
+X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2026-01-27.17:27:26::SCWMssOS::Sw design exists and opened at  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-01-27.17:27:26::SCWPlatform::Trying to open the hw design at X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:26::SCWPlatform::DSA given X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:26::SCWPlatform::DSA absoulate path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:26::SCWPlatform::DSA directory X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw
+TRACE::2026-01-27.17:27:26::SCWPlatform:: Platform Path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:26::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2026-01-27.17:27:26::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2026-01-27.17:27:26::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2026-01-27.17:27:26::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-01-27.17:27:26::SCWMssOS::Checking the sw design at  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss
+TRACE::2026-01-27.17:27:26::SCWMssOS::DEBUG:  swdes dump  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss|system_0||
+X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2026-01-27.17:27:26::SCWMssOS::Sw design exists and opened at  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss
+TRACE::2026-01-27.17:27:26::SCWPlatform::Trying to open the hw design at X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:26::SCWPlatform::DSA given X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:26::SCWPlatform::DSA absoulate path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:26::SCWPlatform::DSA directory X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw
+TRACE::2026-01-27.17:27:26::SCWPlatform:: Platform Path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:26::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2026-01-27.17:27:26::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2026-01-27.17:27:26::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2026-01-27.17:27:26::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-01-27.17:27:26::SCWMssOS::Checking the sw design at  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss
+TRACE::2026-01-27.17:27:26::SCWMssOS::DEBUG:  swdes dump  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss|system_0||
+X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2026-01-27.17:27:26::SCWMssOS::Sw design exists and opened at  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss
+TRACE::2026-01-27.17:27:26::SCWPlatform::Trying to open the hw design at X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:26::SCWPlatform::DSA given X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:26::SCWPlatform::DSA absoulate path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:26::SCWPlatform::DSA directory X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw
+TRACE::2026-01-27.17:27:26::SCWPlatform:: Platform Path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:26::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2026-01-27.17:27:26::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2026-01-27.17:27:26::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2026-01-27.17:27:26::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-01-27.17:27:26::SCWMssOS::Checking the sw design at  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss
+TRACE::2026-01-27.17:27:26::SCWMssOS::DEBUG:  swdes dump  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss|system_0||
+X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2026-01-27.17:27:26::SCWMssOS::Sw design exists and opened at  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss
+TRACE::2026-01-27.17:27:26::SCWWriter::formatted JSON is {
+	"platformName":	"design_1_wrapper",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"design_1_wrapper",
+	"platHandOff":	"X:/cpre488/MP-0/MP-0/design_1_wrapper.xsa",
+	"platIntHandOff":	"<platformDir>/hw/design_1_wrapper.xsa",
+	"deviceType":	"zynq",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"platFsblTarget":	"ps7_cortexa9_0",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"fsblExtraCompilerFlags":	"-MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard ",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"design_1_wrapper",
+	"systems":	[{
+			"systemName":	"design_1_wrapper",
+			"systemDesc":	"design_1_wrapper",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"design_1_wrapper",
+			"sysActiveDom":	"domain_ps7_cortexa9_0",
+			"sysDefaultDom":	"domain_ps7_cortexa9_0",
+			"domains":	[{
+					"domainName":	"zynq_fsbl",
+					"domainDispName":	"zynq_fsbl",
+					"domainDesc":	"FSBL Application BSP - Auto Generated.",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.2",
+					"mssFile":	"",
+					"md5Digest":	"d070912764dbc9091b0675940dbd0d2a",
+					"compatibleApp":	"zynq_fsbl",
+					"domType":	"bootDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:4.3", "xilrsa:1.6"],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}, {
+					"domainName":	"domain_ps7_cortexa9_0",
+					"domainDispName":	"domain_ps7_cortexa9_0",
+					"domainDesc":	"domain_ps7_cortexa9_0",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"qemuArgs":	"C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt",
+					"qemuData":	"C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.2",
+					"mssFile":	"",
+					"md5Digest":	"5ae316de3f4391f8eb31fb72c822226d",
+					"compatibleApp":	"hello_world",
+					"domType":	"mssDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	[],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+LOG::2026-01-27.17:27:26::SCWPlatform::Started generating the artifacts platform design_1_wrapper
+TRACE::2026-01-27.17:27:26::SCWPlatform::Sanity checking of platform is completed
+LOG::2026-01-27.17:27:26::SCWPlatform::Started generating the artifacts for system configuration design_1_wrapper
+LOG::2026-01-27.17:27:26::SCWSystem::Checking the domain zynq_fsbl
+LOG::2026-01-27.17:27:26::SCWSystem::Doing application build for :  zynq_fsbl
+TRACE::2026-01-27.17:27:26::SCWBDomain::Not a forced makefile updation, No changes are present. 
+TRACE::2026-01-27.17:27:26::SCWDomain::Skipping the build for domain :  zynq_fsbl
+LOG::2026-01-27.17:27:26::SCWSystem::Checking the domain domain_ps7_cortexa9_0
+LOG::2026-01-27.17:27:26::SCWSystem::Not a boot domain 
+LOG::2026-01-27.17:27:26::SCWSystem::Started Processing the domain domain_ps7_cortexa9_0
+TRACE::2026-01-27.17:27:26::SCWDomain::Generating domain artifcats
+TRACE::2026-01-27.17:27:26::SCWMssOS::Generating standalone artifcats
+TRACE::2026-01-27.17:27:26::SCWMssOS::Copying the qemu file from  C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt To X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/qemu/
+TRACE::2026-01-27.17:27:26::SCWMssOS::Copying the qemu file from  C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt To X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/domain_ps7_cortexa9_0/qemu/
+TRACE::2026-01-27.17:27:26::SCWMssOS:: Copying the user libraries. 
+TRACE::2026-01-27.17:27:26::SCWPlatform::Trying to open the hw design at X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:26::SCWPlatform::DSA given X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:26::SCWPlatform::DSA absoulate path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:26::SCWPlatform::DSA directory X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw
+TRACE::2026-01-27.17:27:26::SCWPlatform:: Platform Path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:26::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2026-01-27.17:27:26::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2026-01-27.17:27:26::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2026-01-27.17:27:26::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-01-27.17:27:26::SCWMssOS::Checking the sw design at  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss
+TRACE::2026-01-27.17:27:26::SCWMssOS::DEBUG:  swdes dump  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss|system_0||
+X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2026-01-27.17:27:26::SCWMssOS::Sw design exists and opened at  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss
+TRACE::2026-01-27.17:27:26::SCWMssOS::Completed writing the mss file at X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp
+TRACE::2026-01-27.17:27:26::SCWMssOS::Mss edits present, copying mssfile into export location X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss
+TRACE::2026-01-27.17:27:26::SCWMssOS::bsp generated is upto date with the mss file. Skipping bsp generation.
+TRACE::2026-01-27.17:27:26::SCWMssOS::BSP is already built. skipping the bsp build ... 
+TRACE::2026-01-27.17:27:26::SCWDomain::Skipping the build for domain :  domain_ps7_cortexa9_0
+TRACE::2026-01-27.17:27:26::SCWMssOS::skipping the bsp build ... 
+TRACE::2026-01-27.17:27:26::SCWMssOS::Copying to export directory.
+TRACE::2026-01-27.17:27:26::SCWMssOS:: Checking if to create the Supporting Applications
+TRACE::2026-01-27.17:27:26::SCWMssOS:: No Linux domain exists, trying to generate FSBL 
+TRACE::2026-01-27.17:27:26::SCWMssOS:: Completed Standalone Artifacts creation 
+LOG::2026-01-27.17:27:26::SCWSystem::Completed Processing the domain domain_ps7_cortexa9_0
+LOG::2026-01-27.17:27:26::SCWSystem::Completed Processing the sysconfig design_1_wrapper
+LOG::2026-01-27.17:27:26::SCWPlatform::Completed generating the artifacts for system configuration design_1_wrapper
+TRACE::2026-01-27.17:27:26::SCWPlatform::Started preparing the platform 
+TRACE::2026-01-27.17:27:26::SCWSystem::Writing the bif file for system config design_1_wrapper
+TRACE::2026-01-27.17:27:26::SCWSystem::dir created 
+TRACE::2026-01-27.17:27:26::SCWSystem::Writing the bif 
+TRACE::2026-01-27.17:27:26::SCWPlatform::Started writing the spfm file 
+TRACE::2026-01-27.17:27:26::SCWPlatform::Started writing the xpfm file 
+TRACE::2026-01-27.17:27:26::SCWPlatform::Completed generating the platform
+TRACE::2026-01-27.17:27:26::SCWMssOS::Saving the mss changes X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-01-27.17:27:26::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2026-01-27.17:27:26::SCWMssOS::Completed writemss as part of save.
+TRACE::2026-01-27.17:27:26::SCWMssOS::Commit changes completed.
+TRACE::2026-01-27.17:27:26::SCWMssOS::Saving the mss changes X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss
+TRACE::2026-01-27.17:27:26::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2026-01-27.17:27:26::SCWMssOS::Completed writemss as part of save.
+TRACE::2026-01-27.17:27:26::SCWMssOS::Commit changes completed.
+TRACE::2026-01-27.17:27:26::SCWPlatform::Trying to open the hw design at X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:26::SCWPlatform::DSA given X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:26::SCWPlatform::DSA absoulate path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:26::SCWPlatform::DSA directory X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw
+TRACE::2026-01-27.17:27:26::SCWPlatform:: Platform Path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:26::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2026-01-27.17:27:26::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2026-01-27.17:27:26::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2026-01-27.17:27:26::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-01-27.17:27:26::SCWMssOS::Checking the sw design at  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-01-27.17:27:26::SCWMssOS::DEBUG:  swdes dump  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss|system_0||
+X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2026-01-27.17:27:26::SCWMssOS::Sw design exists and opened at  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-01-27.17:27:26::SCWPlatform::Trying to open the hw design at X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:26::SCWPlatform::DSA given X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:26::SCWPlatform::DSA absoulate path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:26::SCWPlatform::DSA directory X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw
+TRACE::2026-01-27.17:27:26::SCWPlatform:: Platform Path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:26::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2026-01-27.17:27:26::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2026-01-27.17:27:26::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2026-01-27.17:27:26::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-01-27.17:27:26::SCWMssOS::Checking the sw design at  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-01-27.17:27:26::SCWMssOS::DEBUG:  swdes dump  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss|system_0||
+X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2026-01-27.17:27:26::SCWMssOS::Sw design exists and opened at  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-01-27.17:27:26::SCWPlatform::Trying to open the hw design at X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:26::SCWPlatform::DSA given X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:26::SCWPlatform::DSA absoulate path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:26::SCWPlatform::DSA directory X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw
+TRACE::2026-01-27.17:27:26::SCWPlatform:: Platform Path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:26::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2026-01-27.17:27:26::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2026-01-27.17:27:26::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2026-01-27.17:27:26::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-01-27.17:27:26::SCWMssOS::Checking the sw design at  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-01-27.17:27:26::SCWMssOS::DEBUG:  swdes dump  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss|system_0||
+X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2026-01-27.17:27:26::SCWMssOS::Sw design exists and opened at  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-01-27.17:27:26::SCWPlatform::Trying to open the hw design at X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:26::SCWPlatform::DSA given X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:26::SCWPlatform::DSA absoulate path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:26::SCWPlatform::DSA directory X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw
+TRACE::2026-01-27.17:27:26::SCWPlatform:: Platform Path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:26::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2026-01-27.17:27:26::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2026-01-27.17:27:26::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2026-01-27.17:27:26::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-01-27.17:27:26::SCWMssOS::Checking the sw design at  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss
+TRACE::2026-01-27.17:27:26::SCWMssOS::DEBUG:  swdes dump  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss|system_0||
+X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2026-01-27.17:27:26::SCWMssOS::Sw design exists and opened at  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss
+TRACE::2026-01-27.17:27:26::SCWPlatform::Trying to open the hw design at X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:26::SCWPlatform::DSA given X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:26::SCWPlatform::DSA absoulate path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:26::SCWPlatform::DSA directory X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw
+TRACE::2026-01-27.17:27:26::SCWPlatform:: Platform Path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:26::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2026-01-27.17:27:26::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2026-01-27.17:27:26::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2026-01-27.17:27:26::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-01-27.17:27:26::SCWMssOS::Checking the sw design at  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss
+TRACE::2026-01-27.17:27:26::SCWMssOS::DEBUG:  swdes dump  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss|system_0||
+X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2026-01-27.17:27:26::SCWMssOS::Sw design exists and opened at  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss
+TRACE::2026-01-27.17:27:26::SCWPlatform::Trying to open the hw design at X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:26::SCWPlatform::DSA given X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:26::SCWPlatform::DSA absoulate path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:26::SCWPlatform::DSA directory X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw
+TRACE::2026-01-27.17:27:26::SCWPlatform:: Platform Path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:26::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2026-01-27.17:27:26::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2026-01-27.17:27:26::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2026-01-27.17:27:26::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-01-27.17:27:26::SCWMssOS::Checking the sw design at  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss
+TRACE::2026-01-27.17:27:26::SCWMssOS::DEBUG:  swdes dump  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss|system_0||
+X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2026-01-27.17:27:26::SCWMssOS::Sw design exists and opened at  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss
+TRACE::2026-01-27.17:27:26::SCWWriter::formatted JSON is {
+	"platformName":	"design_1_wrapper",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"design_1_wrapper",
+	"platHandOff":	"X:/cpre488/MP-0/MP-0/design_1_wrapper.xsa",
+	"platIntHandOff":	"<platformDir>/hw/design_1_wrapper.xsa",
+	"deviceType":	"zynq",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"platFsblTarget":	"ps7_cortexa9_0",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"fsblExtraCompilerFlags":	"-MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard ",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"design_1_wrapper",
+	"systems":	[{
+			"systemName":	"design_1_wrapper",
+			"systemDesc":	"design_1_wrapper",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"design_1_wrapper",
+			"sysActiveDom":	"domain_ps7_cortexa9_0",
+			"sysDefaultDom":	"domain_ps7_cortexa9_0",
+			"domains":	[{
+					"domainName":	"zynq_fsbl",
+					"domainDispName":	"zynq_fsbl",
+					"domainDesc":	"FSBL Application BSP - Auto Generated.",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.2",
+					"mssFile":	"",
+					"md5Digest":	"d070912764dbc9091b0675940dbd0d2a",
+					"compatibleApp":	"zynq_fsbl",
+					"domType":	"bootDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:4.3", "xilrsa:1.6"],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}, {
+					"domainName":	"domain_ps7_cortexa9_0",
+					"domainDispName":	"domain_ps7_cortexa9_0",
+					"domainDesc":	"domain_ps7_cortexa9_0",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"qemuArgs":	"C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt",
+					"qemuData":	"C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.2",
+					"mssFile":	"",
+					"md5Digest":	"5ae316de3f4391f8eb31fb72c822226d",
+					"compatibleApp":	"hello_world",
+					"domType":	"mssDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	[],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+KEYINFO::2026-01-27.17:27:26::SCWPlatform::updated the xpfm file.
+TRACE::2026-01-27.17:27:27::SCWPlatform::Trying to open the hw design at X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:27::SCWPlatform::DSA given X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:27::SCWPlatform::DSA absoulate path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:27::SCWPlatform::DSA directory X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw
+TRACE::2026-01-27.17:27:27::SCWPlatform:: Platform Path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:27::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2026-01-27.17:27:27::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2026-01-27.17:27:27::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2026-01-27.17:27:27::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-01-27.17:27:27::SCWMssOS::Checking the sw design at  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss
+TRACE::2026-01-27.17:27:27::SCWMssOS::DEBUG:  swdes dump  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss|system_0||
+X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2026-01-27.17:27:27::SCWMssOS::Sw design exists and opened at  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss
+TRACE::2026-01-27.17:27:27::SCWMssOS::Saving the mss changes X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-01-27.17:27:27::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2026-01-27.17:27:27::SCWMssOS::Completed writemss as part of save.
+TRACE::2026-01-27.17:27:27::SCWMssOS::Commit changes completed.
+TRACE::2026-01-27.17:27:27::SCWMssOS::Saving the mss changes X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss
+TRACE::2026-01-27.17:27:27::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2026-01-27.17:27:27::SCWMssOS::Completed writemss as part of save.
+TRACE::2026-01-27.17:27:27::SCWMssOS::Commit changes completed.
+TRACE::2026-01-27.17:27:27::SCWPlatform::Trying to open the hw design at X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:27::SCWPlatform::DSA given X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:27::SCWPlatform::DSA absoulate path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:27::SCWPlatform::DSA directory X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw
+TRACE::2026-01-27.17:27:27::SCWPlatform:: Platform Path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:27::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2026-01-27.17:27:27::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2026-01-27.17:27:27::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2026-01-27.17:27:27::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-01-27.17:27:27::SCWMssOS::Checking the sw design at  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-01-27.17:27:27::SCWMssOS::DEBUG:  swdes dump  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss|system_0||
+X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2026-01-27.17:27:27::SCWMssOS::Sw design exists and opened at  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-01-27.17:27:27::SCWPlatform::Trying to open the hw design at X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:27::SCWPlatform::DSA given X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:27::SCWPlatform::DSA absoulate path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:27::SCWPlatform::DSA directory X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw
+TRACE::2026-01-27.17:27:27::SCWPlatform:: Platform Path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:27::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2026-01-27.17:27:27::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2026-01-27.17:27:27::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2026-01-27.17:27:27::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-01-27.17:27:27::SCWMssOS::Checking the sw design at  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-01-27.17:27:27::SCWMssOS::DEBUG:  swdes dump  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss|system_0||
+X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2026-01-27.17:27:27::SCWMssOS::Sw design exists and opened at  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-01-27.17:27:27::SCWPlatform::Trying to open the hw design at X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:27::SCWPlatform::DSA given X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:27::SCWPlatform::DSA absoulate path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:27::SCWPlatform::DSA directory X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw
+TRACE::2026-01-27.17:27:27::SCWPlatform:: Platform Path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:27::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2026-01-27.17:27:27::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2026-01-27.17:27:27::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2026-01-27.17:27:27::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-01-27.17:27:27::SCWMssOS::Checking the sw design at  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-01-27.17:27:27::SCWMssOS::DEBUG:  swdes dump  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss|system_0||
+X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2026-01-27.17:27:27::SCWMssOS::Sw design exists and opened at  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-01-27.17:27:27::SCWPlatform::Trying to open the hw design at X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:27::SCWPlatform::DSA given X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:27::SCWPlatform::DSA absoulate path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:27::SCWPlatform::DSA directory X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw
+TRACE::2026-01-27.17:27:27::SCWPlatform:: Platform Path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:27::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2026-01-27.17:27:27::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2026-01-27.17:27:27::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2026-01-27.17:27:27::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-01-27.17:27:27::SCWMssOS::Checking the sw design at  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss
+TRACE::2026-01-27.17:27:27::SCWMssOS::DEBUG:  swdes dump  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss|system_0||
+X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2026-01-27.17:27:27::SCWMssOS::Sw design exists and opened at  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss
+TRACE::2026-01-27.17:27:27::SCWPlatform::Trying to open the hw design at X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:27::SCWPlatform::DSA given X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:27::SCWPlatform::DSA absoulate path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:27::SCWPlatform::DSA directory X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw
+TRACE::2026-01-27.17:27:27::SCWPlatform:: Platform Path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:27::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2026-01-27.17:27:27::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2026-01-27.17:27:27::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2026-01-27.17:27:27::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-01-27.17:27:27::SCWMssOS::Checking the sw design at  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss
+TRACE::2026-01-27.17:27:27::SCWMssOS::DEBUG:  swdes dump  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss|system_0||
+X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2026-01-27.17:27:27::SCWMssOS::Sw design exists and opened at  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss
+TRACE::2026-01-27.17:27:27::SCWPlatform::Trying to open the hw design at X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:27::SCWPlatform::DSA given X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:27::SCWPlatform::DSA absoulate path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:27::SCWPlatform::DSA directory X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw
+TRACE::2026-01-27.17:27:27::SCWPlatform:: Platform Path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:27::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2026-01-27.17:27:27::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2026-01-27.17:27:27::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2026-01-27.17:27:27::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-01-27.17:27:27::SCWMssOS::Checking the sw design at  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss
+TRACE::2026-01-27.17:27:27::SCWMssOS::DEBUG:  swdes dump  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss|system_0||
+X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2026-01-27.17:27:27::SCWMssOS::Sw design exists and opened at  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss
+TRACE::2026-01-27.17:27:27::SCWWriter::formatted JSON is {
+	"platformName":	"design_1_wrapper",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"design_1_wrapper",
+	"platHandOff":	"X:/cpre488/MP-0/MP-0/design_1_wrapper.xsa",
+	"platIntHandOff":	"<platformDir>/hw/design_1_wrapper.xsa",
+	"deviceType":	"zynq",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"platFsblTarget":	"ps7_cortexa9_0",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"fsblExtraCompilerFlags":	"-MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard ",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"design_1_wrapper",
+	"systems":	[{
+			"systemName":	"design_1_wrapper",
+			"systemDesc":	"design_1_wrapper",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"design_1_wrapper",
+			"sysActiveDom":	"domain_ps7_cortexa9_0",
+			"sysDefaultDom":	"domain_ps7_cortexa9_0",
+			"domains":	[{
+					"domainName":	"zynq_fsbl",
+					"domainDispName":	"zynq_fsbl",
+					"domainDesc":	"FSBL Application BSP - Auto Generated.",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.2",
+					"mssFile":	"",
+					"md5Digest":	"d070912764dbc9091b0675940dbd0d2a",
+					"compatibleApp":	"zynq_fsbl",
+					"domType":	"bootDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:4.3", "xilrsa:1.6"],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}, {
+					"domainName":	"domain_ps7_cortexa9_0",
+					"domainDispName":	"domain_ps7_cortexa9_0",
+					"domainDesc":	"domain_ps7_cortexa9_0",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"qemuArgs":	"C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt",
+					"qemuData":	"C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.2",
+					"mssFile":	"",
+					"md5Digest":	"5ae316de3f4391f8eb31fb72c822226d",
+					"compatibleApp":	"hello_world",
+					"domType":	"mssDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	[],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+TRACE::2026-01-27.17:27:27::SCWPlatform::Trying to open the hw design at X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:27::SCWPlatform::DSA given X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:27::SCWPlatform::DSA absoulate path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:27::SCWPlatform::DSA directory X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw
+TRACE::2026-01-27.17:27:27::SCWPlatform:: Platform Path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:27::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2026-01-27.17:27:27::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2026-01-27.17:27:27::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2026-01-27.17:27:27::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-01-27.17:27:27::SCWMssOS::Checking the sw design at  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss
+TRACE::2026-01-27.17:27:27::SCWMssOS::DEBUG:  swdes dump  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss|system_0||
+X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2026-01-27.17:27:27::SCWMssOS::Sw design exists and opened at  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss
+TRACE::2026-01-27.17:27:27::SCWPlatform::Trying to open the hw design at X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:27::SCWPlatform::DSA given X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:27::SCWPlatform::DSA absoulate path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:27::SCWPlatform::DSA directory X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw
+TRACE::2026-01-27.17:27:27::SCWPlatform:: Platform Path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:27::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2026-01-27.17:27:27::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2026-01-27.17:27:27::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2026-01-27.17:27:27::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-01-27.17:27:27::SCWMssOS::Checking the sw design at  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss
+TRACE::2026-01-27.17:27:27::SCWMssOS::DEBUG:  swdes dump  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss|system_0||
+X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2026-01-27.17:27:27::SCWMssOS::Sw design exists and opened at  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss
+TRACE::2026-01-27.17:27:27::SCWMssOS::Saving the mss changes X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-01-27.17:27:27::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2026-01-27.17:27:27::SCWMssOS::Completed writemss as part of save.
+TRACE::2026-01-27.17:27:27::SCWMssOS::Commit changes completed.
+TRACE::2026-01-27.17:27:27::SCWMssOS::Saving the mss changes X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss
+TRACE::2026-01-27.17:27:27::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2026-01-27.17:27:27::SCWMssOS::Completed writemss as part of save.
+TRACE::2026-01-27.17:27:27::SCWMssOS::Commit changes completed.
+TRACE::2026-01-27.17:27:27::SCWPlatform::Trying to open the hw design at X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:27::SCWPlatform::DSA given X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:27::SCWPlatform::DSA absoulate path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:27::SCWPlatform::DSA directory X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw
+TRACE::2026-01-27.17:27:27::SCWPlatform:: Platform Path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:27::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2026-01-27.17:27:27::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2026-01-27.17:27:27::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2026-01-27.17:27:27::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-01-27.17:27:27::SCWMssOS::Checking the sw design at  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-01-27.17:27:27::SCWMssOS::DEBUG:  swdes dump  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss|system_0||
+X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2026-01-27.17:27:27::SCWMssOS::Sw design exists and opened at  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-01-27.17:27:27::SCWPlatform::Trying to open the hw design at X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:27::SCWPlatform::DSA given X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:27::SCWPlatform::DSA absoulate path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:27::SCWPlatform::DSA directory X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw
+TRACE::2026-01-27.17:27:27::SCWPlatform:: Platform Path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:27::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2026-01-27.17:27:27::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2026-01-27.17:27:27::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2026-01-27.17:27:27::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-01-27.17:27:27::SCWMssOS::Checking the sw design at  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-01-27.17:27:27::SCWMssOS::DEBUG:  swdes dump  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss|system_0||
+X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2026-01-27.17:27:27::SCWMssOS::Sw design exists and opened at  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-01-27.17:27:27::SCWPlatform::Trying to open the hw design at X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:27::SCWPlatform::DSA given X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:27::SCWPlatform::DSA absoulate path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:27::SCWPlatform::DSA directory X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw
+TRACE::2026-01-27.17:27:27::SCWPlatform:: Platform Path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:27::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2026-01-27.17:27:27::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2026-01-27.17:27:27::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2026-01-27.17:27:27::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-01-27.17:27:27::SCWMssOS::Checking the sw design at  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-01-27.17:27:27::SCWMssOS::DEBUG:  swdes dump  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss|system_0||
+X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2026-01-27.17:27:27::SCWMssOS::Sw design exists and opened at  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-01-27.17:27:27::SCWPlatform::Trying to open the hw design at X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:27::SCWPlatform::DSA given X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:27::SCWPlatform::DSA absoulate path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:27::SCWPlatform::DSA directory X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw
+TRACE::2026-01-27.17:27:27::SCWPlatform:: Platform Path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:27::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2026-01-27.17:27:27::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2026-01-27.17:27:27::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2026-01-27.17:27:27::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-01-27.17:27:27::SCWMssOS::Checking the sw design at  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss
+TRACE::2026-01-27.17:27:27::SCWMssOS::DEBUG:  swdes dump  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss|system_0||
+X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2026-01-27.17:27:27::SCWMssOS::Sw design exists and opened at  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss
+TRACE::2026-01-27.17:27:27::SCWPlatform::Trying to open the hw design at X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:27::SCWPlatform::DSA given X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:27::SCWPlatform::DSA absoulate path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:27::SCWPlatform::DSA directory X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw
+TRACE::2026-01-27.17:27:27::SCWPlatform:: Platform Path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:27::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2026-01-27.17:27:27::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2026-01-27.17:27:27::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2026-01-27.17:27:27::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-01-27.17:27:27::SCWMssOS::Checking the sw design at  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss
+TRACE::2026-01-27.17:27:27::SCWMssOS::DEBUG:  swdes dump  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss|system_0||
+X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2026-01-27.17:27:27::SCWMssOS::Sw design exists and opened at  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss
+TRACE::2026-01-27.17:27:27::SCWPlatform::Trying to open the hw design at X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:27::SCWPlatform::DSA given X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:27::SCWPlatform::DSA absoulate path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:27::SCWPlatform::DSA directory X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw
+TRACE::2026-01-27.17:27:27::SCWPlatform:: Platform Path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:27::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2026-01-27.17:27:27::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2026-01-27.17:27:27::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2026-01-27.17:27:27::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-01-27.17:27:27::SCWMssOS::Checking the sw design at  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss
+TRACE::2026-01-27.17:27:27::SCWMssOS::DEBUG:  swdes dump  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss|system_0||
+X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2026-01-27.17:27:27::SCWMssOS::Sw design exists and opened at  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss
+TRACE::2026-01-27.17:27:27::SCWWriter::formatted JSON is {
+	"platformName":	"design_1_wrapper",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"design_1_wrapper",
+	"platHandOff":	"X:/cpre488/MP-0/MP-0/design_1_wrapper.xsa",
+	"platIntHandOff":	"<platformDir>/hw/design_1_wrapper.xsa",
+	"deviceType":	"zynq",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"platFsblTarget":	"ps7_cortexa9_0",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"fsblExtraCompilerFlags":	"-MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard ",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"design_1_wrapper",
+	"systems":	[{
+			"systemName":	"design_1_wrapper",
+			"systemDesc":	"design_1_wrapper",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"design_1_wrapper",
+			"sysActiveDom":	"domain_ps7_cortexa9_0",
+			"sysDefaultDom":	"domain_ps7_cortexa9_0",
+			"domains":	[{
+					"domainName":	"zynq_fsbl",
+					"domainDispName":	"zynq_fsbl",
+					"domainDesc":	"FSBL Application BSP - Auto Generated.",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.2",
+					"mssFile":	"",
+					"md5Digest":	"d070912764dbc9091b0675940dbd0d2a",
+					"compatibleApp":	"zynq_fsbl",
+					"domType":	"bootDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:4.3", "xilrsa:1.6"],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}, {
+					"domainName":	"domain_ps7_cortexa9_0",
+					"domainDispName":	"domain_ps7_cortexa9_0",
+					"domainDesc":	"domain_ps7_cortexa9_0",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"qemuArgs":	"C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt",
+					"qemuData":	"C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.2",
+					"mssFile":	"",
+					"md5Digest":	"5ae316de3f4391f8eb31fb72c822226d",
+					"compatibleApp":	"hello_world",
+					"domType":	"mssDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	[],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+LOG::2026-01-27.17:27:27::SCWPlatform::Started generating the artifacts platform design_1_wrapper
+TRACE::2026-01-27.17:27:27::SCWPlatform::Sanity checking of platform is completed
+LOG::2026-01-27.17:27:27::SCWPlatform::Started generating the artifacts for system configuration design_1_wrapper
+LOG::2026-01-27.17:27:27::SCWSystem::Started Processing the domain domain_ps7_cortexa9_0
+TRACE::2026-01-27.17:27:27::SCWDomain::Generating domain artifcats
+TRACE::2026-01-27.17:27:27::SCWMssOS::Generating standalone artifcats
+TRACE::2026-01-27.17:27:27::SCWMssOS::Copying the qemu file from  C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt To X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/qemu/
+TRACE::2026-01-27.17:27:27::SCWMssOS::Copying the qemu file from  C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt To X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/domain_ps7_cortexa9_0/qemu/
+TRACE::2026-01-27.17:27:27::SCWMssOS:: Copying the user libraries. 
+TRACE::2026-01-27.17:27:27::SCWPlatform::Trying to open the hw design at X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:27::SCWPlatform::DSA given X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:27::SCWPlatform::DSA absoulate path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:27::SCWPlatform::DSA directory X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw
+TRACE::2026-01-27.17:27:27::SCWPlatform:: Platform Path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:27::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2026-01-27.17:27:27::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2026-01-27.17:27:27::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2026-01-27.17:27:27::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-01-27.17:27:27::SCWMssOS::Checking the sw design at  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss
+TRACE::2026-01-27.17:27:27::SCWMssOS::DEBUG:  swdes dump  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss|system_0||
+X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2026-01-27.17:27:27::SCWMssOS::Sw design exists and opened at  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss
+TRACE::2026-01-27.17:27:27::SCWMssOS::Completed writing the mss file at X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp
+TRACE::2026-01-27.17:27:27::SCWMssOS::Mss edits present, copying mssfile into export location X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss
+TRACE::2026-01-27.17:27:27::SCWMssOS::bsp generated is upto date with the mss file. Skipping bsp generation.
+TRACE::2026-01-27.17:27:27::SCWMssOS::BSP is already built. skipping the bsp build ... 
+TRACE::2026-01-27.17:27:27::SCWDomain::Building the domain as part of full build :  domain_ps7_cortexa9_0
+TRACE::2026-01-27.17:27:27::SCWMssOS::skipping the bsp build ... 
+TRACE::2026-01-27.17:27:27::SCWMssOS::Copying to export directory.
+TRACE::2026-01-27.17:27:27::SCWMssOS:: Checking if to create the Supporting Applications
+TRACE::2026-01-27.17:27:27::SCWMssOS:: No Linux domain exists, trying to generate FSBL 
+TRACE::2026-01-27.17:27:27::SCWMssOS:: Completed Standalone Artifacts creation 
+LOG::2026-01-27.17:27:27::SCWSystem::Completed Processing the domain domain_ps7_cortexa9_0
+LOG::2026-01-27.17:27:27::SCWSystem::Completed Processing the sysconfig design_1_wrapper
+LOG::2026-01-27.17:27:27::SCWPlatform::Completed generating the artifacts for system configuration design_1_wrapper
+TRACE::2026-01-27.17:27:27::SCWPlatform::Started preparing the platform 
+TRACE::2026-01-27.17:27:27::SCWSystem::Writing the bif file for system config design_1_wrapper
+TRACE::2026-01-27.17:27:27::SCWSystem::dir created 
+TRACE::2026-01-27.17:27:27::SCWSystem::Writing the bif 
+TRACE::2026-01-27.17:27:27::SCWPlatform::Started writing the spfm file 
+TRACE::2026-01-27.17:27:27::SCWPlatform::Started writing the xpfm file 
+TRACE::2026-01-27.17:27:27::SCWPlatform::Completed generating the platform
+TRACE::2026-01-27.17:27:27::SCWMssOS::Saving the mss changes X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-01-27.17:27:27::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2026-01-27.17:27:27::SCWMssOS::Completed writemss as part of save.
+TRACE::2026-01-27.17:27:27::SCWMssOS::Commit changes completed.
+TRACE::2026-01-27.17:27:27::SCWMssOS::Saving the mss changes X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss
+TRACE::2026-01-27.17:27:27::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2026-01-27.17:27:27::SCWMssOS::Completed writemss as part of save.
+TRACE::2026-01-27.17:27:27::SCWMssOS::Commit changes completed.
+TRACE::2026-01-27.17:27:27::SCWPlatform::Trying to open the hw design at X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:27::SCWPlatform::DSA given X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:27::SCWPlatform::DSA absoulate path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:27::SCWPlatform::DSA directory X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw
+TRACE::2026-01-27.17:27:27::SCWPlatform:: Platform Path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:27::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2026-01-27.17:27:27::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2026-01-27.17:27:27::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2026-01-27.17:27:27::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-01-27.17:27:27::SCWMssOS::Checking the sw design at  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-01-27.17:27:27::SCWMssOS::DEBUG:  swdes dump  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss|system_0||
+X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2026-01-27.17:27:27::SCWMssOS::Sw design exists and opened at  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-01-27.17:27:27::SCWPlatform::Trying to open the hw design at X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:27::SCWPlatform::DSA given X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:27::SCWPlatform::DSA absoulate path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:27::SCWPlatform::DSA directory X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw
+TRACE::2026-01-27.17:27:27::SCWPlatform:: Platform Path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:27::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2026-01-27.17:27:27::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2026-01-27.17:27:27::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2026-01-27.17:27:27::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-01-27.17:27:27::SCWMssOS::Checking the sw design at  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-01-27.17:27:27::SCWMssOS::DEBUG:  swdes dump  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss|system_0||
+X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2026-01-27.17:27:27::SCWMssOS::Sw design exists and opened at  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-01-27.17:27:27::SCWPlatform::Trying to open the hw design at X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:27::SCWPlatform::DSA given X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:27::SCWPlatform::DSA absoulate path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:27::SCWPlatform::DSA directory X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw
+TRACE::2026-01-27.17:27:27::SCWPlatform:: Platform Path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:27::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2026-01-27.17:27:27::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2026-01-27.17:27:27::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2026-01-27.17:27:27::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-01-27.17:27:27::SCWMssOS::Checking the sw design at  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-01-27.17:27:27::SCWMssOS::DEBUG:  swdes dump  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss|system_0||
+X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2026-01-27.17:27:27::SCWMssOS::Sw design exists and opened at  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-01-27.17:27:27::SCWPlatform::Trying to open the hw design at X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:27::SCWPlatform::DSA given X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:27::SCWPlatform::DSA absoulate path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:27::SCWPlatform::DSA directory X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw
+TRACE::2026-01-27.17:27:27::SCWPlatform:: Platform Path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:27::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2026-01-27.17:27:27::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2026-01-27.17:27:27::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2026-01-27.17:27:27::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-01-27.17:27:27::SCWMssOS::Checking the sw design at  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss
+TRACE::2026-01-27.17:27:27::SCWMssOS::DEBUG:  swdes dump  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss|system_0||
+X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2026-01-27.17:27:27::SCWMssOS::Sw design exists and opened at  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss
+TRACE::2026-01-27.17:27:27::SCWPlatform::Trying to open the hw design at X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:27::SCWPlatform::DSA given X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:27::SCWPlatform::DSA absoulate path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:27::SCWPlatform::DSA directory X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw
+TRACE::2026-01-27.17:27:27::SCWPlatform:: Platform Path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:27::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2026-01-27.17:27:27::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2026-01-27.17:27:27::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2026-01-27.17:27:27::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-01-27.17:27:27::SCWMssOS::Checking the sw design at  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss
+TRACE::2026-01-27.17:27:27::SCWMssOS::DEBUG:  swdes dump  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss|system_0||
+X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2026-01-27.17:27:27::SCWMssOS::Sw design exists and opened at  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss
+TRACE::2026-01-27.17:27:27::SCWPlatform::Trying to open the hw design at X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:27::SCWPlatform::DSA given X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:27::SCWPlatform::DSA absoulate path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:27::SCWPlatform::DSA directory X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw
+TRACE::2026-01-27.17:27:27::SCWPlatform:: Platform Path X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-27.17:27:27::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2026-01-27.17:27:27::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2026-01-27.17:27:27::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2026-01-27.17:27:27::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-01-27.17:27:27::SCWMssOS::Checking the sw design at  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss
+TRACE::2026-01-27.17:27:27::SCWMssOS::DEBUG:  swdes dump  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss|system_0||
+X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2026-01-27.17:27:27::SCWMssOS::Sw design exists and opened at  X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss
+TRACE::2026-01-27.17:27:27::SCWWriter::formatted JSON is {
+	"platformName":	"design_1_wrapper",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"design_1_wrapper",
+	"platHandOff":	"X:/cpre488/MP-0/MP-0/design_1_wrapper.xsa",
+	"platIntHandOff":	"<platformDir>/hw/design_1_wrapper.xsa",
+	"deviceType":	"zynq",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"platFsblTarget":	"ps7_cortexa9_0",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"fsblExtraCompilerFlags":	"-MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard ",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"design_1_wrapper",
+	"systems":	[{
+			"systemName":	"design_1_wrapper",
+			"systemDesc":	"design_1_wrapper",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"design_1_wrapper",
+			"sysActiveDom":	"domain_ps7_cortexa9_0",
+			"sysDefaultDom":	"domain_ps7_cortexa9_0",
+			"domains":	[{
+					"domainName":	"zynq_fsbl",
+					"domainDispName":	"zynq_fsbl",
+					"domainDesc":	"FSBL Application BSP - Auto Generated.",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.2",
+					"mssFile":	"",
+					"md5Digest":	"d070912764dbc9091b0675940dbd0d2a",
+					"compatibleApp":	"zynq_fsbl",
+					"domType":	"bootDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:4.3", "xilrsa:1.6"],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}, {
+					"domainName":	"domain_ps7_cortexa9_0",
+					"domainDispName":	"domain_ps7_cortexa9_0",
+					"domainDesc":	"domain_ps7_cortexa9_0",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"qemuArgs":	"C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt",
+					"qemuData":	"C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.2",
+					"mssFile":	"",
+					"md5Digest":	"5ae316de3f4391f8eb31fb72c822226d",
+					"compatibleApp":	"hello_world",
+					"domType":	"mssDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	[],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+KEYINFO::2026-01-27.17:27:27::SCWPlatform::updated the xpfm file.

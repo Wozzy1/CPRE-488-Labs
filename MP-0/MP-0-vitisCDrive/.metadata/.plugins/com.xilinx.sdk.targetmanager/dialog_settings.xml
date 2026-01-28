@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="false" key="Zedboard-doublehell-partial_bit"/>
+	<item value="false" key="Zedboard-doublehell-skip_rev_check"/>
+	<item value="{&quot;cables&quot;:[{&quot;name&quot;:&quot;Digilent Zed 210248B9DB51&quot;,&quot;indexContextMap&quot;:{&quot;2&quot;:&quot;jsn-Zed-210248B9DB51-4ba00477-0&quot;,&quot;3&quot;:&quot;jsn-Zed-210248B9DB51-23727093-0&quot;}}]}" key="devices_info_Local"/>
+	<item value="Auto Detect" key="Zedboard-doublehell-device"/>
+	<item value="Zedboard-doublehell" key="programfpga.sdxproject"/>
+	<item value="_ide/bitstream/design_1_wrapper.bit" key="Zedboard-doublehell-bitFile"/>
+	<item value="" key="Zedboard-doublehell-bmmFile"/>
+	<item value="Local" key="Zedboard-doublehell-target"/>
+</section>

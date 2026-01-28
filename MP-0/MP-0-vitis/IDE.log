@@ -18,3 +18,190 @@
 17:33:50 INFO  : Registering command handlers for Vitis TCF services
 17:33:50 INFO  : Platform repository initialization has completed.
 17:33:50 INFO  : Successfully done query RDI_DATADIR 
+09:49:57 INFO  : Launching XSCT server: xsct.bat -n  -interactive X:\cpre488\MP-0\MP-0-vitis\temp_xsdb_launch_script.tcl
+09:50:00 INFO  : XSCT server has started successfully.
+09:50:00 INFO  : plnx-install-location is set to ''
+09:50:00 INFO  : Successfully done setting XSCT server connection channel  
+09:50:00 INFO  : Successfully done setting workspace for the tool. 
+09:50:04 INFO  : Registering command handlers for Vitis TCF services
+09:50:05 INFO  : Platform repository initialization has completed.
+09:50:09 INFO  : Successfully done query RDI_DATADIR 
+09:55:38 INFO  : Launching XSCT server: xsct.bat -n  -interactive X:\cpre488\MP-0\MP-0-vitis\temp_xsdb_launch_script.tcl
+09:55:39 INFO  : XSCT server has started successfully.
+09:55:39 INFO  : plnx-install-location is set to ''
+09:55:39 INFO  : Successfully done setting XSCT server connection channel  
+09:55:39 INFO  : Successfully done setting workspace for the tool. 
+09:55:41 INFO  : Registering command handlers for Vitis TCF services
+09:55:41 INFO  : Platform repository initialization has completed.
+09:55:41 INFO  : Successfully done query RDI_DATADIR 
+09:58:21 INFO  : Launching XSCT server: xsct.bat -n  -interactive X:\cpre488\MP-0\MP-0-vitis\temp_xsdb_launch_script.tcl
+09:58:25 INFO  : XSCT server has started successfully.
+09:58:25 INFO  : plnx-install-location is set to ''
+09:58:25 INFO  : Successfully done setting XSCT server connection channel  
+09:58:25 INFO  : Successfully done setting workspace for the tool. 
+09:58:28 INFO  : Platform repository initialization has completed.
+09:58:28 INFO  : Successfully done query RDI_DATADIR 
+09:58:28 INFO  : Registering command handlers for Vitis TCF services
+10:02:06 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:02:06 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B9DB51" && level==0 && jtag_device_ctx=="jsn-Zed-210248B9DB51-23727093-0"}' command is executed.
+10:02:09 INFO  : FPGA configured successfully with bitstream "X:/cpre488/MP-0/MP-0-vitis/Zedboard_hell/_ide/bitstream/design_1_wrapper.bit"
+10:27:31 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:27:32 INFO  : Jtag cable 'Digilent Zed 210248B9DB51' is selected.
+10:27:32 INFO  : 'jtag frequency' command is executed.
+10:27:32 INFO  : Context for 'APU' is selected.
+10:27:32 INFO  : System reset is completed.
+10:27:35 INFO  : 'after 3000' command is executed.
+10:27:35 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B9DB51" && level==0 && jtag_device_ctx=="jsn-Zed-210248B9DB51-23727093-0"}' command is executed.
+10:27:37 INFO  : FPGA configured successfully with bitstream "X:/cpre488/MP-0/MP-0-vitis/Zedboard_hell/_ide/bitstream/design_1_wrapper.bit"
+10:27:37 INFO  : Context for 'APU' is selected.
+10:27:37 INFO  : Hardware design and registers information is loaded from 'X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+10:27:37 INFO  : 'configparams force-mem-access 1' command is executed.
+10:27:37 INFO  : Context for 'APU' is selected.
+10:27:37 INFO  : Sourcing of 'X:/cpre488/MP-0/MP-0-vitis/Zedboard_hell/_ide/psinit/ps7_init.tcl' is done.
+10:27:37 INFO  : 'ps7_init' command is executed.
+10:27:37 INFO  : 'ps7_post_config' command is executed.
+10:27:38 INFO  : 'configparams force-mem-access 0' command is executed.
+10:27:38 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B9DB51" && level==0 && jtag_device_ctx=="jsn-Zed-210248B9DB51-23727093-0"}
+fpga -file X:/cpre488/MP-0/MP-0-vitis/Zedboard_hell/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source X:/cpre488/MP-0/MP-0-vitis/Zedboard_hell/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:27:38 INFO  : Launch script is exported to file 'X:\cpre488\MP-0\MP-0-vitis\.sdk\launch_scripts\single_application_debug\debugger_zedboard_hell-default.tcl'
+10:30:01 INFO  : Disconnected from the channel tcfchan#1.
+10:30:07 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:30:07 INFO  : Jtag cable 'Digilent Zed 210248B9DB51' is selected.
+10:30:07 INFO  : 'jtag frequency' command is executed.
+10:30:07 INFO  : Context for 'APU' is selected.
+10:30:07 INFO  : System reset is completed.
+10:30:10 INFO  : 'after 3000' command is executed.
+10:30:10 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B9DB51" && level==0 && jtag_device_ctx=="jsn-Zed-210248B9DB51-23727093-0"}' command is executed.
+10:30:12 INFO  : FPGA configured successfully with bitstream "X:/cpre488/MP-0/MP-0-vitis/Zedboard_hell/_ide/bitstream/design_1_wrapper.bit"
+10:30:12 INFO  : Context for 'APU' is selected.
+10:30:15 INFO  : Hardware design and registers information is loaded from 'X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+10:30:15 INFO  : 'configparams force-mem-access 1' command is executed.
+10:30:15 INFO  : Context for 'APU' is selected.
+10:30:15 INFO  : Sourcing of 'X:/cpre488/MP-0/MP-0-vitis/Zedboard_hell/_ide/psinit/ps7_init.tcl' is done.
+10:30:15 INFO  : 'ps7_init' command is executed.
+10:30:15 INFO  : 'ps7_post_config' command is executed.
+10:30:15 INFO  : 'configparams force-mem-access 0' command is executed.
+10:30:15 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B9DB51" && level==0 && jtag_device_ctx=="jsn-Zed-210248B9DB51-23727093-0"}
+fpga -file X:/cpre488/MP-0/MP-0-vitis/Zedboard_hell/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source X:/cpre488/MP-0/MP-0-vitis/Zedboard_hell/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:30:15 INFO  : Launch script is exported to file 'X:\cpre488\MP-0\MP-0-vitis\.sdk\launch_scripts\single_application_debug\debugger_zedboard_hell-default.tcl'
+10:31:07 INFO  : Disconnected from the channel tcfchan#2.
+10:34:01 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:34:01 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B9DB51" && level==0 && jtag_device_ctx=="jsn-Zed-210248B9DB51-23727093-0"}' command is executed.
+10:34:04 INFO  : FPGA configured successfully with bitstream "X:/cpre488/MP-0/MP-0-vitis/Zedboard_hell/_ide/bitstream/design_1_wrapper.bit"
+10:34:18 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:34:19 INFO  : Jtag cable 'Digilent Zed 210248B9DB51' is selected.
+10:34:19 INFO  : 'jtag frequency' command is executed.
+10:34:19 INFO  : Context for 'APU' is selected.
+10:34:19 INFO  : System reset is completed.
+10:34:22 INFO  : 'after 3000' command is executed.
+10:34:22 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B9DB51" && level==0 && jtag_device_ctx=="jsn-Zed-210248B9DB51-23727093-0"}' command is executed.
+10:34:24 INFO  : FPGA configured successfully with bitstream "X:/cpre488/MP-0/MP-0-vitis/Zedboard_hell/_ide/bitstream/design_1_wrapper.bit"
+10:34:24 INFO  : Context for 'APU' is selected.
+10:34:24 INFO  : Hardware design and registers information is loaded from 'X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+10:34:24 INFO  : 'configparams force-mem-access 1' command is executed.
+10:34:24 INFO  : Context for 'APU' is selected.
+10:34:24 INFO  : Sourcing of 'X:/cpre488/MP-0/MP-0-vitis/Zedboard_hell/_ide/psinit/ps7_init.tcl' is done.
+10:34:24 INFO  : 'ps7_init' command is executed.
+10:34:24 INFO  : 'ps7_post_config' command is executed.
+10:34:24 INFO  : 'configparams force-mem-access 0' command is executed.
+10:34:24 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B9DB51" && level==0 && jtag_device_ctx=="jsn-Zed-210248B9DB51-23727093-0"}
+fpga -file X:/cpre488/MP-0/MP-0-vitis/Zedboard_hell/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source X:/cpre488/MP-0/MP-0-vitis/Zedboard_hell/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:34:24 INFO  : Launch script is exported to file 'X:\cpre488\MP-0\MP-0-vitis\.sdk\launch_scripts\single_application_debug\debugger_zedboard_hell-default.tcl'
+10:39:40 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:39:40 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B9DB51" && level==0 && jtag_device_ctx=="jsn-Zed-210248B9DB51-23727093-0"}' command is executed.
+10:39:43 INFO  : FPGA configured successfully with bitstream "X:/cpre488/MP-0/MP-0-vitis/Zedboard_hell/_ide/bitstream/design_1_wrapper.bit"
+10:40:37 INFO  : Result from executing command 'getProjects': design_1_wrapper
+10:40:37 INFO  : Result from executing command 'getPlatforms': design_1_wrapper|X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm
+10:40:38 INFO  : Checking for BSP changes to sync application flags for project 'Zedboard_hell'...
+10:40:59 INFO  : Disconnected from the channel tcfchan#3.
+10:41:00 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:41:00 INFO  : Jtag cable 'Digilent Zed 210248B9DB51' is selected.
+10:41:00 INFO  : 'jtag frequency' command is executed.
+10:41:00 INFO  : Context for 'APU' is selected.
+10:41:00 INFO  : System reset is completed.
+10:41:03 INFO  : 'after 3000' command is executed.
+10:41:03 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B9DB51" && level==0 && jtag_device_ctx=="jsn-Zed-210248B9DB51-23727093-0"}' command is executed.
+10:41:05 INFO  : FPGA configured successfully with bitstream "X:/cpre488/MP-0/MP-0-vitis/Zedboard_hell/_ide/bitstream/design_1_wrapper.bit"
+10:41:06 INFO  : Context for 'APU' is selected.
+10:41:08 INFO  : Hardware design and registers information is loaded from 'X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+10:41:08 INFO  : 'configparams force-mem-access 1' command is executed.
+10:41:08 INFO  : Context for 'APU' is selected.
+10:41:08 INFO  : Sourcing of 'X:/cpre488/MP-0/MP-0-vitis/Zedboard_hell/_ide/psinit/ps7_init.tcl' is done.
+10:41:08 INFO  : 'ps7_init' command is executed.
+10:41:08 INFO  : 'ps7_post_config' command is executed.
+10:41:08 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:41:08 INFO  : The application 'X:/cpre488/MP-0/MP-0-vitis/Zedboard_hell/Debug/Zedboard_hell.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:41:08 INFO  : 'configparams force-mem-access 0' command is executed.
+10:41:08 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B9DB51" && level==0 && jtag_device_ctx=="jsn-Zed-210248B9DB51-23727093-0"}
+fpga -file X:/cpre488/MP-0/MP-0-vitis/Zedboard_hell/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source X:/cpre488/MP-0/MP-0-vitis/Zedboard_hell/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow X:/cpre488/MP-0/MP-0-vitis/Zedboard_hell/Debug/Zedboard_hell.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:41:08 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:41:08 INFO  : 'con' command is executed.
+10:41:08 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+10:41:08 INFO  : Launch script is exported to file 'X:\cpre488\MP-0\MP-0-vitis\.sdk\launch_scripts\single_application_debug\debugger_zedboard_hell-default.tcl'
+10:44:52 INFO  : Disconnected from the channel tcfchan#5.

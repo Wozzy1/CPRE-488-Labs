@@ -2147,3 +2147,3985 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64
 
 !ENTRY com.xilinx.sdk.utils 0 0 2026-01-27 17:33:50.621
 !MESSAGE XSCT command with result: [set query_var1 $::env(RDI_DATADIR)], Result: [null, C:/Xilinx/Vitis/2020.1/data]. Thread: Worker-1: Initializing s/w repositories
+!SESSION 2026-01-28 09:49:10.300 -----------------------------------------------
+eclipse.buildId=2020.1
+java.version=9.0.4
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.ui 4 4 2026-01-28 09:49:55.562
+!MESSAGE Plug-in 'org.eclipse.ui.editors' contributed an invalid Menu Extension (Path: 'navigate' is invalid): org.eclipse.ui.edit.text.gotoLastEditPosition
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 09:50:00.269
+!MESSAGE XSCT Command: [set sdk::sdk_chan tcfchan#0], Thread: Thread-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 09:50:00.276
+!MESSAGE XSCT Command: [plnx-install-path  ; ::scw::scw_mode gui], Thread: Thread-8
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 09:50:00.283
+!MESSAGE XSCT command with result: [plnx-install-path  ; ::scw::scw_mode gui], Result: [null, ]. Thread: Thread-8
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 09:50:00.289
+!MESSAGE XSCT command with result: [set sdk::sdk_chan tcfchan#0], Result: [null, tcfchan#0]. Thread: Thread-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 09:50:00.371
+!MESSAGE XSCT Command: [setws X:/cpre488/MP-0/MP-0-vitis], Thread: Thread-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 09:50:00.436
+!MESSAGE XSCT command with result: [setws X:/cpre488/MP-0/MP-0-vitis], Result: [null, ]. Thread: Thread-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 09:50:04.872
+!MESSAGE XSCT Command: [::hsi::utils::init_repo], Thread: Worker-0: Initializing s/w repositories
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 09:50:09.089
+!MESSAGE XSCT command with result: [::hsi::utils::init_repo], Result: [null, ]. Thread: Worker-0: Initializing s/w repositories
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 09:50:09.089
+!MESSAGE XSCT Command: [set query_var1 $::env(RDI_DATADIR)], Thread: Worker-0: Initializing s/w repositories
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 09:50:09.089
+!MESSAGE XSCT command with result: [set query_var1 $::env(RDI_DATADIR)], Result: [null, C:/Xilinx/Vitis/2020.1/data]. Thread: Worker-0: Initializing s/w repositories
+
+!ENTRY org.eclipse.ui 2 2 2026-01-28 09:52:30.067
+!MESSAGE Invalid preference category path: com.xilinx.sdk.ui.preferences.page (bundle: com.xilinx.sdk.ui.customize, page: com.xilinx.sdk.ui.customize.sdkCustomizationPreferences)
+!SESSION 2026-01-28 09:55:28.167 -----------------------------------------------
+eclipse.buildId=2020.1
+java.version=9.0.4
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.ui 4 4 2026-01-28 09:55:37.607
+!MESSAGE Plug-in 'org.eclipse.ui.editors' contributed an invalid Menu Extension (Path: 'navigate' is invalid): org.eclipse.ui.edit.text.gotoLastEditPosition
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 09:55:39.943
+!MESSAGE XSCT Command: [plnx-install-path  ; ::scw::scw_mode gui], Thread: Thread-8
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 09:55:39.946
+!MESSAGE XSCT Command: [set sdk::sdk_chan tcfchan#0], Thread: Thread-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 09:55:39.950
+!MESSAGE XSCT command with result: [plnx-install-path  ; ::scw::scw_mode gui], Result: [null, ]. Thread: Thread-8
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 09:55:39.956
+!MESSAGE XSCT command with result: [set sdk::sdk_chan tcfchan#0], Result: [null, tcfchan#0]. Thread: Thread-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 09:55:39.959
+!MESSAGE XSCT Command: [setws X:/cpre488/MP-0/MP-0-vitis], Thread: Thread-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 09:55:39.970
+!MESSAGE XSCT command with result: [setws X:/cpre488/MP-0/MP-0-vitis], Result: [null, ]. Thread: Thread-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 09:55:41.759
+!MESSAGE XSCT Command: [::hsi::utils::init_repo], Thread: Worker-6: Initializing s/w repositories
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 09:55:41.865
+!MESSAGE XSCT command with result: [::hsi::utils::init_repo], Result: [null, ]. Thread: Worker-6: Initializing s/w repositories
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 09:55:41.880
+!MESSAGE XSCT Command: [set query_var1 $::env(RDI_DATADIR)], Thread: Worker-6: Initializing s/w repositories
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 09:55:41.887
+!MESSAGE XSCT command with result: [set query_var1 $::env(RDI_DATADIR)], Result: [null, C:/Xilinx/Vitis/2020.1/data]. Thread: Worker-6: Initializing s/w repositories
+
+!ENTRY org.eclipse.ui 2 2 2026-01-28 09:55:59.067
+!MESSAGE Invalid preference category path: com.xilinx.sdk.ui.preferences.page (bundle: com.xilinx.sdk.ui.customize, page: com.xilinx.sdk.ui.customize.sdkCustomizationPreferences)
+!SESSION 2026-01-28 09:58:07.262 -----------------------------------------------
+eclipse.buildId=2020.1
+java.version=9.0.4
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.ui 4 4 2026-01-28 09:58:18.760
+!MESSAGE Plug-in 'org.eclipse.ui.editors' contributed an invalid Menu Extension (Path: 'navigate' is invalid): org.eclipse.ui.edit.text.gotoLastEditPosition
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 09:58:25.695
+!MESSAGE XSCT Command: [plnx-install-path  ; ::scw::scw_mode gui], Thread: Thread-8
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 09:58:25.695
+!MESSAGE XSCT Command: [set sdk::sdk_chan tcfchan#0], Thread: Thread-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 09:58:25.715
+!MESSAGE XSCT command with result: [plnx-install-path  ; ::scw::scw_mode gui], Result: [null, ]. Thread: Thread-8
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 09:58:25.719
+!MESSAGE XSCT command with result: [set sdk::sdk_chan tcfchan#0], Result: [null, tcfchan#0]. Thread: Thread-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 09:58:25.734
+!MESSAGE XSCT Command: [setws X:/cpre488/MP-0/MP-0-vitis], Thread: Thread-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 09:58:25.909
+!MESSAGE XSCT command with result: [setws X:/cpre488/MP-0/MP-0-vitis], Result: [null, ]. Thread: Thread-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 09:58:28.415
+!MESSAGE XSCT Command: [::hsi::utils::init_repo], Thread: Worker-3: Initializing s/w repositories
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 09:58:28.528
+!MESSAGE XSCT command with result: [::hsi::utils::init_repo], Result: [null, ]. Thread: Worker-3: Initializing s/w repositories
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 09:58:28.542
+!MESSAGE XSCT Command: [set query_var1 $::env(RDI_DATADIR)], Thread: Worker-3: Initializing s/w repositories
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 09:58:28.542
+!MESSAGE XSCT command with result: [set query_var1 $::env(RDI_DATADIR)], Result: [null, C:/Xilinx/Vitis/2020.1/data]. Thread: Worker-3: Initializing s/w repositories
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:00:00.497
+!MESSAGE XSCT Command: [::hsi::utils::openhw X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:00:02.121
+!MESSAGE XSCT command with result: [::hsi::utils::openhw X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:00:02.121
+!MESSAGE XSCT Command: [::hsi::utils::get_addr_tag_info -json X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:00:02.130
+!MESSAGE XSCT command with result: [::hsi::utils::get_addr_tag_info -json X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa ], Result: [null, {"ps7_cortexa9_0": "",
+"ps7_cortexa9_1": "",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:00:02.130
+!MESSAGE XSCT Command: [::hsi::utils::get_all_periphs -json X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:00:02.145
+!MESSAGE XSCT command with result: [::hsi::utils::get_all_periphs -json X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa], Result: [null, {"axi_gpio_0": {"hier_name": "axi_gpio_0",
+"type": "axi_gpio",
+"version": "2.0",
+"ip_type": "PERIPHERAL",
+},
+"axi_gpio_1": {"hier_name": "axi_gpio_1",
+"type": "axi_gpio",
+"version": "2.0",
+"ip_type": "PERIPHERAL",
+},
+"axi_gpio_2": {"hier_name": "axi_gpio_2",
+"type": "axi_gpio",
+"version": "2.0",
+"ip_type": "PERIPHERAL",
+},
+"processing_system7_0": {"hier_name": "processing_system7_0",
+"type": "processing_system7",
+"version": "5.5",
+"ip_type": "",
+},
+"ps7_0_axi_periph": {"hier_name": "ps7_0_axi_periph",
+"type": "axi_interconnect",
+"version": "2.1",
+"ip_type": "BUS",
+},
+"rst_ps7_0_100M": {"hier_name": "rst_ps7_0_100M",
+"type": "proc_sys_reset",
+"version": "5.0",
+"ip_type": "PERIPHERAL",
+},
+"system_ila_0": {"hier_name": "system_ila_0",
+"type": "system_ila",
+"version": "1.1",
+"ip_type": "MONITOR",
+},
+"ps7_clockc_0": {"hier_name": "ps7_clockc_0",
+"type": "ps7_clockc",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_uart_1": {"hier_name": "ps7_uart_1",
+"type": "ps7_uart",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_pl310_0": {"hier_name": "ps7_pl310_0",
+"type": "ps7_pl310",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_pmu_0": {"hier_name": "ps7_pmu_0",
+"type": "ps7_pmu",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_qspi_0": {"hier_name": "ps7_qspi_0",
+"type": "ps7_qspi",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_qspi_linear_0": {"hier_name": "ps7_qspi_linear_0",
+"type": "ps7_qspi_linear",
+"version": "1.00.a",
+"ip_type": "MEMORY_CNTLR",
+},
+"ps7_axi_interconnect_0": {"hier_name": "ps7_axi_interconnect_0",
+"type": "ps7_axi_interconnect",
+"version": "1.00.a",
+"ip_type": "BUS",
+},
+"ps7_cortexa9_0": {"hier_name": "ps7_cortexa9_0",
+"type": "ps7_cortexa9",
+"version": "5.2",
+"ip_type": "PROCESSOR",
+},
+"ps7_cortexa9_1": {"hier_name": "ps7_cortexa9_1",
+"type": "ps7_cortexa9",
+"version": "5.2",
+"ip_type": "PROCESSOR",
+},
+"ps7_ddr_0": {"hier_name": "ps7_ddr_0",
+"type": "ps7_ddr",
+"version": "1.00.a",
+"ip_type": "MEMORY_CNTLR",
+},
+"ps7_ethernet_0": {"hier_name": "ps7_ethernet_0",
+"type": "ps7_ethernet",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_usb_0": {"hier_name": "ps7_usb_0",
+"type": "ps7_usb",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_sd_0": {"hier_name": "ps7_sd_0",
+"type": "ps7_sdio",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_ttc_0": {"hier_name": "ps7_ttc_0",
+"type": "ps7_ttc",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_gpio_0": {"hier_name": "ps7_gpio_0",
+"type": "ps7_gpio",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_ddrc_0": {"hier_name": "ps7_ddrc_0",
+"type": "ps7_ddrc",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_dev_cfg_0": {"hier_name": "ps7_dev_cfg_0",
+"type": "ps7_dev_cfg",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_xadc_0": {"hier_name": "ps7_xadc_0",
+"type": "ps7_xadc",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_ocmc_0": {"hier_name": "ps7_ocmc_0",
+"type": "ps7_ocmc",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_coresight_comp_0": {"hier_name": "ps7_coresight_comp_0",
+"type": "ps7_coresight_comp",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_gpv_0": {"hier_name": "ps7_gpv_0",
+"type": "ps7_gpv",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_scuc_0": {"hier_name": "ps7_scuc_0",
+"type": "ps7_scuc",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_globaltimer_0": {"hier_name": "ps7_globaltimer_0",
+"type": "ps7_globaltimer",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_intc_dist_0": {"hier_name": "ps7_intc_dist_0",
+"type": "ps7_intc_dist",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_l2cachec_0": {"hier_name": "ps7_l2cachec_0",
+"type": "ps7_l2cachec",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_dma_s": {"hier_name": "ps7_dma_s",
+"type": "ps7_dma",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_iop_bus_config_0": {"hier_name": "ps7_iop_bus_config_0",
+"type": "ps7_iop_bus_config",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_ram_0": {"hier_name": "ps7_ram_0",
+"type": "ps7_ram",
+"version": "1.00.a",
+"ip_type": "MEMORY_CNTLR",
+},
+"ps7_ram_1": {"hier_name": "ps7_ram_1",
+"type": "ps7_ram",
+"version": "1.00.a",
+"ip_type": "MEMORY_CNTLR",
+},
+"ps7_scugic_0": {"hier_name": "ps7_scugic_0",
+"type": "ps7_scugic",
+"version": "1.00.a",
+"ip_type": "INTERRUPT_CNTLR",
+},
+"ps7_scutimer_0": {"hier_name": "ps7_scutimer_0",
+"type": "ps7_scutimer",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_scuwdt_0": {"hier_name": "ps7_scuwdt_0",
+"type": "ps7_scuwdt",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_slcr_0": {"hier_name": "ps7_slcr_0",
+"type": "ps7_slcr",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_dma_ns": {"hier_name": "ps7_dma_ns",
+"type": "ps7_dma",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_afi_0": {"hier_name": "ps7_afi_0",
+"type": "ps7_afi",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_afi_1": {"hier_name": "ps7_afi_1",
+"type": "ps7_afi",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_afi_2": {"hier_name": "ps7_afi_2",
+"type": "ps7_afi",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_afi_3": {"hier_name": "ps7_afi_3",
+"type": "ps7_afi",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_m_axi_gp0": {"hier_name": "ps7_m_axi_gp0",
+"type": "ps7_m_axi_gp",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"system_ila_0_g_inst": {"hier_name": "system_ila_0/system_ila_0_g_inst",
+"type": "gigantic_mux",
+"version": "1.0",
+"ip_type": "MONITOR",
+},
+"system_ila_0_ila_lib": {"hier_name": "system_ila_0/system_ila_0_ila_lib",
+"type": "ila",
+"version": "6.2",
+"ip_type": "PERIPHERAL",
+},
+"system_ila_0_slot_1_ar": {"hier_name": "system_ila_0/system_ila_0_slot_1_ar",
+"type": "xlconcat",
+"version": "2.1",
+"ip_type": "PERIPHERAL",
+},
+"system_ila_0_slot_1_aw": {"hier_name": "system_ila_0/system_ila_0_slot_1_aw",
+"type": "xlconcat",
+"version": "2.1",
+"ip_type": "PERIPHERAL",
+},
+"system_ila_0_slot_1_b": {"hier_name": "system_ila_0/system_ila_0_slot_1_b",
+"type": "xlconcat",
+"version": "2.1",
+"ip_type": "PERIPHERAL",
+},
+"system_ila_0_slot_1_r": {"hier_name": "system_ila_0/system_ila_0_slot_1_r",
+"type": "xlconcat",
+"version": "2.1",
+"ip_type": "PERIPHERAL",
+},
+"system_ila_0_slot_1_w": {"hier_name": "system_ila_0/system_ila_0_slot_1_w",
+"type": "xlconcat",
+"version": "2.1",
+"ip_type": "PERIPHERAL",
+},
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:00:02.146
+!MESSAGE XSCT Command: [::hsi::utils::get_design_properties -json X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:00:02.146
+!MESSAGE XSCT command with result: [::hsi::utils::get_design_properties -json X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa], Result: [null, {"device": "7z020",
+"family": "zynq",
+"timestamp": "Tue Jan 27 16:48:59 2026",
+"vivado_version": "2020.1",
+"part": "xc7z020clg484-1",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:02:04.185
+!MESSAGE XSCT Command: [::hsi::utils::get_bram_blocks X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa ], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:02:04.217
+!MESSAGE XSCT command with result: [::hsi::utils::get_bram_blocks X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa ], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:02:04.217
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:02:06.512
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#1]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:02:06.528
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:02:06.766
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent Zed 210248B9DB51]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:02:06.766
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:02:06.766
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent Zed 210248B9DB51]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:02:06.766
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248B9DB51" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:02:06.782
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248B9DB51" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:02:06.782
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:02:06.782
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#1]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:02:06.798
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:02:06.798
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent Zed 210248B9DB51]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:02:06.798
+!MESSAGE XSCT Command: [proc fetch_device_jtag_ctx { node_id } {
+foreach t [jtag ta -ta] {
+if {[dict get $t node_id] == $node_id} {
+return [dict get $t target_ctx]
+}
+}
+error cannot find a jtag device with node id $node_id}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:02:06.798
+!MESSAGE XSCT command with result: [proc fetch_device_jtag_ctx { node_id } {
+foreach t [jtag ta -ta] {
+if {[dict get $t node_id] == $node_id} {
+return [dict get $t target_ctx]
+}
+}
+error cannot find a jtag device with node id $node_id}], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:02:06.798
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:02:06.814
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent Zed 210248B9DB51]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:02:06.814
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248B9DB51" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:02:06.814
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248B9DB51" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:02:06.829
+!MESSAGE XSCT Command: [fetch_device_jtag_ctx 2], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:02:06.829
+!MESSAGE XSCT command with result: [fetch_device_jtag_ctx 2], Result: [null, jsn-Zed-210248B9DB51-4ba00477-0]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:02:06.829
+!MESSAGE XSCT Command: [fetch_device_jtag_ctx 3], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:02:06.829
+!MESSAGE XSCT command with result: [fetch_device_jtag_ctx 3], Result: [null, jsn-Zed-210248B9DB51-23727093-0]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:02:06.862
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B9DB51" && level==0 && jtag_device_ctx=="jsn-Zed-210248B9DB51-23727093-0"}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:02:06.878
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B9DB51" && level==0 && jtag_device_ctx=="jsn-Zed-210248B9DB51-23727093-0"}], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:02:06.878
+!MESSAGE XSCT Command: [fpga -file X:/cpre488/MP-0/MP-0-vitis/Zedboard_hell/_ide/bitstream/design_1_wrapper.bit], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:02:09.254
+!MESSAGE XSCT command with result: [fpga -file X:/cpre488/MP-0/MP-0-vitis/Zedboard_hell/_ide/bitstream/design_1_wrapper.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:02:10.067
+!MESSAGE XSCT Command: [::hsi::utils::get_bram_blocks X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa ], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:02:10.067
+!MESSAGE XSCT command with result: [::hsi::utils::get_bram_blocks X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa ], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:11:14.921
+!MESSAGE XSCT Command: [::hsi::utils::get_addr_tag_info -json X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:11:14.937
+!MESSAGE XSCT command with result: [::hsi::utils::get_addr_tag_info -json X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa ], Result: [null, {"ps7_cortexa9_0": "",
+"ps7_cortexa9_1": "",
+}]. Thread: main
+
+!ENTRY org.eclipse.launchbar.core 2 0 2026-01-28 10:11:28.881
+!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2026-01-28 10:11:28.881
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2026-01-28 10:11:28.897
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:11:59.150
+!MESSAGE XSCT Command: [::hsi::utils::openhw X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:11:59.156
+!MESSAGE XSCT command with result: [::hsi::utils::openhw X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:11:59.156
+!MESSAGE XSCT Command: [::hsi::utils::get_all_periphs -json X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:11:59.172
+!MESSAGE XSCT command with result: [::hsi::utils::get_all_periphs -json X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa], Result: [null, {"axi_gpio_0": {"hier_name": "axi_gpio_0",
+"type": "axi_gpio",
+"version": "2.0",
+"ip_type": "PERIPHERAL",
+},
+"axi_gpio_1": {"hier_name": "axi_gpio_1",
+"type": "axi_gpio",
+"version": "2.0",
+"ip_type": "PERIPHERAL",
+},
+"axi_gpio_2": {"hier_name": "axi_gpio_2",
+"type": "axi_gpio",
+"version": "2.0",
+"ip_type": "PERIPHERAL",
+},
+"processing_system7_0": {"hier_name": "processing_system7_0",
+"type": "processing_system7",
+"version": "5.5",
+"ip_type": "",
+},
+"ps7_0_axi_periph": {"hier_name": "ps7_0_axi_periph",
+"type": "axi_interconnect",
+"version": "2.1",
+"ip_type": "BUS",
+},
+"rst_ps7_0_100M": {"hier_name": "rst_ps7_0_100M",
+"type": "proc_sys_reset",
+"version": "5.0",
+"ip_type": "PERIPHERAL",
+},
+"system_ila_0": {"hier_name": "system_ila_0",
+"type": "system_ila",
+"version": "1.1",
+"ip_type": "MONITOR",
+},
+"ps7_clockc_0": {"hier_name": "ps7_clockc_0",
+"type": "ps7_clockc",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_uart_1": {"hier_name": "ps7_uart_1",
+"type": "ps7_uart",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_pl310_0": {"hier_name": "ps7_pl310_0",
+"type": "ps7_pl310",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_pmu_0": {"hier_name": "ps7_pmu_0",
+"type": "ps7_pmu",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_qspi_0": {"hier_name": "ps7_qspi_0",
+"type": "ps7_qspi",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_qspi_linear_0": {"hier_name": "ps7_qspi_linear_0",
+"type": "ps7_qspi_linear",
+"version": "1.00.a",
+"ip_type": "MEMORY_CNTLR",
+},
+"ps7_axi_interconnect_0": {"hier_name": "ps7_axi_interconnect_0",
+"type": "ps7_axi_interconnect",
+"version": "1.00.a",
+"ip_type": "BUS",
+},
+"ps7_cortexa9_0": {"hier_name": "ps7_cortexa9_0",
+"type": "ps7_cortexa9",
+"version": "5.2",
+"ip_type": "PROCESSOR",
+},
+"ps7_cortexa9_1": {"hier_name": "ps7_cortexa9_1",
+"type": "ps7_cortexa9",
+"version": "5.2",
+"ip_type": "PROCESSOR",
+},
+"ps7_ddr_0": {"hier_name": "ps7_ddr_0",
+"type": "ps7_ddr",
+"version": "1.00.a",
+"ip_type": "MEMORY_CNTLR",
+},
+"ps7_ethernet_0": {"hier_name": "ps7_ethernet_0",
+"type": "ps7_ethernet",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_usb_0": {"hier_name": "ps7_usb_0",
+"type": "ps7_usb",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_sd_0": {"hier_name": "ps7_sd_0",
+"type": "ps7_sdio",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_ttc_0": {"hier_name": "ps7_ttc_0",
+"type": "ps7_ttc",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_gpio_0": {"hier_name": "ps7_gpio_0",
+"type": "ps7_gpio",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_ddrc_0": {"hier_name": "ps7_ddrc_0",
+"type": "ps7_ddrc",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_dev_cfg_0": {"hier_name": "ps7_dev_cfg_0",
+"type": "ps7_dev_cfg",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_xadc_0": {"hier_name": "ps7_xadc_0",
+"type": "ps7_xadc",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_ocmc_0": {"hier_name": "ps7_ocmc_0",
+"type": "ps7_ocmc",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_coresight_comp_0": {"hier_name": "ps7_coresight_comp_0",
+"type": "ps7_coresight_comp",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_gpv_0": {"hier_name": "ps7_gpv_0",
+"type": "ps7_gpv",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_scuc_0": {"hier_name": "ps7_scuc_0",
+"type": "ps7_scuc",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_globaltimer_0": {"hier_name": "ps7_globaltimer_0",
+"type": "ps7_globaltimer",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_intc_dist_0": {"hier_name": "ps7_intc_dist_0",
+"type": "ps7_intc_dist",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_l2cachec_0": {"hier_name": "ps7_l2cachec_0",
+"type": "ps7_l2cachec",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_dma_s": {"hier_name": "ps7_dma_s",
+"type": "ps7_dma",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_iop_bus_config_0": {"hier_name": "ps7_iop_bus_config_0",
+"type": "ps7_iop_bus_config",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_ram_0": {"hier_name": "ps7_ram_0",
+"type": "ps7_ram",
+"version": "1.00.a",
+"ip_type": "MEMORY_CNTLR",
+},
+"ps7_ram_1": {"hier_name": "ps7_ram_1",
+"type": "ps7_ram",
+"version": "1.00.a",
+"ip_type": "MEMORY_CNTLR",
+},
+"ps7_scugic_0": {"hier_name": "ps7_scugic_0",
+"type": "ps7_scugic",
+"version": "1.00.a",
+"ip_type": "INTERRUPT_CNTLR",
+},
+"ps7_scutimer_0": {"hier_name": "ps7_scutimer_0",
+"type": "ps7_scutimer",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_scuwdt_0": {"hier_name": "ps7_scuwdt_0",
+"type": "ps7_scuwdt",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_slcr_0": {"hier_name": "ps7_slcr_0",
+"type": "ps7_slcr",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_dma_ns": {"hier_name": "ps7_dma_ns",
+"type": "ps7_dma",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_afi_0": {"hier_name": "ps7_afi_0",
+"type": "ps7_afi",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_afi_1": {"hier_name": "ps7_afi_1",
+"type": "ps7_afi",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_afi_2": {"hier_name": "ps7_afi_2",
+"type": "ps7_afi",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_afi_3": {"hier_name": "ps7_afi_3",
+"type": "ps7_afi",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_m_axi_gp0": {"hier_name": "ps7_m_axi_gp0",
+"type": "ps7_m_axi_gp",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"system_ila_0_g_inst": {"hier_name": "system_ila_0/system_ila_0_g_inst",
+"type": "gigantic_mux",
+"version": "1.0",
+"ip_type": "MONITOR",
+},
+"system_ila_0_ila_lib": {"hier_name": "system_ila_0/system_ila_0_ila_lib",
+"type": "ila",
+"version": "6.2",
+"ip_type": "PERIPHERAL",
+},
+"system_ila_0_slot_1_ar": {"hier_name": "system_ila_0/system_ila_0_slot_1_ar",
+"type": "xlconcat",
+"version": "2.1",
+"ip_type": "PERIPHERAL",
+},
+"system_ila_0_slot_1_aw": {"hier_name": "system_ila_0/system_ila_0_slot_1_aw",
+"type": "xlconcat",
+"version": "2.1",
+"ip_type": "PERIPHERAL",
+},
+"system_ila_0_slot_1_b": {"hier_name": "system_ila_0/system_ila_0_slot_1_b",
+"type": "xlconcat",
+"version": "2.1",
+"ip_type": "PERIPHERAL",
+},
+"system_ila_0_slot_1_r": {"hier_name": "system_ila_0/system_ila_0_slot_1_r",
+"type": "xlconcat",
+"version": "2.1",
+"ip_type": "PERIPHERAL",
+},
+"system_ila_0_slot_1_w": {"hier_name": "system_ila_0/system_ila_0_slot_1_w",
+"type": "xlconcat",
+"version": "2.1",
+"ip_type": "PERIPHERAL",
+},
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:11:59.172
+!MESSAGE XSCT Command: [::hsi::utils::get_design_properties -json X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:11:59.172
+!MESSAGE XSCT command with result: [::hsi::utils::get_design_properties -json X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa], Result: [null, {"device": "7z020",
+"family": "zynq",
+"timestamp": "Tue Jan 27 16:48:59 2026",
+"vivado_version": "2020.1",
+"part": "xc7z020clg484-1",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:31.770
+!MESSAGE XSCT Command: [::hsi::utils::get_ps_config_params -json X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa], Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:31.786
+!MESSAGE XSCT command with result: [::hsi::utils::get_ps_config_params -json X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa], Result: [null, {"PCW_APU_PERIPHERAL_FREQMHZ": "666.666667",
+"PCW_DDR_HPRLPR_QUEUE_PARTITION": "HPR(0)/LPR(32)",
+"PCW_DDR_HPR_TO_CRITICAL_PRIORITY_LEVEL": "15",
+"PCW_DDR_LPR_TO_CRITICAL_PRIORITY_LEVEL": "2",
+"PCW_DDR_PORT0_HPR_ENABLE": "0",
+"PCW_DDR_PORT1_HPR_ENABLE": "0",
+"PCW_DDR_PORT2_HPR_ENABLE": "0",
+"PCW_DDR_PORT3_HPR_ENABLE": "0",
+"PCW_DDR_WRITE_TO_CRITICAL_PRIORITY_LEVEL": "2",
+"PCW_FPGA0_PERIPHERAL_FREQMHZ": "100.000000",
+"PCW_UIPARAM_DDR_BUS_WIDTH": "32 Bit",
+"PCW_UIPARAM_DDR_FREQ_MHZ": "533.333313",
+}]. Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:31.802
+!MESSAGE XSCT Command: [::hsi::utils::get_all_register_data -json X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa ps7_cortexa9_0], Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:31.802
+!MESSAGE XSCT command with result: [::hsi::utils::get_all_register_data -json X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa ps7_cortexa9_0], Result: [null, {"axi_gpio_0": {"GPIO_DATA": {"description": "Channel-1 AXI GPIO Data register",
+"address_offset": "0x0",
+"access": "read-write",
+"size": "8",
+"interface": "S_AXI",
+"fields": {"Channel_1_GPIO_DATA": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "8",
+"desc": "AXI GPIO Data Register.
+For each I/O bit programmed as input
+  R - Reads value on the input pin.
+  W - No effect.
+For each I/O bit programmed as output
+  R - Reads value on GPIO_O pins
+  W - Writes value to the corresponding AXI GPIO 
+      data register bit and output pin
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1092616192,
+},
+"GPIO_TRI": {"description": "Channel-1 AXI GPIO 3-State Control register",
+"address_offset": "0x4",
+"access": "read-write",
+"size": "8",
+"interface": "S_AXI",
+"fields": {"Channel_1_GPIO_TRI": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "8",
+"desc": "AXI GPIO 3-State Control Register
+Each I/O pin of the AXI GPIO is individually programmable as an input or output   For each of the bits     0 - I/O pin configured as output     1 - I/O pin configured as input
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1092616196,
+},
+"GPIO2_DATA": {"description": "Channel-2 AXI GPIO Data register",
+"address_offset": "0x8",
+"access": "read-write",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"Channel_2_GPIO_DATA": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "32",
+"desc": "AXI GPIO Data Register.
+For each I/O bit programmed as input
+  R - Reads value on the input pin.
+  W - No effect.
+For each I/O bit programmed as output
+  R - Reads value on GPIO_O pins
+  W - Writes value to the corresponding AXI GPIO 
+      data register bit and output pin
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1092616200,
+},
+"GPIO2_TRI": {"description": "Channel-2 AXI GPIO 3-State Control register",
+"address_offset": "0xC",
+"access": "read-write",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"Channel_2_GPIO_TRI": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "32",
+"desc": "AXI GPIO 3-State Control Register
+Each I/O pin of the AXI GPIO is individually programmable as an input or output   For each of the bits     0 - I/O pin configured as output     1 - I/O pin configured as input
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1092616204,
+},
+"GIER": {"description": "Global_Interrupt_Enable register",
+"address_offset": "0x11C",
+"access": "read-write",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"Global_Interrupt_Enable": {"access": "read-write",
+"bit_offset": "31",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Master enable for the device interrupt output
+  0 - Disabled
+  1 - Enabled
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1092616476,
+},
+"IP_IER": {"description": "IP Interrupt Enable register",
+"address_offset": "0x128",
+"access": "read-write",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"Channel_1_Interrupt_Enable": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Enable Channel 1 Interrupt
+  0 - Disabled (masked)
+  1 - Enabled
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"Channel_2_Interrupt_Enable": {"access": "read-write",
+"bit_offset": "1",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Enable Channel 2 Interrupt
+  0 - Disabled (masked)
+  1 - Enabled
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1092616488,
+},
+"IP_ISR": {"description": "IP Interrupt Status register",
+"address_offset": "0x120",
+"access": "read-write",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"Channel_1_Interrupt_Status": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Channel 1 Interrupt Status
+  0 - No Channel 1 input interrupt
+  1 - Channel 1 input interrupt
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"Channel_2_Interrupt_Status": {"access": "read-write",
+"bit_offset": "1",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Channel 2 Interrupt Status
+  0 - No Channel 2 input interrupt
+  1 - Channel 2 input interrupt
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1092616480,
+},
+},
+"axi_gpio_1": {"GPIO_DATA": {"description": "Channel-1 AXI GPIO Data register",
+"address_offset": "0x0",
+"access": "read-write",
+"size": "5",
+"interface": "S_AXI",
+"fields": {"Channel_1_GPIO_DATA": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "5",
+"desc": "AXI GPIO Data Register.
+For each I/O bit programmed as input
+  R - Reads value on the input pin.
+  W - No effect.
+For each I/O bit programmed as output
+  R - Reads value on GPIO_O pins
+  W - Writes value to the corresponding AXI GPIO 
+      data register bit and output pin
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1092681728,
+},
+"GPIO_TRI": {"description": "Channel-1 AXI GPIO 3-State Control register",
+"address_offset": "0x4",
+"access": "read-write",
+"size": "5",
+"interface": "S_AXI",
+"fields": {"Channel_1_GPIO_TRI": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "5",
+"desc": "AXI GPIO 3-State Control Register
+Each I/O pin of the AXI GPIO is individually programmable as an input or output   For each of the bits     0 - I/O pin configured as output     1 - I/O pin configured as input
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1092681732,
+},
+"GPIO2_DATA": {"description": "Channel-2 AXI GPIO Data register",
+"address_offset": "0x8",
+"access": "read-write",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"Channel_2_GPIO_DATA": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "32",
+"desc": "AXI GPIO Data Register.
+For each I/O bit programmed as input
+  R - Reads value on the input pin.
+  W - No effect.
+For each I/O bit programmed as output
+  R - Reads value on GPIO_O pins
+  W - Writes value to the corresponding AXI GPIO 
+      data register bit and output pin
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1092681736,
+},
+"GPIO2_TRI": {"description": "Channel-2 AXI GPIO 3-State Control register",
+"address_offset": "0xC",
+"access": "read-write",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"Channel_2_GPIO_TRI": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "32",
+"desc": "AXI GPIO 3-State Control Register
+Each I/O pin of the AXI GPIO is individually programmable as an input or output   For each of the bits     0 - I/O pin configured as output     1 - I/O pin configured as input
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1092681740,
+},
+"GIER": {"description": "Global_Interrupt_Enable register",
+"address_offset": "0x11C",
+"access": "read-write",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"Global_Interrupt_Enable": {"access": "read-write",
+"bit_offset": "31",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Master enable for the device interrupt output
+  0 - Disabled
+  1 - Enabled
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1092682012,
+},
+"IP_IER": {"description": "IP Interrupt Enable register",
+"address_offset": "0x128",
+"access": "read-write",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"Channel_1_Interrupt_Enable": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Enable Channel 1 Interrupt
+  0 - Disabled (masked)
+  1 - Enabled
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"Channel_2_Interrupt_Enable": {"access": "read-write",
+"bit_offset": "1",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Enable Channel 2 Interrupt
+  0 - Disabled (masked)
+  1 - Enabled
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1092682024,
+},
+"IP_ISR": {"description": "IP Interrupt Status register",
+"address_offset": "0x120",
+"access": "read-write",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"Channel_1_Interrupt_Status": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Channel 1 Interrupt Status
+  0 - No Channel 1 input interrupt
+  1 - Channel 1 input interrupt
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"Channel_2_Interrupt_Status": {"access": "read-write",
+"bit_offset": "1",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Channel 2 Interrupt Status
+  0 - No Channel 2 input interrupt
+  1 - Channel 2 input interrupt
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1092682016,
+},
+},
+"axi_gpio_2": {"GPIO_DATA": {"description": "Channel-1 AXI GPIO Data register",
+"address_offset": "0x0",
+"access": "read-write",
+"size": "8",
+"interface": "S_AXI",
+"fields": {"Channel_1_GPIO_DATA": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "8",
+"desc": "AXI GPIO Data Register.
+For each I/O bit programmed as input
+  R - Reads value on the input pin.
+  W - No effect.
+For each I/O bit programmed as output
+  R - Reads value on GPIO_O pins
+  W - Writes value to the corresponding AXI GPIO 
+      data register bit and output pin
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1092747264,
+},
+"GPIO_TRI": {"description": "Channel-1 AXI GPIO 3-State Control register",
+"address_offset": "0x4",
+"access": "read-write",
+"size": "8",
+"interface": "S_AXI",
+"fields": {"Channel_1_GPIO_TRI": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "8",
+"desc": "AXI GPIO 3-State Control Register
+Each I/O pin of the AXI GPIO is individually programmable as an input or output   For each of the bits     0 - I/O pin configured as output     1 - I/O pin configured as input
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1092747268,
+},
+"GPIO2_DATA": {"description": "Channel-2 AXI GPIO Data register",
+"address_offset": "0x8",
+"access": "read-write",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"Channel_2_GPIO_DATA": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "32",
+"desc": "AXI GPIO Data Register.
+For each I/O bit programmed as input
+  R - Reads value on the input pin.
+  W - No effect.
+For each I/O bit programmed as output
+  R - Reads value on GPIO_O pins
+  W - Writes value to the corresponding AXI GPIO 
+      data register bit and output pin
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1092747272,
+},
+"GPIO2_TRI": {"description": "Channel-2 AXI GPIO 3-State Control register",
+"address_offset": "0xC",
+"access": "read-write",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"Channel_2_GPIO_TRI": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "32",
+"desc": "AXI GPIO 3-State Control Register
+Each I/O pin of the AXI GPIO is individually programmable as an input or output   For each of the bits     0 - I/O pin configured as output     1 - I/O pin configured as input
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1092747276,
+},
+"GIER": {"description": "Global_Interrupt_Enable register",
+"address_offset": "0x11C",
+"access": "read-write",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"Global_Interrupt_Enable": {"access": "read-write",
+"bit_offset": "31",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Master enable for the device interrupt output
+  0 - Disabled
+  1 - Enabled
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1092747548,
+},
+"IP_IER": {"description": "IP Interrupt Enable register",
+"address_offset": "0x128",
+"access": "read-write",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"Channel_1_Interrupt_Enable": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Enable Channel 1 Interrupt
+  0 - Disabled (masked)
+  1 - Enabled
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"Channel_2_Interrupt_Enable": {"access": "read-write",
+"bit_offset": "1",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Enable Channel 2 Interrupt
+  0 - Disabled (masked)
+  1 - Enabled
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1092747560,
+},
+"IP_ISR": {"description": "IP Interrupt Status register",
+"address_offset": "0x120",
+"access": "read-write",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"Channel_1_Interrupt_Status": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Channel 1 Interrupt Status
+  0 - No Channel 1 input interrupt
+  1 - Channel 1 input interrupt
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"Channel_2_Interrupt_Status": {"access": "read-write",
+"bit_offset": "1",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Channel 2 Interrupt Status
+  0 - No Channel 2 input interrupt
+  1 - Channel 2 input interrupt
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1092747552,
+},
+},
+"ps7_afi_0": {},
+"ps7_afi_1": {},
+"ps7_afi_2": {},
+"ps7_afi_3": {},
+"ps7_coresight_comp_0": {},
+"ps7_ddr_0": {},
+"ps7_ddrc_0": {},
+"ps7_dev_cfg_0": {},
+"ps7_dma_ns": {},
+"ps7_dma_s": {},
+"ps7_ethernet_0": {},
+"ps7_globaltimer_0": {},
+"ps7_gpio_0": {},
+"ps7_gpv_0": {},
+"ps7_intc_dist_0": {},
+"ps7_iop_bus_config_0": {},
+"ps7_l2cachec_0": {},
+"ps7_ocmc_0": {},
+"ps7_pl310_0": {},
+"ps7_pmu_0": {},
+"ps7_qspi_0": {},
+"ps7_qspi_linear_0": {},
+"ps7_ram_0": {},
+"ps7_ram_1": {},
+"ps7_scuc_0": {},
+"ps7_scugic_0": {},
+"ps7_scutimer_0": {},
+"ps7_scuwdt_0": {},
+"ps7_sd_0": {},
+"ps7_slcr_0": {},
+"ps7_ttc_0": {},
+"ps7_uart_1": {},
+"ps7_usb_0": {},
+"ps7_xadc_0": {},
+}]. Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:31.818
+!MESSAGE XSCT Command: [::hsi::utils::get_addr_ranges -json X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa ps7_cortexa9_0], Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:31.818
+!MESSAGE XSCT command with result: [::hsi::utils::get_addr_ranges -json X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa ps7_cortexa9_0], Result: [null, {"axi_gpio_0_S_AXI": {"name": "axi_gpio_0",
+"base": "0x41200000",
+"high": "0x4120FFFF",
+"size": "65536",
+"slaveintf": "S_AXI",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"axi_gpio_1_S_AXI": {"name": "axi_gpio_1",
+"base": "0x41210000",
+"high": "0x4121FFFF",
+"size": "65536",
+"slaveintf": "S_AXI",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"axi_gpio_2_S_AXI": {"name": "axi_gpio_2",
+"base": "0x41220000",
+"high": "0x4122FFFF",
+"size": "65536",
+"slaveintf": "S_AXI",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_afi_0": {"name": "ps7_afi_0",
+"base": "0xF8008000",
+"high": "0xF8008FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_afi_1": {"name": "ps7_afi_1",
+"base": "0xF8009000",
+"high": "0xF8009FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_afi_2": {"name": "ps7_afi_2",
+"base": "0xF800A000",
+"high": "0xF800AFFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_afi_3": {"name": "ps7_afi_3",
+"base": "0xF800B000",
+"high": "0xF800BFFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_coresight_comp_0": {"name": "ps7_coresight_comp_0",
+"base": "0xF8800000",
+"high": "0xF88FFFFF",
+"size": "1048576",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_ddrc_0": {"name": "ps7_ddrc_0",
+"base": "0xF8006000",
+"high": "0xF8006FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_dev_cfg_0": {"name": "ps7_dev_cfg_0",
+"base": "0xF8007000",
+"high": "0xF80070FF",
+"size": "256",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_dma_ns": {"name": "ps7_dma_ns",
+"base": "0xF8004000",
+"high": "0xF8004FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_dma_s": {"name": "ps7_dma_s",
+"base": "0xF8003000",
+"high": "0xF8003FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_ethernet_0": {"name": "ps7_ethernet_0",
+"base": "0xE000B000",
+"high": "0xE000BFFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_globaltimer_0": {"name": "ps7_globaltimer_0",
+"base": "0xF8F00200",
+"high": "0xF8F002FF",
+"size": "256",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_gpio_0": {"name": "ps7_gpio_0",
+"base": "0xE000A000",
+"high": "0xE000AFFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_gpv_0": {"name": "ps7_gpv_0",
+"base": "0xF8900000",
+"high": "0xF89FFFFF",
+"size": "1048576",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_intc_dist_0": {"name": "ps7_intc_dist_0",
+"base": "0xF8F01000",
+"high": "0xF8F01FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_iop_bus_config_0": {"name": "ps7_iop_bus_config_0",
+"base": "0xE0200000",
+"high": "0xE0200FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_l2cachec_0": {"name": "ps7_l2cachec_0",
+"base": "0xF8F02000",
+"high": "0xF8F02FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_ocmc_0": {"name": "ps7_ocmc_0",
+"base": "0xF800C000",
+"high": "0xF800CFFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_pl310_0": {"name": "ps7_pl310_0",
+"base": "0xF8F02000",
+"high": "0xF8F02FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_pmu_0": {"name": "ps7_pmu_0",
+"base": "0xF8893000",
+"high": "0xF8893FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_qspi_0": {"name": "ps7_qspi_0",
+"base": "0xE000D000",
+"high": "0xE000DFFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_qspi_linear_0": {"name": "ps7_qspi_linear_0",
+"base": "0xFC000000",
+"high": "0xFCFFFFFF",
+"size": "16777216",
+"slaveintf": "",
+"type": "FLASH",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_scuc_0": {"name": "ps7_scuc_0",
+"base": "0xF8F00000",
+"high": "0xF8F000FC",
+"size": "253",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_scugic_0": {"name": "ps7_scugic_0",
+"base": "0xF8F00100",
+"high": "0xF8F001FF",
+"size": "256",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_scutimer_0": {"name": "ps7_scutimer_0",
+"base": "0xF8F00600",
+"high": "0xF8F0061F",
+"size": "32",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_scuwdt_0": {"name": "ps7_scuwdt_0",
+"base": "0xF8F00620",
+"high": "0xF8F006FF",
+"size": "224",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_sd_0": {"name": "ps7_sd_0",
+"base": "0xE0100000",
+"high": "0xE0100FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_slcr_0": {"name": "ps7_slcr_0",
+"base": "0xF8000000",
+"high": "0xF8000FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_ttc_0": {"name": "ps7_ttc_0",
+"base": "0xF8001000",
+"high": "0xF8001FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_uart_1": {"name": "ps7_uart_1",
+"base": "0xE0001000",
+"high": "0xE0001FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_usb_0": {"name": "ps7_usb_0",
+"base": "0xE0002000",
+"high": "0xE0002FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_xadc_0": {"name": "ps7_xadc_0",
+"base": "0xF8007100",
+"high": "0xF8007120",
+"size": "33",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_ddr_0": {"name": "ps7_ddr_0",
+"base": "0x00100000",
+"high": "0x1FFFFFFF",
+"size": "535822336",
+"slaveintf": "",
+"type": "MEMORY",
+"flags": "7",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_ram_0": {"name": "ps7_ram_0",
+"base": "0x00000000",
+"high": "0x0002FFFF",
+"size": "196608",
+"slaveintf": "",
+"type": "MEMORY",
+"flags": "7",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_ram_1": {"name": "ps7_ram_1",
+"base": "0xFFFF0000",
+"high": "0xFFFFFDFF",
+"size": "65024",
+"slaveintf": "",
+"type": "MEMORY",
+"flags": "7",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+}]. Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:31.818
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa ps7_cortexa9_0 C_DEBUG_ENABLED], Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:31.834
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa ps7_cortexa9_0 C_DEBUG_ENABLED], Result: [null, ]. Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:31.834
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa ps7_cortexa9_0 C_DEBUG_EVENT_COUNTERS], Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:31.834
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa ps7_cortexa9_0 C_DEBUG_EVENT_COUNTERS], Result: [null, ]. Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:31.834
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa ps7_cortexa9_0 C_DEBUG_LATENCY_COUNTERS], Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:31.834
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa ps7_cortexa9_0 C_DEBUG_LATENCY_COUNTERS], Result: [null, ]. Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:31.849
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa ps7_cortexa9_0 C_DEBUG_COUNTER_WIDTH], Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:31.849
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa ps7_cortexa9_0 C_DEBUG_COUNTER_WIDTH], Result: [null, ]. Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:31.849
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa ps7_cortexa9_0 C_FREQ], Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:31.849
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa ps7_cortexa9_0 C_FREQ], Result: [null, ]. Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:31.849
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa ps7_cortexa9_0 C_CPU_CLK_FREQ_HZ], Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:31.865
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa ps7_cortexa9_0 C_CPU_CLK_FREQ_HZ], Result: [null, 666666687]. Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:31.865
+!MESSAGE XSCT Command: [::hsi::utils::get_cpu_nr -json X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa], Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:31.865
+!MESSAGE XSCT command with result: [::hsi::utils::get_cpu_nr -json X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa], Result: [null, {"ps7_cortexa9_0": {"bscan": "",
+"index": "0",
+},
+"ps7_cortexa9_1": {"bscan": "",
+"index": "1",
+},
+}]. Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:31.865
+!MESSAGE XSCT Command: [::hsi::utils::get_all_register_data -json X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa ps7_cortexa9_1], Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:31.881
+!MESSAGE XSCT command with result: [::hsi::utils::get_all_register_data -json X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa ps7_cortexa9_1], Result: [null, {"axi_gpio_0": {"GPIO_DATA": {"description": "Channel-1 AXI GPIO Data register",
+"address_offset": "0x0",
+"access": "read-write",
+"size": "8",
+"interface": "S_AXI",
+"fields": {"Channel_1_GPIO_DATA": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "8",
+"desc": "AXI GPIO Data Register.
+For each I/O bit programmed as input
+  R - Reads value on the input pin.
+  W - No effect.
+For each I/O bit programmed as output
+  R - Reads value on GPIO_O pins
+  W - Writes value to the corresponding AXI GPIO 
+      data register bit and output pin
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1092616192,
+},
+"GPIO_TRI": {"description": "Channel-1 AXI GPIO 3-State Control register",
+"address_offset": "0x4",
+"access": "read-write",
+"size": "8",
+"interface": "S_AXI",
+"fields": {"Channel_1_GPIO_TRI": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "8",
+"desc": "AXI GPIO 3-State Control Register
+Each I/O pin of the AXI GPIO is individually programmable as an input or output   For each of the bits     0 - I/O pin configured as output     1 - I/O pin configured as input
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1092616196,
+},
+"GPIO2_DATA": {"description": "Channel-2 AXI GPIO Data register",
+"address_offset": "0x8",
+"access": "read-write",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"Channel_2_GPIO_DATA": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "32",
+"desc": "AXI GPIO Data Register.
+For each I/O bit programmed as input
+  R - Reads value on the input pin.
+  W - No effect.
+For each I/O bit programmed as output
+  R - Reads value on GPIO_O pins
+  W - Writes value to the corresponding AXI GPIO 
+      data register bit and output pin
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1092616200,
+},
+"GPIO2_TRI": {"description": "Channel-2 AXI GPIO 3-State Control register",
+"address_offset": "0xC",
+"access": "read-write",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"Channel_2_GPIO_TRI": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "32",
+"desc": "AXI GPIO 3-State Control Register
+Each I/O pin of the AXI GPIO is individually programmable as an input or output   For each of the bits     0 - I/O pin configured as output     1 - I/O pin configured as input
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1092616204,
+},
+"GIER": {"description": "Global_Interrupt_Enable register",
+"address_offset": "0x11C",
+"access": "read-write",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"Global_Interrupt_Enable": {"access": "read-write",
+"bit_offset": "31",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Master enable for the device interrupt output
+  0 - Disabled
+  1 - Enabled
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1092616476,
+},
+"IP_IER": {"description": "IP Interrupt Enable register",
+"address_offset": "0x128",
+"access": "read-write",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"Channel_1_Interrupt_Enable": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Enable Channel 1 Interrupt
+  0 - Disabled (masked)
+  1 - Enabled
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"Channel_2_Interrupt_Enable": {"access": "read-write",
+"bit_offset": "1",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Enable Channel 2 Interrupt
+  0 - Disabled (masked)
+  1 - Enabled
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1092616488,
+},
+"IP_ISR": {"description": "IP Interrupt Status register",
+"address_offset": "0x120",
+"access": "read-write",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"Channel_1_Interrupt_Status": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Channel 1 Interrupt Status
+  0 - No Channel 1 input interrupt
+  1 - Channel 1 input interrupt
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"Channel_2_Interrupt_Status": {"access": "read-write",
+"bit_offset": "1",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Channel 2 Interrupt Status
+  0 - No Channel 2 input interrupt
+  1 - Channel 2 input interrupt
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1092616480,
+},
+},
+"axi_gpio_1": {"GPIO_DATA": {"description": "Channel-1 AXI GPIO Data register",
+"address_offset": "0x0",
+"access": "read-write",
+"size": "5",
+"interface": "S_AXI",
+"fields": {"Channel_1_GPIO_DATA": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "5",
+"desc": "AXI GPIO Data Register.
+For each I/O bit programmed as input
+  R - Reads value on the input pin.
+  W - No effect.
+For each I/O bit programmed as output
+  R - Reads value on GPIO_O pins
+  W - Writes value to the corresponding AXI GPIO 
+      data register bit and output pin
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1092681728,
+},
+"GPIO_TRI": {"description": "Channel-1 AXI GPIO 3-State Control register",
+"address_offset": "0x4",
+"access": "read-write",
+"size": "5",
+"interface": "S_AXI",
+"fields": {"Channel_1_GPIO_TRI": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "5",
+"desc": "AXI GPIO 3-State Control Register
+Each I/O pin of the AXI GPIO is individually programmable as an input or output   For each of the bits     0 - I/O pin configured as output     1 - I/O pin configured as input
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1092681732,
+},
+"GPIO2_DATA": {"description": "Channel-2 AXI GPIO Data register",
+"address_offset": "0x8",
+"access": "read-write",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"Channel_2_GPIO_DATA": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "32",
+"desc": "AXI GPIO Data Register.
+For each I/O bit programmed as input
+  R - Reads value on the input pin.
+  W - No effect.
+For each I/O bit programmed as output
+  R - Reads value on GPIO_O pins
+  W - Writes value to the corresponding AXI GPIO 
+      data register bit and output pin
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1092681736,
+},
+"GPIO2_TRI": {"description": "Channel-2 AXI GPIO 3-State Control register",
+"address_offset": "0xC",
+"access": "read-write",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"Channel_2_GPIO_TRI": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "32",
+"desc": "AXI GPIO 3-State Control Register
+Each I/O pin of the AXI GPIO is individually programmable as an input or output   For each of the bits     0 - I/O pin configured as output     1 - I/O pin configured as input
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1092681740,
+},
+"GIER": {"description": "Global_Interrupt_Enable register",
+"address_offset": "0x11C",
+"access": "read-write",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"Global_Interrupt_Enable": {"access": "read-write",
+"bit_offset": "31",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Master enable for the device interrupt output
+  0 - Disabled
+  1 - Enabled
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1092682012,
+},
+"IP_IER": {"description": "IP Interrupt Enable register",
+"address_offset": "0x128",
+"access": "read-write",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"Channel_1_Interrupt_Enable": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Enable Channel 1 Interrupt
+  0 - Disabled (masked)
+  1 - Enabled
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"Channel_2_Interrupt_Enable": {"access": "read-write",
+"bit_offset": "1",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Enable Channel 2 Interrupt
+  0 - Disabled (masked)
+  1 - Enabled
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1092682024,
+},
+"IP_ISR": {"description": "IP Interrupt Status register",
+"address_offset": "0x120",
+"access": "read-write",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"Channel_1_Interrupt_Status": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Channel 1 Interrupt Status
+  0 - No Channel 1 input interrupt
+  1 - Channel 1 input interrupt
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"Channel_2_Interrupt_Status": {"access": "read-write",
+"bit_offset": "1",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Channel 2 Interrupt Status
+  0 - No Channel 2 input interrupt
+  1 - Channel 2 input interrupt
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1092682016,
+},
+},
+"axi_gpio_2": {"GPIO_DATA": {"description": "Channel-1 AXI GPIO Data register",
+"address_offset": "0x0",
+"access": "read-write",
+"size": "8",
+"interface": "S_AXI",
+"fields": {"Channel_1_GPIO_DATA": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "8",
+"desc": "AXI GPIO Data Register.
+For each I/O bit programmed as input
+  R - Reads value on the input pin.
+  W - No effect.
+For each I/O bit programmed as output
+  R - Reads value on GPIO_O pins
+  W - Writes value to the corresponding AXI GPIO 
+      data register bit and output pin
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1092747264,
+},
+"GPIO_TRI": {"description": "Channel-1 AXI GPIO 3-State Control register",
+"address_offset": "0x4",
+"access": "read-write",
+"size": "8",
+"interface": "S_AXI",
+"fields": {"Channel_1_GPIO_TRI": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "8",
+"desc": "AXI GPIO 3-State Control Register
+Each I/O pin of the AXI GPIO is individually programmable as an input or output   For each of the bits     0 - I/O pin configured as output     1 - I/O pin configured as input
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1092747268,
+},
+"GPIO2_DATA": {"description": "Channel-2 AXI GPIO Data register",
+"address_offset": "0x8",
+"access": "read-write",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"Channel_2_GPIO_DATA": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "32",
+"desc": "AXI GPIO Data Register.
+For each I/O bit programmed as input
+  R - Reads value on the input pin.
+  W - No effect.
+For each I/O bit programmed as output
+  R - Reads value on GPIO_O pins
+  W - Writes value to the corresponding AXI GPIO 
+      data register bit and output pin
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1092747272,
+},
+"GPIO2_TRI": {"description": "Channel-2 AXI GPIO 3-State Control register",
+"address_offset": "0xC",
+"access": "read-write",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"Channel_2_GPIO_TRI": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "32",
+"desc": "AXI GPIO 3-State Control Register
+Each I/O pin of the AXI GPIO is individually programmable as an input or output   For each of the bits     0 - I/O pin configured as output     1 - I/O pin configured as input
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1092747276,
+},
+"GIER": {"description": "Global_Interrupt_Enable register",
+"address_offset": "0x11C",
+"access": "read-write",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"Global_Interrupt_Enable": {"access": "read-write",
+"bit_offset": "31",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Master enable for the device interrupt output
+  0 - Disabled
+  1 - Enabled
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1092747548,
+},
+"IP_IER": {"description": "IP Interrupt Enable register",
+"address_offset": "0x128",
+"access": "read-write",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"Channel_1_Interrupt_Enable": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Enable Channel 1 Interrupt
+  0 - Disabled (masked)
+  1 - Enabled
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"Channel_2_Interrupt_Enable": {"access": "read-write",
+"bit_offset": "1",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Enable Channel 2 Interrupt
+  0 - Disabled (masked)
+  1 - Enabled
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1092747560,
+},
+"IP_ISR": {"description": "IP Interrupt Status register",
+"address_offset": "0x120",
+"access": "read-write",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"Channel_1_Interrupt_Status": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Channel 1 Interrupt Status
+  0 - No Channel 1 input interrupt
+  1 - Channel 1 input interrupt
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"Channel_2_Interrupt_Status": {"access": "read-write",
+"bit_offset": "1",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Channel 2 Interrupt Status
+  0 - No Channel 2 input interrupt
+  1 - Channel 2 input interrupt
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1092747552,
+},
+},
+"ps7_afi_0": {},
+"ps7_afi_1": {},
+"ps7_afi_2": {},
+"ps7_afi_3": {},
+"ps7_coresight_comp_0": {},
+"ps7_ddr_0": {},
+"ps7_ddrc_0": {},
+"ps7_dev_cfg_0": {},
+"ps7_dma_ns": {},
+"ps7_dma_s": {},
+"ps7_ethernet_0": {},
+"ps7_globaltimer_0": {},
+"ps7_gpio_0": {},
+"ps7_gpv_0": {},
+"ps7_intc_dist_0": {},
+"ps7_iop_bus_config_0": {},
+"ps7_l2cachec_0": {},
+"ps7_ocmc_0": {},
+"ps7_pl310_0": {},
+"ps7_pmu_0": {},
+"ps7_qspi_0": {},
+"ps7_qspi_linear_0": {},
+"ps7_ram_0": {},
+"ps7_ram_1": {},
+"ps7_scuc_0": {},
+"ps7_scugic_0": {},
+"ps7_scutimer_0": {},
+"ps7_scuwdt_0": {},
+"ps7_sd_0": {},
+"ps7_slcr_0": {},
+"ps7_ttc_0": {},
+"ps7_uart_1": {},
+"ps7_usb_0": {},
+"ps7_xadc_0": {},
+}]. Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:31.881
+!MESSAGE XSCT Command: [::hsi::utils::get_addr_ranges -json X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa ps7_cortexa9_1], Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:31.897
+!MESSAGE XSCT command with result: [::hsi::utils::get_addr_ranges -json X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa ps7_cortexa9_1], Result: [null, {"axi_gpio_0_S_AXI": {"name": "axi_gpio_0",
+"base": "0x41200000",
+"high": "0x4120FFFF",
+"size": "65536",
+"slaveintf": "S_AXI",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"axi_gpio_1_S_AXI": {"name": "axi_gpio_1",
+"base": "0x41210000",
+"high": "0x4121FFFF",
+"size": "65536",
+"slaveintf": "S_AXI",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"axi_gpio_2_S_AXI": {"name": "axi_gpio_2",
+"base": "0x41220000",
+"high": "0x4122FFFF",
+"size": "65536",
+"slaveintf": "S_AXI",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_afi_0": {"name": "ps7_afi_0",
+"base": "0xF8008000",
+"high": "0xF8008FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_afi_1": {"name": "ps7_afi_1",
+"base": "0xF8009000",
+"high": "0xF8009FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_afi_2": {"name": "ps7_afi_2",
+"base": "0xF800A000",
+"high": "0xF800AFFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_afi_3": {"name": "ps7_afi_3",
+"base": "0xF800B000",
+"high": "0xF800BFFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_coresight_comp_0": {"name": "ps7_coresight_comp_0",
+"base": "0xF8800000",
+"high": "0xF88FFFFF",
+"size": "1048576",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_ddrc_0": {"name": "ps7_ddrc_0",
+"base": "0xF8006000",
+"high": "0xF8006FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_dev_cfg_0": {"name": "ps7_dev_cfg_0",
+"base": "0xF8007000",
+"high": "0xF80070FF",
+"size": "256",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_dma_ns": {"name": "ps7_dma_ns",
+"base": "0xF8004000",
+"high": "0xF8004FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_dma_s": {"name": "ps7_dma_s",
+"base": "0xF8003000",
+"high": "0xF8003FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_ethernet_0": {"name": "ps7_ethernet_0",
+"base": "0xE000B000",
+"high": "0xE000BFFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_globaltimer_0": {"name": "ps7_globaltimer_0",
+"base": "0xF8F00200",
+"high": "0xF8F002FF",
+"size": "256",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_gpio_0": {"name": "ps7_gpio_0",
+"base": "0xE000A000",
+"high": "0xE000AFFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_gpv_0": {"name": "ps7_gpv_0",
+"base": "0xF8900000",
+"high": "0xF89FFFFF",
+"size": "1048576",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_intc_dist_0": {"name": "ps7_intc_dist_0",
+"base": "0xF8F01000",
+"high": "0xF8F01FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_iop_bus_config_0": {"name": "ps7_iop_bus_config_0",
+"base": "0xE0200000",
+"high": "0xE0200FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_l2cachec_0": {"name": "ps7_l2cachec_0",
+"base": "0xF8F02000",
+"high": "0xF8F02FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_ocmc_0": {"name": "ps7_ocmc_0",
+"base": "0xF800C000",
+"high": "0xF800CFFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_pl310_0": {"name": "ps7_pl310_0",
+"base": "0xF8F02000",
+"high": "0xF8F02FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_pmu_0": {"name": "ps7_pmu_0",
+"base": "0xF8893000",
+"high": "0xF8893FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_qspi_0": {"name": "ps7_qspi_0",
+"base": "0xE000D000",
+"high": "0xE000DFFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_qspi_linear_0": {"name": "ps7_qspi_linear_0",
+"base": "0xFC000000",
+"high": "0xFCFFFFFF",
+"size": "16777216",
+"slaveintf": "",
+"type": "FLASH",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_scuc_0": {"name": "ps7_scuc_0",
+"base": "0xF8F00000",
+"high": "0xF8F000FC",
+"size": "253",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_scugic_0": {"name": "ps7_scugic_0",
+"base": "0xF8F00100",
+"high": "0xF8F001FF",
+"size": "256",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_scutimer_0": {"name": "ps7_scutimer_0",
+"base": "0xF8F00600",
+"high": "0xF8F0061F",
+"size": "32",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_scuwdt_0": {"name": "ps7_scuwdt_0",
+"base": "0xF8F00620",
+"high": "0xF8F006FF",
+"size": "224",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_sd_0": {"name": "ps7_sd_0",
+"base": "0xE0100000",
+"high": "0xE0100FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_slcr_0": {"name": "ps7_slcr_0",
+"base": "0xF8000000",
+"high": "0xF8000FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_ttc_0": {"name": "ps7_ttc_0",
+"base": "0xF8001000",
+"high": "0xF8001FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_uart_1": {"name": "ps7_uart_1",
+"base": "0xE0001000",
+"high": "0xE0001FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_usb_0": {"name": "ps7_usb_0",
+"base": "0xE0002000",
+"high": "0xE0002FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_xadc_0": {"name": "ps7_xadc_0",
+"base": "0xF8007100",
+"high": "0xF8007120",
+"size": "33",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_ddr_0": {"name": "ps7_ddr_0",
+"base": "0x00100000",
+"high": "0x1FFFFFFF",
+"size": "535822336",
+"slaveintf": "",
+"type": "MEMORY",
+"flags": "7",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_ram_0": {"name": "ps7_ram_0",
+"base": "0x00000000",
+"high": "0x0002FFFF",
+"size": "196608",
+"slaveintf": "",
+"type": "MEMORY",
+"flags": "7",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_ram_1": {"name": "ps7_ram_1",
+"base": "0xFFFF0000",
+"high": "0xFFFFFDFF",
+"size": "65024",
+"slaveintf": "",
+"type": "MEMORY",
+"flags": "7",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+}]. Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:31.897
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa ps7_cortexa9_1 C_DEBUG_ENABLED], Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:31.897
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa ps7_cortexa9_1 C_DEBUG_ENABLED], Result: [null, ]. Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:31.897
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa ps7_cortexa9_1 C_DEBUG_EVENT_COUNTERS], Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:31.897
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa ps7_cortexa9_1 C_DEBUG_EVENT_COUNTERS], Result: [null, ]. Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:31.913
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa ps7_cortexa9_1 C_DEBUG_LATENCY_COUNTERS], Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:31.913
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa ps7_cortexa9_1 C_DEBUG_LATENCY_COUNTERS], Result: [null, ]. Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:31.913
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa ps7_cortexa9_1 C_DEBUG_COUNTER_WIDTH], Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:31.913
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa ps7_cortexa9_1 C_DEBUG_COUNTER_WIDTH], Result: [null, ]. Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:31.913
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa ps7_cortexa9_1 C_FREQ], Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:31.928
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa ps7_cortexa9_1 C_FREQ], Result: [null, ]. Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:31.928
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa ps7_cortexa9_1 C_CPU_CLK_FREQ_HZ], Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:31.928
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa ps7_cortexa9_1 C_CPU_CLK_FREQ_HZ], Result: [null, 666666687]. Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:31.928
+!MESSAGE XSCT Command: [::hsi::utils::get_connected_periphs X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa ps7_cortexa9_0], Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:31.944
+!MESSAGE XSCT command with result: [::hsi::utils::get_connected_periphs X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa ps7_cortexa9_0], Result: [null, axi_gpio_0 axi_gpio_1 axi_gpio_2 ps7_afi_0 ps7_afi_1 ps7_afi_2 ps7_afi_3 ps7_coresight_comp_0 ps7_ddr_0 ps7_ddrc_0 ps7_dev_cfg_0 ps7_dma_ns ps7_dma_s ps7_ethernet_0 ps7_globaltimer_0 ps7_gpio_0 ps7_gpv_0 ps7_intc_dist_0 ps7_iop_bus_config_0 ps7_l2cachec_0 ps7_ocmc_0 ps7_pl310_0 ps7_pmu_0 ps7_qspi_0 ps7_qspi_linear_0 ps7_ram_0 ps7_ram_1 ps7_scuc_0 ps7_scugic_0 ps7_scutimer_0 ps7_scuwdt_0 ps7_sd_0 ps7_slcr_0 ps7_ttc_0 ps7_uart_1 ps7_usb_0 ps7_xadc_0]. Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:31.944
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_files_on_hw X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa bit], Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:31.944
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_files_on_hw X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa bit], Result: [null, design_1_wrapper.bit]. Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:31.944
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:31.944
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#1]. Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:31.975
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:31.975
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent Zed 210248B9DB51]. Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:31.975
+!MESSAGE XSCT Command: [version -server], Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:31.991
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2020.1]. Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:31.991
+!MESSAGE XSCT Command: [version], Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:31.991
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2020.1
+SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:31.991
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:31.991
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent Zed 210248B9DB51]. Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:32.007
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248B9DB51" && level==1}], Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:32.007
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248B9DB51" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:32.007
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:32.023
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent Zed 210248B9DB51]. Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:32.023
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248B9DB51" && level==1}], Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:32.023
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248B9DB51" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:32.039
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:32.039
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent Zed 210248B9DB51]. Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:32.039
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248B9DB51" && level==1}], Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:32.055
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248B9DB51" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:32.055
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:32.055
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent Zed 210248B9DB51]. Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:32.055
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248B9DB51" && level==1}], Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:32.071
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248B9DB51" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:32.071
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:32.071
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent Zed 210248B9DB51]. Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:32.071
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248B9DB51" && level==1}], Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:32.087
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248B9DB51" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:32.087
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Zed 210248B9DB51" && level == 0}], Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:32.103
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Zed 210248B9DB51" && level == 0}], Result: [null, ]. Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:32.103
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:32.103
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:32.103
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:32.119
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:32.119
+!MESSAGE XSCT Command: [rst -system], Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:32.166
+!MESSAGE XSCT command with result: [rst -system], Result: [null, ]. Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:32.182
+!MESSAGE XSCT Command: [after 3000], Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:35.193
+!MESSAGE XSCT command with result: [after 3000], Result: [null, ]. Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:35.193
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:35.209
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248B9DB51]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:35.209
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248B9DB51" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:35.225
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248B9DB51" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:35.225
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B9DB51" && level==0 && jtag_device_ctx=="jsn-Zed-210248B9DB51-23727093-0"}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:35.241
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B9DB51" && level==0 && jtag_device_ctx=="jsn-Zed-210248B9DB51-23727093-0"}], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:35.241
+!MESSAGE XSCT Command: [fpga -file X:/cpre488/MP-0/MP-0-vitis/Zedboard_hell/_ide/bitstream/design_1_wrapper.bit], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:37.613
+!MESSAGE XSCT command with result: [fpga -file X:/cpre488/MP-0/MP-0-vitis/Zedboard_hell/_ide/bitstream/design_1_wrapper.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:37.613
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:37.644
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:37.644
+!MESSAGE XSCT Command: [loadhw -hw X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs], Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:37.692
+!MESSAGE XSCT command with result: [loadhw -hw X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs], Result: [null, design_1_wrapper]. Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:37.692
+!MESSAGE XSCT Command: [configparams force-mem-access 1], Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:37.692
+!MESSAGE XSCT command with result: [configparams force-mem-access 1], Result: [null, ]. Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:37.692
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:37.708
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:37.708
+!MESSAGE XSCT Command: [source X:/cpre488/MP-0/MP-0-vitis/Zedboard_hell/_ide/psinit/ps7_init.tcl], Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:37.723
+!MESSAGE XSCT command with result: [source X:/cpre488/MP-0/MP-0-vitis/Zedboard_hell/_ide/psinit/ps7_init.tcl], Result: [null, ]. Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:37.723
+!MESSAGE XSCT Command: [ps7_init], Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:37.991
+!MESSAGE XSCT command with result: [ps7_init], Result: [null, ]. Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:37.991
+!MESSAGE XSCT Command: [ps7_post_config], Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:37.991
+!MESSAGE XSCT command with result: [ps7_post_config], Result: [null, ]. Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:38.006
+!MESSAGE XSCT Command: [configparams force-mem-access 0], Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:27:38.006
+!MESSAGE XSCT command with result: [configparams force-mem-access 0], Result: [null, ]. Thread: Worker-11: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:30:01.097
+!MESSAGE XSCT Command: [disconnect tcfchan#1], Thread: Thread-124
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:30:01.101
+!MESSAGE XSCT command with result: [disconnect tcfchan#1], Result: [null, ]. Thread: Thread-124
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:30:07.019
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-14: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:30:07.024
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#2]. Thread: Worker-14: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:30:07.027
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-14: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:30:07.137
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248B9DB51]. Thread: Worker-14: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:30:07.140
+!MESSAGE XSCT Command: [version -server], Thread: Worker-14: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:30:07.144
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2020.1]. Thread: Worker-14: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:30:07.146
+!MESSAGE XSCT Command: [version], Thread: Worker-14: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:30:07.149
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2020.1
+SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-14: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:30:07.151
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-14: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:30:07.156
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248B9DB51]. Thread: Worker-14: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:30:07.159
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248B9DB51" && level==1}], Thread: Worker-14: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:30:07.168
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248B9DB51" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-14: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:30:07.170
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-14: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:30:07.175
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248B9DB51]. Thread: Worker-14: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:30:07.178
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248B9DB51" && level==1}], Thread: Worker-14: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:30:07.186
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248B9DB51" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-14: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:30:07.188
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-14: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:30:07.194
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248B9DB51]. Thread: Worker-14: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:30:07.197
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248B9DB51" && level==1}], Thread: Worker-14: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:30:07.206
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248B9DB51" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-14: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:30:07.208
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-14: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:30:07.212
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248B9DB51]. Thread: Worker-14: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:30:07.215
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248B9DB51" && level==1}], Thread: Worker-14: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:30:07.224
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248B9DB51" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-14: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:30:07.226
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-14: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:30:07.231
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248B9DB51]. Thread: Worker-14: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:30:07.234
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248B9DB51" && level==1}], Thread: Worker-14: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:30:07.243
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248B9DB51" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-14: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:30:07.245
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Zed 210248B9DB51" && level == 0}], Thread: Worker-14: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:30:07.254
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Zed 210248B9DB51" && level == 0}], Result: [null, ]. Thread: Worker-14: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:30:07.256
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-14: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:30:07.259
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-14: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:30:07.262
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-14: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:30:07.268
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-14: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:30:07.271
+!MESSAGE XSCT Command: [rst -system], Thread: Worker-14: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:30:07.326
+!MESSAGE XSCT command with result: [rst -system], Result: [null, ]. Thread: Worker-14: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:30:07.329
+!MESSAGE XSCT Command: [after 3000], Thread: Worker-14: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:30:10.339
+!MESSAGE XSCT command with result: [after 3000], Result: [null, ]. Thread: Worker-14: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:30:10.347
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:30:10.352
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248B9DB51]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:30:10.354
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248B9DB51" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:30:10.364
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248B9DB51" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:30:10.366
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B9DB51" && level==0 && jtag_device_ctx=="jsn-Zed-210248B9DB51-23727093-0"}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:30:10.380
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B9DB51" && level==0 && jtag_device_ctx=="jsn-Zed-210248B9DB51-23727093-0"}], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:30:10.383
+!MESSAGE XSCT Command: [fpga -file X:/cpre488/MP-0/MP-0-vitis/Zedboard_hell/_ide/bitstream/design_1_wrapper.bit], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:30:12.730
+!MESSAGE XSCT command with result: [fpga -file X:/cpre488/MP-0/MP-0-vitis/Zedboard_hell/_ide/bitstream/design_1_wrapper.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:30:12.737
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-14: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:30:12.745
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-14: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:30:12.748
+!MESSAGE XSCT Command: [loadhw -hw X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs], Thread: Worker-14: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:30:15.016
+!MESSAGE XSCT command with result: [loadhw -hw X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs], Result: [null, design_1_wrapper_0]. Thread: Worker-14: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:30:15.016
+!MESSAGE XSCT Command: [configparams force-mem-access 1], Thread: Worker-14: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:30:15.032
+!MESSAGE XSCT command with result: [configparams force-mem-access 1], Result: [null, ]. Thread: Worker-14: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:30:15.032
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-14: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:30:15.032
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-14: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:30:15.032
+!MESSAGE XSCT Command: [source X:/cpre488/MP-0/MP-0-vitis/Zedboard_hell/_ide/psinit/ps7_init.tcl], Thread: Worker-14: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:30:15.063
+!MESSAGE XSCT command with result: [source X:/cpre488/MP-0/MP-0-vitis/Zedboard_hell/_ide/psinit/ps7_init.tcl], Result: [null, ]. Thread: Worker-14: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:30:15.063
+!MESSAGE XSCT Command: [ps7_init], Thread: Worker-14: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:30:15.220
+!MESSAGE XSCT command with result: [ps7_init], Result: [null, ]. Thread: Worker-14: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:30:15.220
+!MESSAGE XSCT Command: [ps7_post_config], Thread: Worker-14: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:30:15.235
+!MESSAGE XSCT command with result: [ps7_post_config], Result: [null, ]. Thread: Worker-14: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:30:15.235
+!MESSAGE XSCT Command: [configparams force-mem-access 0], Thread: Worker-14: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:30:15.235
+!MESSAGE XSCT command with result: [configparams force-mem-access 0], Result: [null, ]. Thread: Worker-14: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:31:07.325
+!MESSAGE XSCT Command: [disconnect tcfchan#2], Thread: Thread-169
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:31:07.333
+!MESSAGE XSCT command with result: [disconnect tcfchan#2], Result: [null, ]. Thread: Thread-169
+
+!ENTRY org.eclipse.core.resources 4 1 2026-01-28 10:32:57.187
+!MESSAGE Problems occurred refreshing resources
+!SUBENTRY 1 org.eclipse.core.resources 4 1 2026-01-28 10:32:57.187
+!MESSAGE Problem finding next change, code: 995
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:33:37.589
+!MESSAGE XSCT Command: [::hsi::utils::get_addr_tag_info -json X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:33:38.990
+!MESSAGE XSCT command with result: [::hsi::utils::get_addr_tag_info -json X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa ], Result: [null, {"ps7_cortexa9_0": "",
+"ps7_cortexa9_1": "",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:33:59.469
+!MESSAGE XSCT Command: [::hsi::utils::get_bram_blocks X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa ], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:33:59.497
+!MESSAGE XSCT command with result: [::hsi::utils::get_bram_blocks X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa ], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:33:59.497
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:34:01.652
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#3]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:34:01.652
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:34:01.834
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248B9DB51]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:34:01.834
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:34:01.843
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248B9DB51]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:34:01.843
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248B9DB51" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:34:01.843
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248B9DB51" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:34:01.843
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B9DB51" && level==0 && jtag_device_ctx=="jsn-Zed-210248B9DB51-23727093-0"}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:34:01.859
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B9DB51" && level==0 && jtag_device_ctx=="jsn-Zed-210248B9DB51-23727093-0"}], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:34:01.859
+!MESSAGE XSCT Command: [fpga -file X:/cpre488/MP-0/MP-0-vitis/Zedboard_hell/_ide/bitstream/design_1_wrapper.bit], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:34:04.217
+!MESSAGE XSCT command with result: [fpga -file X:/cpre488/MP-0/MP-0-vitis/Zedboard_hell/_ide/bitstream/design_1_wrapper.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:34:05.029
+!MESSAGE XSCT Command: [::hsi::utils::get_bram_blocks X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa ], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:34:05.029
+!MESSAGE XSCT command with result: [::hsi::utils::get_bram_blocks X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa ], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:34:18.911
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-4: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:34:18.911
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#3]. Thread: Worker-4: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:34:18.911
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-4: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:34:18.923
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248B9DB51]. Thread: Worker-4: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:34:18.927
+!MESSAGE XSCT Command: [version -server], Thread: Worker-4: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:34:18.927
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2020.1]. Thread: Worker-4: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:34:18.927
+!MESSAGE XSCT Command: [version], Thread: Worker-4: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:34:18.933
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2020.1
+SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-4: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:34:18.937
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-4: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:34:18.943
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248B9DB51]. Thread: Worker-4: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:34:18.943
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248B9DB51" && level==1}], Thread: Worker-4: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:34:18.952
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248B9DB51" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-4: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:34:18.952
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-4: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:34:18.961
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248B9DB51]. Thread: Worker-4: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:34:18.961
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248B9DB51" && level==1}], Thread: Worker-4: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:34:18.975
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248B9DB51" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-4: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:34:18.975
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-4: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:34:18.975
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248B9DB51]. Thread: Worker-4: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:34:18.975
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248B9DB51" && level==1}], Thread: Worker-4: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:34:18.992
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248B9DB51" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-4: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:34:18.992
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-4: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:34:18.992
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248B9DB51]. Thread: Worker-4: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:34:19.004
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248B9DB51" && level==1}], Thread: Worker-4: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:34:19.011
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248B9DB51" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-4: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:34:19.011
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-4: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:34:19.011
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248B9DB51]. Thread: Worker-4: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:34:19.022
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248B9DB51" && level==1}], Thread: Worker-4: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:34:19.029
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248B9DB51" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-4: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:34:19.029
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Zed 210248B9DB51" && level == 0}], Thread: Worker-4: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:34:19.041
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Zed 210248B9DB51" && level == 0}], Result: [null, ]. Thread: Worker-4: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:34:19.041
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-4: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:34:19.041
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-4: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:34:19.041
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-4: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:34:19.056
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-4: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:34:19.056
+!MESSAGE XSCT Command: [rst -system], Thread: Worker-4: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:34:19.117
+!MESSAGE XSCT command with result: [rst -system], Result: [null, ]. Thread: Worker-4: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:34:19.117
+!MESSAGE XSCT Command: [after 3000], Thread: Worker-4: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:34:22.127
+!MESSAGE XSCT command with result: [after 3000], Result: [null, ]. Thread: Worker-4: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:34:22.127
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:34:22.143
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248B9DB51]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:34:22.143
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248B9DB51" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:34:22.155
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248B9DB51" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:34:22.159
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B9DB51" && level==0 && jtag_device_ctx=="jsn-Zed-210248B9DB51-23727093-0"}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:34:22.174
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B9DB51" && level==0 && jtag_device_ctx=="jsn-Zed-210248B9DB51-23727093-0"}], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:34:22.174
+!MESSAGE XSCT Command: [fpga -file X:/cpre488/MP-0/MP-0-vitis/Zedboard_hell/_ide/bitstream/design_1_wrapper.bit], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:34:24.530
+!MESSAGE XSCT command with result: [fpga -file X:/cpre488/MP-0/MP-0-vitis/Zedboard_hell/_ide/bitstream/design_1_wrapper.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:34:24.541
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-4: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:34:24.550
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-4: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:34:24.550
+!MESSAGE XSCT Command: [loadhw -hw X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs], Thread: Worker-4: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:34:24.595
+!MESSAGE XSCT command with result: [loadhw -hw X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs], Result: [null, design_1_wrapper_1]. Thread: Worker-4: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:34:24.609
+!MESSAGE XSCT Command: [configparams force-mem-access 1], Thread: Worker-4: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:34:24.609
+!MESSAGE XSCT command with result: [configparams force-mem-access 1], Result: [null, ]. Thread: Worker-4: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:34:24.609
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-4: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:34:24.620
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-4: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:34:24.624
+!MESSAGE XSCT Command: [source X:/cpre488/MP-0/MP-0-vitis/Zedboard_hell/_ide/psinit/ps7_init.tcl], Thread: Worker-4: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:34:24.640
+!MESSAGE XSCT command with result: [source X:/cpre488/MP-0/MP-0-vitis/Zedboard_hell/_ide/psinit/ps7_init.tcl], Result: [null, ]. Thread: Worker-4: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:34:24.640
+!MESSAGE XSCT Command: [ps7_init], Thread: Worker-4: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:34:24.845
+!MESSAGE XSCT command with result: [ps7_init], Result: [null, ]. Thread: Worker-4: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:34:24.845
+!MESSAGE XSCT Command: [ps7_post_config], Thread: Worker-4: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:34:24.845
+!MESSAGE XSCT command with result: [ps7_post_config], Result: [null, ]. Thread: Worker-4: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:34:24.845
+!MESSAGE XSCT Command: [configparams force-mem-access 0], Thread: Worker-4: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:34:24.845
+!MESSAGE XSCT command with result: [configparams force-mem-access 0], Result: [null, ]. Thread: Worker-4: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:39:29.186
+!MESSAGE XSCT Command: [::hsi::utils::get_addr_tag_info -json X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:39:29.218
+!MESSAGE XSCT command with result: [::hsi::utils::get_addr_tag_info -json X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa ], Result: [null, {"ps7_cortexa9_0": "",
+"ps7_cortexa9_1": "",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:39:39.550
+!MESSAGE XSCT Command: [::hsi::utils::get_addr_tag_info -json X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:39:39.566
+!MESSAGE XSCT command with result: [::hsi::utils::get_addr_tag_info -json X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa ], Result: [null, {"ps7_cortexa9_0": "",
+"ps7_cortexa9_1": "",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:39:40.586
+!MESSAGE XSCT Command: [::hsi::utils::get_bram_blocks X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa ], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:39:40.586
+!MESSAGE XSCT command with result: [::hsi::utils::get_bram_blocks X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa ], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:39:40.586
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:39:40.601
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#3]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:39:40.601
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:39:40.601
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248B9DB51]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:39:40.601
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:39:40.617
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248B9DB51]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:39:40.617
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248B9DB51" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:39:40.617
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248B9DB51" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:39:40.633
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B9DB51" && level==0 && jtag_device_ctx=="jsn-Zed-210248B9DB51-23727093-0"}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:39:40.633
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B9DB51" && level==0 && jtag_device_ctx=="jsn-Zed-210248B9DB51-23727093-0"}], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:39:40.649
+!MESSAGE XSCT Command: [fpga -file X:/cpre488/MP-0/MP-0-vitis/Zedboard_hell/_ide/bitstream/design_1_wrapper.bit], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:39:43.034
+!MESSAGE XSCT command with result: [fpga -file X:/cpre488/MP-0/MP-0-vitis/Zedboard_hell/_ide/bitstream/design_1_wrapper.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:39:43.862
+!MESSAGE XSCT Command: [::hsi::utils::get_bram_blocks X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa ], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:39:43.862
+!MESSAGE XSCT command with result: [::hsi::utils::get_bram_blocks X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa ], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:40:38.516
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/domain_ps7_cortexa9_0/system.mss ], Thread: Worker-16: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:40:38.532
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/domain_ps7_cortexa9_0/system.mss ], Result: [null, ]. Thread: Worker-16: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:40:38.532
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/domain_ps7_cortexa9_0/system.mss], Thread: Worker-16: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:40:38.532
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/domain_ps7_cortexa9_0/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "7.2",
+}]. Thread: Worker-16: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2026-01-28 10:40:38.548
+!MESSAGE Generating MD5 hash for file: X:\cpre488\MP-0\MP-0-vitis\design_1_wrapper\export\design_1_wrapper\sw\design_1_wrapper\domain_ps7_cortexa9_0\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:40:38.548
+!MESSAGE XSCT Command: [::hsi::utils::closesw X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/domain_ps7_cortexa9_0/system.mss], Thread: Worker-16: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:40:38.548
+!MESSAGE XSCT command with result: [::hsi::utils::closesw X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/domain_ps7_cortexa9_0/system.mss], Result: [null, ]. Thread: Worker-16: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:40:59.316
+!MESSAGE XSCT Command: [disconnect tcfchan#3], Thread: Thread-240
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:40:59.323
+!MESSAGE XSCT command with result: [disconnect tcfchan#3], Result: [null, ]. Thread: Thread-240
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:41:00.338
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-16: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:41:00.354
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#5]. Thread: Worker-16: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:41:00.354
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-16: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:41:00.363
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248B9DB51]. Thread: Worker-16: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:41:00.363
+!MESSAGE XSCT Command: [version -server], Thread: Worker-16: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:41:00.370
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2020.1]. Thread: Worker-16: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:41:00.370
+!MESSAGE XSCT Command: [version], Thread: Worker-16: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:41:00.370
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2020.1
+SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-16: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:41:00.370
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-16: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:41:00.370
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248B9DB51]. Thread: Worker-16: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:41:00.370
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248B9DB51" && level==1}], Thread: Worker-16: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:41:00.386
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248B9DB51" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-16: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:41:00.386
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-16: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:41:00.386
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248B9DB51]. Thread: Worker-16: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:41:00.401
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248B9DB51" && level==1}], Thread: Worker-16: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:41:00.401
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248B9DB51" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-16: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:41:00.401
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-16: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:41:00.417
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248B9DB51]. Thread: Worker-16: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:41:00.417
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248B9DB51" && level==1}], Thread: Worker-16: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:41:00.426
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248B9DB51" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-16: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:41:00.433
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-16: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:41:00.433
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248B9DB51]. Thread: Worker-16: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:41:00.433
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248B9DB51" && level==1}], Thread: Worker-16: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:41:00.448
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248B9DB51" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-16: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:41:00.448
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-16: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:41:00.448
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248B9DB51]. Thread: Worker-16: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:41:00.448
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248B9DB51" && level==1}], Thread: Worker-16: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:41:00.464
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248B9DB51" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-16: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:41:00.464
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-16: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:41:00.464
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248B9DB51]. Thread: Worker-16: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:41:00.464
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248B9DB51" && level==1}], Thread: Worker-16: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:41:00.480
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248B9DB51" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-16: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:41:00.480
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Zed 210248B9DB51" && level == 0}], Thread: Worker-16: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:41:00.496
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Zed 210248B9DB51" && level == 0}], Result: [null, ]. Thread: Worker-16: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:41:00.496
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-16: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:41:00.496
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-16: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:41:00.496
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-16: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:41:00.512
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-16: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:41:00.512
+!MESSAGE XSCT Command: [rst -system], Thread: Worker-16: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:41:00.575
+!MESSAGE XSCT command with result: [rst -system], Result: [null, ]. Thread: Worker-16: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:41:00.576
+!MESSAGE XSCT Command: [after 3000], Thread: Worker-16: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:41:03.594
+!MESSAGE XSCT command with result: [after 3000], Result: [null, ]. Thread: Worker-16: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:41:03.604
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:41:03.610
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248B9DB51]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:41:03.610
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248B9DB51" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:41:03.621
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248B9DB51" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:41:03.621
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B9DB51" && level==0 && jtag_device_ctx=="jsn-Zed-210248B9DB51-23727093-0"}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:41:03.642
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B9DB51" && level==0 && jtag_device_ctx=="jsn-Zed-210248B9DB51-23727093-0"}], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:41:03.642
+!MESSAGE XSCT Command: [fpga -file X:/cpre488/MP-0/MP-0-vitis/Zedboard_hell/_ide/bitstream/design_1_wrapper.bit], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:41:05.995
+!MESSAGE XSCT command with result: [fpga -file X:/cpre488/MP-0/MP-0-vitis/Zedboard_hell/_ide/bitstream/design_1_wrapper.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:41:06.011
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-16: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:41:06.019
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-16: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:41:06.019
+!MESSAGE XSCT Command: [loadhw -hw X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs], Thread: Worker-16: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:41:08.245
+!MESSAGE XSCT command with result: [loadhw -hw X:/cpre488/MP-0/MP-0-vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs], Result: [null, design_1_wrapper_3]. Thread: Worker-16: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:41:08.245
+!MESSAGE XSCT Command: [configparams force-mem-access 1], Thread: Worker-16: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:41:08.251
+!MESSAGE XSCT command with result: [configparams force-mem-access 1], Result: [null, ]. Thread: Worker-16: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:41:08.251
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-16: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:41:08.251
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-16: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:41:08.251
+!MESSAGE XSCT Command: [source X:/cpre488/MP-0/MP-0-vitis/Zedboard_hell/_ide/psinit/ps7_init.tcl], Thread: Worker-16: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:41:08.283
+!MESSAGE XSCT command with result: [source X:/cpre488/MP-0/MP-0-vitis/Zedboard_hell/_ide/psinit/ps7_init.tcl], Result: [null, ]. Thread: Worker-16: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:41:08.283
+!MESSAGE XSCT Command: [ps7_init], Thread: Worker-16: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:41:08.472
+!MESSAGE XSCT command with result: [ps7_init], Result: [null, ]. Thread: Worker-16: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:41:08.487
+!MESSAGE XSCT Command: [ps7_post_config], Thread: Worker-16: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:41:08.487
+!MESSAGE XSCT command with result: [ps7_post_config], Result: [null, ]. Thread: Worker-16: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:41:08.487
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A9*#0"}], Thread: Worker-16: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:41:08.503
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A9*#0"}], Result: [null, ]. Thread: Worker-16: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:41:08.503
+!MESSAGE XSCT Command: [dow X:/cpre488/MP-0/MP-0-vitis/Zedboard_hell/Debug/Zedboard_hell.elf], Thread: Worker-16: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:41:08.623
+!MESSAGE XSCT command with result: [dow X:/cpre488/MP-0/MP-0-vitis/Zedboard_hell/Debug/Zedboard_hell.elf], Result: [null, ]. Thread: Worker-16: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:41:08.623
+!MESSAGE XSCT Command: [configparams force-mem-access 0], Thread: Worker-16: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:41:08.655
+!MESSAGE XSCT command with result: [configparams force-mem-access 0], Result: [null, ]. Thread: Worker-16: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:41:08.702
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A9*#0"}], Thread: Worker-16: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:41:08.711
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A9*#0"}], Result: [null, ]. Thread: Worker-16: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:41:08.713
+!MESSAGE XSCT Command: [con], Thread: Worker-16: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:41:08.728
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-16: Launching Debugger_Zedboard_hell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:44:52.166
+!MESSAGE XSCT Command: [disconnect tcfchan#5], Thread: Thread-291
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 10:44:52.176
+!MESSAGE XSCT command with result: [disconnect tcfchan#5], Result: [null, ]. Thread: Thread-291

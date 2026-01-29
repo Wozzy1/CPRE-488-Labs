@@ -11842,3 +11842,9 @@ Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-18: Launc
 
 !ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 19:39:44.839
 !MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-18: Launching Debugger_Zedboard-doublehell-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 19:50:38.994
+!MESSAGE XSCT Command: [disconnect tcfchan#6], Thread: Thread-707
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-01-28 19:50:38.994
+!MESSAGE XSCT command with result: [disconnect tcfchan#6], Result: [null, ]. Thread: Thread-707

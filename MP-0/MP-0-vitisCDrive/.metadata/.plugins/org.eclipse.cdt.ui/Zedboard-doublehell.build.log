@@ -1,4 +1,4 @@
-11:50:49 **** Incremental Build of configuration Debug for project Zedboard-doublehell ****
+12:14:11 **** Incremental Build of configuration Debug for project Zedboard-doublehell ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
@@ -17,9 +17,9 @@ arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=non
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size Zedboard-doublehell.elf  |tee "Zedboard-doublehell.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  41840	   2548	  22640	  67028	  105d4	Zedboard-doublehell.elf
+  41856	   2548	  22640	  67044	  105e4	Zedboard-doublehell.elf
 'Finished building: Zedboard-doublehell.elf.size'
 ' '
 
-11:50:49 Build Finished (took 663ms)
+12:14:12 Build Finished (took 648ms)
 

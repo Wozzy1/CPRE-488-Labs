@@ -127,7 +127,7 @@ int main()
 				printf("Up pressed\n\r");
 				write_leds((u32)0b1000000);
 			}
-			if (!buttons) {
+			if (prevButtons && !buttons) {
 				clear_leds();
 			}
 //    	}

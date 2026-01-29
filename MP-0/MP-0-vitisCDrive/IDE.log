@@ -731,3 +731,491 @@ con
 ----------------End of Script----------------
 
 19:39:44 INFO  : Launch script is exported to file 'C:\Temp\CPRE-488-Labs\MP-0\MP-0-vitisCDrive\.sdk\launch_scripts\single_application_debug\debugger_zedboard-doublehell-default.tcl'
+11:20:39 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\cihem\488\CPRE-488-Labs\MP-0\MP-0-vitisCDrive\temp_xsdb_launch_script.tcl
+11:20:41 INFO  : XSCT server has started successfully.
+11:20:41 INFO  : plnx-install-location is set to ''
+11:20:41 INFO  : Successfully done setting XSCT server connection channel  
+11:20:41 INFO  : Successfully done setting workspace for the tool. 
+11:20:44 ERROR : Error encountered while initializing user repository paths
+Reason: No Platforms Found.
+
+
+11:20:44 INFO  : Platform repository initialization has completed.
+11:20:44 INFO  : Registering command handlers for Vitis TCF services
+11:20:46 INFO  : Successfully done query RDI_DATADIR 
+11:22:06 INFO  : Result from executing command 'getProjects': design_1_wrapper
+11:22:06 INFO  : Result from executing command 'getPlatforms': design_1_wrapper|C:/Users/cihem/488/CPRE-488-Labs/MP-0/MP-0-vitisCDrive/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm
+11:22:06 INFO  : Checking for BSP changes to sync application flags for project 'Zedboard-doublehell'...
+11:23:11 INFO  : Checking for BSP changes to sync application flags for project 'Zedboard-doublehell'...
+11:23:26 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:23:26 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B9DA75" && level==0 && jtag_device_ctx=="jsn-Zed-210248B9DA75-23727093-0"}' command is executed.
+11:23:28 INFO  : FPGA configured successfully with bitstream "C:/Users/cihem/488/CPRE-488-Labs/MP-0/MP-0-vitisCDrive/Zedboard-doublehell/_ide/bitstream/design_1_wrapper.bit"
+11:23:38 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:23:39 INFO  : Jtag cable 'Digilent Zed 210248B9DA75' is selected.
+11:23:39 INFO  : 'jtag frequency' command is executed.
+11:23:39 INFO  : Context for 'APU' is selected.
+11:23:39 INFO  : System reset is completed.
+11:23:42 INFO  : 'after 3000' command is executed.
+11:23:42 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B9DA75" && level==0 && jtag_device_ctx=="jsn-Zed-210248B9DA75-23727093-0"}' command is executed.
+11:23:44 INFO  : FPGA configured successfully with bitstream "C:/Users/cihem/488/CPRE-488-Labs/MP-0/MP-0-vitisCDrive/Zedboard-doublehell/_ide/bitstream/design_1_wrapper.bit"
+11:23:44 INFO  : Context for 'APU' is selected.
+11:23:44 INFO  : Hardware design and registers information is loaded from 'C:/Users/cihem/488/CPRE-488-Labs/MP-0/MP-0-vitisCDrive/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+11:23:44 INFO  : 'configparams force-mem-access 1' command is executed.
+11:23:44 INFO  : Context for 'APU' is selected.
+11:23:44 INFO  : Sourcing of 'C:/Users/cihem/488/CPRE-488-Labs/MP-0/MP-0-vitisCDrive/Zedboard-doublehell/_ide/psinit/ps7_init.tcl' is done.
+11:23:44 INFO  : 'ps7_init' command is executed.
+11:23:44 INFO  : 'ps7_post_config' command is executed.
+11:23:44 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:23:45 INFO  : The application 'C:/Users/cihem/488/CPRE-488-Labs/MP-0/MP-0-vitisCDrive/Zedboard-doublehell/Debug/Zedboard-doublehell.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:23:45 INFO  : 'configparams force-mem-access 0' command is executed.
+11:23:45 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B9DA75" && level==0 && jtag_device_ctx=="jsn-Zed-210248B9DA75-23727093-0"}
+fpga -file C:/Users/cihem/488/CPRE-488-Labs/MP-0/MP-0-vitisCDrive/Zedboard-doublehell/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/cihem/488/CPRE-488-Labs/MP-0/MP-0-vitisCDrive/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/cihem/488/CPRE-488-Labs/MP-0/MP-0-vitisCDrive/Zedboard-doublehell/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/cihem/488/CPRE-488-Labs/MP-0/MP-0-vitisCDrive/Zedboard-doublehell/Debug/Zedboard-doublehell.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+11:23:45 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:23:45 INFO  : 'con' command is executed.
+11:23:45 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+11:23:45 INFO  : Launch script is exported to file 'C:\Users\cihem\488\CPRE-488-Labs\MP-0\MP-0-vitisCDrive\.sdk\launch_scripts\single_application_debug\debugger_zedboard-doublehell-default.tcl'
+11:24:15 INFO  : Disconnected from the channel tcfchan#2.
+11:24:21 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:24:21 INFO  : Jtag cable 'Digilent Zed 210248B9DA75' is selected.
+11:24:21 INFO  : 'jtag frequency' command is executed.
+11:24:21 INFO  : Context for 'APU' is selected.
+11:24:21 INFO  : System reset is completed.
+11:24:24 INFO  : 'after 3000' command is executed.
+11:24:24 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B9DA75" && level==0 && jtag_device_ctx=="jsn-Zed-210248B9DA75-23727093-0"}' command is executed.
+11:24:26 INFO  : FPGA configured successfully with bitstream "C:/Users/cihem/488/CPRE-488-Labs/MP-0/MP-0-vitisCDrive/Zedboard-doublehell/_ide/bitstream/design_1_wrapper.bit"
+11:24:26 INFO  : Context for 'APU' is selected.
+11:24:26 INFO  : Hardware design and registers information is loaded from 'C:/Users/cihem/488/CPRE-488-Labs/MP-0/MP-0-vitisCDrive/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+11:24:26 INFO  : 'configparams force-mem-access 1' command is executed.
+11:24:26 INFO  : Context for 'APU' is selected.
+11:24:26 INFO  : Sourcing of 'C:/Users/cihem/488/CPRE-488-Labs/MP-0/MP-0-vitisCDrive/Zedboard-doublehell/_ide/psinit/ps7_init.tcl' is done.
+11:24:27 INFO  : 'ps7_init' command is executed.
+11:24:27 INFO  : 'ps7_post_config' command is executed.
+11:24:27 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:24:27 INFO  : The application 'C:/Users/cihem/488/CPRE-488-Labs/MP-0/MP-0-vitisCDrive/Zedboard-doublehell/Debug/Zedboard-doublehell.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:24:27 INFO  : 'configparams force-mem-access 0' command is executed.
+11:24:27 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B9DA75" && level==0 && jtag_device_ctx=="jsn-Zed-210248B9DA75-23727093-0"}
+fpga -file C:/Users/cihem/488/CPRE-488-Labs/MP-0/MP-0-vitisCDrive/Zedboard-doublehell/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/cihem/488/CPRE-488-Labs/MP-0/MP-0-vitisCDrive/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/cihem/488/CPRE-488-Labs/MP-0/MP-0-vitisCDrive/Zedboard-doublehell/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/cihem/488/CPRE-488-Labs/MP-0/MP-0-vitisCDrive/Zedboard-doublehell/Debug/Zedboard-doublehell.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+11:24:27 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:24:27 INFO  : 'con' command is executed.
+11:24:27 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+11:24:27 INFO  : Launch script is exported to file 'C:\Users\cihem\488\CPRE-488-Labs\MP-0\MP-0-vitisCDrive\.sdk\launch_scripts\single_application_debug\debugger_zedboard-doublehell-default.tcl'
+11:25:47 INFO  : Disconnected from the channel tcfchan#3.
+11:25:48 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:25:48 INFO  : Jtag cable 'Digilent Zed 210248B9DA75' is selected.
+11:25:48 INFO  : 'jtag frequency' command is executed.
+11:25:48 INFO  : Context for 'APU' is selected.
+11:25:48 INFO  : System reset is completed.
+11:25:51 INFO  : 'after 3000' command is executed.
+11:25:51 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B9DA75" && level==0 && jtag_device_ctx=="jsn-Zed-210248B9DA75-23727093-0"}' command is executed.
+11:25:53 INFO  : FPGA configured successfully with bitstream "C:/Users/cihem/488/CPRE-488-Labs/MP-0/MP-0-vitisCDrive/Zedboard-doublehell/_ide/bitstream/design_1_wrapper.bit"
+11:25:53 INFO  : Context for 'APU' is selected.
+11:25:53 INFO  : Hardware design and registers information is loaded from 'C:/Users/cihem/488/CPRE-488-Labs/MP-0/MP-0-vitisCDrive/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+11:25:53 INFO  : 'configparams force-mem-access 1' command is executed.
+11:25:53 INFO  : Context for 'APU' is selected.
+11:25:53 INFO  : Sourcing of 'C:/Users/cihem/488/CPRE-488-Labs/MP-0/MP-0-vitisCDrive/Zedboard-doublehell/_ide/psinit/ps7_init.tcl' is done.
+11:25:53 INFO  : 'ps7_init' command is executed.
+11:25:53 INFO  : 'ps7_post_config' command is executed.
+11:25:53 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:25:53 INFO  : The application 'C:/Users/cihem/488/CPRE-488-Labs/MP-0/MP-0-vitisCDrive/Zedboard-doublehell/Debug/Zedboard-doublehell.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:25:53 INFO  : 'configparams force-mem-access 0' command is executed.
+11:25:53 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B9DA75" && level==0 && jtag_device_ctx=="jsn-Zed-210248B9DA75-23727093-0"}
+fpga -file C:/Users/cihem/488/CPRE-488-Labs/MP-0/MP-0-vitisCDrive/Zedboard-doublehell/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/cihem/488/CPRE-488-Labs/MP-0/MP-0-vitisCDrive/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/cihem/488/CPRE-488-Labs/MP-0/MP-0-vitisCDrive/Zedboard-doublehell/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/cihem/488/CPRE-488-Labs/MP-0/MP-0-vitisCDrive/Zedboard-doublehell/Debug/Zedboard-doublehell.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+11:25:54 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:25:54 INFO  : 'con' command is executed.
+11:25:54 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+11:25:54 INFO  : Launch script is exported to file 'C:\Users\cihem\488\CPRE-488-Labs\MP-0\MP-0-vitisCDrive\.sdk\launch_scripts\single_application_debug\debugger_zedboard-doublehell-default.tcl'
+11:26:07 INFO  : Disconnected from the channel tcfchan#4.
+11:34:14 INFO  : Checking for BSP changes to sync application flags for project 'Zedboard-doublehell'...
+11:34:23 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:34:23 INFO  : Jtag cable 'Digilent Zed 210248B9DA75' is selected.
+11:34:23 INFO  : 'jtag frequency' command is executed.
+11:34:23 INFO  : Context for 'APU' is selected.
+11:34:23 INFO  : System reset is completed.
+11:34:26 INFO  : 'after 3000' command is executed.
+11:34:26 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B9DA75" && level==0 && jtag_device_ctx=="jsn-Zed-210248B9DA75-23727093-0"}' command is executed.
+11:34:29 INFO  : FPGA configured successfully with bitstream "C:/Users/cihem/488/CPRE-488-Labs/MP-0/MP-0-vitisCDrive/Zedboard-doublehell/_ide/bitstream/design_1_wrapper.bit"
+11:34:29 INFO  : Context for 'APU' is selected.
+11:34:29 INFO  : Hardware design and registers information is loaded from 'C:/Users/cihem/488/CPRE-488-Labs/MP-0/MP-0-vitisCDrive/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+11:34:29 INFO  : 'configparams force-mem-access 1' command is executed.
+11:34:29 INFO  : Context for 'APU' is selected.
+11:34:29 INFO  : Sourcing of 'C:/Users/cihem/488/CPRE-488-Labs/MP-0/MP-0-vitisCDrive/Zedboard-doublehell/_ide/psinit/ps7_init.tcl' is done.
+11:34:29 INFO  : 'ps7_init' command is executed.
+11:34:29 INFO  : 'ps7_post_config' command is executed.
+11:34:29 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:34:29 INFO  : The application 'C:/Users/cihem/488/CPRE-488-Labs/MP-0/MP-0-vitisCDrive/Zedboard-doublehell/Debug/Zedboard-doublehell.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:34:29 INFO  : 'configparams force-mem-access 0' command is executed.
+11:34:29 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B9DA75" && level==0 && jtag_device_ctx=="jsn-Zed-210248B9DA75-23727093-0"}
+fpga -file C:/Users/cihem/488/CPRE-488-Labs/MP-0/MP-0-vitisCDrive/Zedboard-doublehell/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/cihem/488/CPRE-488-Labs/MP-0/MP-0-vitisCDrive/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/cihem/488/CPRE-488-Labs/MP-0/MP-0-vitisCDrive/Zedboard-doublehell/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/cihem/488/CPRE-488-Labs/MP-0/MP-0-vitisCDrive/Zedboard-doublehell/Debug/Zedboard-doublehell.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+11:34:29 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:34:29 INFO  : 'con' command is executed.
+11:34:29 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+11:34:29 INFO  : Launch script is exported to file 'C:\Users\cihem\488\CPRE-488-Labs\MP-0\MP-0-vitisCDrive\.sdk\launch_scripts\single_application_debug\debugger_zedboard-doublehell-default.tcl'
+11:37:28 INFO  : Checking for BSP changes to sync application flags for project 'Zedboard-doublehell'...
+11:37:42 INFO  : Disconnected from the channel tcfchan#5.
+11:37:45 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:37:46 INFO  : Jtag cable 'Digilent Zed 210248B9DA75' is selected.
+11:37:46 INFO  : 'jtag frequency' command is executed.
+11:37:46 INFO  : Context for 'APU' is selected.
+11:37:46 INFO  : System reset is completed.
+11:37:49 INFO  : 'after 3000' command is executed.
+11:37:49 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B9DA75" && level==0 && jtag_device_ctx=="jsn-Zed-210248B9DA75-23727093-0"}' command is executed.
+11:37:51 INFO  : FPGA configured successfully with bitstream "C:/Users/cihem/488/CPRE-488-Labs/MP-0/MP-0-vitisCDrive/Zedboard-doublehell/_ide/bitstream/design_1_wrapper.bit"
+11:37:51 INFO  : Context for 'APU' is selected.
+11:37:51 INFO  : Hardware design and registers information is loaded from 'C:/Users/cihem/488/CPRE-488-Labs/MP-0/MP-0-vitisCDrive/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+11:37:51 INFO  : 'configparams force-mem-access 1' command is executed.
+11:37:51 INFO  : Context for 'APU' is selected.
+11:37:51 INFO  : Sourcing of 'C:/Users/cihem/488/CPRE-488-Labs/MP-0/MP-0-vitisCDrive/Zedboard-doublehell/_ide/psinit/ps7_init.tcl' is done.
+11:37:51 INFO  : 'ps7_init' command is executed.
+11:37:51 INFO  : 'ps7_post_config' command is executed.
+11:37:51 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:37:51 INFO  : The application 'C:/Users/cihem/488/CPRE-488-Labs/MP-0/MP-0-vitisCDrive/Zedboard-doublehell/Debug/Zedboard-doublehell.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:37:51 INFO  : 'configparams force-mem-access 0' command is executed.
+11:37:51 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B9DA75" && level==0 && jtag_device_ctx=="jsn-Zed-210248B9DA75-23727093-0"}
+fpga -file C:/Users/cihem/488/CPRE-488-Labs/MP-0/MP-0-vitisCDrive/Zedboard-doublehell/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/cihem/488/CPRE-488-Labs/MP-0/MP-0-vitisCDrive/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/cihem/488/CPRE-488-Labs/MP-0/MP-0-vitisCDrive/Zedboard-doublehell/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/cihem/488/CPRE-488-Labs/MP-0/MP-0-vitisCDrive/Zedboard-doublehell/Debug/Zedboard-doublehell.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+11:37:52 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:37:52 INFO  : 'con' command is executed.
+11:37:52 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+11:37:52 INFO  : Launch script is exported to file 'C:\Users\cihem\488\CPRE-488-Labs\MP-0\MP-0-vitisCDrive\.sdk\launch_scripts\single_application_debug\debugger_zedboard-doublehell-default.tcl'
+11:39:24 INFO  : Checking for BSP changes to sync application flags for project 'Zedboard-doublehell'...
+11:43:51 INFO  : Checking for BSP changes to sync application flags for project 'Zedboard-doublehell'...
+11:43:56 INFO  : Disconnected from the channel tcfchan#7.
+11:44:02 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:44:03 INFO  : Jtag cable 'Digilent Zed 210248B9DA75' is selected.
+11:44:03 INFO  : 'jtag frequency' command is executed.
+11:44:03 INFO  : Context for 'APU' is selected.
+11:44:03 INFO  : System reset is completed.
+11:44:06 INFO  : 'after 3000' command is executed.
+11:44:06 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B9DA75" && level==0 && jtag_device_ctx=="jsn-Zed-210248B9DA75-23727093-0"}' command is executed.
+11:44:08 INFO  : FPGA configured successfully with bitstream "C:/Users/cihem/488/CPRE-488-Labs/MP-0/MP-0-vitisCDrive/Zedboard-doublehell/_ide/bitstream/design_1_wrapper.bit"
+11:44:08 INFO  : Context for 'APU' is selected.
+11:44:08 INFO  : Hardware design and registers information is loaded from 'C:/Users/cihem/488/CPRE-488-Labs/MP-0/MP-0-vitisCDrive/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+11:44:08 INFO  : 'configparams force-mem-access 1' command is executed.
+11:44:08 INFO  : Context for 'APU' is selected.
+11:44:08 INFO  : Sourcing of 'C:/Users/cihem/488/CPRE-488-Labs/MP-0/MP-0-vitisCDrive/Zedboard-doublehell/_ide/psinit/ps7_init.tcl' is done.
+11:44:08 INFO  : 'ps7_init' command is executed.
+11:44:08 INFO  : 'ps7_post_config' command is executed.
+11:44:08 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:44:08 INFO  : The application 'C:/Users/cihem/488/CPRE-488-Labs/MP-0/MP-0-vitisCDrive/Zedboard-doublehell/Debug/Zedboard-doublehell.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:44:08 INFO  : 'configparams force-mem-access 0' command is executed.
+11:44:08 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B9DA75" && level==0 && jtag_device_ctx=="jsn-Zed-210248B9DA75-23727093-0"}
+fpga -file C:/Users/cihem/488/CPRE-488-Labs/MP-0/MP-0-vitisCDrive/Zedboard-doublehell/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/cihem/488/CPRE-488-Labs/MP-0/MP-0-vitisCDrive/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/cihem/488/CPRE-488-Labs/MP-0/MP-0-vitisCDrive/Zedboard-doublehell/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/cihem/488/CPRE-488-Labs/MP-0/MP-0-vitisCDrive/Zedboard-doublehell/Debug/Zedboard-doublehell.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+11:44:09 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:44:09 INFO  : 'con' command is executed.
+11:44:09 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+11:44:09 INFO  : Launch script is exported to file 'C:\Users\cihem\488\CPRE-488-Labs\MP-0\MP-0-vitisCDrive\.sdk\launch_scripts\single_application_debug\debugger_zedboard-doublehell-default.tcl'
+11:46:13 INFO  : Checking for BSP changes to sync application flags for project 'Zedboard-doublehell'...
+11:46:52 INFO  : Checking for BSP changes to sync application flags for project 'Zedboard-doublehell'...
+11:46:58 INFO  : Disconnected from the channel tcfchan#10.
+11:46:59 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:46:59 INFO  : Jtag cable 'Digilent Zed 210248B9DA75' is selected.
+11:46:59 INFO  : 'jtag frequency' command is executed.
+11:46:59 INFO  : Context for 'APU' is selected.
+11:46:59 INFO  : System reset is completed.
+11:47:02 INFO  : 'after 3000' command is executed.
+11:47:02 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B9DA75" && level==0 && jtag_device_ctx=="jsn-Zed-210248B9DA75-23727093-0"}' command is executed.
+11:47:04 INFO  : FPGA configured successfully with bitstream "C:/Users/cihem/488/CPRE-488-Labs/MP-0/MP-0-vitisCDrive/Zedboard-doublehell/_ide/bitstream/design_1_wrapper.bit"
+11:47:04 INFO  : Context for 'APU' is selected.
+11:47:04 INFO  : Hardware design and registers information is loaded from 'C:/Users/cihem/488/CPRE-488-Labs/MP-0/MP-0-vitisCDrive/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+11:47:04 INFO  : 'configparams force-mem-access 1' command is executed.
+11:47:04 INFO  : Context for 'APU' is selected.
+11:47:04 INFO  : Sourcing of 'C:/Users/cihem/488/CPRE-488-Labs/MP-0/MP-0-vitisCDrive/Zedboard-doublehell/_ide/psinit/ps7_init.tcl' is done.
+11:47:04 INFO  : 'ps7_init' command is executed.
+11:47:04 INFO  : 'ps7_post_config' command is executed.
+11:47:04 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:47:05 INFO  : The application 'C:/Users/cihem/488/CPRE-488-Labs/MP-0/MP-0-vitisCDrive/Zedboard-doublehell/Debug/Zedboard-doublehell.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:47:05 INFO  : 'configparams force-mem-access 0' command is executed.
+11:47:05 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B9DA75" && level==0 && jtag_device_ctx=="jsn-Zed-210248B9DA75-23727093-0"}
+fpga -file C:/Users/cihem/488/CPRE-488-Labs/MP-0/MP-0-vitisCDrive/Zedboard-doublehell/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/cihem/488/CPRE-488-Labs/MP-0/MP-0-vitisCDrive/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/cihem/488/CPRE-488-Labs/MP-0/MP-0-vitisCDrive/Zedboard-doublehell/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/cihem/488/CPRE-488-Labs/MP-0/MP-0-vitisCDrive/Zedboard-doublehell/Debug/Zedboard-doublehell.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+11:47:05 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:47:05 INFO  : 'con' command is executed.
+11:47:05 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+11:47:05 INFO  : Launch script is exported to file 'C:\Users\cihem\488\CPRE-488-Labs\MP-0\MP-0-vitisCDrive\.sdk\launch_scripts\single_application_debug\debugger_zedboard-doublehell-default.tcl'
+11:47:54 INFO  : Checking for BSP changes to sync application flags for project 'Zedboard-doublehell'...
+11:47:55 INFO  : Disconnected from the channel tcfchan#13.
+11:47:59 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:47:59 INFO  : Jtag cable 'Digilent Zed 210248B9DA75' is selected.
+11:47:59 INFO  : 'jtag frequency' command is executed.
+11:47:59 INFO  : Context for 'APU' is selected.
+11:47:59 INFO  : System reset is completed.
+11:48:02 INFO  : 'after 3000' command is executed.
+11:48:02 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B9DA75" && level==0 && jtag_device_ctx=="jsn-Zed-210248B9DA75-23727093-0"}' command is executed.
+11:48:04 INFO  : FPGA configured successfully with bitstream "C:/Users/cihem/488/CPRE-488-Labs/MP-0/MP-0-vitisCDrive/Zedboard-doublehell/_ide/bitstream/design_1_wrapper.bit"
+11:48:04 INFO  : Context for 'APU' is selected.
+11:48:04 INFO  : Hardware design and registers information is loaded from 'C:/Users/cihem/488/CPRE-488-Labs/MP-0/MP-0-vitisCDrive/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+11:48:04 INFO  : 'configparams force-mem-access 1' command is executed.
+11:48:04 INFO  : Context for 'APU' is selected.
+11:48:04 INFO  : Sourcing of 'C:/Users/cihem/488/CPRE-488-Labs/MP-0/MP-0-vitisCDrive/Zedboard-doublehell/_ide/psinit/ps7_init.tcl' is done.
+11:48:05 INFO  : 'ps7_init' command is executed.
+11:48:05 INFO  : 'ps7_post_config' command is executed.
+11:48:05 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:48:05 INFO  : The application 'C:/Users/cihem/488/CPRE-488-Labs/MP-0/MP-0-vitisCDrive/Zedboard-doublehell/Debug/Zedboard-doublehell.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:48:05 INFO  : 'configparams force-mem-access 0' command is executed.
+11:48:05 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B9DA75" && level==0 && jtag_device_ctx=="jsn-Zed-210248B9DA75-23727093-0"}
+fpga -file C:/Users/cihem/488/CPRE-488-Labs/MP-0/MP-0-vitisCDrive/Zedboard-doublehell/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/cihem/488/CPRE-488-Labs/MP-0/MP-0-vitisCDrive/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/cihem/488/CPRE-488-Labs/MP-0/MP-0-vitisCDrive/Zedboard-doublehell/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/cihem/488/CPRE-488-Labs/MP-0/MP-0-vitisCDrive/Zedboard-doublehell/Debug/Zedboard-doublehell.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+11:48:05 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:48:05 INFO  : 'con' command is executed.
+11:48:05 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+11:48:05 INFO  : Launch script is exported to file 'C:\Users\cihem\488\CPRE-488-Labs\MP-0\MP-0-vitisCDrive\.sdk\launch_scripts\single_application_debug\debugger_zedboard-doublehell-default.tcl'
+11:49:07 INFO  : Disconnected from the channel tcfchan#15.
+11:49:08 INFO  : Checking for BSP changes to sync application flags for project 'Zedboard-doublehell'...
+11:49:13 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:49:13 INFO  : Jtag cable 'Digilent Zed 210248B9DA75' is selected.
+11:49:13 INFO  : 'jtag frequency' command is executed.
+11:49:13 INFO  : Context for 'APU' is selected.
+11:49:13 INFO  : System reset is completed.
+11:49:16 INFO  : 'after 3000' command is executed.
+11:49:16 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B9DA75" && level==0 && jtag_device_ctx=="jsn-Zed-210248B9DA75-23727093-0"}' command is executed.
+11:49:19 INFO  : FPGA configured successfully with bitstream "C:/Users/cihem/488/CPRE-488-Labs/MP-0/MP-0-vitisCDrive/Zedboard-doublehell/_ide/bitstream/design_1_wrapper.bit"
+11:49:19 INFO  : Context for 'APU' is selected.
+11:49:19 INFO  : Hardware design and registers information is loaded from 'C:/Users/cihem/488/CPRE-488-Labs/MP-0/MP-0-vitisCDrive/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+11:49:19 INFO  : 'configparams force-mem-access 1' command is executed.
+11:49:19 INFO  : Context for 'APU' is selected.
+11:49:19 INFO  : Sourcing of 'C:/Users/cihem/488/CPRE-488-Labs/MP-0/MP-0-vitisCDrive/Zedboard-doublehell/_ide/psinit/ps7_init.tcl' is done.
+11:49:19 INFO  : 'ps7_init' command is executed.
+11:49:19 INFO  : 'ps7_post_config' command is executed.
+11:49:19 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:49:19 INFO  : The application 'C:/Users/cihem/488/CPRE-488-Labs/MP-0/MP-0-vitisCDrive/Zedboard-doublehell/Debug/Zedboard-doublehell.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:49:19 INFO  : 'configparams force-mem-access 0' command is executed.
+11:49:19 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B9DA75" && level==0 && jtag_device_ctx=="jsn-Zed-210248B9DA75-23727093-0"}
+fpga -file C:/Users/cihem/488/CPRE-488-Labs/MP-0/MP-0-vitisCDrive/Zedboard-doublehell/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/cihem/488/CPRE-488-Labs/MP-0/MP-0-vitisCDrive/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/cihem/488/CPRE-488-Labs/MP-0/MP-0-vitisCDrive/Zedboard-doublehell/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/cihem/488/CPRE-488-Labs/MP-0/MP-0-vitisCDrive/Zedboard-doublehell/Debug/Zedboard-doublehell.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+11:49:19 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:49:19 INFO  : 'con' command is executed.
+11:49:19 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+11:49:19 INFO  : Launch script is exported to file 'C:\Users\cihem\488\CPRE-488-Labs\MP-0\MP-0-vitisCDrive\.sdk\launch_scripts\single_application_debug\debugger_zedboard-doublehell-default.tcl'
+11:50:49 INFO  : Checking for BSP changes to sync application flags for project 'Zedboard-doublehell'...
+11:50:51 INFO  : Disconnected from the channel tcfchan#17.
+11:51:07 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:51:07 INFO  : Jtag cable 'Digilent Zed 210248B9DA75' is selected.
+11:51:07 INFO  : 'jtag frequency' command is executed.
+11:51:07 INFO  : Context for 'APU' is selected.
+11:51:07 INFO  : System reset is completed.
+11:51:10 INFO  : 'after 3000' command is executed.
+11:51:10 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B9DA75" && level==0 && jtag_device_ctx=="jsn-Zed-210248B9DA75-23727093-0"}' command is executed.
+11:51:12 INFO  : FPGA configured successfully with bitstream "C:/Users/cihem/488/CPRE-488-Labs/MP-0/MP-0-vitisCDrive/Zedboard-doublehell/_ide/bitstream/design_1_wrapper.bit"
+11:51:12 INFO  : Context for 'APU' is selected.
+11:51:12 INFO  : Hardware design and registers information is loaded from 'C:/Users/cihem/488/CPRE-488-Labs/MP-0/MP-0-vitisCDrive/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+11:51:12 INFO  : 'configparams force-mem-access 1' command is executed.
+11:51:12 INFO  : Context for 'APU' is selected.
+11:51:12 INFO  : Sourcing of 'C:/Users/cihem/488/CPRE-488-Labs/MP-0/MP-0-vitisCDrive/Zedboard-doublehell/_ide/psinit/ps7_init.tcl' is done.
+11:51:13 INFO  : 'ps7_init' command is executed.
+11:51:13 INFO  : 'ps7_post_config' command is executed.
+11:51:13 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:51:13 INFO  : The application 'C:/Users/cihem/488/CPRE-488-Labs/MP-0/MP-0-vitisCDrive/Zedboard-doublehell/Debug/Zedboard-doublehell.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:51:13 INFO  : 'configparams force-mem-access 0' command is executed.
+11:51:13 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B9DA75" && level==0 && jtag_device_ctx=="jsn-Zed-210248B9DA75-23727093-0"}
+fpga -file C:/Users/cihem/488/CPRE-488-Labs/MP-0/MP-0-vitisCDrive/Zedboard-doublehell/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/cihem/488/CPRE-488-Labs/MP-0/MP-0-vitisCDrive/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/cihem/488/CPRE-488-Labs/MP-0/MP-0-vitisCDrive/Zedboard-doublehell/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/cihem/488/CPRE-488-Labs/MP-0/MP-0-vitisCDrive/Zedboard-doublehell/Debug/Zedboard-doublehell.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+11:51:13 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:51:13 INFO  : 'con' command is executed.
+11:51:13 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+11:51:13 INFO  : Launch script is exported to file 'C:\Users\cihem\488\CPRE-488-Labs\MP-0\MP-0-vitisCDrive\.sdk\launch_scripts\single_application_debug\debugger_zedboard-doublehell-default.tcl'
+11:52:44 INFO  : Disconnected from the channel tcfchan#19.

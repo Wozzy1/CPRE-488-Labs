@@ -75,6 +75,18 @@ u32 access_buttons() {
 	return buttons;
 }
 
+
+void write_leds(u32 value) {
+	u32 current_leds = Xil_In32((UINTPTR)0x41200000);
+	Xil_Out32((UINTPTR)0x41200000, current_leds | value);
+}
+
+void clear_leds(void) {
+	Xil_Out32((UINTPTR)0x41200000, 0x00);
+}
+
+volatile unsigned int buttons;
+volatile unsigned int prevButtons = 0;
 int main()
 {
     init_platform();
@@ -82,17 +94,45 @@ int main()
     print("Hello World\n\r");
     print("Successfully ran Hello World application\n\r");
 
-    for (;;) {
-    	unsigned int buttons = (unsigned int)access_buttons();
-    	if (buttons) {
-			printf("%u %u %u %u %u\n\r",
-					(buttons >> 4) & 0x1,
-					(buttons >> 3) & 0x1,
-					(buttons >> 2) & 0x1,
-					(buttons >> 1) & 0x1,
-					buttons & 0x1);
 
-    	}
+    for (;;) {
+    	buttons = (unsigned int)access_buttons();
+//    	if (buttons != prevButtons) {
+//			printf("%u %u %u %u %u\n\r",
+//					(buttons >> 4) & 0x1,
+//					(buttons >> 3) & 0x1,
+//					(buttons >> 2) & 0x1,
+//					(buttons >> 1) & 0x1,
+//					buttons & 0x1);
+
+
+			// if there is any change between buttons and prevButtons, act accordingly
+			if ((buttons & 0b1) ^ (prevButtons & 0b1)) {
+				printf("Center pressed\n\r");
+				write_leds((u32)0x1);
+			}
+			if ((buttons & 0b10) ^ (prevButtons & 0b10)) {
+				printf("Down pressed\n\r");
+				write_leds((u32)0b10);
+			}
+			if ((buttons & 0b100) ^ (prevButtons & 0b100)) {
+				printf("Left pressed\n\r");
+				write_leds((u32)0b100);
+			}
+			if ((buttons & 0b1000) ^ (prevButtons & 0b1000)) {
+				printf("Right pressed\n\r");
+				write_leds((u32)0b10000);
+			}
+			if ((buttons & 0b10000) ^ (prevButtons & 0b10000)) {
+				printf("Up pressed\n\r");
+				write_leds((u32)0b1000000);
+			}
+			if (!buttons) {
+				clear_leds();
+			}
+//    	}
+
+    	prevButtons = buttons;
     }
 
     cleanup_platform();

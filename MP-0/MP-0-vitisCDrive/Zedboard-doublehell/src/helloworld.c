@@ -48,14 +48,53 @@
 #include <stdio.h>
 #include "platform.h"
 #include "xil_printf.h"
+#include "xil_io.h"
 
+void print_switches(void) {
+	unsigned int data = (unsigned int)Xil_In32((UINTPTR)0x41220000);
+	printf("%u %u %u %u %u %u %u %u\n\r",
+			(data >> 7) & 0x1,
+			(data >> 6) & 0x1,
+			(data >> 5) & 0x1,
+			(data >> 4) & 0x1,
+			(data >> 3) & 0x1,
+			(data >> 2) & 0x1,
+			(data >> 1) & 0x1,
+			data & 0x1);
+}
+
+/**
+ * Bit 4 BTNU
+ * Bit 3 BTNR
+ * Bit 2 BTNL
+ * Bit 1 BTND
+ * Bit 0 BTNC
+ */
+u32 access_buttons() {
+	u32 buttons = Xil_In32((UINTPTR)0x41210000);
+	return buttons;
+}
 
 int main()
 {
     init_platform();
 
     print("Hello World\n\r");
-    print("Successfully ran Hello World application");
+    print("Successfully ran Hello World application\n\r");
+
+    for (;;) {
+    	unsigned int buttons = (unsigned int)access_buttons();
+    	if (buttons) {
+			printf("%u %u %u %u %u\n\r",
+					(buttons >> 4) & 0x1,
+					(buttons >> 3) & 0x1,
+					(buttons >> 2) & 0x1,
+					(buttons >> 1) & 0x1,
+					buttons & 0x1);
+
+    	}
+    }
+
     cleanup_platform();
     return 0;
 }

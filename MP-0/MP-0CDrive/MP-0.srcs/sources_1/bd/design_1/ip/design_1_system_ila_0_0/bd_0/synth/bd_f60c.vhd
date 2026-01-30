@@ -30,11 +30,16 @@ entity bd_f60c is
     SLOT_1_AXI_wready : in STD_LOGIC;
     SLOT_1_AXI_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
     SLOT_1_AXI_wvalid : in STD_LOGIC;
+    SLOT_2_VIDEO_TIMING_active_video : in STD_LOGIC;
+    SLOT_2_VIDEO_TIMING_hblank : in STD_LOGIC;
+    SLOT_2_VIDEO_TIMING_hsync : in STD_LOGIC;
+    SLOT_2_VIDEO_TIMING_vblank : in STD_LOGIC;
+    SLOT_2_VIDEO_TIMING_vsync : in STD_LOGIC;
     clk : in STD_LOGIC;
     resetn : in STD_LOGIC
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of bd_f60c : entity is "bd_f60c,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=bd_f60c,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=7,numReposBlks=7,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=SBD,synth_mode=Global}";
+  attribute CORE_GENERATION_INFO of bd_f60c : entity is "bd_f60c,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=bd_f60c,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=7,numReposBlks=7,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=SBD,synth_mode=OOC_per_IP}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of bd_f60c : entity is "design_1_system_ila_0_0.hwdef";
 end bd_f60c;
@@ -61,7 +66,12 @@ architecture STRUCTURE of bd_f60c is
     probe15 : in STD_LOGIC_VECTOR ( 1 downto 0 );
     probe16 : in STD_LOGIC_VECTOR ( 1 downto 0 );
     probe17 : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    probe18 : in STD_LOGIC_VECTOR ( 1 downto 0 )
+    probe18 : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    probe19 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe20 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe21 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe22 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe23 : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   end component bd_f60c_ila_lib_0;
   component bd_f60c_g_inst_0 is
@@ -167,6 +177,11 @@ architecture STRUCTURE of bd_f60c is
   signal Conn_WSTRB : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal Conn_WVALID : STD_LOGIC;
   signal SLOT_0_GPIO_tri_o_1 : STD_LOGIC_VECTOR ( 7 downto 0 );
+  signal SLOT_2_VIDEO_TIMING_active_video_1 : STD_LOGIC;
+  signal SLOT_2_VIDEO_TIMING_hblank_1 : STD_LOGIC;
+  signal SLOT_2_VIDEO_TIMING_hsync_1 : STD_LOGIC;
+  signal SLOT_2_VIDEO_TIMING_vblank_1 : STD_LOGIC;
+  signal SLOT_2_VIDEO_TIMING_vsync_1 : STD_LOGIC;
   signal clk_1 : STD_LOGIC;
   signal net_slot_1_axi_ar_cnt : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal net_slot_1_axi_ar_ctrl : STD_LOGIC_VECTOR ( 1 downto 0 );
@@ -208,6 +223,11 @@ architecture STRUCTURE of bd_f60c is
   attribute X_INTERFACE_INFO of SLOT_1_AXI_rvalid : signal is "xilinx.com:interface:aximm:1.0 SLOT_1_AXI RVALID";
   attribute X_INTERFACE_INFO of SLOT_1_AXI_wready : signal is "xilinx.com:interface:aximm:1.0 SLOT_1_AXI WREADY";
   attribute X_INTERFACE_INFO of SLOT_1_AXI_wvalid : signal is "xilinx.com:interface:aximm:1.0 SLOT_1_AXI WVALID";
+  attribute X_INTERFACE_INFO of SLOT_2_VIDEO_TIMING_active_video : signal is "xilinx.com:interface:video_timing:2.0 SLOT_2_VIDEO_TIMING ACTIVE_VIDEO";
+  attribute X_INTERFACE_INFO of SLOT_2_VIDEO_TIMING_hblank : signal is "xilinx.com:interface:video_timing:2.0 SLOT_2_VIDEO_TIMING HBLANK";
+  attribute X_INTERFACE_INFO of SLOT_2_VIDEO_TIMING_hsync : signal is "xilinx.com:interface:video_timing:2.0 SLOT_2_VIDEO_TIMING HSYNC";
+  attribute X_INTERFACE_INFO of SLOT_2_VIDEO_TIMING_vblank : signal is "xilinx.com:interface:video_timing:2.0 SLOT_2_VIDEO_TIMING VBLANK";
+  attribute X_INTERFACE_INFO of SLOT_2_VIDEO_TIMING_vsync : signal is "xilinx.com:interface:video_timing:2.0 SLOT_2_VIDEO_TIMING VSYNC";
   attribute X_INTERFACE_INFO of clk : signal is "xilinx.com:signal:clock:1.0 CLK.CLK CLK";
   attribute X_INTERFACE_PARAMETER : string;
   attribute X_INTERFACE_PARAMETER of clk : signal is "XIL_INTERFACENAME CLK.CLK, ASSOCIATED_BUSIF SLOT_1_AXI, ASSOCIATED_RESET resetn, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.000";
@@ -245,6 +265,11 @@ begin
   Conn_WSTRB(3 downto 0) <= SLOT_1_AXI_wstrb(3 downto 0);
   Conn_WVALID <= SLOT_1_AXI_wvalid;
   SLOT_0_GPIO_tri_o_1(7 downto 0) <= SLOT_0_GPIO_tri_o(7 downto 0);
+  SLOT_2_VIDEO_TIMING_active_video_1 <= SLOT_2_VIDEO_TIMING_active_video;
+  SLOT_2_VIDEO_TIMING_hblank_1 <= SLOT_2_VIDEO_TIMING_hblank;
+  SLOT_2_VIDEO_TIMING_hsync_1 <= SLOT_2_VIDEO_TIMING_hsync;
+  SLOT_2_VIDEO_TIMING_vblank_1 <= SLOT_2_VIDEO_TIMING_vblank;
+  SLOT_2_VIDEO_TIMING_vsync_1 <= SLOT_2_VIDEO_TIMING_vsync;
   clk_1 <= clk;
   resetn_1 <= resetn;
 g_inst: component bd_f60c_g_inst_0
@@ -308,7 +333,12 @@ ila_lib: component bd_f60c_ila_lib_0
       probe16(1 downto 0) => net_slot_1_axi_b_ctrl(1 downto 0),
       probe17(1 downto 0) => net_slot_1_axi_ar_ctrl(1 downto 0),
       probe18(1 downto 0) => net_slot_1_axi_r_ctrl(1 downto 0),
+      probe19(0) => SLOT_2_VIDEO_TIMING_active_video_1,
       probe2(8 downto 0) => net_slot_1_axi_araddr(8 downto 0),
+      probe20(0) => SLOT_2_VIDEO_TIMING_hblank_1,
+      probe21(0) => SLOT_2_VIDEO_TIMING_hsync_1,
+      probe22(0) => SLOT_2_VIDEO_TIMING_vblank_1,
+      probe23(0) => SLOT_2_VIDEO_TIMING_vsync_1,
       probe3(2 downto 0) => net_slot_1_axi_arprot(2 downto 0),
       probe4(1 downto 0) => net_slot_1_axi_aw_cnt(1 downto 0),
       probe5(8 downto 0) => net_slot_1_axi_awaddr(8 downto 0),

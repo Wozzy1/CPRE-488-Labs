@@ -30,6 +30,11 @@ entity bd_f60c_wrapper is
     SLOT_1_AXI_wready : in STD_LOGIC;
     SLOT_1_AXI_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
     SLOT_1_AXI_wvalid : in STD_LOGIC;
+    SLOT_2_VIDEO_TIMING_active_video : in STD_LOGIC;
+    SLOT_2_VIDEO_TIMING_hblank : in STD_LOGIC;
+    SLOT_2_VIDEO_TIMING_hsync : in STD_LOGIC;
+    SLOT_2_VIDEO_TIMING_vblank : in STD_LOGIC;
+    SLOT_2_VIDEO_TIMING_vsync : in STD_LOGIC;
     clk : in STD_LOGIC;
     resetn : in STD_LOGIC
   );
@@ -59,7 +64,12 @@ architecture STRUCTURE of bd_f60c_wrapper is
     SLOT_1_AXI_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
     SLOT_1_AXI_wready : in STD_LOGIC;
     SLOT_1_AXI_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    SLOT_1_AXI_wvalid : in STD_LOGIC
+    SLOT_1_AXI_wvalid : in STD_LOGIC;
+    SLOT_2_VIDEO_TIMING_active_video : in STD_LOGIC;
+    SLOT_2_VIDEO_TIMING_hblank : in STD_LOGIC;
+    SLOT_2_VIDEO_TIMING_hsync : in STD_LOGIC;
+    SLOT_2_VIDEO_TIMING_vblank : in STD_LOGIC;
+    SLOT_2_VIDEO_TIMING_vsync : in STD_LOGIC
   );
   end component bd_f60c;
 begin
@@ -85,6 +95,11 @@ bd_f60c_i: component bd_f60c
       SLOT_1_AXI_wready => SLOT_1_AXI_wready,
       SLOT_1_AXI_wstrb(3 downto 0) => SLOT_1_AXI_wstrb(3 downto 0),
       SLOT_1_AXI_wvalid => SLOT_1_AXI_wvalid,
+      SLOT_2_VIDEO_TIMING_active_video => SLOT_2_VIDEO_TIMING_active_video,
+      SLOT_2_VIDEO_TIMING_hblank => SLOT_2_VIDEO_TIMING_hblank,
+      SLOT_2_VIDEO_TIMING_hsync => SLOT_2_VIDEO_TIMING_hsync,
+      SLOT_2_VIDEO_TIMING_vblank => SLOT_2_VIDEO_TIMING_vblank,
+      SLOT_2_VIDEO_TIMING_vsync => SLOT_2_VIDEO_TIMING_vsync,
       clk => clk,
       resetn => resetn
     );

@@ -76,6 +76,11 @@ ENTITY design_1_system_ila_0_0 IS
     SLOT_1_AXI_rresp : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
     SLOT_1_AXI_rvalid : IN STD_LOGIC;
     SLOT_1_AXI_rready : IN STD_LOGIC;
+    SLOT_2_VIDEO_TIMING_active_video : IN STD_LOGIC;
+    SLOT_2_VIDEO_TIMING_hblank : IN STD_LOGIC;
+    SLOT_2_VIDEO_TIMING_vblank : IN STD_LOGIC;
+    SLOT_2_VIDEO_TIMING_hsync : IN STD_LOGIC;
+    SLOT_2_VIDEO_TIMING_vsync : IN STD_LOGIC;
     resetn : IN STD_LOGIC
   );
 END design_1_system_ila_0_0;
@@ -106,6 +111,11 @@ ARCHITECTURE design_1_system_ila_0_0_arch OF design_1_system_ila_0_0 IS
       SLOT_1_AXI_rresp : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
       SLOT_1_AXI_rvalid : IN STD_LOGIC;
       SLOT_1_AXI_rready : IN STD_LOGIC;
+      SLOT_2_VIDEO_TIMING_active_video : IN STD_LOGIC;
+      SLOT_2_VIDEO_TIMING_hblank : IN STD_LOGIC;
+      SLOT_2_VIDEO_TIMING_vblank : IN STD_LOGIC;
+      SLOT_2_VIDEO_TIMING_hsync : IN STD_LOGIC;
+      SLOT_2_VIDEO_TIMING_vsync : IN STD_LOGIC;
       resetn : IN STD_LOGIC
     );
   END COMPONENT bd_f60c;
@@ -113,6 +123,11 @@ ARCHITECTURE design_1_system_ila_0_0_arch OF design_1_system_ila_0_0 IS
   ATTRIBUTE X_INTERFACE_PARAMETER : STRING;
   ATTRIBUTE X_INTERFACE_PARAMETER OF resetn: SIGNAL IS "XIL_INTERFACENAME RST.resetn, POLARITY ACTIVE_LOW, INSERT_VIP 0";
   ATTRIBUTE X_INTERFACE_INFO OF resetn: SIGNAL IS "xilinx.com:signal:reset:1.0 RST.resetn RST";
+  ATTRIBUTE X_INTERFACE_INFO OF SLOT_2_VIDEO_TIMING_vsync: SIGNAL IS "xilinx.com:interface:video_timing:2.0 SLOT_2_VIDEO_TIMING VSYNC";
+  ATTRIBUTE X_INTERFACE_INFO OF SLOT_2_VIDEO_TIMING_hsync: SIGNAL IS "xilinx.com:interface:video_timing:2.0 SLOT_2_VIDEO_TIMING HSYNC";
+  ATTRIBUTE X_INTERFACE_INFO OF SLOT_2_VIDEO_TIMING_vblank: SIGNAL IS "xilinx.com:interface:video_timing:2.0 SLOT_2_VIDEO_TIMING VBLANK";
+  ATTRIBUTE X_INTERFACE_INFO OF SLOT_2_VIDEO_TIMING_hblank: SIGNAL IS "xilinx.com:interface:video_timing:2.0 SLOT_2_VIDEO_TIMING HBLANK";
+  ATTRIBUTE X_INTERFACE_INFO OF SLOT_2_VIDEO_TIMING_active_video: SIGNAL IS "xilinx.com:interface:video_timing:2.0 SLOT_2_VIDEO_TIMING ACTIVE_VIDEO";
   ATTRIBUTE X_INTERFACE_INFO OF SLOT_1_AXI_rready: SIGNAL IS "xilinx.com:interface:aximm:1.0 SLOT_1_AXI RREADY";
   ATTRIBUTE X_INTERFACE_INFO OF SLOT_1_AXI_rvalid: SIGNAL IS "xilinx.com:interface:aximm:1.0 SLOT_1_AXI RVALID";
   ATTRIBUTE X_INTERFACE_INFO OF SLOT_1_AXI_rresp: SIGNAL IS "xilinx.com:interface:aximm:1.0 SLOT_1_AXI RRESP";
@@ -161,6 +176,11 @@ BEGIN
       SLOT_1_AXI_rresp => SLOT_1_AXI_rresp,
       SLOT_1_AXI_rvalid => SLOT_1_AXI_rvalid,
       SLOT_1_AXI_rready => SLOT_1_AXI_rready,
+      SLOT_2_VIDEO_TIMING_active_video => SLOT_2_VIDEO_TIMING_active_video,
+      SLOT_2_VIDEO_TIMING_hblank => SLOT_2_VIDEO_TIMING_hblank,
+      SLOT_2_VIDEO_TIMING_vblank => SLOT_2_VIDEO_TIMING_vblank,
+      SLOT_2_VIDEO_TIMING_hsync => SLOT_2_VIDEO_TIMING_hsync,
+      SLOT_2_VIDEO_TIMING_vsync => SLOT_2_VIDEO_TIMING_vsync,
       resetn => resetn
     );
 END design_1_system_ila_0_0_arch;

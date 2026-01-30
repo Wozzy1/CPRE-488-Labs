@@ -160,6 +160,8 @@ proc create_root_design { parentCell } {
 
   set SLOT_1_AXI [ create_bd_intf_port -mode Monitor -vlnv xilinx.com:interface:aximm_rtl:1.0 SLOT_1_AXI ]
 
+  set SLOT_2_VIDEO_TIMING [ create_bd_intf_port -mode Monitor -vlnv xilinx.com:interface:video_timing_rtl:2.0 SLOT_2_VIDEO_TIMING ]
+
 
   # Create ports
   set clk [ create_bd_port -dir I -type clk clk ]
@@ -218,7 +220,7 @@ proc create_root_design { parentCell } {
    CONFIG.C_ILA_CLK_FREQ {100000000} \
    CONFIG.C_INPUT_PIPE_STAGES {0} \
    CONFIG.C_MONITOR_TYPE {Native} \
-   CONFIG.C_NUM_OF_PROBES {19} \
+   CONFIG.C_NUM_OF_PROBES {24} \
    CONFIG.C_PROBE0_TYPE {0} \
    CONFIG.C_PROBE0_WIDTH {8} \
    CONFIG.C_PROBE10_TYPE {0} \
@@ -239,8 +241,18 @@ proc create_root_design { parentCell } {
    CONFIG.C_PROBE17_WIDTH {2} \
    CONFIG.C_PROBE18_TYPE {0} \
    CONFIG.C_PROBE18_WIDTH {2} \
+   CONFIG.C_PROBE19_TYPE {0} \
+   CONFIG.C_PROBE19_WIDTH {1} \
    CONFIG.C_PROBE1_TYPE {0} \
    CONFIG.C_PROBE1_WIDTH {2} \
+   CONFIG.C_PROBE20_TYPE {0} \
+   CONFIG.C_PROBE20_WIDTH {1} \
+   CONFIG.C_PROBE21_TYPE {0} \
+   CONFIG.C_PROBE21_WIDTH {1} \
+   CONFIG.C_PROBE22_TYPE {0} \
+   CONFIG.C_PROBE22_WIDTH {1} \
+   CONFIG.C_PROBE23_TYPE {0} \
+   CONFIG.C_PROBE23_WIDTH {1} \
    CONFIG.C_PROBE2_TYPE {0} \
    CONFIG.C_PROBE2_WIDTH {9} \
    CONFIG.C_PROBE3_TYPE {0} \
@@ -289,6 +301,11 @@ connect_bd_intf_net -intf_net Conn [get_bd_intf_ports SLOT_1_AXI] [get_bd_intf_p
 
   # Create port connections
   connect_bd_net -net SLOT_0_GPIO_tri_o_1 [get_bd_ports SLOT_0_GPIO_tri_o] [get_bd_pins ila_lib/probe0]
+  connect_bd_net -net SLOT_2_VIDEO_TIMING_active_video_1 [get_bd_ports SLOT_2_VIDEO_TIMING_active_video] [get_bd_pins ila_lib/probe19]
+  connect_bd_net -net SLOT_2_VIDEO_TIMING_hblank_1 [get_bd_ports SLOT_2_VIDEO_TIMING_hblank] [get_bd_pins ila_lib/probe20]
+  connect_bd_net -net SLOT_2_VIDEO_TIMING_hsync_1 [get_bd_ports SLOT_2_VIDEO_TIMING_hsync] [get_bd_pins ila_lib/probe21]
+  connect_bd_net -net SLOT_2_VIDEO_TIMING_vblank_1 [get_bd_ports SLOT_2_VIDEO_TIMING_vblank] [get_bd_pins ila_lib/probe22]
+  connect_bd_net -net SLOT_2_VIDEO_TIMING_vsync_1 [get_bd_ports SLOT_2_VIDEO_TIMING_vsync] [get_bd_pins ila_lib/probe23]
   connect_bd_net -net clk_1 [get_bd_ports clk] [get_bd_pins g_inst/aclk] [get_bd_pins ila_lib/clk]
   connect_bd_net -net net_slot_1_axi_ar_cnt [get_bd_pins g_inst/m_slot_0_axi_ar_cnt] [get_bd_pins ila_lib/probe1]
   connect_bd_net -net net_slot_1_axi_ar_ctrl [get_bd_pins ila_lib/probe17] [get_bd_pins slot_1_ar/dout]

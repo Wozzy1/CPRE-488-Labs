@@ -732,6 +732,86 @@
                                         ]
                                     }
                                 ]
+                            },
+                            {
+                                "name": "probe19",
+                                "id": 19,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 19,
+                                "nets": [
+                                    {
+                                        "name": "design_1_i/system_ila_0/U0/SLOT_2_VIDEO_TIMING_active_video_1",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe20",
+                                "id": 20,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 20,
+                                "nets": [
+                                    {
+                                        "name": "design_1_i/system_ila_0/U0/SLOT_2_VIDEO_TIMING_hblank_1",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe21",
+                                "id": 21,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 21,
+                                "nets": [
+                                    {
+                                        "name": "design_1_i/system_ila_0/U0/SLOT_2_VIDEO_TIMING_hsync_1",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe22",
+                                "id": 22,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 22,
+                                "nets": [
+                                    {
+                                        "name": "design_1_i/system_ila_0/U0/SLOT_2_VIDEO_TIMING_vblank_1",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe23",
+                                "id": 23,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 23,
+                                "nets": [
+                                    {
+                                        "name": "design_1_i/system_ila_0/U0/SLOT_2_VIDEO_TIMING_vsync_1",
+                                        "isBus": false
+                                    }
+                                ]
                             }
                         ],
                         "bus_interfaces": [
@@ -924,6 +1004,56 @@
                                         "physical_pin": {
                                             "id": 15,
                                             "name": "probe15",
+                                            "leftBit": 0,
+                                            "width": 1
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "SLOT_2_VIDEO_TIMING",
+                                "port_maps": [
+                                    {
+                                        "logical_port": "ACTIVE_VIDEO",
+                                        "physical_pin": {
+                                            "id": 19,
+                                            "name": "probe19",
+                                            "leftBit": 0,
+                                            "width": 1
+                                        }
+                                    },
+                                    {
+                                        "logical_port": "HBLANK",
+                                        "physical_pin": {
+                                            "id": 20,
+                                            "name": "probe20",
+                                            "leftBit": 0,
+                                            "width": 1
+                                        }
+                                    },
+                                    {
+                                        "logical_port": "HSYNC",
+                                        "physical_pin": {
+                                            "id": 21,
+                                            "name": "probe21",
+                                            "leftBit": 0,
+                                            "width": 1
+                                        }
+                                    },
+                                    {
+                                        "logical_port": "VBLANK",
+                                        "physical_pin": {
+                                            "id": 22,
+                                            "name": "probe22",
+                                            "leftBit": 0,
+                                            "width": 1
+                                        }
+                                    },
+                                    {
+                                        "logical_port": "VSYNC",
+                                        "physical_pin": {
+                                            "id": 23,
+                                            "name": "probe23",
                                             "leftBit": 0,
                                             "width": 1
                                         }

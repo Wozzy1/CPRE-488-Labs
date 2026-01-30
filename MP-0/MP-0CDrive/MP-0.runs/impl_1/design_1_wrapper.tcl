@@ -17,7 +17,7 @@ proc create_report { reportName command } {
   }
 }
 namespace eval ::optrace {
-  variable script "C:/Users/cihem/cpre488/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.runs/impl_1/design_1_wrapper.tcl"
+  variable script "C:/Users/cihem/488/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.runs/impl_1/design_1_wrapper.tcl"
   variable category "vivado_impl"
 }
 
@@ -114,6 +114,7 @@ proc step_failed { step } {
   close $ch
 }
 
+set_msg_config -id {Common 17-41} -limit 10000000
 
 OPTRACE "Implementation" START { ROLLUP_1 }
 OPTRACE "Phase: Init Design" START { ROLLUP_AUTO }
@@ -122,6 +123,7 @@ set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
   set_param chipscope.maxJobs 5
+  set_param xicom.use_bs_reader 1
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7z020clg484-1
   set_property board_part em.avnet.com:zed:part0:1.4 [current_project]
@@ -129,17 +131,17 @@ OPTRACE "create in-memory project" START { }
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
-  set_property webtalk.parent_dir C:/Users/cihem/cpre488/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.cache/wt [current_project]
-  set_property parent.project_path C:/Users/cihem/cpre488/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.xpr [current_project]
-  set_property ip_output_repo C:/Users/cihem/cpre488/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.cache/ip [current_project]
+  set_property webtalk.parent_dir C:/Users/cihem/488/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.cache/wt [current_project]
+  set_property parent.project_path C:/Users/cihem/488/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.xpr [current_project]
+  set_property ip_output_repo C:/Users/cihem/488/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
-  set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
+  set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
-  add_files -quiet C:/Users/cihem/cpre488/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.runs/synth_1/design_1_wrapper.dcp
+  add_files -quiet C:/Users/cihem/488/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.runs/synth_1/design_1_wrapper.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
-  add_files C:/Users/cihem/cpre488/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/design_1.bd
+  add_files C:/Users/cihem/488/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/design_1.bd
   set_param project.isImplRun false
 OPTRACE "read constraints: implementation" START { }
 OPTRACE "read constraints: implementation" END { }
@@ -309,7 +311,7 @@ set rc [catch {
   create_msg_db write_bitstream.pb
 OPTRACE "read constraints: write_bitstream" START { }
 OPTRACE "read constraints: write_bitstream" END { }
-  set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
+  set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
   catch { write_mem_info -force design_1_wrapper.mmi }
 OPTRACE "write_bitstream setup" END { }
 OPTRACE "write_bitstream" START { }

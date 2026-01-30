@@ -1,8 +1,8 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
--- Date        : Tue Jan 27 16:46:56 2026
--- Host        : CO2041-16 running 64-bit major release  (build 9200)
+-- Date        : Thu Jan 29 18:55:21 2026
+-- Host        : CO2041-07 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub -rename_top design_1_system_ila_0_0 -prefix
 --               design_1_system_ila_0_0_ design_1_system_ila_0_0_stub.vhdl
 -- Design      : design_1_system_ila_0_0
@@ -35,6 +35,11 @@ entity design_1_system_ila_0_0 is
     SLOT_1_AXI_rresp : in STD_LOGIC_VECTOR ( 1 downto 0 );
     SLOT_1_AXI_rvalid : in STD_LOGIC;
     SLOT_1_AXI_rready : in STD_LOGIC;
+    SLOT_2_VIDEO_TIMING_active_video : in STD_LOGIC;
+    SLOT_2_VIDEO_TIMING_hblank : in STD_LOGIC;
+    SLOT_2_VIDEO_TIMING_vblank : in STD_LOGIC;
+    SLOT_2_VIDEO_TIMING_hsync : in STD_LOGIC;
+    SLOT_2_VIDEO_TIMING_vsync : in STD_LOGIC;
     resetn : in STD_LOGIC
   );
 
@@ -44,7 +49,7 @@ architecture stub of design_1_system_ila_0_0 is
 attribute syn_black_box : boolean;
 attribute black_box_pad_pin : string;
 attribute syn_black_box of stub : architecture is true;
-attribute black_box_pad_pin of stub : architecture is "clk,SLOT_0_GPIO_tri_o[7:0],SLOT_1_AXI_awaddr[8:0],SLOT_1_AXI_awprot[2:0],SLOT_1_AXI_awvalid,SLOT_1_AXI_awready,SLOT_1_AXI_wdata[31:0],SLOT_1_AXI_wstrb[3:0],SLOT_1_AXI_wvalid,SLOT_1_AXI_wready,SLOT_1_AXI_bresp[1:0],SLOT_1_AXI_bvalid,SLOT_1_AXI_bready,SLOT_1_AXI_araddr[8:0],SLOT_1_AXI_arprot[2:0],SLOT_1_AXI_arvalid,SLOT_1_AXI_arready,SLOT_1_AXI_rdata[31:0],SLOT_1_AXI_rresp[1:0],SLOT_1_AXI_rvalid,SLOT_1_AXI_rready,resetn";
+attribute black_box_pad_pin of stub : architecture is "clk,SLOT_0_GPIO_tri_o[7:0],SLOT_1_AXI_awaddr[8:0],SLOT_1_AXI_awprot[2:0],SLOT_1_AXI_awvalid,SLOT_1_AXI_awready,SLOT_1_AXI_wdata[31:0],SLOT_1_AXI_wstrb[3:0],SLOT_1_AXI_wvalid,SLOT_1_AXI_wready,SLOT_1_AXI_bresp[1:0],SLOT_1_AXI_bvalid,SLOT_1_AXI_bready,SLOT_1_AXI_araddr[8:0],SLOT_1_AXI_arprot[2:0],SLOT_1_AXI_arvalid,SLOT_1_AXI_arready,SLOT_1_AXI_rdata[31:0],SLOT_1_AXI_rresp[1:0],SLOT_1_AXI_rvalid,SLOT_1_AXI_rready,SLOT_2_VIDEO_TIMING_active_video,SLOT_2_VIDEO_TIMING_hblank,SLOT_2_VIDEO_TIMING_vblank,SLOT_2_VIDEO_TIMING_hsync,SLOT_2_VIDEO_TIMING_vsync,resetn";
 attribute x_core_info : string;
 attribute x_core_info of stub : architecture is "bd_f60c,Vivado 2020.1";
 begin

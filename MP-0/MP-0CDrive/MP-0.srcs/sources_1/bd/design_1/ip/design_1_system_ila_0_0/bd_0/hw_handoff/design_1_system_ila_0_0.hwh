@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Jan 27 16:48:59 2026" VIVADOVERSION="2020.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Jan 29 19:01:39 2026" VIVADOVERSION="2020.1">
 
   <SYSTEMINFO ARCH="zynq" BOARD="em.avnet.com:zed:part0:1.4" DEVICE="7z020" NAME="bd_f60c" PACKAGE="clg484" SPEEDGRADE="-1"/>
 
@@ -115,6 +115,31 @@
         <CONNECTION INSTANCE="g_inst" PORT="slot_0_axi_wvalid"/>
       </CONNECTIONS>
     </PORT>
+    <PORT DIR="I" NAME="SLOT_2_VIDEO_TIMING_active_video" SIGIS="undef" SIGNAME="External_Ports_SLOT_2_VIDEO_TIMING_active_video">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="ila_lib" PORT="probe19"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="SLOT_2_VIDEO_TIMING_hblank" SIGIS="undef" SIGNAME="External_Ports_SLOT_2_VIDEO_TIMING_hblank">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="ila_lib" PORT="probe20"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="SLOT_2_VIDEO_TIMING_hsync" SIGIS="undef" SIGNAME="External_Ports_SLOT_2_VIDEO_TIMING_hsync">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="ila_lib" PORT="probe21"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="SLOT_2_VIDEO_TIMING_vblank" SIGIS="undef" SIGNAME="External_Ports_SLOT_2_VIDEO_TIMING_vblank">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="ila_lib" PORT="probe22"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="SLOT_2_VIDEO_TIMING_vsync" SIGIS="undef" SIGNAME="External_Ports_SLOT_2_VIDEO_TIMING_vsync">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="ila_lib" PORT="probe23"/>
+      </CONNECTIONS>
+    </PORT>
   </EXTERNALPORTS>
 
   <EXTERNALINTERFACES>
@@ -175,6 +200,15 @@
         <PORTMAP LOGICAL="WREADY" PHYSICAL="SLOT_1_AXI_wready"/>
         <PORTMAP LOGICAL="WSTRB" PHYSICAL="SLOT_1_AXI_wstrb"/>
         <PORTMAP LOGICAL="WVALID" PHYSICAL="SLOT_1_AXI_wvalid"/>
+      </PORTMAPS>
+    </BUSINTERFACE>
+    <BUSINTERFACE BUSNAME="__NOC__" NAME="SLOT_2_VIDEO_TIMING" TYPE="MONITOR">
+      <PORTMAPS>
+        <PORTMAP LOGICAL="ACTIVE_VIDEO" PHYSICAL="SLOT_2_VIDEO_TIMING_active_video"/>
+        <PORTMAP LOGICAL="HBLANK" PHYSICAL="SLOT_2_VIDEO_TIMING_hblank"/>
+        <PORTMAP LOGICAL="HSYNC" PHYSICAL="SLOT_2_VIDEO_TIMING_hsync"/>
+        <PORTMAP LOGICAL="VBLANK" PHYSICAL="SLOT_2_VIDEO_TIMING_vblank"/>
+        <PORTMAP LOGICAL="VSYNC" PHYSICAL="SLOT_2_VIDEO_TIMING_vsync"/>
       </PORTMAPS>
     </BUSINTERFACE>
   </EXTERNALINTERFACES>
@@ -1882,7 +1916,7 @@
         <PARAMETER NAME="C_SLOT_0_AXI_PROTOCOL" VALUE="AXI4"/>
         <PARAMETER NAME="C_NUM_MONITOR_SLOTS" VALUE="1"/>
         <PARAMETER NAME="C_ENABLE_ILA_AXI_MON" VALUE="0"/>
-        <PARAMETER NAME="C_NUM_OF_PROBES" VALUE="19"/>
+        <PARAMETER NAME="C_NUM_OF_PROBES" VALUE="24"/>
         <PARAMETER NAME="C_DATA_DEPTH" VALUE="1024"/>
         <PARAMETER NAME="C_MAJOR_VERSION" VALUE="2020"/>
         <PARAMETER NAME="C_MINOR_VERSION" VALUE="1"/>
@@ -5100,6 +5134,31 @@
         <PORT DIR="I" LEFT="1" NAME="probe18" RIGHT="0" SIGIS="undef" SIGNAME="slot_1_r_dout">
           <CONNECTIONS>
             <CONNECTION INSTANCE="slot_1_r" PORT="dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="probe19" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_SLOT_2_VIDEO_TIMING_active_video">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="SLOT_2_VIDEO_TIMING_active_video"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="probe20" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_SLOT_2_VIDEO_TIMING_hblank">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="SLOT_2_VIDEO_TIMING_hblank"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="probe21" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_SLOT_2_VIDEO_TIMING_hsync">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="SLOT_2_VIDEO_TIMING_hsync"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="probe22" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_SLOT_2_VIDEO_TIMING_vblank">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="SLOT_2_VIDEO_TIMING_vblank"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="probe23" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_SLOT_2_VIDEO_TIMING_vsync">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="SLOT_2_VIDEO_TIMING_vsync"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>

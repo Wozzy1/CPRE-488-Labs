@@ -35,7 +35,7 @@ int main() {
 
 
     // Enable VTC module: Using high-level functions provided by Vendor
-    VtcCfgPtr = XVtc_LookupConfig(XPAR_AXI_VDMA_0_DEVICE_ID);
+    VtcCfgPtr = XVtc_LookupConfig(XPAR_V_TC_0_DEVICE_ID);
     XVtc_CfgInitialize(&Vtc, VtcCfgPtr, VtcCfgPtr->BaseAddress);
     XVtc_EnableGenerator(&Vtc);
 
@@ -68,14 +68,19 @@ int main() {
 
     // Set up VDMA config registers
 	#define CHANGE_ME 0
+    const u32 stride_bytes = 640 * 2;
+    const u32 hsize_bytes = 640 * 2;
+    const u32 vsize_lines = 480;
+    const u32 start_addr = (u32)(UINTPTR)&test_image[0][0];
+    const u32 mm2s_cr = 0x00000003;
 
     // Simple function abstraction by Vendor for writing VDMA registers
-    XAxiVdma_WriteReg(XPAR_AXI_VDMA_0_BASEADDR, XAXIVDMA_CR_OFFSET,  CHANGE_ME);  // Read Channel: VDMA MM2S Circular Mode and Start bits set, VDMA MM2S Control
-    XAxiVdma_WriteReg(XPAR_AXI_VDMA_0_BASEADDR, XAXIVDMA_HI_FRMBUF_OFFSET, CHANGE_ME);  // Read Channel: VDMA MM2S Reg_Index
-    XAxiVdma_WriteReg(XPAR_AXI_VDMA_0_BASEADDR, XAXIVDMA_MM2S_ADDR_OFFSET + XAXIVDMA_START_ADDR_OFFSET, CHANGE_ME);  // Read Channel: VDMA MM2S Frame buffer Start Addr 1
-    XAxiVdma_WriteReg(XPAR_AXI_VDMA_0_BASEADDR, XAXIVDMA_MM2S_ADDR_OFFSET + XAXIVDMA_STRD_FRMDLY_OFFSET, CHANGE_ME);  // Read Channel: VDMA MM2S FRM_Delay, and Stride
-    XAxiVdma_WriteReg(XPAR_AXI_VDMA_0_BASEADDR, XAXIVDMA_MM2S_ADDR_OFFSET + XAXIVDMA_HSIZE_OFFSET, CHANGE_ME);  // Read Channel: VDMA MM2S HSIZE
-    XAxiVdma_WriteReg(XPAR_AXI_VDMA_0_BASEADDR, XAXIVDMA_MM2S_ADDR_OFFSET + XAXIVDMA_VSIZE_OFFSET, CHANGE_ME);  // Read Channel: VDMA MM2S VSIZE  (Note: Also Starts VDMA transaction)
+    XAxiVdma_WriteReg(XPAR_AXI_VDMA_0_BASEADDR, XAXIVDMA_CR_OFFSET,  mm2s_cr);  // Read Channel: VDMA MM2S Circular Mode and Start bits set, VDMA MM2S Control
+    XAxiVdma_WriteReg(XPAR_AXI_VDMA_0_BASEADDR, XAXIVDMA_HI_FRMBUF_OFFSET, 0);  // Read Channel: VDMA MM2S Reg_Index
+    XAxiVdma_WriteReg(XPAR_AXI_VDMA_0_BASEADDR, XAXIVDMA_MM2S_ADDR_OFFSET + XAXIVDMA_START_ADDR_OFFSET, start_addr);  // Read Channel: VDMA MM2S Frame buffer Start Addr 1
+    XAxiVdma_WriteReg(XPAR_AXI_VDMA_0_BASEADDR, XAXIVDMA_MM2S_ADDR_OFFSET + XAXIVDMA_STRD_FRMDLY_OFFSET, stride_bytes);  // Read Channel: VDMA MM2S FRM_Delay, and Stride
+    XAxiVdma_WriteReg(XPAR_AXI_VDMA_0_BASEADDR, XAXIVDMA_MM2S_ADDR_OFFSET + XAXIVDMA_HSIZE_OFFSET, hsize_bytes);  // Read Channel: VDMA MM2S HSIZE
+    XAxiVdma_WriteReg(XPAR_AXI_VDMA_0_BASEADDR, XAXIVDMA_MM2S_ADDR_OFFSET + XAXIVDMA_VSIZE_OFFSET, vsize_lines);  // Read Channel: VDMA MM2S VSIZE  (Note: Also Starts VDMA transaction)
 
 
     // Low-level register acess using pointers

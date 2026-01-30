@@ -1,14 +1,9 @@
-12:23:49 **** Incremental Build of configuration Debug for project VGA-Shit-test1 ****
+13:56:14 **** Incremental Build of configuration Debug for project VGA-Shit-test1 ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
 ' '
 make --no-print-directory main-build
-'Building file: ../src/platform.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/export/VGA_design_1_wrapper/sw/VGA_design_1_wrapper/domain_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
-'Finished building: ../src/platform.c'
-' '
 'Building file: ../src/vga_test.c'
 'Invoking: ARM v7 gcc compiler'
 arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/vga_test.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/export/VGA_design_1_wrapper/sw/VGA_design_1_wrapper/domain_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/vga_test.d" -MT"src/vga_test.o" -o "src/vga_test.o" "../src/vga_test.c"
@@ -22,9 +17,9 @@ arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=non
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size VGA-Shit-test1.elf  |tee "VGA-Shit-test1.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  34360	   1152	 636984	 672496	  a42f0	VGA-Shit-test1.elf
+  34408	   1152	 636984	 672544	  a4320	VGA-Shit-test1.elf
 'Finished building: VGA-Shit-test1.elf.size'
 ' '
 
-12:23:49 Build Finished (took 722ms)
+13:56:15 Build Finished (took 602ms)
 

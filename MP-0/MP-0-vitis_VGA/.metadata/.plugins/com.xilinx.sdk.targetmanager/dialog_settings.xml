@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="C:\Users\cihem\CPRE-488-Labs\MP-0\MP-0-vitisCDrive\design_1_wrapper\bitstream\design_1_wrapper.bit" key="VGA-Shit-test1-bitFile"/>
+	<item value="{&quot;cables&quot;:[{&quot;name&quot;:&quot;Digilent Zed 210248B9DA75&quot;,&quot;indexContextMap&quot;:{&quot;2&quot;:&quot;jsn-Zed-210248B9DA75-4ba00477-0&quot;,&quot;3&quot;:&quot;jsn-Zed-210248B9DA75-23727093-0&quot;}}]}" key="devices_info_Local"/>
+	<item value="" key="VGA-Shit-test1-bmmFile"/>
+	<item value="false" key="VGA-Shit-test1-partial_bit"/>
+	<item value="VGA-Shit-test1" key="programfpga.sdxproject"/>
+	<item value="Auto Detect" key="VGA-Shit-test1-device"/>
+	<item value="Local" key="VGA-Shit-test1-target"/>
+	<item value="false" key="VGA-Shit-test1-skip_rev_check"/>
+</section>

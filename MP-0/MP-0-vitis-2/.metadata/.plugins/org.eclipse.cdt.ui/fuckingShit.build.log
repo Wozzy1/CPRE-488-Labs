@@ -1,4 +1,4 @@
-16:49:25 **** Build of configuration Debug for project fuckingShit ****
+13:36:38 **** Incremental Build of configuration Debug for project fuckingShit ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
@@ -6,25 +6,24 @@ a9-linaro-pre-build-step
 make --no-print-directory main-build
 'Building file: ../src/helloworld.c'
 'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/cihem/488/CPRE-488-Labs/MP-0/MP-0-vitis-2/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/domain_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis-2/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/domain_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'hard_write_leds':
+../src/helloworld.c:100:6: warning: unused variable 'current_leds' [-Wunused-variable]
+  100 |  u32 current_leds = Xil_In32((UINTPTR)0x41200000);
+      |      ^~~~~~~~~~~~
 'Finished building: ../src/helloworld.c'
-' '
-'Building file: ../src/platform.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/cihem/488/CPRE-488-Labs/MP-0/MP-0-vitis-2/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/domain_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
-'Finished building: ../src/platform.c'
 ' '
 'Building target: fuckingShit.elf'
 'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/cihem/488/CPRE-488-Labs/MP-0/MP-0-vitis-2/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/domain_ps7_cortexa9_0/bsplib/lib -o "fuckingShit.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis-2/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/domain_ps7_cortexa9_0/bsplib/lib -o "fuckingShit.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
 'Finished building target: fuckingShit.elf'
 ' '
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size fuckingShit.elf  |tee "fuckingShit.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  41856	   2548	  22640	  67044	  105e4	fuckingShit.elf
+  49347	   2556	  22688	  74591	  1235f	fuckingShit.elf
 'Finished building: fuckingShit.elf.size'
 ' '
 
-16:49:26 Build Finished (took 1s.92ms)
+13:36:39 Build Finished (took 595ms)
 

@@ -5,3 +5,12 @@ timestamp=[2026-01-29 16:45:35], mode=APP_CREATION, duration=0:00:15.043, durati
 timestamp=[2026-01-29 16:49:25], mode=PLATFORM_GENERATION, duration=0:00:28.328, duration_ms=28328, data={name=design_1_wrapper}
 timestamp=[2026-01-29 16:49:26], mode=BUILD, duration=0:00:01.105, duration_ms=1105, data={name=fuckingShit, configuration=Debug, clean_build=false}
 timestamp=[2026-01-29 16:49:30], mode=BUILD, duration=0:00:04.320, duration_ms=4320, data={name=fuckingShit_system, configuration=Debug, clean_build=false}
+timestamp=[2026-01-30 12:27:03], mode=WORKBENCH_START, duration=0:00:05.016, duration_ms=5016, data={}
+timestamp=[2026-01-30 12:27:03], mode=WORKBENCH_UI_INIT, duration=0:00:00.292, duration_ms=292, data={editors_count=3, platform_editors_count=0, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,design_1_wrapper,fuckingShit,fuckingShit_system}
+timestamp=[2026-01-30 12:27:04], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.030, duration_ms=30, data={}
+timestamp=[2026-01-30 12:47:59], mode=PLATFORM_GENERATION, duration=0:00:16.456, duration_ms=16456, data={name=design_1_wrapper}
+timestamp=[2026-01-30 12:48:03], mode=BUILD, duration=0:00:00.731, duration_ms=731, data={name=fuckingShit, configuration=Debug, clean_build=false}
+timestamp=[2026-01-30 12:48:53], mode=BUILD, duration=0:00:00.592, duration_ms=592, data={name=fuckingShit, configuration=Debug, clean_build=false}
+timestamp=[2026-01-30 13:29:12], mode=BUILD, duration=0:00:00.592, duration_ms=592, data={name=fuckingShit, configuration=Debug, clean_build=false}
+timestamp=[2026-01-30 13:34:29], mode=BUILD, duration=0:00:00.595, duration_ms=595, data={name=fuckingShit, configuration=Debug, clean_build=false}
+timestamp=[2026-01-30 13:36:39], mode=BUILD, duration=0:00:00.598, duration_ms=598, data={name=fuckingShit, configuration=Debug, clean_build=false}

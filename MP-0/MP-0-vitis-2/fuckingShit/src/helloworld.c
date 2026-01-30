@@ -46,9 +46,24 @@
  */
 
 #include <stdio.h>
-#include "platform.h"
+#include "platform.h" //this already includes xparameters so it works
 #include "xil_printf.h"
 #include "xil_io.h"
+#include "xgpiops.h"
+
+#define PS_BTN8_MIO 50
+#define PS_BTN9_MIO 51
+
+XGpioPs GpioPs;
+
+void ps_gpio_init(void) {
+	XGpioPs_Config *cfg = XGpioPs_LookupConfig(XPAR_XGPIOPS_0_DEVICE_ID);
+	XGpioPs_CfgInitialize(&GpioPs, cfg, cfg->BaseAddr);
+	XGpioPs_SetDirectionPin(&GpioPs, PS_BTN8_MIO, 0);
+	XGpioPs_SetDirectionPin(&GpioPs, PS_BTN9_MIO, 0);
+	XGpioPs_SetOutputEnablePin(&GpioPs, PS_BTN8_MIO, 0);
+	XGpioPs_SetOutputEnablePin(&GpioPs, PS_BTN9_MIO, 0);
+}
 
 void print_switches(void) {
 	unsigned int data = (unsigned int)Xil_In32((UINTPTR)0x41220000);
@@ -81,12 +96,19 @@ void write_leds(u32 value) {
 	Xil_Out32((UINTPTR)0x41200000, current_leds | value);
 }
 
+void hard_write_leds(u32 value) {
+	u32 current_leds = Xil_In32((UINTPTR)0x41200000);
+	Xil_Out32((UINTPTR)0x41200000, value);
+}
+
 void clear_leds(void) {
 	Xil_Out32((UINTPTR)0x41200000, 0x00);
 }
 
 volatile unsigned int buttons;
 volatile unsigned int prevButtons = 0;
+volatile unsigned int prevBtn = 0;
+
 int main()
 {
     init_platform();
@@ -94,8 +116,13 @@ int main()
     print("Hello World\n\r");
     print("Successfully ran Hello World application\n\r");
 
+    ps_gpio_init();
 
     for (;;) {
+    	u32 ps_btn0 = XGpioPs_ReadPin(&GpioPs, PS_BTN8_MIO) & 0x1U;
+    	u32 ps_btn1 = XGpioPs_ReadPin(&GpioPs, PS_BTN9_MIO) & 0x1U;
+    	u32 current_leds = Xil_In32((UINTPTR)0x41200000);
+
     	buttons = (unsigned int)access_buttons();
 //    	if (buttons != prevButtons) {
 //			printf("%u %u %u %u %u\n\r",
@@ -121,17 +148,26 @@ int main()
 			}
 			if ((buttons & 0b1000) ^ (prevButtons & 0b1000)) {
 				printf("Right pressed\n\r");
-				write_leds((u32)0b10000);
+				write_leds((u32)0b1000);
 			}
 			if ((buttons & 0b10000) ^ (prevButtons & 0b10000)) {
 				printf("Up pressed\n\r");
+				write_leds((u32)0b10000);
+			}
+			if (ps_btn0 && (!(current_leds & 0b100000))) {
+				write_leds((u32)0b100000);
+			} else if (!ps_btn0 && (current_leds & 0b100000)){
+				hard_write_leds(current_leds & (u32)0b011111);
+			}
+			if (ps_btn1 && (!(current_leds & 0b1000000))) {
 				write_leds((u32)0b1000000);
+			} else if (!ps_btn1 && (current_leds & 0b1000000)) {
+				hard_write_leds(current_leds & (u32)0b0111111);
 			}
 			if (prevButtons && !buttons) {
 				clear_leds();
 			}
 //    	}
-
     	prevButtons = buttons;
     }
 

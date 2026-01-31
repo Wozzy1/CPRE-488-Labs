@@ -1,0 +1,7 @@
+/*VGA2_design_1_wrapper*/
+the_ROM_image:
+{
+  [bootloader]<VGA2_design_1_wrapper/boot/fsbl.elf>
+   <bitstream> 
+  <elf,ps7_cortexa9_0>
+}

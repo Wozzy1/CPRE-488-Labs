@@ -1,7 +1,7 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
---Date        : Fri Jan 30 20:20:44 2026
+--Date        : Fri Jan 30 21:20:10 2026
 --Host        : CO2041-04 running 64-bit major release  (build 9200)
 --Command     : generate_target design_1_wrapper.bd
 --Design      : design_1_wrapper
@@ -40,7 +40,6 @@ entity design_1_wrapper is
     btns_5bits_tri_i : in STD_LOGIC_VECTOR ( 4 downto 0 );
     leds_8bits_tri_o : out STD_LOGIC_VECTOR ( 7 downto 0 );
     sws_8bits_tri_i : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    sys_clock : in STD_LOGIC;
     vid_hsync_0 : out STD_LOGIC;
     vid_vsync_0 : out STD_LOGIC
   );
@@ -49,7 +48,6 @@ end design_1_wrapper;
 architecture STRUCTURE of design_1_wrapper is
   component design_1 is
   port (
-    sys_clock : in STD_LOGIC;
     FIXED_IO_mio : inout STD_LOGIC_VECTOR ( 53 downto 0 );
     FIXED_IO_ddr_vrn : inout STD_LOGIC;
     FIXED_IO_ddr_vrp : inout STD_LOGIC;
@@ -111,7 +109,6 @@ design_1_i: component design_1
       btns_5bits_tri_i(4 downto 0) => btns_5bits_tri_i(4 downto 0),
       leds_8bits_tri_o(7 downto 0) => leds_8bits_tri_o(7 downto 0),
       sws_8bits_tri_i(7 downto 0) => sws_8bits_tri_i(7 downto 0),
-      sys_clock => sys_clock,
       vid_hsync_0 => vid_hsync_0,
       vid_vsync_0 => vid_vsync_0
     );

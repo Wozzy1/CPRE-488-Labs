@@ -4226,3 +4226,611 @@ TRACE::2026-01-30.19:29:31::SCWMssOS::DEBUG:  swdes dump  C:/Users/cihem/CPRE-48
 C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
 
 TRACE::2026-01-30.19:29:31::SCWMssOS::Sw design exists and opened at  C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss
+TRACE::2026-01-30.20:49:57::SCWPlatform::Clearing the existing platform
+TRACE::2026-01-30.20:49:57::SCWSystem::Clearing the existing sysconfig
+TRACE::2026-01-30.20:49:57::SCWBDomain::clearing the fsbl build
+TRACE::2026-01-30.20:49:57::SCWMssOS::Removing the swdes entry for  C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-01-30.20:49:57::SCWMssOS::Removing the swdes entry for  C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss
+TRACE::2026-01-30.20:49:57::SCWSystem::Clearing the domains completed.
+TRACE::2026-01-30.20:49:57::SCWPlatform::Clearing the opened hw db.
+TRACE::2026-01-30.20:49:57::SCWPlatform::DSA given C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/VGA2_design_1_wrapper.xsa
+TRACE::2026-01-30.20:49:57::SCWPlatform::DSA absoulate path C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/VGA2_design_1_wrapper.xsa
+TRACE::2026-01-30.20:49:57::SCWPlatform:: Platform location is C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw
+TRACE::2026-01-30.20:49:57::SCWPlatform:: Platform Path C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/VGA2_design_1_wrapper.xsa
+TRACE::2026-01-30.20:49:57::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2026-01-30.20:49:57::SCWPlatform::Removing the HwDB with name C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/VGA2_design_1_wrapper.xsa
+TRACE::2026-01-30.20:49:57::SCWPlatform::Trying to open the hw design at C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/VGA2_design_1_wrapper.xsa
+TRACE::2026-01-30.20:49:57::SCWPlatform::DSA given C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/VGA2_design_1_wrapper.xsa
+TRACE::2026-01-30.20:49:57::SCWPlatform::DSA absoulate path C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/VGA2_design_1_wrapper.xsa
+TRACE::2026-01-30.20:49:57::SCWPlatform::DSA directory C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw
+TRACE::2026-01-30.20:49:57::SCWPlatform:: Platform Path C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/VGA2_design_1_wrapper.xsa
+TRACE::2026-01-30.20:49:57::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2026-01-30.20:49:57::SCWPlatform::Do not have an existing db opened. 
+TRACE::2026-01-30.20:49:58::SCWPlatform::Opened new HwDB with name design_1_wrapper_4
+TRACE::2026-01-30.20:49:58::SCWReader::Active system found as  VGA_design_1_wrapper
+TRACE::2026-01-30.20:49:58::SCWReader::Handling sysconfig VGA_design_1_wrapper
+TRACE::2026-01-30.20:49:58::SCWDomain::checking for install qemu data   : 
+TRACE::2026-01-30.20:49:58::SCWDomain:: Using the QEMU Data from install at  : C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/
+TRACE::2026-01-30.20:49:58::SCWDomain:: Using the QEMU args  from install at  : C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt
+TRACE::2026-01-30.20:49:58::SCWPlatform::Trying to open the hw design at C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/VGA2_design_1_wrapper.xsa
+TRACE::2026-01-30.20:49:58::SCWPlatform::DSA given C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/VGA2_design_1_wrapper.xsa
+TRACE::2026-01-30.20:49:58::SCWPlatform::DSA absoulate path C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/VGA2_design_1_wrapper.xsa
+TRACE::2026-01-30.20:49:58::SCWPlatform::DSA directory C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw
+TRACE::2026-01-30.20:49:58::SCWPlatform:: Platform Path C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/VGA2_design_1_wrapper.xsa
+TRACE::2026-01-30.20:49:58::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2026-01-30.20:49:58::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_4
+TRACE::2026-01-30.20:49:58::SCWPlatform::Opened existing hwdb design_1_wrapper_4
+TRACE::2026-01-30.20:49:58::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-01-30.20:49:58::SCWPlatform::Trying to open the hw design at C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/VGA2_design_1_wrapper.xsa
+TRACE::2026-01-30.20:49:58::SCWPlatform::DSA given C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/VGA2_design_1_wrapper.xsa
+TRACE::2026-01-30.20:49:58::SCWPlatform::DSA absoulate path C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/VGA2_design_1_wrapper.xsa
+TRACE::2026-01-30.20:49:58::SCWPlatform::DSA directory C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw
+TRACE::2026-01-30.20:49:58::SCWPlatform:: Platform Path C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/VGA2_design_1_wrapper.xsa
+TRACE::2026-01-30.20:49:58::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2026-01-30.20:49:58::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_4
+TRACE::2026-01-30.20:49:58::SCWPlatform::Opened existing hwdb design_1_wrapper_4
+TRACE::2026-01-30.20:49:58::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-01-30.20:49:58::SCWPlatform::Trying to open the hw design at C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/VGA2_design_1_wrapper.xsa
+TRACE::2026-01-30.20:49:58::SCWPlatform::DSA given C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/VGA2_design_1_wrapper.xsa
+TRACE::2026-01-30.20:49:58::SCWPlatform::DSA absoulate path C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/VGA2_design_1_wrapper.xsa
+TRACE::2026-01-30.20:49:58::SCWPlatform::DSA directory C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw
+TRACE::2026-01-30.20:49:58::SCWPlatform:: Platform Path C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/VGA2_design_1_wrapper.xsa
+TRACE::2026-01-30.20:49:58::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2026-01-30.20:49:58::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_4
+TRACE::2026-01-30.20:49:58::SCWPlatform::Opened existing hwdb design_1_wrapper_4
+TRACE::2026-01-30.20:49:58::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-01-30.20:49:58::SCWReader::Boot application domain added for zynq_fsbl
+TRACE::2026-01-30.20:49:58::SCWPlatform::Trying to open the hw design at C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/VGA2_design_1_wrapper.xsa
+TRACE::2026-01-30.20:49:58::SCWPlatform::DSA given C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/VGA2_design_1_wrapper.xsa
+TRACE::2026-01-30.20:49:58::SCWPlatform::DSA absoulate path C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/VGA2_design_1_wrapper.xsa
+TRACE::2026-01-30.20:49:58::SCWPlatform::DSA directory C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw
+TRACE::2026-01-30.20:49:58::SCWPlatform:: Platform Path C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/VGA2_design_1_wrapper.xsa
+TRACE::2026-01-30.20:49:58::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2026-01-30.20:49:58::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_4
+TRACE::2026-01-30.20:49:58::SCWPlatform::Opened existing hwdb design_1_wrapper_4
+TRACE::2026-01-30.20:49:58::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-01-30.20:49:58::SCWMssOS::Checking the sw design at  C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-01-30.20:49:58::SCWMssOS::DEBUG:  swdes dump  
+TRACE::2026-01-30.20:49:58::SCWMssOS::No sw design opened at  C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-01-30.20:49:58::SCWMssOS::mss exists loading the mss file  C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-01-30.20:49:58::SCWMssOS::Opened the sw design from mss  C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-01-30.20:49:58::SCWMssOS::Adding the swdes entry C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss with des name system
+TRACE::2026-01-30.20:49:58::SCWMssOS::updating the scw layer about changes
+TRACE::2026-01-30.20:49:58::SCWMssOS::Opened the sw design.  C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-01-30.20:49:58::SCWPlatform::Trying to open the hw design at C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/VGA2_design_1_wrapper.xsa
+TRACE::2026-01-30.20:49:58::SCWPlatform::DSA given C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/VGA2_design_1_wrapper.xsa
+TRACE::2026-01-30.20:49:58::SCWPlatform::DSA absoulate path C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/VGA2_design_1_wrapper.xsa
+TRACE::2026-01-30.20:49:58::SCWPlatform::DSA directory C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw
+TRACE::2026-01-30.20:49:58::SCWPlatform:: Platform Path C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/VGA2_design_1_wrapper.xsa
+TRACE::2026-01-30.20:49:58::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2026-01-30.20:49:58::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_4
+TRACE::2026-01-30.20:49:58::SCWPlatform::Opened existing hwdb design_1_wrapper_4
+TRACE::2026-01-30.20:49:58::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-01-30.20:49:58::SCWMssOS::Checking the sw design at  C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-01-30.20:49:58::SCWMssOS::DEBUG:  swdes dump  C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2026-01-30.20:49:58::SCWMssOS::Sw design exists and opened at  C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-01-30.20:49:58::SCWMssOS:: library already available in sw design:  xilffs:4.3
+TRACE::2026-01-30.20:49:58::SCWPlatform::Trying to open the hw design at C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/VGA2_design_1_wrapper.xsa
+TRACE::2026-01-30.20:49:58::SCWPlatform::DSA given C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/VGA2_design_1_wrapper.xsa
+TRACE::2026-01-30.20:49:58::SCWPlatform::DSA absoulate path C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/VGA2_design_1_wrapper.xsa
+TRACE::2026-01-30.20:49:58::SCWPlatform::DSA directory C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw
+TRACE::2026-01-30.20:49:58::SCWPlatform:: Platform Path C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/VGA2_design_1_wrapper.xsa
+TRACE::2026-01-30.20:49:58::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2026-01-30.20:49:58::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_4
+TRACE::2026-01-30.20:49:58::SCWPlatform::Opened existing hwdb design_1_wrapper_4
+TRACE::2026-01-30.20:49:58::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-01-30.20:49:58::SCWMssOS::Checking the sw design at  C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-01-30.20:49:58::SCWMssOS::DEBUG:  swdes dump  C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2026-01-30.20:49:58::SCWMssOS::Sw design exists and opened at  C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-01-30.20:49:58::SCWMssOS:: library already available in sw design:  xilrsa:1.6
+TRACE::2026-01-30.20:49:58::SCWMssOS::Saving the mss changes C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-01-30.20:49:58::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2026-01-30.20:49:58::SCWMssOS::Completed writemss as part of save.
+TRACE::2026-01-30.20:49:58::SCWMssOS::Commit changes completed.
+TRACE::2026-01-30.20:49:58::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2026-01-30.20:49:58::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2026-01-30.20:49:58::SCWPlatform::Trying to open the hw design at C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/VGA2_design_1_wrapper.xsa
+TRACE::2026-01-30.20:49:58::SCWPlatform::DSA given C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/VGA2_design_1_wrapper.xsa
+TRACE::2026-01-30.20:49:58::SCWPlatform::DSA absoulate path C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/VGA2_design_1_wrapper.xsa
+TRACE::2026-01-30.20:49:58::SCWPlatform::DSA directory C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw
+TRACE::2026-01-30.20:49:58::SCWPlatform:: Platform Path C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/VGA2_design_1_wrapper.xsa
+TRACE::2026-01-30.20:49:58::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2026-01-30.20:49:58::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_4
+TRACE::2026-01-30.20:49:58::SCWPlatform::Opened existing hwdb design_1_wrapper_4
+TRACE::2026-01-30.20:49:58::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-01-30.20:49:58::SCWMssOS::Checking the sw design at  C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-01-30.20:49:58::SCWMssOS::DEBUG:  swdes dump  C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2026-01-30.20:49:58::SCWMssOS::Sw design exists and opened at  C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-01-30.20:49:58::SCWReader::No isolation master present  
+TRACE::2026-01-30.20:49:58::SCWDomain::checking for install qemu data   : 
+TRACE::2026-01-30.20:49:58::SCWDomain:: Using the QEMU Data from install at  : C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/
+TRACE::2026-01-30.20:49:58::SCWDomain:: Using the QEMU args  from install at  : C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt
+TRACE::2026-01-30.20:49:58::SCWPlatform::Trying to open the hw design at C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/VGA2_design_1_wrapper.xsa
+TRACE::2026-01-30.20:49:58::SCWPlatform::DSA given C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/VGA2_design_1_wrapper.xsa
+TRACE::2026-01-30.20:49:58::SCWPlatform::DSA absoulate path C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/VGA2_design_1_wrapper.xsa
+TRACE::2026-01-30.20:49:58::SCWPlatform::DSA directory C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw
+TRACE::2026-01-30.20:49:58::SCWPlatform:: Platform Path C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/VGA2_design_1_wrapper.xsa
+TRACE::2026-01-30.20:49:58::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2026-01-30.20:49:58::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_4
+TRACE::2026-01-30.20:49:58::SCWPlatform::Opened existing hwdb design_1_wrapper_4
+TRACE::2026-01-30.20:49:58::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-01-30.20:49:58::SCWPlatform::Trying to open the hw design at C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/VGA2_design_1_wrapper.xsa
+TRACE::2026-01-30.20:49:58::SCWPlatform::DSA given C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/VGA2_design_1_wrapper.xsa
+TRACE::2026-01-30.20:49:58::SCWPlatform::DSA absoulate path C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/VGA2_design_1_wrapper.xsa
+TRACE::2026-01-30.20:49:58::SCWPlatform::DSA directory C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw
+TRACE::2026-01-30.20:49:58::SCWPlatform:: Platform Path C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/VGA2_design_1_wrapper.xsa
+TRACE::2026-01-30.20:49:58::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2026-01-30.20:49:58::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_4
+TRACE::2026-01-30.20:49:58::SCWPlatform::Opened existing hwdb design_1_wrapper_4
+TRACE::2026-01-30.20:49:58::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-01-30.20:49:58::SCWPlatform::Trying to open the hw design at C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/VGA2_design_1_wrapper.xsa
+TRACE::2026-01-30.20:49:58::SCWPlatform::DSA given C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/VGA2_design_1_wrapper.xsa
+TRACE::2026-01-30.20:49:58::SCWPlatform::DSA absoulate path C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/VGA2_design_1_wrapper.xsa
+TRACE::2026-01-30.20:49:58::SCWPlatform::DSA directory C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw
+TRACE::2026-01-30.20:49:58::SCWPlatform:: Platform Path C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/VGA2_design_1_wrapper.xsa
+TRACE::2026-01-30.20:49:58::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2026-01-30.20:49:58::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_4
+TRACE::2026-01-30.20:49:58::SCWPlatform::Opened existing hwdb design_1_wrapper_4
+TRACE::2026-01-30.20:49:58::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-01-30.20:49:58::SCWMssOS::Checking the sw design at  C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss
+TRACE::2026-01-30.20:49:58::SCWMssOS::DEBUG:  swdes dump  C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2026-01-30.20:49:58::SCWMssOS::No sw design opened at  C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss
+TRACE::2026-01-30.20:49:58::SCWMssOS::mss exists loading the mss file  C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss
+TRACE::2026-01-30.20:49:58::SCWMssOS::Opened the sw design from mss  C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss
+TRACE::2026-01-30.20:49:58::SCWMssOS::Adding the swdes entry C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss with des name system_0
+TRACE::2026-01-30.20:49:58::SCWMssOS::updating the scw layer about changes
+TRACE::2026-01-30.20:49:58::SCWMssOS::Opened the sw design.  C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss
+TRACE::2026-01-30.20:49:58::SCWMssOS::Saving the mss changes C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss
+TRACE::2026-01-30.20:49:58::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2026-01-30.20:49:58::SCWMssOS::Completed writemss as part of save.
+TRACE::2026-01-30.20:49:58::SCWMssOS::Commit changes completed.
+TRACE::2026-01-30.20:49:58::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2026-01-30.20:49:58::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2026-01-30.20:49:58::SCWPlatform::Trying to open the hw design at C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/VGA2_design_1_wrapper.xsa
+TRACE::2026-01-30.20:49:58::SCWPlatform::DSA given C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/VGA2_design_1_wrapper.xsa
+TRACE::2026-01-30.20:49:58::SCWPlatform::DSA absoulate path C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/VGA2_design_1_wrapper.xsa
+TRACE::2026-01-30.20:49:58::SCWPlatform::DSA directory C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw
+TRACE::2026-01-30.20:49:58::SCWPlatform:: Platform Path C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/VGA2_design_1_wrapper.xsa
+TRACE::2026-01-30.20:49:58::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2026-01-30.20:49:58::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_4
+TRACE::2026-01-30.20:49:58::SCWPlatform::Opened existing hwdb design_1_wrapper_4
+TRACE::2026-01-30.20:49:58::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-01-30.20:49:58::SCWMssOS::Checking the sw design at  C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss
+TRACE::2026-01-30.20:49:58::SCWMssOS::DEBUG:  swdes dump  C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss|system_0||
+C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2026-01-30.20:49:58::SCWMssOS::Sw design exists and opened at  C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss
+TRACE::2026-01-30.20:49:58::SCWReader::No isolation master present  
+TRACE::2026-01-30.20:50:07::SCWPlatform::Trying to open the hw design at C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/VGA2_design_1_wrapper.xsa
+TRACE::2026-01-30.20:50:07::SCWPlatform::DSA given C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/VGA2_design_1_wrapper.xsa
+TRACE::2026-01-30.20:50:07::SCWPlatform::DSA absoulate path C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/VGA2_design_1_wrapper.xsa
+TRACE::2026-01-30.20:50:07::SCWPlatform::DSA directory C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw
+TRACE::2026-01-30.20:50:07::SCWPlatform:: Platform Path C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/VGA2_design_1_wrapper.xsa
+TRACE::2026-01-30.20:50:07::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2026-01-30.20:50:07::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_4
+TRACE::2026-01-30.20:50:07::SCWPlatform::Opened existing hwdb design_1_wrapper_4
+TRACE::2026-01-30.20:50:07::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-01-30.20:50:07::SCWPlatform::DSA given C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/tempdsa/design_1_wrapper.xsa
+TRACE::2026-01-30.20:50:07::SCWPlatform::DSA absoulate path C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/tempdsa/design_1_wrapper.xsa
+TRACE::2026-01-30.20:50:07::SCWPlatform:: Platform location is C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/tempdsa
+TRACE::2026-01-30.20:50:07::SCWPlatform:: Platform Path C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/tempdsa/design_1_wrapper.xsa
+TRACE::2026-01-30.20:50:07::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2026-01-30.20:50:08::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-01-30.20:50:08::SCWMssOS::Doing hw sync for the mss in domain: zynq_fsbl
+TRACE::2026-01-30.20:50:08::SCWPlatform::Trying to open the hw design at C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/VGA2_design_1_wrapper.xsa
+TRACE::2026-01-30.20:50:08::SCWPlatform::DSA given C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/VGA2_design_1_wrapper.xsa
+TRACE::2026-01-30.20:50:08::SCWPlatform::DSA absoulate path C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/VGA2_design_1_wrapper.xsa
+TRACE::2026-01-30.20:50:08::SCWPlatform::DSA directory C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw
+TRACE::2026-01-30.20:50:08::SCWPlatform:: Platform Path C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/VGA2_design_1_wrapper.xsa
+TRACE::2026-01-30.20:50:08::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2026-01-30.20:50:08::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_4
+TRACE::2026-01-30.20:50:08::SCWPlatform::Opened existing hwdb design_1_wrapper_4
+TRACE::2026-01-30.20:50:08::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-01-30.20:50:08::SCWPlatform::Trying to open the hw design at C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/VGA2_design_1_wrapper.xsa
+TRACE::2026-01-30.20:50:08::SCWPlatform::DSA given C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/VGA2_design_1_wrapper.xsa
+TRACE::2026-01-30.20:50:08::SCWPlatform::DSA absoulate path C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/VGA2_design_1_wrapper.xsa
+TRACE::2026-01-30.20:50:08::SCWPlatform::DSA directory C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw
+TRACE::2026-01-30.20:50:08::SCWPlatform:: Platform Path C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/VGA2_design_1_wrapper.xsa
+TRACE::2026-01-30.20:50:08::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2026-01-30.20:50:08::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_4
+TRACE::2026-01-30.20:50:08::SCWPlatform::Opened existing hwdb design_1_wrapper_4
+TRACE::2026-01-30.20:50:08::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-01-30.20:50:08::SCWMssOS::Checking the sw design at  C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-01-30.20:50:08::SCWMssOS::DEBUG:  swdes dump  C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss|system_0||
+C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2026-01-30.20:50:08::SCWMssOS::Sw design exists and opened at  C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-01-30.20:50:08::SCWPlatform::Trying to open the hw design at C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/tempdsa/design_1_wrapper.xsa
+TRACE::2026-01-30.20:50:08::SCWPlatform::DSA given C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/tempdsa/design_1_wrapper.xsa
+TRACE::2026-01-30.20:50:08::SCWPlatform::DSA absoulate path C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/tempdsa/design_1_wrapper.xsa
+TRACE::2026-01-30.20:50:08::SCWPlatform::DSA directory C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/tempdsa
+TRACE::2026-01-30.20:50:08::SCWPlatform:: Platform Path C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/tempdsa/design_1_wrapper.xsa
+TRACE::2026-01-30.20:50:08::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2026-01-30.20:50:08::SCWPlatform::update - Opened existing hwdb design_1_wrapper_5
+TRACE::2026-01-30.20:50:08::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-01-30.20:50:08::SCWMssOS::Doing hw sync for the mss in domain: domain_ps7_cortexa9_0
+TRACE::2026-01-30.20:50:08::SCWPlatform::Trying to open the hw design at C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/VGA2_design_1_wrapper.xsa
+TRACE::2026-01-30.20:50:08::SCWPlatform::DSA given C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/VGA2_design_1_wrapper.xsa
+TRACE::2026-01-30.20:50:08::SCWPlatform::DSA absoulate path C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/VGA2_design_1_wrapper.xsa
+TRACE::2026-01-30.20:50:08::SCWPlatform::DSA directory C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw
+TRACE::2026-01-30.20:50:08::SCWPlatform:: Platform Path C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/VGA2_design_1_wrapper.xsa
+TRACE::2026-01-30.20:50:08::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2026-01-30.20:50:08::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_4
+TRACE::2026-01-30.20:50:08::SCWPlatform::Opened existing hwdb design_1_wrapper_4
+TRACE::2026-01-30.20:50:08::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-01-30.20:50:08::SCWPlatform::Trying to open the hw design at C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/VGA2_design_1_wrapper.xsa
+TRACE::2026-01-30.20:50:08::SCWPlatform::DSA given C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/VGA2_design_1_wrapper.xsa
+TRACE::2026-01-30.20:50:08::SCWPlatform::DSA absoulate path C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/VGA2_design_1_wrapper.xsa
+TRACE::2026-01-30.20:50:08::SCWPlatform::DSA directory C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw
+TRACE::2026-01-30.20:50:08::SCWPlatform:: Platform Path C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/VGA2_design_1_wrapper.xsa
+TRACE::2026-01-30.20:50:08::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2026-01-30.20:50:08::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_4
+TRACE::2026-01-30.20:50:08::SCWPlatform::Opened existing hwdb design_1_wrapper_4
+TRACE::2026-01-30.20:50:08::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-01-30.20:50:08::SCWMssOS::Checking the sw design at  C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss
+TRACE::2026-01-30.20:50:08::SCWMssOS::DEBUG:  swdes dump  C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss|system_0||
+C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2026-01-30.20:50:08::SCWMssOS::Sw design exists and opened at  C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss
+TRACE::2026-01-30.20:50:08::SCWPlatform::Trying to open the hw design at C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/tempdsa/design_1_wrapper.xsa
+TRACE::2026-01-30.20:50:08::SCWPlatform::DSA given C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/tempdsa/design_1_wrapper.xsa
+TRACE::2026-01-30.20:50:08::SCWPlatform::DSA absoulate path C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/tempdsa/design_1_wrapper.xsa
+TRACE::2026-01-30.20:50:08::SCWPlatform::DSA directory C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/tempdsa
+TRACE::2026-01-30.20:50:08::SCWPlatform:: Platform Path C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/tempdsa/design_1_wrapper.xsa
+TRACE::2026-01-30.20:50:08::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2026-01-30.20:50:08::SCWPlatform::update - Opened existing hwdb design_1_wrapper_5
+TRACE::2026-01-30.20:50:08::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-01-30.20:50:08::SCWMssOS::Saving the mss changes C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-01-30.20:50:08::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2026-01-30.20:50:08::SCWMssOS::Completed writemss as part of save.
+TRACE::2026-01-30.20:50:08::SCWMssOS::Commit changes completed.
+TRACE::2026-01-30.20:50:08::SCWMssOS::Completed hw sync for the mss in domain: zynq_fsbl
+TRACE::2026-01-30.20:50:08::SCWMssOS::Removing the swdes entry for  C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-01-30.20:50:08::SCWMssOS::Saving the mss changes C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss
+TRACE::2026-01-30.20:50:08::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2026-01-30.20:50:08::SCWMssOS::Completed writemss as part of save.
+TRACE::2026-01-30.20:50:08::SCWMssOS::Commit changes completed.
+TRACE::2026-01-30.20:50:08::SCWMssOS::Completed hw sync for the mss in domain: domain_ps7_cortexa9_0
+TRACE::2026-01-30.20:50:08::SCWMssOS::Removing the swdes entry for  C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss
+TRACE::2026-01-30.20:50:08::SCWPlatform::Trying to open the hw design at C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-30.20:50:08::SCWPlatform::DSA given C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-30.20:50:08::SCWPlatform::DSA absoulate path C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-30.20:50:08::SCWPlatform::DSA directory C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw
+TRACE::2026-01-30.20:50:08::SCWPlatform:: Platform Path C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-30.20:50:08::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2026-01-30.20:50:08::SCWPlatform::Do not have an existing db opened. 
+TRACE::2026-01-30.20:50:09::SCWPlatform::Opened new HwDB with name design_1_wrapper_6
+TRACE::2026-01-30.20:50:09::SCWPlatform::Trying to open the hw design at C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-30.20:50:09::SCWPlatform::DSA given C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-30.20:50:09::SCWPlatform::DSA absoulate path C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-30.20:50:09::SCWPlatform::DSA directory C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw
+TRACE::2026-01-30.20:50:09::SCWPlatform:: Platform Path C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-30.20:50:09::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2026-01-30.20:50:09::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_6
+TRACE::2026-01-30.20:50:09::SCWPlatform::Opened existing hwdb design_1_wrapper_6
+TRACE::2026-01-30.20:50:09::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-01-30.20:50:09::SCWMssOS::Checking the sw design at  C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-01-30.20:50:09::SCWMssOS::DEBUG:  swdes dump  
+TRACE::2026-01-30.20:50:09::SCWMssOS::No sw design opened at  C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-01-30.20:50:09::SCWMssOS::mss exists loading the mss file  C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-01-30.20:50:09::SCWMssOS::Opened the sw design from mss  C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-01-30.20:50:09::SCWMssOS::Adding the swdes entry C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss with des name system
+TRACE::2026-01-30.20:50:09::SCWMssOS::updating the scw layer about changes
+TRACE::2026-01-30.20:50:09::SCWMssOS::Opened the sw design.  C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-01-30.20:50:09::SCWMssOS::Saving the mss changes C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-01-30.20:50:09::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2026-01-30.20:50:09::SCWMssOS::Completed writemss as part of save.
+TRACE::2026-01-30.20:50:09::SCWMssOS::Commit changes completed.
+TRACE::2026-01-30.20:50:09::SCWMssOS::Saving the mss changes C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss
+TRACE::2026-01-30.20:50:09::SCWMssOS::Adding the swdes entry, mss present, able to open swdb C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss with des name system_0
+TRACE::2026-01-30.20:50:09::SCWMssOS::Writing the mss file completed C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss
+TRACE::2026-01-30.20:50:09::SCWMssOS::Commit changes completed.
+TRACE::2026-01-30.20:50:09::SCWPlatform::Trying to open the hw design at C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-30.20:50:09::SCWPlatform::DSA given C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-30.20:50:09::SCWPlatform::DSA absoulate path C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-30.20:50:09::SCWPlatform::DSA directory C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw
+TRACE::2026-01-30.20:50:09::SCWPlatform:: Platform Path C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-30.20:50:09::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2026-01-30.20:50:09::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_6
+TRACE::2026-01-30.20:50:09::SCWPlatform::Opened existing hwdb design_1_wrapper_6
+TRACE::2026-01-30.20:50:09::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-01-30.20:50:09::SCWMssOS::Checking the sw design at  C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-01-30.20:50:09::SCWMssOS::DEBUG:  swdes dump  C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss|system_0||
+C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2026-01-30.20:50:09::SCWMssOS::Sw design exists and opened at  C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-01-30.20:50:09::SCWPlatform::Trying to open the hw design at C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-30.20:50:09::SCWPlatform::DSA given C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-30.20:50:09::SCWPlatform::DSA absoulate path C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-30.20:50:09::SCWPlatform::DSA directory C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw
+TRACE::2026-01-30.20:50:09::SCWPlatform:: Platform Path C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-30.20:50:09::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2026-01-30.20:50:09::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_6
+TRACE::2026-01-30.20:50:09::SCWPlatform::Opened existing hwdb design_1_wrapper_6
+TRACE::2026-01-30.20:50:09::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-01-30.20:50:09::SCWMssOS::Checking the sw design at  C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss
+TRACE::2026-01-30.20:50:09::SCWMssOS::DEBUG:  swdes dump  C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss|system_0||
+C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2026-01-30.20:50:09::SCWMssOS::Sw design exists and opened at  C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss
+TRACE::2026-01-30.20:50:09::SCWWriter::formatted JSON is {
+	"platformName":	"VGA_design_1_wrapper",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"VGA_design_1_wrapper",
+	"platHandOff":	"C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/design_1_wrapper.xsa",
+	"platIntHandOff":	"<platformDir>/hw/design_1_wrapper.xsa",
+	"deviceType":	"zynq",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"fsblExtraCompilerFlags":	"-MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard ",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"VGA_design_1_wrapper",
+	"systems":	[{
+			"systemName":	"VGA_design_1_wrapper",
+			"systemDesc":	"VGA_design_1_wrapper",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"VGA_design_1_wrapper",
+			"sysActiveDom":	"domain_ps7_cortexa9_0",
+			"sysDefaultDom":	"domain_ps7_cortexa9_0",
+			"domains":	[{
+					"domainName":	"zynq_fsbl",
+					"domainDispName":	"zynq_fsbl",
+					"domainDesc":	"FSBL Application BSP - Auto Generated.",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.2",
+					"mssFile":	"",
+					"md5Digest":	"d2d420d87bcfafaa761d1aba64f21ae8",
+					"compatibleApp":	"zynq_fsbl",
+					"domType":	"bootDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:4.3", "xilrsa:1.6"],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}, {
+					"domainName":	"domain_ps7_cortexa9_0",
+					"domainDispName":	"domain_ps7_cortexa9_0",
+					"domainDesc":	"domain_ps7_cortexa9_0",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"qemuArgs":	"C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt",
+					"qemuData":	"C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.2",
+					"mssFile":	"",
+					"md5Digest":	"0103012646b99f26b289ff154d95cad8",
+					"compatibleApp":	"",
+					"domType":	"mssDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	[],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+LOG::2026-01-30.20:51:41::SCWPlatform::Started generating the artifacts platform VGA_design_1_wrapper
+TRACE::2026-01-30.20:51:41::SCWPlatform::Sanity checking of platform is completed
+LOG::2026-01-30.20:51:41::SCWPlatform::Started generating the artifacts for system configuration VGA_design_1_wrapper
+LOG::2026-01-30.20:51:41::SCWSystem::Checking the domain zynq_fsbl
+LOG::2026-01-30.20:51:41::SCWSystem::Doing application build for :  zynq_fsbl
+TRACE::2026-01-30.20:51:41::SCWBDomain::Not a forced makefile updation, No changes are present. 
+TRACE::2026-01-30.20:51:41::SCWDomain::Skipping the build for domain :  zynq_fsbl
+LOG::2026-01-30.20:51:41::SCWSystem::Checking the domain domain_ps7_cortexa9_0
+LOG::2026-01-30.20:51:41::SCWSystem::Not a boot domain 
+LOG::2026-01-30.20:51:41::SCWSystem::Started Processing the domain domain_ps7_cortexa9_0
+TRACE::2026-01-30.20:51:41::SCWDomain::Generating domain artifcats
+TRACE::2026-01-30.20:51:41::SCWMssOS::Generating standalone artifcats
+TRACE::2026-01-30.20:51:41::SCWMssOS::Copying the qemu file from  C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt To C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/export/VGA_design_1_wrapper/sw/VGA_design_1_wrapper/qemu/
+TRACE::2026-01-30.20:51:41::SCWMssOS::Copying the qemu file from  C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt To C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/export/VGA_design_1_wrapper/sw/VGA_design_1_wrapper/domain_ps7_cortexa9_0/qemu/
+TRACE::2026-01-30.20:51:41::SCWMssOS:: Copying the user libraries. 
+TRACE::2026-01-30.20:51:41::SCWPlatform::Trying to open the hw design at C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-30.20:51:41::SCWPlatform::DSA given C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-30.20:51:41::SCWPlatform::DSA absoulate path C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-30.20:51:41::SCWPlatform::DSA directory C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw
+TRACE::2026-01-30.20:51:41::SCWPlatform:: Platform Path C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-30.20:51:41::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2026-01-30.20:51:41::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_6
+TRACE::2026-01-30.20:51:41::SCWPlatform::Opened existing hwdb design_1_wrapper_6
+TRACE::2026-01-30.20:51:41::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-01-30.20:51:41::SCWMssOS::Checking the sw design at  C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss
+TRACE::2026-01-30.20:51:41::SCWMssOS::DEBUG:  swdes dump  C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss|system_0||
+C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2026-01-30.20:51:41::SCWMssOS::Sw design exists and opened at  C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss
+TRACE::2026-01-30.20:51:41::SCWMssOS::Completed writing the mss file at C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp
+TRACE::2026-01-30.20:51:41::SCWMssOS::Mss edits present, copying mssfile into export location C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss
+TRACE::2026-01-30.20:51:41::SCWMssOS::bsp generated is upto date with the mss file. Skipping bsp generation.
+TRACE::2026-01-30.20:51:41::SCWMssOS::BSP is already built. skipping the bsp build ... 
+TRACE::2026-01-30.20:51:41::SCWDomain::Skipping the build for domain :  domain_ps7_cortexa9_0
+TRACE::2026-01-30.20:51:41::SCWMssOS::skipping the bsp build ... 
+TRACE::2026-01-30.20:51:41::SCWMssOS::Copying to export directory.
+TRACE::2026-01-30.20:51:41::SCWMssOS:: Checking if to create the Supporting Applications
+TRACE::2026-01-30.20:51:41::SCWMssOS:: No Linux domain exists, trying to generate FSBL 
+LOG::2026-01-30.20:51:41::SCWSystem::Completed Processing the domain domain_ps7_cortexa9_0
+LOG::2026-01-30.20:51:41::SCWSystem::Completed Processing the sysconfig VGA_design_1_wrapper
+LOG::2026-01-30.20:51:41::SCWPlatform::Completed generating the artifacts for system configuration VGA_design_1_wrapper
+TRACE::2026-01-30.20:51:41::SCWPlatform::Started preparing the platform 
+TRACE::2026-01-30.20:51:41::SCWSystem::Writing the bif file for system config VGA_design_1_wrapper
+TRACE::2026-01-30.20:51:41::SCWSystem::dir created 
+TRACE::2026-01-30.20:51:41::SCWSystem::Writing the bif 
+TRACE::2026-01-30.20:51:41::SCWPlatform::Started writing the spfm file 
+TRACE::2026-01-30.20:51:41::SCWPlatform::Started writing the xpfm file 
+TRACE::2026-01-30.20:51:41::SCWPlatform::Completed generating the platform
+TRACE::2026-01-30.20:51:41::SCWMssOS::Saving the mss changes C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-01-30.20:51:41::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2026-01-30.20:51:41::SCWMssOS::Completed writemss as part of save.
+TRACE::2026-01-30.20:51:41::SCWMssOS::Commit changes completed.
+TRACE::2026-01-30.20:51:41::SCWMssOS::Saving the mss changes C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss
+TRACE::2026-01-30.20:51:41::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2026-01-30.20:51:41::SCWMssOS::Completed writemss as part of save.
+TRACE::2026-01-30.20:51:41::SCWMssOS::Commit changes completed.
+TRACE::2026-01-30.20:51:41::SCWPlatform::Trying to open the hw design at C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-30.20:51:41::SCWPlatform::DSA given C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-30.20:51:41::SCWPlatform::DSA absoulate path C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-30.20:51:41::SCWPlatform::DSA directory C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw
+TRACE::2026-01-30.20:51:41::SCWPlatform:: Platform Path C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-30.20:51:41::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2026-01-30.20:51:41::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_6
+TRACE::2026-01-30.20:51:41::SCWPlatform::Opened existing hwdb design_1_wrapper_6
+TRACE::2026-01-30.20:51:41::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-01-30.20:51:41::SCWMssOS::Checking the sw design at  C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-01-30.20:51:41::SCWMssOS::DEBUG:  swdes dump  C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss|system_0||
+C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2026-01-30.20:51:41::SCWMssOS::Sw design exists and opened at  C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-01-30.20:51:41::SCWPlatform::Trying to open the hw design at C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-30.20:51:41::SCWPlatform::DSA given C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-30.20:51:41::SCWPlatform::DSA absoulate path C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-30.20:51:41::SCWPlatform::DSA directory C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw
+TRACE::2026-01-30.20:51:41::SCWPlatform:: Platform Path C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-30.20:51:41::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2026-01-30.20:51:41::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_6
+TRACE::2026-01-30.20:51:41::SCWPlatform::Opened existing hwdb design_1_wrapper_6
+TRACE::2026-01-30.20:51:41::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-01-30.20:51:41::SCWMssOS::Checking the sw design at  C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss
+TRACE::2026-01-30.20:51:41::SCWMssOS::DEBUG:  swdes dump  C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss|system_0||
+C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2026-01-30.20:51:41::SCWMssOS::Sw design exists and opened at  C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss
+TRACE::2026-01-30.20:51:41::SCWWriter::formatted JSON is {
+	"platformName":	"VGA_design_1_wrapper",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"VGA_design_1_wrapper",
+	"platHandOff":	"C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/design_1_wrapper.xsa",
+	"platIntHandOff":	"<platformDir>/hw/design_1_wrapper.xsa",
+	"deviceType":	"zynq",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"fsblExtraCompilerFlags":	"-MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard ",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"VGA_design_1_wrapper",
+	"systems":	[{
+			"systemName":	"VGA_design_1_wrapper",
+			"systemDesc":	"VGA_design_1_wrapper",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"VGA_design_1_wrapper",
+			"sysActiveDom":	"domain_ps7_cortexa9_0",
+			"sysDefaultDom":	"domain_ps7_cortexa9_0",
+			"domains":	[{
+					"domainName":	"zynq_fsbl",
+					"domainDispName":	"zynq_fsbl",
+					"domainDesc":	"FSBL Application BSP - Auto Generated.",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.2",
+					"mssFile":	"",
+					"md5Digest":	"d2d420d87bcfafaa761d1aba64f21ae8",
+					"compatibleApp":	"zynq_fsbl",
+					"domType":	"bootDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:4.3", "xilrsa:1.6"],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}, {
+					"domainName":	"domain_ps7_cortexa9_0",
+					"domainDispName":	"domain_ps7_cortexa9_0",
+					"domainDesc":	"domain_ps7_cortexa9_0",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"qemuArgs":	"C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt",
+					"qemuData":	"C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.2",
+					"mssFile":	"",
+					"md5Digest":	"0103012646b99f26b289ff154d95cad8",
+					"compatibleApp":	"",
+					"domType":	"mssDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	[],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+KEYINFO::2026-01-30.20:51:41::SCWPlatform::updated the xpfm file.
+TRACE::2026-01-30.20:51:41::SCWPlatform::Trying to open the hw design at C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-30.20:51:41::SCWPlatform::DSA given C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-30.20:51:41::SCWPlatform::DSA absoulate path C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-30.20:51:41::SCWPlatform::DSA directory C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw
+TRACE::2026-01-30.20:51:41::SCWPlatform:: Platform Path C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-01-30.20:51:41::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2026-01-30.20:51:41::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_6
+TRACE::2026-01-30.20:51:41::SCWPlatform::Opened existing hwdb design_1_wrapper_6
+TRACE::2026-01-30.20:51:41::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-01-30.20:51:41::SCWMssOS::Checking the sw design at  C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss
+TRACE::2026-01-30.20:51:41::SCWMssOS::DEBUG:  swdes dump  C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss|system_0||
+C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2026-01-30.20:51:41::SCWMssOS::Sw design exists and opened at  C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss

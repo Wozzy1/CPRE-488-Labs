@@ -298,3 +298,215 @@ con
 ----------------End of Script----------------
 
 19:32:09 INFO  : Launch script is exported to file 'C:\Users\cihem\CPRE-488-Labs\MP-0\MP-0-vitis_VGA\.sdk\launch_scripts\single_application_debug\systemdebugger_vga-shit-test1_system_standalone.tcl'
+19:39:29 INFO  : Disconnected from the channel tcfchan#1.
+20:50:10 INFO  : Hardware specification for platform project 'VGA_design_1_wrapper' is updated.
+20:51:33 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:51:33 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248526090" && level==0 && jtag_device_ctx=="jsn-Zed-210248526090-23727093-0"}' command is executed.
+20:51:36 INFO  : FPGA configured successfully with bitstream "C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/bitstream/design_1_wrapper.bit"
+20:51:41 INFO  : Result from executing command 'getProjects': VGA_design_1_wrapper
+20:51:41 INFO  : Result from executing command 'getPlatforms': VGA_design_1_wrapper|C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/export/VGA_design_1_wrapper/VGA_design_1_wrapper.xpfm;design_1_wrapper|C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitisCDrive/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm
+20:51:41 INFO  : Checking for BSP changes to sync application flags for project 'VGA-Shit-test1'...
+20:51:44 INFO  : The hardware specfication used by project 'VGA-Shit-test1' is out of sync with the platform. Resource files extracted from the hardware specfiication will be updated.
+20:51:44 INFO  : The file 'C:\Users\cihem\CPRE-488-Labs\MP-0\MP-0-vitis_VGA\VGA-Shit-test1\_ide\bitstream\VGA2_design_1_wrapper.bit' stored in project is removed.
+20:51:44 INFO  : The updated bitstream files are copied from platform to folder 'C:\Users\cihem\CPRE-488-Labs\MP-0\MP-0-vitis_VGA\VGA-Shit-test1\_ide\bitstream' in project 'VGA-Shit-test1'.
+20:51:44 INFO  : The file 'C:\Users\cihem\CPRE-488-Labs\MP-0\MP-0-vitis_VGA\VGA-Shit-test1\_ide\psinit\ps7_init.tcl' stored in project is removed.
+20:51:46 INFO  : The updated ps init files are copied from platform to folder 'C:\Users\cihem\CPRE-488-Labs\MP-0\MP-0-vitis_VGA\VGA-Shit-test1\_ide\psinit' in project 'VGA-Shit-test1'.
+20:51:54 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:51:54 INFO  : Jtag cable 'Digilent Zed 210248526090' is selected.
+20:51:54 INFO  : 'jtag frequency' command is executed.
+20:51:54 INFO  : Context for 'APU' is selected.
+20:51:54 INFO  : System reset is completed.
+20:51:57 INFO  : 'after 3000' command is executed.
+20:51:57 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248526090" && level==0 && jtag_device_ctx=="jsn-Zed-210248526090-23727093-0"}' command is executed.
+20:52:00 INFO  : FPGA configured successfully with bitstream "C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA-Shit-test1/_ide/bitstream/design_1_wrapper.bit"
+20:52:00 INFO  : Context for 'APU' is selected.
+20:52:00 INFO  : Hardware design and registers information is loaded from 'C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/export/VGA_design_1_wrapper/hw/design_1_wrapper.xsa'.
+20:52:00 INFO  : 'configparams force-mem-access 1' command is executed.
+20:52:00 INFO  : Context for 'APU' is selected.
+20:52:00 INFO  : Sourcing of 'C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA-Shit-test1/_ide/psinit/ps7_init.tcl' is done.
+20:52:00 INFO  : 'ps7_init' command is executed.
+20:52:00 INFO  : 'ps7_post_config' command is executed.
+20:52:00 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:52:01 INFO  : The application 'C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA-Shit-test1/Debug/VGA-Shit-test1.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:52:01 INFO  : 'configparams force-mem-access 0' command is executed.
+20:52:01 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248526090" && level==0 && jtag_device_ctx=="jsn-Zed-210248526090-23727093-0"}
+fpga -file C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA-Shit-test1/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/export/VGA_design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA-Shit-test1/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA-Shit-test1/Debug/VGA-Shit-test1.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:52:01 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:52:01 INFO  : 'con' command is executed.
+20:52:01 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+20:52:01 INFO  : Launch script is exported to file 'C:\Users\cihem\CPRE-488-Labs\MP-0\MP-0-vitis_VGA\.sdk\launch_scripts\single_application_debug\systemdebugger_vga-shit-test1_system_standalone.tcl'
+21:05:14 INFO  : Disconnected from the channel tcfchan#3.
+21:07:18 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:07:18 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248526090" && level==0 && jtag_device_ctx=="jsn-Zed-210248526090-23727093-0"}' command is executed.
+21:07:20 INFO  : FPGA configured successfully with bitstream "C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/bitstream/design_1_wrapper.bit"
+21:07:25 INFO  : Checking for BSP changes to sync application flags for project 'VGA-Shit-test1'...
+21:07:33 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:07:33 INFO  : Jtag cable 'Digilent Zed 210248526090' is selected.
+21:07:33 INFO  : 'jtag frequency' command is executed.
+21:07:33 INFO  : Context for 'APU' is selected.
+21:07:33 INFO  : System reset is completed.
+21:07:36 INFO  : 'after 3000' command is executed.
+21:07:36 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248526090" && level==0 && jtag_device_ctx=="jsn-Zed-210248526090-23727093-0"}' command is executed.
+21:07:38 INFO  : FPGA configured successfully with bitstream "C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA-Shit-test1/_ide/bitstream/design_1_wrapper.bit"
+21:07:39 INFO  : Context for 'APU' is selected.
+21:07:39 INFO  : Hardware design and registers information is loaded from 'C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/export/VGA_design_1_wrapper/hw/design_1_wrapper.xsa'.
+21:07:39 INFO  : 'configparams force-mem-access 1' command is executed.
+21:07:39 INFO  : Context for 'APU' is selected.
+21:07:39 INFO  : Sourcing of 'C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA-Shit-test1/_ide/psinit/ps7_init.tcl' is done.
+21:07:39 INFO  : 'ps7_init' command is executed.
+21:07:39 INFO  : 'ps7_post_config' command is executed.
+21:07:39 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:07:39 INFO  : The application 'C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA-Shit-test1/Debug/VGA-Shit-test1.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:07:39 INFO  : 'configparams force-mem-access 0' command is executed.
+21:07:39 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248526090" && level==0 && jtag_device_ctx=="jsn-Zed-210248526090-23727093-0"}
+fpga -file C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA-Shit-test1/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/export/VGA_design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA-Shit-test1/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA-Shit-test1/Debug/VGA-Shit-test1.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:07:39 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:07:39 INFO  : 'con' command is executed.
+21:07:39 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+21:07:39 INFO  : Launch script is exported to file 'C:\Users\cihem\CPRE-488-Labs\MP-0\MP-0-vitis_VGA\.sdk\launch_scripts\single_application_debug\systemdebugger_vga-shit-test1_system_standalone.tcl'
+21:24:24 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:24:24 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248526090" && level==0 && jtag_device_ctx=="jsn-Zed-210248526090-23727093-0"}' command is executed.
+21:24:26 INFO  : FPGA configured successfully with bitstream "C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/bitstream/design_1_wrapper.bit"
+21:24:30 INFO  : Disconnected from the channel tcfchan#6.
+21:24:41 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:24:41 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248526090" && level==0 && jtag_device_ctx=="jsn-Zed-210248526090-23727093-0"}' command is executed.
+21:24:43 INFO  : FPGA configured successfully with bitstream "C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/bitstream/design_1_wrapper.bit"
+21:24:49 INFO  : Checking for BSP changes to sync application flags for project 'VGA-Shit-test1'...
+21:24:58 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:24:58 INFO  : Jtag cable 'Digilent Zed 210248526090' is selected.
+21:24:58 INFO  : 'jtag frequency' command is executed.
+21:24:58 INFO  : Context for 'APU' is selected.
+21:24:58 INFO  : System reset is completed.
+21:25:01 INFO  : 'after 3000' command is executed.
+21:25:01 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248526090" && level==0 && jtag_device_ctx=="jsn-Zed-210248526090-23727093-0"}' command is executed.
+21:25:03 INFO  : FPGA configured successfully with bitstream "C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA-Shit-test1/_ide/bitstream/design_1_wrapper.bit"
+21:25:03 INFO  : Context for 'APU' is selected.
+21:25:03 INFO  : Hardware design and registers information is loaded from 'C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/export/VGA_design_1_wrapper/hw/design_1_wrapper.xsa'.
+21:25:03 INFO  : 'configparams force-mem-access 1' command is executed.
+21:25:03 INFO  : Context for 'APU' is selected.
+21:25:03 INFO  : Sourcing of 'C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA-Shit-test1/_ide/psinit/ps7_init.tcl' is done.
+21:25:04 INFO  : 'ps7_init' command is executed.
+21:25:04 INFO  : 'ps7_post_config' command is executed.
+21:25:04 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:25:04 INFO  : The application 'C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA-Shit-test1/Debug/VGA-Shit-test1.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:25:04 INFO  : 'configparams force-mem-access 0' command is executed.
+21:25:04 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248526090" && level==0 && jtag_device_ctx=="jsn-Zed-210248526090-23727093-0"}
+fpga -file C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA-Shit-test1/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/export/VGA_design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA-Shit-test1/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA-Shit-test1/Debug/VGA-Shit-test1.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:25:04 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:25:04 INFO  : 'con' command is executed.
+21:25:04 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+21:25:04 INFO  : Launch script is exported to file 'C:\Users\cihem\CPRE-488-Labs\MP-0\MP-0-vitis_VGA\.sdk\launch_scripts\single_application_debug\systemdebugger_vga-shit-test1_system_standalone.tcl'
+21:25:28 INFO  : Disconnected from the channel tcfchan#7.
+21:25:28 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:25:28 INFO  : Jtag cable 'Digilent Zed 210248526090' is selected.
+21:25:28 INFO  : 'jtag frequency' command is executed.
+21:25:28 INFO  : Context for 'APU' is selected.
+21:25:28 INFO  : System reset is completed.
+21:25:31 INFO  : 'after 3000' command is executed.
+21:25:31 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248526090" && level==0 && jtag_device_ctx=="jsn-Zed-210248526090-23727093-0"}' command is executed.
+21:25:33 INFO  : FPGA configured successfully with bitstream "C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA-Shit-test1/_ide/bitstream/design_1_wrapper.bit"
+21:25:33 INFO  : Context for 'APU' is selected.
+21:25:33 INFO  : Hardware design and registers information is loaded from 'C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/export/VGA_design_1_wrapper/hw/design_1_wrapper.xsa'.
+21:25:33 INFO  : 'configparams force-mem-access 1' command is executed.
+21:25:33 INFO  : Context for 'APU' is selected.
+21:25:33 INFO  : Sourcing of 'C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA-Shit-test1/_ide/psinit/ps7_init.tcl' is done.
+21:25:34 INFO  : 'ps7_init' command is executed.
+21:25:34 INFO  : 'ps7_post_config' command is executed.
+21:25:34 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:25:34 INFO  : The application 'C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA-Shit-test1/Debug/VGA-Shit-test1.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:25:34 INFO  : 'configparams force-mem-access 0' command is executed.
+21:25:34 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248526090" && level==0 && jtag_device_ctx=="jsn-Zed-210248526090-23727093-0"}
+fpga -file C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA-Shit-test1/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/export/VGA_design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA-Shit-test1/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA-Shit-test1/Debug/VGA-Shit-test1.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:25:34 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:25:34 INFO  : 'con' command is executed.
+21:25:34 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+21:25:34 INFO  : Launch script is exported to file 'C:\Users\cihem\CPRE-488-Labs\MP-0\MP-0-vitis_VGA\.sdk\launch_scripts\single_application_debug\systemdebugger_vga-shit-test1_system_standalone.tcl'
+21:26:21 INFO  : Disconnected from the channel tcfchan#9.
+21:27:03 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:27:03 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248526090" && level==0 && jtag_device_ctx=="jsn-Zed-210248526090-23727093-0"}' command is executed.
+21:27:05 INFO  : FPGA configured successfully with bitstream "C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0-vitis_VGA/VGA_design_1_wrapper/bitstream/design_1_wrapper.bit"
+21:27:16 INFO  : Checking for BSP changes to sync application flags for project 'VGA-Shit-test1'...

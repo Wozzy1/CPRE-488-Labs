@@ -20,14 +20,14 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020
 INFO: [Device 21-403] Loading part xc7z020clg484-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 1712
+INFO: [Synth 8-7075] Helper process launched with PID 17172
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1013.051 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1013.242 ; gain = 0.000
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'design_1_wrapper' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:49]
-INFO: [Synth 8-3491] module 'design_1' declared at 'C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/synth/design_1.vhd:3309' bound to instance 'design_1_i' of component 'design_1' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:85]
-INFO: [Synth 8-638] synthesizing module 'design_1' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/synth/design_1.vhd:3348]
-INFO: [Synth 8-3491] module 'design_1_xlslice_1_0' declared at 'c:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/ip/design_1_xlslice_1_0/synth/design_1_xlslice_1_0.v:57' bound to instance 'Bslice' of component 'design_1_xlslice_1_0' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/synth/design_1.vhd:4152]
+INFO: [Synth 8-638] synthesizing module 'design_1_wrapper' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:48]
+INFO: [Synth 8-3491] module 'design_1' declared at 'C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/synth/design_1.vhd:3285' bound to instance 'design_1_i' of component 'design_1' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:83]
+INFO: [Synth 8-638] synthesizing module 'design_1' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/synth/design_1.vhd:3323]
+INFO: [Synth 8-3491] module 'design_1_xlslice_1_0' declared at 'c:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/ip/design_1_xlslice_1_0/synth/design_1_xlslice_1_0.v:57' bound to instance 'Bslice' of component 'design_1_xlslice_1_0' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/synth/design_1.vhd:4030]
 INFO: [Synth 8-6157] synthesizing module 'design_1_xlslice_1_0' [c:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/ip/design_1_xlslice_1_0/synth/design_1_xlslice_1_0.v:57]
 INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice' [c:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
 	Parameter DIN_WIDTH bound to: 24 - type: integer 
@@ -35,7 +35,7 @@ INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice' [c:/Users/cihe
 	Parameter DIN_TO bound to: 4 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice' (1#1) [c:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_xlslice_1_0' (2#1) [c:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/ip/design_1_xlslice_1_0/synth/design_1_xlslice_1_0.v:57]
-INFO: [Synth 8-3491] module 'design_1_xlslice_0_1' declared at 'c:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/ip/design_1_xlslice_0_1/synth/design_1_xlslice_0_1.v:57' bound to instance 'Gslice' of component 'design_1_xlslice_0_1' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/synth/design_1.vhd:4157]
+INFO: [Synth 8-3491] module 'design_1_xlslice_0_1' declared at 'c:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/ip/design_1_xlslice_0_1/synth/design_1_xlslice_0_1.v:57' bound to instance 'Gslice' of component 'design_1_xlslice_0_1' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/synth/design_1.vhd:4035]
 INFO: [Synth 8-6157] synthesizing module 'design_1_xlslice_0_1' [c:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/ip/design_1_xlslice_0_1/synth/design_1_xlslice_0_1.v:57]
 INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice__parameterized0' [c:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
 	Parameter DIN_WIDTH bound to: 24 - type: integer 
@@ -43,7 +43,7 @@ INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice__parameterized0
 	Parameter DIN_TO bound to: 12 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice__parameterized0' (2#1) [c:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_xlslice_0_1' (3#1) [c:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/ip/design_1_xlslice_0_1/synth/design_1_xlslice_0_1.v:57]
-INFO: [Synth 8-3491] module 'design_1_xlslice_0_0' declared at 'c:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/ip/design_1_xlslice_0_0/synth/design_1_xlslice_0_0.v:57' bound to instance 'Rslice' of component 'design_1_xlslice_0_0' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/synth/design_1.vhd:4162]
+INFO: [Synth 8-3491] module 'design_1_xlslice_0_0' declared at 'c:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/ip/design_1_xlslice_0_0/synth/design_1_xlslice_0_0.v:57' bound to instance 'Rslice' of component 'design_1_xlslice_0_0' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/synth/design_1.vhd:4040]
 INFO: [Synth 8-6157] synthesizing module 'design_1_xlslice_0_0' [c:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/ip/design_1_xlslice_0_0/synth/design_1_xlslice_0_0.v:57]
 INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice__parameterized1' [c:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
 	Parameter DIN_WIDTH bound to: 24 - type: integer 
@@ -51,76 +51,73 @@ INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice__parameterized1
 	Parameter DIN_TO bound to: 20 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice__parameterized1' (3#1) [c:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_xlslice_0_0' (4#1) [c:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/ip/design_1_xlslice_0_0/synth/design_1_xlslice_0_0.v:57]
-INFO: [Synth 8-3491] module 'design_1_axi_gpio_0_0' declared at 'C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.runs/synth_1/.Xil/Vivado-14620-CO2041-04/realtime/design_1_axi_gpio_0_0_stub.vhdl:5' bound to instance 'axi_gpio_0' of component 'design_1_axi_gpio_0_0' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/synth/design_1.vhd:4167]
-INFO: [Synth 8-638] synthesizing module 'design_1_axi_gpio_0_0' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.runs/synth_1/.Xil/Vivado-14620-CO2041-04/realtime/design_1_axi_gpio_0_0_stub.vhdl:31]
-INFO: [Synth 8-3491] module 'design_1_axi_gpio_0_1' declared at 'C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.runs/synth_1/.Xil/Vivado-14620-CO2041-04/realtime/design_1_axi_gpio_0_1_stub.vhdl:5' bound to instance 'axi_gpio_1' of component 'design_1_axi_gpio_0_1' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/synth/design_1.vhd:4190]
-INFO: [Synth 8-638] synthesizing module 'design_1_axi_gpio_0_1' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.runs/synth_1/.Xil/Vivado-14620-CO2041-04/realtime/design_1_axi_gpio_0_1_stub.vhdl:31]
-INFO: [Synth 8-3491] module 'design_1_axi_gpio_0_2' declared at 'C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.runs/synth_1/.Xil/Vivado-14620-CO2041-04/realtime/design_1_axi_gpio_0_2_stub.vhdl:5' bound to instance 'axi_gpio_2' of component 'design_1_axi_gpio_0_2' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/synth/design_1.vhd:4213]
-INFO: [Synth 8-638] synthesizing module 'design_1_axi_gpio_0_2' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.runs/synth_1/.Xil/Vivado-14620-CO2041-04/realtime/design_1_axi_gpio_0_2_stub.vhdl:31]
-INFO: [Synth 8-638] synthesizing module 'design_1_axi_mem_intercon_0' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/synth/design_1.vhd:1624]
-INFO: [Synth 8-638] synthesizing module 'm00_couplers_imp_1R706YB' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/synth/design_1.vhd:211]
-INFO: [Synth 8-3491] module 'design_1_auto_pc_1' declared at 'C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.runs/synth_1/.Xil/Vivado-14620-CO2041-04/realtime/design_1_auto_pc_1_stub.vhdl:5' bound to instance 'auto_pc' of component 'design_1_auto_pc_1' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/synth/design_1.vhd:454]
-INFO: [Synth 8-638] synthesizing module 'design_1_auto_pc_1' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.runs/synth_1/.Xil/Vivado-14620-CO2041-04/realtime/design_1_auto_pc_1_stub.vhdl:90]
-INFO: [Synth 8-256] done synthesizing module 'm00_couplers_imp_1R706YB' (5#1) [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/synth/design_1.vhd:211]
-INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_7HNO1D' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/synth/design_1.vhd:1086]
-INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_7HNO1D' (6#1) [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/synth/design_1.vhd:1086]
-INFO: [Synth 8-638] synthesizing module 's01_couplers_imp_1W60HW0' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/synth/design_1.vhd:1489]
-INFO: [Synth 8-256] done synthesizing module 's01_couplers_imp_1W60HW0' (7#1) [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/synth/design_1.vhd:1489]
-INFO: [Synth 8-3491] module 'design_1_xbar_1' declared at 'C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.runs/synth_1/.Xil/Vivado-14620-CO2041-04/realtime/design_1_xbar_1_stub.vhdl:5' bound to instance 'xbar' of component 'design_1_xbar_1' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/synth/design_1.vhd:2081]
-INFO: [Synth 8-638] synthesizing module 'design_1_xbar_1' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.runs/synth_1/.Xil/Vivado-14620-CO2041-04/realtime/design_1_xbar_1_stub.vhdl:89]
-INFO: [Synth 8-256] done synthesizing module 'design_1_axi_mem_intercon_0' (8#1) [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/synth/design_1.vhd:1624]
-INFO: [Synth 8-3491] module 'design_1_axi_vdma_0_0' declared at 'C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.runs/synth_1/.Xil/Vivado-14620-CO2041-04/realtime/design_1_axi_vdma_0_0_stub.vhdl:5' bound to instance 'axi_vdma_0' of component 'design_1_axi_vdma_0_0' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/synth/design_1.vhd:4314]
-INFO: [Synth 8-638] synthesizing module 'design_1_axi_vdma_0_0' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.runs/synth_1/.Xil/Vivado-14620-CO2041-04/realtime/design_1_axi_vdma_0_0_stub.vhdl:78]
-INFO: [Synth 8-3491] module 'design_1_clk_wiz_0_0' declared at 'C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.runs/synth_1/.Xil/Vivado-14620-CO2041-04/realtime/design_1_clk_wiz_0_0_stub.vhdl:5' bound to instance 'clk_wiz_0' of component 'design_1_clk_wiz_0_0' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/synth/design_1.vhd:4384]
-INFO: [Synth 8-638] synthesizing module 'design_1_clk_wiz_0_0' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.runs/synth_1/.Xil/Vivado-14620-CO2041-04/realtime/design_1_clk_wiz_0_0_stub.vhdl:15]
-INFO: [Synth 8-3491] module 'design_1_processing_system7_0_0' declared at 'C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.runs/synth_1/.Xil/Vivado-14620-CO2041-04/realtime/design_1_processing_system7_0_0_stub.vhdl:5' bound to instance 'processing_system7_0' of component 'design_1_processing_system7_0_0' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/synth/design_1.vhd:4391]
-INFO: [Synth 8-638] synthesizing module 'design_1_processing_system7_0_0' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.runs/synth_1/.Xil/Vivado-14620-CO2041-04/realtime/design_1_processing_system7_0_0_stub.vhdl:124]
-INFO: [Synth 8-638] synthesizing module 'design_1_ps7_0_axi_periph_0' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/synth/design_1.vhd:2360]
-INFO: [Synth 8-638] synthesizing module 'm00_couplers_imp_15SPJYW' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/synth/design_1.vhd:61]
-INFO: [Synth 8-256] done synthesizing module 'm00_couplers_imp_15SPJYW' (9#1) [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/synth/design_1.vhd:61]
-INFO: [Synth 8-638] synthesizing module 'm01_couplers_imp_XU9C55' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/synth/design_1.vhd:584]
-INFO: [Synth 8-256] done synthesizing module 'm01_couplers_imp_XU9C55' (10#1) [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/synth/design_1.vhd:584]
-INFO: [Synth 8-638] synthesizing module 'm02_couplers_imp_14WQB4R' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/synth/design_1.vhd:685]
-INFO: [Synth 8-256] done synthesizing module 'm02_couplers_imp_14WQB4R' (11#1) [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/synth/design_1.vhd:685]
-INFO: [Synth 8-638] synthesizing module 'm03_couplers_imp_YFYJ3U' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/synth/design_1.vhd:784]
-INFO: [Synth 8-256] done synthesizing module 'm03_couplers_imp_YFYJ3U' (12#1) [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/synth/design_1.vhd:784]
-INFO: [Synth 8-638] synthesizing module 'm04_couplers_imp_17KQ732' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/synth/design_1.vhd:882]
-INFO: [Synth 8-256] done synthesizing module 'm04_couplers_imp_17KQ732' (13#1) [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/synth/design_1.vhd:882]
-INFO: [Synth 8-638] synthesizing module 'm05_couplers_imp_VQEDA7' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/synth/design_1.vhd:987]
-INFO: [Synth 8-256] done synthesizing module 'm05_couplers_imp_VQEDA7' (14#1) [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/synth/design_1.vhd:987]
-INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_UYSKKA' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/synth/design_1.vhd:1198]
-INFO: [Synth 8-3491] module 'design_1_auto_pc_0' declared at 'C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.runs/synth_1/.Xil/Vivado-14620-CO2041-04/realtime/design_1_auto_pc_0_stub.vhdl:5' bound to instance 'auto_pc' of component 'design_1_auto_pc_0' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/synth/design_1.vhd:1381]
-INFO: [Synth 8-638] synthesizing module 'design_1_auto_pc_0' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.runs/synth_1/.Xil/Vivado-14620-CO2041-04/realtime/design_1_auto_pc_0_stub.vhdl:70]
-INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_UYSKKA' (15#1) [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/synth/design_1.vhd:1198]
-INFO: [Synth 8-3491] module 'design_1_xbar_0' declared at 'C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.runs/synth_1/.Xil/Vivado-14620-CO2041-04/realtime/design_1_xbar_0_stub.vhdl:5' bound to instance 'xbar' of component 'design_1_xbar_0' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/synth/design_1.vhd:3139]
-INFO: [Synth 8-638] synthesizing module 'design_1_xbar_0' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.runs/synth_1/.Xil/Vivado-14620-CO2041-04/realtime/design_1_xbar_0_stub.vhdl:51]
-INFO: [Synth 8-256] done synthesizing module 'design_1_ps7_0_axi_periph_0' (16#1) [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/synth/design_1.vhd:2360]
-INFO: [Synth 8-3491] module 'design_1_rst_ps7_0_100M_0' declared at 'C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.runs/synth_1/.Xil/Vivado-14620-CO2041-04/realtime/design_1_rst_ps7_0_100M_0_stub.vhdl:5' bound to instance 'rst_ps7_0_100M' of component 'design_1_rst_ps7_0_100M_0' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/synth/design_1.vhd:4672]
-INFO: [Synth 8-638] synthesizing module 'design_1_rst_ps7_0_100M_0' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.runs/synth_1/.Xil/Vivado-14620-CO2041-04/realtime/design_1_rst_ps7_0_100M_0_stub.vhdl:21]
-INFO: [Synth 8-3491] module 'design_1_system_ila_0_0' declared at 'C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.runs/synth_1/.Xil/Vivado-14620-CO2041-04/realtime/design_1_system_ila_0_0_stub.vhdl:5' bound to instance 'system_ila_0' of component 'design_1_system_ila_0_0' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/synth/design_1.vhd:4685]
-INFO: [Synth 8-638] synthesizing module 'design_1_system_ila_0_0' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.runs/synth_1/.Xil/Vivado-14620-CO2041-04/realtime/design_1_system_ila_0_0_stub.vhdl:38]
-INFO: [Synth 8-3491] module 'design_1_system_ila_1_0' declared at 'C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.runs/synth_1/.Xil/Vivado-14620-CO2041-04/realtime/design_1_system_ila_1_0_stub.vhdl:5' bound to instance 'system_ila_1' of component 'design_1_system_ila_1_0' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/synth/design_1.vhd:4715]
-INFO: [Synth 8-638] synthesizing module 'design_1_system_ila_1_0' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.runs/synth_1/.Xil/Vivado-14620-CO2041-04/realtime/design_1_system_ila_1_0_stub.vhdl:17]
-INFO: [Synth 8-3491] module 'design_1_v_axi4s_vid_out_0_1' declared at 'C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.runs/synth_1/.Xil/Vivado-14620-CO2041-04/realtime/design_1_v_axi4s_vid_out_0_1_stub.vhdl:5' bound to instance 'v_axi4s_vid_out_0' of component 'design_1_v_axi4s_vid_out_0_1' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/synth/design_1.vhd:4724]
-INFO: [Synth 8-638] synthesizing module 'design_1_v_axi4s_vid_out_0_1' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.runs/synth_1/.Xil/Vivado-14620-CO2041-04/realtime/design_1_v_axi4s_vid_out_0_1_stub.vhdl:40]
-INFO: [Synth 8-3491] module 'design_1_v_tc_0_1' declared at 'C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.runs/synth_1/.Xil/Vivado-14620-CO2041-04/realtime/design_1_v_tc_0_1_stub.vhdl:5' bound to instance 'v_tc_0' of component 'design_1_v_tc_0_1' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/synth/design_1.vhd:4756]
-INFO: [Synth 8-638] synthesizing module 'design_1_v_tc_0_1' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.runs/synth_1/.Xil/Vivado-14620-CO2041-04/realtime/design_1_v_tc_0_1_stub.vhdl:43]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ps7_0_axi_periph'. This will prevent further optimization [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/synth/design_1.vhd:4510]
-INFO: [Synth 8-256] done synthesizing module 'design_1' (17#1) [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/synth/design_1.vhd:3348]
-INFO: [Synth 8-256] done synthesizing module 'design_1_wrapper' (18#1) [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:49]
+INFO: [Synth 8-3491] module 'design_1_axi_gpio_0_0' declared at 'C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.runs/synth_1/.Xil/Vivado-20756-CO2041-04/realtime/design_1_axi_gpio_0_0_stub.vhdl:5' bound to instance 'axi_gpio_0' of component 'design_1_axi_gpio_0_0' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/synth/design_1.vhd:4045]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_gpio_0_0' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.runs/synth_1/.Xil/Vivado-20756-CO2041-04/realtime/design_1_axi_gpio_0_0_stub.vhdl:31]
+INFO: [Synth 8-3491] module 'design_1_axi_gpio_0_1' declared at 'C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.runs/synth_1/.Xil/Vivado-20756-CO2041-04/realtime/design_1_axi_gpio_0_1_stub.vhdl:5' bound to instance 'axi_gpio_1' of component 'design_1_axi_gpio_0_1' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/synth/design_1.vhd:4068]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_gpio_0_1' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.runs/synth_1/.Xil/Vivado-20756-CO2041-04/realtime/design_1_axi_gpio_0_1_stub.vhdl:31]
+INFO: [Synth 8-3491] module 'design_1_axi_gpio_0_2' declared at 'C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.runs/synth_1/.Xil/Vivado-20756-CO2041-04/realtime/design_1_axi_gpio_0_2_stub.vhdl:5' bound to instance 'axi_gpio_2' of component 'design_1_axi_gpio_0_2' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/synth/design_1.vhd:4091]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_gpio_0_2' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.runs/synth_1/.Xil/Vivado-20756-CO2041-04/realtime/design_1_axi_gpio_0_2_stub.vhdl:31]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_mem_intercon_0' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/synth/design_1.vhd:1614]
+INFO: [Synth 8-638] synthesizing module 'm00_couplers_imp_1R706YB' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/synth/design_1.vhd:201]
+INFO: [Synth 8-3491] module 'design_1_auto_pc_1' declared at 'C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.runs/synth_1/.Xil/Vivado-20756-CO2041-04/realtime/design_1_auto_pc_1_stub.vhdl:5' bound to instance 'auto_pc' of component 'design_1_auto_pc_1' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/synth/design_1.vhd:444]
+INFO: [Synth 8-638] synthesizing module 'design_1_auto_pc_1' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.runs/synth_1/.Xil/Vivado-20756-CO2041-04/realtime/design_1_auto_pc_1_stub.vhdl:90]
+INFO: [Synth 8-256] done synthesizing module 'm00_couplers_imp_1R706YB' (5#1) [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/synth/design_1.vhd:201]
+INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_7HNO1D' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/synth/design_1.vhd:1076]
+INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_7HNO1D' (6#1) [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/synth/design_1.vhd:1076]
+INFO: [Synth 8-638] synthesizing module 's01_couplers_imp_1W60HW0' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/synth/design_1.vhd:1479]
+INFO: [Synth 8-256] done synthesizing module 's01_couplers_imp_1W60HW0' (7#1) [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/synth/design_1.vhd:1479]
+INFO: [Synth 8-3491] module 'design_1_xbar_1' declared at 'C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.runs/synth_1/.Xil/Vivado-20756-CO2041-04/realtime/design_1_xbar_1_stub.vhdl:5' bound to instance 'xbar' of component 'design_1_xbar_1' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/synth/design_1.vhd:2071]
+INFO: [Synth 8-638] synthesizing module 'design_1_xbar_1' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.runs/synth_1/.Xil/Vivado-20756-CO2041-04/realtime/design_1_xbar_1_stub.vhdl:89]
+INFO: [Synth 8-256] done synthesizing module 'design_1_axi_mem_intercon_0' (8#1) [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/synth/design_1.vhd:1614]
+INFO: [Synth 8-3491] module 'design_1_axi_vdma_0_0' declared at 'C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.runs/synth_1/.Xil/Vivado-20756-CO2041-04/realtime/design_1_axi_vdma_0_0_stub.vhdl:5' bound to instance 'axi_vdma_0' of component 'design_1_axi_vdma_0_0' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/synth/design_1.vhd:4192]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_vdma_0_0' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.runs/synth_1/.Xil/Vivado-20756-CO2041-04/realtime/design_1_axi_vdma_0_0_stub.vhdl:78]
+INFO: [Synth 8-3491] module 'design_1_clk_wiz_0_0' declared at 'C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.runs/synth_1/.Xil/Vivado-20756-CO2041-04/realtime/design_1_clk_wiz_0_0_stub.vhdl:5' bound to instance 'clk_wiz_0' of component 'design_1_clk_wiz_0_0' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/synth/design_1.vhd:4262]
+INFO: [Synth 8-638] synthesizing module 'design_1_clk_wiz_0_0' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.runs/synth_1/.Xil/Vivado-20756-CO2041-04/realtime/design_1_clk_wiz_0_0_stub.vhdl:13]
+INFO: [Synth 8-3491] module 'design_1_processing_system7_0_0' declared at 'C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.runs/synth_1/.Xil/Vivado-20756-CO2041-04/realtime/design_1_processing_system7_0_0_stub.vhdl:5' bound to instance 'processing_system7_0' of component 'design_1_processing_system7_0_0' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/synth/design_1.vhd:4267]
+INFO: [Synth 8-638] synthesizing module 'design_1_processing_system7_0_0' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.runs/synth_1/.Xil/Vivado-20756-CO2041-04/realtime/design_1_processing_system7_0_0_stub.vhdl:124]
+INFO: [Synth 8-638] synthesizing module 'design_1_ps7_0_axi_periph_0' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/synth/design_1.vhd:2348]
+INFO: [Synth 8-638] synthesizing module 'm00_couplers_imp_15SPJYW' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/synth/design_1.vhd:57]
+INFO: [Synth 8-256] done synthesizing module 'm00_couplers_imp_15SPJYW' (9#1) [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/synth/design_1.vhd:57]
+INFO: [Synth 8-638] synthesizing module 'm01_couplers_imp_XU9C55' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/synth/design_1.vhd:574]
+INFO: [Synth 8-256] done synthesizing module 'm01_couplers_imp_XU9C55' (10#1) [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/synth/design_1.vhd:574]
+INFO: [Synth 8-638] synthesizing module 'm02_couplers_imp_14WQB4R' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/synth/design_1.vhd:675]
+INFO: [Synth 8-256] done synthesizing module 'm02_couplers_imp_14WQB4R' (11#1) [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/synth/design_1.vhd:675]
+INFO: [Synth 8-638] synthesizing module 'm03_couplers_imp_YFYJ3U' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/synth/design_1.vhd:774]
+INFO: [Synth 8-256] done synthesizing module 'm03_couplers_imp_YFYJ3U' (12#1) [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/synth/design_1.vhd:774]
+INFO: [Synth 8-638] synthesizing module 'm04_couplers_imp_17KQ732' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/synth/design_1.vhd:872]
+INFO: [Synth 8-256] done synthesizing module 'm04_couplers_imp_17KQ732' (13#1) [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/synth/design_1.vhd:872]
+INFO: [Synth 8-638] synthesizing module 'm05_couplers_imp_VQEDA7' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/synth/design_1.vhd:977]
+INFO: [Synth 8-256] done synthesizing module 'm05_couplers_imp_VQEDA7' (14#1) [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/synth/design_1.vhd:977]
+INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_UYSKKA' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/synth/design_1.vhd:1188]
+INFO: [Synth 8-3491] module 'design_1_auto_pc_0' declared at 'C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.runs/synth_1/.Xil/Vivado-20756-CO2041-04/realtime/design_1_auto_pc_0_stub.vhdl:5' bound to instance 'auto_pc' of component 'design_1_auto_pc_0' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/synth/design_1.vhd:1371]
+INFO: [Synth 8-638] synthesizing module 'design_1_auto_pc_0' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.runs/synth_1/.Xil/Vivado-20756-CO2041-04/realtime/design_1_auto_pc_0_stub.vhdl:70]
+INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_UYSKKA' (15#1) [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/synth/design_1.vhd:1188]
+INFO: [Synth 8-3491] module 'design_1_xbar_0' declared at 'C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.runs/synth_1/.Xil/Vivado-20756-CO2041-04/realtime/design_1_xbar_0_stub.vhdl:5' bound to instance 'xbar' of component 'design_1_xbar_0' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/synth/design_1.vhd:3117]
+INFO: [Synth 8-638] synthesizing module 'design_1_xbar_0' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.runs/synth_1/.Xil/Vivado-20756-CO2041-04/realtime/design_1_xbar_0_stub.vhdl:51]
+INFO: [Synth 8-256] done synthesizing module 'design_1_ps7_0_axi_periph_0' (16#1) [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/synth/design_1.vhd:2348]
+INFO: [Synth 8-3491] module 'design_1_rst_ps7_0_100M_0' declared at 'C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.runs/synth_1/.Xil/Vivado-20756-CO2041-04/realtime/design_1_rst_ps7_0_100M_0_stub.vhdl:5' bound to instance 'rst_ps7_0_100M' of component 'design_1_rst_ps7_0_100M_0' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/synth/design_1.vhd:4546]
+INFO: [Synth 8-638] synthesizing module 'design_1_rst_ps7_0_100M_0' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.runs/synth_1/.Xil/Vivado-20756-CO2041-04/realtime/design_1_rst_ps7_0_100M_0_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'design_1_system_ila_1_0' declared at 'C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.runs/synth_1/.Xil/Vivado-20756-CO2041-04/realtime/design_1_system_ila_1_0_stub.vhdl:5' bound to instance 'system_ila_1' of component 'design_1_system_ila_1_0' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/synth/design_1.vhd:4559]
+INFO: [Synth 8-638] synthesizing module 'design_1_system_ila_1_0' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.runs/synth_1/.Xil/Vivado-20756-CO2041-04/realtime/design_1_system_ila_1_0_stub.vhdl:22]
+INFO: [Synth 8-3491] module 'design_1_v_axi4s_vid_out_0_1' declared at 'C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.runs/synth_1/.Xil/Vivado-20756-CO2041-04/realtime/design_1_v_axi4s_vid_out_0_1_stub.vhdl:5' bound to instance 'v_axi4s_vid_out_0' of component 'design_1_v_axi4s_vid_out_0_1' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/synth/design_1.vhd:4573]
+INFO: [Synth 8-638] synthesizing module 'design_1_v_axi4s_vid_out_0_1' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.runs/synth_1/.Xil/Vivado-20756-CO2041-04/realtime/design_1_v_axi4s_vid_out_0_1_stub.vhdl:40]
+INFO: [Synth 8-3491] module 'design_1_v_tc_0_1' declared at 'C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.runs/synth_1/.Xil/Vivado-20756-CO2041-04/realtime/design_1_v_tc_0_1_stub.vhdl:5' bound to instance 'v_tc_0' of component 'design_1_v_tc_0_1' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/synth/design_1.vhd:4605]
+INFO: [Synth 8-638] synthesizing module 'design_1_v_tc_0_1' [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.runs/synth_1/.Xil/Vivado-20756-CO2041-04/realtime/design_1_v_tc_0_1_stub.vhdl:43]
+INFO: [Synth 8-256] done synthesizing module 'design_1' (17#1) [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/synth/design_1.vhd:3323]
+INFO: [Synth 8-256] done synthesizing module 'design_1_wrapper' (18#1) [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:48]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1013.051 ; gain = 0.000
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1013.242 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1013.051 ; gain = 0.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1013.242 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1013.051 ; gain = 0.000
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1013.242 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 1013.051 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 1013.242 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -138,8 +135,6 @@ Parsing XDC File [c:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources
 Finished Parsing XDC File [c:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0/design_1_xbar_0_in_context.xdc] for cell 'design_1_i/ps7_0_axi_periph/xbar'
 Parsing XDC File [c:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0_in_context.xdc] for cell 'design_1_i/rst_ps7_0_100M'
 Finished Parsing XDC File [c:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0_in_context.xdc] for cell 'design_1_i/rst_ps7_0_100M'
-Parsing XDC File [c:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_0/design_1_system_ila_0_0/design_1_system_ila_0_0_in_context.xdc] for cell 'design_1_i/system_ila_0'
-Finished Parsing XDC File [c:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_0/design_1_system_ila_0_0/design_1_system_ila_0_0_in_context.xdc] for cell 'design_1_i/system_ila_0'
 Parsing XDC File [c:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/ip/design_1_axi_vdma_0_0/design_1_axi_vdma_0_0/design_1_axi_vdma_0_0_in_context.xdc] for cell 'design_1_i/axi_vdma_0'
 Finished Parsing XDC File [c:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/ip/design_1_axi_vdma_0_0/design_1_axi_vdma_0_0/design_1_axi_vdma_0_0_in_context.xdc] for cell 'design_1_i/axi_vdma_0'
 Parsing XDC File [c:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/ip/design_1_v_axi4s_vid_out_0_1/design_1_v_axi4s_vid_out_0_1/design_1_v_axi4s_vid_out_0_1_in_context.xdc] for cell 'design_1_i/v_axi4s_vid_out_0'
@@ -159,32 +154,34 @@ Finished Parsing XDC File [c:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.src
 Parsing XDC File [c:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1/design_1_auto_pc_1_in_context.xdc] for cell 'design_1_i/axi_mem_intercon/m00_couplers/auto_pc'
 Finished Parsing XDC File [c:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1/design_1_auto_pc_1_in_context.xdc] for cell 'design_1_i/axi_mem_intercon/m00_couplers/auto_pc'
 Parsing XDC File [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/docs/ZedBoard/zedboard_master.xdc]
+WARNING: [Vivado 12-584] No ports matched 'sys_clock'. [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/docs/ZedBoard/zedboard_master.xdc:82]
 WARNING: [Vivado 12-584] No ports matched '[get_ports -of_objects [get_iobanks 33]]'. [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/docs/ZedBoard/zedboard_master.xdc:362]
 WARNING: [Vivado 12-584] No ports matched '[get_ports -of_objects [get_iobanks 34]]'. [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/docs/ZedBoard/zedboard_master.xdc:367]
 WARNING: [Vivado 12-584] No ports matched '[get_ports -of_objects [get_iobanks 35]]'. [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/docs/ZedBoard/zedboard_master.xdc:372]
 WARNING: [Vivado 12-584] No ports matched '[get_ports -of_objects [get_iobanks 13]]'. [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/docs/ZedBoard/zedboard_master.xdc:375]
 Finished Parsing XDC File [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/docs/ZedBoard/zedboard_master.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/docs/ZedBoard/zedboard_master.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/design_1_wrapper_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/docs/ZedBoard/zedboard_master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_wrapper_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Parsing XDC File [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.runs/synth_1/dont_touch.xdc]
 Finished Parsing XDC File [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1074.109 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1050.645 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1074.109 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1050.645 ; gain = 0.000
 WARNING: [Timing 38-316] Clock period '50.000' specified during out-of-context synthesis of instance 'design_1_i/axi_vdma_0' at clock pin 's_axi_lite_aclk' is different from the actual clock period '10.000', this can lead to different synthesis results.
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1075.750 ; gain = 62.699
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1050.680 ; gain = 37.438
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1075.750 ; gain = 62.699
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1050.680 ; gain = 37.438
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -449,8 +446,6 @@ Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_ps_porb. (constraint fil
 Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_ps_porb. (constraint file  c:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 260).
 Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_ps_srstb. (constraint file  c:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 261).
 Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_ps_srstb. (constraint file  c:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 262).
-Applied set_property IO_BUFFER_TYPE = NONE for sys_clock. (constraint file  c:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_in_context.xdc, line 5).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for sys_clock. (constraint file  c:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_in_context.xdc, line 6).
 Applied set_property DONT_TOUCH = true for design_1_i. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/processing_system7_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/axi_gpio_0. (constraint file  auto generated constraint, line ).
@@ -459,7 +454,6 @@ Applied set_property DONT_TOUCH = true for design_1_i/axi_gpio_2. (constraint fi
 Applied set_property DONT_TOUCH = true for design_1_i/ps7_0_axi_periph/xbar. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/ps7_0_axi_periph. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/rst_ps7_0_100M. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for design_1_i/system_ila_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/axi_vdma_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/v_axi4s_vid_out_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/v_tc_0. (constraint file  auto generated constraint, line ).
@@ -473,10 +467,10 @@ Applied set_property DONT_TOUCH = true for design_1_i/system_ila_1. (constraint 
 Applied set_property DONT_TOUCH = true for design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/axi_mem_intercon/m00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1075.750 ; gain = 62.699
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1050.680 ; gain = 37.438
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1075.750 ; gain = 62.699
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1050.680 ; gain = 37.438
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -498,25 +492,25 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1075.750 ; gain = 62.699
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1050.680 ; gain = 37.438
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1075.750 ; gain = 62.699
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1050.680 ; gain = 37.438
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1075.750 ; gain = 62.699
+Finished Timing Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1050.680 ; gain = 37.438
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1075.750 ; gain = 62.699
+Finished Technology Mapping : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1050.680 ; gain = 37.438
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -534,37 +528,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1081.586 ; gain = 68.535
+Finished IO Insertion : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1051.137 ; gain = 37.895
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1081.586 ; gain = 68.535
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1051.137 ; gain = 37.895
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1081.586 ; gain = 68.535
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1051.137 ; gain = 37.895
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1081.586 ; gain = 68.535
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1051.137 ; gain = 37.895
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1081.586 ; gain = 68.535
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1051.137 ; gain = 37.895
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1081.586 ; gain = 68.535
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1051.137 ; gain = 37.895
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -585,10 +579,9 @@ Report BlackBoxes:
 |9     |design_1_clk_wiz_0_0            |         1|
 |10    |design_1_processing_system7_0_0 |         1|
 |11    |design_1_rst_ps7_0_100M_0       |         1|
-|12    |design_1_system_ila_0_0         |         1|
-|13    |design_1_system_ila_1_0         |         1|
-|14    |design_1_v_axi4s_vid_out_0_1    |         1|
-|15    |design_1_v_tc_0_1               |         1|
+|12    |design_1_system_ila_1_0         |         1|
+|13    |design_1_v_axi4s_vid_out_0_1    |         1|
+|14    |design_1_v_tc_0_1               |         1|
 +------+--------------------------------+----------+
 
 Report Cell Usage: 
@@ -604,35 +597,34 @@ Report Cell Usage:
 |7     |design_1_clk_wiz_0_0_bbox            |     1|
 |8     |design_1_processing_system7_0_0_bbox |     1|
 |9     |design_1_rst_ps7_0_100M_0_bbox       |     1|
-|10    |design_1_system_ila_0_0_bbox         |     1|
-|11    |design_1_system_ila_1_0_bbox         |     1|
-|12    |design_1_v_axi4s_vid_out_0_1_bbox    |     1|
-|13    |design_1_v_tc_0_1_bbox               |     1|
-|14    |design_1_xbar_0_bbox                 |     1|
-|15    |design_1_xbar_1_bbox                 |     1|
-|16    |IBUF                                 |    13|
-|17    |OBUF                                 |    22|
+|10    |design_1_system_ila_1_0_bbox         |     1|
+|11    |design_1_v_axi4s_vid_out_0_1_bbox    |     1|
+|12    |design_1_v_tc_0_1_bbox               |     1|
+|13    |design_1_xbar_0_bbox                 |     1|
+|14    |design_1_xbar_1_bbox                 |     1|
+|15    |IBUF                                 |    13|
+|16    |OBUF                                 |    22|
 +------+-------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1081.586 ; gain = 68.535
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1051.137 ; gain = 37.895
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 1081.586 ; gain = 5.836
-Synthesis Optimization Complete : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1081.586 ; gain = 68.535
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 1051.137 ; gain = 0.457
+Synthesis Optimization Complete : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1051.137 ; gain = 37.895
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1089.215 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 1057.242 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1098.398 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1072.945 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-91 Infos, 8 Warnings, 0 Critical Warnings and 0 Errors encountered.
+88 Infos, 10 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1098.398 ; gain = 85.348
+synth_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1072.945 ; gain = 59.703
 INFO: [Common 17-600] The following parameters have non-default value.
 tcl.collectionResultDisplayLimit
 INFO: [Common 17-1381] The checkpoint 'C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.runs/synth_1/design_1_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Jan 30 20:22:02 2026...
+INFO: [Common 17-206] Exiting Vivado at Fri Jan 30 21:20:41 2026...

@@ -17,8 +17,6 @@ vlib questa_lib/msim/fifo_generator_v13_2_5
 vlib questa_lib/msim/axi_data_fifo_v2_1_20
 vlib questa_lib/msim/axi_crossbar_v2_1_22
 vlib questa_lib/msim/proc_sys_reset_v5_0_13
-vlib questa_lib/msim/gigantic_mux
-vlib questa_lib/msim/xlconcat_v2_1_3
 vlib questa_lib/msim/lib_pkg_v1_0_2
 vlib questa_lib/msim/lib_fifo_v1_0_14
 vlib questa_lib/msim/blk_mem_gen_v8_4_4
@@ -30,6 +28,7 @@ vlib questa_lib/msim/v_tc_v6_1_13
 vlib questa_lib/msim/v_vid_in_axi4s_v4_0_9
 vlib questa_lib/msim/v_axi4s_vid_out_v4_0_10
 vlib questa_lib/msim/v_tc_v6_2_0
+vlib questa_lib/msim/xlslice_v1_0_2
 vlib questa_lib/msim/axi_protocol_converter_v2_1_21
 
 vmap xilinx_vip questa_lib/msim/xilinx_vip
@@ -48,8 +47,6 @@ vmap fifo_generator_v13_2_5 questa_lib/msim/fifo_generator_v13_2_5
 vmap axi_data_fifo_v2_1_20 questa_lib/msim/axi_data_fifo_v2_1_20
 vmap axi_crossbar_v2_1_22 questa_lib/msim/axi_crossbar_v2_1_22
 vmap proc_sys_reset_v5_0_13 questa_lib/msim/proc_sys_reset_v5_0_13
-vmap gigantic_mux questa_lib/msim/gigantic_mux
-vmap xlconcat_v2_1_3 questa_lib/msim/xlconcat_v2_1_3
 vmap lib_pkg_v1_0_2 questa_lib/msim/lib_pkg_v1_0_2
 vmap lib_fifo_v1_0_14 questa_lib/msim/lib_fifo_v1_0_14
 vmap blk_mem_gen_v8_4_4 questa_lib/msim/blk_mem_gen_v8_4_4
@@ -61,6 +58,7 @@ vmap v_tc_v6_1_13 questa_lib/msim/v_tc_v6_1_13
 vmap v_vid_in_axi4s_v4_0_9 questa_lib/msim/v_vid_in_axi4s_v4_0_9
 vmap v_axi4s_vid_out_v4_0_10 questa_lib/msim/v_axi4s_vid_out_v4_0_10
 vmap v_tc_v6_2_0 questa_lib/msim/v_tc_v6_2_0
+vmap xlslice_v1_0_2 questa_lib/msim/xlslice_v1_0_2
 vmap axi_protocol_converter_v2_1_21 questa_lib/msim/axi_protocol_converter_v2_1_21
 
 vlog -work xilinx_vip  -sv -L axi_vip_v1_1_7 -L processing_system7_vip_v1_0_9 -L xilinx_vip "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
@@ -74,7 +72,7 @@ vlog -work xilinx_vip  -sv -L axi_vip_v1_1_7 -L processing_system7_vip_v1_0_9 -L
 "C:/Xilinx/Vivado/2020.1/data/xilinx_vip/hdl/clk_vip_if.sv" \
 "C:/Xilinx/Vivado/2020.1/data/xilinx_vip/hdl/rst_vip_if.sv" \
 
-vlog -work xpm  -sv -L axi_vip_v1_1_7 -L processing_system7_vip_v1_0_9 -L xilinx_vip "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/6b56/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/7af1/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/1b7e/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/122e/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/b205/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/c968/hdl/verilog" "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
+vlog -work xpm  -sv -L axi_vip_v1_1_7 -L processing_system7_vip_v1_0_9 -L xilinx_vip "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/6b56/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/7af1/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/8b3d" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/1b7e/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/122e/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/b205/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/c968/hdl/verilog" "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
 "C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" \
 "C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv" \
 "C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv" \
@@ -82,16 +80,16 @@ vlog -work xpm  -sv -L axi_vip_v1_1_7 -L processing_system7_vip_v1_0_9 -L xilinx
 vcom -work xpm  -93 \
 "C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_VCOMP.vhd" \
 
-vlog -work axi_infrastructure_v1_1_0  "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/6b56/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/7af1/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/1b7e/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/122e/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/b205/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/c968/hdl/verilog" "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
+vlog -work axi_infrastructure_v1_1_0  "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/6b56/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/7af1/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/8b3d" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/1b7e/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/122e/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/b205/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/c968/hdl/verilog" "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
 "../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v" \
 
-vlog -work axi_vip_v1_1_7  -sv -L axi_vip_v1_1_7 -L processing_system7_vip_v1_0_9 -L xilinx_vip "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/6b56/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/7af1/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/1b7e/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/122e/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/b205/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/c968/hdl/verilog" "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
+vlog -work axi_vip_v1_1_7  -sv -L axi_vip_v1_1_7 -L processing_system7_vip_v1_0_9 -L xilinx_vip "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/6b56/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/7af1/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/8b3d" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/1b7e/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/122e/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/b205/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/c968/hdl/verilog" "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
 "../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/ce6c/hdl/axi_vip_v1_1_vl_rfs.sv" \
 
-vlog -work processing_system7_vip_v1_0_9  -sv -L axi_vip_v1_1_7 -L processing_system7_vip_v1_0_9 -L xilinx_vip "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/6b56/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/7af1/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/1b7e/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/122e/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/b205/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/c968/hdl/verilog" "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
+vlog -work processing_system7_vip_v1_0_9  -sv -L axi_vip_v1_1_7 -L processing_system7_vip_v1_0_9 -L xilinx_vip "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/6b56/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/7af1/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/8b3d" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/1b7e/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/122e/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/b205/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/c968/hdl/verilog" "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
 "../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/6b56/hdl/processing_system7_vip_v1_0_vl_rfs.sv" \
 
-vlog -work xil_defaultlib  "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/6b56/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/7af1/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/1b7e/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/122e/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/b205/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/c968/hdl/verilog" "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
+vlog -work xil_defaultlib  "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/6b56/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/7af1/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/8b3d" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/1b7e/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/122e/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/b205/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/c968/hdl/verilog" "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
 "../../../bd/design_1/ip/design_1_processing_system7_0_0/sim/design_1_processing_system7_0_0.v" \
 
 vcom -work axi_lite_ipif_v3_0_4  -93 \
@@ -111,28 +109,28 @@ vcom -work xil_defaultlib  -93 \
 "../../../bd/design_1/ip/design_1_axi_gpio_0_1/sim/design_1_axi_gpio_0_1.vhd" \
 "../../../bd/design_1/ip/design_1_axi_gpio_0_2/sim/design_1_axi_gpio_0_2.vhd" \
 
-vlog -work generic_baseblocks_v2_1_0  "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/6b56/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/7af1/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/1b7e/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/122e/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/b205/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/c968/hdl/verilog" "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
+vlog -work generic_baseblocks_v2_1_0  "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/6b56/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/7af1/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/8b3d" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/1b7e/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/122e/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/b205/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/c968/hdl/verilog" "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
 "../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v" \
 
-vlog -work axi_register_slice_v2_1_21  "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/6b56/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/7af1/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/1b7e/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/122e/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/b205/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/c968/hdl/verilog" "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
+vlog -work axi_register_slice_v2_1_21  "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/6b56/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/7af1/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/8b3d" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/1b7e/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/122e/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/b205/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/c968/hdl/verilog" "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
 "../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/2ef9/hdl/axi_register_slice_v2_1_vl_rfs.v" \
 
-vlog -work fifo_generator_v13_2_5  "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/6b56/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/7af1/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/1b7e/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/122e/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/b205/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/c968/hdl/verilog" "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
+vlog -work fifo_generator_v13_2_5  "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/6b56/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/7af1/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/8b3d" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/1b7e/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/122e/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/b205/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/c968/hdl/verilog" "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
 "../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/276e/simulation/fifo_generator_vlog_beh.v" \
 
 vcom -work fifo_generator_v13_2_5  -93 \
 "../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/276e/hdl/fifo_generator_v13_2_rfs.vhd" \
 
-vlog -work fifo_generator_v13_2_5  "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/6b56/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/7af1/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/1b7e/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/122e/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/b205/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/c968/hdl/verilog" "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
+vlog -work fifo_generator_v13_2_5  "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/6b56/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/7af1/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/8b3d" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/1b7e/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/122e/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/b205/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/c968/hdl/verilog" "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
 "../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/276e/hdl/fifo_generator_v13_2_rfs.v" \
 
-vlog -work axi_data_fifo_v2_1_20  "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/6b56/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/7af1/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/1b7e/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/122e/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/b205/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/c968/hdl/verilog" "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
+vlog -work axi_data_fifo_v2_1_20  "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/6b56/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/7af1/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/8b3d" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/1b7e/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/122e/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/b205/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/c968/hdl/verilog" "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
 "../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/47c9/hdl/axi_data_fifo_v2_1_vl_rfs.v" \
 
-vlog -work axi_crossbar_v2_1_22  "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/6b56/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/7af1/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/1b7e/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/122e/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/b205/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/c968/hdl/verilog" "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
+vlog -work axi_crossbar_v2_1_22  "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/6b56/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/7af1/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/8b3d" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/1b7e/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/122e/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/b205/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/c968/hdl/verilog" "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
 "../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/b68e/hdl/axi_crossbar_v2_1_vl_rfs.v" \
 
-vlog -work xil_defaultlib  "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/6b56/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/7af1/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/1b7e/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/122e/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/b205/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/c968/hdl/verilog" "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
+vlog -work xil_defaultlib  "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/6b56/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/7af1/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/8b3d" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/1b7e/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/122e/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/b205/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/c968/hdl/verilog" "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
 "../../../bd/design_1/ip/design_1_xbar_0/sim/design_1_xbar_0.v" \
 
 vcom -work proc_sys_reset_v5_0_13  -93 \
@@ -140,28 +138,6 @@ vcom -work proc_sys_reset_v5_0_13  -93 \
 
 vcom -work xil_defaultlib  -93 \
 "../../../bd/design_1/ip/design_1_rst_ps7_0_100M_0/sim/design_1_rst_ps7_0_100M_0.vhd" \
-"../../../bd/design_1/ip/design_1_system_ila_0_0/bd_0/sim/bd_f60c.vhd" \
-"../../../bd/design_1/ip/design_1_system_ila_0_0/bd_0/ip/ip_0/sim/bd_f60c_ila_lib_0.vhd" \
-
-vlog -work gigantic_mux  "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/6b56/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/7af1/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/1b7e/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/122e/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/b205/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/c968/hdl/verilog" "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
-"../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/d322/hdl/gigantic_mux_v1_0_cntr.v" \
-
-vlog -work xil_defaultlib  "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/6b56/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/7af1/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/1b7e/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/122e/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/b205/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/c968/hdl/verilog" "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
-"../../../bd/design_1/ip/design_1_system_ila_0_0/bd_0/ip/ip_1/bd_f60c_g_inst_0_gigantic_mux.v" \
-"../../../bd/design_1/ip/design_1_system_ila_0_0/bd_0/ip/ip_1/sim/bd_f60c_g_inst_0.v" \
-
-vlog -work xlconcat_v2_1_3  "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/6b56/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/7af1/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/1b7e/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/122e/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/b205/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/c968/hdl/verilog" "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
-"../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/442e/hdl/xlconcat_v2_1_vl_rfs.v" \
-
-vlog -work xil_defaultlib  "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/6b56/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/7af1/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/1b7e/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/122e/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/b205/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/c968/hdl/verilog" "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
-"../../../bd/design_1/ip/design_1_system_ila_0_0/bd_0/ip/ip_2/sim/bd_f60c_slot_1_aw_0.v" \
-"../../../bd/design_1/ip/design_1_system_ila_0_0/bd_0/ip/ip_3/sim/bd_f60c_slot_1_w_0.v" \
-"../../../bd/design_1/ip/design_1_system_ila_0_0/bd_0/ip/ip_4/sim/bd_f60c_slot_1_b_0.v" \
-"../../../bd/design_1/ip/design_1_system_ila_0_0/bd_0/ip/ip_5/sim/bd_f60c_slot_1_ar_0.v" \
-"../../../bd/design_1/ip/design_1_system_ila_0_0/bd_0/ip/ip_6/sim/bd_f60c_slot_1_r_0.v" \
-
-vcom -work xil_defaultlib  -93 \
-"../../../bd/design_1/ip/design_1_system_ila_0_0/sim/design_1_system_ila_0_0.vhd" \
 "../../../bd/design_1/sim/design_1.vhd" \
 
 vcom -work lib_pkg_v1_0_2  -93 \
@@ -170,7 +146,7 @@ vcom -work lib_pkg_v1_0_2  -93 \
 vcom -work lib_fifo_v1_0_14  -93 \
 "../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/a5cb/hdl/lib_fifo_v1_0_rfs.vhd" \
 
-vlog -work blk_mem_gen_v8_4_4  "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/6b56/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/7af1/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/1b7e/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/122e/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/b205/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/c968/hdl/verilog" "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
+vlog -work blk_mem_gen_v8_4_4  "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/6b56/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/7af1/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/8b3d" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/1b7e/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/122e/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/b205/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/c968/hdl/verilog" "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
 "../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/2985/simulation/blk_mem_gen_v8_4.v" \
 
 vcom -work lib_bmg_v1_0_13  -93 \
@@ -182,7 +158,7 @@ vcom -work lib_srl_fifo_v1_0_2  -93 \
 vcom -work axi_datamover_v5_1_23  -93 \
 "../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/af86/hdl/axi_datamover_v5_1_vh_rfs.vhd" \
 
-vlog -work axi_vdma_v6_3_9  "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/6b56/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/7af1/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/1b7e/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/122e/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/b205/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/c968/hdl/verilog" "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
+vlog -work axi_vdma_v6_3_9  "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/6b56/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/7af1/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/8b3d" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/1b7e/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/122e/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/b205/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/c968/hdl/verilog" "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
 "../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/7af1/hdl/axi_vdma_v6_3_rfs.v" \
 
 vcom -work axi_vdma_v6_3_9  -93 \
@@ -194,13 +170,13 @@ vcom -work xil_defaultlib  -93 \
 vcom -work v_tc_v6_1_13  -93 \
 "../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/b92e/hdl/v_tc_v6_1_vh_rfs.vhd" \
 
-vlog -work v_vid_in_axi4s_v4_0_9  "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/6b56/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/7af1/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/1b7e/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/122e/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/b205/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/c968/hdl/verilog" "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
+vlog -work v_vid_in_axi4s_v4_0_9  "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/6b56/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/7af1/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/8b3d" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/1b7e/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/122e/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/b205/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/c968/hdl/verilog" "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
 "../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/b2aa/hdl/v_vid_in_axi4s_v4_0_vl_rfs.v" \
 
-vlog -work v_axi4s_vid_out_v4_0_10  "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/6b56/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/7af1/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/1b7e/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/122e/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/b205/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/c968/hdl/verilog" "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
+vlog -work v_axi4s_vid_out_v4_0_10  "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/6b56/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/7af1/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/8b3d" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/1b7e/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/122e/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/b205/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/c968/hdl/verilog" "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
 "../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/a87e/hdl/v_axi4s_vid_out_v4_0_vl_rfs.v" \
 
-vlog -work xil_defaultlib  "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/6b56/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/7af1/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/1b7e/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/122e/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/b205/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/c968/hdl/verilog" "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
+vlog -work xil_defaultlib  "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/6b56/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/7af1/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/8b3d" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/1b7e/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/122e/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/b205/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/c968/hdl/verilog" "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
 "../../../bd/design_1/ip/design_1_v_axi4s_vid_out_0_1/sim/design_1_v_axi4s_vid_out_0_1.v" \
 
 vcom -work v_tc_v6_2_0  -93 \
@@ -209,11 +185,30 @@ vcom -work v_tc_v6_2_0  -93 \
 vcom -work xil_defaultlib  -93 \
 "../../../bd/design_1/ip/design_1_v_tc_0_1/sim/design_1_v_tc_0_1.vhd" \
 
-vlog -work axi_protocol_converter_v2_1_21  "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/6b56/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/7af1/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/1b7e/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/122e/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/b205/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/c968/hdl/verilog" "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
+vlog -work xil_defaultlib  "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/6b56/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/7af1/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/8b3d" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/1b7e/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/122e/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/b205/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/c968/hdl/verilog" "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
+"../../../bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_clk_wiz.v" \
+"../../../bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.v" \
+"../../../bd/design_1/ip/design_1_xbar_1/sim/design_1_xbar_1.v" \
+
+vlog -work xlslice_v1_0_2  "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/6b56/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/7af1/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/8b3d" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/1b7e/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/122e/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/b205/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/c968/hdl/verilog" "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
+"../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v" \
+
+vlog -work xil_defaultlib  "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/6b56/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/7af1/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/8b3d" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/1b7e/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/122e/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/b205/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/c968/hdl/verilog" "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
+"../../../bd/design_1/ip/design_1_xlslice_0_0/sim/design_1_xlslice_0_0.v" \
+"../../../bd/design_1/ip/design_1_xlslice_0_1/sim/design_1_xlslice_0_1.v" \
+"../../../bd/design_1/ip/design_1_xlslice_1_0/sim/design_1_xlslice_1_0.v" \
+
+vcom -work xil_defaultlib  -93 \
+"../../../bd/design_1/ip/design_1_system_ila_1_0/bd_0/ip/ip_0/sim/bd_365d_ila_lib_0.vhd" \
+"../../../bd/design_1/ip/design_1_system_ila_1_0/bd_0/sim/bd_365d.vhd" \
+"../../../bd/design_1/ip/design_1_system_ila_1_0/sim/design_1_system_ila_1_0.vhd" \
+
+vlog -work axi_protocol_converter_v2_1_21  "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/6b56/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/7af1/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/8b3d" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/1b7e/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/122e/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/b205/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/c968/hdl/verilog" "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
 "../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/8dfa/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \
 
-vlog -work xil_defaultlib  "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/6b56/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/7af1/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/1b7e/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/122e/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/b205/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/c968/hdl/verilog" "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
+vlog -work xil_defaultlib  "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/6b56/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/7af1/hdl" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/8b3d" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/1b7e/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/122e/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/b205/hdl/verilog" "+incdir+../../../../MP-0.srcs/sources_1/bd/design_1/ipshared/c968/hdl/verilog" "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
 "../../../bd/design_1/ip/design_1_auto_pc_0/sim/design_1_auto_pc_0.v" \
+"../../../bd/design_1/ip/design_1_auto_pc_1/sim/design_1_auto_pc_1.v" \
 
 vlog -work xil_defaultlib \
 "glbl.v"

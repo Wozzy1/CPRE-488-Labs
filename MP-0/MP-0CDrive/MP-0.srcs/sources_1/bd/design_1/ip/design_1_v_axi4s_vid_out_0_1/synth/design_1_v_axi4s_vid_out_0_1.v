@@ -52,8 +52,8 @@
 
 (* X_CORE_INFO = "v_axi4s_vid_out_v4_0_10,Vivado 2020.1" *)
 (* CHECK_LICENSE_TYPE = "design_1_v_axi4s_vid_out_0_1,v_axi4s_vid_out_v4_0_10,{}" *)
-(* CORE_GENERATION_INFO = "design_1_v_axi4s_vid_out_0_1,v_axi4s_vid_out_v4_0_10,{x_ipProduct=Vivado 2020.1,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=v_axi4s_vid_out,x_ipVersion=4.0,x_ipCoreRevision=10,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,C_FAMILY=zynq,C_PIXELS_PER_CLOCK=1,C_COMPONENTS_PER_PIXEL=3,C_S_AXIS_COMPONENT_WIDTH=10,C_NATIVE_COMPONENT_WIDTH=8,C_NATIVE_DATA_WIDTH=24,C_S_AXIS_TDATA_WIDTH=32,C_HAS_ASYNC_CLK=0,C_ADDR_WIDTH=10,C_VTG_MASTER_SLAVE=0,C_HYSTERESIS_LEVEL=12,C_SYNC_LOCK_THRESHOLD=4,C_INCLUDE_PIXEL_REP\
-EAT=0,C_INCLUDE_PIXEL_REMAP_420=0,C_ADDR_WIDTH_PIXEL_REMAP_420=10}" *)
+(* CORE_GENERATION_INFO = "design_1_v_axi4s_vid_out_0_1,v_axi4s_vid_out_v4_0_10,{x_ipProduct=Vivado 2020.1,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=v_axi4s_vid_out,x_ipVersion=4.0,x_ipCoreRevision=10,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,C_FAMILY=zynq,C_PIXELS_PER_CLOCK=1,C_COMPONENTS_PER_PIXEL=1,C_S_AXIS_COMPONENT_WIDTH=16,C_NATIVE_COMPONENT_WIDTH=16,C_NATIVE_DATA_WIDTH=16,C_S_AXIS_TDATA_WIDTH=16,C_HAS_ASYNC_CLK=1,C_ADDR_WIDTH=10,C_VTG_MASTER_SLAVE=0,C_HYSTERESIS_LEVEL=12,C_SYNC_LOCK_THRESHOLD=4,C_INCLUDE_PIXEL_RE\
+PEAT=0,C_INCLUDE_PIXEL_REMAP_420=0,C_ADDR_WIDTH_PIXEL_REMAP_420=10}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_1_v_axi4s_vid_out_0_1 (
   aclk,
@@ -65,7 +65,9 @@ module design_1_v_axi4s_vid_out_0_1 (
   s_axis_video_tuser,
   s_axis_video_tlast,
   fid,
+  vid_io_out_clk,
   vid_io_out_ce,
+  vid_io_out_reset,
   vid_active_video,
   vid_vsync,
   vid_hsync,
@@ -87,7 +89,7 @@ module design_1_v_axi4s_vid_out_0_1 (
   status
 );
 
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME aclk_intf, ASSOCIATED_BUSIF video_in, FREQ_HZ 25000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME aclk_intf, ASSOCIATED_BUSIF video_in, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.000, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 aclk_intf CLK" *)
 input wire aclk;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME aclken_intf, POLARITY ACTIVE_HIGH" *)
@@ -97,20 +99,26 @@ input wire aclken;
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 aresetn_intf RST" *)
 input wire aresetn;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 video_in TDATA" *)
-input wire [31 : 0] s_axis_video_tdata;
+input wire [15 : 0] s_axis_video_tdata;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 video_in TVALID" *)
 input wire s_axis_video_tvalid;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 video_in TREADY" *)
 output wire s_axis_video_tready;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 video_in TUSER" *)
 input wire s_axis_video_tuser;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME video_in, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 1, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 25000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, LAYERED_METADATA undef, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME video_in, TDATA_NUM_BYTES 2, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 1, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, LAYERED_METADATA undef, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 video_in TLAST" *)
 input wire s_axis_video_tlast;
 input wire fid;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME vid_io_out_clk_intf, ASSOCIATED_BUSIF vid_io_out, FREQ_HZ 50000000, FREQ_TOLERANCE_HZ 0, PHASE 0.000, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK1, INSERT_VIP 0" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 vid_io_out_clk_intf CLK" *)
+input wire vid_io_out_clk;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME vid_io_out_ce_intf, POLARITY ACTIVE_HIGH" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clockenable:1.0 vid_io_out_ce_intf CE" *)
 input wire vid_io_out_ce;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME vid_io_out_reset_intf, POLARITY ACTIVE_HIGH, INSERT_VIP 0" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 vid_io_out_reset_intf RST" *)
+input wire vid_io_out_reset;
 (* X_INTERFACE_INFO = "xilinx.com:interface:vid_io:1.0 vid_io_out ACTIVE_VIDEO" *)
 output wire vid_active_video;
 (* X_INTERFACE_INFO = "xilinx.com:interface:vid_io:1.0 vid_io_out VSYNC" *)
@@ -124,7 +132,7 @@ output wire vid_hblank;
 (* X_INTERFACE_INFO = "xilinx.com:interface:vid_io:1.0 vid_io_out FIELD" *)
 output wire vid_field_id;
 (* X_INTERFACE_INFO = "xilinx.com:interface:vid_io:1.0 vid_io_out DATA" *)
-output wire [23 : 0] vid_data;
+output wire [15 : 0] vid_data;
 (* X_INTERFACE_INFO = "xilinx.com:interface:video_timing:2.0 vtiming_in VSYNC" *)
 input wire vtg_vsync;
 (* X_INTERFACE_INFO = "xilinx.com:interface:video_timing:2.0 vtiming_in HSYNC" *)
@@ -147,12 +155,12 @@ output wire [31 : 0] status;
   v_axi4s_vid_out_v4_0_10 #(
     .C_FAMILY("zynq"),
     .C_PIXELS_PER_CLOCK(1),
-    .C_COMPONENTS_PER_PIXEL(3),
-    .C_S_AXIS_COMPONENT_WIDTH(10),
-    .C_NATIVE_COMPONENT_WIDTH(8),
-    .C_NATIVE_DATA_WIDTH(24),
-    .C_S_AXIS_TDATA_WIDTH(32),
-    .C_HAS_ASYNC_CLK(0),
+    .C_COMPONENTS_PER_PIXEL(1),
+    .C_S_AXIS_COMPONENT_WIDTH(16),
+    .C_NATIVE_COMPONENT_WIDTH(16),
+    .C_NATIVE_DATA_WIDTH(16),
+    .C_S_AXIS_TDATA_WIDTH(16),
+    .C_HAS_ASYNC_CLK(1),
     .C_ADDR_WIDTH(10),
     .C_VTG_MASTER_SLAVE(0),
     .C_HYSTERESIS_LEVEL(12),
@@ -170,9 +178,9 @@ output wire [31 : 0] status;
     .s_axis_video_tuser(s_axis_video_tuser),
     .s_axis_video_tlast(s_axis_video_tlast),
     .fid(fid),
-    .vid_io_out_clk(1'B0),
+    .vid_io_out_clk(vid_io_out_clk),
     .vid_io_out_ce(vid_io_out_ce),
-    .vid_io_out_reset(1'B0),
+    .vid_io_out_reset(vid_io_out_reset),
     .vid_active_video(vid_active_video),
     .vid_vsync(vid_vsync),
     .vid_hsync(vid_hsync),

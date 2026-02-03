@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="_ide/bitstream/design_1_wrapper.bit" key="test2-bitFile"/>
+	<item value="{&quot;cables&quot;:[{&quot;name&quot;:&quot;Digilent Zed 210248B9D9EE&quot;,&quot;indexContextMap&quot;:{&quot;2&quot;:&quot;jsn-Zed-210248B9D9EE-4ba00477-0&quot;,&quot;3&quot;:&quot;jsn-Zed-210248B9D9EE-23727093-0&quot;}}]}" key="devices_info_Local"/>
+	<item value="Auto Detect" key="test2-device"/>
+	<item value="Local" key="test2-target"/>
+	<item value="false" key="test2-skip_rev_check"/>
+	<item value="test2" key="programfpga.sdxproject"/>
+	<item value="" key="test2-bmmFile"/>
+	<item value="false" key="test2-partial_bit"/>
+</section>

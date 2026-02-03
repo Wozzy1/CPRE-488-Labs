@@ -78,7 +78,6 @@ ENTITY design_1_axi_vdma_0_0 IS
     s_axi_lite_rready : IN STD_LOGIC;
     s_axi_lite_rdata : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
     s_axi_lite_rresp : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
-    mm2s_frame_ptr_in : IN STD_LOGIC_VECTOR(5 DOWNTO 0);
     mm2s_frame_ptr_out : OUT STD_LOGIC_VECTOR(5 DOWNTO 0);
     m_axi_mm2s_araddr : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
     m_axi_mm2s_arlen : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
@@ -93,8 +92,8 @@ ENTITY design_1_axi_vdma_0_0 IS
     m_axi_mm2s_rlast : IN STD_LOGIC;
     m_axi_mm2s_rvalid : IN STD_LOGIC;
     m_axi_mm2s_rready : OUT STD_LOGIC;
-    m_axis_mm2s_tdata : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-    m_axis_mm2s_tkeep : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+    m_axis_mm2s_tdata : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+    m_axis_mm2s_tkeep : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
     m_axis_mm2s_tuser : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
     m_axis_mm2s_tvalid : OUT STD_LOGIC;
     m_axis_mm2s_tready : IN STD_LOGIC;
@@ -238,8 +237,8 @@ ARCHITECTURE design_1_axi_vdma_0_0_arch OF design_1_axi_vdma_0_0 IS
       m_axi_mm2s_rvalid : IN STD_LOGIC;
       m_axi_mm2s_rready : OUT STD_LOGIC;
       mm2s_prmry_reset_out_n : OUT STD_LOGIC;
-      m_axis_mm2s_tdata : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-      m_axis_mm2s_tkeep : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+      m_axis_mm2s_tdata : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+      m_axis_mm2s_tkeep : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
       m_axis_mm2s_tuser : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
       m_axis_mm2s_tvalid : OUT STD_LOGIC;
       m_axis_mm2s_tready : IN STD_LOGIC;
@@ -281,7 +280,7 @@ ARCHITECTURE design_1_axi_vdma_0_0_arch OF design_1_axi_vdma_0_0 IS
   ATTRIBUTE X_INTERFACE_INFO OF m_axis_mm2s_tvalid: SIGNAL IS "xilinx.com:interface:axis:1.0 M_AXIS_MM2S TVALID";
   ATTRIBUTE X_INTERFACE_INFO OF m_axis_mm2s_tuser: SIGNAL IS "xilinx.com:interface:axis:1.0 M_AXIS_MM2S TUSER";
   ATTRIBUTE X_INTERFACE_INFO OF m_axis_mm2s_tkeep: SIGNAL IS "xilinx.com:interface:axis:1.0 M_AXIS_MM2S TKEEP";
-  ATTRIBUTE X_INTERFACE_PARAMETER OF m_axis_mm2s_tdata: SIGNAL IS "XIL_INTERFACENAME M_AXIS_MM2S, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 1, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 1, HAS_TLAST 1, FREQ_HZ 25000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, LAYERED_METADATA undef, INSERT_VIP 0";
+  ATTRIBUTE X_INTERFACE_PARAMETER OF m_axis_mm2s_tdata: SIGNAL IS "XIL_INTERFACENAME M_AXIS_MM2S, TDATA_NUM_BYTES 2, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 1, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 1, HAS_TLAST 1, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, LAYERED_METADATA undef, INSERT_VIP 0";
   ATTRIBUTE X_INTERFACE_INFO OF m_axis_mm2s_tdata: SIGNAL IS "xilinx.com:interface:axis:1.0 M_AXIS_MM2S TDATA";
   ATTRIBUTE X_INTERFACE_INFO OF m_axi_mm2s_rready: SIGNAL IS "xilinx.com:interface:aximm:1.0 M_AXI_MM2S RREADY";
   ATTRIBUTE X_INTERFACE_INFO OF m_axi_mm2s_rvalid: SIGNAL IS "xilinx.com:interface:aximm:1.0 M_AXI_MM2S RVALID";
@@ -299,7 +298,6 @@ ARCHITECTURE design_1_axi_vdma_0_0_arch OF design_1_axi_vdma_0_0 IS
 "S 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
   ATTRIBUTE X_INTERFACE_INFO OF m_axi_mm2s_araddr: SIGNAL IS "xilinx.com:interface:aximm:1.0 M_AXI_MM2S ARADDR";
   ATTRIBUTE X_INTERFACE_INFO OF mm2s_frame_ptr_out: SIGNAL IS "xilinx.com:signal:video_frame_ptr:1.0 MM2S_FRAME_PTR_OUT FRAME_PTR";
-  ATTRIBUTE X_INTERFACE_INFO OF mm2s_frame_ptr_in: SIGNAL IS "xilinx.com:signal:video_frame_ptr:1.0 MM2S_FRAME_PTR_IN_0 FRAME_PTR";
   ATTRIBUTE X_INTERFACE_INFO OF s_axi_lite_rresp: SIGNAL IS "xilinx.com:interface:aximm:1.0 S_AXI_LITE RRESP";
   ATTRIBUTE X_INTERFACE_INFO OF s_axi_lite_rdata: SIGNAL IS "xilinx.com:interface:aximm:1.0 S_AXI_LITE RDATA";
   ATTRIBUTE X_INTERFACE_INFO OF s_axi_lite_rready: SIGNAL IS "xilinx.com:interface:aximm:1.0 S_AXI_LITE RREADY";
@@ -320,7 +318,7 @@ ARCHITECTURE design_1_axi_vdma_0_0_arch OF design_1_axi_vdma_0_0 IS
   ATTRIBUTE X_INTERFACE_INFO OF s_axi_lite_awvalid: SIGNAL IS "xilinx.com:interface:aximm:1.0 S_AXI_LITE AWVALID";
   ATTRIBUTE X_INTERFACE_PARAMETER OF axi_resetn: SIGNAL IS "XIL_INTERFACENAME AXI_RESETN, POLARITY ACTIVE_LOW, INSERT_VIP 0";
   ATTRIBUTE X_INTERFACE_INFO OF axi_resetn: SIGNAL IS "xilinx.com:signal:reset:1.0 AXI_RESETN RST";
-  ATTRIBUTE X_INTERFACE_PARAMETER OF m_axis_mm2s_aclk: SIGNAL IS "XIL_INTERFACENAME M_AXIS_MM2S_ACLK, ASSOCIATED_BUSIF M_AXIS_MM2S, FREQ_HZ 25000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0";
+  ATTRIBUTE X_INTERFACE_PARAMETER OF m_axis_mm2s_aclk: SIGNAL IS "XIL_INTERFACENAME M_AXIS_MM2S_ACLK, ASSOCIATED_BUSIF M_AXIS_MM2S, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.000, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0";
   ATTRIBUTE X_INTERFACE_INFO OF m_axis_mm2s_aclk: SIGNAL IS "xilinx.com:signal:clock:1.0 M_AXIS_MM2S_ACLK CLK";
   ATTRIBUTE X_INTERFACE_PARAMETER OF m_axi_mm2s_aclk: SIGNAL IS "XIL_INTERFACENAME M_AXI_MM2S_ACLK, ASSOCIATED_BUSIF M_AXI_MM2S, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.000, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0";
   ATTRIBUTE X_INTERFACE_INFO OF m_axi_mm2s_aclk: SIGNAL IS "xilinx.com:signal:clock:1.0 M_AXI_MM2S_ACLK CLK";
@@ -332,7 +330,7 @@ BEGIN
       C_S_AXI_LITE_ADDR_WIDTH => 9,
       C_S_AXI_LITE_DATA_WIDTH => 32,
       C_DLYTMR_RESOLUTION => 125,
-      C_PRMRY_IS_ACLK_ASYNC => 1,
+      C_PRMRY_IS_ACLK_ASYNC => 0,
       C_ENABLE_VIDPRMTR_READS => 1,
       C_DYNAMIC_RESOLUTION => 1,
       C_NUM_FSTORES => 1,
@@ -345,7 +343,7 @@ BEGIN
       C_M_AXI_SG_ADDR_WIDTH => 32,
       C_M_AXI_SG_DATA_WIDTH => 32,
       C_INCLUDE_MM2S => 1,
-      C_MM2S_GENLOCK_MODE => 3,
+      C_MM2S_GENLOCK_MODE => 0,
       C_MM2S_GENLOCK_NUM_MASTERS => 1,
       C_MM2S_GENLOCK_REPEAT_EN => 0,
       C_MM2S_SOF_ENABLE => 1,
@@ -356,7 +354,7 @@ BEGIN
       C_MM2S_MAX_BURST_LENGTH => 8,
       C_M_AXI_MM2S_ADDR_WIDTH => 32,
       C_M_AXI_MM2S_DATA_WIDTH => 64,
-      C_M_AXIS_MM2S_TDATA_WIDTH => 32,
+      C_M_AXIS_MM2S_TDATA_WIDTH => 16,
       C_M_AXIS_MM2S_TUSER_BITS => 1,
       C_INCLUDE_S2MM => 0,
       C_S2MM_GENLOCK_MODE => 0,
@@ -419,7 +417,7 @@ BEGIN
       s_axi_lite_rdata => s_axi_lite_rdata,
       s_axi_lite_rresp => s_axi_lite_rresp,
       mm2s_fsync => '0',
-      mm2s_frame_ptr_in => mm2s_frame_ptr_in,
+      mm2s_frame_ptr_in => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 6)),
       mm2s_frame_ptr_out => mm2s_frame_ptr_out,
       s2mm_fsync => '0',
       s2mm_frame_ptr_in => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 6)),

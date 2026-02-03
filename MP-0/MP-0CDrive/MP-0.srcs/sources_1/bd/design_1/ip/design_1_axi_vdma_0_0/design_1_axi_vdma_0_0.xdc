@@ -60,9 +60,6 @@ set_false_path -from [get_cells -hier *cdc_from* -filter {is_sequential && (PRIM
   set_false_path -to   [get_pins -filter {REF_PIN_NAME=~ PRE} -of_objects [get_cells -hierarchical  -filter {NAME =~*MM2S*LB_BUILT_IN*/*rstbt*/*}]]
 
 
-  set_false_path -to   [get_pins -filter {REF_PIN_NAME=~ PRE} -of_objects [get_cells -hierarchical  -filter {NAME =~*S2MM*LB_BUILT_IN*/*rstbt*/*}]]
-  set_false_path -from [get_cells -hierarchical  -filter {NAME =~*S2MM*LB_BUILT_IN*/*rstbt*/*rst_reg_reg && IS_SEQUENTIAL}]
-  set_false_path -from [get_cells -hierarchical  -filter {NAME =~*S2MM*LB_BUILT_IN*/*rstbt*/*rst_reg[*]}]
 
 
 create_waiver -internal -scope -type CDC -id {CDC-4} -user "axi_vdma" -tags "9601"\

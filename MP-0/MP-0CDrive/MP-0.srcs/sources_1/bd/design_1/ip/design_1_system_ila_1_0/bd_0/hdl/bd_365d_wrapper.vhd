@@ -15,12 +15,23 @@ entity bd_365d_wrapper is
     SLOT_0_VIDEO_TIMING_hsync : in STD_LOGIC;
     SLOT_0_VIDEO_TIMING_vblank : in STD_LOGIC;
     SLOT_0_VIDEO_TIMING_vsync : in STD_LOGIC;
+    SLOT_1_AXIS_tdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    SLOT_1_AXIS_tkeep : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    SLOT_1_AXIS_tlast : in STD_LOGIC;
+    SLOT_1_AXIS_tready : in STD_LOGIC;
+    SLOT_1_AXIS_tuser : in STD_LOGIC_VECTOR ( 0 to 0 );
+    SLOT_1_AXIS_tvalid : in STD_LOGIC;
     clk : in STD_LOGIC;
     probe0 : in STD_LOGIC_VECTOR ( 0 to 0 );
     probe1 : in STD_LOGIC_VECTOR ( 0 to 0 );
     probe2 : in STD_LOGIC_VECTOR ( 0 to 0 );
     probe3 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe4 : in STD_LOGIC_VECTOR ( 0 to 0 )
+    probe4 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe5 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe6 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe7 : in STD_LOGIC_VECTOR ( 23 downto 0 );
+    probe8 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    resetn : in STD_LOGIC
   );
 end bd_365d_wrapper;
 
@@ -33,11 +44,22 @@ architecture STRUCTURE of bd_365d_wrapper is
     probe2 : in STD_LOGIC_VECTOR ( 0 to 0 );
     probe3 : in STD_LOGIC_VECTOR ( 0 to 0 );
     probe4 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe5 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe6 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe7 : in STD_LOGIC_VECTOR ( 23 downto 0 );
+    probe8 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    resetn : in STD_LOGIC;
     SLOT_0_VIDEO_TIMING_active_video : in STD_LOGIC;
     SLOT_0_VIDEO_TIMING_hblank : in STD_LOGIC;
     SLOT_0_VIDEO_TIMING_hsync : in STD_LOGIC;
     SLOT_0_VIDEO_TIMING_vblank : in STD_LOGIC;
-    SLOT_0_VIDEO_TIMING_vsync : in STD_LOGIC
+    SLOT_0_VIDEO_TIMING_vsync : in STD_LOGIC;
+    SLOT_1_AXIS_tdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    SLOT_1_AXIS_tkeep : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    SLOT_1_AXIS_tlast : in STD_LOGIC;
+    SLOT_1_AXIS_tready : in STD_LOGIC;
+    SLOT_1_AXIS_tuser : in STD_LOGIC_VECTOR ( 0 to 0 );
+    SLOT_1_AXIS_tvalid : in STD_LOGIC
   );
   end component bd_365d;
 begin
@@ -48,11 +70,22 @@ bd_365d_i: component bd_365d
       SLOT_0_VIDEO_TIMING_hsync => SLOT_0_VIDEO_TIMING_hsync,
       SLOT_0_VIDEO_TIMING_vblank => SLOT_0_VIDEO_TIMING_vblank,
       SLOT_0_VIDEO_TIMING_vsync => SLOT_0_VIDEO_TIMING_vsync,
+      SLOT_1_AXIS_tdata(31 downto 0) => SLOT_1_AXIS_tdata(31 downto 0),
+      SLOT_1_AXIS_tkeep(3 downto 0) => SLOT_1_AXIS_tkeep(3 downto 0),
+      SLOT_1_AXIS_tlast => SLOT_1_AXIS_tlast,
+      SLOT_1_AXIS_tready => SLOT_1_AXIS_tready,
+      SLOT_1_AXIS_tuser(0) => SLOT_1_AXIS_tuser(0),
+      SLOT_1_AXIS_tvalid => SLOT_1_AXIS_tvalid,
       clk => clk,
       probe0(0) => probe0(0),
       probe1(0) => probe1(0),
       probe2(0) => probe2(0),
       probe3(0) => probe3(0),
-      probe4(0) => probe4(0)
+      probe4(0) => probe4(0),
+      probe5(0) => probe5(0),
+      probe6(0) => probe6(0),
+      probe7(23 downto 0) => probe7(23 downto 0),
+      probe8(0) => probe8(0),
+      resetn => resetn
     );
 end STRUCTURE;

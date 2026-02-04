@@ -1,7 +1,7 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
---Date        : Tue Feb  3 17:47:57 2026
+--Date        : Wed Feb  4 13:40:31 2026
 --Host        : CO2041-13 running 64-bit major release  (build 9200)
 --Command     : generate_target design_1.bd
 --Design      : design_1
@@ -3297,7 +3297,7 @@ entity design_1 is
     vid_vsync_0 : out STD_LOGIC
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of design_1 : entity is "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=23,numReposBlks=17,numNonXlnxBlks=0,numHierBlks=6,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=3,da_clkrst_cnt=3,da_ps7_cnt=1,synth_mode=OOC_per_IP}";
+  attribute CORE_GENERATION_INFO of design_1 : entity is "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=24,numReposBlks=18,numNonXlnxBlks=0,numHierBlks=6,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=3,da_clkrst_cnt=3,da_ps7_cnt=1,synth_mode=OOC_per_IP}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of design_1 : entity is "design_1.hwdef";
 end design_1;
@@ -3534,7 +3534,7 @@ architecture STRUCTURE of design_1 is
     vid_vblank : out STD_LOGIC;
     vid_hblank : out STD_LOGIC;
     vid_field_id : out STD_LOGIC;
-    vid_data : out STD_LOGIC_VECTOR ( 11 downto 0 );
+    vid_data : out STD_LOGIC_VECTOR ( 15 downto 0 );
     vtg_vsync : in STD_LOGIC;
     vtg_hsync : in STD_LOGIC;
     vtg_vblank : in STD_LOGIC;
@@ -3556,22 +3556,28 @@ architecture STRUCTURE of design_1 is
   end component design_1_xlconstant_0_0;
   component design_1_xlslice_0_0 is
   port (
-    Din : in STD_LOGIC_VECTOR ( 11 downto 0 );
+    Din : in STD_LOGIC_VECTOR ( 15 downto 0 );
     Dout : out STD_LOGIC_VECTOR ( 3 downto 0 )
   );
   end component design_1_xlslice_0_0;
   component design_1_xlslice_0_1 is
   port (
-    Din : in STD_LOGIC_VECTOR ( 11 downto 0 );
+    Din : in STD_LOGIC_VECTOR ( 15 downto 0 );
     Dout : out STD_LOGIC_VECTOR ( 3 downto 0 )
   );
   end component design_1_xlslice_0_1;
   component design_1_xlslice_0_2 is
   port (
-    Din : in STD_LOGIC_VECTOR ( 11 downto 0 );
+    Din : in STD_LOGIC_VECTOR ( 15 downto 0 );
     Dout : out STD_LOGIC_VECTOR ( 3 downto 0 )
   );
   end component design_1_xlslice_0_2;
+  component design_1_system_ila_0_0 is
+  port (
+    clk : in STD_LOGIC;
+    probe0 : in STD_LOGIC_VECTOR ( 15 downto 0 )
+  );
+  end component design_1_system_ila_0_0;
   signal axi_interconnect_0_M00_AXI_ARADDR : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal axi_interconnect_0_M00_AXI_ARREADY : STD_LOGIC;
   signal axi_interconnect_0_M00_AXI_ARVALID : STD_LOGIC;
@@ -3723,7 +3729,11 @@ architecture STRUCTURE of design_1 is
   signal processing_system7_0_M_AXI_GP0_WSTRB : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal processing_system7_0_M_AXI_GP0_WVALID : STD_LOGIC;
   signal rst_ps7_0_25M_peripheral_aresetn : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal v_axi4s_vid_out_0_vid_data : STD_LOGIC_VECTOR ( 11 downto 0 );
+  signal v_axi4s_vid_out_0_vid_data : STD_LOGIC_VECTOR ( 15 downto 0 );
+  attribute DEBUG : string;
+  attribute DEBUG of v_axi4s_vid_out_0_vid_data : signal is "true";
+  attribute MARK_DEBUG : boolean;
+  attribute MARK_DEBUG of v_axi4s_vid_out_0_vid_data : signal is std.standard.true;
   signal v_axi4s_vid_out_0_vid_hsync : STD_LOGIC;
   signal v_axi4s_vid_out_0_vid_vsync : STD_LOGIC;
   signal v_axi4s_vid_out_0_vtg_ce : STD_LOGIC;
@@ -4108,6 +4118,11 @@ rst_ps7_0_25M: component design_1_rst_ps7_0_25M_0
       peripheral_reset(0) => NLW_rst_ps7_0_25M_peripheral_reset_UNCONNECTED(0),
       slowest_sync_clk => processing_system7_0_FCLK_CLK0
     );
+system_ila_0: component design_1_system_ila_0_0
+     port map (
+      clk => processing_system7_0_FCLK_CLK0,
+      probe0(15 downto 0) => v_axi4s_vid_out_0_vid_data(15 downto 0)
+    );
 v_axi4s_vid_out_0: component design_1_v_axi4s_vid_out_0_0
      port map (
       aclk => processing_system7_0_FCLK_CLK0,
@@ -4125,7 +4140,7 @@ v_axi4s_vid_out_0: component design_1_v_axi4s_vid_out_0_0
       status(31 downto 0) => NLW_v_axi4s_vid_out_0_status_UNCONNECTED(31 downto 0),
       underflow => NLW_v_axi4s_vid_out_0_underflow_UNCONNECTED,
       vid_active_video => NLW_v_axi4s_vid_out_0_vid_active_video_UNCONNECTED,
-      vid_data(11 downto 0) => v_axi4s_vid_out_0_vid_data(11 downto 0),
+      vid_data(15 downto 0) => v_axi4s_vid_out_0_vid_data(15 downto 0),
       vid_field_id => NLW_v_axi4s_vid_out_0_vid_field_id_UNCONNECTED,
       vid_hblank => NLW_v_axi4s_vid_out_0_vid_hblank_UNCONNECTED,
       vid_hsync => v_axi4s_vid_out_0_vid_hsync,
@@ -4181,17 +4196,17 @@ xlconstant_0: component design_1_xlconstant_0_0
     );
 xlslice_0: component design_1_xlslice_0_0
      port map (
-      Din(11 downto 0) => v_axi4s_vid_out_0_vid_data(11 downto 0),
+      Din(15 downto 0) => v_axi4s_vid_out_0_vid_data(15 downto 0),
       Dout(3 downto 0) => xlslice_0_Dout(3 downto 0)
     );
 xlslice_1: component design_1_xlslice_0_1
      port map (
-      Din(11 downto 0) => v_axi4s_vid_out_0_vid_data(11 downto 0),
+      Din(15 downto 0) => v_axi4s_vid_out_0_vid_data(15 downto 0),
       Dout(3 downto 0) => xlslice_1_Dout(3 downto 0)
     );
 xlslice_2: component design_1_xlslice_0_2
      port map (
-      Din(11 downto 0) => v_axi4s_vid_out_0_vid_data(11 downto 0),
+      Din(15 downto 0) => v_axi4s_vid_out_0_vid_data(15 downto 0),
       Dout(3 downto 0) => xlslice_2_Dout(3 downto 0)
     );
 end STRUCTURE;

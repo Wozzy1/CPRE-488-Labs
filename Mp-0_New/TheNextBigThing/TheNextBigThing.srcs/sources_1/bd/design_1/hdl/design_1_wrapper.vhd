@@ -1,7 +1,7 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
---Date        : Tue Feb  3 17:47:57 2026
+--Date        : Wed Feb  4 13:40:31 2026
 --Host        : CO2041-13 running 64-bit major release  (build 9200)
 --Command     : generate_target design_1_wrapper.bd
 --Design      : design_1_wrapper
@@ -45,6 +45,11 @@ end design_1_wrapper;
 architecture STRUCTURE of design_1_wrapper is
   component design_1 is
   port (
+    Dout_0 : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    Dout_1 : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    Dout_2 : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    vid_hsync_0 : out STD_LOGIC;
+    vid_vsync_0 : out STD_LOGIC;
     DDR_cas_n : inout STD_LOGIC;
     DDR_cke : inout STD_LOGIC;
     DDR_ck_n : inout STD_LOGIC;
@@ -65,12 +70,7 @@ architecture STRUCTURE of design_1_wrapper is
     FIXED_IO_ddr_vrp : inout STD_LOGIC;
     FIXED_IO_ps_srstb : inout STD_LOGIC;
     FIXED_IO_ps_clk : inout STD_LOGIC;
-    FIXED_IO_ps_porb : inout STD_LOGIC;
-    Dout_0 : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    Dout_1 : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    Dout_2 : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    vid_hsync_0 : out STD_LOGIC;
-    vid_vsync_0 : out STD_LOGIC
+    FIXED_IO_ps_porb : inout STD_LOGIC
   );
   end component design_1;
 begin

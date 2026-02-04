@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="Local" key="test3-target"/>
+	<item value="false" key="test3-partial_bit"/>
+	<item value="{&quot;cables&quot;:[{&quot;name&quot;:&quot;Digilent Zed 210248B9DB51&quot;,&quot;indexContextMap&quot;:{&quot;2&quot;:&quot;jsn-Zed-210248B9DB51-4ba00477-0&quot;,&quot;3&quot;:&quot;jsn-Zed-210248B9DB51-23727093-0&quot;}}]}" key="devices_info_Local"/>
+	<item value="" key="test3-bmmFile"/>
+	<item value="false" key="test3-skip_rev_check"/>
+	<item value="test3" key="programfpga.sdxproject"/>
+	<item value="Auto Detect" key="test3-device"/>
+	<item value="C:\Users\cihem\CPRE-488-Labs\MP-0\test3\design_1_wrapper\bitstream\design_1_wrapper.bit" key="test3-bitFile"/>
+</section>

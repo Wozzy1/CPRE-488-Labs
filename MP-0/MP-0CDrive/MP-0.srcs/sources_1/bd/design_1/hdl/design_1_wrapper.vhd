@@ -1,8 +1,8 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
---Date        : Mon Feb  2 22:59:34 2026
---Host        : CO2041-14 running 64-bit major release  (build 9200)
+--Date        : Tue Feb  3 17:08:20 2026
+--Host        : CO2041-13 running 64-bit major release  (build 9200)
 --Command     : generate_target design_1_wrapper.bd
 --Design      : design_1_wrapper
 --Purpose     : IP block netlist
@@ -53,7 +53,6 @@ architecture STRUCTURE of design_1_wrapper is
     Dout_0 : out STD_LOGIC_VECTOR ( 3 downto 0 );
     Dout_1 : out STD_LOGIC_VECTOR ( 3 downto 0 );
     Dout_2 : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    btns_5bits_tri_i : in STD_LOGIC_VECTOR ( 4 downto 0 );
     DDR_cas_n : inout STD_LOGIC;
     DDR_cke : inout STD_LOGIC;
     DDR_ck_n : inout STD_LOGIC;
@@ -76,7 +75,8 @@ architecture STRUCTURE of design_1_wrapper is
     FIXED_IO_ps_clk : inout STD_LOGIC;
     FIXED_IO_ps_porb : inout STD_LOGIC;
     sws_8bits_tri_i : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    leds_8bits_tri_o : out STD_LOGIC_VECTOR ( 7 downto 0 )
+    leds_8bits_tri_o : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    btns_5bits_tri_i : in STD_LOGIC_VECTOR ( 4 downto 0 )
   );
   end component design_1;
 begin

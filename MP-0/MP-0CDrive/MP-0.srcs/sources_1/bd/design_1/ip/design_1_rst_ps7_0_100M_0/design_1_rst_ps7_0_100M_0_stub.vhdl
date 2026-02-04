@@ -1,11 +1,11 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
--- Date        : Tue Jan 27 16:46:18 2026
--- Host        : CO2041-16 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub
---               x:/cpre488/MP-0/MP-0/MP-0.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0_stub.vhdl
--- Design      : design_1_rst_ps7_0_100M_0
+-- Date        : Mon Feb  2 15:27:29 2026
+-- Host        : CO2041-14 running 64-bit major release  (build 9200)
+-- Command     : write_vhdl -force -mode synth_stub -rename_top design_1_rst_ps7_0_100M_0 -prefix
+--               design_1_rst_ps7_0_100M_0_ design_1_proc_sys_reset_0_0_stub.vhdl
+-- Design      : design_1_proc_sys_reset_0_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z020clg484-1
 -- --------------------------------------------------------------------------------

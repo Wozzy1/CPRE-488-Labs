@@ -1,10 +1,10 @@
-set_property SRC_FILE_INFO {cfile:c:/Users/cihem/test/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc rfile:../../../MP-0.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc id:1 order:EARLY scoped_inst:design_1_i/processing_system7_0} [current_design]
-set_property SRC_FILE_INFO {cfile:C:/Users/cihem/test/CPRE-488-Labs/MP-0/MP-0CDrive/docs/ZedBoard/zedboard_master.xdc rfile:../../../docs/ZedBoard/zedboard_master.xdc id:2} [current_design]
+set_property SRC_FILE_INFO {cfile:c:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/MP-0.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc rfile:../../../MP-0.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc id:1 order:EARLY scoped_inst:design_1_i/processing_system7_0} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0CDrive/docs/ZedBoard/zedboard_master.xdc rfile:../../../docs/ZedBoard/zedboard_master.xdc id:2} [current_design]
 current_instance design_1_i/processing_system7_0
 set_property src_info {type:SCOPED_XDC file:1 line:2 export:INPUT save:INPUT read:READ} [current_design]
-create_clock -period 20.000 [get_ports {}]
+create_clock -period 40.000 [get_ports {}]
 set_property src_info {type:SCOPED_XDC file:1 line:4 export:INPUT save:INPUT read:READ} [current_design]
-create_clock -period 10.000 [get_ports {}]
+create_clock -period 40.000 [get_ports {}]
 current_instance
 set_property src_info {type:XDC file:2 line:187 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN Y21  [get_ports {Dout_2[0]}];  # "VGA-B1"

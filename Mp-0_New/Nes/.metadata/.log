@@ -1,0 +1,220 @@
+!SESSION 2026-02-05 17:43:37.460 -----------------------------------------------
+eclipse.buildId=2020.1
+java.version=9.0.4
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+This is a continuation of log file C:\Users\cihem\CPRE-488-Labs\Mp-0_New\Nes\.metadata\.bak_0.log
+Created Time: 2026-02-05 20:19:18.883
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 20:19:18.883
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-47: Launching Debugger_NESEmulator-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 20:19:18.888
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248525658]. Thread: Worker-47: Launching Debugger_NESEmulator-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 20:19:18.888
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248525658" && level==1}], Thread: Worker-47: Launching Debugger_NESEmulator-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 20:19:18.894
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248525658" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-47: Launching Debugger_NESEmulator-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 20:19:18.894
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-47: Launching Debugger_NESEmulator-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 20:19:18.899
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248525658]. Thread: Worker-47: Launching Debugger_NESEmulator-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 20:19:18.899
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248525658" && level==1}], Thread: Worker-47: Launching Debugger_NESEmulator-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 20:19:18.906
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248525658" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-47: Launching Debugger_NESEmulator-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 20:19:18.906
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-47: Launching Debugger_NESEmulator-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 20:19:18.909
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248525658]. Thread: Worker-47: Launching Debugger_NESEmulator-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 20:19:18.909
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248525658" && level==1}], Thread: Worker-47: Launching Debugger_NESEmulator-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 20:19:18.917
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248525658" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-47: Launching Debugger_NESEmulator-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 20:19:18.917
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-47: Launching Debugger_NESEmulator-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 20:19:18.919
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248525658]. Thread: Worker-47: Launching Debugger_NESEmulator-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 20:19:18.921
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248525658" && level==1}], Thread: Worker-47: Launching Debugger_NESEmulator-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 20:19:18.927
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248525658" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-47: Launching Debugger_NESEmulator-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 20:19:18.927
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-47: Launching Debugger_NESEmulator-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 20:19:18.927
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248525658]. Thread: Worker-47: Launching Debugger_NESEmulator-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 20:19:18.927
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248525658" && level==1}], Thread: Worker-47: Launching Debugger_NESEmulator-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 20:19:18.935
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248525658" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-47: Launching Debugger_NESEmulator-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 20:19:18.939
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-47: Launching Debugger_NESEmulator-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 20:19:18.941
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248525658]. Thread: Worker-47: Launching Debugger_NESEmulator-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 20:19:18.941
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248525658" && level==1}], Thread: Worker-47: Launching Debugger_NESEmulator-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 20:19:18.947
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248525658" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-47: Launching Debugger_NESEmulator-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 20:19:18.947
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Zed 210248525658" && level == 0}], Thread: Worker-47: Launching Debugger_NESEmulator-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 20:19:18.955
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Zed 210248525658" && level == 0}], Result: [null, ]. Thread: Worker-47: Launching Debugger_NESEmulator-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 20:19:18.955
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-47: Launching Debugger_NESEmulator-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 20:19:18.957
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-47: Launching Debugger_NESEmulator-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 20:19:18.957
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-47: Launching Debugger_NESEmulator-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 20:19:18.976
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-47: Launching Debugger_NESEmulator-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 20:19:18.976
+!MESSAGE XSCT Command: [rst -system], Thread: Worker-47: Launching Debugger_NESEmulator-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 20:19:19.014
+!MESSAGE XSCT command with result: [rst -system], Result: [null, ]. Thread: Worker-47: Launching Debugger_NESEmulator-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 20:19:19.014
+!MESSAGE XSCT Command: [after 3000], Thread: Worker-47: Launching Debugger_NESEmulator-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 20:19:22.028
+!MESSAGE XSCT command with result: [after 3000], Result: [null, ]. Thread: Worker-47: Launching Debugger_NESEmulator-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 20:19:22.037
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 20:19:22.040
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248525658]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 20:19:22.040
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248525658" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 20:19:22.048
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248525658" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 20:19:22.048
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248525658" && level==0 && jtag_device_ctx=="jsn-Zed-210248525658-23727093-0"}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 20:19:22.060
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248525658" && level==0 && jtag_device_ctx=="jsn-Zed-210248525658-23727093-0"}], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 20:19:22.060
+!MESSAGE XSCT Command: [fpga -file C:/Users/cihem/CPRE-488-Labs/Mp-0_New/Nes/NESEmulator/_ide/bitstream/design_1_wrapper.bit], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 20:19:24.381
+!MESSAGE XSCT command with result: [fpga -file C:/Users/cihem/CPRE-488-Labs/Mp-0_New/Nes/NESEmulator/_ide/bitstream/design_1_wrapper.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 20:19:24.397
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-47: Launching Debugger_NESEmulator-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 20:19:24.402
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-47: Launching Debugger_NESEmulator-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 20:19:24.402
+!MESSAGE XSCT Command: [loadhw -hw C:/Users/cihem/CPRE-488-Labs/Mp-0_New/Nes/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs], Thread: Worker-47: Launching Debugger_NESEmulator-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 20:19:24.412
+!MESSAGE XSCT command with result: [loadhw -hw C:/Users/cihem/CPRE-488-Labs/Mp-0_New/Nes/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs], Result: [null, design_1_wrapper_5]. Thread: Worker-47: Launching Debugger_NESEmulator-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 20:19:24.412
+!MESSAGE XSCT Command: [configparams force-mem-access 1], Thread: Worker-47: Launching Debugger_NESEmulator-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 20:19:24.419
+!MESSAGE XSCT command with result: [configparams force-mem-access 1], Result: [null, ]. Thread: Worker-47: Launching Debugger_NESEmulator-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 20:19:24.419
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-47: Launching Debugger_NESEmulator-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 20:19:24.421
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-47: Launching Debugger_NESEmulator-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 20:19:24.421
+!MESSAGE XSCT Command: [source C:/Users/cihem/CPRE-488-Labs/Mp-0_New/Nes/NESEmulator/_ide/psinit/ps7_init.tcl], Thread: Worker-47: Launching Debugger_NESEmulator-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 20:19:24.421
+!MESSAGE XSCT command with result: [source C:/Users/cihem/CPRE-488-Labs/Mp-0_New/Nes/NESEmulator/_ide/psinit/ps7_init.tcl], Result: [null, ]. Thread: Worker-47: Launching Debugger_NESEmulator-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 20:19:24.421
+!MESSAGE XSCT Command: [ps7_init], Thread: Worker-47: Launching Debugger_NESEmulator-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 20:19:24.601
+!MESSAGE XSCT command with result: [ps7_init], Result: [null, ]. Thread: Worker-47: Launching Debugger_NESEmulator-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 20:19:24.601
+!MESSAGE XSCT Command: [ps7_post_config], Thread: Worker-47: Launching Debugger_NESEmulator-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 20:19:24.610
+!MESSAGE XSCT command with result: [ps7_post_config], Result: [null, ]. Thread: Worker-47: Launching Debugger_NESEmulator-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 20:19:24.610
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A9*#0"}], Thread: Worker-47: Launching Debugger_NESEmulator-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 20:19:24.612
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A9*#0"}], Result: [null, ]. Thread: Worker-47: Launching Debugger_NESEmulator-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 20:19:24.612
+!MESSAGE XSCT Command: [dow C:/Users/cihem/CPRE-488-Labs/Mp-0_New/Nes/NESEmulator/Debug/NESEmulator.elf], Thread: Worker-47: Launching Debugger_NESEmulator-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 20:19:25.712
+!MESSAGE XSCT command with result: [dow C:/Users/cihem/CPRE-488-Labs/Mp-0_New/Nes/NESEmulator/Debug/NESEmulator.elf], Result: [null, ]. Thread: Worker-47: Launching Debugger_NESEmulator-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 20:19:25.712
+!MESSAGE XSCT Command: [configparams force-mem-access 0], Thread: Worker-47: Launching Debugger_NESEmulator-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 20:19:25.712
+!MESSAGE XSCT command with result: [configparams force-mem-access 0], Result: [null, ]. Thread: Worker-47: Launching Debugger_NESEmulator-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 20:19:25.772
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A9*#0"}], Thread: Worker-47: Launching Debugger_NESEmulator-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 20:19:25.779
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A9*#0"}], Result: [null, ]. Thread: Worker-47: Launching Debugger_NESEmulator-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 20:19:25.779
+!MESSAGE XSCT Command: [con], Thread: Worker-47: Launching Debugger_NESEmulator-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 20:19:25.789
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-47: Launching Debugger_NESEmulator-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 20:20:35.358
+!MESSAGE XSCT Command: [disconnect tcfchan#25], Thread: Thread-2764
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 20:20:35.360
+!MESSAGE XSCT command with result: [disconnect tcfchan#25], Result: [null, ]. Thread: Thread-2764

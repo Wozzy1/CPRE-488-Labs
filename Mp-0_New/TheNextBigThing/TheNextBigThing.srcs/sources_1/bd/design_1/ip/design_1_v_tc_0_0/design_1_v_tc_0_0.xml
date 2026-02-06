@@ -37,7 +37,7 @@
           <spirit:name>FREQ_HZ</spirit:name>
           <spirit:displayName>ctrl clock frequency</spirit:displayName>
           <spirit:description>ctrl clock frequency</spirit:description>
-          <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="BUSIFPARAM_VALUE.S_AXI_ACLK_INTF.FREQ_HZ">25000000</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="BUSIFPARAM_VALUE.S_AXI_ACLK_INTF.FREQ_HZ">2.5e+07</spirit:value>
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>FREQ_TOLERANCE_HZ</spirit:name>
@@ -322,7 +322,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>FREQ_HZ</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.CTRL.FREQ_HZ">25000000</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.CTRL.FREQ_HZ">2.5e+07</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -752,7 +752,7 @@
           <spirit:name>FREQ_HZ</spirit:name>
           <spirit:displayName>vtiming clock frequency</spirit:displayName>
           <spirit:description>vtiming clock frequency</spirit:description>
-          <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="BUSIFPARAM_VALUE.CLK_INTF.FREQ_HZ">25000000</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="BUSIFPARAM_VALUE.CLK_INTF.FREQ_HZ">2.5e+07</spirit:value>
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>FREQ_TOLERANCE_HZ</spirit:name>
@@ -907,11 +907,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Feb 03 23:35:57 UTC 2026</spirit:value>
+            <spirit:value>Thu Feb 05 22:40:48 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:1c75e4f1</spirit:value>
+            <spirit:value>9:9422b004</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -925,11 +925,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Feb 03 23:35:57 UTC 2026</spirit:value>
+            <spirit:value>Fri Feb 06 00:16:42 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:1c75e4f1</spirit:value>
+            <spirit:value>9:9422b004</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -945,11 +945,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Feb 03 23:35:57 UTC 2026</spirit:value>
+            <spirit:value>Fri Feb 06 00:16:42 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:1c75e4f1</spirit:value>
+            <spirit:value>9:9422b004</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -968,11 +968,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Feb 03 23:35:57 UTC 2026</spirit:value>
+            <spirit:value>Thu Feb 05 22:40:48 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:ceb4d4d6</spirit:value>
+            <spirit:value>9:71167137</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -988,11 +988,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Feb 03 23:35:57 UTC 2026</spirit:value>
+            <spirit:value>Fri Feb 06 00:16:42 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:ceb4d4d6</spirit:value>
+            <spirit:value>9:71167137</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1006,11 +1006,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Feb 03 23:36:36 UTC 2026</spirit:value>
+            <spirit:value>Fri Feb 06 00:17:26 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:1c75e4f1</spirit:value>
+            <spirit:value>9:9422b004</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>

@@ -2,8 +2,8 @@
 # Vivado v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Wed Feb  4 13:40:39 2026
-# Process ID: 12156
+# Start of session at: Thu Feb  5 18:17:58 2026
+# Process ID: 15176
 # Current directory: C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.runs/synth_1
 # Command line: vivado.exe -log design_1_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
 # Log file: C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.runs/synth_1/design_1_wrapper.vds
@@ -20,102 +20,126 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020
 INFO: [Device 21-403] Loading part xc7z020clg484-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 17660
+INFO: [Synth 8-7075] Helper process launched with PID 19760
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1013.000 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1013.652 ; gain = 0.000
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'design_1_wrapper' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:45]
-INFO: [Synth 8-3491] module 'design_1' declared at 'C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/synth/design_1.vhd:3270' bound to instance 'design_1_i' of component 'design_1' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:77]
-INFO: [Synth 8-638] synthesizing module 'design_1' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/synth/design_1.vhd:3305]
-INFO: [Synth 8-638] synthesizing module 'design_1_axi_interconnect_0_0' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/synth/design_1.vhd:2252]
+INFO: [Synth 8-638] synthesizing module 'design_1_wrapper' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:48]
+INFO: [Synth 8-3491] module 'design_1' declared at 'C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/synth/design_1.vhd:5361' bound to instance 'design_1_i' of component 'design_1' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:83]
+INFO: [Synth 8-638] synthesizing module 'design_1' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/synth/design_1.vhd:5399]
+INFO: [Synth 8-3491] module 'design_1_axi_gpio_0_0' declared at 'C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.runs/synth_1/.Xil/Vivado-15176-CO2041-12/realtime/design_1_axi_gpio_0_0_stub.vhdl:5' bound to instance 'axi_gpio_0' of component 'design_1_axi_gpio_0_0' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/synth/design_1.vhd:6033]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_gpio_0_0' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.runs/synth_1/.Xil/Vivado-15176-CO2041-12/realtime/design_1_axi_gpio_0_0_stub.vhdl:31]
+INFO: [Synth 8-3491] module 'design_1_axi_gpio_0_1' declared at 'C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.runs/synth_1/.Xil/Vivado-15176-CO2041-12/realtime/design_1_axi_gpio_0_1_stub.vhdl:5' bound to instance 'axi_gpio_1' of component 'design_1_axi_gpio_0_1' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/synth/design_1.vhd:6056]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_gpio_0_1' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.runs/synth_1/.Xil/Vivado-15176-CO2041-12/realtime/design_1_axi_gpio_0_1_stub.vhdl:31]
+INFO: [Synth 8-3491] module 'design_1_axi_gpio_0_2' declared at 'C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.runs/synth_1/.Xil/Vivado-15176-CO2041-12/realtime/design_1_axi_gpio_0_2_stub.vhdl:5' bound to instance 'axi_gpio_2' of component 'design_1_axi_gpio_0_2' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/synth/design_1.vhd:6079]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_gpio_0_2' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.runs/synth_1/.Xil/Vivado-15176-CO2041-12/realtime/design_1_axi_gpio_0_2_stub.vhdl:31]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_interconnect_0_0' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/synth/design_1.vhd:3818]
 INFO: [Synth 8-638] synthesizing module 'm00_couplers_imp_1CA5Z32' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/synth/design_1.vhd:78]
-INFO: [Synth 8-3491] module 'design_1_auto_ds_0' declared at 'C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.runs/synth_1/.Xil/Vivado-12156-CO2041-13/realtime/design_1_auto_ds_0_stub.vhdl:5' bound to instance 'auto_ds' of component 'design_1_auto_ds_0' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/synth/design_1.vhd:372]
-INFO: [Synth 8-638] synthesizing module 'design_1_auto_ds_0' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.runs/synth_1/.Xil/Vivado-12156-CO2041-13/realtime/design_1_auto_ds_0_stub.vhdl:87]
-INFO: [Synth 8-3491] module 'design_1_auto_pc_0' declared at 'C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.runs/synth_1/.Xil/Vivado-12156-CO2041-13/realtime/design_1_auto_pc_0_stub.vhdl:5' bound to instance 'auto_pc' of component 'design_1_auto_pc_0' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/synth/design_1.vhd:451]
-INFO: [Synth 8-638] synthesizing module 'design_1_auto_pc_0' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.runs/synth_1/.Xil/Vivado-12156-CO2041-13/realtime/design_1_auto_pc_0_stub.vhdl:67]
+INFO: [Synth 8-3491] module 'design_1_auto_ds_0' declared at 'C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.runs/synth_1/.Xil/Vivado-15176-CO2041-12/realtime/design_1_auto_ds_0_stub.vhdl:5' bound to instance 'auto_ds' of component 'design_1_auto_ds_0' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/synth/design_1.vhd:372]
+INFO: [Synth 8-638] synthesizing module 'design_1_auto_ds_0' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.runs/synth_1/.Xil/Vivado-15176-CO2041-12/realtime/design_1_auto_ds_0_stub.vhdl:87]
+INFO: [Synth 8-3491] module 'design_1_auto_pc_0' declared at 'C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.runs/synth_1/.Xil/Vivado-15176-CO2041-12/realtime/design_1_auto_pc_0_stub.vhdl:5' bound to instance 'auto_pc' of component 'design_1_auto_pc_0' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/synth/design_1.vhd:451]
+INFO: [Synth 8-638] synthesizing module 'design_1_auto_pc_0' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.runs/synth_1/.Xil/Vivado-15176-CO2041-12/realtime/design_1_auto_pc_0_stub.vhdl:67]
 INFO: [Synth 8-256] done synthesizing module 'm00_couplers_imp_1CA5Z32' (1#1) [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/synth/design_1.vhd:78]
 INFO: [Synth 8-638] synthesizing module 'm01_couplers_imp_I4GRPB' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/synth/design_1.vhd:601]
-INFO: [Synth 8-3491] module 'design_1_auto_pc_1' declared at 'C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.runs/synth_1/.Xil/Vivado-12156-CO2041-13/realtime/design_1_auto_pc_1_stub.vhdl:5' bound to instance 'auto_pc' of component 'design_1_auto_pc_1' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/synth/design_1.vhd:844]
-INFO: [Synth 8-638] synthesizing module 'design_1_auto_pc_1' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.runs/synth_1/.Xil/Vivado-12156-CO2041-13/realtime/design_1_auto_pc_1_stub.vhdl:90]
+INFO: [Synth 8-3491] module 'design_1_auto_pc_1' declared at 'C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.runs/synth_1/.Xil/Vivado-15176-CO2041-12/realtime/design_1_auto_pc_1_stub.vhdl:5' bound to instance 'auto_pc' of component 'design_1_auto_pc_1' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/synth/design_1.vhd:844]
+INFO: [Synth 8-638] synthesizing module 'design_1_auto_pc_1' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.runs/synth_1/.Xil/Vivado-15176-CO2041-12/realtime/design_1_auto_pc_1_stub.vhdl:90]
 INFO: [Synth 8-256] done synthesizing module 'm01_couplers_imp_I4GRPB' (2#1) [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/synth/design_1.vhd:601]
 INFO: [Synth 8-638] synthesizing module 'm02_couplers_imp_1BOGR4T' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/synth/design_1.vhd:996]
-INFO: [Synth 8-3491] module 'design_1_auto_ds_1' declared at 'C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.runs/synth_1/.Xil/Vivado-12156-CO2041-13/realtime/design_1_auto_ds_1_stub.vhdl:5' bound to instance 'auto_ds' of component 'design_1_auto_ds_1' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/synth/design_1.vhd:1291]
-INFO: [Synth 8-638] synthesizing module 'design_1_auto_ds_1' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.runs/synth_1/.Xil/Vivado-12156-CO2041-13/realtime/design_1_auto_ds_1_stub.vhdl:87]
-INFO: [Synth 8-3491] module 'design_1_auto_pc_2' declared at 'C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.runs/synth_1/.Xil/Vivado-12156-CO2041-13/realtime/design_1_auto_pc_2_stub.vhdl:5' bound to instance 'auto_pc' of component 'design_1_auto_pc_2' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/synth/design_1.vhd:1370]
-INFO: [Synth 8-638] synthesizing module 'design_1_auto_pc_2' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.runs/synth_1/.Xil/Vivado-12156-CO2041-13/realtime/design_1_auto_pc_2_stub.vhdl:67]
+INFO: [Synth 8-3491] module 'design_1_auto_ds_1' declared at 'C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.runs/synth_1/.Xil/Vivado-15176-CO2041-12/realtime/design_1_auto_ds_1_stub.vhdl:5' bound to instance 'auto_ds' of component 'design_1_auto_ds_1' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/synth/design_1.vhd:1291]
+INFO: [Synth 8-638] synthesizing module 'design_1_auto_ds_1' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.runs/synth_1/.Xil/Vivado-15176-CO2041-12/realtime/design_1_auto_ds_1_stub.vhdl:87]
+INFO: [Synth 8-3491] module 'design_1_auto_pc_2' declared at 'C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.runs/synth_1/.Xil/Vivado-15176-CO2041-12/realtime/design_1_auto_pc_2_stub.vhdl:5' bound to instance 'auto_pc' of component 'design_1_auto_pc_2' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/synth/design_1.vhd:1370]
+INFO: [Synth 8-638] synthesizing module 'design_1_auto_pc_2' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.runs/synth_1/.Xil/Vivado-15176-CO2041-12/realtime/design_1_auto_pc_2_stub.vhdl:67]
 INFO: [Synth 8-256] done synthesizing module 'm02_couplers_imp_1BOGR4T' (3#1) [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/synth/design_1.vhd:996]
-INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_O7FAN0' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/synth/design_1.vhd:1514]
-INFO: [Synth 8-3491] module 'design_1_auto_pc_3' declared at 'C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.runs/synth_1/.Xil/Vivado-12156-CO2041-13/realtime/design_1_auto_pc_3_stub.vhdl:5' bound to instance 'auto_pc' of component 'design_1_auto_pc_3' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/synth/design_1.vhd:1866]
-INFO: [Synth 8-638] synthesizing module 'design_1_auto_pc_3' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.runs/synth_1/.Xil/Vivado-12156-CO2041-13/realtime/design_1_auto_pc_3_stub.vhdl:90]
-INFO: [Synth 8-3491] module 'design_1_auto_us_0' declared at 'C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.runs/synth_1/.Xil/Vivado-12156-CO2041-13/realtime/design_1_auto_us_0_stub.vhdl:5' bound to instance 'auto_us' of component 'design_1_auto_us_0' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/synth/design_1.vhd:1948]
-INFO: [Synth 8-638] synthesizing module 'design_1_auto_us_0' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.runs/synth_1/.Xil/Vivado-12156-CO2041-13/realtime/design_1_auto_us_0_stub.vhdl:87]
-INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_O7FAN0' (4#1) [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/synth/design_1.vhd:1514]
-INFO: [Synth 8-638] synthesizing module 's01_couplers_imp_1F69D31' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/synth/design_1.vhd:2067]
-INFO: [Synth 8-256] done synthesizing module 's01_couplers_imp_1F69D31' (5#1) [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/synth/design_1.vhd:2067]
-INFO: [Synth 8-3491] module 'design_1_xbar_0' declared at 'C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.runs/synth_1/.Xil/Vivado-12156-CO2041-13/realtime/design_1_xbar_0_stub.vhdl:5' bound to instance 'xbar' of component 'design_1_xbar_0' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/synth/design_1.vhd:3073]
-INFO: [Synth 8-638] synthesizing module 'design_1_xbar_0' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.runs/synth_1/.Xil/Vivado-12156-CO2041-13/realtime/design_1_xbar_0_stub.vhdl:89]
-INFO: [Synth 8-256] done synthesizing module 'design_1_axi_interconnect_0_0' (6#1) [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/synth/design_1.vhd:2252]
-INFO: [Synth 8-3491] module 'design_1_axi_vdma_0_0' declared at 'C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.runs/synth_1/.Xil/Vivado-12156-CO2041-13/realtime/design_1_axi_vdma_0_0_stub.vhdl:5' bound to instance 'axi_vdma_0' of component 'design_1_axi_vdma_0_0' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/synth/design_1.vhd:3944]
-INFO: [Synth 8-638] synthesizing module 'design_1_axi_vdma_0_0' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.runs/synth_1/.Xil/Vivado-12156-CO2041-13/realtime/design_1_axi_vdma_0_0_stub.vhdl:53]
-INFO: [Synth 8-3491] module 'design_1_processing_system7_0_0' declared at 'C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.runs/synth_1/.Xil/Vivado-12156-CO2041-13/realtime/design_1_processing_system7_0_0_stub.vhdl:5' bound to instance 'processing_system7_0' of component 'design_1_processing_system7_0_0' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/synth/design_1.vhd:3989]
-INFO: [Synth 8-638] synthesizing module 'design_1_processing_system7_0_0' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.runs/synth_1/.Xil/Vivado-12156-CO2041-13/realtime/design_1_processing_system7_0_0_stub.vhdl:124]
-INFO: [Synth 8-3491] module 'design_1_rst_ps7_0_25M_0' declared at 'C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.runs/synth_1/.Xil/Vivado-12156-CO2041-13/realtime/design_1_rst_ps7_0_25M_0_stub.vhdl:5' bound to instance 'rst_ps7_0_25M' of component 'design_1_rst_ps7_0_25M_0' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/synth/design_1.vhd:4108]
-INFO: [Synth 8-638] synthesizing module 'design_1_rst_ps7_0_25M_0' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.runs/synth_1/.Xil/Vivado-12156-CO2041-13/realtime/design_1_rst_ps7_0_25M_0_stub.vhdl:21]
-INFO: [Synth 8-3491] module 'design_1_system_ila_0_0' declared at 'C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.runs/synth_1/.Xil/Vivado-12156-CO2041-13/realtime/design_1_system_ila_0_0_stub.vhdl:5' bound to instance 'system_ila_0' of component 'design_1_system_ila_0_0' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/synth/design_1.vhd:4121]
-INFO: [Synth 8-638] synthesizing module 'design_1_system_ila_0_0' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.runs/synth_1/.Xil/Vivado-12156-CO2041-13/realtime/design_1_system_ila_0_0_stub.vhdl:13]
-INFO: [Synth 8-3491] module 'design_1_v_axi4s_vid_out_0_0' declared at 'C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.runs/synth_1/.Xil/Vivado-12156-CO2041-13/realtime/design_1_v_axi4s_vid_out_0_0_stub.vhdl:5' bound to instance 'v_axi4s_vid_out_0' of component 'design_1_v_axi4s_vid_out_0_0' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/synth/design_1.vhd:4126]
-INFO: [Synth 8-638] synthesizing module 'design_1_v_axi4s_vid_out_0_0' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.runs/synth_1/.Xil/Vivado-12156-CO2041-13/realtime/design_1_v_axi4s_vid_out_0_0_stub.vhdl:40]
-INFO: [Synth 8-3491] module 'design_1_v_tc_0_0' declared at 'C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.runs/synth_1/.Xil/Vivado-12156-CO2041-13/realtime/design_1_v_tc_0_0_stub.vhdl:5' bound to instance 'v_tc_0' of component 'design_1_v_tc_0_0' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/synth/design_1.vhd:4158]
-INFO: [Synth 8-638] synthesizing module 'design_1_v_tc_0_0' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.runs/synth_1/.Xil/Vivado-12156-CO2041-13/realtime/design_1_v_tc_0_0_stub.vhdl:43]
-INFO: [Synth 8-3491] module 'design_1_xlconstant_0_0' declared at 'c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_xlconstant_0_0/synth/design_1_xlconstant_0_0.v:57' bound to instance 'xlconstant_0' of component 'design_1_xlconstant_0_0' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/synth/design_1.vhd:4193]
+INFO: [Synth 8-638] synthesizing module 'm03_couplers_imp_J0G1J0' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/synth/design_1.vhd:1499]
+INFO: [Synth 8-3491] module 'design_1_auto_ds_2' declared at 'C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.runs/synth_1/.Xil/Vivado-15176-CO2041-12/realtime/design_1_auto_ds_2_stub.vhdl:5' bound to instance 'auto_ds' of component 'design_1_auto_ds_2' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/synth/design_1.vhd:1794]
+INFO: [Synth 8-638] synthesizing module 'design_1_auto_ds_2' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.runs/synth_1/.Xil/Vivado-15176-CO2041-12/realtime/design_1_auto_ds_2_stub.vhdl:87]
+INFO: [Synth 8-3491] module 'design_1_auto_pc_3' declared at 'C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.runs/synth_1/.Xil/Vivado-15176-CO2041-12/realtime/design_1_auto_pc_3_stub.vhdl:5' bound to instance 'auto_pc' of component 'design_1_auto_pc_3' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/synth/design_1.vhd:1873]
+INFO: [Synth 8-638] synthesizing module 'design_1_auto_pc_3' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.runs/synth_1/.Xil/Vivado-15176-CO2041-12/realtime/design_1_auto_pc_3_stub.vhdl:67]
+INFO: [Synth 8-256] done synthesizing module 'm03_couplers_imp_J0G1J0' (4#1) [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/synth/design_1.vhd:1499]
+INFO: [Synth 8-638] synthesizing module 'm04_couplers_imp_19YU2FS' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/synth/design_1.vhd:2002]
+INFO: [Synth 8-3491] module 'design_1_auto_ds_3' declared at 'C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.runs/synth_1/.Xil/Vivado-15176-CO2041-12/realtime/design_1_auto_ds_3_stub.vhdl:5' bound to instance 'auto_ds' of component 'design_1_auto_ds_3' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/synth/design_1.vhd:2297]
+INFO: [Synth 8-638] synthesizing module 'design_1_auto_ds_3' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.runs/synth_1/.Xil/Vivado-15176-CO2041-12/realtime/design_1_auto_ds_3_stub.vhdl:87]
+INFO: [Synth 8-3491] module 'design_1_auto_pc_4' declared at 'C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.runs/synth_1/.Xil/Vivado-15176-CO2041-12/realtime/design_1_auto_pc_4_stub.vhdl:5' bound to instance 'auto_pc' of component 'design_1_auto_pc_4' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/synth/design_1.vhd:2376]
+INFO: [Synth 8-638] synthesizing module 'design_1_auto_pc_4' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.runs/synth_1/.Xil/Vivado-15176-CO2041-12/realtime/design_1_auto_pc_4_stub.vhdl:67]
+INFO: [Synth 8-256] done synthesizing module 'm04_couplers_imp_19YU2FS' (5#1) [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/synth/design_1.vhd:2002]
+INFO: [Synth 8-638] synthesizing module 'm05_couplers_imp_KSVY9L' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/synth/design_1.vhd:2505]
+INFO: [Synth 8-3491] module 'design_1_auto_ds_4' declared at 'C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.runs/synth_1/.Xil/Vivado-15176-CO2041-12/realtime/design_1_auto_ds_4_stub.vhdl:5' bound to instance 'auto_ds' of component 'design_1_auto_ds_4' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/synth/design_1.vhd:2800]
+INFO: [Synth 8-638] synthesizing module 'design_1_auto_ds_4' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.runs/synth_1/.Xil/Vivado-15176-CO2041-12/realtime/design_1_auto_ds_4_stub.vhdl:87]
+INFO: [Synth 8-3491] module 'design_1_auto_pc_5' declared at 'C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.runs/synth_1/.Xil/Vivado-15176-CO2041-12/realtime/design_1_auto_pc_5_stub.vhdl:5' bound to instance 'auto_pc' of component 'design_1_auto_pc_5' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/synth/design_1.vhd:2879]
+INFO: [Synth 8-638] synthesizing module 'design_1_auto_pc_5' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.runs/synth_1/.Xil/Vivado-15176-CO2041-12/realtime/design_1_auto_pc_5_stub.vhdl:67]
+INFO: [Synth 8-256] done synthesizing module 'm05_couplers_imp_KSVY9L' (6#1) [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/synth/design_1.vhd:2505]
+INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_O7FAN0' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/synth/design_1.vhd:3023]
+INFO: [Synth 8-3491] module 'design_1_auto_pc_6' declared at 'C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.runs/synth_1/.Xil/Vivado-15176-CO2041-12/realtime/design_1_auto_pc_6_stub.vhdl:5' bound to instance 'auto_pc' of component 'design_1_auto_pc_6' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/synth/design_1.vhd:3375]
+INFO: [Synth 8-638] synthesizing module 'design_1_auto_pc_6' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.runs/synth_1/.Xil/Vivado-15176-CO2041-12/realtime/design_1_auto_pc_6_stub.vhdl:90]
+INFO: [Synth 8-3491] module 'design_1_auto_us_0' declared at 'C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.runs/synth_1/.Xil/Vivado-15176-CO2041-12/realtime/design_1_auto_us_0_stub.vhdl:5' bound to instance 'auto_us' of component 'design_1_auto_us_0' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/synth/design_1.vhd:3457]
+INFO: [Synth 8-638] synthesizing module 'design_1_auto_us_0' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.runs/synth_1/.Xil/Vivado-15176-CO2041-12/realtime/design_1_auto_us_0_stub.vhdl:87]
+INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_O7FAN0' (7#1) [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/synth/design_1.vhd:3023]
+INFO: [Synth 8-638] synthesizing module 's01_couplers_imp_1F69D31' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/synth/design_1.vhd:3576]
+INFO: [Synth 8-256] done synthesizing module 's01_couplers_imp_1F69D31' (8#1) [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/synth/design_1.vhd:3576]
+INFO: [Synth 8-3491] module 'design_1_xbar_0' declared at 'C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.runs/synth_1/.Xil/Vivado-15176-CO2041-12/realtime/design_1_xbar_0_stub.vhdl:5' bound to instance 'xbar' of component 'design_1_xbar_0' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/synth/design_1.vhd:5047]
+INFO: [Synth 8-638] synthesizing module 'design_1_xbar_0' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.runs/synth_1/.Xil/Vivado-15176-CO2041-12/realtime/design_1_xbar_0_stub.vhdl:89]
+INFO: [Synth 8-256] done synthesizing module 'design_1_axi_interconnect_0_0' (9#1) [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/synth/design_1.vhd:3818]
+INFO: [Synth 8-3491] module 'design_1_axi_vdma_0_0' declared at 'C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.runs/synth_1/.Xil/Vivado-15176-CO2041-12/realtime/design_1_axi_vdma_0_0_stub.vhdl:5' bound to instance 'axi_vdma_0' of component 'design_1_axi_vdma_0_0' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/synth/design_1.vhd:6296]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_vdma_0_0' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.runs/synth_1/.Xil/Vivado-15176-CO2041-12/realtime/design_1_axi_vdma_0_0_stub.vhdl:53]
+INFO: [Synth 8-3491] module 'design_1_processing_system7_0_0' declared at 'C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.runs/synth_1/.Xil/Vivado-15176-CO2041-12/realtime/design_1_processing_system7_0_0_stub.vhdl:5' bound to instance 'processing_system7_0' of component 'design_1_processing_system7_0_0' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/synth/design_1.vhd:6341]
+INFO: [Synth 8-638] synthesizing module 'design_1_processing_system7_0_0' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.runs/synth_1/.Xil/Vivado-15176-CO2041-12/realtime/design_1_processing_system7_0_0_stub.vhdl:124]
+INFO: [Synth 8-3491] module 'design_1_rst_ps7_0_25M_0' declared at 'C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.runs/synth_1/.Xil/Vivado-15176-CO2041-12/realtime/design_1_rst_ps7_0_25M_0_stub.vhdl:5' bound to instance 'rst_ps7_0_25M' of component 'design_1_rst_ps7_0_25M_0' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/synth/design_1.vhd:6460]
+INFO: [Synth 8-638] synthesizing module 'design_1_rst_ps7_0_25M_0' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.runs/synth_1/.Xil/Vivado-15176-CO2041-12/realtime/design_1_rst_ps7_0_25M_0_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'design_1_system_ila_0_0' declared at 'C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.runs/synth_1/.Xil/Vivado-15176-CO2041-12/realtime/design_1_system_ila_0_0_stub.vhdl:5' bound to instance 'system_ila_0' of component 'design_1_system_ila_0_0' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/synth/design_1.vhd:6473]
+INFO: [Synth 8-638] synthesizing module 'design_1_system_ila_0_0' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.runs/synth_1/.Xil/Vivado-15176-CO2041-12/realtime/design_1_system_ila_0_0_stub.vhdl:13]
+INFO: [Synth 8-3491] module 'design_1_v_axi4s_vid_out_0_0' declared at 'C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.runs/synth_1/.Xil/Vivado-15176-CO2041-12/realtime/design_1_v_axi4s_vid_out_0_0_stub.vhdl:5' bound to instance 'v_axi4s_vid_out_0' of component 'design_1_v_axi4s_vid_out_0_0' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/synth/design_1.vhd:6478]
+INFO: [Synth 8-638] synthesizing module 'design_1_v_axi4s_vid_out_0_0' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.runs/synth_1/.Xil/Vivado-15176-CO2041-12/realtime/design_1_v_axi4s_vid_out_0_0_stub.vhdl:40]
+INFO: [Synth 8-3491] module 'design_1_v_tc_0_0' declared at 'C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.runs/synth_1/.Xil/Vivado-15176-CO2041-12/realtime/design_1_v_tc_0_0_stub.vhdl:5' bound to instance 'v_tc_0' of component 'design_1_v_tc_0_0' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/synth/design_1.vhd:6510]
+INFO: [Synth 8-638] synthesizing module 'design_1_v_tc_0_0' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.runs/synth_1/.Xil/Vivado-15176-CO2041-12/realtime/design_1_v_tc_0_0_stub.vhdl:43]
+INFO: [Synth 8-3491] module 'design_1_xlconstant_0_0' declared at 'c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_xlconstant_0_0/synth/design_1_xlconstant_0_0.v:57' bound to instance 'xlconstant_0' of component 'design_1_xlconstant_0_0' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/synth/design_1.vhd:6545]
 INFO: [Synth 8-6157] synthesizing module 'design_1_xlconstant_0_0' [c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_xlconstant_0_0/synth/design_1_xlconstant_0_0.v:57]
 INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_7_xlconstant' [c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ipshared/fcfc/hdl/xlconstant_v1_1_vl_rfs.v:23]
 	Parameter CONST_VAL bound to: 1 - type: integer 
 	Parameter CONST_WIDTH bound to: 1 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_7_xlconstant' (7#1) [c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ipshared/fcfc/hdl/xlconstant_v1_1_vl_rfs.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_xlconstant_0_0' (8#1) [c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_xlconstant_0_0/synth/design_1_xlconstant_0_0.v:57]
-INFO: [Synth 8-3491] module 'design_1_xlslice_0_0' declared at 'c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_xlslice_0_0/synth/design_1_xlslice_0_0.v:57' bound to instance 'xlslice_0' of component 'design_1_xlslice_0_0' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/synth/design_1.vhd:4197]
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_7_xlconstant' (10#1) [c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ipshared/fcfc/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xlconstant_0_0' (11#1) [c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_xlconstant_0_0/synth/design_1_xlconstant_0_0.v:57]
+INFO: [Synth 8-3491] module 'design_1_xlslice_0_0' declared at 'c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_xlslice_0_0/synth/design_1_xlslice_0_0.v:57' bound to instance 'xlslice_0' of component 'design_1_xlslice_0_0' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/synth/design_1.vhd:6549]
 INFO: [Synth 8-6157] synthesizing module 'design_1_xlslice_0_0' [c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_xlslice_0_0/synth/design_1_xlslice_0_0.v:57]
 INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice' [c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
 	Parameter DIN_WIDTH bound to: 16 - type: integer 
 	Parameter DIN_FROM bound to: 3 - type: integer 
 	Parameter DIN_TO bound to: 0 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice' (9#1) [c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_xlslice_0_0' (10#1) [c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_xlslice_0_0/synth/design_1_xlslice_0_0.v:57]
-INFO: [Synth 8-3491] module 'design_1_xlslice_0_1' declared at 'c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_xlslice_0_1/synth/design_1_xlslice_0_1.v:57' bound to instance 'xlslice_1' of component 'design_1_xlslice_0_1' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/synth/design_1.vhd:4202]
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice' (12#1) [c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xlslice_0_0' (13#1) [c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_xlslice_0_0/synth/design_1_xlslice_0_0.v:57]
+INFO: [Synth 8-3491] module 'design_1_xlslice_0_1' declared at 'c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_xlslice_0_1/synth/design_1_xlslice_0_1.v:57' bound to instance 'xlslice_1' of component 'design_1_xlslice_0_1' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/synth/design_1.vhd:6554]
 INFO: [Synth 8-6157] synthesizing module 'design_1_xlslice_0_1' [c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_xlslice_0_1/synth/design_1_xlslice_0_1.v:57]
 INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice__parameterized0' [c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
 	Parameter DIN_WIDTH bound to: 16 - type: integer 
 	Parameter DIN_FROM bound to: 7 - type: integer 
 	Parameter DIN_TO bound to: 4 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice__parameterized0' (10#1) [c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_xlslice_0_1' (11#1) [c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_xlslice_0_1/synth/design_1_xlslice_0_1.v:57]
-INFO: [Synth 8-3491] module 'design_1_xlslice_0_2' declared at 'c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_xlslice_0_2/synth/design_1_xlslice_0_2.v:57' bound to instance 'xlslice_2' of component 'design_1_xlslice_0_2' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/synth/design_1.vhd:4207]
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice__parameterized0' (13#1) [c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xlslice_0_1' (14#1) [c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_xlslice_0_1/synth/design_1_xlslice_0_1.v:57]
+INFO: [Synth 8-3491] module 'design_1_xlslice_0_2' declared at 'c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_xlslice_0_2/synth/design_1_xlslice_0_2.v:57' bound to instance 'xlslice_2' of component 'design_1_xlslice_0_2' [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/synth/design_1.vhd:6559]
 INFO: [Synth 8-6157] synthesizing module 'design_1_xlslice_0_2' [c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_xlslice_0_2/synth/design_1_xlslice_0_2.v:57]
 INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice__parameterized1' [c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
 	Parameter DIN_WIDTH bound to: 16 - type: integer 
 	Parameter DIN_FROM bound to: 11 - type: integer 
 	Parameter DIN_TO bound to: 8 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice__parameterized1' (11#1) [c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_xlslice_0_2' (12#1) [c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_xlslice_0_2/synth/design_1_xlslice_0_2.v:57]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'xlslice_2'. This will prevent further optimization [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/synth/design_1.vhd:4207]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'xlslice_1'. This will prevent further optimization [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/synth/design_1.vhd:4202]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'xlslice_0'. This will prevent further optimization [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/synth/design_1.vhd:4197]
-INFO: [Synth 8-256] done synthesizing module 'design_1' (13#1) [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/synth/design_1.vhd:3305]
-INFO: [Synth 8-256] done synthesizing module 'design_1_wrapper' (14#1) [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:45]
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice__parameterized1' (14#1) [c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xlslice_0_2' (15#1) [c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_xlslice_0_2/synth/design_1_xlslice_0_2.v:57]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'xlslice_2'. This will prevent further optimization [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/synth/design_1.vhd:6559]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'xlslice_1'. This will prevent further optimization [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/synth/design_1.vhd:6554]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'xlslice_0'. This will prevent further optimization [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/synth/design_1.vhd:6549]
+INFO: [Synth 8-256] done synthesizing module 'design_1' (16#1) [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/synth/design_1.vhd:5399]
+INFO: [Synth 8-256] done synthesizing module 'design_1_wrapper' (17#1) [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:48]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1013.000 ; gain = 0.000
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1013.652 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1013.000 ; gain = 0.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1013.652 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1013.000 ; gain = 0.000
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1013.652 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 1013.000 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.022 . Memory (MB): peak = 1013.652 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -135,20 +159,38 @@ Parsing XDC File [c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextB
 Finished Parsing XDC File [c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_v_axi4s_vid_out_0_0/design_1_v_axi4s_vid_out_0_0/design_1_v_axi4s_vid_out_0_0_in_context.xdc] for cell 'design_1_i/v_axi4s_vid_out_0'
 Parsing XDC File [c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_0/design_1_system_ila_0_0/design_1_system_ila_0_0_in_context.xdc] for cell 'design_1_i/system_ila_0'
 Finished Parsing XDC File [c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_0/design_1_system_ila_0_0/design_1_system_ila_0_0_in_context.xdc] for cell 'design_1_i/system_ila_0'
-Parsing XDC File [c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_3/design_1_auto_pc_3/design_1_auto_pc_3_in_context.xdc] for cell 'design_1_i/axi_interconnect_0/s00_couplers/auto_pc'
-Finished Parsing XDC File [c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_3/design_1_auto_pc_3/design_1_auto_pc_3_in_context.xdc] for cell 'design_1_i/axi_interconnect_0/s00_couplers/auto_pc'
+Parsing XDC File [c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0_in_context.xdc] for cell 'design_1_i/axi_gpio_0'
+Finished Parsing XDC File [c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0_in_context.xdc] for cell 'design_1_i/axi_gpio_0'
+Parsing XDC File [c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_0_1/design_1_axi_gpio_0_1/design_1_axi_gpio_0_1_in_context.xdc] for cell 'design_1_i/axi_gpio_1'
+Finished Parsing XDC File [c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_0_1/design_1_axi_gpio_0_1/design_1_axi_gpio_0_1_in_context.xdc] for cell 'design_1_i/axi_gpio_1'
+Parsing XDC File [c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_0_2/design_1_axi_gpio_0_2/design_1_axi_gpio_0_2_in_context.xdc] for cell 'design_1_i/axi_gpio_2'
+Finished Parsing XDC File [c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_0_2/design_1_axi_gpio_0_2/design_1_axi_gpio_0_2_in_context.xdc] for cell 'design_1_i/axi_gpio_2'
+Parsing XDC File [c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_6/design_1_auto_pc_6/design_1_auto_pc_6_in_context.xdc] for cell 'design_1_i/axi_interconnect_0/s00_couplers/auto_pc'
+Finished Parsing XDC File [c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_6/design_1_auto_pc_6/design_1_auto_pc_6_in_context.xdc] for cell 'design_1_i/axi_interconnect_0/s00_couplers/auto_pc'
 Parsing XDC File [c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_auto_us_0/design_1_auto_us_0/design_1_auto_us_0_in_context.xdc] for cell 'design_1_i/axi_interconnect_0/s00_couplers/auto_us'
 Finished Parsing XDC File [c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_auto_us_0/design_1_auto_us_0/design_1_auto_us_0_in_context.xdc] for cell 'design_1_i/axi_interconnect_0/s00_couplers/auto_us'
 Parsing XDC File [c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0/design_1_auto_ds_0_in_context.xdc] for cell 'design_1_i/axi_interconnect_0/m00_couplers/auto_ds'
 Finished Parsing XDC File [c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0/design_1_auto_ds_0_in_context.xdc] for cell 'design_1_i/axi_interconnect_0/m00_couplers/auto_ds'
-Parsing XDC File [c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0/design_1_auto_pc_0_in_context.xdc] for cell 'design_1_i/axi_interconnect_0/m00_couplers/auto_pc'
-Finished Parsing XDC File [c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0/design_1_auto_pc_0_in_context.xdc] for cell 'design_1_i/axi_interconnect_0/m00_couplers/auto_pc'
+Parsing XDC File [c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0/design_1_auto_pc_2_in_context.xdc] for cell 'design_1_i/axi_interconnect_0/m00_couplers/auto_pc'
+Finished Parsing XDC File [c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0/design_1_auto_pc_2_in_context.xdc] for cell 'design_1_i/axi_interconnect_0/m00_couplers/auto_pc'
 Parsing XDC File [c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1/design_1_auto_pc_1_in_context.xdc] for cell 'design_1_i/axi_interconnect_0/m01_couplers/auto_pc'
 Finished Parsing XDC File [c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1/design_1_auto_pc_1_in_context.xdc] for cell 'design_1_i/axi_interconnect_0/m01_couplers/auto_pc'
 Parsing XDC File [c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_1/design_1_auto_ds_1/design_1_auto_ds_0_in_context.xdc] for cell 'design_1_i/axi_interconnect_0/m02_couplers/auto_ds'
 Finished Parsing XDC File [c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_1/design_1_auto_ds_1/design_1_auto_ds_0_in_context.xdc] for cell 'design_1_i/axi_interconnect_0/m02_couplers/auto_ds'
-Parsing XDC File [c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_2/design_1_auto_pc_2/design_1_auto_pc_0_in_context.xdc] for cell 'design_1_i/axi_interconnect_0/m02_couplers/auto_pc'
-Finished Parsing XDC File [c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_2/design_1_auto_pc_2/design_1_auto_pc_0_in_context.xdc] for cell 'design_1_i/axi_interconnect_0/m02_couplers/auto_pc'
+Parsing XDC File [c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_2/design_1_auto_pc_2/design_1_auto_pc_2_in_context.xdc] for cell 'design_1_i/axi_interconnect_0/m02_couplers/auto_pc'
+Finished Parsing XDC File [c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_2/design_1_auto_pc_2/design_1_auto_pc_2_in_context.xdc] for cell 'design_1_i/axi_interconnect_0/m02_couplers/auto_pc'
+Parsing XDC File [c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_2/design_1_auto_ds_2/design_1_auto_ds_0_in_context.xdc] for cell 'design_1_i/axi_interconnect_0/m03_couplers/auto_ds'
+Finished Parsing XDC File [c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_2/design_1_auto_ds_2/design_1_auto_ds_0_in_context.xdc] for cell 'design_1_i/axi_interconnect_0/m03_couplers/auto_ds'
+Parsing XDC File [c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_3/design_1_auto_pc_3/design_1_auto_pc_2_in_context.xdc] for cell 'design_1_i/axi_interconnect_0/m03_couplers/auto_pc'
+Finished Parsing XDC File [c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_3/design_1_auto_pc_3/design_1_auto_pc_2_in_context.xdc] for cell 'design_1_i/axi_interconnect_0/m03_couplers/auto_pc'
+Parsing XDC File [c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_3/design_1_auto_ds_3/design_1_auto_ds_0_in_context.xdc] for cell 'design_1_i/axi_interconnect_0/m04_couplers/auto_ds'
+Finished Parsing XDC File [c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_3/design_1_auto_ds_3/design_1_auto_ds_0_in_context.xdc] for cell 'design_1_i/axi_interconnect_0/m04_couplers/auto_ds'
+Parsing XDC File [c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_4/design_1_auto_pc_4/design_1_auto_pc_2_in_context.xdc] for cell 'design_1_i/axi_interconnect_0/m04_couplers/auto_pc'
+Finished Parsing XDC File [c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_4/design_1_auto_pc_4/design_1_auto_pc_2_in_context.xdc] for cell 'design_1_i/axi_interconnect_0/m04_couplers/auto_pc'
+Parsing XDC File [c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_4/design_1_auto_ds_4/design_1_auto_ds_0_in_context.xdc] for cell 'design_1_i/axi_interconnect_0/m05_couplers/auto_ds'
+Finished Parsing XDC File [c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_4/design_1_auto_ds_4/design_1_auto_ds_0_in_context.xdc] for cell 'design_1_i/axi_interconnect_0/m05_couplers/auto_ds'
+Parsing XDC File [c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_5/design_1_auto_pc_5/design_1_auto_pc_2_in_context.xdc] for cell 'design_1_i/axi_interconnect_0/m05_couplers/auto_pc'
+Finished Parsing XDC File [c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_5/design_1_auto_pc_5/design_1_auto_pc_2_in_context.xdc] for cell 'design_1_i/axi_interconnect_0/m05_couplers/auto_pc'
 Parsing XDC File [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0/docs/ZedBoard/zedboard_master.xdc]
 WARNING: [Vivado 12-584] No ports matched '[get_ports -of_objects [get_iobanks 33]]'. [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0/docs/ZedBoard/zedboard_master.xdc:362]
 WARNING: [Vivado 12-584] No ports matched '[get_ports -of_objects [get_iobanks 34]]'. [C:/Users/cihem/CPRE-488-Labs/MP-0/MP-0/docs/ZedBoard/zedboard_master.xdc:367]
@@ -160,20 +202,20 @@ Parsing XDC File [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextB
 Finished Parsing XDC File [C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1038.586 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1053.254 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1038.586 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1053.254 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1038.586 ; gain = 25.586
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1053.254 ; gain = 39.602
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1038.586 ; gain = 25.586
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1053.254 ; gain = 39.602
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -451,6 +493,9 @@ Applied set_property DONT_TOUCH = true for design_1_i/xlslice_0. (constraint fil
 Applied set_property DONT_TOUCH = true for design_1_i/xlslice_1. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/xlslice_2. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/system_ila_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/axi_gpio_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/axi_gpio_1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/axi_gpio_2. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/axi_interconnect_0/s00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/axi_interconnect_0/s00_couplers/auto_us. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/axi_interconnect_0/m00_couplers/auto_ds. (constraint file  auto generated constraint, line ).
@@ -458,11 +503,17 @@ Applied set_property DONT_TOUCH = true for design_1_i/axi_interconnect_0/m00_cou
 Applied set_property DONT_TOUCH = true for design_1_i/axi_interconnect_0/m01_couplers/auto_pc. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/axi_interconnect_0/m02_couplers/auto_ds. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/axi_interconnect_0/m02_couplers/auto_pc. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/axi_interconnect_0/m03_couplers/auto_ds. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/axi_interconnect_0/m03_couplers/auto_pc. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/axi_interconnect_0/m04_couplers/auto_ds. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/axi_interconnect_0/m04_couplers/auto_pc. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/axi_interconnect_0/m05_couplers/auto_ds. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/axi_interconnect_0/m05_couplers/auto_pc. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1038.586 ; gain = 25.586
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1053.254 ; gain = 39.602
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1038.586 ; gain = 25.586
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1053.254 ; gain = 39.602
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -484,25 +535,25 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1038.586 ; gain = 25.586
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1053.254 ; gain = 39.602
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1038.586 ; gain = 25.586
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1053.254 ; gain = 39.602
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1038.586 ; gain = 25.586
+Finished Timing Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1053.254 ; gain = 39.602
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1039.855 ; gain = 26.855
+Finished Technology Mapping : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1053.254 ; gain = 39.602
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -520,37 +571,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1046.574 ; gain = 33.574
+Finished IO Insertion : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1055.312 ; gain = 41.660
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1046.574 ; gain = 33.574
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1055.312 ; gain = 41.660
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1046.574 ; gain = 33.574
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1055.312 ; gain = 41.660
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1046.574 ; gain = 33.574
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1055.312 ; gain = 41.660
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1046.574 ; gain = 33.574
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1055.312 ; gain = 41.660
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1046.574 ; gain = 33.574
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1055.312 ; gain = 41.660
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -566,14 +617,23 @@ Report BlackBoxes:
 |4     |design_1_auto_pc_1              |         1|
 |5     |design_1_auto_ds_1              |         1|
 |6     |design_1_auto_pc_2              |         1|
-|7     |design_1_auto_pc_3              |         1|
-|8     |design_1_auto_us_0              |         1|
-|9     |design_1_axi_vdma_0_0           |         1|
-|10    |design_1_processing_system7_0_0 |         1|
-|11    |design_1_rst_ps7_0_25M_0        |         1|
-|12    |design_1_system_ila_0_0         |         1|
-|13    |design_1_v_axi4s_vid_out_0_0    |         1|
-|14    |design_1_v_tc_0_0               |         1|
+|7     |design_1_auto_ds_2              |         1|
+|8     |design_1_auto_pc_3              |         1|
+|9     |design_1_auto_ds_3              |         1|
+|10    |design_1_auto_pc_4              |         1|
+|11    |design_1_auto_ds_4              |         1|
+|12    |design_1_auto_pc_5              |         1|
+|13    |design_1_auto_pc_6              |         1|
+|14    |design_1_auto_us_0              |         1|
+|15    |design_1_axi_gpio_0_0           |         1|
+|16    |design_1_axi_gpio_0_1           |         1|
+|17    |design_1_axi_gpio_0_2           |         1|
+|18    |design_1_axi_vdma_0_0           |         1|
+|19    |design_1_processing_system7_0_0 |         1|
+|20    |design_1_rst_ps7_0_25M_0        |         1|
+|21    |design_1_system_ila_0_0         |         1|
+|22    |design_1_v_axi4s_vid_out_0_0    |         1|
+|23    |design_1_v_tc_0_0               |         1|
 +------+--------------------------------+----------+
 
 Report Cell Usage: 
@@ -582,38 +642,48 @@ Report Cell Usage:
 +------+-------------------------------------+------+
 |1     |design_1_auto_ds_0_bbox              |     1|
 |2     |design_1_auto_ds_1_bbox              |     1|
-|3     |design_1_auto_pc_0_bbox              |     1|
-|4     |design_1_auto_pc_1_bbox              |     1|
-|5     |design_1_auto_pc_2_bbox              |     1|
-|6     |design_1_auto_pc_3_bbox              |     1|
-|7     |design_1_auto_us_0_bbox              |     1|
-|8     |design_1_axi_vdma_0_0_bbox           |     1|
-|9     |design_1_processing_system7_0_0_bbox |     1|
-|10    |design_1_rst_ps7_0_25M_0_bbox        |     1|
-|11    |design_1_system_ila_0_0_bbox         |     1|
-|12    |design_1_v_axi4s_vid_out_0_0_bbox    |     1|
-|13    |design_1_v_tc_0_0_bbox               |     1|
-|14    |design_1_xbar_0_bbox                 |     1|
-|15    |OBUF                                 |    14|
+|3     |design_1_auto_ds_2_bbox              |     1|
+|4     |design_1_auto_ds_3_bbox              |     1|
+|5     |design_1_auto_ds_4_bbox              |     1|
+|6     |design_1_auto_pc_0_bbox              |     1|
+|7     |design_1_auto_pc_1_bbox              |     1|
+|8     |design_1_auto_pc_2_bbox              |     1|
+|9     |design_1_auto_pc_3_bbox              |     1|
+|10    |design_1_auto_pc_4_bbox              |     1|
+|11    |design_1_auto_pc_5_bbox              |     1|
+|12    |design_1_auto_pc_6_bbox              |     1|
+|13    |design_1_auto_us_0_bbox              |     1|
+|14    |design_1_axi_gpio_0_0_bbox           |     1|
+|15    |design_1_axi_gpio_0_1_bbox           |     1|
+|16    |design_1_axi_gpio_0_2_bbox           |     1|
+|17    |design_1_axi_vdma_0_0_bbox           |     1|
+|18    |design_1_processing_system7_0_0_bbox |     1|
+|19    |design_1_rst_ps7_0_25M_0_bbox        |     1|
+|20    |design_1_system_ila_0_0_bbox         |     1|
+|21    |design_1_v_axi4s_vid_out_0_0_bbox    |     1|
+|22    |design_1_v_tc_0_0_bbox               |     1|
+|23    |design_1_xbar_0_bbox                 |     1|
+|24    |IBUF                                 |    13|
+|25    |OBUF                                 |    22|
 +------+-------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1046.574 ; gain = 33.574
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1055.312 ; gain = 41.660
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 1046.574 ; gain = 7.988
-Synthesis Optimization Complete : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1046.574 ; gain = 33.574
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:07 ; elapsed = 00:00:11 . Memory (MB): peak = 1055.312 ; gain = 2.059
+Synthesis Optimization Complete : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1055.312 ; gain = 41.660
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 1058.641 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.022 . Memory (MB): peak = 1067.324 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1066.562 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1072.297 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-84 Infos, 4 Warnings, 0 Critical Warnings and 0 Errors encountered.
+108 Infos, 4 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1066.562 ; gain = 53.562
+synth_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1072.297 ; gain = 58.645
 INFO: [Common 17-1381] The checkpoint 'C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.runs/synth_1/design_1_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Feb  4 13:40:59 2026...
+INFO: [Common 17-206] Exiting Vivado at Thu Feb  5 18:18:18 2026...

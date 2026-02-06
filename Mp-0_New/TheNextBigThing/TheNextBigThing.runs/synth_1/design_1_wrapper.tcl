@@ -70,7 +70,6 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 5
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z020clg484-1
 
@@ -108,7 +107,16 @@ set_property used_in_implementation false [get_files -all c:/Users/cihem/CPRE-48
 set_property used_in_implementation false [get_files -all c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_0/bd_0/ip/ip_0/bd_f60c_ila_lib_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_0/bd_0/bd_f60c_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_0/design_1_system_ila_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_3/design_1_auto_pc_3_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_0_1/design_1_axi_gpio_0_1_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_0_1/design_1_axi_gpio_0_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_0_1/design_1_axi_gpio_0_1.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_0_2/design_1_axi_gpio_0_2_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_0_2/design_1_axi_gpio_0_2_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_0_2/design_1_axi_gpio_0_2.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_6/design_1_auto_pc_6_ooc.xdc]
 set_property used_in_synthesis false [get_files -all c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_auto_us_0/design_1_auto_us_0_clocks.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_auto_us_0/design_1_auto_us_0_clocks.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_auto_us_0/design_1_auto_us_0_ooc.xdc]
@@ -121,6 +129,18 @@ set_property used_in_synthesis false [get_files -all c:/Users/cihem/CPRE-488-Lab
 set_property used_in_implementation false [get_files -all c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_1/design_1_auto_ds_1_clocks.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_1/design_1_auto_ds_1_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_2/design_1_auto_pc_2_ooc.xdc]
+set_property used_in_synthesis false [get_files -all c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_2/design_1_auto_ds_2_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_2/design_1_auto_ds_2_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_2/design_1_auto_ds_2_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_3/design_1_auto_pc_3_ooc.xdc]
+set_property used_in_synthesis false [get_files -all c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_3/design_1_auto_ds_3_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_3/design_1_auto_ds_3_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_3/design_1_auto_ds_3_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_4/design_1_auto_pc_4_ooc.xdc]
+set_property used_in_synthesis false [get_files -all c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_4/design_1_auto_ds_4_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_4/design_1_auto_ds_4_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_4/design_1_auto_ds_4_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_5/design_1_auto_pc_5_ooc.xdc]
 set_property used_in_implementation false [get_files -all C:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/design_1_ooc.xdc]
 
 OPTRACE "Adding files" END { }

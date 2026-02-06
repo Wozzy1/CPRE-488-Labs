@@ -1,10 +1,10 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-// Date        : Tue Feb  3 17:36:54 2026
-// Host        : CO2041-13 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub -rename_top design_1_auto_pc_1 -prefix
-//               design_1_auto_pc_1_ design_1_auto_pc_1_stub.v
+// Date        : Thu Feb  5 18:17:46 2026
+// Host        : CO2041-12 running 64-bit major release  (build 9200)
+// Command     : write_verilog -force -mode synth_stub
+//               c:/Users/cihem/CPRE-488-Labs/Mp-0_New/TheNextBigThing/TheNextBigThing.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1_stub.v
 // Design      : design_1_auto_pc_1
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z020clg484-1

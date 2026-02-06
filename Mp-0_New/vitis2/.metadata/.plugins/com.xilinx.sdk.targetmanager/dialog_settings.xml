@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="" key="grid-bmmFile"/>
+	<item value="{&quot;cables&quot;:[{&quot;name&quot;:&quot;Digilent Zed 210248525658&quot;,&quot;indexContextMap&quot;:{&quot;2&quot;:&quot;jsn-Zed-210248525658-4ba00477-0&quot;,&quot;3&quot;:&quot;jsn-Zed-210248525658-23727093-0&quot;}}]}" key="devices_info_Local"/>
+	<item value="false" key="grid-partial_bit"/>
+	<item value="C:\Users\cihem\CPRE-488-Labs\Mp-0_New\vitis2\design_1_wrapper\bitstream\design_1_wrapper.bit" key="grid-bitFile"/>
+	<item value="grid" key="programfpga.sdxproject"/>
+	<item value="Local" key="grid-target"/>
+	<item value="false" key="grid-skip_rev_check"/>
+	<item value="Auto Detect" key="grid-device"/>
+</section>

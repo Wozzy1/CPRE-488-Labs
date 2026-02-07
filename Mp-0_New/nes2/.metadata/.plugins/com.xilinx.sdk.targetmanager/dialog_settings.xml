@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="false" key="nes-skip_rev_check"/>
+	<item value="{&quot;cables&quot;:[{&quot;name&quot;:&quot;Digilent Zed 210248B9DA56&quot;,&quot;indexContextMap&quot;:{&quot;2&quot;:&quot;jsn-Zed-210248B9DA56-4ba00477-0&quot;,&quot;3&quot;:&quot;jsn-Zed-210248B9DA56-23727093-0&quot;}}]}" key="devices_info_Local"/>
+	<item value="" key="nes-bmmFile"/>
+	<item value="nes" key="programfpga.sdxproject"/>
+	<item value="false" key="nes-partial_bit"/>
+	<item value="C:\Users\cihem\CPRE-488-Labs\Mp-0_New\nes2\design_1_wrapper\bitstream\design_1_wrapper.bit" key="nes-bitFile"/>
+	<item value="Local" key="nes-target"/>
+	<item value="Auto Detect" key="nes-device"/>
+</section>

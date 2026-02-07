@@ -1,6 +1,6 @@
 Nothing to build in platform 'design_1_wrapper'
 
-18:46:27 **** Incremental Build of configuration Debug for project nes ****
+19:53:17 **** Incremental Build of configuration Debug for project nes ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
@@ -10,8 +10,8 @@ make --no-print-directory main-build
 'Invoking: ARM v7 gcc compiler'
 arm-none-eabi-gcc -Wall -O0 -g3 -IC:/Users/cihem/CPRE-488-Labs/Mp-0_New/nes2/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/domain_ps7_cortexa9_0/bspinclude/include -I"C:\Users\cihem\CPRE-488-Labs\Mp-0_New\nes2\nes\src\xilsd" -I"C:\Users\cihem\CPRE-488-Labs\Mp-0_New\nes2\nes\src" -I"C:\Users\cihem\CPRE-488-Labs\Mp-0_New\nes2\nes\src\NESCore" -c -fmessage-length=0 -MT"src/nes_bootloader.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -MMD -MP -MF"src/nes_bootloader.d" -MT"src/nes_bootloader.o" -o "src/nes_bootloader.o" "../src/nes_bootloader.c"
 ../src/nes_bootloader.c: In function 'nes_load':
-../src/nes_bootloader.c:158:27: warning: pointer targets in passing argument 1 of 'NESCore_LoadROM' differ in signedness [-Wpointer-sign]
-  158 |  result = NESCore_LoadROM(nes_fname);
+../src/nes_bootloader.c:178:27: warning: pointer targets in passing argument 1 of 'NESCore_LoadROM' differ in signedness [-Wpointer-sign]
+  178 |  result = NESCore_LoadROM(nes_fname);
       |                           ^~~~~~~~~
       |                           |
       |                           uint8_t * {aka unsigned char *}
@@ -20,8 +20,8 @@ C:\Users\cihem\CPRE-488-Labs\Mp-0_New\nes2\nes\src\NESCore/NESCore.h:298:33: not
   298 | int NESCore_LoadROM(const char *fileName);
       |                     ~~~~~~~~~~~~^~~~~~~~
 ../src/nes_bootloader.c: In function 'xil_init':
-../src/nes_bootloader.c:213:10: warning: unused variable 'Status' [-Wunused-variable]
-  213 |  XStatus Status = XST_SUCCESS;
+../src/nes_bootloader.c:233:10: warning: unused variable 'Status' [-Wunused-variable]
+  233 |  XStatus Status = XST_SUCCESS;
       |          ^~~~~~
 'Finished building: ../src/nes_bootloader.c'
 ' '
@@ -33,6 +33,6 @@ arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=non
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size nes.elf  |tee "nes.elf.size"
    text	   data	    bss	    dec	    hex	filename
- 482163	   4676	5069744	5556583	 54c967	nes.elf
+ 482627	   4676	5069744	5557047	 54cb37	nes.elf
 'Finished building: nes.elf.size'
 ' '

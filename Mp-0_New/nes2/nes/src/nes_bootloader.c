@@ -59,18 +59,24 @@ int str_find(const char* str, size_t len, char c) {
 	return -1;
 }
 
-// returns 0 if given file is .NES
+// returns 1 if given file is .NES
 int is_nes(FILINFO *file) {
 	const char *name = (const char *)file->fname;
-	int dot_index = str_find(name, strlen(name), '.');
-	if (dot_index < 0) {
-		xil_printf("is_nes(): file %s did not have extension wtf not our fault\r\n", (char*)file->fname);
-		return 1;
-	}
-	if (name[dot_index] == 'n' && name[dot_index+1] == 'e' && name[dot_index+2] == 's') {
+	size_t len = strlen(name);
+	int dot_index = str_find(name, len, '.');
+	if (dot_index == -1) {
+//		xil_printf("is_nes(): file %s did not have extension wtf not our fault\r\n", (char*)file->fname);
 		return 0;
 	}
-	return 1;
+	if (tolower((unsigned char)name[dot_index + 1]) == 'n' &&
+	    tolower((unsigned char)name[dot_index + 2]) == 'e' &&
+	    tolower((unsigned char)name[dot_index + 3]) == 's' &&
+	    name[dot_index + 4] == '\0') {
+	    return 1;
+	}
+	else {
+		return 0;
+	}
 }
 
 void display_games() {
@@ -84,43 +90,59 @@ void display_games() {
 	if (result != FR_OK) {
 		xil_printf("display_games(): failed to mount to fs, error: %d\r\n", result);
 	}
+	xil_printf("display_games(): mounted to file system\r\n");
 
 	// open directory
 	result = f_opendir(&directory, "");
 	if (result != FR_OK) {
 		xil_printf("display_games(): failed to open directory, error: %d\r\n", result);
 	}
+	xil_printf("display_games(): opened directory\r\n");
 
 	// read directory
 	result = f_readdir(&directory, &file);
 	if (result != FR_OK || !file.fname) {
 		xil_printf("display_games(): failed to read directory, error: %d\r\n", result);
 	}
+	xil_printf("display_games(): read the system file %s\r\n", file.fname);
 
-
-	uint8_t games[130][MAX_GAME_NAME_LENGTH];
+	char games[275][MAX_GAME_NAME_LENGTH];
 	int game_index = 0;
 
 
-	while (result == FR_OK) {
+	while (1) {
 		result = f_readdir(&directory, &file);
-		if (is_nes(&file)) {
-			size_t name_length = strlen((const char *)file.fname);
-
-
-			nes_strncpy(games[game_index++],(uint8_t*)file.fname, name_length+1);
+		if (result != FR_OK || file.fname[0] == '\0') {
+			break;
 		}
-//		xil_printf("select_game(): %s\r\n", (char*)file.fname);
+
+		if (is_nes(&file)) {
+		    const char* name = file.fname;
+		    const char* dot = strrchr(name, '.');
+
+		    size_t length = (size_t)(dot - name);
+
+		    if (length >= MAX_GAME_NAME_LENGTH) {
+		        length = MAX_GAME_NAME_LENGTH - 1;
+		    }
+
+		    strncpy(games[game_index], name, length);
+
+		    games[game_index][length] = '\0';
+
+		    game_index++;
+		}
 	}
 
-//	xil_printf("select_game(): %s\r\n", (char*)file.fname);
 	xil_printf("====================\r\n");
 	xil_printf("     SELECT GAME    \r\n");
 	for (int i = 0; i < game_index; i++) {
 		xil_printf("%s\r\n", games[i]);
 	}
 
-
+	// create visual screen loop for selecting games
+	// something like
+	// use dpad to move between options, have a function to print out a new page with the updated cursor position
 
 }
 

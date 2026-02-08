@@ -14,5 +14,4 @@ ps7_post_config
 targets -set -nocase -filter {name =~ "*A9*#0"}
 dow C:/Users/diepw50/CPRE-488-Labs/Mp-0_New/nes3/nes/Debug/nes.elf
 configparams force-mem-access 0
-targets -set -nocase -filter {name =~ "*A9*#0"}
-con
+bpadd -addr &main

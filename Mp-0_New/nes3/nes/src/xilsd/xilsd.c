@@ -25,8 +25,8 @@
 
 
 /* Global status for the FAT filesystem */
-static FATFS fatfs;
-static u32 fatfs_mounted=0;
+FATFS fatfs;
+u32 fatfs_mounted=0;
 
 /****************************************************************************
 * xilsd_fopen - calls the low-level f_open function to open a file handle

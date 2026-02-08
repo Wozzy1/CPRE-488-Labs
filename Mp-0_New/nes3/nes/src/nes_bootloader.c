@@ -19,6 +19,7 @@
 #include "nes_bootloader.h"
 #include "NESCore.h"
 #include <unistd.h>  // for usleep
+#include <pthread.h>
 
 #define MAX_GAME_NAME_LENGTH 30
 
@@ -26,7 +27,7 @@ uint8_t SELECTING_GAME = 1;
 uint8_t GAME_INDEX = 0;
 uint8_t PAGE_INDEX = 0;
 uint8_t NUM_GAMES = 0;
-
+char SELECTED_GAME[MAX_GAME_NAME_LENGTH];
 void display_page_(int start, int end, char games[130][MAX_GAME_NAME_LENGTH]);
 
 
@@ -90,17 +91,27 @@ int is_nes(FILINFO *file) {
 	}
 }
 
-void read_games(char *sel) {
+
+void read_games() {
 	DIR directory;
 	FILINFO file;
-	FATFS fs;
+//	FATFS fs;
 	FRESULT result;
 
 	// mount to drive
-	result = f_mount(0, &fs);
-	if (result != FR_OK) {
-		xil_printf("display_games(): failed to mount to fs, error: %d\r\n", result);
+	if (fatfs_mounted == 0) {
+		fatfs_mounted = 1;
+		result = f_mount(0, &fatfs);
+		if (result != FR_OK) {
+			xil_printf("display_games(): failed to mount to fs, error: %d\r\n", result);
+			return;
+		}
 	}
+
+//	result = f_mount(0, &fatfs);
+//	if (result != FR_OK) {
+//		xil_printf("display_games(): failed to mount to fs, error: %d\r\n", result);
+//	}
 	xil_printf("display_games(): mounted to file system\r\n");
 
 	// open directory
@@ -146,7 +157,7 @@ void read_games(char *sel) {
 	}
 
 	uint32_t previous_buttons = Xil_In32((UINTPTR)XPAR_AXI_GPIO_1_BASEADDR);
-	// DISPLAY FIRST PAGE
+	// DISPLAY INITIAL PAGE
 	display_page_(PAGE_INDEX * 10, PAGE_INDEX * 10 + 10, games);
 
 	while (SELECTING_GAME) {
@@ -170,11 +181,12 @@ void read_games(char *sel) {
 				final_game[length] = '\0';
 				strcat(final_game, ".nes");
 
-
-				strcpy(sel, final_game);
+				strcpy(SELECTED_GAME, final_game);
 
 				if (bootstate.debug_level >= 1)
-					xil_printf("SEL GAME_NAME: %s\r\n", sel);
+					xil_printf("SEL GAME_NAME: %s\r\n", SELECTED_GAME);
+
+				SELECTING_GAME = 0;
 				break;
 			}
 
@@ -219,6 +231,7 @@ void read_games(char *sel) {
 }
 
 void display_page_(int start, int end, char games[130][MAX_GAME_NAME_LENGTH]) {
+	xil_printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
 	xil_printf("====================\r\n");
 	xil_printf("     SELECT GAME    \r\n");
 
@@ -239,14 +252,15 @@ void display_page_(int start, int end, char games[130][MAX_GAME_NAME_LENGTH]) {
 }
 
 
-void select_game(char *sel) {
+void select_game() {
 	Xil_DCacheDisable();
+	Xil_ICacheDisable();
 
-	read_games(sel);
+	read_games();
 
+	Xil_ICacheEnable();
 	Xil_DCacheEnable();
 }
-
 
 // Runs the main NES emulation
 void nes_load() {
@@ -254,10 +268,10 @@ void nes_load() {
 	int32_t result = 0, i;
 	uint8_t nes_fname[17];
 
-	char sel[MAX_GAME_NAME_LENGTH];
-	select_game(sel);
-
-	nes_strncpy(nes_fname, (uint8_t*)sel, MAX_GAME_NAME_LENGTH);
+//	char sel[MAX_GAME_NAME_LENGTH];
+	select_game();
+	xil_printf("nes_load(): selected %s\r\n", SELECTED_GAME);
+	nes_strncpy(nes_fname, SELECTED_GAME, MAX_GAME_NAME_LENGTH);
 
 	usleep(100000);
 
@@ -295,6 +309,39 @@ void nes_load() {
 		for (i = 0; i < RESET_TIME; i++) {
 			NESCore_Cycle();
 		}
+
+		uint32_t data = (unsigned int)Xil_In32((UINTPTR)XPAR_AXI_GPIO_2_BASEADDR);
+		// if left most switch on, then break
+		if ((data >> 7) & 0x1) {
+			xil_printf("nes_load(): switch flicked, leaving loop\r\n");
+			SELECTING_GAME = 1;
+			// halt
+			NESCore_Halt();
+			// finish
+			NESCore_Finish();
+			usleep(100000);
+
+			XVtc_DisableGenerator(&Vtc);
+			usleep(50000);
+			XVtc_EnableGenerator(&Vtc);
+
+			uint16_t *ptr;
+			ptr = (uint16_t *)FBUFFER_BASEADDR;
+			for (i = 0; i < WIDTH*HEIGHT; i++) {
+				ptr[i] = INIT_COLOR;
+				if (i % WIDTH == 0)
+					ptr[i] = 0;
+			}
+
+			ptr = (uint16_t *)BBUFFER_BASEADDR;
+			for (i = 0; i < WIDTH*HEIGHT; i++) {
+				ptr[i] = INIT_COLOR;
+				if (i % WIDTH == 0)
+					ptr[i] = 0;
+			}
+			return;
+		}
+
 
 	} while (1);
 

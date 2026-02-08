@@ -117,5 +117,7 @@ void nes_load();
 #define XEXC_ON() Xil_ExceptionEnable();
 #define XEXC_OFF() Xil_ExceptionDisable();
 
+extern FATFS fatfs;
+extern u32 fatfs_mounted;
 
 #endif

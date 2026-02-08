@@ -1,0 +1,397 @@
+/*****************************************************************************
+ * Joseph Zambreno
+ * Phillip Jones
+ *
+ * Department of Electrical and Computer Engineering
+ * Iowa State University
+ *****************************************************************************/
+
+/*****************************************************************************
+ * nes_bootloader.c - main nes_bootloader application code. The bootloader
+ * reads a .nes file from the SD card, and uses this information to
+ * load and emulate the NES rom.
+ *
+ *
+ * NOTES:
+ * 10/25/13 by JAZ::Design created.
+ *****************************************************************************/
+
+#include "nes_bootloader.h"
+#include "NESCore.h"
+#include <unistd.h>  // for usleep
+
+#define MAX_GAME_NAME_LENGTH 30
+
+uint8_t SELECTING_GAME = 1;
+uint8_t GAME_INDEX = 0;
+uint8_t PAGE_INDEX = 0;
+uint8_t NUM_GAMES = 0;
+void display_page_(int start, int end, char games[130][MAX_GAME_NAME_LENGTH]);
+
+
+
+// Main function. Performs Xilinx-specific initialization, and then goes into the main polling loop
+int main() {
+
+	// Initialize all memory space
+	xil_init();
+
+	// initialize two additional buttons
+//	ps_gpio_init();
+
+	// Initialize the NESCore
+	NESCore_Init();
+
+
+	// Enable the cache
+    Xil_DCacheEnable();
+
+
+    // Main polling loop. For now, you can hard-code the .nes ROM you would like to load.
+    // Later, improve the code to have user-specified entry and exit options
+	while (1) {
+		nes_load();
+	}
+
+}
+
+
+// returns first index of the given char
+// else returns 0
+int str_find(const char* str, size_t len, char c) {
+	int index;
+	for (index = 0; index < len; index++) {
+		if (str[index] == c) {
+			return index;
+		}
+	}
+	return -1;
+}
+
+// returns 1 if given file is .NES
+// else returns 0
+int is_nes(FILINFO *file) {
+	const char *name = (const char *)file->fname;
+	size_t len = strlen(name);
+	int dot_index = str_find(name, len, '.');
+	if (dot_index == -1) {
+//		xil_printf("is_nes(): file %s did not have extension wtf not our fault\r\n", (char*)file->fname);
+		return 0;
+	}
+	if (tolower((unsigned char)name[dot_index + 1]) == 'n' &&
+	    tolower((unsigned char)name[dot_index + 2]) == 'e' &&
+	    tolower((unsigned char)name[dot_index + 3]) == 's' &&
+	    name[dot_index + 4] == '\0') {
+	    return 1;
+	}
+	else {
+		return 0;
+	}
+}
+
+void read_games(char *sel) {
+	DIR directory;
+	FILINFO file;
+	FATFS fs;
+	FRESULT result;
+
+	// mount to drive
+	result = f_mount(0, &fs);
+	if (result != FR_OK) {
+		xil_printf("display_games(): failed to mount to fs, error: %d\r\n", result);
+	}
+	xil_printf("display_games(): mounted to file system\r\n");
+
+	// open directory
+	result = f_opendir(&directory, "");
+	if (result != FR_OK) {
+		xil_printf("display_games(): failed to open directory, error: %d\r\n", result);
+	}
+	xil_printf("display_games(): opened directory\r\n");
+
+	// read directory
+	result = f_readdir(&directory, &file);
+	if (result != FR_OK || !file.fname) {
+		xil_printf("display_games(): failed to read directory, error: %d\r\n", result);
+	}
+	xil_printf("display_games(): read the system file %s\r\n", file.fname);
+
+	char games[130][MAX_GAME_NAME_LENGTH];
+//	int game_index = 0;
+
+
+	while (1) {
+		result = f_readdir(&directory, &file);
+		if (result != FR_OK || file.fname[0] == '\0') {
+			break;
+		}
+
+		if (is_nes(&file)) {
+		    const char* name = file.fname;
+		    const char* dot = strrchr(name, '.');
+
+		    size_t length = (size_t)(dot - name);
+
+		    if (length >= MAX_GAME_NAME_LENGTH) {
+		        length = MAX_GAME_NAME_LENGTH - 1;
+		    }
+
+		    strncpy(games[NUM_GAMES], name, length);
+
+		    games[NUM_GAMES][length] = '\0';
+
+		    NUM_GAMES++;
+		}
+	}
+
+	uint32_t previous_buttons = Xil_In32((UINTPTR)XPAR_AXI_GPIO_1_BASEADDR);
+	display_page_(PAGE_INDEX * 10, PAGE_INDEX * 10 + 10, games);
+	while (SELECTING_GAME) {
+		// read buttons
+		uint32_t buttons = Xil_In32((UINTPTR)XPAR_AXI_GPIO_1_BASEADDR);
+
+
+		if (previous_buttons != buttons) {
+			// compute new pages based on change
+			if ((buttons & 0b1)) {
+//				xil_printf("Start pressed\n\r");
+//				nes_strncpy((uint8_t*)sel, games[GAME_INDEX], strlen(games[GAME_INDEX)));
+				xil_printf("SEL0 GAME_NAME: %s\r\n", sel);
+				xil_printf("GAME_INDEX: %d\r\n", GAME_INDEX);
+				xil_printf("GAME_NAME: %s\r\n", games[GAME_INDEX]);
+
+
+				size_t length = strlen(games[GAME_INDEX]);
+				char final_game[MAX_GAME_NAME_LENGTH];
+				strncpy(final_game, games[GAME_INDEX], length);
+				final_game[length] = '\0';
+				strcat(final_game, ".nes");
+
+//				snprintf(final_game, sizeof(final_game), "%s.nes", games[GAME_INDEX]);
+
+				strcpy(sel, final_game);
+
+				xil_printf("SEL GAME_NAME: %s\r\n", sel);
+				break;
+			}
+
+			// DOWN BUTTON
+			if ((buttons & 0b10)) {
+				if (GAME_INDEX < PAGE_INDEX * 10 + 9) {
+					GAME_INDEX++;
+				}
+			}
+
+			// LEFT BUTTON
+			if ((buttons & 0b100)) {
+				if (PAGE_INDEX > 0) {
+					PAGE_INDEX--;
+					GAME_INDEX = PAGE_INDEX * 10 - 9;
+				}
+
+			}
+
+			// RIGHT BUTTON
+			if ((buttons & 0b1000)) {
+				if (PAGE_INDEX < NUM_GAMES / 10) {
+					PAGE_INDEX++;
+					GAME_INDEX = PAGE_INDEX * 10;
+				}
+			}
+
+			// UP BUTTON
+			if ((buttons & 0b10000)) {
+				if (GAME_INDEX > PAGE_INDEX * 10) {
+					GAME_INDEX--;
+				}
+			}
+
+			// then display
+			display_page_(PAGE_INDEX * 10, PAGE_INDEX * 10 + 10, games);
+
+		}
+		usleep(150000);
+	}
+
+
+//	xil_printf("====================\r\n");
+//	xil_printf("     SELECT GAME    \r\n");
+//	for (int i = 0; i < game_index; i++) {
+//		xil_printf("%s\r\n", games[i]);
+//	}
+
+	// create visual screen loop for selecting games
+	// something like
+	// use dpad to move between options, have a function to print out a new page with the updated cursor position
+
+}
+
+void display_page_(int start, int end, char games[130][MAX_GAME_NAME_LENGTH]) {
+	xil_printf("====================\r\n");
+	xil_printf("     SELECT GAME    \r\n");
+	if (end > NUM_GAMES) {
+		end = NUM_GAMES;
+	}
+	for (int i = start; i < end; i++) {
+		if (i == GAME_INDEX) {
+			xil_printf(">  [%3d] %s  <\r\n", i, games[i]);
+		}
+		else {
+			xil_printf("[%3d] %s\r\n", i, games[i]);
+		}
+	}
+}
+
+
+void select_game(char *sel) {
+	//selection gui
+
+//	const char* test = "zelda.nes";
+	Xil_DCacheDisable();
+
+	read_games(sel);
+
+	Xil_DCacheEnable();
+//	nes_strncpy((uint8_t*)sel, (uint8_t*)test, strlen(test));
+}
+
+
+// Runs the main NES emulation
+void nes_load() {
+
+	int32_t result = 0, i;
+	uint8_t nes_fname[17];
+
+	char sel[MAX_GAME_NAME_LENGTH];
+//	char sel[] = "zelda.nes";
+	select_game(sel);
+
+	nes_strncpy(nes_fname, (uint8_t*)sel, MAX_GAME_NAME_LENGTH);
+
+	usleep(100000);
+
+	if (bootstate.debug_level >= 1)
+		xil_printf("nes_load(): loading %s\r\n", nes_fname);
+
+
+	// Disable the cache so it will play nice with xilsd (needed here)
+	Xil_DCacheDisable();
+	result = NESCore_LoadROM(nes_fname);
+	if (result != 0) {
+		xil_printf("nes_load(): invalid ROM load. Returning:%d \r\n", result);
+	}
+	// Enable the cache for performance reasons
+    Xil_DCacheEnable();
+
+
+
+	result = NESCore_Reset();
+	if (result != 0) {
+		xil_printf("nes_load(): invalid reset. Returning\r\n");
+	}
+
+	if (bootstate.debug_level >= 1)
+		xil_printf("nes_load(): beginning emulation of %s\r\n", nes_fname);
+
+
+	bootstate.nes_playing = 1;
+	usleep(100000);
+	ptv = 0;
+
+	// Runs the emulator 20 cycles at a time. Currently there is no exit condition.
+	do {
+
+		for (i = 0; i < RESET_TIME; i++) {
+			NESCore_Cycle();
+		}
+
+	} while (1);
+
+
+	bootstate.nes_playing = 0;
+
+	return;
+
+}
+
+//#include "xil_io.h"
+//#include "xgpiops.h"
+//
+//extern XGpioPs GpioPs;
+//
+//void ps_gpio_init(void) {
+//	XGpioPs_Config *cfg = XGpioPs_LookupConfig(XPAR_XGPIOPS_0_DEVICE_ID);
+//	XGpioPs_CfgInitialize(&GpioPs, cfg, cfg->BaseAddr);
+//	XGpioPs_SetDirectionPin(&GpioPs, 50, 0);
+//	XGpioPs_SetDirectionPin(&GpioPs, 51, 0);
+//	XGpioPs_SetOutputEnablePin(&GpioPs, 50, 0);
+//	XGpioPs_SetOutputEnablePin(&GpioPs, 51, 0);
+//}
+
+// Initializes bootloader state, the Xilinx peripherals, and the front buffer
+void xil_init() {
+
+	XStatus Status = XST_SUCCESS;
+	uint32_t i;
+	uint16_t *ptr;
+
+	// Setup the bootloader state variables.
+	bootstate.nes_playing = 0;
+	bootstate.activeBuffer = (uint32_t *)FBUFFER_BASEADDR;
+
+
+	bootstate.debug_level = 1;
+
+	// For now, we disable the DCache as it causes problems with xilsd and vdma
+	Xil_DCacheDisable();
+
+
+	// Initialize the VTC module
+	if (bootstate.debug_level >= 1)
+		print("xil_init(): Initializing v_tc module\r\n");
+
+	VtcCfgPtr = XVtc_LookupConfig(XPAR_V_TC_0_DEVICE_ID);
+	XVtc_CfgInitialize(&Vtc, VtcCfgPtr, VtcCfgPtr->BaseAddress);
+	XVtc_EnableGenerator(&Vtc);
+
+
+	// Initialize the front buffer
+	if (bootstate.debug_level >= 1)
+		print("xil_init(): Initializing front buffer\r\n");
+
+	// Initialize the framebuffer. We can overwrite the edges with 0s.
+	ptr = (uint16_t *)FBUFFER_BASEADDR;
+	for (i = 0; i < WIDTH*HEIGHT; i++) {
+		ptr[i] = INIT_COLOR;
+		if (i % WIDTH == 0)
+			ptr[i] = 0;
+	}
+
+	// Initialize the back buffer
+	if (bootstate.debug_level >= 1)
+		print("xil_init(): Initializing back buffer\r\n");
+
+	ptr = (uint16_t *)BBUFFER_BASEADDR;
+	for (i = 0; i < WIDTH*HEIGHT; i++) {
+		ptr[i] = INIT_COLOR;
+		if (i % WIDTH == 0)
+			ptr[i] = 0;
+	}
+
+	// Initialize the VDMA module
+	if (bootstate.debug_level >= 1)
+		print("xil_init(): Initializing vdma module\r\n");
+
+
+    // Set up VDMA config registers. Copy-paste solution from vga_test.c (but note difference in framebuffer start address)
+	XAxiVdma_WriteReg(XPAR_AXI_VDMA_0_BASEADDR, XAXIVDMA_CR_OFFSET,  0x03);  // Read Channel: VDMA MM2S Circular Mode and Start bits set, VDMA MM2S Control
+	XAxiVdma_WriteReg(XPAR_AXI_VDMA_0_BASEADDR, XAXIVDMA_HI_FRMBUF_OFFSET, 0x00);  // Read Channel: VDMA MM2S Reg_Index
+	XAxiVdma_WriteReg(XPAR_AXI_VDMA_0_BASEADDR, XAXIVDMA_MM2S_ADDR_OFFSET + XAXIVDMA_START_ADDR_OFFSET, FBUFFER_BASEADDR);  // Read Channel: VDMA MM2S Frame buffer Start Addr 1
+	XAxiVdma_WriteReg(XPAR_AXI_VDMA_0_BASEADDR, XAXIVDMA_MM2S_ADDR_OFFSET + XAXIVDMA_STRD_FRMDLY_OFFSET, 0x0500);  // Read Channel: VDMA MM2S FRM_Delay, and Stride
+	XAxiVdma_WriteReg(XPAR_AXI_VDMA_0_BASEADDR, XAXIVDMA_MM2S_ADDR_OFFSET + XAXIVDMA_HSIZE_OFFSET, 0x0500);  // Read Channel: VDMA MM2S HSIZE
+	XAxiVdma_WriteReg(XPAR_AXI_VDMA_0_BASEADDR, XAXIVDMA_MM2S_ADDR_OFFSET + XAXIVDMA_VSIZE_OFFSET, 0x01E0);  // Read Channel: VDMA MM2S VSIZE  (Note: Also Starts VDMA transaction)
+
+  	return;
+}
+
+

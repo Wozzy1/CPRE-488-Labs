@@ -1,0 +1,32 @@
+
+process (clk)
+
+if signal == 1
+	onrising clk
+	int clks++
+	if clks > 200000
+		state = idle
+else if signal == 0 and state == idle
+	//start capture
+	while capture
+		while count < 6
+			if signal = 1
+				clks++
+			else
+				channel[count] = clks
+				count++
+		count = 0
+	
+	roll = channel[0]
+	pitch = channel[1]
+	throttle = channel[2]
+	yaw = channel[3]
+	vra = channel[4]
+	vrb = channel[5]
+	
+	slv_reg[15:10] = channel[5:0] (readonly)
+	slv_reg1++
+	
+	
+	
+	

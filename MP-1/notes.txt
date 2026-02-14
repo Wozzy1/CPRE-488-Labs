@@ -1,3 +1,23 @@
+slave reg descriptions
+
+ r0 - 0/1 PPM_INPUT->PPM_OUTPUT / other diagnostic function
+ r1 - frame counter inc AFTER c1-6 are recorded
+ r2 - 
+ r3 - 
+ r4 - 
+ r5 - 
+ r6 - 
+ r7 - 
+ r8 - 
+ r9 - 
+r10 - c1 cycle counts
+r11 - c2 cycle counts
+r12 - c3 cycle counts
+r13 - c4 cycle counts
+r14 - c5 cycle counts
+r15 - c6 cycle counts
+
+
 
 process (clk)
 

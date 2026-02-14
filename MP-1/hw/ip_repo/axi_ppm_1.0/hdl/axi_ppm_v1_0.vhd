@@ -16,7 +16,8 @@ entity axi_ppm_v1_0 is
 	);
 	port (
 		-- Users to add ports here
-
+        ppm_in  : in std_logic;
+        ppm_out : out std_logic;
 		-- User ports ends
 		-- Do not modify the ports beyond this line
 
@@ -47,8 +48,15 @@ entity axi_ppm_v1_0 is
 end axi_ppm_v1_0;
 
 architecture arch_imp of axi_ppm_v1_0 is
-
-	-- component declaration
+    
+    type state_type is (IDLE, PULSE1, PULSE2, PULSE3, PULSE4, PULSE5, PULSE6, PULSE7,
+                        C1, C2, C3, C4, C5, C6, UPDATE_R1);
+    type channel_array is array (0 to 5) of integer;
+    
+    signal channel_count : integer := 0;
+    signal clk_count     : integer := 0;
+    signal PS, NS : state_type;
+    -- component declaration
 	component axi_ppm_v1_0_S00_AXI is
 		generic (
 		C_S_AXI_DATA_WIDTH	: integer	:= 32;
@@ -112,6 +120,115 @@ axi_ppm_v1_0_S00_AXI_inst : axi_ppm_v1_0_S00_AXI
 	);
 
 	-- Add user logic here
+    manage_cnt : process( s00_axi_aclk )
+    begin
+      if ( ppm_in = '1' ) then
+      
+          if (rising_edge ( s00_axi_aclk )) then
+            clk_count <= clk_count + 1;
+            -- ALSO UPDATE CHANNEL(COUNT) THING HERE I THINK
+          end if;
+          
+      end if;
+    end process;
+    
+    update_state : process ( s00_axi_aclk )
+    begin
+        if (rising_edge ( s00_axi_aclk ) ) then
+            if ( s00_axi_aresetn = '1' ) then
+                PS <= IDLE;
+            else
+                PS <= NS;            
+            end if;
+        end if;
+    
+    end process update_state;
+    
+    capture_channel : process (PS, clk_count, ppm_in)
+    begin
+        NS <= PS; -- default next state is present state
+        
+        case PS is 
+        
+        when IDLE =>
+            -- capture clks until ppm_in is high
+            -- then we keep counting clks, 
+            -- but later subtract the time spent low since that is pulse time                 
+            if (ppm_in = '0') then
+                NS <= PULSE1;
+            end if;
+        
+        when PULSE1 => 
+            if (ppm_in = '1') then
+                NS <= C1;
+            end if;
+            
+        when C1 => 
+            if (ppm_in = '0') then
+                NS <= PULSE2;
+            end if;
+            
+        when PULSE2 =>
+            if (ppm_in = '1') then
+                NS <= C2;
+            end if;
+        
+        when C2 => 
+            if (ppm_in = '0') then
+                NS <= PULSE3;
+            end if;
+        
+        when PULSE3 =>
+            if (ppm_in = '1') then
+                NS <= C3;
+            end if;
+        
+        when C3 => 
+            if (ppm_in =  '0') then
+                NS <= PULSE4;
+            end if;
+            
+        when PULSE4 =>
+            if (ppm_in = '1') then
+                NS <= C4;
+            end if;
+            
+        when C4 =>
+            if (ppm_in = '0') then
+                NS <= PULSE5;
+            end if;
+            
+        when PULSE5 =>
+            if (ppm_in = '1') then
+                NS <= C5;
+            end if;
+            
+        when C5 =>
+            if (ppm_in = '0') then
+                NS <= PULSE6;
+            end if;
+        
+        when PULSE6 =>
+            if (ppm_in = '1') then
+                NS <= C6;
+            end if;
+            
+        when C6 => 
+            if (ppm_in = '0') then
+               NS <= PULSE7;
+            end if;
+            
+        when PULSE7 =>
+            if (ppm_in = '1') then
+               NS <= IDLE;
+            end if;
+            
+        when others =>
+            NS <= IDLE;
+            
+        end case;
+    
+    end process capture_channel;
 
 	-- User logic ends
 

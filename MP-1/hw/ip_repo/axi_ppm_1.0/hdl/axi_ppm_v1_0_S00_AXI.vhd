@@ -543,10 +543,6 @@ begin
 
 
 	-- Add user logic here
-    process( S_AXI_ACLK) is
-    begin
-      
-    end process;
 
 	-- User logic ends
 

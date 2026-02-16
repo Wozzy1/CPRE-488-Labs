@@ -1,0 +1,180 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Mon Feb 16 14:40:12 2026
+# Process ID: 20424
+# Current directory: C:/Users/cihem/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/impl_1
+# Command line: vivado.exe -log design_1_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source design_1_wrapper.tcl -notrace
+# Log file: C:/Users/cihem/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/impl_1/design_1_wrapper.vdi
+# Journal file: C:/Users/cihem/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source design_1_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/cihem/CPRE-488-Labs/MP-1/hw/ip_repo/ppm2_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/cihem/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm_1.0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.1/data/ip'.
+Command: link_design -top design_1_wrapper -part xc7z020clg484-1
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/cihem/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/ip/design_1_ppm2_0_0/design_1_ppm2_0_0.dcp' for cell 'design_1_i/ppm2_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/cihem/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.dcp' for cell 'design_1_i/processing_system7_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/cihem/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0.dcp' for cell 'design_1_i/rst_ps7_0_100M'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/cihem/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_0/design_1_system_ila_0_0.dcp' for cell 'design_1_i/system_ila_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/cihem/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0.dcp' for cell 'design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 1013.359 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 186 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2020.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Chipscope 16-324] Core: design_1_i/system_ila_0/U0/ila_lib UUID: e0698dbb-7e4f-5bce-a82c-fc5d3d48baa4 
+Parsing XDC File [c:/Users/cihem/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xdc] for cell 'design_1_i/processing_system7_0/inst'
+Finished Parsing XDC File [c:/Users/cihem/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xdc] for cell 'design_1_i/processing_system7_0/inst'
+Parsing XDC File [c:/Users/cihem/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0_board.xdc] for cell 'design_1_i/rst_ps7_0_100M/U0'
+Finished Parsing XDC File [c:/Users/cihem/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0_board.xdc] for cell 'design_1_i/rst_ps7_0_100M/U0'
+Parsing XDC File [c:/Users/cihem/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0.xdc] for cell 'design_1_i/rst_ps7_0_100M/U0'
+Finished Parsing XDC File [c:/Users/cihem/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0.xdc] for cell 'design_1_i/rst_ps7_0_100M/U0'
+Parsing XDC File [c:/Users/cihem/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_0/bd_0/ip/ip_0/ila_v6_2/constraints/ila_impl.xdc] for cell 'design_1_i/system_ila_0/U0/ila_lib/U0'
+Finished Parsing XDC File [c:/Users/cihem/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_0/bd_0/ip/ip_0/ila_v6_2/constraints/ila_impl.xdc] for cell 'design_1_i/system_ila_0/U0/ila_lib/U0'
+Parsing XDC File [c:/Users/cihem/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_0/bd_0/ip/ip_0/ila_v6_2/constraints/ila.xdc] for cell 'design_1_i/system_ila_0/U0/ila_lib/U0'
+Finished Parsing XDC File [c:/Users/cihem/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_0/bd_0/ip/ip_0/ila_v6_2/constraints/ila.xdc] for cell 'design_1_i/system_ila_0/U0/ila_lib/U0'
+Parsing XDC File [C:/Users/cihem/CPRE-488-Labs/MP-1/docs/ZedBoard/zedboard_master.xdc]
+WARNING: [Vivado 12-584] No ports matched '[get_ports -of_objects [get_iobanks 33]]'. [C:/Users/cihem/CPRE-488-Labs/MP-1/docs/ZedBoard/zedboard_master.xdc:362]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/cihem/CPRE-488-Labs/MP-1/docs/ZedBoard/zedboard_master.xdc:362]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched '[get_ports -of_objects [get_iobanks 34]]'. [C:/Users/cihem/CPRE-488-Labs/MP-1/docs/ZedBoard/zedboard_master.xdc:367]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/cihem/CPRE-488-Labs/MP-1/docs/ZedBoard/zedboard_master.xdc:367]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched '[get_ports -of_objects [get_iobanks 35]]'. [C:/Users/cihem/CPRE-488-Labs/MP-1/docs/ZedBoard/zedboard_master.xdc:372]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/cihem/CPRE-488-Labs/MP-1/docs/ZedBoard/zedboard_master.xdc:372]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Users/cihem/CPRE-488-Labs/MP-1/docs/ZedBoard/zedboard_master.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1013.359 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 32 instances were transformed.
+  CFGLUT5 => CFGLUT5 (SRL16E, SRLC32E): 32 instances
+
+17 Infos, 3 Warnings, 3 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1013.359 ; gain = 0.000
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10[0] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10_reg[0]__0/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10_reg[0]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10[10] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10_reg[10]/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10_reg[10]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10[11] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10_reg[11]/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10_reg[11]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10[12] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10_reg[12]__0/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10_reg[12]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10[13] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10_reg[13]__0/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10_reg[13]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10[14] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10_reg[14]/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10_reg[14]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10[15] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10_reg[15]/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10_reg[15]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10[16] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10_reg[16]__0/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10_reg[16]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10[17] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10_reg[17]/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10_reg[17]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10[18] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10_reg[18]/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10_reg[18]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10[19] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10_reg[19]/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10_reg[19]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10[1] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10_reg[1]/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10_reg[1]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10[20] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10_reg[20]/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10_reg[20]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10[21] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10_reg[21]__0/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10_reg[21]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10[22] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10_reg[22]/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10_reg[22]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10[23] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10_reg[23]__0/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10_reg[23]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10[24] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10_reg[24]__0/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10_reg[24]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10[25] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10_reg[25]__0/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10_reg[25]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10[26] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10_reg[26]/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10_reg[26]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10[27] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10_reg[27]/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10_reg[27]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10[28] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10_reg[28]/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10_reg[28]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10[29] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10_reg[29]__0/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10_reg[29]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10[2] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10_reg[2]/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10_reg[2]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10[30] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10_reg[30]/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10_reg[30]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10[31] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10_reg[31]/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10_reg[31]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10[3] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10_reg[3]/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10_reg[3]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10[4] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10_reg[4]/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10_reg[4]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10[5] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10_reg[5]__0/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10_reg[5]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10[6] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10_reg[6]__0/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10_reg[6]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10[7] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10_reg[7]__0/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10_reg[7]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10[8] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10_reg[8]/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10_reg[8]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10[9] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10_reg[9]/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg10_reg[9]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11[0] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11_reg[0]__0/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11_reg[0]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11[10] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11_reg[10]/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11_reg[10]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11[11] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11_reg[11]/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11_reg[11]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11[12] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11_reg[12]/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11_reg[12]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11[13] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11_reg[13]/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11_reg[13]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11[14] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11_reg[14]__0/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11_reg[14]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11[15] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11_reg[15]/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11_reg[15]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11[16] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11_reg[16]/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11_reg[16]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11[17] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11_reg[17]__0/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11_reg[17]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11[18] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11_reg[18]__0/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11_reg[18]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11[19] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11_reg[19]/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11_reg[19]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11[1] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11_reg[1]/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11_reg[1]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11[20] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11_reg[20]__0/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11_reg[20]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11[21] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11_reg[21]/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11_reg[21]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11[22] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11_reg[22]__0/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11_reg[22]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11[23] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11_reg[23]/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11_reg[23]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11[24] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11_reg[24]/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11_reg[24]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11[25] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11_reg[25]__0/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11_reg[25]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11[26] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11_reg[26]/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11_reg[26]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11[27] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11_reg[27]/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11_reg[27]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11[28] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11_reg[28]/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11_reg[28]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11[29] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11_reg[29]__0/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11_reg[29]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11[2] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11_reg[2]/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11_reg[2]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11[30] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11_reg[30]/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11_reg[30]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11[31] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11_reg[31]/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11_reg[31]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11[3] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11_reg[3]__0/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11_reg[3]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11[4] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11_reg[4]/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11_reg[4]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11[5] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11_reg[5]/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11_reg[5]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11[6] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11_reg[6]/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11_reg[6]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11[7] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11_reg[7]__0/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11_reg[7]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11[8] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11_reg[8]__0/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11_reg[8]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11[9] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11_reg[9]/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg11_reg[9]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12[0] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12_reg[0]__0/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12_reg[0]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12[10] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12_reg[10]__0/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12_reg[10]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12[11] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12_reg[11]__0/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12_reg[11]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12[12] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12_reg[12]/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12_reg[12]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12[13] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12_reg[13]/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12_reg[13]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12[14] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12_reg[14]/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12_reg[14]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12[15] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12_reg[15]__0/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12_reg[15]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12[16] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12_reg[16]/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12_reg[16]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12[17] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12_reg[17]/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12_reg[17]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12[18] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12_reg[18]__0/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12_reg[18]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12[19] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12_reg[19]/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12_reg[19]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12[1] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12_reg[1]/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12_reg[1]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12[20] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12_reg[20]__0/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12_reg[20]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12[21] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12_reg[21]__0/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12_reg[21]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12[22] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12_reg[22]__0/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12_reg[22]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12[23] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12_reg[23]__0/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12_reg[23]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12[24] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12_reg[24]/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12_reg[24]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12[25] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12_reg[25]__0/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12_reg[25]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12[26] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12_reg[26]__0/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12_reg[26]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12[27] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12_reg[27]__0/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12_reg[27]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12[28] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12_reg[28]__0/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12_reg[28]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12[29] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12_reg[29]/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12_reg[29]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12[2] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12_reg[2]__0/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12_reg[2]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12[30] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12_reg[30]__0/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12_reg[30]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12[31] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12_reg[31]/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12_reg[31]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12[3] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12_reg[3]/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12_reg[3]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12[4] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12_reg[4]/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12_reg[4]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12[5] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12_reg[5]__0/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12_reg[5]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12[6] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12_reg[6]/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12_reg[6]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12[7] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12_reg[7]/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12_reg[7]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12[8] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12_reg[8]__0/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12_reg[8]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12[9] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12_reg[9]/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg12_reg[9]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg13[0] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg13_reg[0]__0/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg13_reg[0]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg13[10] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg13_reg[10]__0/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg13_reg[10]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg13[11] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg13_reg[11]__0/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg13_reg[11]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg13[12] has multiple drivers: design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg13_reg[12]/Q, and design_1_i/ppm2_0/U0/ppm2_v1_0_S00_AXI_inst/slv_reg13_reg[12]__0/Q.
+INFO: [Common 17-14] Message 'DRC MDRV-1' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Project 1-461] DRC finished with 224 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+ERROR: [Vivado_Tcl 4-78] Error(s) found during DRC. Opt_design not run.
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.441 . Memory (MB): peak = 1013.359 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+23 Infos, 3 Warnings, 3 Critical Warnings and 101 Errors encountered.
+opt_design failed
+ERROR: [Common 17-39] 'opt_design' failed due to earlier errors.
+
+INFO: [Common 17-206] Exiting Vivado at Mon Feb 16 14:40:25 2026...

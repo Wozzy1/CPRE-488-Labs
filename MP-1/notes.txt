@@ -19,6 +19,52 @@ r15 - c6 cycle counts
 
 
 
+process(clk)
+	if signal == 1
+		onrising'clk
+		clks++
+	else 
+		if state == idle
+			idle = clks
+			state = ch1
+		if state == ch1
+			ch1 = clks
+			state = ch2
+		if state == ch2
+			ch2 = clks
+			state = ch3
+		if state == ch3
+			ch3 = clks
+			state = ch4
+		if state == ch4
+			ch4 = clks
+			state = ch5
+		if state == ch5
+			ch5 = clks
+			state = ch6
+		if state == ch6
+			ch6 = clks
+			state = idle
+		if state == unknown && clks > 200000
+			state = idle
+		clks = 0
+
+
+
+
+	if state == unknown && signal == 1
+		onrising'clk
+		int clks++
+		if clks > 200000
+			state = idle
+	if signal == 0
+		clks = 0
+	if state == idle && signal == 1
+		state = channel 1
+		if 
+		
+
+
 process (clk)
 
 if signal == 1

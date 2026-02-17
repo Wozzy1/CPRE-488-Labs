@@ -18,6 +18,7 @@ entity ppm3_v1_0_S00_AXI is
 		-- Users to add ports here
         PPM_Input   : in std_logic;
         PPM_Output  : out std_logic;
+        
 		-- User ports ends
 		-- Do not modify the ports beyond this line
 

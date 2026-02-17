@@ -18,7 +18,7 @@
       },
       "rst_ps7_0_100M": "",
       "system_ila_0": "",
-      "ppm2_0": ""
+      "ppm3_0": ""
     },
     "interface_ports": {
       "DDR": {
@@ -1068,16 +1068,16 @@
           }
         },
         "interface_nets": {
-          "ps7_0_axi_periph_to_s00_couplers": {
-            "interface_ports": [
-              "S00_AXI",
-              "s00_couplers/S_AXI"
-            ]
-          },
           "s00_couplers_to_ps7_0_axi_periph": {
             "interface_ports": [
               "M00_AXI",
               "s00_couplers/M_AXI"
+            ]
+          },
+          "ps7_0_axi_periph_to_s00_couplers": {
+            "interface_ports": [
+              "S00_AXI",
+              "s00_couplers/S_AXI"
             ]
           }
         },
@@ -1130,9 +1130,9 @@
           }
         }
       },
-      "ppm2_0": {
-        "vlnv": "iastate.edu:user:ppm2:1.0",
-        "xci_name": "design_1_ppm2_0_3"
+      "ppm3_0": {
+        "vlnv": "iastate.edu:user:ppm3:1.0",
+        "xci_name": "design_1_ppm3_0_2"
       }
     },
     "interface_nets": {
@@ -1142,22 +1142,22 @@
           "processing_system7_0/DDR"
         ]
       },
-      "processing_system7_0_M_AXI_GP0": {
-        "interface_ports": [
-          "processing_system7_0/M_AXI_GP0",
-          "ps7_0_axi_periph/S00_AXI"
-        ]
-      },
       "processing_system7_0_FIXED_IO": {
         "interface_ports": [
           "FIXED_IO",
           "processing_system7_0/FIXED_IO"
         ]
       },
+      "processing_system7_0_M_AXI_GP0": {
+        "interface_ports": [
+          "processing_system7_0/M_AXI_GP0",
+          "ps7_0_axi_periph/S00_AXI"
+        ]
+      },
       "ps7_0_axi_periph_M00_AXI": {
         "interface_ports": [
           "ps7_0_axi_periph/M00_AXI",
-          "ppm2_0/S00_AXI"
+          "ppm3_0/S00_AXI"
         ]
       }
     },
@@ -1171,7 +1171,7 @@
           "ps7_0_axi_periph/M00_ACLK",
           "ps7_0_axi_periph/ACLK",
           "system_ila_0/clk",
-          "ppm2_0/s00_axi_aclk"
+          "ppm3_0/s00_axi_aclk"
         ]
       },
       "processing_system7_0_FCLK_RESET0_N": {
@@ -1186,14 +1186,14 @@
           "ps7_0_axi_periph/S00_ARESETN",
           "ps7_0_axi_periph/M00_ARESETN",
           "ps7_0_axi_periph/ARESETN",
-          "ppm2_0/s00_axi_aresetn"
+          "ppm3_0/s00_axi_aresetn"
         ]
       },
       "ppm_in_0_1": {
         "ports": [
           "ppm_in_0",
           "system_ila_0/probe0",
-          "ppm2_0/ppm_in"
+          "ppm3_0/ppm_in"
         ],
         "hdl_attributes": {
           "DEBUG": {
@@ -1212,8 +1212,8 @@
             "range": "4G",
             "width": "32",
             "segments": {
-              "SEG_ppm2_0_S00_AXI_reg": {
-                "address_block": "/ppm2_0/S00_AXI/S00_AXI_reg",
+              "SEG_ppm3_0_S00_AXI_reg": {
+                "address_block": "/ppm3_0/S00_AXI/S00_AXI_reg",
                 "offset": "0x43C00000",
                 "range": "64K"
               }

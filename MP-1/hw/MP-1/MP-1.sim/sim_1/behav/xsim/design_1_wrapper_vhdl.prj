@@ -1,0 +1,14 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../MP-1.ip_user_files/bd/design_1/ip/design_1_rst_ps7_0_100M_0/sim/design_1_rst_ps7_0_100M_0.vhd" \
+"../../../../MP-1.ip_user_files/bd/design_1/ip/design_1_system_ila_0_0/bd_0/sim/bd_f60c.vhd" \
+"../../../../MP-1.ip_user_files/bd/design_1/ip/design_1_system_ila_0_0/bd_0/ip/ip_0/sim/bd_f60c_ila_lib_0.vhd" \
+"../../../../MP-1.ip_user_files/bd/design_1/ip/design_1_system_ila_0_0/sim/design_1_system_ila_0_0.vhd" \
+"../../../../MP-1.ip_user_files/bd/design_1/sim/design_1.vhd" \
+"../../../../MP-1.ip_user_files/bd/design_1/ipshared/078b/hdl/ppm3_v1_0_S00_AXI.vhd" \
+"../../../../MP-1.ip_user_files/bd/design_1/ipshared/078b/hdl/ppm3_v1_0.vhd" \
+"../../../../MP-1.ip_user_files/bd/design_1/ip/design_1_ppm3_0_2/sim/design_1_ppm3_0_2.vhd" \
+"../../../../MP-1.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd" \
+
+# Do not sort compile order
+nosort

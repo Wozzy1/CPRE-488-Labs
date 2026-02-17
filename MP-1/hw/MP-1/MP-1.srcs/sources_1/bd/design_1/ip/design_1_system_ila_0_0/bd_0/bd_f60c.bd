@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x614E43BA2D4E8E3F",
+      "boundary_crc": "0x614E43BA021ACF14",
       "design_src": "SBD",
       "device": "xc7z020clg484-1",
       "name": "bd_f60c",
@@ -24,8 +24,8 @@
             "value_src": "default_prop"
           },
           "FREQ_HZ": {
-            "value": "100000000",
-            "value_src": "default"
+            "value": "1e+08",
+            "value_src": "default_prop"
           },
           "FREQ_TOLERANCE_HZ": {
             "value": "0",
@@ -62,7 +62,7 @@
             "value": "FALSE"
           },
           "C_DATA_DEPTH": {
-            "value": "1024"
+            "value": "32768"
           },
           "C_EN_STRG_QUAL": {
             "value": "0"

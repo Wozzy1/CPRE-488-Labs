@@ -17,8 +17,8 @@
         }
       },
       "rst_ps7_0_100M": "",
-      "ppm2_0": "",
-      "system_ila_0": ""
+      "system_ila_0": "",
+      "ppm2_0": ""
     },
     "interface_ports": {
       "DDR": {
@@ -1112,14 +1112,13 @@
         "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
         "xci_name": "design_1_rst_ps7_0_100M_0"
       },
-      "ppm2_0": {
-        "vlnv": "iastate.edu:user:ppm2:1.0",
-        "xci_name": "design_1_ppm2_0_0"
-      },
       "system_ila_0": {
         "vlnv": "xilinx.com:ip:system_ila:1.1",
         "xci_name": "design_1_system_ila_0_0",
         "parameters": {
+          "C_DATA_DEPTH": {
+            "value": "32768"
+          },
           "C_MON_TYPE": {
             "value": "NATIVE"
           },
@@ -1130,21 +1129,13 @@
             "value": "0"
           }
         }
+      },
+      "ppm2_0": {
+        "vlnv": "iastate.edu:user:ppm2:1.0",
+        "xci_name": "design_1_ppm2_0_3"
       }
     },
     "interface_nets": {
-      "ps7_0_axi_periph_M00_AXI": {
-        "interface_ports": [
-          "ps7_0_axi_periph/M00_AXI",
-          "ppm2_0/S00_AXI"
-        ]
-      },
-      "processing_system7_0_FIXED_IO": {
-        "interface_ports": [
-          "FIXED_IO",
-          "processing_system7_0/FIXED_IO"
-        ]
-      },
       "processing_system7_0_DDR": {
         "interface_ports": [
           "DDR",
@@ -1155,6 +1146,18 @@
         "interface_ports": [
           "processing_system7_0/M_AXI_GP0",
           "ps7_0_axi_periph/S00_AXI"
+        ]
+      },
+      "processing_system7_0_FIXED_IO": {
+        "interface_ports": [
+          "FIXED_IO",
+          "processing_system7_0/FIXED_IO"
+        ]
+      },
+      "ps7_0_axi_periph_M00_AXI": {
+        "interface_ports": [
+          "ps7_0_axi_periph/M00_AXI",
+          "ppm2_0/S00_AXI"
         ]
       }
     },
@@ -1167,8 +1170,8 @@
           "rst_ps7_0_100M/slowest_sync_clk",
           "ps7_0_axi_periph/M00_ACLK",
           "ps7_0_axi_periph/ACLK",
-          "ppm2_0/s00_axi_aclk",
-          "system_ila_0/clk"
+          "system_ila_0/clk",
+          "ppm2_0/s00_axi_aclk"
         ]
       },
       "processing_system7_0_FCLK_RESET0_N": {
@@ -1189,8 +1192,8 @@
       "ppm_in_0_1": {
         "ports": [
           "ppm_in_0",
-          "ppm2_0/ppm_in",
-          "system_ila_0/probe0"
+          "system_ila_0/probe0",
+          "ppm2_0/ppm_in"
         ],
         "hdl_attributes": {
           "DEBUG": {

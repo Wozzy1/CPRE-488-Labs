@@ -1,2 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
 INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sim_1/imports/Downloads/TB_Network_Detection.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'TB_PPM_Receiver'

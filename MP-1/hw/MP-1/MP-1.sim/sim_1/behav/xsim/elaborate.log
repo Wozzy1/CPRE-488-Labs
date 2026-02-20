@@ -6,4 +6,12 @@ Starting static elaboration
 Pass Through NonSizing Optimizer
 WARNING: [VRFC 10-4940] 'axi_ppm4_v1_0' remains a black box since it has no binding entity [C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sim_1/new/tb_ppm_4.vhd:103]
 Completed static elaboration
-INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling module xil_defaultlib.glbl
+Compiling architecture behavioral of entity xil_defaultlib.tb_ppm_4
+Built simulation snapshot tb_ppm_4_behav

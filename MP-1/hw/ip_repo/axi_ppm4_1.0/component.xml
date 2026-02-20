@@ -199,7 +199,7 @@
       <spirit:parameters>
         <spirit:parameter>
           <spirit:name>POLARITY</spirit:name>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.S00_AXI_RST.POLARITY" spirit:choiceRef="choice_list_74b5137e">ACTIVE_LOW</spirit:value>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S00_AXI_RST.POLARITY" spirit:choiceRef="choice_list_9d8b0d81">ACTIVE_LOW</spirit:value>
         </spirit:parameter>
       </spirit:parameters>
     </spirit:busInterface>
@@ -266,7 +266,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>302696a1</spirit:value>
+            <spirit:value>64b08156</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -282,7 +282,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>302696a1</spirit:value>
+            <spirit:value>64b08156</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -673,7 +673,7 @@
       <spirit:enumeration>32</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
-      <spirit:name>choice_list_74b5137e</spirit:name>
+      <spirit:name>choice_list_9d8b0d81</spirit:name>
       <spirit:enumeration>ACTIVE_HIGH</spirit:enumeration>
       <spirit:enumeration>ACTIVE_LOW</spirit:enumeration>
     </spirit:choice>
@@ -693,7 +693,7 @@
       <spirit:file>
         <spirit:name>hdl/axi_ppm4_v1_0.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_066ff826</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_ce329525</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -790,8 +790,8 @@
         <xilinx:taxonomy>AXI_Peripheral</xilinx:taxonomy>
       </xilinx:taxonomies>
       <xilinx:displayName>axi_ppm4_v1.0</xilinx:displayName>
-      <xilinx:coreRevision>13</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2026-02-20T02:25:27Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>28</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2026-02-20T21:21:52Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@7e62630d_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@1af64c88_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
@@ -975,13 +975,170 @@
         <xilinx:tag xilinx:name="ui.data.coregen.dd@30a65082_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@4853c6b1_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@1efbe27d_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@52a79d76_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ce6d339_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@8ffd1a0_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3eecfdb9_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@406434ed_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@24eb0a14_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@77fc7a88_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2d0db0f7_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4a3d8e19_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1b36513a_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5dc8169a_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2985b10e_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@12976e1a_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@43904e9c_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7181bdef_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5373d14b_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@e0cf737_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7a281c8a_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6d71b216_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4c1621d4_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@247e32e2_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@28797c24_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3be592ef_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3a14970b_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3b468310_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@69d0ae67_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@10c9392f_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5eab5290_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@20f59252_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2061dc65_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f0699a6_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ff83154_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7cc40b8b_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5540b287_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@562d6db0_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@45b92644_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@526cb84d_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@d3f8391_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1fcce6b8_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6521286_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@274a15db_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2dbd735_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3e91f058_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@214b2fd1_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4c283982_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@275559c7_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@ce16677_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@635bb945_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2889920_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@72bcbecf_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@43b8353a_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3acc6c69_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4589e5f1_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@64e0a85c_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4adf5d90_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@b2feee1_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ae4119d_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@14e6382f_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1a3b52e_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7f28814b_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3c3e2be3_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5f037c2a_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@72747625_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3f55ec8c_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@100cffa5_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ed39f7b_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@55bc438c_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3750834f_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4704f704_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5d0b6884_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7153abba_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5b88bf_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@14e182a8_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@66bca4b0_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2f60d14d_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@57d7f6f3_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4d2ff23c_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5366335_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1249555f_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@458fd0c7_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@16016783_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@152dd3e0_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@31cb5ca1_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2e39d1f8_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@46a35d78_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@17c32a17_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@408e8ee3_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@9f7a781_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3c5a10fa_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2473074a_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2d4ae01f_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7f81cd4c_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3a67a98b_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@37cd0eef_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@47e8ba23_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@b8fea52_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@d9674f7_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@36e6f50a_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4d5daa9e_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@643bcce1_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@214c078d_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@ce28c82_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@607fda49_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7724baa9_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@60286260_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@73479900_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@c3182a5_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@347eadda_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2126e176_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@656fbe34_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7cf9a646_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5fc05372_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@183eacf6_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2205653d_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@58f81540_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1046fae9_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@71719e56_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@25f9761c_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@bb1a197_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4530e9a0_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5f2331c_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6232174b_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1e1d666a_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6f41969d_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2c853564_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@399b0d8d_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@76fd895a_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2501e162_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@70dde2ae_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2575b3ea_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6bd7cb2b_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@68e8b376_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@75bf13f2_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7036d78f_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3fa5cb2a_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f268e80_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2cf8df44_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@e5bff9b_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@74762e9_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4eec5fb7_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5a10d824_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@33f57b20_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1af46f14_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@69e7f60a_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b3cadcd_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6f5f5a5a_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@697f54de_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5e0261c3_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1eece248_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@52d307c7_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@758917b2_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4aa0be78_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5ba13fa1_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@74cdf70d_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6537e838_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@799cf90a_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@430f0535_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0</xilinx:tag>
       </xilinx:tags>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2020.1</xilinx:xilinxVersion>
-      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="add540ec"/>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="addc58e4"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="ed1368d5"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="a0d84630"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="bc0b1abc"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="0cd6307f"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="e7b50784"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="948d0d75"/>

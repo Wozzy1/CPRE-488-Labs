@@ -2,192 +2,55 @@
 # Vivado v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Thu Feb 19 17:02:17 2026
-# Process ID: 18636
+# Start of session at: Fri Feb 20 15:17:26 2026
+# Process ID: 20648
 # Current directory: C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent16688 C:\Users\diepw50\CPRE-488-Labs\MP-1\hw\MP-1\MP-1.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent24152 C:\Users\diepw50\CPRE-488-Labs\MP-1\hw\MP-1\MP-1.xpr
 # Log file: C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/vivado.log
 # Journal file: C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.xpr
 update_compile_order -fileset sources_1
-file mkdir C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sim_1/new
-set_property SOURCE_SET sources_1 [get_filesets sim_1]
-close [ open C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sim_1/new/tb_ppm_4.vhd w ]
-add_files -fileset sim_1 C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sim_1/new/tb_ppm_4.vhd
-update_compile_order -fileset sim_1
-# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
-set_property source_mgmt_mode None [current_project]
-set_property top tb_ppm_4 [get_filesets sim_1]
-set_property top_lib xil_defaultlib [get_filesets sim_1]
-# Re-enabling previously disabled source management mode.
-set_property source_mgmt_mode All [current_project]
-update_compile_order -fileset sim_1
-launch_simulation
-source tb_ppm_4.tcl
-run 36 us
-run 36 us
-run all
 open_bd_design {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd}
-delete_bd_objs [get_bd_intf_nets ps7_0_axi_periph_M00_AXI] [get_bd_cells ppm3_0]
+connect_bd_net [get_bd_ports ppm_in_0] [get_bd_pins axi_ppm4_0/s00_ppm_in]
 startgroup
-create_bd_cell -type ip -vlnv iastate.edu:user:axi_ppm4:1.0 axi_ppm4_0
+make_bd_pins_external  [get_bd_pins axi_ppm4_0/s00_ppm_out]
 endgroup
-apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (100 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_ppm4_0/S00_AXI} ddr_seg {Auto} intc_ip {/ps7_0_axi_periph} master_apm {0}}  [get_bd_intf_pins axi_ppm4_0/S00_AXI]
-close_sim
 save_bd_design
-launch_simulation
-source tb_ppm_4.tcl
-open_bd_design {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd}
-close_sim
-launch_simulation
-source tb_ppm_4.tcl
-close_sim
-close_project
-create_project testbench C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/testbench -part xc7z020clg484-1
-set_property board_part em.avnet.com:zed:part0:1.4 [current_project]
-set_property target_language VHDL [current_project]
-add_files {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0/example_designs/bfm_design/axi_ppm4_v1_0_tb.sv C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0/hdl/axi_ppm4_v1_0_S00_AXI.vhd C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0/hdl/axi_ppm4_v1_0.vhd}
-update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
-export_ip_user_files -of_objects  [get_files C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0/example_designs/bfm_design/axi_ppm4_v1_0_tb.sv] -no_script -reset -force -quiet
-remove_files  C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0/example_designs/bfm_design/axi_ppm4_v1_0_tb.sv
-launch_simulation
-source axi_ppm4_v1_0.tcl
-run all
-run 36 us
-run all
-set_property SOURCE_SET sources_1 [get_filesets sim_1]
-add_files -fileset sim_1 -norecurse C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.sim/sim_1/behav/xsim/xsim.dir/tb_ppm_4_behav/xsim.mem
-close_sim
-close_project
-open_project C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.xpr
-update_compile_order -fileset sources_1
-close_project
-open_project C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/testbench/testbench.xpr
-update_compile_order -fileset sources_1
-close_project
-open_project C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.xpr
-update_compile_order -fileset sources_1
-close_project
-open_project C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/testbench/testbench.xpr
-update_compile_order -fileset sources_1
-create_fileset -simset sim_2
-set_property SOURCE_SET sources_1 [get_filesets sim_2]
-add_files -fileset sim_2 C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sim_1/new/tb_ppm_4.vhd
-current_fileset -simset [ get_filesets sim_2 ]
-launch_simulation -simset [get_filesets sim_2 ]
-source tb_ppm_4.tcl
-run 36 us
-relaunch_sim
-run 36 us
-save_wave_config {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/testbench/tb_ppm_4_behav.wcfg}
-add_files -fileset sim_2 -norecurse C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/testbench/tb_ppm_4_behav.wcfg
-set_property xsim.view C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/testbench/tb_ppm_4_behav.wcfg [get_filesets sim_2]
-run 36 us
-run 36 us
-run 10 ms
-run 1 ms
-run 1 ms
-relaunch_sim
-run 1 ms
-run 1 ms
-run 1 ms
-run 1 ms
-relaunch_sim
-run 1 ms
-close_sim
-launch_simulation -simset [get_filesets sim_2 ]
-open_wave_config C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/testbench/tb_ppm_4_behav.wcfg
-source tb_ppm_4.tcl
-run 1 ms
-run 1 ms
-close_sim
-launch_simulation -simset [get_filesets sim_2 ]
-open_wave_config C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/testbench/tb_ppm_4_behav.wcfg
-source tb_ppm_4.tcl
-launch_runs synth_1 -jobs 10
-wait_on_run synth_1
 reset_run synth_1
-close_sim
-launch_simulation -simset [get_filesets sim_2 ]
-open_wave_config C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/testbench/tb_ppm_4_behav.wcfg
-source tb_ppm_4.tcl
-run 1 ms
-run 1 ms
-run 1 ms
-run 1 ms
-run 1 ms
-run 1 ms
-run 1 ms
-run 1 ms
-run 1 ms
-run 1 ms
-run 1 ms
-run 1 ms
-run 1 ms
-run 1 ms
-run 1 ms
-run 1 ms
-run 1 ms
-run 1 ms
-run 1 ms
-run 1 ms
-relaunch_sim
-run 1 ms
-run 1 ms
-run 1 ms
-run 1 ms
-run 1 ms
-run 1 ms
-run 1 ms
-run 1 ms
-run 1 ms
-run 1 ms
-close_sim
-close_project
-open_project C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.xpr
-update_compile_order -fileset sources_1
-close_project
-open_project C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/testbench/testbench.xpr
-update_compile_order -fileset sources_1
-launch_simulation -simset [get_filesets sim_2 ]
-open_wave_config C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/testbench/tb_ppm_4_behav.wcfg
-source tb_ppm_4.tcl
-run 1 ms
-run 1 ms
-run 1 ms
-run 1 ms
-run 1 ms
-run 1 ms
-run 1 ms
-run 1 ms
-run 1 ms
-run 1 ms
-run 1 ms
-run 1 ms
-run 1 ms
-run 1 ms
-run 1 ms
-run 1 ms
-run 1 ms
-run 1 ms
-run 1 ms
-run 1 ms
-run 1 ms
-restart
-run all
-restart
-run 1 ms
-run 1 ms
-relaunch_sim
-run all
-run 1 ms
-run 1 ms
-run 1 ms
-run 1 ms
-run 1 ms
-run 1 ms
-run 1 ms
-close_sim
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+report_ip_status -name ip_status 
+upgrade_ip -vlnv iastate.edu:user:axi_ppm4:1.0 [get_ips  design_1_axi_ppm4_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips design_1_axi_ppm4_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd]
+catch { config_ip_cache -export [get_ips -all design_1_processing_system7_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_rst_ps7_0_100M_0] }
+catch { config_ip_cache -export [get_ips -all design_1_system_ila_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_axi_ppm4_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_auto_pc_0] }
+export_ip_user_files -of_objects [get_files C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs design_1_system_ila_0_0_synth_1 design_1_axi_ppm4_0_0_synth_1 -jobs 10
+wait_on_run design_1_system_ila_0_0_synth_1
+wait_on_run design_1_axi_ppm4_0_0_synth_1
+export_simulation -of_objects [get_files C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd] -directory C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.ip_user_files -ipstatic_source_dir C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.cache/compile_simlib/modelsim} {questa=C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.cache/compile_simlib/questa} {riviera=C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.cache/compile_simlib/riviera} {activehdl=C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+update_ip_catalog -rebuild -scan_changes
+report_ip_status -name ip_status
+upgrade_ip -vlnv iastate.edu:user:axi_ppm4:1.0 [get_ips  design_1_axi_ppm4_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips design_1_axi_ppm4_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd]
+catch { config_ip_cache -export [get_ips -all design_1_system_ila_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_axi_ppm4_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_auto_pc_0] }
+export_ip_user_files -of_objects [get_files C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs design_1_system_ila_0_0_synth_1 design_1_axi_ppm4_0_0_synth_1 -jobs 10
+wait_on_run design_1_system_ila_0_0_synth_1
+wait_on_run design_1_axi_ppm4_0_0_synth_1
+export_simulation -of_objects [get_files C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd] -directory C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.ip_user_files -ipstatic_source_dir C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.cache/compile_simlib/modelsim} {questa=C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.cache/compile_simlib/questa} {riviera=C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.cache/compile_simlib/riviera} {activehdl=C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+open_run impl_1

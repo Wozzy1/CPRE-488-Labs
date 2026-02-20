@@ -39,10 +39,9 @@
   "../../../bd/design_1/ip/design_1_system_ila_0_0/bd_0/sim/bd_f60c.vhd" \
   "../../../bd/design_1/ip/design_1_system_ila_0_0/bd_0/ip/ip_0/sim/bd_f60c_ila_lib_0.vhd" \
   "../../../bd/design_1/ip/design_1_system_ila_0_0/sim/design_1_system_ila_0_0.vhd" \
-  "../../../bd/design_1/sim/design_1.vhd" \
-  "../../../bd/design_1/ipshared/078b/hdl/ppm3_v1_0_S00_AXI.vhd" \
-  "../../../bd/design_1/ipshared/078b/hdl/ppm3_v1_0.vhd" \
-  "../../../bd/design_1/ip/design_1_ppm3_0_2/sim/design_1_ppm3_0_2.vhd" \
+  "../../../bd/design_1/ipshared/9f81/hdl/axi_ppm4_v1_0_S00_AXI.vhd" \
+  "../../../bd/design_1/ipshared/9f81/hdl/axi_ppm4_v1_0.vhd" \
+  "../../../bd/design_1/ip/design_1_axi_ppm4_0_0/sim/design_1_axi_ppm4_0_0.vhd" \
 -endlib
 -makelib ies_lib/generic_baseblocks_v2_1_0 \
   "../../../../MP-1.srcs/sources_1/bd/design_1/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v" \
@@ -67,6 +66,9 @@
 -endlib
 -makelib ies_lib/xil_defaultlib \
   "../../../bd/design_1/ip/design_1_auto_pc_0/sim/design_1_auto_pc_0.v" \
+-endlib
+-makelib ies_lib/xil_defaultlib \
+  "../../../bd/design_1/sim/design_1.vhd" \
 -endlib
 -makelib ies_lib/xil_defaultlib \
   glbl.v

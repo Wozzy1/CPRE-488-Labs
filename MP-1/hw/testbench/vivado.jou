@@ -2,13 +2,66 @@
 # Vivado v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Thu Feb 19 21:20:36 2026
-# Process ID: 14112
+# Start of session at: Fri Feb 20 13:53:28 2026
+# Process ID: 13924
 # Current directory: C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/testbench
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent16648 C:\Users\diepw50\CPRE-488-Labs\MP-1\hw\testbench\testbench.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent20016 C:\Users\diepw50\CPRE-488-Labs\MP-1\hw\testbench\testbench.xpr
 # Log file: C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/testbench/vivado.log
 # Journal file: C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/testbench\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/testbench/testbench.xpr
 update_compile_order -fileset sources_1
+launch_simulation -simset [get_filesets sim_2 ]
+open_wave_config C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/testbench/tb_ppm_4_behav.wcfg
+source tb_ppm_4.tcl
+run 10 ms
+close_sim
+launch_simulation -simset [get_filesets sim_2 ]
+open_wave_config C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/testbench/tb_ppm_4_behav.wcfg
+source tb_ppm_4.tcl
+run 10 ms
+run 1 ms
+relaunch_sim
+run 5 ms
+relaunch_sim
+relaunch_sim
+run 5 ms
+run 5 ms
+relaunch_sim
+run 5 ms
+run 5 ms
+relaunch_sim
+relaunch_sim
+run 5 ms
+relaunch_sim
+run 1 ms
+relaunch_sim
+run 10 ms
+run 10 ms
+run 10 ms
+relaunch_sim
+run 10 ms
+run 10 ms
+run 10 ms
+save_wave_config {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/testbench/tb_ppm_4_behav.wcfg}
+close_sim
+launch_simulation -simset [get_filesets sim_2 ]
+open_wave_config C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/testbench/tb_ppm_4_behav.wcfg
+source tb_ppm_4.tcl
+run 10 ms
+run 10 ms
+run 10 ms
+close_sim
+launch_simulation -simset [get_filesets sim_2 ]
+open_wave_config C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/testbench/tb_ppm_4_behav.wcfg
+source tb_ppm_4.tcl
+run 10 ms
+run 2 ms
+run 2 ms
+close_sim
+launch_simulation -simset [get_filesets sim_2 ]
+open_wave_config C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/testbench/tb_ppm_4_behav.wcfg
+source tb_ppm_4.tcl
+run 12 ms
+run 12 ms

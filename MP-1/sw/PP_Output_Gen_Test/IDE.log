@@ -1,0 +1,19 @@
+15:39:22 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\diepw50\CPRE-488-Labs\MP-1\sw\PP_Output_Gen_Test\temp_xsdb_launch_script.tcl
+15:39:22 INFO  : Registering command handlers for Vitis TCF services
+15:39:23 INFO  : XSCT server has started successfully.
+15:39:23 INFO  : Successfully done setting XSCT server connection channel  
+15:39:23 INFO  : Successfully done query RDI_DATADIR 
+15:39:23 INFO  : Successfully done setting workspace for the tool. 
+15:39:23 INFO  : Platform repository initialization has completed.
+15:39:24 INFO  : plnx-install-location is set to ''
+15:40:00 INFO  : Result from executing command 'getProjects': design_1_wrapper
+15:40:00 INFO  : Result from executing command 'getPlatforms': 
+15:40:00 INFO  : Platform 'design_1_wrapper' is added to custom repositories.
+15:40:05 INFO  : Platform 'design_1_wrapper' is added to custom repositories.
+15:51:03 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:51:04 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B18A36" && level==0 && jtag_device_ctx=="jsn-Zed-210248B18A36-23727093-0"}' command is executed.
+15:51:06 INFO  : FPGA configured successfully with bitstream "C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/_ide/bitstream/design_1_wrapper.bit"
+15:51:33 INFO  : Result from executing command 'getProjects': design_1_wrapper
+15:51:33 INFO  : Result from executing command 'getPlatforms': design_1_wrapper|C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm
+15:51:33 INFO  : Checking for BSP changes to sync application flags for project 'Gen_Test'...
+15:51:48 INFO  : Connected to target on host '127.0.0.1' and port '3121'.

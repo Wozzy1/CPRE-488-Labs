@@ -97,7 +97,7 @@ set_property PACKAGE_PIN Y11  [get_ports {ppm_in_0}];  # "JA1"
 # ----------------------------------------------------------------------------
 # JB Pmod - Bank 13
 # ---------------------------------------------------------------------------- 
-#set_property PACKAGE_PIN W12 [get_ports {JB1}];  # "JB1"
+set_property PACKAGE_PIN W12 [get_ports {s00_ppm_out_0}];  # "JB1"
 #set_property PACKAGE_PIN W11 [get_ports {JB2}];  # "JB2"
 #set_property PACKAGE_PIN V10 [get_ports {JB3}];  # "JB3"
 #set_property PACKAGE_PIN W8 [get_ports {JB4}];  # "JB4"

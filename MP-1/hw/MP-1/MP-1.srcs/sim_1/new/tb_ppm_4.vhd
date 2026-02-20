@@ -167,7 +167,7 @@ end process;
 
 PPM_RECEIVER_TEST : process
 begin
-    s_ppm_in <= '0';
+    s_ppm_in <= '1';
     s_s00_axi_aresetn <= '0';
     wait for beat;
     wait for beat;
@@ -234,6 +234,114 @@ begin
     s_ppm_in <= '1';
     wait for 11ms;
     
+    -- p1
+    s_ppm_in <= '0';
+    wait for 0.4ms;
+    
+    -- c1
+    s_ppm_in <= '1';
+    wait for 0.9ms;
+    
+    -- p2
+    s_ppm_in <= '0';
+    wait for 0.4ms;
+    
+    -- c2
+    s_ppm_in <= '1';
+    wait for 0.9ms;
+    
+    -- p3
+    s_ppm_in <= '0';
+    wait for 0.4ms;
+    
+    -- c3
+    s_ppm_in <= '1';
+    wait for 0.9ms;   
+    
+    -- p4
+    s_ppm_in <= '0';
+    wait for 0.4ms;
+    
+    -- c4
+    s_ppm_in <= '1';
+    wait for 0.9ms;   
+    
+    -- p5
+    s_ppm_in <= '0';
+    wait for 0.4ms;
+    
+    -- c5
+    s_ppm_in <= '1';
+    wait for 0.9ms;   
+    
+    -- p6
+    s_ppm_in <= '0';
+    wait for 0.4ms;
+    
+    -- c6
+    s_ppm_in <= '1';
+    wait for 0.9ms;   
+    
+    -- p7
+    s_ppm_in <= '0';
+    wait for 0.4ms;
+
+    -- idle
+    s_ppm_in <= '1';
+    wait for 11ms;
+    
+    -- p1
+    s_ppm_in <= '0';
+    wait for 0.4ms;
+    
+    -- c1
+    s_ppm_in <= '1';
+    wait for 0.9ms;
+    
+    -- p2
+    s_ppm_in <= '0';
+    wait for 0.4ms;
+    
+    -- c2
+    s_ppm_in <= '1';
+    wait for 0.9ms;
+    
+    -- p3
+    s_ppm_in <= '0';
+    wait for 0.4ms;
+    
+    -- c3
+    s_ppm_in <= '1';
+    wait for 0.9ms;   
+    
+    -- p4
+    s_ppm_in <= '0';
+    wait for 0.4ms;
+    
+    -- c4
+    s_ppm_in <= '1';
+    wait for 0.9ms;   
+    
+    -- p5
+    s_ppm_in <= '0';
+    wait for 0.4ms;
+    
+    -- c5
+    s_ppm_in <= '1';
+    wait for 0.9ms;   
+    
+    -- p6
+    s_ppm_in <= '0';
+    wait for 0.4ms;
+    
+    -- c6
+    s_ppm_in <= '1';
+    wait for 0.9ms;   
+    
+    -- p7
+    s_ppm_in <= '0';
+    wait for 0.4ms;
+
 end process;
 
 end Behavioral;

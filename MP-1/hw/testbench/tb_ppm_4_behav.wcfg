@@ -10,19 +10,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="9499989400fs"></ZoomStartTime>
-      <ZoomEndTime time="9500112001fs"></ZoomEndTime>
-      <Cursor1Time time="9500030000fs"></Cursor1Time>
+      <ZoomStartTime time="3327110900fs"></ZoomStartTime>
+      <ZoomEndTime time="16267110901fs"></ZoomEndTime>
+      <Cursor1Time time="2040000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="276"></NameColumnWidth>
-      <ValueColumnWidth column_width="112"></ValueColumnWidth>
+      <ValueColumnWidth column_width="108"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="53" />
-   <wvobject fp_name="/tb_ppm_4/s_ppm_in" type="logic">
-      <obj_property name="ElementShortName">s_ppm_in</obj_property>
-      <obj_property name="ObjectShortName">s_ppm_in</obj_property>
-   </wvobject>
+   <WVObjectSize size="52" />
    <wvobject fp_name="/tb_ppm_4/s_ppm_out" type="logic">
       <obj_property name="ElementShortName">s_ppm_out</obj_property>
       <obj_property name="ObjectShortName">s_ppm_out</obj_property>
@@ -39,13 +35,13 @@
       <obj_property name="ElementShortName">eof</obj_property>
       <obj_property name="ObjectShortName">eof</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_ppm_4/PPM_UNDER_TEST/ppm_in" type="logic">
-      <obj_property name="ElementShortName">ppm_in</obj_property>
-      <obj_property name="ObjectShortName">ppm_in</obj_property>
-   </wvobject>
    <wvobject fp_name="/tb_ppm_4/PPM_UNDER_TEST/currentChannel" type="array">
       <obj_property name="ElementShortName">currentChannel[3:0]</obj_property>
       <obj_property name="ObjectShortName">currentChannel[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ppm_4/s_ppm_in" type="logic">
+      <obj_property name="ElementShortName">s_ppm_in</obj_property>
+      <obj_property name="ObjectShortName">s_ppm_in</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_ppm_4/PPM_UNDER_TEST/PS" type="other">
       <obj_property name="ElementShortName">PS</obj_property>

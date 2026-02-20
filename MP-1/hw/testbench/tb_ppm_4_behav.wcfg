@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_ppm_4_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="tb_ppm_4" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="9499989400fs"></ZoomStartTime>
+      <ZoomEndTime time="9500112001fs"></ZoomEndTime>
+      <Cursor1Time time="9500030000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="276"></NameColumnWidth>
+      <ValueColumnWidth column_width="112"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="53" />
+   <wvobject fp_name="/tb_ppm_4/s_ppm_in" type="logic">
+      <obj_property name="ElementShortName">s_ppm_in</obj_property>
+      <obj_property name="ObjectShortName">s_ppm_in</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ppm_4/s_ppm_out" type="logic">
+      <obj_property name="ElementShortName">s_ppm_out</obj_property>
+      <obj_property name="ObjectShortName">s_ppm_out</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ppm_4/s_s00_axi_aclk" type="logic">
+      <obj_property name="ElementShortName">s_s00_axi_aclk</obj_property>
+      <obj_property name="ObjectShortName">s_s00_axi_aclk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ppm_4/s_s00_axi_aresetn" type="logic">
+      <obj_property name="ElementShortName">s_s00_axi_aresetn</obj_property>
+      <obj_property name="ObjectShortName">s_s00_axi_aresetn</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ppm_4/PPM_UNDER_TEST/eof" type="logic">
+      <obj_property name="ElementShortName">eof</obj_property>
+      <obj_property name="ObjectShortName">eof</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ppm_4/PPM_UNDER_TEST/ppm_in" type="logic">
+      <obj_property name="ElementShortName">ppm_in</obj_property>
+      <obj_property name="ObjectShortName">ppm_in</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ppm_4/PPM_UNDER_TEST/currentChannel" type="array">
+      <obj_property name="ElementShortName">currentChannel[3:0]</obj_property>
+      <obj_property name="ObjectShortName">currentChannel[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ppm_4/PPM_UNDER_TEST/PS" type="other">
+      <obj_property name="ElementShortName">PS</obj_property>
+      <obj_property name="ObjectShortName">PS</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ppm_4/PPM_UNDER_TEST/NS" type="other">
+      <obj_property name="ElementShortName">NS</obj_property>
+      <obj_property name="ObjectShortName">NS</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ppm_4/PPM_UNDER_TEST/ppm_ff1" type="logic">
+      <obj_property name="ElementShortName">ppm_ff1</obj_property>
+      <obj_property name="ObjectShortName">ppm_ff1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ppm_4/PPM_UNDER_TEST/ppm_ff2" type="logic">
+      <obj_property name="ElementShortName">ppm_ff2</obj_property>
+      <obj_property name="ObjectShortName">ppm_ff2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ppm_4/PPM_UNDER_TEST/reg1" type="array">
+      <obj_property name="ElementShortName">reg1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">reg1[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ppm_4/PPM_UNDER_TEST/reg2" type="array">
+      <obj_property name="ElementShortName">reg2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">reg2[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ppm_4/PPM_UNDER_TEST/reg3" type="array">
+      <obj_property name="ElementShortName">reg3[31:0]</obj_property>
+      <obj_property name="ObjectShortName">reg3[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ppm_4/PPM_UNDER_TEST/reg4" type="array">
+      <obj_property name="ElementShortName">reg4[31:0]</obj_property>
+      <obj_property name="ObjectShortName">reg4[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ppm_4/PPM_UNDER_TEST/reg5" type="array">
+      <obj_property name="ElementShortName">reg5[31:0]</obj_property>
+      <obj_property name="ObjectShortName">reg5[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ppm_4/PPM_UNDER_TEST/reg6" type="array">
+      <obj_property name="ElementShortName">reg6[31:0]</obj_property>
+      <obj_property name="ObjectShortName">reg6[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ppm_4/PPM_UNDER_TEST/c0_u" type="array">
+      <obj_property name="ElementShortName">c0_u[31:0]</obj_property>
+      <obj_property name="ObjectShortName">c0_u[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ppm_4/PPM_UNDER_TEST/c1_u" type="array">
+      <obj_property name="ElementShortName">c1_u[31:0]</obj_property>
+      <obj_property name="ObjectShortName">c1_u[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ppm_4/PPM_UNDER_TEST/c2_u" type="array">
+      <obj_property name="ElementShortName">c2_u[31:0]</obj_property>
+      <obj_property name="ObjectShortName">c2_u[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ppm_4/PPM_UNDER_TEST/c3_u" type="array">
+      <obj_property name="ElementShortName">c3_u[31:0]</obj_property>
+      <obj_property name="ObjectShortName">c3_u[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ppm_4/PPM_UNDER_TEST/c4_u" type="array">
+      <obj_property name="ElementShortName">c4_u[31:0]</obj_property>
+      <obj_property name="ObjectShortName">c4_u[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ppm_4/PPM_UNDER_TEST/c5_u" type="array">
+      <obj_property name="ElementShortName">c5_u[31:0]</obj_property>
+      <obj_property name="ObjectShortName">c5_u[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ppm_4/PPM_UNDER_TEST/c6_u" type="array">
+      <obj_property name="ElementShortName">c6_u[31:0]</obj_property>
+      <obj_property name="ObjectShortName">c6_u[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ppm_4/PPM_UNDER_TEST/c7_u" type="array">
+      <obj_property name="ElementShortName">c7_u[31:0]</obj_property>
+      <obj_property name="ObjectShortName">c7_u[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ppm_4/PPM_UNDER_TEST/axi_ppm4_v1_0_S00_AXI_inst/slv_reg10" type="array">
+      <obj_property name="ElementShortName">slv_reg10[31:0]</obj_property>
+      <obj_property name="ObjectShortName">slv_reg10[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ppm_4/PPM_UNDER_TEST/axi_ppm4_v1_0_S00_AXI_inst/slv_reg11" type="array">
+      <obj_property name="ElementShortName">slv_reg11[31:0]</obj_property>
+      <obj_property name="ObjectShortName">slv_reg11[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ppm_4/PPM_UNDER_TEST/axi_ppm4_v1_0_S00_AXI_inst/slv_reg12" type="array">
+      <obj_property name="ElementShortName">slv_reg12[31:0]</obj_property>
+      <obj_property name="ObjectShortName">slv_reg12[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ppm_4/PPM_UNDER_TEST/axi_ppm4_v1_0_S00_AXI_inst/slv_reg13" type="array">
+      <obj_property name="ElementShortName">slv_reg13[31:0]</obj_property>
+      <obj_property name="ObjectShortName">slv_reg13[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ppm_4/PPM_UNDER_TEST/axi_ppm4_v1_0_S00_AXI_inst/slv_reg14" type="array">
+      <obj_property name="ElementShortName">slv_reg14[31:0]</obj_property>
+      <obj_property name="ObjectShortName">slv_reg14[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ppm_4/PPM_UNDER_TEST/axi_ppm4_v1_0_S00_AXI_inst/slv_reg15" type="array">
+      <obj_property name="ElementShortName">slv_reg15[31:0]</obj_property>
+      <obj_property name="ObjectShortName">slv_reg15[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ppm_4/s_s00_axi_awaddr" type="array">
+      <obj_property name="ElementShortName">s_s00_axi_awaddr[5:0]</obj_property>
+      <obj_property name="ObjectShortName">s_s00_axi_awaddr[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ppm_4/s_s00_axi_awprot" type="array">
+      <obj_property name="ElementShortName">s_s00_axi_awprot[2:0]</obj_property>
+      <obj_property name="ObjectShortName">s_s00_axi_awprot[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ppm_4/s_s00_axi_awvalid" type="logic">
+      <obj_property name="ElementShortName">s_s00_axi_awvalid</obj_property>
+      <obj_property name="ObjectShortName">s_s00_axi_awvalid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ppm_4/s_s00_axi_awready" type="logic">
+      <obj_property name="ElementShortName">s_s00_axi_awready</obj_property>
+      <obj_property name="ObjectShortName">s_s00_axi_awready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ppm_4/s_s00_axi_wdata" type="array">
+      <obj_property name="ElementShortName">s_s00_axi_wdata[31:0]</obj_property>
+      <obj_property name="ObjectShortName">s_s00_axi_wdata[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ppm_4/s_s00_axi_wstrb" type="array">
+      <obj_property name="ElementShortName">s_s00_axi_wstrb[3:0]</obj_property>
+      <obj_property name="ObjectShortName">s_s00_axi_wstrb[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ppm_4/s_s00_axi_wvalid" type="logic">
+      <obj_property name="ElementShortName">s_s00_axi_wvalid</obj_property>
+      <obj_property name="ObjectShortName">s_s00_axi_wvalid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ppm_4/s_s00_axi_wready" type="logic">
+      <obj_property name="ElementShortName">s_s00_axi_wready</obj_property>
+      <obj_property name="ObjectShortName">s_s00_axi_wready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ppm_4/s_s00_axi_bresp" type="array">
+      <obj_property name="ElementShortName">s_s00_axi_bresp[1:0]</obj_property>
+      <obj_property name="ObjectShortName">s_s00_axi_bresp[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ppm_4/s_s00_axi_bvalid" type="logic">
+      <obj_property name="ElementShortName">s_s00_axi_bvalid</obj_property>
+      <obj_property name="ObjectShortName">s_s00_axi_bvalid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ppm_4/s_s00_axi_bready" type="logic">
+      <obj_property name="ElementShortName">s_s00_axi_bready</obj_property>
+      <obj_property name="ObjectShortName">s_s00_axi_bready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ppm_4/s_s00_axi_araddr" type="array">
+      <obj_property name="ElementShortName">s_s00_axi_araddr[5:0]</obj_property>
+      <obj_property name="ObjectShortName">s_s00_axi_araddr[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ppm_4/s_s00_axi_arprot" type="array">
+      <obj_property name="ElementShortName">s_s00_axi_arprot[2:0]</obj_property>
+      <obj_property name="ObjectShortName">s_s00_axi_arprot[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ppm_4/s_s00_axi_arvalid" type="logic">
+      <obj_property name="ElementShortName">s_s00_axi_arvalid</obj_property>
+      <obj_property name="ObjectShortName">s_s00_axi_arvalid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ppm_4/s_s00_axi_arready" type="logic">
+      <obj_property name="ElementShortName">s_s00_axi_arready</obj_property>
+      <obj_property name="ObjectShortName">s_s00_axi_arready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ppm_4/s_s00_axi_rdata" type="array">
+      <obj_property name="ElementShortName">s_s00_axi_rdata[31:0]</obj_property>
+      <obj_property name="ObjectShortName">s_s00_axi_rdata[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ppm_4/s_s00_axi_rresp" type="array">
+      <obj_property name="ElementShortName">s_s00_axi_rresp[1:0]</obj_property>
+      <obj_property name="ObjectShortName">s_s00_axi_rresp[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ppm_4/s_s00_axi_rvalid" type="logic">
+      <obj_property name="ElementShortName">s_s00_axi_rvalid</obj_property>
+      <obj_property name="ObjectShortName">s_s00_axi_rvalid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ppm_4/s_s00_axi_rready" type="logic">
+      <obj_property name="ElementShortName">s_s00_axi_rready</obj_property>
+      <obj_property name="ObjectShortName">s_s00_axi_rready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ppm_4/beat" type="other">
+      <obj_property name="ElementShortName">beat</obj_property>
+      <obj_property name="ObjectShortName">beat</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ppm_4/C_S00_AXI_DATA_WIDTH" type="other">
+      <obj_property name="ElementShortName">C_S00_AXI_DATA_WIDTH</obj_property>
+      <obj_property name="ObjectShortName">C_S00_AXI_DATA_WIDTH</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ppm_4/C_S00_AXI_ADDR_WIDTH" type="other">
+      <obj_property name="ElementShortName">C_S00_AXI_ADDR_WIDTH</obj_property>
+      <obj_property name="ObjectShortName">C_S00_AXI_ADDR_WIDTH</obj_property>
+   </wvobject>
+</wave_config>

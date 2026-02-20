@@ -16,8 +16,8 @@ entity axi_ppm4_v1_0 is
 	);
 	port (
 		-- Users to add ports here
-        ppm_in : std_logic;
-        ppm_out: std_logic;
+        s00_ppm_in : in std_logic;
+        s00_ppm_out: out std_logic;
 		-- User ports ends
 		-- Do not modify the ports beyond this line
 
@@ -44,10 +44,39 @@ entity axi_ppm4_v1_0 is
 		s00_axi_rresp	: out std_logic_vector(1 downto 0);
 		s00_axi_rvalid	: out std_logic;
 		s00_axi_rready	: in std_logic
+--		s00_slv_reg10 : out std_logic_vector(C_S00_AXI_DATA_WIDTH-1 downto 0);
+--        s00_slv_reg11 : out std_logic_vector(C_S00_AXI_DATA_WIDTH-1 downto 0);
+--        s00_slv_reg12 : out std_logic_vector(C_S00_AXI_DATA_WIDTH-1 downto 0);
+--        s00_slv_reg13 : out std_logic_vector(C_S00_AXI_DATA_WIDTH-1 downto 0);
+--        s00_slv_reg14 : out std_logic_vector(C_S00_AXI_DATA_WIDTH-1 downto 0);
+--        s00_slv_reg15 : out std_logic_vector(C_S00_AXI_DATA_WIDTH-1 downto 0)
+        
 	);
 end axi_ppm4_v1_0;
 
 architecture arch_imp of axi_ppm4_v1_0 is
+
+    type state_type is (IDLE, PULSE1, PULSE2, PULSE3, PULSE4, PULSE5, PULSE6, PULSE7,
+                        C1, C2, C3, C4, C5, C6);
+
+    -- user added signals 
+    signal eof : std_logic;     -- high after all 6 channels are recorded
+    signal ppm_in : std_logic;  -- ppm from off chip
+    signal currentChannel : std_logic_vector(3 downto 0) := (others => '0'); -- value of current channel being recorded
+    signal PS, NS : state_type;
+    signal ppm_ff1, ppm_ff2 : std_logic;    -- FF for off chip signal
+    signal reg1, reg2, reg3, reg4, reg5, reg6 : std_logic_vector(32-1 downto 0);
+    
+    -- 0 IDLE
+    -- 1 C1
+    -- ... 
+    -- 6 C6
+    -- 7 PULSE TIME wasted
+--    type channels is array (0 to 7) of unsigned(31 downto 0);
+    
+    signal c0_u, c1_u, c2_u, c3_u, c4_u, c5_u, c6_u, c7_u : unsigned(31 downto 0) := (others => '0');
+    constant TIMEOUT_CLKS : unsigned(31 downto 0) := to_unsigned(200000, 32);
+    
 
 	-- component declaration
 	component axi_ppm4_v1_0_S00_AXI is
@@ -76,7 +105,14 @@ architecture arch_imp of axi_ppm4_v1_0 is
 		S_AXI_RDATA	: out std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0);
 		S_AXI_RRESP	: out std_logic_vector(1 downto 0);
 		S_AXI_RVALID	: out std_logic;
-		S_AXI_RREADY	: in std_logic
+		S_AXI_RREADY	: in std_logic;
+        S_SLV_REG10	: in std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0);
+        S_SLV_REG11	: in std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0);
+        S_SLV_REG12	: in std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0);
+        S_SLV_REG13	: in std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0);
+        S_SLV_REG14	: in std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0);
+        S_SLV_REG15	: in std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0)
+
 		);
 	end component axi_ppm4_v1_0_S00_AXI;
 
@@ -109,11 +145,304 @@ axi_ppm4_v1_0_S00_AXI_inst : axi_ppm4_v1_0_S00_AXI
 		S_AXI_RDATA	=> s00_axi_rdata,
 		S_AXI_RRESP	=> s00_axi_rresp,
 		S_AXI_RVALID	=> s00_axi_rvalid,
-		S_AXI_RREADY	=> s00_axi_rready
-	);
+		S_AXI_RREADY	=> s00_axi_rready,
+		S_SLV_REG10	=> reg1,
+        S_SLV_REG11	=> reg2,
+        S_SLV_REG12	=> reg3,
+        S_SLV_REG13	=> reg4,
+        S_SLV_REG14	=> reg5,
+        S_SLV_REG15	=> reg6
+);
 
 	-- Add user logic here
+    manage_cnt : process( s00_axi_aclk )
+    begin
+        if ( rising_edge ( s00_axi_aclk )) then
+            if ( s00_axi_aresetn = '0') then
+                    c0_u <= (others => '0');
+                    c1_u <= (others => '0');
+                    c2_u <= (others => '0');
+                    c3_u <= (others => '0');
+                    c4_u <= (others => '0');
+                    c5_u <= (others => '0');
+                    c6_u <= (others => '0');
+                    c7_u <= (others => '0');
+                    reg1 <= (others => '0');
+                    reg2 <= (others => '0');
+                    reg3 <= (others => '0');
+                    reg4 <= (others => '0');
+                    reg5 <= (others => '0');
+                    reg6 <= (others => '0');
+            elsif (ppm_ff2 = '1') then                    
+					case currentChannel is
+					when x"0" => -- IDLE COUNT
+						c0_u <= c0_u + 1;
+					when x"1" =>
+						c1_u <= c1_u + 1;
+					when x"2" =>
+						c2_u <= c2_u + 1;
+					when x"3" =>
+						c3_u <= c3_u + 1;
+					when x"4" =>
+						c4_u <= c4_u + 1;
+					when x"5" =>
+						c5_u <= c5_u + 1;
+					when x"6" => 
+						c6_u <= c6_u + 1;
+					when others => -- default update dummy channel
+						c7_u <= c7_u + 1;
+					end case;
+				end if;
+            else
+                c0_u <= c0_u;
+                c1_u <= c1_u;
+                c2_u <= c2_u;
+                c3_u <= c3_u;
+                c4_u <= c4_u;
+                c5_u <= c5_u;
+                c6_u <= c6_u;
+                c7_u <= c7_u;
+                
+                -- update registers with counts if eof
+                if (eof = '1') then
+                    reg1 <= std_logic_vector(c1_u);
+                    reg2 <= std_logic_vector(c2_u);
+                    reg3 <= std_logic_vector(c3_u);
+                    reg4 <= std_logic_vector(c4_u);
+                    reg5 <= std_logic_vector(c5_u);
+                    reg6 <= std_logic_vector(c6_u);
+                else 
+                end if;
+            end if;
+    end process;
+    
+    update_state : process ( s00_axi_aclk )
+    begin
+        if (rising_edge ( s00_axi_aclk ) ) then
+            if ( s00_axi_aresetn = '0' ) then
+                PS <= IDLE;
+                ppm_ff1 <= '0';
+                ppm_ff2 <= '0';
+            else
+                PS <= NS;
+                ppm_ff1 <= s00_ppm_in;
+                ppm_ff2 <= ppm_ff1;
+            end if;
+        end if;
+    
+    end process update_state;
+    
+    capture_ppm : process (ppm_ff2, PS, c0_u) -- add current clocks
+    begin
+        -- default values
+        NS <= PS;
+        currentChannel <= x"0";
+        eof <= '0';
 
+        case PS is
+        
+        when IDLE =>
+            if (c0_u > TIMEOUT_CLKS) then
+                NS <= IDLE;
+                currentChannel <= x"0";
+                eof <= '0';
+            elsif (ppm_ff2 = '0') then
+                NS <= PULSE1;
+                currentChannel <= x"0";
+                eof <= '0';
+            else
+                NS <= IDLE;
+                currentChannel <= x"0";
+                eof <= '0';
+            end if;       
+        when PULSE1 =>
+            if (c0_u > TIMEOUT_CLKS) then
+                NS <= IDLE;
+                currentChannel <= x"0";
+                eof <= '0';
+            elsif (ppm_ff2 = '1') then
+                NS <= C1;
+                currentChannel <= x"1";
+                eof <= '0';
+            else
+                NS <= PULSE1;
+                currentChannel <= x"7";
+                eof <= '0';
+            end if;
+        when C1 =>
+            if (c0_u > TIMEOUT_CLKS) then
+                NS <= IDLE;
+                currentChannel <= x"0";
+                eof <= '0';
+            elsif (ppm_ff2 = '0') then
+                NS <= PULSE2;
+                currentChannel <= x"2";
+                eof <= '0';
+            else
+                NS <= C1;
+                currentChannel <= x"1";
+                eof <= '0';
+            end if;
+        when PULSE2 =>
+            if (c0_u > TIMEOUT_CLKS) then
+                NS <= IDLE;
+                currentChannel <= x"0";
+                eof <= '0';
+            elsif (ppm_ff2 = '1') then
+                NS <= C2;
+                currentChannel <= x"2";
+                eof <= '0';
+            else
+                NS <= PULSE2;
+                currentChannel <= x"7";
+                eof <= '0';
+            end if;
+        when C2 =>
+            if (c0_u > TIMEOUT_CLKS) then
+                NS <= IDLE;
+                currentChannel <= x"0";
+                eof <= '0';
+            elsif (ppm_ff2 = '0') then
+                NS <= PULSE3;
+                currentChannel <= x"3";
+                eof <= '0';
+            else
+                NS <= C2;
+                currentChannel <= x"2";
+                eof <= '0';
+            end if;
+        when PULSE3 =>
+            if (c0_u > TIMEOUT_CLKS) then
+                NS <= IDLE;
+                currentChannel <= x"0";
+                eof <= '0';
+            elsif (ppm_ff2 = '1') then
+                NS <= C3;
+                currentChannel <= x"3";
+                eof <= '0';
+            else
+                NS <= PULSE3;
+                currentChannel <= x"7";
+                eof <= '0';
+            end if;
+        when C3 =>
+            if (c0_u > TIMEOUT_CLKS) then
+                NS <= IDLE;
+                currentChannel <= x"0";
+                eof <= '0';
+            elsif (ppm_ff2 = '0') then
+                NS <= PULSE4;
+                currentChannel <= x"4";
+                eof <= '0';
+            else
+                NS <= C3;
+                currentChannel <= x"3";
+                eof <= '0';
+            end if;
+        when PULSE4 =>
+            if (c0_u > TIMEOUT_CLKS) then
+                NS <= IDLE;
+                currentChannel <= x"0";
+                eof <= '0';
+            elsif (ppm_ff2 = '1') then
+                NS <= C4;
+                currentChannel <= x"4";
+                eof <= '0';
+            else
+                NS <= PULSE4;
+                currentChannel <= x"7";
+                eof <= '0';
+            end if;
+        when C4 =>
+            if (c0_u > TIMEOUT_CLKS) then
+                NS <= IDLE;
+                currentChannel <= x"0";
+                eof <= '0';
+            elsif (ppm_ff2 = '0') then
+                NS <= PULSE5;
+                currentChannel <= x"5";
+                eof <= '0';
+            else
+                NS <= C4;
+                currentChannel <= x"4";
+                eof <= '0';
+            end if;
+        when PULSE5 =>
+            if (c0_u > TIMEOUT_CLKS) then
+                NS <= IDLE;
+                currentChannel <= x"0";
+                eof <= '0';
+            elsif (ppm_ff2 = '1') then
+                NS <= C5;
+                currentChannel <= x"5";
+                eof <= '0';
+            else
+                NS <= PULSE5;
+                currentChannel <= x"7";
+                eof <= '0';
+            end if;
+        when C5 =>
+            if (c0_u > TIMEOUT_CLKS) then
+                NS <= IDLE;
+                currentChannel <= x"0";
+                eof <= '0';
+            elsif (ppm_ff2 = '0') then
+                NS <= PULSE6;
+                currentChannel <= x"6";
+                eof <= '0';
+            else
+                NS <= C5;
+                currentChannel <= x"5";
+                eof <= '0';
+            end if;
+        when PULSE6 =>
+            if (c0_u > TIMEOUT_CLKS) then
+                NS <= IDLE;
+                currentChannel <= x"0";
+                eof <= '0';
+            elsif (ppm_ff2 = '1') then
+                NS <= C6;
+                currentChannel <= x"6";
+                eof <= '0';
+            else
+                NS <= PULSE6;
+                currentChannel <= x"7";
+                eof <= '0';
+            end if;
+        when C6 =>
+            if (c0_u > TIMEOUT_CLKS) then
+                NS <= IDLE;
+                currentChannel <= x"0";
+                eof <= '0';
+            elsif (ppm_ff2 = '0') then
+                NS <= PULSE7;
+                currentChannel <= x"0";
+                eof <= '1';
+            else
+                NS <= C6;
+                currentChannel <= x"6";
+                eof <= '0';
+            end if;
+        when PULSE7 =>
+            if (c0_u > TIMEOUT_CLKS) then
+                NS <= IDLE;
+                currentChannel <= x"0";
+                eof <= '0';
+            elsif (ppm_ff2 = '1') then
+                NS <= IDLE;
+                currentChannel <= x"0";
+                eof <= '0';
+            else
+                NS <= PULSE7;
+                currentChannel <= x"7";
+                eof <= '0';
+            end if;
+        when others =>
+            NS <= IDLE;
+            currentChannel <= x"0";
+            eof <= '0';
+        end case;
+    end process;
 	-- User logic ends
 
 end arch_imp;

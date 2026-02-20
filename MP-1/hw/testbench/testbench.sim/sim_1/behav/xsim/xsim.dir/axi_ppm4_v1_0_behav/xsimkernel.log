@@ -1,0 +1,7 @@
+Running: xsim.dir/axi_ppm4_v1_0_behav/xsimk.exe -simmode gui -wdb axi_ppm4_v1_0_behav.wdb -simrunnum 0 -socket 63311
+Design successfully loaded
+Design Loading Memory Usage: 8520 KB (Peak: 8520 KB)
+Design Loading CPU Usage: 15 ms
+Simulation completed
+Simulation Memory Usage: 9132 KB (Peak: 9132 KB)
+Simulation CPU Usage: 15 ms

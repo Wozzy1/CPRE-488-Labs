@@ -1,0 +1,111 @@
+$date
+        2026-Feb-20 17:00:16
+$end
+$version
+        Vivado v2020.1 (64-bit)
+$end
+$timescale
+        1ps
+$end
+$scope module dut $end
+$var reg 1 " design_1_i/probe0 $end
+$var reg 32 # design_1_i/ps7_0_axi_periph_M00_AXI_awaddr [31:0] $end
+$var reg 2 C design_1_i/probe2 [1:0] $end
+$var reg 1 E design_1_i/probe3 $end
+$var reg 1 F design_1_i/probe4 $end
+$var reg 32 G design_1_i/probe5 [31:0] $end
+$var reg 1 g design_1_i/probe6 $end
+$var reg 1 h design_1_i/probe7 $end
+$var reg 1 i design_1_i/probe8 $end
+$var reg 1 j design_1_i/probe9 $end
+$var reg 32 k design_1_i/probe10 [31:0] $end
+$var reg 1 -" design_1_i/probe11 $end
+$var reg 1 ." design_1_i/probe12 $end
+$var reg 2 /" design_1_i/probe13 [1:0] $end
+$var reg 32 1" design_1_i/probe14 [31:0] $end
+$var reg 4 Q" design_1_i/probe15 [3:0] $end
+$var reg 1 U" design_1_i/probe16 $end
+$var reg 3 V" design_1_i/probe17 [2:0] $end
+$var reg 3 Y" design_1_i/probe18 [2:0] $end
+$var reg 1 \" design_1_i/probe19 $end
+$var reg 1 ]" design_1_i/probe20 $end
+$var reg 8 ^" design_1_i/probe21 [7:0] $end
+$var reg 1 f" design_1_i/probe22 $end
+$var reg 3 g" design_1_i/probe23 [2:0] $end
+$var reg 2 j" design_1_i/probe24 [1:0] $end
+$var reg 1 l" design_1_i/probe25 $end
+$var reg 1 m" design_1_i/probe26 $end
+$var reg 8 n" design_1_i/probe27 [7:0] $end
+$var reg 3 v" design_1_i/probe28 [2:0] $end
+$var reg 2 y" design_1_i/probe29 [1:0] $end
+$var reg 1 {" design_1_i/probe30 $end
+$var reg 4 |" design_1_i/probe31 [3:0] $end
+$var reg 4 "# design_1_i/probe32 [3:0] $end
+$var reg 4 &# design_1_i/probe33 [3:0] $end
+$var reg 4 *# design_1_i/probe34 [3:0] $end
+$var reg 1 .# design_1_i/probe35 $end
+$var reg 4 /# design_1_i/probe36 [3:0] $end
+$var reg 4 3# design_1_i/probe37 [3:0] $end
+$var reg 1 7# design_1_i/probe38 $end
+$var reg 1 8# design_1_i/probe39 $end
+$var reg 1 9# design_1_i/probe40 $end
+$var reg 1 :# design_1_i/probe41 $end
+$var reg 1 ;# design_1_i/probe42 $end
+$var reg 1 <# design_1_i/probe43 $end
+$var reg 1 =# _TRIGGER $end
+$var reg 1 ># _WINDOW $end
+$var reg 1 ?# _GAP $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0"
+b11001011111111111111111111011110 #
+b0 C
+0E
+0F
+b0 G
+0g
+0h
+0i
+0j
+b0 k
+0-"
+0."
+b0 /"
+b0 1"
+b1111 Q"
+0U"
+b0 V"
+b0 Y"
+0\"
+0]"
+b0 ^"
+0f"
+b10 g"
+b1 j"
+0l"
+0m"
+b0 n"
+b10 v"
+b1 y"
+0{"
+b11 |"
+b11 "#
+b0 &#
+b0 *#
+0.#
+b0 /#
+b0 3#
+07#
+08#
+09#
+0:#
+0;#
+0<#
+0=#
+1>#
+0?#
+$end
+#512
+1=#

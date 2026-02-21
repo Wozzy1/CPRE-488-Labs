@@ -473,3 +473,5 @@ selectButton(PAResourceQtoS.ReviewContentPanel_RE_PACKAGE_IP, "Re-Package IP"); 
 selectButton("OptionPane.button", "OK"); // JButton (v, B)
 // TclEventType: FILE_SET_CHANGE
 // HMemoryUtils.trashcanNow. Engine heap size: 1,002 MB. GUI used memory: 123 MB. Current time: 2/20/26, 3:30:06 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 1,002 MB. GUI used memory: 121 MB. Current time: 2/20/26, 4:00:08 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 1,002 MB. GUI used memory: 120 MB. Current time: 2/20/26, 4:30:11 PM CST

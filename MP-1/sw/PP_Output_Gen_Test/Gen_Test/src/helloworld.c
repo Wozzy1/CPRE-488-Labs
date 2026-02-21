@@ -48,14 +48,34 @@
 #include <stdio.h>
 #include "platform.h"
 #include "xil_printf.h"
+#include "xparameters.h"
+#include "xil_io.h"
+
+typedef struct ppm_frame {
+	u32 c1;
+	u32 c2;
+	u32 c3;
+	u32 c4;
+	u32 c5;
+	u32 c6;
+} ppm_frame_t;
 
 
+void read_registers(int x) {
+//	u32 reg = Xil_In32(XPAR_AXI_PPM4_0_S00_AXI_BASEADDR);
+
+//	xil_printf("%d, %u\n\r", x, (uint32_t)reg);
+}
 int main()
 {
     init_platform();
 
     print("Hello World\n\r");
-    print("Successfully ran Hello World application");
+    for (int i = 0; i < 2; i++) {
+    	unsigned int data = 1; // (unsigned int)Xil_In32((UINTPTR)0x43CA0000);
+    	printf("%d: %u\n\r", i, data);
+    }
+    print("Successfully ran Hello World application\n\r");
     cleanup_platform();
     return 0;
 }

@@ -4875,3 +4875,63 @@ selectCodeEditor("tb_ppm_4.vhd", 343, 312, false, false, false, false, true); //
 selectCodeEditor("tb_ppm_4.vhd", 351, 322); // bP (w, cs)
 // Elapsed time: 29 seconds
 selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "tb_ppm_4_behav.wcfg", 3); // m (l, cs)
+// Elapsed time: 997 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "axi_ppm4_v1_0_S00_AXI.vhd", 1); // m (l, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "axi_ppm4_v1_0.vhd", 0); // m (l, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 191, 201); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 191, 201, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("axi_ppm4_v1_0.vhd", 191, 201); // bP (w, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "tb_ppm_4.vhd", 2); // m (l, cs)
+// Elapsed time: 16 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "axi_ppm4_v1_0.vhd", 0); // m (l, cs)
+// Elapsed time: 115 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "axi_ppm4_v1_0_S00_AXI.vhd", 1); // m (l, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "axi_ppm4_v1_0.vhd", 0); // m (l, cs)
+// Elapsed time: 43 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "axi_ppm4_v1_0_S00_AXI.vhd", 1); // m (l, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "axi_ppm4_v1_0.vhd", 0); // m (l, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "tb_ppm_4.vhd", 2); // m (l, cs)
+// Elapsed time: 27 seconds
+selectCodeEditor("tb_ppm_4.vhd", 330, 146); // bP (w, cs)
+selectCodeEditor("tb_ppm_4.vhd", 330, 146, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("tb_ppm_4.vhd", 318, 169); // bP (w, cs)
+selectCodeEditor("tb_ppm_4.vhd", 316, 169, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("tb_ppm_4.vhd", 313, 181); // bP (w, cs)
+selectCodeEditor("tb_ppm_4.vhd", 313, 182, false, false, false, false, true); // bP (w, cs) - Double Click
+// Elapsed time: 14 seconds
+selectCodeEditor("tb_ppm_4.vhd", 184, 403); // bP (w, cs)
+// Elapsed time: 46 seconds
+selectCodeEditor("tb_ppm_4.vhd", 144, 232); // bP (w, cs)
+selectCodeEditor("tb_ppm_4.vhd", 144, 232, false, false, false, false, true); // bP (w, cs) - Double Click
+// Elapsed time: 11 seconds
+selectCodeEditor("tb_ppm_4.vhd", 160, 328); // bP (w, cs)
+selectCodeEditor("tb_ppm_4.vhd", 160, 328, false, false, false, false, true); // bP (w, cs) - Double Click
+// HMemoryUtils.trashcanNow. Engine heap size: 1,001 MB. GUI used memory: 86 MB. Current time: 2/20/26, 4:10:59 PM CST
+// Elapsed time: 1188 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "axi_ppm4_v1_0.vhd", 0); // m (l, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "axi_ppm4_v1_0_S00_AXI.vhd", 1); // m (l, cs)
+// Elapsed time: 275 seconds
+selectCodeEditor("axi_ppm4_v1_0_S00_AXI.vhd", 396, 280); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0_S00_AXI.vhd", 396, 280, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("axi_ppm4_v1_0_S00_AXI.vhd", 512, 275); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0_S00_AXI.vhd", 512, 275, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("axi_ppm4_v1_0_S00_AXI.vhd", 130, 267); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0_S00_AXI.vhd", 130, 267, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("axi_ppm4_v1_0_S00_AXI.vhd", 346, 354); // bP (w, cs)
+// Elapsed time: 220 seconds
+selectCodeEditor("axi_ppm4_v1_0_S00_AXI.vhd", 380, 342); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0_S00_AXI.vhd", 380, 342, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("axi_ppm4_v1_0_S00_AXI.vhd", 259, 329); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0_S00_AXI.vhd", 264, 336); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0_S00_AXI.vhd", 264, 336, false, false, false, false, true); // bP (w, cs) - Double Click
+// HMemoryUtils.trashcanNow. Engine heap size: 1,001 MB. GUI used memory: 86 MB. Current time: 2/20/26, 4:40:59 PM CST
+// Elapsed time: 577 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "axi_ppm4_v1_0.vhd", 0); // m (l, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "tb_ppm_4.vhd", 2); // m (l, cs)
+selectCodeEditor("tb_ppm_4.vhd", 453, 324); // bP (w, cs)
+selectCodeEditor("tb_ppm_4.vhd", 453, 324, false, false, false, false, true); // bP (w, cs) - Double Click
+// Elapsed time: 12 seconds
+selectCodeEditor("tb_ppm_4.vhd", 568, 119); // bP (w, cs)
+selectCodeEditor("tb_ppm_4.vhd", 568, 119, false, false, false, false, true); // bP (w, cs) - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "axi_ppm4_v1_0_S00_AXI.vhd", 1); // m (l, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "tb_ppm_4.vhd", 2); // m (l, cs)

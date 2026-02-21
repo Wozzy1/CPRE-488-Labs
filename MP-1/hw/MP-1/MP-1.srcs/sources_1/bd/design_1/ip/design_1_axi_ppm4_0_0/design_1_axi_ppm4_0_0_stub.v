@@ -1,7 +1,7 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-// Date        : Fri Feb 20 15:23:29 2026
+// Date        : Fri Feb 20 19:07:58 2026
 // Host        : CO2041-07 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
 //               c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/ip/design_1_axi_ppm4_0_0/design_1_axi_ppm4_0_0_stub.v
@@ -14,14 +14,23 @@
 // The synthesis directives are for Synopsys Synplify support to prevent IO buffer insertion.
 // Please paste the declaration into a Verilog source file or add the file as an additional source.
 (* x_core_info = "axi_ppm4_v1_0,Vivado 2020.1" *)
-module design_1_axi_ppm4_0_0(s00_ppm_in, s00_ppm_out, s00_axi_aclk, 
-  s00_axi_aresetn, s00_axi_awaddr, s00_axi_awprot, s00_axi_awvalid, s00_axi_awready, 
-  s00_axi_wdata, s00_axi_wstrb, s00_axi_wvalid, s00_axi_wready, s00_axi_bresp, 
-  s00_axi_bvalid, s00_axi_bready, s00_axi_araddr, s00_axi_arprot, s00_axi_arvalid, 
-  s00_axi_arready, s00_axi_rdata, s00_axi_rresp, s00_axi_rvalid, s00_axi_rready)
-/* synthesis syn_black_box black_box_pad_pin="s00_ppm_in,s00_ppm_out,s00_axi_aclk,s00_axi_aresetn,s00_axi_awaddr[5:0],s00_axi_awprot[2:0],s00_axi_awvalid,s00_axi_awready,s00_axi_wdata[31:0],s00_axi_wstrb[3:0],s00_axi_wvalid,s00_axi_wready,s00_axi_bresp[1:0],s00_axi_bvalid,s00_axi_bready,s00_axi_araddr[5:0],s00_axi_arprot[2:0],s00_axi_arvalid,s00_axi_arready,s00_axi_rdata[31:0],s00_axi_rresp[1:0],s00_axi_rvalid,s00_axi_rready" */;
+module design_1_axi_ppm4_0_0(s00_ppm_in, s00_ppm_out, s00_reg0_out, 
+  s00_reg10_out, s00_reg11_out, s00_reg12_out, s00_reg13_out, s00_reg14_out, s00_reg15_out, 
+  s00_axi_aclk, s00_axi_aresetn, s00_axi_awaddr, s00_axi_awprot, s00_axi_awvalid, 
+  s00_axi_awready, s00_axi_wdata, s00_axi_wstrb, s00_axi_wvalid, s00_axi_wready, 
+  s00_axi_bresp, s00_axi_bvalid, s00_axi_bready, s00_axi_araddr, s00_axi_arprot, 
+  s00_axi_arvalid, s00_axi_arready, s00_axi_rdata, s00_axi_rresp, s00_axi_rvalid, 
+  s00_axi_rready)
+/* synthesis syn_black_box black_box_pad_pin="s00_ppm_in,s00_ppm_out,s00_reg0_out[31:0],s00_reg10_out[31:0],s00_reg11_out[31:0],s00_reg12_out[31:0],s00_reg13_out[31:0],s00_reg14_out[31:0],s00_reg15_out[31:0],s00_axi_aclk,s00_axi_aresetn,s00_axi_awaddr[5:0],s00_axi_awprot[2:0],s00_axi_awvalid,s00_axi_awready,s00_axi_wdata[31:0],s00_axi_wstrb[3:0],s00_axi_wvalid,s00_axi_wready,s00_axi_bresp[1:0],s00_axi_bvalid,s00_axi_bready,s00_axi_araddr[5:0],s00_axi_arprot[2:0],s00_axi_arvalid,s00_axi_arready,s00_axi_rdata[31:0],s00_axi_rresp[1:0],s00_axi_rvalid,s00_axi_rready" */;
   input s00_ppm_in;
   output s00_ppm_out;
+  output [31:0]s00_reg0_out;
+  output [31:0]s00_reg10_out;
+  output [31:0]s00_reg11_out;
+  output [31:0]s00_reg12_out;
+  output [31:0]s00_reg13_out;
+  output [31:0]s00_reg14_out;
+  output [31:0]s00_reg15_out;
   input s00_axi_aclk;
   input s00_axi_aresetn;
   input [5:0]s00_axi_awaddr;

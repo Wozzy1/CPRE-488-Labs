@@ -1,0 +1,40 @@
+$date
+        2026-Feb-20 18:51:01
+$end
+$version
+        Vivado v2020.1 (64-bit)
+$end
+$timescale
+        1ps
+$end
+$scope module dut $end
+$var reg 1 " design_1_i/system_ila_0/U0/probe0_1 $end
+$var reg 32 # design_1_i/system_ila_0/U0/probe1_1 [31:0] $end
+$var reg 32 C design_1_i/system_ila_0/U0/probe2_1 [31:0] $end
+$var reg 32 c design_1_i/system_ila_0/U0/probe3_1 [31:0] $end
+$var reg 32 %" design_1_i/system_ila_0/U0/probe4_1 [31:0] $end
+$var reg 32 E" design_1_i/system_ila_0/U0/probe5_1 [31:0] $end
+$var reg 32 e" design_1_i/system_ila_0/U0/probe6_1 [31:0] $end
+$var reg 32 '# design_1_i/system_ila_0/U0/probe7_1 [31:0] $end
+$var reg 1 G# _TRIGGER $end
+$var reg 1 H# _WINDOW $end
+$var reg 1 I# _GAP $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+1"
+b0 #
+b0 C
+b0 c
+b0 %"
+b0 E"
+b0 e"
+b0 '#
+0G#
+1H#
+0I#
+$end
+#512
+0"
+1G#

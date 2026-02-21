@@ -1,7 +1,7 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
--- Date        : Fri Feb 20 15:23:29 2026
+-- Date        : Fri Feb 20 19:07:58 2026
 -- Host        : CO2041-07 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub
 --               c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/ip/design_1_axi_ppm4_0_0/design_1_axi_ppm4_0_0_stub.vhdl
@@ -16,6 +16,13 @@ entity design_1_axi_ppm4_0_0 is
   Port ( 
     s00_ppm_in : in STD_LOGIC;
     s00_ppm_out : out STD_LOGIC;
+    s00_reg0_out : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    s00_reg10_out : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    s00_reg11_out : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    s00_reg12_out : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    s00_reg13_out : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    s00_reg14_out : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    s00_reg15_out : out STD_LOGIC_VECTOR ( 31 downto 0 );
     s00_axi_aclk : in STD_LOGIC;
     s00_axi_aresetn : in STD_LOGIC;
     s00_axi_awaddr : in STD_LOGIC_VECTOR ( 5 downto 0 );
@@ -45,7 +52,7 @@ architecture stub of design_1_axi_ppm4_0_0 is
 attribute syn_black_box : boolean;
 attribute black_box_pad_pin : string;
 attribute syn_black_box of stub : architecture is true;
-attribute black_box_pad_pin of stub : architecture is "s00_ppm_in,s00_ppm_out,s00_axi_aclk,s00_axi_aresetn,s00_axi_awaddr[5:0],s00_axi_awprot[2:0],s00_axi_awvalid,s00_axi_awready,s00_axi_wdata[31:0],s00_axi_wstrb[3:0],s00_axi_wvalid,s00_axi_wready,s00_axi_bresp[1:0],s00_axi_bvalid,s00_axi_bready,s00_axi_araddr[5:0],s00_axi_arprot[2:0],s00_axi_arvalid,s00_axi_arready,s00_axi_rdata[31:0],s00_axi_rresp[1:0],s00_axi_rvalid,s00_axi_rready";
+attribute black_box_pad_pin of stub : architecture is "s00_ppm_in,s00_ppm_out,s00_reg0_out[31:0],s00_reg10_out[31:0],s00_reg11_out[31:0],s00_reg12_out[31:0],s00_reg13_out[31:0],s00_reg14_out[31:0],s00_reg15_out[31:0],s00_axi_aclk,s00_axi_aresetn,s00_axi_awaddr[5:0],s00_axi_awprot[2:0],s00_axi_awvalid,s00_axi_awready,s00_axi_wdata[31:0],s00_axi_wstrb[3:0],s00_axi_wvalid,s00_axi_wready,s00_axi_bresp[1:0],s00_axi_bvalid,s00_axi_bready,s00_axi_araddr[5:0],s00_axi_arprot[2:0],s00_axi_arvalid,s00_axi_arready,s00_axi_rdata[31:0],s00_axi_rresp[1:0],s00_axi_rvalid,s00_axi_rready";
 attribute x_core_info : string;
 attribute x_core_info of stub : architecture is "axi_ppm4_v1_0,Vivado 2020.1";
 begin

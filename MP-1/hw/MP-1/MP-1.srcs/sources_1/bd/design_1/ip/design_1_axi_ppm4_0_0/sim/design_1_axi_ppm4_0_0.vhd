@@ -47,7 +47,7 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: iastate.edu:user:axi_ppm4:1.0
--- IP Revision: 28
+-- IP Revision: 31
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
@@ -57,6 +57,13 @@ ENTITY design_1_axi_ppm4_0_0 IS
   PORT (
     s00_ppm_in : IN STD_LOGIC;
     s00_ppm_out : OUT STD_LOGIC;
+    s00_reg0_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+    s00_reg10_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+    s00_reg11_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+    s00_reg12_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+    s00_reg13_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+    s00_reg14_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+    s00_reg15_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
     s00_axi_aclk : IN STD_LOGIC;
     s00_axi_aresetn : IN STD_LOGIC;
     s00_axi_awaddr : IN STD_LOGIC_VECTOR(5 DOWNTO 0);
@@ -92,6 +99,13 @@ ARCHITECTURE design_1_axi_ppm4_0_0_arch OF design_1_axi_ppm4_0_0 IS
     PORT (
       s00_ppm_in : IN STD_LOGIC;
       s00_ppm_out : OUT STD_LOGIC;
+      s00_reg0_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+      s00_reg10_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+      s00_reg11_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+      s00_reg12_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+      s00_reg13_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+      s00_reg14_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+      s00_reg15_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
       s00_axi_aclk : IN STD_LOGIC;
       s00_axi_aresetn : IN STD_LOGIC;
       s00_axi_awaddr : IN STD_LOGIC_VECTOR(5 DOWNTO 0);
@@ -151,6 +165,13 @@ BEGIN
     PORT MAP (
       s00_ppm_in => s00_ppm_in,
       s00_ppm_out => s00_ppm_out,
+      s00_reg0_out => s00_reg0_out,
+      s00_reg10_out => s00_reg10_out,
+      s00_reg11_out => s00_reg11_out,
+      s00_reg12_out => s00_reg12_out,
+      s00_reg13_out => s00_reg13_out,
+      s00_reg14_out => s00_reg14_out,
+      s00_reg15_out => s00_reg15_out,
       s00_axi_aclk => s00_axi_aclk,
       s00_axi_aresetn => s00_axi_aresetn,
       s00_axi_awaddr => s00_axi_awaddr,

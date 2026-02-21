@@ -2414,3 +2414,5 @@ con
 ----------------End of Script----------------
 
 21:33:29 INFO  : Launch script is exported to file 'C:\Users\diepw50\CPRE-488-Labs\MP-1\sw\PP_Output_Gen_Test\.sdk\launch_scripts\single_application_debug\debugger_gen_test-default.tcl'
+22:06:00 INFO  : Disconnected from the channel tcfchan#47.
+22:07:13 INFO  : Hardware specification for platform project 'design_1_wrapper' is updated.

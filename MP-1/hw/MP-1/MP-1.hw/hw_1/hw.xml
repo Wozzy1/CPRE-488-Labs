@@ -4,7 +4,7 @@
 <!-- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.        -->
 
 <hwsession version="1" minor="2">
-  <device name="xc7z020_1" gui_info="dashboard1=dashboard_1[xc7z020_1/hw_ila_3/Waveform=ILA_WAVE_3;xc7z020_1/hw_ila_2/Waveform=ILA_WAVE_2;xc7z020_1/hw_ila_2/Status=ILA_STATUS_2;xc7z020_1/hw_ila_3/Status=ILA_STATUS_3;xc7z020_1/hw_ila_5/Waveform=ILA_WAVE_5;xc7z020_1/hw_ila_5/Trigger Setup=ILA_TRIGGER_5;xc7z020_1/hw_ila_1/Status=ILA_STATUS_1;xc7z020_1/hw_ila_4/Status=ILA_STATUS_4;xc7z020_1/hw_ila_5/Status=ILA_STATUS_5;xc7z020_1/hw_ila_3/Trigger Setup=ILA_TRIGGER_3;xc7z020_1/hw_ila_1/Waveform=ILA_WAVE_1;xc7z020_1/hw_ila_4/Waveform=ILA_WAVE_4;xc7z020_1/hw_ila_4/Trigger Setup=ILA_TRIGGER_4;xc7z020_1/hw_ila_1/Trigger Setup=ILA_TRIGGER_1;xc7z020_1/hw_ila_2/Trigger Setup=ILA_TRIGGER_2;]"/>
+  <device name="xc7z020_1" gui_info="dashboard1=hw_ila_1[xc7z020_1/hw_ila_1/Waveform=ILA_WAVE_1;xc7z020_1/hw_ila_1/Capture Setup=ILA_CAPTURE_1;xc7z020_1/hw_ila_1/Status=ILA_STATUS_1;xc7z020_1/hw_ila_1/Trigger Setup=ILA_TRIGGER_1;xc7z020_1/hw_ila_1/Settings=ILA_SETTINGS_1;]"/>
   <ObjectList object_type="hw_device" gui_info="">
     <Object name="xc7z020_1" gui_info="">
       <Properties Property="FULL_PROBES.FILE" value="$_project_name_.runs/impl_1/design_1_wrapper.ltx"/>

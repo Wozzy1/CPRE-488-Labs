@@ -1,0 +1,190 @@
+22:11:15 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\diepw50\CPRE-488-Labs\MP-1\sw\PPM_Bare_Test\temp_xsdb_launch_script.tcl
+22:11:15 INFO  : Registering command handlers for Vitis TCF services
+22:11:16 INFO  : XSCT server has started successfully.
+22:11:16 INFO  : Platform repository initialization has completed.
+22:11:16 INFO  : Successfully done setting XSCT server connection channel  
+22:11:16 INFO  : Successfully done query RDI_DATADIR 
+22:11:16 INFO  : Successfully done setting workspace for the tool. 
+22:11:17 INFO  : plnx-install-location is set to ''
+22:12:04 INFO  : Result from executing command 'getProjects': design_2_wrapper
+22:12:04 INFO  : Result from executing command 'getPlatforms': 
+22:12:04 INFO  : Platform 'design_2_wrapper' is added to custom repositories.
+22:12:10 INFO  : Platform 'design_2_wrapper' is added to custom repositories.
+22:12:40 INFO  : Result from executing command 'getProjects': design_2_wrapper
+22:12:40 INFO  : Result from executing command 'getPlatforms': design_2_wrapper|C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PPM_Bare_Test/design_2_wrapper/export/design_2_wrapper/design_2_wrapper.xpfm
+22:12:40 INFO  : Checking for BSP changes to sync application flags for project 'bare_test'...
+22:12:48 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:12:49 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B18A36" && level==0 && jtag_device_ctx=="jsn-Zed-210248B18A36-23727093-0"}' command is executed.
+22:12:51 INFO  : FPGA configured successfully with bitstream "C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PPM_Bare_Test/bare_test/_ide/bitstream/design_2_wrapper.bit"
+22:13:01 INFO  : Checking for BSP changes to sync application flags for project 'bare_test'...
+22:13:20 INFO  : Hardware specification for platform project 'design_2_wrapper' is updated.
+22:13:26 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:13:26 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B18A36" && level==0 && jtag_device_ctx=="jsn-Zed-210248B18A36-23727093-0"}' command is executed.
+22:13:28 INFO  : FPGA configured successfully with bitstream "C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PPM_Bare_Test/bare_test/_ide/bitstream/design_2_wrapper.bit"
+22:13:33 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:13:33 INFO  : Jtag cable 'Digilent Zed 210248B18A36' is selected.
+22:13:33 INFO  : 'jtag frequency' command is executed.
+22:13:33 INFO  : Context for 'APU' is selected.
+22:13:33 INFO  : System reset is completed.
+22:13:36 INFO  : 'after 3000' command is executed.
+22:13:36 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B18A36" && level==0 && jtag_device_ctx=="jsn-Zed-210248B18A36-23727093-0"}' command is executed.
+22:13:38 INFO  : FPGA configured successfully with bitstream "C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PPM_Bare_Test/bare_test/_ide/bitstream/design_2_wrapper.bit"
+22:13:38 INFO  : Context for 'APU' is selected.
+22:13:38 INFO  : Hardware design and registers information is loaded from 'C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PPM_Bare_Test/design_2_wrapper/export/design_2_wrapper/hw/design_2_wrapper.xsa'.
+22:13:38 INFO  : 'configparams force-mem-access 1' command is executed.
+22:13:38 INFO  : Context for 'APU' is selected.
+22:13:38 INFO  : Sourcing of 'C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PPM_Bare_Test/bare_test/_ide/psinit/ps7_init.tcl' is done.
+22:13:38 INFO  : 'ps7_init' command is executed.
+22:13:38 INFO  : 'ps7_post_config' command is executed.
+22:13:38 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:13:38 INFO  : The application 'C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PPM_Bare_Test/bare_test/Debug/bare_test.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:13:39 INFO  : 'configparams force-mem-access 0' command is executed.
+22:13:39 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B18A36" && level==0 && jtag_device_ctx=="jsn-Zed-210248B18A36-23727093-0"}
+fpga -file C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PPM_Bare_Test/bare_test/_ide/bitstream/design_2_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PPM_Bare_Test/design_2_wrapper/export/design_2_wrapper/hw/design_2_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PPM_Bare_Test/bare_test/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PPM_Bare_Test/bare_test/Debug/bare_test.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:13:39 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:13:39 INFO  : 'con' command is executed.
+22:13:39 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+22:13:39 INFO  : Launch script is exported to file 'C:\Users\diepw50\CPRE-488-Labs\MP-1\sw\PPM_Bare_Test\.sdk\launch_scripts\single_application_debug\debugger_bare_test-default.tcl'
+22:17:27 ERROR : Failed to read platform from project 'bare_test_system'.
+Reason: Failed to execute command 'platform read {C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PPM_Bare_Test/bare_test_system/platform.spr}'. Click on details for more information.
+22:17:58 INFO  : Hardware specification for platform project 'design_2_wrapper' is updated.
+22:18:07 INFO  : Result from executing command 'getProjects': design_2_wrapper
+22:18:07 INFO  : Result from executing command 'getPlatforms': design_2_wrapper|C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PPM_Bare_Test/design_2_wrapper/export/design_2_wrapper/design_2_wrapper.xpfm
+22:18:15 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:18:15 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B18A36" && level==0 && jtag_device_ctx=="jsn-Zed-210248B18A36-23727093-0"}' command is executed.
+22:18:17 INFO  : FPGA configured successfully with bitstream "C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PPM_Bare_Test/bare_test/_ide/bitstream/design_2_wrapper.bit"
+22:18:20 INFO  : Disconnected from the channel tcfchan#2.
+22:18:21 INFO  : Checking for BSP changes to sync application flags for project 'bare_test'...
+22:18:26 INFO  : The hardware specfication used by project 'bare_test' is out of sync with the platform. Resource files extracted from the hardware specfiication will be updated.
+22:18:26 INFO  : The file 'C:\Users\diepw50\CPRE-488-Labs\MP-1\sw\PPM_Bare_Test\bare_test\_ide\bitstream\design_2_wrapper.bit' stored in project is removed.
+22:18:26 INFO  : The updated bitstream files are copied from platform to folder 'C:\Users\diepw50\CPRE-488-Labs\MP-1\sw\PPM_Bare_Test\bare_test\_ide\bitstream' in project 'bare_test'.
+22:18:26 INFO  : The file 'C:\Users\diepw50\CPRE-488-Labs\MP-1\sw\PPM_Bare_Test\bare_test\_ide\psinit\ps7_init.tcl' stored in project is removed.
+22:18:28 INFO  : The updated ps init files are copied from platform to folder 'C:\Users\diepw50\CPRE-488-Labs\MP-1\sw\PPM_Bare_Test\bare_test\_ide\psinit' in project 'bare_test'.
+22:18:29 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:18:29 INFO  : Jtag cable 'Digilent Zed 210248B18A36' is selected.
+22:18:29 INFO  : 'jtag frequency' command is executed.
+22:18:29 INFO  : Context for 'APU' is selected.
+22:18:29 INFO  : System reset is completed.
+22:18:32 INFO  : 'after 3000' command is executed.
+22:18:32 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B18A36" && level==0 && jtag_device_ctx=="jsn-Zed-210248B18A36-23727093-0"}' command is executed.
+22:18:34 INFO  : FPGA configured successfully with bitstream "C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PPM_Bare_Test/bare_test/_ide/bitstream/design_2_wrapper.bit"
+22:18:34 INFO  : Context for 'APU' is selected.
+22:18:34 INFO  : Hardware design and registers information is loaded from 'C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PPM_Bare_Test/design_2_wrapper/export/design_2_wrapper/hw/design_2_wrapper.xsa'.
+22:18:34 INFO  : 'configparams force-mem-access 1' command is executed.
+22:18:34 INFO  : Context for 'APU' is selected.
+22:18:34 INFO  : Sourcing of 'C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PPM_Bare_Test/bare_test/_ide/psinit/ps7_init.tcl' is done.
+22:18:34 INFO  : 'ps7_init' command is executed.
+22:18:34 INFO  : 'ps7_post_config' command is executed.
+22:18:34 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:18:34 INFO  : The application 'C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PPM_Bare_Test/bare_test/Debug/bare_test.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:18:35 INFO  : 'configparams force-mem-access 0' command is executed.
+22:18:35 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B18A36" && level==0 && jtag_device_ctx=="jsn-Zed-210248B18A36-23727093-0"}
+fpga -file C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PPM_Bare_Test/bare_test/_ide/bitstream/design_2_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PPM_Bare_Test/design_2_wrapper/export/design_2_wrapper/hw/design_2_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PPM_Bare_Test/bare_test/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PPM_Bare_Test/bare_test/Debug/bare_test.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:18:35 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:18:35 INFO  : 'con' command is executed.
+22:18:35 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+22:18:35 INFO  : Launch script is exported to file 'C:\Users\diepw50\CPRE-488-Labs\MP-1\sw\PPM_Bare_Test\.sdk\launch_scripts\single_application_debug\debugger_bare_test-default.tcl'
+22:23:31 INFO  : Disconnected from the channel tcfchan#4.
+22:23:36 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:23:36 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B18A36" && level==0 && jtag_device_ctx=="jsn-Zed-210248B18A36-23727093-0"}' command is executed.
+22:23:38 INFO  : FPGA configured successfully with bitstream "C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PPM_Bare_Test/bare_test/_ide/bitstream/design_2_wrapper.bit"
+22:23:47 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:23:47 INFO  : Jtag cable 'Digilent Zed 210248B18A36' is selected.
+22:23:47 INFO  : 'jtag frequency' command is executed.
+22:23:47 INFO  : Context for 'APU' is selected.
+22:23:47 INFO  : System reset is completed.
+22:23:50 INFO  : 'after 3000' command is executed.
+22:23:50 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B18A36" && level==0 && jtag_device_ctx=="jsn-Zed-210248B18A36-23727093-0"}' command is executed.
+22:23:52 INFO  : FPGA configured successfully with bitstream "C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PPM_Bare_Test/bare_test/_ide/bitstream/design_2_wrapper.bit"
+22:23:53 INFO  : Context for 'APU' is selected.
+22:23:53 INFO  : Hardware design and registers information is loaded from 'C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PPM_Bare_Test/design_2_wrapper/export/design_2_wrapper/hw/design_2_wrapper.xsa'.
+22:23:53 INFO  : 'configparams force-mem-access 1' command is executed.
+22:23:53 INFO  : Context for 'APU' is selected.
+22:23:53 INFO  : Sourcing of 'C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PPM_Bare_Test/bare_test/_ide/psinit/ps7_init.tcl' is done.
+22:23:53 INFO  : 'ps7_init' command is executed.
+22:23:53 INFO  : 'ps7_post_config' command is executed.
+22:23:53 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:23:53 INFO  : The application 'C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PPM_Bare_Test/bare_test/Debug/bare_test.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:23:53 INFO  : 'configparams force-mem-access 0' command is executed.
+22:23:53 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B18A36" && level==0 && jtag_device_ctx=="jsn-Zed-210248B18A36-23727093-0"}
+fpga -file C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PPM_Bare_Test/bare_test/_ide/bitstream/design_2_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PPM_Bare_Test/design_2_wrapper/export/design_2_wrapper/hw/design_2_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PPM_Bare_Test/bare_test/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PPM_Bare_Test/bare_test/Debug/bare_test.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:23:53 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:23:53 INFO  : 'con' command is executed.
+22:23:53 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+22:23:53 INFO  : Launch script is exported to file 'C:\Users\diepw50\CPRE-488-Labs\MP-1\sw\PPM_Bare_Test\.sdk\launch_scripts\single_application_debug\debugger_bare_test-default.tcl'
+22:37:31 INFO  : Disconnected from the channel tcfchan#5.
+22:37:48 INFO  : Hardware specification for platform project 'design_2_wrapper' is updated.
+22:38:11 INFO  : Result from executing command 'getProjects': design_2_wrapper
+22:38:11 INFO  : Result from executing command 'getPlatforms': design_2_wrapper|C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PPM_Bare_Test/design_2_wrapper/export/design_2_wrapper/design_2_wrapper.xpfm
+22:38:11 INFO  : Checking for BSP changes to sync application flags for project 'bare_test'...
+22:38:34 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:38:34 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B18A36" && level==0 && jtag_device_ctx=="jsn-Zed-210248B18A36-23727093-0"}' command is executed.
+22:38:36 INFO  : FPGA configured successfully with bitstream "C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PPM_Bare_Test/bare_test/_ide/bitstream/design_2_wrapper.bit"
+22:38:49 INFO  : The hardware specfication used by project 'bare_test' is out of sync with the platform. Resource files extracted from the hardware specfiication will be updated.
+22:38:49 INFO  : The file 'C:\Users\diepw50\CPRE-488-Labs\MP-1\sw\PPM_Bare_Test\bare_test\_ide\bitstream\design_2_wrapper.bit' stored in project is removed.
+22:38:49 INFO  : The updated bitstream files are copied from platform to folder 'C:\Users\diepw50\CPRE-488-Labs\MP-1\sw\PPM_Bare_Test\bare_test\_ide\bitstream' in project 'bare_test'.
+22:38:49 INFO  : The file 'C:\Users\diepw50\CPRE-488-Labs\MP-1\sw\PPM_Bare_Test\bare_test\_ide\psinit\ps7_init.tcl' stored in project is removed.
+22:38:51 INFO  : The updated ps init files are copied from platform to folder 'C:\Users\diepw50\CPRE-488-Labs\MP-1\sw\PPM_Bare_Test\bare_test\_ide\psinit' in project 'bare_test'.

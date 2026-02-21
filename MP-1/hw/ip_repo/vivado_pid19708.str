@@ -1254,3 +1254,4 @@ selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "axi_ppm
 selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "axi_ppm4_v1_0.vhd", 2); // m (l, cs)
 selectCodeEditor("axi_ppm4_v1_0.vhd", 278, 270); // bP (w, cs)
 // HMemoryUtils.trashcanNow. Engine heap size: 1,002 MB. GUI used memory: 168 MB. Current time: 2/20/26, 9:30:33 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 1,002 MB. GUI used memory: 168 MB. Current time: 2/20/26, 10:00:35 PM CST

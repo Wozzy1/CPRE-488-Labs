@@ -84,7 +84,7 @@
 # ----------------------------------------------------------------------------
 # JA Pmod - Bank 13 
 # ---------------------------------------------------------------------------- 
-set_property PACKAGE_PIN Y11  [get_ports {ppm_in_0}];  # "JA1"
+#set_property PACKAGE_PIN Y11  [get_ports {s00_ppm_in_0}];  # "JA1"
 #set_property PACKAGE_PIN AA8  [get_ports {JA10}];  # "JA10"
 #set_property PACKAGE_PIN AA11 [get_ports {JA2}];  # "JA2"
 #set_property PACKAGE_PIN Y10  [get_ports {JA3}];  # "JA3"
@@ -97,7 +97,7 @@ set_property PACKAGE_PIN Y11  [get_ports {ppm_in_0}];  # "JA1"
 # ----------------------------------------------------------------------------
 # JB Pmod - Bank 13
 # ---------------------------------------------------------------------------- 
-set_property PACKAGE_PIN W12 [get_ports {s00_ppm_out_0}];  # "JB1"
+#set_property PACKAGE_PIN W12 [get_ports {s00_ppm_out_0}];  # "JB1"
 #set_property PACKAGE_PIN W11 [get_ports {JB2}];  # "JB2"
 #set_property PACKAGE_PIN V10 [get_ports {JB3}];  # "JB3"
 #set_property PACKAGE_PIN W8 [get_ports {JB4}];  # "JB4"
@@ -109,7 +109,7 @@ set_property PACKAGE_PIN W12 [get_ports {s00_ppm_out_0}];  # "JB1"
 # ----------------------------------------------------------------------------
 # JC Pmod - Bank 13
 # ---------------------------------------------------------------------------- 
-#set_property PACKAGE_PIN AB6 [get_ports {JC1_N}];  # "JC1_N"
+set_property PACKAGE_PIN AB6 [get_ports {s00_ppm_out_0}];  # "JC1_N"
 #set_property PACKAGE_PIN AB7 [get_ports {JC1_P}];  # "JC1_P"
 #set_property PACKAGE_PIN AA4 [get_ports {JC2_N}];  # "JC2_N"
 #set_property PACKAGE_PIN Y4  [get_ports {JC2_P}];  # "JC2_P"
@@ -121,7 +121,7 @@ set_property PACKAGE_PIN W12 [get_ports {s00_ppm_out_0}];  # "JB1"
 # ----------------------------------------------------------------------------
 # JD Pmod - Bank 13
 # ---------------------------------------------------------------------------- 
-#set_property PACKAGE_PIN W7 [get_ports {JD1_N}];  # "JD1_N"
+set_property PACKAGE_PIN W7 [get_ports {s00_ppm_in_0}];  # "JD1_N"
 #set_property PACKAGE_PIN V7 [get_ports {JD1_P}];  # "JD1_P"
 #set_property PACKAGE_PIN V4 [get_ports {JD2_N}];  # "JD2_N"
 #set_property PACKAGE_PIN V5 [get_ports {JD2_P}];  # "JD2_P"

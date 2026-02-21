@@ -1,10 +1,25 @@
-22:38:14 **** Incremental Build of configuration Debug for project bare_test ****
+02:19:07 **** Incremental Build of configuration Debug for project bare_test ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
 ' '
 make --no-print-directory main-build
-make[1]: Nothing to be done for 'main-build'.
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PPM_Bare_Test/design_2_wrapper/export/design_2_wrapper/sw/design_2_wrapper/domain_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: bare_test.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PPM_Bare_Test/design_2_wrapper/export/design_2_wrapper/sw/design_2_wrapper/domain_ps7_cortexa9_0/bsplib/lib -o "bare_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: bare_test.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size bare_test.elf  |tee "bare_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  41528	   2548	  22640	  66716	  1049c	bare_test.elf
+'Finished building: bare_test.elf.size'
+' '
 
-22:38:14 Build Finished (took 144ms)
+02:19:07 Build Finished (took 680ms)
 

@@ -1,8 +1,8 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
---Date        : Fri Feb 20 22:14:40 2026
---Host        : CO2041-07 running 64-bit major release  (build 9200)
+--Date        : Sat Feb 21 01:57:41 2026
+--Host        : CO2041-08 running 64-bit major release  (build 9200)
 --Command     : generate_target design_2_wrapper.bd
 --Design      : design_2_wrapper
 --Purpose     : IP block netlist
@@ -42,6 +42,8 @@ end design_2_wrapper;
 architecture STRUCTURE of design_2_wrapper is
   component design_2 is
   port (
+    s00_ppm_out_0 : out STD_LOGIC;
+    s00_ppm_in_0 : in STD_LOGIC;
     DDR_cas_n : inout STD_LOGIC;
     DDR_cke : inout STD_LOGIC;
     DDR_ck_n : inout STD_LOGIC;
@@ -62,9 +64,7 @@ architecture STRUCTURE of design_2_wrapper is
     FIXED_IO_ddr_vrp : inout STD_LOGIC;
     FIXED_IO_ps_srstb : inout STD_LOGIC;
     FIXED_IO_ps_clk : inout STD_LOGIC;
-    FIXED_IO_ps_porb : inout STD_LOGIC;
-    s00_ppm_out_0 : out STD_LOGIC;
-    s00_ppm_in_0 : in STD_LOGIC
+    FIXED_IO_ps_porb : inout STD_LOGIC
   );
   end component design_2;
 begin

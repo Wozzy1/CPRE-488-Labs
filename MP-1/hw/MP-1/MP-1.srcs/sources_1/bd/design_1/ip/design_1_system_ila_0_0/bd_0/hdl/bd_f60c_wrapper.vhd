@@ -17,7 +17,9 @@ entity bd_f60c_wrapper is
     probe3 : in STD_LOGIC_VECTOR ( 31 downto 0 );
     probe4 : in STD_LOGIC_VECTOR ( 31 downto 0 );
     probe5 : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    probe6 : in STD_LOGIC_VECTOR ( 31 downto 0 )
+    probe6 : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    probe7 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe8 : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
 end bd_f60c_wrapper;
 
@@ -31,7 +33,9 @@ architecture STRUCTURE of bd_f60c_wrapper is
     probe3 : in STD_LOGIC_VECTOR ( 31 downto 0 );
     probe4 : in STD_LOGIC_VECTOR ( 31 downto 0 );
     probe5 : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    probe6 : in STD_LOGIC_VECTOR ( 31 downto 0 )
+    probe6 : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    probe7 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe8 : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   end component bd_f60c;
 begin
@@ -44,6 +48,8 @@ bd_f60c_i: component bd_f60c
       probe3(31 downto 0) => probe3(31 downto 0),
       probe4(31 downto 0) => probe4(31 downto 0),
       probe5(31 downto 0) => probe5(31 downto 0),
-      probe6(31 downto 0) => probe6(31 downto 0)
+      probe6(31 downto 0) => probe6(31 downto 0),
+      probe7(0) => probe7(0),
+      probe8(0) => probe8(0)
     );
 end STRUCTURE;

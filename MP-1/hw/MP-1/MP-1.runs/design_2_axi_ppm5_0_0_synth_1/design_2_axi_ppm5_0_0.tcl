@@ -99,7 +99,7 @@ set_property ip_output_repo c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.cac
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_ip -quiet c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_2/ip/design_2_axi_ppm5_0_0/design_2_axi_ppm5_0_0.xci
+read_ip -quiet C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_2/ip/design_2_axi_ppm5_0_0/design_2_axi_ppm5_0_0.xci
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being

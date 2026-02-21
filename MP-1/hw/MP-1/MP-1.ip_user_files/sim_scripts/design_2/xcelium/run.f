@@ -39,17 +39,8 @@
   "../../../bd/design_2/ipshared/c864/hdl/axi_ppm5_v1_0_S00_AXI.vhd" \
   "../../../bd/design_2/ipshared/c864/hdl/axi_ppm5_v1_0.vhd" \
   "../../../bd/design_2/ip/design_2_axi_ppm5_0_0/sim/design_2_axi_ppm5_0_0.vhd" \
-  "../../../bd/design_2/sim/design_2.vhd" \
--endlib
--makelib xcelium_lib/xlconstant_v1_1_7 \
-  "../../../../MP-1.srcs/sources_1/bd/design_2/ipshared/fcfc/hdl/xlconstant_v1_1_vl_rfs.v" \
--endlib
--makelib xcelium_lib/xil_defaultlib \
-  "../../../bd/design_2/ip/design_2_xlconstant_0_0/sim/design_2_xlconstant_0_0.v" \
--endlib
--makelib xcelium_lib/xil_defaultlib \
-  "../../../bd/design_2/ip/design_2_system_ila_0_0/bd_0/ip/ip_0/sim/bd_074c_ila_lib_0.vhd" \
   "../../../bd/design_2/ip/design_2_system_ila_0_0/bd_0/sim/bd_074c.vhd" \
+  "../../../bd/design_2/ip/design_2_system_ila_0_0/bd_0/ip/ip_0/sim/bd_074c_ila_lib_0.vhd" \
   "../../../bd/design_2/ip/design_2_system_ila_0_0/sim/design_2_system_ila_0_0.vhd" \
 -endlib
 -makelib xcelium_lib/generic_baseblocks_v2_1_0 \
@@ -75,6 +66,9 @@
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
   "../../../bd/design_2/ip/design_2_auto_pc_0/sim/design_2_auto_pc_0.v" \
+-endlib
+-makelib xcelium_lib/xil_defaultlib \
+  "../../../bd/design_2/sim/design_2.vhd" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
   glbl.v

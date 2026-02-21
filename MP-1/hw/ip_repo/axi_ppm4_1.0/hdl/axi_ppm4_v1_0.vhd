@@ -183,492 +183,502 @@ axi_ppm4_v1_0_S00_AXI_inst : axi_ppm4_v1_0_S00_AXI
 );
 
 --	-- Add user logic here
---    manage_cnt : process( s00_axi_aclk )
---    begin
---        if ( rising_edge ( s00_axi_aclk )) then
---            if ( s00_axi_aresetn = '0') then
---                    c0_u <= (others => '0');
---                    c1_u <= (others => '0');
---                    c2_u <= (others => '0');
---                    c3_u <= (others => '0');
---                    c4_u <= (others => '0');
---                    c5_u <= (others => '0');
---                    c6_u <= (others => '0');
---                    c7_u <= (others => '0');
---                    reg1 <= (others => '0');
---                    reg2 <= (others => '0');
---                    reg3 <= (others => '0');
---                    reg4 <= (others => '0');
---                    reg5 <= (others => '0');
---                    reg6 <= (others => '0');
---            elsif (ppm_ff2 = '1') then
---                    if (PS /= NS) then
---                        c0_u <= (others => '0');
---                    else
---                        c0_u <= c0_u + 1;
---                    end if;                    
---					case currentChannel is
---					when x"0" => -- RESET COUNT
---						c0_u <= (others => '0');
---                        c1_u <= (others => '0');
---                        c2_u <= (others => '0');
---                        c3_u <= (others => '0');
---                        c4_u <= (others => '0');
---                        c5_u <= (others => '0');
---                        c6_u <= (others => '0');
---                        c7_u <= (others => '0');
---					when x"1" =>
---						c1_u <= c1_u + 1;
---					when x"2" =>
---						c2_u <= c2_u + 1;
---					when x"3" =>
---						c3_u <= c3_u + 1;
---					when x"4" =>
---						c4_u <= c4_u + 1;
---					when x"5" =>
---						c5_u <= c5_u + 1;
---					when x"6" => 
---						c6_u <= c6_u + 1;
---					when others => -- default update dummy channel
---						c7_u <= c7_u + 1;
---					end case;
---				end if;
---            else
---                c0_u <= c0_u;
---                c1_u <= c1_u;
---                c2_u <= c2_u;
---                c3_u <= c3_u;
---                c4_u <= c4_u;
---                c5_u <= c5_u;
---                c6_u <= c6_u;
---                c7_u <= c7_u;
+    manage_cnt : process( s00_axi_aclk )
+    begin
+        if ( rising_edge ( s00_axi_aclk )) then
+            if ( s00_axi_aresetn = '0') then
+                    c0_u <= (others => '0');
+                    c1_u <= (others => '0');
+                    c2_u <= (others => '0');
+                    c3_u <= (others => '0');
+                    c4_u <= (others => '0');
+                    c5_u <= (others => '0');
+                    c6_u <= (others => '0');
+                    c7_u <= (others => '0');
+                    reg1 <= (others => '0');
+                    reg2 <= (others => '0');
+                    reg3 <= (others => '0');
+                    reg4 <= (others => '0');
+                    reg5 <= (others => '0');
+                    reg6 <= (others => '0');
+                    s00_reg10_out <= (others => '0');
+                    s00_reg11_out <= (others => '0');
+                    s00_reg12_out <= (others => '0');
+                    s00_reg13_out <= (others => '0');
+                    s00_reg14_out <= (others => '0');
+                    s00_reg15_out <= (others => '0');
+                    
+            elsif (ppm_ff2 = '1') then
+                    if (PS /= NS) then
+                        c0_u <= (others => '0');
+                    else
+                        c0_u <= c0_u + 1;
+                    end if;                    
+					case currentChannel is
+					when x"0" => -- RESET COUNT
+						c0_u <= (others => '0');
+                        c1_u <= (others => '0');
+                        c2_u <= (others => '0');
+                        c3_u <= (others => '0');
+                        c4_u <= (others => '0');
+                        c5_u <= (others => '0');
+                        c6_u <= (others => '0');
+                        c7_u <= (others => '0');
+					when x"1" =>
+						c1_u <= c1_u + 1;
+					when x"2" =>
+						c2_u <= c2_u + 1;
+					when x"3" =>
+						c3_u <= c3_u + 1;
+					when x"4" =>
+						c4_u <= c4_u + 1;
+					when x"5" =>
+						c5_u <= c5_u + 1;
+					when x"6" => 
+						c6_u <= c6_u + 1;
+					when others => -- default update dummy channel
+						c7_u <= c7_u + 1;
+					end case;
+				end if;
+            else
+                c0_u <= c0_u;
+                c1_u <= c1_u;
+                c2_u <= c2_u;
+                c3_u <= c3_u;
+                c4_u <= c4_u;
+                c5_u <= c5_u;
+                c6_u <= c6_u;
+                c7_u <= c7_u;
                 
---                -- update registers with counts if eof
---                if (eof = '1') then
---                    reg1 <= std_logic_vector(c1_u);
---                    reg2 <= std_logic_vector(c2_u);
---                    reg3 <= std_logic_vector(c3_u);
---                    reg4 <= std_logic_vector(c4_u);
---                    reg5 <= std_logic_vector(c5_u);
---                    reg6 <= std_logic_vector(c6_u);
---                    s00_reg10_out <= std_logic_vector(c1_u);
---                    s00_reg11_out <= std_logic_vector(c2_u);
---                    s00_reg12_out <= std_logic_vector(c3_u);
---                    s00_reg13_out <= std_logic_vector(c4_u);
---                    s00_reg14_out <= std_logic_vector(c5_u);
---                    s00_reg15_out <= std_logic_vector(c6_u);
+                -- update registers with counts if eof
+                if (eof = '1') then
+                    reg1 <= std_logic_vector(c1_u);
+                    reg2 <= std_logic_vector(c2_u);
+                    reg3 <= std_logic_vector(c3_u);
+                    reg4 <= std_logic_vector(c4_u);
+                    reg5 <= std_logic_vector(c5_u);
+                    reg6 <= std_logic_vector(c6_u);
 
---                else 
---                end if;
---            end if;
---    end process;
-    
---    update_state : process ( s00_axi_aclk )
---    begin
-----    s00_ppm_in => s00_ppm_out;
---        if (rising_edge ( s00_axi_aclk ) ) then
---            if ( s00_axi_aresetn = '0' ) then
---                PS <= IDLE;
---                ppm_ff1 <= '0';
---                ppm_ff2 <= '0';
---            else
---                PS <= NS;
---                ppm_ff1 <= s00_ppm_in;
---                ppm_ff2 <= ppm_ff1;
---            end if;
---        end if;
-    
---    end process update_state;
-    
---    capture_ppm : process (ppm_ff2, PS, c0_u) -- add current clocks
---    begin
---        -- default values
---        NS <= PS;
---        currentChannel <= x"0";
---        eof <= '0';
 
---        case PS is
+
+                    s00_reg10_out <= std_logic_vector(c1_u);
+                    s00_reg11_out <= std_logic_vector(c2_u);
+                    s00_reg12_out <= std_logic_vector(c3_u);
+                    s00_reg13_out <= std_logic_vector(c4_u);
+                    s00_reg14_out <= std_logic_vector(c5_u);
+                    s00_reg15_out <= std_logic_vector(c6_u);
+
+                else 
+                end if;
+            end if;
+    end process;
+    
+    update_state : process ( s00_axi_aclk )
+    begin
+--    s00_ppm_in => s00_ppm_out;
+        if (rising_edge ( s00_axi_aclk ) ) then
+            if ( s00_axi_aresetn = '0' ) then
+                PS <= IDLE;
+                ppm_ff1 <= '0';
+                ppm_ff2 <= '0';
+            else
+                PS <= NS;
+                ppm_ff1 <= s00_ppm_in;
+                ppm_ff2 <= ppm_ff1;
+            end if;
+        end if;
+    
+    end process update_state;
+    
+    capture_ppm : process (ppm_ff2, PS, c0_u, s00_ppm_in, ppm_ff1) -- add current clocks
+    begin
+        -- default values
+        NS <= PS;
+        currentChannel <= x"0";
+        eof <= '0';
+
+        case PS is
         
---        when IDLE =>
---            if (c0_u > TIMEOUT_CLKS) then
---                NS <= IDLE;
---                currentChannel <= x"0";
---                eof <= '0';
---            elsif (ppm_ff2 = '0') then
---                NS <= PULSE1;
---                currentChannel <= x"0";
---                eof <= '0';
---            else
---                NS <= IDLE;
---                currentChannel <= x"0";
---                eof <= '0';
---            end if;       
---        when PULSE1 =>
---            if (c0_u > TIMEOUT_CLKS) then
---                NS <= IDLE;
---                currentChannel <= x"0";
---                eof <= '0';
---            elsif (ppm_ff2 = '1') then
---                NS <= C1;
---                currentChannel <= x"1";
---                eof <= '0';
---            else
---                NS <= PULSE1;
---                currentChannel <= x"7";
---                eof <= '0';
---            end if;
---        when C1 =>
---            if (c0_u > TIMEOUT_CLKS) then
---                NS <= IDLE;
---                currentChannel <= x"0";
---                eof <= '0';
---            elsif (ppm_ff2 = '0') then
---                NS <= PULSE2;
---                currentChannel <= x"2";
---                eof <= '0';
---            else
---                NS <= C1;
---                currentChannel <= x"1";
---                eof <= '0';
---            end if;
---        when PULSE2 =>
---            if (c0_u > TIMEOUT_CLKS) then
---                NS <= IDLE;
---                currentChannel <= x"0";
---                eof <= '0';
---            elsif (ppm_ff2 = '1') then
---                NS <= C2;
---                currentChannel <= x"2";
---                eof <= '0';
---            else
---                NS <= PULSE2;
---                currentChannel <= x"7";
---                eof <= '0';
---            end if;
---        when C2 =>
---            if (c0_u > TIMEOUT_CLKS) then
---                NS <= IDLE;
---                currentChannel <= x"0";
---                eof <= '0';
---            elsif (ppm_ff2 = '0') then
---                NS <= PULSE3;
---                currentChannel <= x"3";
---                eof <= '0';
---            else
---                NS <= C2;
---                currentChannel <= x"2";
---                eof <= '0';
---            end if;
---        when PULSE3 =>
---            if (c0_u > TIMEOUT_CLKS) then
---                NS <= IDLE;
---                currentChannel <= x"0";
---                eof <= '0';
---            elsif (ppm_ff2 = '1') then
---                NS <= C3;
---                currentChannel <= x"3";
---                eof <= '0';
---            else
---                NS <= PULSE3;
---                currentChannel <= x"7";
---                eof <= '0';
---            end if;
---        when C3 =>
---            if (c0_u > TIMEOUT_CLKS) then
---                NS <= IDLE;
---                currentChannel <= x"0";
---                eof <= '0';
---            elsif (ppm_ff2 = '0') then
---                NS <= PULSE4;
---                currentChannel <= x"4";
---                eof <= '0';
---            else
---                NS <= C3;
---                currentChannel <= x"3";
---                eof <= '0';
---            end if;
---        when PULSE4 =>
---            if (c0_u > TIMEOUT_CLKS) then
---                NS <= IDLE;
---                currentChannel <= x"0";
---                eof <= '0';
---            elsif (ppm_ff2 = '1') then
---                NS <= C4;
---                currentChannel <= x"4";
---                eof <= '0';
---            else
---                NS <= PULSE4;
---                currentChannel <= x"7";
---                eof <= '0';
---            end if;
---        when C4 =>
---            if (c0_u > TIMEOUT_CLKS) then
---                NS <= IDLE;
---                currentChannel <= x"0";
---                eof <= '0';
---            elsif (ppm_ff2 = '0') then
---                NS <= PULSE5;
---                currentChannel <= x"5";
---                eof <= '0';
---            else
---                NS <= C4;
---                currentChannel <= x"4";
---                eof <= '0';
---            end if;
---        when PULSE5 =>
---            if (c0_u > TIMEOUT_CLKS) then
---                NS <= IDLE;
---                currentChannel <= x"0";
---                eof <= '0';
---            elsif (ppm_ff2 = '1') then
---                NS <= C5;
---                currentChannel <= x"5";
---                eof <= '0';
---            else
---                NS <= PULSE5;
---                currentChannel <= x"7";
---                eof <= '0';
---            end if;
---        when C5 =>
---            if (c0_u > TIMEOUT_CLKS) then
---                NS <= IDLE;
---                currentChannel <= x"0";
---                eof <= '0';
---            elsif (ppm_ff2 = '0') then
---                NS <= PULSE6;
---                currentChannel <= x"6";
---                eof <= '0';
---            else
---                NS <= C5;
---                currentChannel <= x"5";
---                eof <= '0';
---            end if;
---        when PULSE6 =>
---            if (c0_u > TIMEOUT_CLKS) then
---                NS <= IDLE;
---                currentChannel <= x"0";
---                eof <= '0';
---            elsif (ppm_ff2 = '1') then
---                NS <= C6;
---                currentChannel <= x"6";
---                eof <= '0';
---            else
---                NS <= PULSE6;
---                currentChannel <= x"7";
---                eof <= '0';
---            end if;
---        when C6 =>
---            if (c0_u > TIMEOUT_CLKS) then
---                NS <= IDLE;
---                currentChannel <= x"0";
---                eof <= '0';
---            elsif (ppm_ff2 = '0') then
---                NS <= PULSE7;
---                currentChannel <= x"0";
---                eof <= '1';
---            else
---                NS <= C6;
---                currentChannel <= x"6";
---                eof <= '0';
---            end if;
---        when PULSE7 =>
---            if (c0_u > TIMEOUT_CLKS) then
---                NS <= IDLE;
---                currentChannel <= x"0";
---                eof <= '0';
---            elsif (ppm_ff2 = '1') then
---                NS <= IDLE;
---                currentChannel <= x"0";
---                eof <= '0';
---            else
---                NS <= PULSE7;
---                currentChannel <= x"7";
---                eof <= '0';
---            end if;
---        when others =>
---            NS <= IDLE;
---            currentChannel <= x"0";
---            eof <= '0';
---        end case;
---    end process;
+        when IDLE =>
+            if (c0_u > TIMEOUT_CLKS) then
+                NS <= IDLE;
+                currentChannel <= x"0";
+                eof <= '0';
+            elsif (ppm_ff2 = '0') then
+                NS <= PULSE1;
+                currentChannel <= x"0";
+                eof <= '0';
+            else
+                NS <= IDLE;
+                currentChannel <= x"0";
+                eof <= '0';
+            end if;       
+        when PULSE1 =>
+            if (c0_u > TIMEOUT_CLKS) then
+                NS <= IDLE;
+                currentChannel <= x"0";
+                eof <= '0';
+            elsif (ppm_ff2 = '1') then
+                NS <= C1;
+                currentChannel <= x"1";
+                eof <= '0';
+            else
+                NS <= PULSE1;
+                currentChannel <= x"7";
+                eof <= '0';
+            end if;
+        when C1 =>
+            if (c0_u > TIMEOUT_CLKS) then
+                NS <= IDLE;
+                currentChannel <= x"0";
+                eof <= '0';
+            elsif (ppm_ff2 = '0') then
+                NS <= PULSE2;
+                currentChannel <= x"2";
+                eof <= '0';
+            else
+                NS <= C1;
+                currentChannel <= x"1";
+                eof <= '0';
+            end if;
+        when PULSE2 =>
+            if (c0_u > TIMEOUT_CLKS) then
+                NS <= IDLE;
+                currentChannel <= x"0";
+                eof <= '0';
+            elsif (ppm_ff2 = '1') then
+                NS <= C2;
+                currentChannel <= x"2";
+                eof <= '0';
+            else
+                NS <= PULSE2;
+                currentChannel <= x"7";
+                eof <= '0';
+            end if;
+        when C2 =>
+            if (c0_u > TIMEOUT_CLKS) then
+                NS <= IDLE;
+                currentChannel <= x"0";
+                eof <= '0';
+            elsif (ppm_ff2 = '0') then
+                NS <= PULSE3;
+                currentChannel <= x"3";
+                eof <= '0';
+            else
+                NS <= C2;
+                currentChannel <= x"2";
+                eof <= '0';
+            end if;
+        when PULSE3 =>
+            if (c0_u > TIMEOUT_CLKS) then
+                NS <= IDLE;
+                currentChannel <= x"0";
+                eof <= '0';
+            elsif (ppm_ff2 = '1') then
+                NS <= C3;
+                currentChannel <= x"3";
+                eof <= '0';
+            else
+                NS <= PULSE3;
+                currentChannel <= x"7";
+                eof <= '0';
+            end if;
+        when C3 =>
+            if (c0_u > TIMEOUT_CLKS) then
+                NS <= IDLE;
+                currentChannel <= x"0";
+                eof <= '0';
+            elsif (ppm_ff2 = '0') then
+                NS <= PULSE4;
+                currentChannel <= x"4";
+                eof <= '0';
+            else
+                NS <= C3;
+                currentChannel <= x"3";
+                eof <= '0';
+            end if;
+        when PULSE4 =>
+            if (c0_u > TIMEOUT_CLKS) then
+                NS <= IDLE;
+                currentChannel <= x"0";
+                eof <= '0';
+            elsif (ppm_ff2 = '1') then
+                NS <= C4;
+                currentChannel <= x"4";
+                eof <= '0';
+            else
+                NS <= PULSE4;
+                currentChannel <= x"7";
+                eof <= '0';
+            end if;
+        when C4 =>
+            if (c0_u > TIMEOUT_CLKS) then
+                NS <= IDLE;
+                currentChannel <= x"0";
+                eof <= '0';
+            elsif (ppm_ff2 = '0') then
+                NS <= PULSE5;
+                currentChannel <= x"5";
+                eof <= '0';
+            else
+                NS <= C4;
+                currentChannel <= x"4";
+                eof <= '0';
+            end if;
+        when PULSE5 =>
+            if (c0_u > TIMEOUT_CLKS) then
+                NS <= IDLE;
+                currentChannel <= x"0";
+                eof <= '0';
+            elsif (ppm_ff2 = '1') then
+                NS <= C5;
+                currentChannel <= x"5";
+                eof <= '0';
+            else
+                NS <= PULSE5;
+                currentChannel <= x"7";
+                eof <= '0';
+            end if;
+        when C5 =>
+            if (c0_u > TIMEOUT_CLKS) then
+                NS <= IDLE;
+                currentChannel <= x"0";
+                eof <= '0';
+            elsif (ppm_ff2 = '0') then
+                NS <= PULSE6;
+                currentChannel <= x"6";
+                eof <= '0';
+            else
+                NS <= C5;
+                currentChannel <= x"5";
+                eof <= '0';
+            end if;
+        when PULSE6 =>
+            if (c0_u > TIMEOUT_CLKS) then
+                NS <= IDLE;
+                currentChannel <= x"0";
+                eof <= '0';
+            elsif (ppm_ff2 = '1') then
+                NS <= C6;
+                currentChannel <= x"6";
+                eof <= '0';
+            else
+                NS <= PULSE6;
+                currentChannel <= x"7";
+                eof <= '0';
+            end if;
+        when C6 =>
+            if (c0_u > TIMEOUT_CLKS) then
+                NS <= IDLE;
+                currentChannel <= x"0";
+                eof <= '0';
+            elsif (ppm_ff2 = '0') then
+                NS <= PULSE7;
+                currentChannel <= x"0";
+                eof <= '1';
+            else
+                NS <= C6;
+                currentChannel <= x"6";
+                eof <= '0';
+            end if;
+        when PULSE7 =>
+            if (c0_u > TIMEOUT_CLKS) then
+                NS <= IDLE;
+                currentChannel <= x"0";
+                eof <= '0';
+            elsif (ppm_ff2 = '1') then
+                NS <= IDLE;
+                currentChannel <= x"0";
+                eof <= '0';
+            else
+                NS <= PULSE7;
+                currentChannel <= x"7";
+                eof <= '0';
+            end if;
+        when others =>
+            NS <= IDLE;
+            currentChannel <= x"0";
+            eof <= '0';
+        end case;
+    end process;
 
---gen_clk_proc : process ( s00_axi_aclk )
---begin
---	if (rising_edge ( s00_axi_aclk ) ) then
---	   reg0(0) <= '0';
---		if ( s00_axi_aresetn = '0' ) then
---			GenPS <= IDLE;
---			currentClk <= to_unsigned(0, 32);
---			-- reg0(0) <= '0';
---		elsif ( GenPS /= GenNS ) then
---			-- reset currentClk when the NS is different than the PS
---			GenPS <= GenNS;
---			currentClk <= to_unsigned(0, 32);
---		else
---			-- increment clk, update PS
---			GenPS <= GenNS;
---			currentClk <= currentClk + 1;
+gen_clk_proc : process ( s00_axi_aclk )
+begin
+	if (rising_edge ( s00_axi_aclk ) ) then
+	    
+		if ( s00_axi_aresetn = '0' ) then
+			GenPS <= IDLE;
+			currentClk <= to_unsigned(0, 32);
+			 reg0(0) <= '0';
+		elsif ( GenPS /= GenNS ) then
+			-- reset currentClk when the NS is different than the PS
+			GenPS <= GenNS;
+			currentClk <= to_unsigned(0, 32);
+		else
+			-- increment clk, update PS
+			GenPS <= GenNS;
+			currentClk <= currentClk + 1;
 			
---		end if;
---	end if;
---end process gen_clk_proc;
+		end if;
+	end if;
+end process gen_clk_proc;
 
---compute_generate_idle_clks : process (eof, reg1, reg2, reg3, reg4, reg5, reg6)
---begin
---	if ( eof = '1' ) then
---		GenIdleClks <= to_unsigned(2000000, 32) 
---					   - unsigned(reg1)
---					   - unsigned(reg2)
---					   - unsigned(reg3)
---					   - unsigned(reg4)
---					   - unsigned(reg5)
---					   - unsigned(reg6)
---					   - resize(unsigned(PULSE_CLKS) * 7, 32);
---   else
---		GenIdleClks <= to_unsigned(200000, 32);
---	end if;
---end process compute_generate_idle_clks;
+compute_generate_idle_clks : process (eof, reg1, reg2, reg3, reg4, reg5, reg6)
+begin
+	if ( eof = '1' ) then
+		GenIdleClks <= to_unsigned(2000000, 32) 
+					   - unsigned(reg1)
+					   - unsigned(reg2)
+					   - unsigned(reg3)
+					   - unsigned(reg4)
+					   - unsigned(reg5)
+					   - unsigned(reg6)
+					   - resize(unsigned(PULSE_CLKS) * 7, 32);
+   else
+		GenIdleClks <= to_unsigned(200000, 32);
+	end if;
+end process compute_generate_idle_clks;
 
 
- s00_ppm_out <= s00_ppm_in;
+-- s00_ppm_out <= s00_ppm_in;
 
---generate_ppm : process (s00_ppm_in, reg0, reg1, reg2, reg3, reg4, reg5, reg6, currentClk, GenPS, GenIdleClks)
---begin
---	GenNS <= IDLE;
---	s00_ppm_out <= '1';
+generate_ppm : process (s00_ppm_in, reg0, reg1, reg2, reg3, reg4, reg5, reg6, currentClk, GenPS, GenIdleClks)
+begin
+	GenNS <= IDLE;
+	s00_ppm_out <= '1';
 	
---	if ( reg0(0) = '0' ) then
---	   -- hardware
---        s00_ppm_out <= s00_ppm_in;
---        GenNS <= IDLE;
---	else
---		case GenPS is
+	if ( reg0(0) = '0' ) then
+	   -- hardware
+        s00_ppm_out <= s00_ppm_in;
+        GenNS <= IDLE;
+	else
+		case GenPS is
 		
---		when IDLE =>
---			-- not sure if we need to enforce minimum clks for idle time
---			-- we might need to compute 20ms - (c1 + p1 + c2 + p2 + ... + c6 + p7)
---			if ( currentClk < GenIdleClks ) then
---				s00_ppm_out <= '1';
---				GenNS <= IDLE;
---			else
---				s00_ppm_out <= '0';
---				GenNS <= PULSE1;
---			end if;
+		when IDLE =>
+			-- not sure if we need to enforce minimum clks for idle time
+			-- we might need to compute 20ms - (c1 + p1 + c2 + p2 + ... + c6 + p7)
+			if ( currentClk < GenIdleClks ) then
+				s00_ppm_out <= '1';
+				GenNS <= IDLE;
+			else
+				s00_ppm_out <= '0';
+				GenNS <= PULSE1;
+			end if;
 			
---			-- once it is past the minimum threshold for idle time, 
---			-- how do we say that you can stay idle OR you can start sending?
---			-- need some external flag, saying that the reg10-15 are ready with new 
---			-- ppm to send
---		when PULSE1 => 
---			if ( currentClk < PULSE_CLKS ) then
---				s00_ppm_out <= '0';
---				GenNS <= PULSE1;
---			else
---				s00_ppm_out <= '1';
---				GenNS <= C1;
---			end if;
---		when C1 =>
---			if ( std_logic_vector(currentClk) < reg1) then
---				s00_ppm_out <= '1';
---				GenNS <= C1;
---			else
---				s00_ppm_out <= '0';
---				GenNS <= PULSE2;
---			end if;
---		when PULSE2 =>
---			if ( currentClk < PULSE_CLKS ) then
---				s00_ppm_out <= '0';
---				GenNS <= PULSE2;
---			else
---				s00_ppm_out <= '1';
---				GenNS <= C2;
---			end if;
---		when C2 =>
---			if ( std_logic_vector(currentClk) < reg2 ) then
---				s00_ppm_out <= '1';
---				GenNS <= C2;
---			else
---				s00_ppm_out <= '0';
---				GenNS <= PULSE3;
---			end if;
---		when PULSE3 =>
---			if ( currentClk < PULSE_CLKS ) then
---				s00_ppm_out <= '0';
---				GenNS <= PULSE3;
---			else
---				s00_ppm_out <= '1';
---				GenNS <= C3;
---			end if;
---		when C3 =>
---			if ( std_logic_vector(currentClk) < reg3 ) then
---				s00_ppm_out <= '1';
---				GenNS <= C3;
---			else
---				s00_ppm_out <= '0';
---				GenNS <= PULSE4;
---			end if;
---		when PULSE4 =>
---			if ( currentClk < PULSE_CLKS ) then
---				s00_ppm_out <= '0';
---				GenNS <= PULSE4;
---			else
---				s00_ppm_out <= '1';
---				GenNS <= C4;
---			end if;
---		when C4 =>
---			if ( std_logic_vector(currentClk) < reg4 ) then
---				s00_ppm_out <= '1';
---				GenNS <= C4;
---			else
---				s00_ppm_out <= '0';
---				GenNS <= PULSE5;
---			end if;
---		when PULSE5 =>
---			if ( currentClk < PULSE_CLKS ) then
---				s00_ppm_out <= '0';
---				GenNS <= PULSE5;
---			else
---				s00_ppm_out <= '1';
---				GenNS <= C5;
---			end if;
---		when C5 =>
---			if ( std_logic_vector(currentClk) < reg5 ) then
---				s00_ppm_out <= '1';
---				GenNS <= C5;
---			else
---				s00_ppm_out <= '0';
---				GenNS <= PULSE6;
---			end if;
---		when PULSE6 =>
---			if ( currentClk < PULSE_CLKS ) then
---				s00_ppm_out <= '0';
---				GenNS <= PULSE6;
---			else
---				s00_ppm_out <= '1';
---				GenNS <= C6;
---			end if;
---		when C6 =>
---			if ( std_logic_vector(currentClk) < reg6 ) then
---				s00_ppm_out <= '1';
---				GenNS <= C6;
---			else
---				s00_ppm_out <= '0';
---				GenNS <= PULSE7;
---			end if;
---		when PULSE7 =>
---			if ( currentClk < PULSE_CLKS ) then
---				s00_ppm_out <= '0';
---				GenNS <= PULSE7;
---			else
---				s00_ppm_out <= '1';
---				GenNS <= IDLE;
---			end if;
---		when others =>
---			s00_ppm_out <= '1';
---			GenNS <= IDLE;
---		end case;
---    end if;
---end process generate_ppm;
+			-- once it is past the minimum threshold for idle time, 
+			-- how do we say that you can stay idle OR you can start sending?
+			-- need some external flag, saying that the reg10-15 are ready with new 
+			-- ppm to send
+		when PULSE1 => 
+			if ( currentClk < PULSE_CLKS ) then
+				s00_ppm_out <= '0';
+				GenNS <= PULSE1;
+			else
+				s00_ppm_out <= '1';
+				GenNS <= C1;
+			end if;
+		when C1 =>
+			if ( std_logic_vector(currentClk) < reg1) then
+				s00_ppm_out <= '1';
+				GenNS <= C1;
+			else
+				s00_ppm_out <= '0';
+				GenNS <= PULSE2;
+			end if;
+		when PULSE2 =>
+			if ( currentClk < PULSE_CLKS ) then
+				s00_ppm_out <= '0';
+				GenNS <= PULSE2;
+			else
+				s00_ppm_out <= '1';
+				GenNS <= C2;
+			end if;
+		when C2 =>
+			if ( std_logic_vector(currentClk) < reg2 ) then
+				s00_ppm_out <= '1';
+				GenNS <= C2;
+			else
+				s00_ppm_out <= '0';
+				GenNS <= PULSE3;
+			end if;
+		when PULSE3 =>
+			if ( currentClk < PULSE_CLKS ) then
+				s00_ppm_out <= '0';
+				GenNS <= PULSE3;
+			else
+				s00_ppm_out <= '1';
+				GenNS <= C3;
+			end if;
+		when C3 =>
+			if ( std_logic_vector(currentClk) < reg3 ) then
+				s00_ppm_out <= '1';
+				GenNS <= C3;
+			else
+				s00_ppm_out <= '0';
+				GenNS <= PULSE4;
+			end if;
+		when PULSE4 =>
+			if ( currentClk < PULSE_CLKS ) then
+				s00_ppm_out <= '0';
+				GenNS <= PULSE4;
+			else
+				s00_ppm_out <= '1';
+				GenNS <= C4;
+			end if;
+		when C4 =>
+			if ( std_logic_vector(currentClk) < reg4 ) then
+				s00_ppm_out <= '1';
+				GenNS <= C4;
+			else
+				s00_ppm_out <= '0';
+				GenNS <= PULSE5;
+			end if;
+		when PULSE5 =>
+			if ( currentClk < PULSE_CLKS ) then
+				s00_ppm_out <= '0';
+				GenNS <= PULSE5;
+			else
+				s00_ppm_out <= '1';
+				GenNS <= C5;
+			end if;
+		when C5 =>
+			if ( std_logic_vector(currentClk) < reg5 ) then
+				s00_ppm_out <= '1';
+				GenNS <= C5;
+			else
+				s00_ppm_out <= '0';
+				GenNS <= PULSE6;
+			end if;
+		when PULSE6 =>
+			if ( currentClk < PULSE_CLKS ) then
+				s00_ppm_out <= '0';
+				GenNS <= PULSE6;
+			else
+				s00_ppm_out <= '1';
+				GenNS <= C6;
+			end if;
+		when C6 =>
+			if ( std_logic_vector(currentClk) < reg6 ) then
+				s00_ppm_out <= '1';
+				GenNS <= C6;
+			else
+				s00_ppm_out <= '0';
+				GenNS <= PULSE7;
+			end if;
+		when PULSE7 =>
+			if ( currentClk < PULSE_CLKS ) then
+				s00_ppm_out <= '0';
+				GenNS <= PULSE7;
+			else
+				s00_ppm_out <= '1';
+				GenNS <= IDLE;
+			end if;
+		when others =>
+			s00_ppm_out <= '1';
+			GenNS <= IDLE;
+		end case;
+    end if;
+end process generate_ppm;
 	-- User logic ends
 
 end arch_imp;

@@ -52,3 +52,29 @@ timestamp=[2026-02-20 21:22:48], mode=BUILD, duration=0:00:03.284, duration_ms=3
 timestamp=[2026-02-20 21:32:59], mode=PLATFORM_GENERATION, duration=0:00:00.977, duration_ms=977, data={name=design_1_wrapper}
 timestamp=[2026-02-20 21:33:02], mode=BUILD, duration=0:00:00.151, duration_ms=151, data={name=Gen_Test, configuration=Debug, clean_build=false}
 timestamp=[2026-02-20 21:33:09], mode=BUILD, duration=0:00:03.581, duration_ms=3581, data={name=Gen_Test_system, configuration=Debug, clean_build=false}
+timestamp=[2026-02-21 00:05:01], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.061, duration_ms=61, data={}
+timestamp=[2026-02-21 00:05:01], mode=WORKBENCH_START, duration=0:00:05.307, duration_ms=5307, data={}
+timestamp=[2026-02-21 00:05:02], mode=WORKBENCH_UI_INIT, duration=0:00:00.405, duration_ms=405, data={editors_count=5, platform_editors_count=2, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=Gen_Test,Gen_Test_system,RemoteSystemsTempFiles,design_1_wrapper}
+timestamp=[2026-02-21 00:07:10], mode=PLATFORM_GENERATION, duration=0:00:33.123, duration_ms=33123, data={name=design_1_wrapper}
+timestamp=[2026-02-21 00:07:13], mode=BUILD, duration=0:00:00.933, duration_ms=933, data={name=Gen_Test, configuration=Debug, clean_build=false}
+timestamp=[2026-02-21 00:07:39], mode=BUILD, duration=0:00:00.227, duration_ms=227, data={name=Gen_Test, configuration=Debug, clean_build=false}
+timestamp=[2026-02-21 00:20:37], mode=PLATFORM_GENERATION, duration=0:00:01.040, duration_ms=1040, data={name=design_1_wrapper}
+timestamp=[2026-02-21 00:20:39], mode=BUILD, duration=0:00:00.217, duration_ms=217, data={name=Gen_Test, configuration=Debug, clean_build=false}
+timestamp=[2026-02-21 00:20:51], mode=BUILD, duration=0:00:00.224, duration_ms=224, data={name=Gen_Test, configuration=Debug, clean_build=false}
+timestamp=[2026-02-21 00:26:49], mode=BUILD, duration=0:00:00.751, duration_ms=751, data={name=Gen_Test, configuration=Debug, clean_build=false}
+timestamp=[2026-02-21 00:31:05], mode=BUILD, duration=0:00:00.700, duration_ms=700, data={name=Gen_Test, configuration=Debug, clean_build=false}
+timestamp=[2026-02-21 00:35:47], mode=BUILD, duration=0:00:00.703, duration_ms=703, data={name=Gen_Test, configuration=Debug, clean_build=false}
+timestamp=[2026-02-21 00:39:43], mode=BUILD, duration=0:00:00.697, duration_ms=697, data={name=Gen_Test, configuration=Debug, clean_build=false}
+timestamp=[2026-02-21 00:45:44], mode=BUILD, duration=0:00:00.730, duration_ms=730, data={name=Gen_Test, configuration=Debug, clean_build=false}
+timestamp=[2026-02-21 00:49:16], mode=BUILD, duration=0:00:00.737, duration_ms=737, data={name=Gen_Test, configuration=Debug, clean_build=false}
+timestamp=[2026-02-21 00:49:25], mode=BUILD, duration=0:00:00.718, duration_ms=718, data={name=Gen_Test, configuration=Debug, clean_build=false}
+timestamp=[2026-02-21 01:00:14], mode=BUILD, duration=0:00:00.712, duration_ms=712, data={name=Gen_Test, configuration=Debug, clean_build=false}
+timestamp=[2026-02-21 01:09:56], mode=PLATFORM_GENERATION, duration=0:00:01.081, duration_ms=1081, data={name=design_1_wrapper}
+timestamp=[2026-02-21 01:10:25], mode=BUILD, duration=0:00:00.799, duration_ms=799, data={name=Gen_Test, configuration=Debug, clean_build=false}
+timestamp=[2026-02-21 02:22:46], mode=BUILD, duration=0:00:00.691, duration_ms=691, data={name=Gen_Test, configuration=Debug, clean_build=false}
+timestamp=[2026-02-21 02:23:05], mode=BUILD, duration=0:00:00.217, duration_ms=217, data={name=Gen_Test, configuration=Debug, clean_build=false}
+timestamp=[2026-02-21 02:29:52], mode=BUILD, duration=0:00:00.223, duration_ms=223, data={name=Gen_Test, configuration=Debug, clean_build=false}
+timestamp=[2026-02-21 02:30:40], mode=PLATFORM_GENERATION, duration=0:00:01.034, duration_ms=1034, data={name=design_1_wrapper}
+timestamp=[2026-02-21 02:31:04], mode=BUILD, duration=0:00:00.223, duration_ms=223, data={name=Gen_Test, configuration=Debug, clean_build=false}
+timestamp=[2026-02-21 02:38:45], mode=PLATFORM_GENERATION, duration=0:00:01.007, duration_ms=1007, data={name=design_1_wrapper}
+timestamp=[2026-02-21 02:38:56], mode=BUILD, duration=0:00:00.228, duration_ms=228, data={name=Gen_Test, configuration=Debug, clean_build=false}

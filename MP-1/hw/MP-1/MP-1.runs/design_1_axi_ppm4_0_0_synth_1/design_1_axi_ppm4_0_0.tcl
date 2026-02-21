@@ -88,6 +88,7 @@ set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property board_part em.avnet.com:zed:part0:1.4 [current_project]
 set_property ip_repo_paths {
+  c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm5_1.0
   c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0
   c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/ppm3_1.0
   c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/ppm2_1.0

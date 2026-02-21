@@ -48,13 +48,52 @@
 #include <stdio.h>
 #include "platform.h"
 #include "xil_printf.h"
+#include "xparameters.h"
+#include "xil_io.h"
 
 
+#define reg0 0x43C00000
+#define reg10 (0x43C00000 + 40)
+#define reg11 (0x43C00000 + 44)
+#define reg12 (0x43C00000 + 48)
+#define reg13 (0x43C00000 + 52)
+#define reg14 (0x43C00000 + 56)
+#define reg15 (0x43C00000 + 60)
+
+
+void read_registers() {
+	unsigned int data0 = (unsigned int)Xil_In32((UINTPTR) reg0);
+	unsigned int data1 = (unsigned int)Xil_In32((UINTPTR)reg10);
+	unsigned int data2 = (unsigned int)Xil_In32((UINTPTR)reg11);
+	unsigned int data3 = (unsigned int)Xil_In32((UINTPTR)reg12);
+	unsigned int data4 = (unsigned int)Xil_In32((UINTPTR)reg13);
+	unsigned int data5 = (unsigned int)Xil_In32((UINTPTR)reg14);
+	unsigned int data6 = (unsigned int)Xil_In32((UINTPTR)reg15);
+	printf("r0 : %u | ", data0 & 0x1);
+	printf("r10: %u | ", data1);
+	printf("r11: %u | ", data2);
+	printf("r12: %u | ", data3);
+	printf("r13: %u | ", data4);
+	printf("r14: %u | ", data5);
+	printf("r15: %u \n\r", data6);
+}
+
+void set_registers() {
+	Xil_Out32(reg0, 1);
+	Xil_Out32(reg10, 2222);
+	Xil_Out32(reg11, 3333);
+	Xil_Out32(reg12, 4444);
+	Xil_Out32(reg13, 5555);
+	Xil_Out32(reg14, 6666);
+	Xil_Out32(reg15, 7777);
+
+}
 int main()
 {
     init_platform();
-
     print("Hello World\n\r");
+    set_registers();
+    read_registers();
     print("Successfully ran Hello World application");
     cleanup_platform();
     return 0;

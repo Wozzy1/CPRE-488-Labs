@@ -162,20 +162,11 @@ proc create_root_design { parentCell } {
 
 
   # Create ports
-  set ppm_in_0 [ create_bd_port -dir I ppm_in_0 ]
+  set s00_ppm_in_0 [ create_bd_port -dir I s00_ppm_in_0 ]
   set s00_ppm_out_0 [ create_bd_port -dir O s00_ppm_out_0 ]
 
   # Create instance: axi_ppm4_0, and set properties
   set axi_ppm4_0 [ create_bd_cell -type ip -vlnv iastate.edu:user:axi_ppm4:1.0 axi_ppm4_0 ]
-
-  # Create instance: constant_high, and set properties
-  set constant_high [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 constant_high ]
-
-  # Create instance: constant_low, and set properties
-  set constant_low [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 constant_low ]
-  set_property -dict [ list \
-   CONFIG.CONST_VAL {0} \
- ] $constant_low
 
   # Create instance: processing_system7_0, and set properties
   set processing_system7_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0 ]
@@ -584,37 +575,26 @@ proc create_root_design { parentCell } {
   # Create instance: system_ila_0, and set properties
   set system_ila_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:system_ila:1.1 system_ila_0 ]
   set_property -dict [ list \
+   CONFIG.C_BRAM_CNT {25.5} \
+   CONFIG.C_DATA_DEPTH {4096} \
    CONFIG.C_MON_TYPE {NATIVE} \
-   CONFIG.C_NUM_OF_PROBES {7} \
+   CONFIG.C_NUM_OF_PROBES {9} \
    CONFIG.C_PROBE0_TYPE {0} \
+   CONFIG.C_PROBE0_WIDTH {32} \
    CONFIG.C_PROBE1_TYPE {0} \
+   CONFIG.C_PROBE1_WIDTH {32} \
    CONFIG.C_PROBE2_TYPE {0} \
+   CONFIG.C_PROBE2_WIDTH {32} \
    CONFIG.C_PROBE3_TYPE {0} \
+   CONFIG.C_PROBE3_WIDTH {32} \
    CONFIG.C_PROBE4_TYPE {0} \
+   CONFIG.C_PROBE4_WIDTH {32} \
    CONFIG.C_PROBE5_TYPE {0} \
+   CONFIG.C_PROBE5_WIDTH {32} \
    CONFIG.C_PROBE6_TYPE {0} \
+   CONFIG.C_PROBE6_WIDTH {32} \
+   CONFIG.C_PROBE_WIDTH_PROPAGATION {MANUAL} \
  ] $system_ila_0
-
-  # Create instance: xlconstant_0, and set properties
-  set xlconstant_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_0 ]
-  set_property -dict [ list \
-   CONFIG.CONST_VAL {0} \
-   CONFIG.CONST_WIDTH {3} \
- ] $xlconstant_0
-
-  # Create instance: xlconstant_1, and set properties
-  set xlconstant_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_1 ]
-  set_property -dict [ list \
-   CONFIG.CONST_VAL {0} \
-   CONFIG.CONST_WIDTH {4} \
- ] $xlconstant_1
-
-  # Create instance: xlconstant_2, and set properties
-  set xlconstant_2 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_2 ]
-  set_property -dict [ list \
-   CONFIG.CONST_VAL {0} \
-   CONFIG.CONST_WIDTH {6} \
- ] $xlconstant_2
 
   # Create instance: xlslice_0, and set properties
   set xlslice_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 xlslice_0 ]
@@ -647,8 +627,8 @@ proc create_root_design { parentCell } {
   connect_bd_net -net M00_AXI_rresp_1 [get_bd_pins axi_ppm4_0/s00_axi_rresp] [get_bd_pins ps7_0_axi_periph/M00_AXI_rresp]
   connect_bd_net -net M00_AXI_rvalid_1 [get_bd_pins axi_ppm4_0/s00_axi_rvalid] [get_bd_pins ps7_0_axi_periph/M00_AXI_rvalid]
   connect_bd_net -net M00_AXI_wready_1 [get_bd_pins axi_ppm4_0/s00_axi_wready] [get_bd_pins ps7_0_axi_periph/M00_AXI_wready]
-  connect_bd_net -net axi_ppm4_0_s00_ppm_out [get_bd_ports s00_ppm_out_0] [get_bd_pins axi_ppm4_0/s00_ppm_out]
-  connect_bd_net -net ppm_in_0_1 [get_bd_ports ppm_in_0] [get_bd_pins axi_ppm4_0/s00_ppm_in]
+  connect_bd_net -net axi_ppm4_0_s00_ppm_out [get_bd_ports s00_ppm_out_0] [get_bd_pins axi_ppm4_0/s00_ppm_out] [get_bd_pins system_ila_0/probe7]
+  connect_bd_net -net ppm_in_0_1 [get_bd_ports s00_ppm_in_0] [get_bd_pins axi_ppm4_0/s00_ppm_in] [get_bd_pins system_ila_0/probe8]
   connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins axi_ppm4_0/s00_axi_aclk] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins ps7_0_axi_periph/ACLK] [get_bd_pins ps7_0_axi_periph/M00_ACLK] [get_bd_pins ps7_0_axi_periph/S00_ACLK] [get_bd_pins rst_ps7_0_100M/slowest_sync_clk] [get_bd_pins system_ila_0/clk]
   connect_bd_net -net processing_system7_0_FCLK_RESET0_N [get_bd_pins processing_system7_0/FCLK_RESET0_N] [get_bd_pins rst_ps7_0_100M/ext_reset_in]
   connect_bd_net -net ps7_0_axi_periph_M00_AXI_araddr [get_bd_pins ps7_0_axi_periph/M00_AXI_araddr] [get_bd_pins xlslice_1/Din]

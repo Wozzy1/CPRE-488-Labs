@@ -17,8 +17,8 @@
         }
       },
       "rst_ps7_0_100M": "",
-      "axi_ppm5_0": "",
-      "system_ila_0": ""
+      "system_ila_0": "",
+      "axi_ppm5_0": ""
     },
     "interface_ports": {
       "DDR": {
@@ -1115,10 +1115,6 @@
         "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
         "xci_name": "design_2_rst_ps7_0_100M_0"
       },
-      "axi_ppm5_0": {
-        "vlnv": "iastate.edu:user:axi_ppm5:1.0",
-        "xci_name": "design_2_axi_ppm5_0_0"
-      },
       "system_ila_0": {
         "vlnv": "xilinx.com:ip:system_ila:1.1",
         "xci_name": "design_2_system_ila_0_0",
@@ -1133,15 +1129,13 @@
             "value": "0"
           }
         }
+      },
+      "axi_ppm5_0": {
+        "vlnv": "iastate.edu:user:axi_ppm5:1.0",
+        "xci_name": "design_2_axi_ppm5_0_0"
       }
     },
     "interface_nets": {
-      "processing_system7_0_M_AXI_GP0": {
-        "interface_ports": [
-          "processing_system7_0/M_AXI_GP0",
-          "axi_interconnect_0/S00_AXI"
-        ]
-      },
       "axi_interconnect_0_M00_AXI": {
         "interface_ports": [
           "axi_interconnect_0/M00_AXI",
@@ -1152,6 +1146,12 @@
         "interface_ports": [
           "DDR",
           "processing_system7_0/DDR"
+        ]
+      },
+      "processing_system7_0_M_AXI_GP0": {
+        "interface_ports": [
+          "processing_system7_0/M_AXI_GP0",
+          "axi_interconnect_0/S00_AXI"
         ]
       },
       "processing_system7_0_FIXED_IO": {
@@ -1170,8 +1170,8 @@
           "processing_system7_0/M_AXI_GP0_ACLK",
           "axi_interconnect_0/S00_ACLK",
           "axi_interconnect_0/M00_ACLK",
-          "axi_ppm5_0/s00_axi_aclk",
-          "system_ila_0/clk"
+          "system_ila_0/clk",
+          "axi_ppm5_0/s00_axi_aclk"
         ]
       },
       "processing_system7_0_FCLK_RESET0_N": {

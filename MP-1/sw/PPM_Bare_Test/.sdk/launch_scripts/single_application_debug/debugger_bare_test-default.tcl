@@ -2,7 +2,7 @@ connect -url tcp:127.0.0.1:3121
 targets -set -nocase -filter {name =~"APU*"}
 rst -system
 after 3000
-targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B18A36" && level==0 && jtag_device_ctx=="jsn-Zed-210248B18A36-23727093-0"}
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248492833" && level==0 && jtag_device_ctx=="jsn-Zed-210248492833-23727093-0"}
 fpga -file C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PPM_Bare_Test/bare_test/_ide/bitstream/design_2_wrapper.bit
 targets -set -nocase -filter {name =~"APU*"}
 loadhw -hw C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PPM_Bare_Test/design_2_wrapper/export/design_2_wrapper/hw/design_2_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs

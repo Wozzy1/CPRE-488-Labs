@@ -2,10 +2,10 @@
 # Vivado v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Fri Feb 20 20:34:47 2026
-# Process ID: 21280
+# Start of session at: Sat Feb 21 02:40:09 2026
+# Process ID: 12860
 # Current directory: C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/testbench
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent24188 C:\Users\diepw50\CPRE-488-Labs\MP-1\hw\testbench\testbench.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent1596 C:\Users\diepw50\CPRE-488-Labs\MP-1\hw\testbench\testbench.xpr
 # Log file: C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/testbench/vivado.log
 # Journal file: C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/testbench\vivado.jou
 #-----------------------------------------------------------
@@ -18,27 +18,56 @@ INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.1/data/ip'.
 update_compile_order -fileset sources_1
+update_compile_order -fileset sim_2
+update_compile_order -fileset sim_2
 launch_simulation -simset [get_filesets sim_2 ]
 Command: launch_simulation -simset sim_2
 INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/testbench/testbench.sim/sim_2/behav/xsim'
 INFO: [SIM-utils-51] Simulation object is 'sim_2'
-INFO: [SIM-utils-54] Inspecting design source files for 'tb_ppm_4' in fileset 'sim_2'...
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_axi_ppm4' in fileset 'sim_2'...
 INFO: [USF-XSim-97] Finding global include files...
 INFO: [USF-XSim-98] Fetching design files from 'sim_2'...
 INFO: [USF-XSim-2] XSim::Compile design
 INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/testbench/testbench.sim/sim_2/behav/xsim'
-"xvhdl --incr --relax -prj tb_ppm_4_vhdl.prj"
+"xvhdl --incr --relax -prj tb_axi_ppm4_vhdl.prj"
 INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0/hdl/axi_ppm4_v1_0.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'axi_ppm4_v1_0'
 INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0/hdl/axi_ppm4_v1_0_S00_AXI.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'axi_ppm4_v1_0_S00_AXI'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sim_1/new/tb_ppm_4.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_axi_ppm4'
+ERROR: [VRFC 10-2989] 's_axi_rresp' is not declared [C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sim_1/new/tb_ppm_4.vhd:443]
+ERROR: [VRFC 10-3095] actual of formal out port 's00_axi_rresp' cannot be an expression [C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sim_1/new/tb_ppm_4.vhd:443]
+ERROR: [VRFC 10-3782] unit 'sim' ignored due to previous errors [C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sim_1/new/tb_ppm_4.vhd:356]
+INFO: [VRFC 10-3070] VHDL file 'C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sim_1/new/tb_ppm_4.vhd' ignored due to errors
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/testbench/testbench.sim/sim_2/behav/xsim/xvhdl.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/testbench/testbench.sim/sim_2/behav/xsim/xvhdl.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation -simset [get_filesets sim_2 ]
+Command: launch_simulation -simset sim_2
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/testbench/testbench.sim/sim_2/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_2'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_axi_ppm4' in fileset 'sim_2'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_2'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/testbench/testbench.sim/sim_2/behav/xsim'
+"xvhdl --incr --relax -prj tb_axi_ppm4_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0/hdl/axi_ppm4_v1_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'axi_ppm4_v1_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0/hdl/axi_ppm4_v1_0_S00_AXI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'axi_ppm4_v1_0_S00_AXI'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sim_1/new/tb_ppm_4.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_axi_ppm4'
 INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
 INFO: [USF-XSim-3] XSim::Elaborate design
 INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/testbench/testbench.sim/sim_2/behav/xsim'
-"xelab -wto b82b2b5f271143dbb0a0bf41dce3d52c --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_ppm_4_behav xil_defaultlib.tb_ppm_4 -log elaborate.log"
+"xelab -wto b82b2b5f271143dbb0a0bf41dce3d52c --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_axi_ppm4_behav xil_defaultlib.tb_axi_ppm4 -log elaborate.log"
 Vivado Simulator 2020.1
 Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto b82b2b5f271143dbb0a0bf41dce3d52c --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_ppm_4_behav xil_defaultlib.tb_ppm_4 -log elaborate.log 
+Running: C:/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto b82b2b5f271143dbb0a0bf41dce3d52c --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_axi_ppm4_behav xil_defaultlib.tb_axi_ppm4 -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
@@ -51,26 +80,78 @@ Compiling package ieee.std_logic_1164
 Compiling package ieee.numeric_std
 Compiling architecture arch_imp of entity xil_defaultlib.axi_ppm4_v1_0_S00_AXI [axi_ppm4_v1_0_s00_axi_default]
 Compiling architecture arch_imp of entity xil_defaultlib.axi_ppm4_v1_0 [axi_ppm4_v1_0_default]
-Compiling architecture behavioral of entity xil_defaultlib.tb_ppm_4
-Built simulation snapshot tb_ppm_4_behav
+Compiling architecture sim of entity xil_defaultlib.tb_axi_ppm4
+Built simulation snapshot tb_axi_ppm4_behav
 
 ****** Webtalk v2020.1 (64-bit)
   **** SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
   **** IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
     ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 
-source C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/testbench/testbench.sim/sim_2/behav/xsim/xsim.dir/tb_ppm_4_behav/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-206] Exiting Webtalk at Fri Feb 20 20:35:12 2026...
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+source C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/testbench/testbench.sim/sim_2/behav/xsim/xsim.dir/tb_axi_ppm4_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Sat Feb 21 02:51:29 2026...
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
 INFO: [USF-XSim-4] XSim::Simulate design
 INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/testbench/testbench.sim/sim_2/behav/xsim'
 INFO: [USF-XSim-98] *** Running xsim
-   with args "tb_ppm_4_behav -key {Behavioral:sim_2:Functional:tb_ppm_4} -tclbatch {tb_ppm_4.tcl} -view {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/testbench/tb_ppm_4_behav.wcfg} -log {simulate.log}"
+   with args "tb_axi_ppm4_behav -key {Behavioral:sim_2:Functional:tb_axi_ppm4} -tclbatch {tb_axi_ppm4.tcl} -view {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/testbench/tb_ppm_4_behav.wcfg} -log {simulate.log}"
 INFO: [USF-XSim-8] Loading simulator feature
 Vivado Simulator 2020.1
 Time resolution is 1 ps
 open_wave_config C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/testbench/tb_ppm_4_behav.wcfg
-source tb_ppm_4.tcl
+WARNING: Simulation object /tb_ppm_4/s_ppm_out was not found in the design.
+WARNING: Simulation object /tb_ppm_4/s_s00_axi_aclk was not found in the design.
+WARNING: Simulation object /tb_ppm_4/s_s00_axi_aresetn was not found in the design.
+WARNING: Simulation object /tb_ppm_4/PPM_UNDER_TEST/eof was not found in the design.
+WARNING: Simulation object /tb_ppm_4/PPM_UNDER_TEST/currentChannel was not found in the design.
+WARNING: Simulation object /tb_ppm_4/s_ppm_in was not found in the design.
+WARNING: Simulation object /tb_ppm_4/PPM_UNDER_TEST/PS was not found in the design.
+WARNING: Simulation object /tb_ppm_4/PPM_UNDER_TEST/NS was not found in the design.
+WARNING: Simulation object /tb_ppm_4/PPM_UNDER_TEST/ppm_ff1 was not found in the design.
+WARNING: Simulation object /tb_ppm_4/PPM_UNDER_TEST/ppm_ff2 was not found in the design.
+WARNING: Simulation object /tb_ppm_4/PPM_UNDER_TEST/reg1 was not found in the design.
+WARNING: Simulation object /tb_ppm_4/PPM_UNDER_TEST/reg2 was not found in the design.
+WARNING: Simulation object /tb_ppm_4/PPM_UNDER_TEST/reg3 was not found in the design.
+WARNING: Simulation object /tb_ppm_4/PPM_UNDER_TEST/reg4 was not found in the design.
+WARNING: Simulation object /tb_ppm_4/PPM_UNDER_TEST/reg5 was not found in the design.
+WARNING: Simulation object /tb_ppm_4/PPM_UNDER_TEST/reg6 was not found in the design.
+WARNING: Simulation object /tb_ppm_4/PPM_UNDER_TEST/c0_u was not found in the design.
+WARNING: Simulation object /tb_ppm_4/PPM_UNDER_TEST/c1_u was not found in the design.
+WARNING: Simulation object /tb_ppm_4/PPM_UNDER_TEST/c2_u was not found in the design.
+WARNING: Simulation object /tb_ppm_4/PPM_UNDER_TEST/c3_u was not found in the design.
+WARNING: Simulation object /tb_ppm_4/PPM_UNDER_TEST/c4_u was not found in the design.
+WARNING: Simulation object /tb_ppm_4/PPM_UNDER_TEST/c5_u was not found in the design.
+WARNING: Simulation object /tb_ppm_4/PPM_UNDER_TEST/c6_u was not found in the design.
+WARNING: Simulation object /tb_ppm_4/PPM_UNDER_TEST/c7_u was not found in the design.
+WARNING: Simulation object /tb_ppm_4/PPM_UNDER_TEST/axi_ppm4_v1_0_S00_AXI_inst/slv_reg10 was not found in the design.
+WARNING: Simulation object /tb_ppm_4/PPM_UNDER_TEST/axi_ppm4_v1_0_S00_AXI_inst/slv_reg11 was not found in the design.
+WARNING: Simulation object /tb_ppm_4/PPM_UNDER_TEST/axi_ppm4_v1_0_S00_AXI_inst/slv_reg12 was not found in the design.
+WARNING: Simulation object /tb_ppm_4/PPM_UNDER_TEST/axi_ppm4_v1_0_S00_AXI_inst/slv_reg13 was not found in the design.
+WARNING: Simulation object /tb_ppm_4/PPM_UNDER_TEST/axi_ppm4_v1_0_S00_AXI_inst/slv_reg14 was not found in the design.
+WARNING: Simulation object /tb_ppm_4/PPM_UNDER_TEST/axi_ppm4_v1_0_S00_AXI_inst/slv_reg15 was not found in the design.
+WARNING: Simulation object /tb_ppm_4/s_s00_axi_awaddr was not found in the design.
+WARNING: Simulation object /tb_ppm_4/s_s00_axi_awprot was not found in the design.
+WARNING: Simulation object /tb_ppm_4/s_s00_axi_awvalid was not found in the design.
+WARNING: Simulation object /tb_ppm_4/s_s00_axi_awready was not found in the design.
+WARNING: Simulation object /tb_ppm_4/s_s00_axi_wdata was not found in the design.
+WARNING: Simulation object /tb_ppm_4/s_s00_axi_wstrb was not found in the design.
+WARNING: Simulation object /tb_ppm_4/s_s00_axi_wvalid was not found in the design.
+WARNING: Simulation object /tb_ppm_4/s_s00_axi_wready was not found in the design.
+WARNING: Simulation object /tb_ppm_4/s_s00_axi_bresp was not found in the design.
+WARNING: Simulation object /tb_ppm_4/s_s00_axi_bvalid was not found in the design.
+WARNING: Simulation object /tb_ppm_4/s_s00_axi_bready was not found in the design.
+WARNING: Simulation object /tb_ppm_4/s_s00_axi_araddr was not found in the design.
+WARNING: Simulation object /tb_ppm_4/s_s00_axi_arprot was not found in the design.
+WARNING: Simulation object /tb_ppm_4/s_s00_axi_arvalid was not found in the design.
+WARNING: Simulation object /tb_ppm_4/s_s00_axi_arready was not found in the design.
+WARNING: Simulation object /tb_ppm_4/s_s00_axi_rdata was not found in the design.
+WARNING: Simulation object /tb_ppm_4/s_s00_axi_rresp was not found in the design.
+WARNING: Simulation object /tb_ppm_4/s_s00_axi_rvalid was not found in the design.
+WARNING: Simulation object /tb_ppm_4/s_s00_axi_rready was not found in the design.
+WARNING: Simulation object /tb_ppm_4/beat was not found in the design.
+WARNING: Simulation object /tb_ppm_4/C_S00_AXI_DATA_WIDTH was not found in the design.
+WARNING: Simulation object /tb_ppm_4/C_S00_AXI_ADDR_WIDTH was not found in the design.
+source tb_axi_ppm4.tcl
 # set curr_wave [current_wave_config]
 # if { [string length $curr_wave] == 0 } {
 #   if { [llength [get_objects]] > 0} {
@@ -81,13 +162,70 @@ source tb_ppm_4.tcl
 #   }
 # }
 # run 1000ns
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_ppm_4_behav' loaded.
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_axi_ppm4_behav' loaded.
 INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1013.973 ; gain = 0.000
-run 12 ms
-run 12 ms
-run 12 ms
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-exit
-INFO: [Common 17-206] Exiting Vivado at Fri Feb 20 20:38:42 2026...
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 1013.004 ; gain = 0.000
+run 5 ms
+run 5 ms
+run 5 ms
+Note: Simulation Finished
+Time: 14700235 ns  Iteration: 0  Process: /tb_axi_ppm4/stim_proc  File: C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sim_1/new/tb_ppm_4.vhd
+run all
+run: Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 1013.004 ; gain = 0.000
+run 5 ms
+relaunch_sim
+Command: launch_simulation -simset sim_2 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/testbench/testbench.sim/sim_2/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_2'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_axi_ppm4' in fileset 'sim_2'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_2'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/testbench/testbench.sim/sim_2/behav/xsim'
+"xvhdl --incr --relax -prj tb_axi_ppm4_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_2 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/testbench/testbench.sim/sim_2/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/testbench/testbench.sim/sim_2/behav/xsim'
+"xelab -wto b82b2b5f271143dbb0a0bf41dce3d52c --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_axi_ppm4_behav xil_defaultlib.tb_axi_ppm4 -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto b82b2b5f271143dbb0a0bf41dce3d52c --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_axi_ppm4_behav xil_defaultlib.tb_axi_ppm4 -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 1013.004 ; gain = 0.000
+run 5 ms
+run 5 ms
+relaunch_sim
+Command: launch_simulation -simset sim_2 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/testbench/testbench.sim/sim_2/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_2'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_axi_ppm4' in fileset 'sim_2'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_2'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/testbench/testbench.sim/sim_2/behav/xsim'
+"xvhdl --incr --relax -prj tb_axi_ppm4_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_2 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/testbench/testbench.sim/sim_2/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/testbench/testbench.sim/sim_2/behav/xsim'
+"xelab -wto b82b2b5f271143dbb0a0bf41dce3d52c --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_axi_ppm4_behav xil_defaultlib.tb_axi_ppm4 -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto b82b2b5f271143dbb0a0bf41dce3d52c --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_axi_ppm4_behav xil_defaultlib.tb_axi_ppm4 -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+run 5 ms

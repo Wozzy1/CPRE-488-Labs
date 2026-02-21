@@ -1,0 +1,1 @@
+-wto "b82b2b5f271143dbb0a0bf41dce3d52c" --incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "secureip" --snapshot "tb_axi_ppm4_behav" "xil_defaultlib.tb_axi_ppm4" -log "elaborate.log" 

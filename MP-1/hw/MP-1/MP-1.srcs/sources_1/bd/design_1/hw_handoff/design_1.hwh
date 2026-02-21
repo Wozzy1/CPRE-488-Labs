@@ -1,11 +1,12 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Feb 20 21:29:15 2026" VIVADOVERSION="2020.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat Feb 21 02:35:46 2026" VIVADOVERSION="2020.1">
 
   <SYSTEMINFO ARCH="zynq" BOARD="em.avnet.com:zed:part0:1.4" DEVICE="7z020" NAME="design_1" PACKAGE="clg484" SPEEDGRADE="-1"/>
 
   <EXTERNALPORTS>
-    <PORT DIR="I" NAME="ppm_in_0" SIGIS="undef" SIGNAME="External_Ports_ppm_in_0">
+    <PORT DIR="I" NAME="s00_ppm_in_0" SIGIS="undef" SIGNAME="External_Ports_s00_ppm_in_0">
       <CONNECTIONS>
+        <CONNECTION INSTANCE="system_ila_0" PORT="probe8"/>
         <CONNECTION INSTANCE="axi_ppm4_0" PORT="s00_ppm_in"/>
       </CONNECTIONS>
     </PORT>
@@ -169,7 +170,7 @@
   </EXTERNALINTERFACES>
 
   <MODULES>
-    <MODULE COREREVISION="36" FULLNAME="/axi_ppm4_0" HWVERSION="1.0" INSTANCE="axi_ppm4_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="axi_ppm4" VLNV="iastate.edu:user:axi_ppm4:1.0">
+    <MODULE COREREVISION="38" FULLNAME="/axi_ppm4_0" HWVERSION="1.0" INSTANCE="axi_ppm4_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="axi_ppm4" VLNV="iastate.edu:user:axi_ppm4:1.0">
       <DOCUMENTS/>
       <ADDRESSBLOCKS>
         <ADDRESSBLOCK ACCESS="" INTERFACE="S00_AXI" NAME="S00_AXI_reg" RANGE="4096" USAGE="register"/>
@@ -183,14 +184,15 @@
         <PARAMETER NAME="C_S00_AXI_HIGHADDR" VALUE="0x43C0FFFF"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" NAME="s00_ppm_in" SIGIS="undef" SIGNAME="External_Ports_ppm_in_0">
+        <PORT DIR="I" NAME="s00_ppm_in" SIGIS="undef" SIGNAME="External_Ports_s00_ppm_in_0">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="ppm_in_0"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="s00_ppm_in_0"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="s00_ppm_out" SIGIS="undef" SIGNAME="axi_ppm4_0_s00_ppm_out">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="s00_ppm_out_0"/>
+            <CONNECTION INSTANCE="system_ila_0" PORT="probe7"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="31" NAME="s00_reg0_out" RIGHT="0" SIGIS="undef" SIGNAME="axi_ppm4_0_s00_reg0_out">
@@ -427,32 +429,6 @@
           </PORTMAPS>
         </BUSINTERFACE>
       </BUSINTERFACES>
-    </MODULE>
-    <MODULE COREREVISION="7" FULLNAME="/constant_high" HWVERSION="1.1" INSTANCE="constant_high" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconstant" VLNV="xilinx.com:ip:xlconstant:1.1">
-      <DOCUMENTS/>
-      <PARAMETERS>
-        <PARAMETER NAME="CONST_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="CONST_VAL" VALUE="0x1"/>
-        <PARAMETER NAME="Component_Name" VALUE="design_1_xlconstant_0_0"/>
-        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
-      </PARAMETERS>
-      <PORTS>
-        <PORT DIR="O" LEFT="0" NAME="dout" RIGHT="0" SIGIS="undef"/>
-      </PORTS>
-      <BUSINTERFACES/>
-    </MODULE>
-    <MODULE COREREVISION="7" FULLNAME="/constant_low" HWVERSION="1.1" INSTANCE="constant_low" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconstant" VLNV="xilinx.com:ip:xlconstant:1.1">
-      <DOCUMENTS/>
-      <PARAMETERS>
-        <PARAMETER NAME="CONST_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="CONST_VAL" VALUE="0x0"/>
-        <PARAMETER NAME="Component_Name" VALUE="design_1_xlconstant_0_1"/>
-        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
-      </PARAMETERS>
-      <PORTS>
-        <PORT DIR="O" LEFT="0" NAME="dout" RIGHT="0" SIGIS="undef"/>
-      </PORTS>
-      <BUSINTERFACES/>
     </MODULE>
     <MODULE CONFIGURABLE="TRUE" COREREVISION="6" FULLNAME="/processing_system7_0" HWVERSION="5.5" INSTANCE="processing_system7_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" IS_PL="FALSE" MODTYPE="processing_system7" VLNV="xilinx.com:ip:processing_system7:5.5">
       <DOCUMENTS>
@@ -2890,7 +2866,7 @@
         <PARAMETER NAME="C_SLOT_15_APC_MAX_WLAST_TO_AWVALID_WAITS" VALUE="0"/>
         <PARAMETER NAME="C_SLOT_15_APC_MAX_WRITE_TO_BVALID_WAITS" VALUE="0"/>
         <PARAMETER NAME="C_SLOT_15_APC_MAX_CONTINUOUS_RTRANSFERS_WAITS" VALUE="0"/>
-        <PARAMETER NAME="C_BRAM_CNT" VALUE="0.5"/>
+        <PARAMETER NAME="C_BRAM_CNT" VALUE="25.5"/>
         <PARAMETER NAME="C_SLOT_0_AXI_AW_SEL_DATA" VALUE="1"/>
         <PARAMETER NAME="C_SLOT_0_AXI_W_SEL_DATA" VALUE="1"/>
         <PARAMETER NAME="C_SLOT_0_AXI_B_SEL_DATA" VALUE="1"/>
@@ -5203,15 +5179,15 @@
         <PARAMETER NAME="C_PROBE9_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE8_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE7_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="C_PROBE6_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="C_PROBE5_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="C_PROBE4_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="C_PROBE3_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="C_PROBE2_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="C_PROBE1_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="C_PROBE0_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="C_DATA_DEPTH" VALUE="1024"/>
-        <PARAMETER NAME="C_NUM_OF_PROBES" VALUE="7"/>
+        <PARAMETER NAME="C_PROBE6_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="C_PROBE5_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="C_PROBE4_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="C_PROBE3_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="C_PROBE2_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="C_PROBE1_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="C_PROBE0_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="C_DATA_DEPTH" VALUE="4096"/>
+        <PARAMETER NAME="C_NUM_OF_PROBES" VALUE="9"/>
         <PARAMETER NAME="C_XLNX_HW_PROBE_INFO" VALUE="DEFAULT"/>
         <PARAMETER NAME="Component_Name" VALUE="design_1_system_ila_0_0"/>
         <PARAMETER NAME="C_PROBE70_WIDTH" VALUE="1"/>
@@ -6475,7 +6451,7 @@
         <PARAMETER NAME="C_SLOT_15_AXIS_TID_WIDTH" VALUE="AUTO"/>
         <PARAMETER NAME="C_SLOT_15_AXIS_TUSER_WIDTH" VALUE="AUTO"/>
         <PARAMETER NAME="C_SLOT_15_AXIS_TDEST_WIDTH" VALUE="AUTO"/>
-        <PARAMETER NAME="C_PROBE_WIDTH_PROPAGATION" VALUE="AUTO"/>
+        <PARAMETER NAME="C_PROBE_WIDTH_PROPAGATION" VALUE="MANUAL"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
@@ -6519,45 +6495,16 @@
             <CONNECTION INSTANCE="axi_ppm4_0" PORT="s00_reg15_out"/>
           </CONNECTIONS>
         </PORT>
-      </PORTS>
-      <BUSINTERFACES/>
-    </MODULE>
-    <MODULE COREREVISION="7" FULLNAME="/xlconstant_0" HWVERSION="1.1" INSTANCE="xlconstant_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconstant" VLNV="xilinx.com:ip:xlconstant:1.1">
-      <DOCUMENTS/>
-      <PARAMETERS>
-        <PARAMETER NAME="CONST_WIDTH" VALUE="3"/>
-        <PARAMETER NAME="CONST_VAL" VALUE="0x0"/>
-        <PARAMETER NAME="Component_Name" VALUE="design_1_xlconstant_0_2"/>
-        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
-      </PARAMETERS>
-      <PORTS>
-        <PORT DIR="O" LEFT="2" NAME="dout" RIGHT="0" SIGIS="undef"/>
-      </PORTS>
-      <BUSINTERFACES/>
-    </MODULE>
-    <MODULE COREREVISION="7" FULLNAME="/xlconstant_1" HWVERSION="1.1" INSTANCE="xlconstant_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconstant" VLNV="xilinx.com:ip:xlconstant:1.1">
-      <DOCUMENTS/>
-      <PARAMETERS>
-        <PARAMETER NAME="CONST_WIDTH" VALUE="4"/>
-        <PARAMETER NAME="CONST_VAL" VALUE="0x0"/>
-        <PARAMETER NAME="Component_Name" VALUE="design_1_xlconstant_1_0"/>
-        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
-      </PARAMETERS>
-      <PORTS>
-        <PORT DIR="O" LEFT="3" NAME="dout" RIGHT="0" SIGIS="undef"/>
-      </PORTS>
-      <BUSINTERFACES/>
-    </MODULE>
-    <MODULE COREREVISION="7" FULLNAME="/xlconstant_2" HWVERSION="1.1" INSTANCE="xlconstant_2" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconstant" VLNV="xilinx.com:ip:xlconstant:1.1">
-      <DOCUMENTS/>
-      <PARAMETERS>
-        <PARAMETER NAME="CONST_WIDTH" VALUE="6"/>
-        <PARAMETER NAME="CONST_VAL" VALUE="0x00"/>
-        <PARAMETER NAME="Component_Name" VALUE="design_1_xlconstant_2_0"/>
-        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
-      </PARAMETERS>
-      <PORTS>
-        <PORT DIR="O" LEFT="5" NAME="dout" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="0" NAME="probe7" RIGHT="0" SIGIS="undef" SIGNAME="axi_ppm4_0_s00_ppm_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_ppm4_0" PORT="s00_ppm_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="probe8" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_s00_ppm_in_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="s00_ppm_in_0"/>
+          </CONNECTIONS>
+        </PORT>
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>

@@ -2,12 +2,12 @@
 # Webtalk v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Fri Feb 20 20:35:12 2026
-# Process ID: 23800
+# Start of session at: Sat Feb 21 02:54:37 2026
+# Process ID: 18220
 # Current directory: C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/testbench/testbench.sim/sim_2/behav/xsim
-# Command line: wbtcv.exe -mode batch -source C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/testbench/testbench.sim/sim_2/behav/xsim/xsim.dir/tb_ppm_4_behav/webtalk/xsim_webtalk.tcl -notrace
+# Command line: wbtcv.exe -mode batch -source C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/testbench/testbench.sim/sim_2/behav/xsim/xsim.dir/tb_axi_ppm4_behav/webtalk/xsim_webtalk.tcl -notrace
 # Log file: C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/testbench/testbench.sim/sim_2/behav/xsim/webtalk.log
 # Journal file: C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/testbench/testbench.sim/sim_2/behav/xsim\webtalk.jou
 #-----------------------------------------------------------
-source C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/testbench/testbench.sim/sim_2/behav/xsim/xsim.dir/tb_ppm_4_behav/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-206] Exiting Webtalk at Fri Feb 20 20:35:12 2026...
+source C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/testbench/testbench.sim/sim_2/behav/xsim/xsim.dir/tb_axi_ppm4_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Sat Feb 21 02:54:37 2026...

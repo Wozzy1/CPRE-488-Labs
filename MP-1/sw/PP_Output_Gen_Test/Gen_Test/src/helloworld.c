@@ -71,10 +71,10 @@ int main()
     init_platform();
 
     print("Hello World\n\r");
-    for (int i = 0; i < 2; i++) {
-    	unsigned int data = 1; // (unsigned int)Xil_In32((UINTPTR)0x43CA0000);
-    	printf("%d: %u\n\r", i, data);
-    }
+//    for (;;) {
+////    	unsigned int data = 1; // (unsigned int)Xil_In32((UINTPTR)0x43CA0000);
+////    	printf("%u\n\r", data);
+//    }
     print("Successfully ran Hello World application\n\r");
     cleanup_platform();
     return 0;

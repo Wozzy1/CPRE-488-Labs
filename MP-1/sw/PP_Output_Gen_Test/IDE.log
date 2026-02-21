@@ -1277,3 +1277,1140 @@ java.lang.NullPointerException
 19:16:19 INFO  : 'jtag frequency' command is executed.
 19:16:19 INFO  : Context for 'APU' is selected.
 19:16:19 INFO  : System reset is completed.
+19:16:22 INFO  : 'after 3000' command is executed.
+19:16:22 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B18A36" && level==0 && jtag_device_ctx=="jsn-Zed-210248B18A36-23727093-0"}' command is executed.
+19:16:25 INFO  : FPGA configured successfully with bitstream "C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/_ide/bitstream/design_1_wrapper.bit"
+19:16:25 INFO  : Context for 'APU' is selected.
+19:16:25 INFO  : Hardware design and registers information is loaded from 'C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+19:16:25 INFO  : 'configparams force-mem-access 1' command is executed.
+19:16:25 INFO  : Context for 'APU' is selected.
+19:16:25 INFO  : Sourcing of 'C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/_ide/psinit/ps7_init.tcl' is done.
+19:16:25 INFO  : 'ps7_init' command is executed.
+19:16:25 INFO  : 'ps7_post_config' command is executed.
+19:16:25 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:16:25 INFO  : The application 'C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/Debug/Gen_Test.elf' is downloaded to processor 'ps7_cortexa9_0'.
+19:16:25 INFO  : 'configparams force-mem-access 0' command is executed.
+19:16:25 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B18A36" && level==0 && jtag_device_ctx=="jsn-Zed-210248B18A36-23727093-0"}
+fpga -file C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/Debug/Gen_Test.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+19:16:25 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:16:25 INFO  : 'con' command is executed.
+19:16:25 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+19:16:25 INFO  : Launch script is exported to file 'C:\Users\diepw50\CPRE-488-Labs\MP-1\sw\PP_Output_Gen_Test\.sdk\launch_scripts\single_application_debug\debugger_gen_test-default.tcl'
+19:41:21 INFO  : Disconnected from the channel tcfchan#23.
+19:42:08 INFO  : Hardware specification for platform project 'design_1_wrapper' is updated.
+19:42:15 INFO  : Result from executing command 'getProjects': design_1_wrapper
+19:42:15 INFO  : Result from executing command 'getPlatforms': design_1_wrapper|C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm
+19:42:15 INFO  : Checking for BSP changes to sync application flags for project 'Gen_Test'...
+19:42:19 INFO  : Updating application flags with new BSP settings...
+19:42:19 ERROR : Failed to update application flags from BSP for 'Gen_Test'. Reason: null
+java.lang.NullPointerException
+	at com.xilinx.sdk.sw.internal.SwDb.getComponentAppCompilerFlags(SwDb.java:762)
+	at com.xilinx.sdx.sw.internal.SDxSwPlatform.getSwPlatformCompilerFlags(SDxSwPlatform.java:1155)
+	at com.xilinx.sdx.sdk.core.build.AppSwBuildOptionsHelper.inferSwPlatformFlags(AppSwBuildOptionsHelper.java:54)
+	at com.xilinx.sdx.sdk.core.build.AppSwBuildOptionsHelper.updateBuildOptions(AppSwBuildOptionsHelper.java:46)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.updateSwBuildOptions(SdkMakefileGenerationListener.java:215)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.syncAppFlags(SdkMakefileGenerationListener.java:99)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.preMakefileGeneration(SdkMakefileGenerationListener.java:48)
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.notifyPreMakefileGenerationListeners(XilinxGnuMakefileGenerator.java:91)
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.generateMakefiles(XilinxGnuMakefileGenerator.java:40)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performMakefileGeneration(CommonBuilder.java:1008)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPrebuildGeneration(CommonBuilder.java:873)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:748)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:510)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:459)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:795)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:216)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:259)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:312)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:315)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:367)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:388)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:501)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:408)
+	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:288)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:60)
+19:42:19 INFO  : The hardware specfication used by project 'Gen_Test' is out of sync with the platform. Resource files extracted from the hardware specfiication will be updated.
+19:42:19 INFO  : The file 'C:\Users\diepw50\CPRE-488-Labs\MP-1\sw\PP_Output_Gen_Test\Gen_Test\_ide\bitstream\design_1_wrapper.bit' stored in project is removed.
+19:42:19 INFO  : The updated bitstream files are copied from platform to folder 'C:\Users\diepw50\CPRE-488-Labs\MP-1\sw\PP_Output_Gen_Test\Gen_Test\_ide\bitstream' in project 'Gen_Test'.
+19:42:19 INFO  : The file 'C:\Users\diepw50\CPRE-488-Labs\MP-1\sw\PP_Output_Gen_Test\Gen_Test\_ide\psinit\ps7_init.tcl' stored in project is removed.
+19:42:22 INFO  : The updated ps init files are copied from platform to folder 'C:\Users\diepw50\CPRE-488-Labs\MP-1\sw\PP_Output_Gen_Test\Gen_Test\_ide\psinit' in project 'Gen_Test'.
+19:42:32 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:42:32 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B18A36" && level==0 && jtag_device_ctx=="jsn-Zed-210248B18A36-23727093-0"}' command is executed.
+19:42:34 INFO  : FPGA configured successfully with bitstream "C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/_ide/bitstream/design_1_wrapper.bit"
+19:42:48 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:42:48 INFO  : Jtag cable 'Digilent Zed 210248B18A36' is selected.
+19:42:48 INFO  : 'jtag frequency' command is executed.
+19:42:48 INFO  : Context for 'APU' is selected.
+19:42:48 INFO  : System reset is completed.
+19:42:51 INFO  : 'after 3000' command is executed.
+19:42:51 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B18A36" && level==0 && jtag_device_ctx=="jsn-Zed-210248B18A36-23727093-0"}' command is executed.
+19:42:54 INFO  : FPGA configured successfully with bitstream "C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/_ide/bitstream/design_1_wrapper.bit"
+19:42:54 INFO  : Context for 'APU' is selected.
+19:42:54 INFO  : Hardware design and registers information is loaded from 'C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+19:42:54 INFO  : 'configparams force-mem-access 1' command is executed.
+19:42:54 INFO  : Context for 'APU' is selected.
+19:42:54 INFO  : Sourcing of 'C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/_ide/psinit/ps7_init.tcl' is done.
+19:42:54 INFO  : 'ps7_init' command is executed.
+19:42:54 INFO  : 'ps7_post_config' command is executed.
+19:42:54 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:42:54 INFO  : The application 'C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/Debug/Gen_Test.elf' is downloaded to processor 'ps7_cortexa9_0'.
+19:42:54 INFO  : 'configparams force-mem-access 0' command is executed.
+19:42:54 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B18A36" && level==0 && jtag_device_ctx=="jsn-Zed-210248B18A36-23727093-0"}
+fpga -file C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/Debug/Gen_Test.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+19:42:54 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:42:54 INFO  : 'con' command is executed.
+19:42:54 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+19:42:54 INFO  : Launch script is exported to file 'C:\Users\diepw50\CPRE-488-Labs\MP-1\sw\PP_Output_Gen_Test\.sdk\launch_scripts\single_application_debug\debugger_gen_test-default.tcl'
+19:45:47 INFO  : Checking for BSP changes to sync application flags for project 'Gen_Test'...
+19:45:47 INFO  : Updating application flags with new BSP settings...
+19:45:47 ERROR : Failed to update application flags from BSP for 'Gen_Test'. Reason: null
+java.lang.NullPointerException
+	at com.xilinx.sdk.sw.internal.SwDb.getComponentAppCompilerFlags(SwDb.java:762)
+	at com.xilinx.sdx.sw.internal.SDxSwPlatform.getSwPlatformCompilerFlags(SDxSwPlatform.java:1155)
+	at com.xilinx.sdx.sdk.core.build.AppSwBuildOptionsHelper.inferSwPlatformFlags(AppSwBuildOptionsHelper.java:54)
+	at com.xilinx.sdx.sdk.core.build.AppSwBuildOptionsHelper.updateBuildOptions(AppSwBuildOptionsHelper.java:46)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.updateSwBuildOptions(SdkMakefileGenerationListener.java:215)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.syncAppFlags(SdkMakefileGenerationListener.java:99)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.preMakefileGeneration(SdkMakefileGenerationListener.java:48)
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.notifyPreMakefileGenerationListeners(XilinxGnuMakefileGenerator.java:91)
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.generateMakefiles(XilinxGnuMakefileGenerator.java:40)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performMakefileGeneration(CommonBuilder.java:1008)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPrebuildGeneration(CommonBuilder.java:873)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:748)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:510)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:459)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:795)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:216)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:259)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:312)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:315)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:367)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:388)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:501)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:408)
+	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:288)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:60)
+19:45:49 INFO  : Disconnected from the channel tcfchan#26.
+19:45:52 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:45:52 INFO  : Jtag cable 'Digilent Zed 210248B18A36' is selected.
+19:45:52 INFO  : 'jtag frequency' command is executed.
+19:45:52 INFO  : Context for 'APU' is selected.
+19:45:52 INFO  : System reset is completed.
+19:45:55 INFO  : 'after 3000' command is executed.
+19:45:55 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B18A36" && level==0 && jtag_device_ctx=="jsn-Zed-210248B18A36-23727093-0"}' command is executed.
+19:45:57 INFO  : FPGA configured successfully with bitstream "C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/_ide/bitstream/design_1_wrapper.bit"
+19:45:57 INFO  : Context for 'APU' is selected.
+19:45:57 INFO  : Hardware design and registers information is loaded from 'C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+19:45:57 INFO  : 'configparams force-mem-access 1' command is executed.
+19:45:57 INFO  : Context for 'APU' is selected.
+19:45:57 INFO  : Sourcing of 'C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/_ide/psinit/ps7_init.tcl' is done.
+19:45:57 INFO  : 'ps7_init' command is executed.
+19:45:57 INFO  : 'ps7_post_config' command is executed.
+19:45:57 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:45:57 INFO  : The application 'C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/Debug/Gen_Test.elf' is downloaded to processor 'ps7_cortexa9_0'.
+19:45:57 INFO  : 'configparams force-mem-access 0' command is executed.
+19:45:57 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B18A36" && level==0 && jtag_device_ctx=="jsn-Zed-210248B18A36-23727093-0"}
+fpga -file C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/Debug/Gen_Test.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+19:45:58 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:45:58 INFO  : 'con' command is executed.
+19:45:58 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+19:45:58 INFO  : Launch script is exported to file 'C:\Users\diepw50\CPRE-488-Labs\MP-1\sw\PP_Output_Gen_Test\.sdk\launch_scripts\single_application_debug\debugger_gen_test-default.tcl'
+19:46:03 INFO  : Disconnected from the channel tcfchan#27.
+19:46:14 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:46:14 INFO  : Jtag cable 'Digilent Zed 210248B18A36' is selected.
+19:46:14 INFO  : 'jtag frequency' command is executed.
+19:46:14 INFO  : Context for 'APU' is selected.
+19:46:14 INFO  : System reset is completed.
+19:46:17 INFO  : 'after 3000' command is executed.
+19:46:17 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B18A36" && level==0 && jtag_device_ctx=="jsn-Zed-210248B18A36-23727093-0"}' command is executed.
+19:46:19 INFO  : FPGA configured successfully with bitstream "C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/_ide/bitstream/design_1_wrapper.bit"
+19:46:19 INFO  : Context for 'APU' is selected.
+19:46:19 INFO  : Hardware design and registers information is loaded from 'C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+19:46:19 INFO  : 'configparams force-mem-access 1' command is executed.
+19:46:19 INFO  : Context for 'APU' is selected.
+19:46:19 INFO  : Sourcing of 'C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/_ide/psinit/ps7_init.tcl' is done.
+19:46:20 INFO  : 'ps7_init' command is executed.
+19:46:20 INFO  : 'ps7_post_config' command is executed.
+19:46:20 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:46:20 INFO  : The application 'C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/Debug/Gen_Test.elf' is downloaded to processor 'ps7_cortexa9_0'.
+19:46:20 INFO  : 'configparams force-mem-access 0' command is executed.
+19:46:20 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B18A36" && level==0 && jtag_device_ctx=="jsn-Zed-210248B18A36-23727093-0"}
+fpga -file C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/Debug/Gen_Test.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+19:46:20 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:46:20 INFO  : 'con' command is executed.
+19:46:20 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+19:46:20 INFO  : Launch script is exported to file 'C:\Users\diepw50\CPRE-488-Labs\MP-1\sw\PP_Output_Gen_Test\.sdk\launch_scripts\single_application_debug\debugger_gen_test-default.tcl'
+19:55:41 INFO  : Disconnected from the channel tcfchan#28.
+19:55:44 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:55:44 INFO  : Jtag cable 'Digilent Zed 210248B18A36' is selected.
+19:55:44 INFO  : 'jtag frequency' command is executed.
+19:55:44 INFO  : Context for 'APU' is selected.
+19:55:44 INFO  : System reset is completed.
+19:55:47 INFO  : 'after 3000' command is executed.
+19:55:47 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B18A36" && level==0 && jtag_device_ctx=="jsn-Zed-210248B18A36-23727093-0"}' command is executed.
+19:55:50 INFO  : FPGA configured successfully with bitstream "C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/_ide/bitstream/design_1_wrapper.bit"
+19:55:50 INFO  : Context for 'APU' is selected.
+19:55:50 INFO  : Hardware design and registers information is loaded from 'C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+19:55:50 INFO  : 'configparams force-mem-access 1' command is executed.
+19:55:50 INFO  : Context for 'APU' is selected.
+19:55:50 INFO  : Sourcing of 'C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/_ide/psinit/ps7_init.tcl' is done.
+19:55:50 INFO  : 'ps7_init' command is executed.
+19:55:50 INFO  : 'ps7_post_config' command is executed.
+19:55:50 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:55:50 INFO  : The application 'C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/Debug/Gen_Test.elf' is downloaded to processor 'ps7_cortexa9_0'.
+19:55:50 INFO  : 'configparams force-mem-access 0' command is executed.
+19:55:50 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B18A36" && level==0 && jtag_device_ctx=="jsn-Zed-210248B18A36-23727093-0"}
+fpga -file C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/Debug/Gen_Test.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+19:55:50 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:55:50 INFO  : 'con' command is executed.
+19:55:50 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+19:55:50 INFO  : Launch script is exported to file 'C:\Users\diepw50\CPRE-488-Labs\MP-1\sw\PP_Output_Gen_Test\.sdk\launch_scripts\single_application_debug\debugger_gen_test-default.tcl'
+19:56:07 INFO  : Disconnected from the channel tcfchan#29.
+19:56:08 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:56:08 INFO  : Jtag cable 'Digilent Zed 210248B18A36' is selected.
+19:56:08 INFO  : 'jtag frequency' command is executed.
+19:56:08 INFO  : Context for 'APU' is selected.
+19:56:08 INFO  : System reset is completed.
+19:56:11 INFO  : 'after 3000' command is executed.
+19:56:11 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B18A36" && level==0 && jtag_device_ctx=="jsn-Zed-210248B18A36-23727093-0"}' command is executed.
+19:56:14 INFO  : FPGA configured successfully with bitstream "C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/_ide/bitstream/design_1_wrapper.bit"
+19:56:14 INFO  : Context for 'APU' is selected.
+19:56:14 INFO  : Hardware design and registers information is loaded from 'C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+19:56:14 INFO  : 'configparams force-mem-access 1' command is executed.
+19:56:14 INFO  : Context for 'APU' is selected.
+19:56:14 INFO  : Sourcing of 'C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/_ide/psinit/ps7_init.tcl' is done.
+19:56:14 INFO  : 'ps7_init' command is executed.
+19:56:14 INFO  : 'ps7_post_config' command is executed.
+19:56:14 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:56:14 INFO  : The application 'C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/Debug/Gen_Test.elf' is downloaded to processor 'ps7_cortexa9_0'.
+19:56:14 INFO  : 'configparams force-mem-access 0' command is executed.
+19:56:14 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B18A36" && level==0 && jtag_device_ctx=="jsn-Zed-210248B18A36-23727093-0"}
+fpga -file C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/Debug/Gen_Test.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+19:56:14 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:56:14 INFO  : 'con' command is executed.
+19:56:14 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+19:56:14 INFO  : Launch script is exported to file 'C:\Users\diepw50\CPRE-488-Labs\MP-1\sw\PP_Output_Gen_Test\.sdk\launch_scripts\single_application_debug\debugger_gen_test-default.tcl'
+20:01:12 INFO  : Disconnected from the channel tcfchan#30.
+20:01:14 INFO  : Checking for BSP changes to sync application flags for project 'Gen_Test'...
+20:01:14 INFO  : Updating application flags with new BSP settings...
+20:01:14 ERROR : Failed to update application flags from BSP for 'Gen_Test'. Reason: null
+java.lang.NullPointerException
+	at com.xilinx.sdk.sw.internal.SwDb.getComponentAppCompilerFlags(SwDb.java:762)
+	at com.xilinx.sdx.sw.internal.SDxSwPlatform.getSwPlatformCompilerFlags(SDxSwPlatform.java:1155)
+	at com.xilinx.sdx.sdk.core.build.AppSwBuildOptionsHelper.inferSwPlatformFlags(AppSwBuildOptionsHelper.java:54)
+	at com.xilinx.sdx.sdk.core.build.AppSwBuildOptionsHelper.updateBuildOptions(AppSwBuildOptionsHelper.java:46)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.updateSwBuildOptions(SdkMakefileGenerationListener.java:215)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.syncAppFlags(SdkMakefileGenerationListener.java:99)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.preMakefileGeneration(SdkMakefileGenerationListener.java:48)
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.notifyPreMakefileGenerationListeners(XilinxGnuMakefileGenerator.java:91)
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.generateMakefiles(XilinxGnuMakefileGenerator.java:40)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performMakefileGeneration(CommonBuilder.java:1008)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPrebuildGeneration(CommonBuilder.java:873)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:748)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:510)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:459)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:795)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:216)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:259)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:312)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:315)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:367)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:388)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:501)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:408)
+	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:288)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:60)
+20:04:15 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:04:15 INFO  : Jtag cable 'Digilent Zed 210248B18A36' is selected.
+20:04:15 INFO  : 'jtag frequency' command is executed.
+20:04:15 INFO  : Context for 'APU' is selected.
+20:04:15 INFO  : System reset is completed.
+20:04:18 INFO  : 'after 3000' command is executed.
+20:04:18 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B18A36" && level==0 && jtag_device_ctx=="jsn-Zed-210248B18A36-23727093-0"}' command is executed.
+20:04:20 INFO  : FPGA configured successfully with bitstream "C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/_ide/bitstream/design_1_wrapper.bit"
+20:04:20 INFO  : Context for 'APU' is selected.
+20:04:20 INFO  : Hardware design and registers information is loaded from 'C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+20:04:20 INFO  : 'configparams force-mem-access 1' command is executed.
+20:04:20 INFO  : Context for 'APU' is selected.
+20:04:20 INFO  : Sourcing of 'C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/_ide/psinit/ps7_init.tcl' is done.
+20:04:20 INFO  : 'ps7_init' command is executed.
+20:04:20 INFO  : 'ps7_post_config' command is executed.
+20:04:20 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:04:21 INFO  : The application 'C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/Debug/Gen_Test.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:04:21 INFO  : 'configparams force-mem-access 0' command is executed.
+20:04:21 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B18A36" && level==0 && jtag_device_ctx=="jsn-Zed-210248B18A36-23727093-0"}
+fpga -file C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/Debug/Gen_Test.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:04:21 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:04:21 INFO  : 'con' command is executed.
+20:04:21 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+20:04:21 INFO  : Launch script is exported to file 'C:\Users\diepw50\CPRE-488-Labs\MP-1\sw\PP_Output_Gen_Test\.sdk\launch_scripts\single_application_debug\debugger_gen_test-default.tcl'
+20:20:52 INFO  : Disconnected from the channel tcfchan#31.
+20:21:13 INFO  : Hardware specification for platform project 'design_1_wrapper' is updated.
+20:21:28 INFO  : Result from executing command 'getProjects': design_1_wrapper
+20:21:28 INFO  : Result from executing command 'getPlatforms': design_1_wrapper|C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm
+20:21:28 INFO  : Checking for BSP changes to sync application flags for project 'Gen_Test'...
+20:21:34 INFO  : Updating application flags with new BSP settings...
+20:21:34 ERROR : Failed to update application flags from BSP for 'Gen_Test'. Reason: null
+java.lang.NullPointerException
+	at com.xilinx.sdk.sw.internal.SwDb.getComponentAppCompilerFlags(SwDb.java:762)
+	at com.xilinx.sdx.sw.internal.SDxSwPlatform.getSwPlatformCompilerFlags(SDxSwPlatform.java:1155)
+	at com.xilinx.sdx.sdk.core.build.AppSwBuildOptionsHelper.inferSwPlatformFlags(AppSwBuildOptionsHelper.java:54)
+	at com.xilinx.sdx.sdk.core.build.AppSwBuildOptionsHelper.updateBuildOptions(AppSwBuildOptionsHelper.java:46)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.updateSwBuildOptions(SdkMakefileGenerationListener.java:215)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.syncAppFlags(SdkMakefileGenerationListener.java:99)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.preMakefileGeneration(SdkMakefileGenerationListener.java:48)
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.notifyPreMakefileGenerationListeners(XilinxGnuMakefileGenerator.java:91)
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.generateMakefiles(XilinxGnuMakefileGenerator.java:40)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performMakefileGeneration(CommonBuilder.java:1008)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPrebuildGeneration(CommonBuilder.java:873)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:748)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:510)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:459)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:795)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:216)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:259)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:312)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:315)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:367)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:388)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:501)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:408)
+	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:288)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:60)
+20:21:34 INFO  : The hardware specfication used by project 'Gen_Test' is out of sync with the platform. Resource files extracted from the hardware specfiication will be updated.
+20:21:34 INFO  : The file 'C:\Users\diepw50\CPRE-488-Labs\MP-1\sw\PP_Output_Gen_Test\Gen_Test\_ide\bitstream\design_1_wrapper.bit' stored in project is removed.
+20:21:34 INFO  : The updated bitstream files are copied from platform to folder 'C:\Users\diepw50\CPRE-488-Labs\MP-1\sw\PP_Output_Gen_Test\Gen_Test\_ide\bitstream' in project 'Gen_Test'.
+20:21:34 INFO  : The file 'C:\Users\diepw50\CPRE-488-Labs\MP-1\sw\PP_Output_Gen_Test\Gen_Test\_ide\psinit\ps7_init.tcl' stored in project is removed.
+20:21:37 INFO  : The updated ps init files are copied from platform to folder 'C:\Users\diepw50\CPRE-488-Labs\MP-1\sw\PP_Output_Gen_Test\Gen_Test\_ide\psinit' in project 'Gen_Test'.
+20:21:39 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:21:39 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B18A36" && level==0 && jtag_device_ctx=="jsn-Zed-210248B18A36-23727093-0"}' command is executed.
+20:21:41 INFO  : FPGA configured successfully with bitstream "C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/_ide/bitstream/design_1_wrapper.bit"
+20:21:54 INFO  : Checking for BSP changes to sync application flags for project 'Gen_Test'...
+20:21:54 INFO  : Updating application flags with new BSP settings...
+20:21:54 ERROR : Failed to update application flags from BSP for 'Gen_Test'. Reason: null
+java.lang.NullPointerException
+	at com.xilinx.sdk.sw.internal.SwDb.getComponentAppCompilerFlags(SwDb.java:762)
+	at com.xilinx.sdx.sw.internal.SDxSwPlatform.getSwPlatformCompilerFlags(SDxSwPlatform.java:1155)
+	at com.xilinx.sdx.sdk.core.build.AppSwBuildOptionsHelper.inferSwPlatformFlags(AppSwBuildOptionsHelper.java:54)
+	at com.xilinx.sdx.sdk.core.build.AppSwBuildOptionsHelper.updateBuildOptions(AppSwBuildOptionsHelper.java:46)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.updateSwBuildOptions(SdkMakefileGenerationListener.java:215)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.syncAppFlags(SdkMakefileGenerationListener.java:99)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.preMakefileGeneration(SdkMakefileGenerationListener.java:48)
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.notifyPreMakefileGenerationListeners(XilinxGnuMakefileGenerator.java:91)
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.generateMakefiles(XilinxGnuMakefileGenerator.java:40)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performMakefileGeneration(CommonBuilder.java:1008)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPrebuildGeneration(CommonBuilder.java:873)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:748)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:510)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:459)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:795)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:216)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:259)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:312)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:315)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:367)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:388)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:501)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:408)
+	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:288)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:60)
+20:21:59 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:21:59 INFO  : Jtag cable 'Digilent Zed 210248B18A36' is selected.
+20:21:59 INFO  : 'jtag frequency' command is executed.
+20:21:59 INFO  : Context for 'APU' is selected.
+20:21:59 INFO  : System reset is completed.
+20:22:02 INFO  : 'after 3000' command is executed.
+20:22:02 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B18A36" && level==0 && jtag_device_ctx=="jsn-Zed-210248B18A36-23727093-0"}' command is executed.
+20:22:05 INFO  : FPGA configured successfully with bitstream "C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/_ide/bitstream/design_1_wrapper.bit"
+20:22:05 INFO  : Context for 'APU' is selected.
+20:22:05 INFO  : Hardware design and registers information is loaded from 'C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+20:22:05 INFO  : 'configparams force-mem-access 1' command is executed.
+20:22:05 INFO  : Context for 'APU' is selected.
+20:22:05 INFO  : Sourcing of 'C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/_ide/psinit/ps7_init.tcl' is done.
+20:22:05 INFO  : 'ps7_init' command is executed.
+20:22:05 INFO  : 'ps7_post_config' command is executed.
+20:22:05 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:22:05 INFO  : The application 'C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/Debug/Gen_Test.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:22:05 INFO  : 'configparams force-mem-access 0' command is executed.
+20:22:05 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B18A36" && level==0 && jtag_device_ctx=="jsn-Zed-210248B18A36-23727093-0"}
+fpga -file C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/Debug/Gen_Test.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:22:05 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:22:05 INFO  : 'con' command is executed.
+20:22:05 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+20:22:05 INFO  : Launch script is exported to file 'C:\Users\diepw50\CPRE-488-Labs\MP-1\sw\PP_Output_Gen_Test\.sdk\launch_scripts\single_application_debug\debugger_gen_test-default.tcl'
+20:23:37 INFO  : Disconnected from the channel tcfchan#34.
+20:23:39 INFO  : Checking for BSP changes to sync application flags for project 'Gen_Test'...
+20:23:39 INFO  : Updating application flags with new BSP settings...
+20:23:39 ERROR : Failed to update application flags from BSP for 'Gen_Test'. Reason: null
+java.lang.NullPointerException
+	at com.xilinx.sdk.sw.internal.SwDb.getComponentAppCompilerFlags(SwDb.java:762)
+	at com.xilinx.sdx.sw.internal.SDxSwPlatform.getSwPlatformCompilerFlags(SDxSwPlatform.java:1155)
+	at com.xilinx.sdx.sdk.core.build.AppSwBuildOptionsHelper.inferSwPlatformFlags(AppSwBuildOptionsHelper.java:54)
+	at com.xilinx.sdx.sdk.core.build.AppSwBuildOptionsHelper.updateBuildOptions(AppSwBuildOptionsHelper.java:46)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.updateSwBuildOptions(SdkMakefileGenerationListener.java:215)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.syncAppFlags(SdkMakefileGenerationListener.java:99)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.preMakefileGeneration(SdkMakefileGenerationListener.java:48)
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.notifyPreMakefileGenerationListeners(XilinxGnuMakefileGenerator.java:91)
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.generateMakefiles(XilinxGnuMakefileGenerator.java:40)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performMakefileGeneration(CommonBuilder.java:1008)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPrebuildGeneration(CommonBuilder.java:873)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:748)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:510)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:459)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:795)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:216)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:259)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:312)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:315)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:367)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:388)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:501)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:408)
+	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:288)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:60)
+20:23:45 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:23:45 INFO  : Jtag cable 'Digilent Zed 210248B18A36' is selected.
+20:23:45 INFO  : 'jtag frequency' command is executed.
+20:23:45 INFO  : Context for 'APU' is selected.
+20:23:45 INFO  : System reset is completed.
+20:23:48 INFO  : 'after 3000' command is executed.
+20:23:48 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B18A36" && level==0 && jtag_device_ctx=="jsn-Zed-210248B18A36-23727093-0"}' command is executed.
+20:23:50 INFO  : FPGA configured successfully with bitstream "C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/_ide/bitstream/design_1_wrapper.bit"
+20:23:50 INFO  : Context for 'APU' is selected.
+20:23:50 INFO  : Hardware design and registers information is loaded from 'C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+20:23:50 INFO  : 'configparams force-mem-access 1' command is executed.
+20:23:50 INFO  : Context for 'APU' is selected.
+20:23:50 INFO  : Sourcing of 'C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/_ide/psinit/ps7_init.tcl' is done.
+20:23:50 INFO  : 'ps7_init' command is executed.
+20:23:50 INFO  : 'ps7_post_config' command is executed.
+20:23:50 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:23:51 INFO  : The application 'C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/Debug/Gen_Test.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:23:51 INFO  : 'configparams force-mem-access 0' command is executed.
+20:23:51 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B18A36" && level==0 && jtag_device_ctx=="jsn-Zed-210248B18A36-23727093-0"}
+fpga -file C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/Debug/Gen_Test.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:23:51 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:23:51 INFO  : 'con' command is executed.
+20:23:51 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+20:23:51 INFO  : Launch script is exported to file 'C:\Users\diepw50\CPRE-488-Labs\MP-1\sw\PP_Output_Gen_Test\.sdk\launch_scripts\single_application_debug\debugger_gen_test-default.tcl'
+20:29:24 INFO  : Disconnected from the channel tcfchan#35.
+20:30:19 INFO  : Hardware specification for platform project 'design_1_wrapper' is updated.
+20:30:25 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:30:25 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B18A36" && level==0 && jtag_device_ctx=="jsn-Zed-210248B18A36-23727093-0"}' command is executed.
+20:30:27 INFO  : FPGA configured successfully with bitstream "C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/_ide/bitstream/design_1_wrapper.bit"
+20:30:33 INFO  : Result from executing command 'getProjects': design_1_wrapper
+20:30:33 INFO  : Result from executing command 'getPlatforms': design_1_wrapper|C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm
+20:30:41 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:30:41 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B18A36" && level==0 && jtag_device_ctx=="jsn-Zed-210248B18A36-23727093-0"}' command is executed.
+20:30:43 INFO  : FPGA configured successfully with bitstream "C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/_ide/bitstream/design_1_wrapper.bit"
+20:30:49 INFO  : Checking for BSP changes to sync application flags for project 'Gen_Test'...
+20:30:49 INFO  : Updating application flags with new BSP settings...
+20:30:49 ERROR : Failed to update application flags from BSP for 'Gen_Test'. Reason: null
+java.lang.NullPointerException
+	at com.xilinx.sdk.sw.internal.SwDb.getComponentAppCompilerFlags(SwDb.java:762)
+	at com.xilinx.sdx.sw.internal.SDxSwPlatform.getSwPlatformCompilerFlags(SDxSwPlatform.java:1155)
+	at com.xilinx.sdx.sdk.core.build.AppSwBuildOptionsHelper.inferSwPlatformFlags(AppSwBuildOptionsHelper.java:54)
+	at com.xilinx.sdx.sdk.core.build.AppSwBuildOptionsHelper.updateBuildOptions(AppSwBuildOptionsHelper.java:46)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.updateSwBuildOptions(SdkMakefileGenerationListener.java:215)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.syncAppFlags(SdkMakefileGenerationListener.java:99)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.preMakefileGeneration(SdkMakefileGenerationListener.java:48)
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.notifyPreMakefileGenerationListeners(XilinxGnuMakefileGenerator.java:91)
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.generateMakefiles(XilinxGnuMakefileGenerator.java:40)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performMakefileGeneration(CommonBuilder.java:1008)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPrebuildGeneration(CommonBuilder.java:873)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:748)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:510)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:459)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:795)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:216)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:259)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:312)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:315)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:367)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:388)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:501)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:408)
+	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:288)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:60)
+20:30:53 INFO  : The hardware specfication used by project 'Gen_Test' is out of sync with the platform. Resource files extracted from the hardware specfiication will be updated.
+20:30:53 INFO  : The file 'C:\Users\diepw50\CPRE-488-Labs\MP-1\sw\PP_Output_Gen_Test\Gen_Test\_ide\bitstream\design_1_wrapper.bit' stored in project is removed.
+20:30:53 INFO  : The updated bitstream files are copied from platform to folder 'C:\Users\diepw50\CPRE-488-Labs\MP-1\sw\PP_Output_Gen_Test\Gen_Test\_ide\bitstream' in project 'Gen_Test'.
+20:30:53 INFO  : The file 'C:\Users\diepw50\CPRE-488-Labs\MP-1\sw\PP_Output_Gen_Test\Gen_Test\_ide\psinit\ps7_init.tcl' stored in project is removed.
+20:30:56 INFO  : The updated ps init files are copied from platform to folder 'C:\Users\diepw50\CPRE-488-Labs\MP-1\sw\PP_Output_Gen_Test\Gen_Test\_ide\psinit' in project 'Gen_Test'.
+20:30:56 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:30:56 INFO  : Jtag cable 'Digilent Zed 210248B18A36' is selected.
+20:30:56 INFO  : 'jtag frequency' command is executed.
+20:30:56 INFO  : Context for 'APU' is selected.
+20:30:56 INFO  : System reset is completed.
+20:30:59 INFO  : 'after 3000' command is executed.
+20:30:59 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B18A36" && level==0 && jtag_device_ctx=="jsn-Zed-210248B18A36-23727093-0"}' command is executed.
+20:31:01 INFO  : FPGA configured successfully with bitstream "C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/_ide/bitstream/design_1_wrapper.bit"
+20:31:01 INFO  : Context for 'APU' is selected.
+20:31:02 INFO  : Hardware design and registers information is loaded from 'C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+20:31:02 INFO  : 'configparams force-mem-access 1' command is executed.
+20:31:02 INFO  : Context for 'APU' is selected.
+20:31:02 INFO  : Sourcing of 'C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/_ide/psinit/ps7_init.tcl' is done.
+20:31:02 INFO  : 'ps7_init' command is executed.
+20:31:02 INFO  : 'ps7_post_config' command is executed.
+20:31:02 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:31:02 INFO  : The application 'C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/Debug/Gen_Test.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:31:02 INFO  : 'configparams force-mem-access 0' command is executed.
+20:31:02 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B18A36" && level==0 && jtag_device_ctx=="jsn-Zed-210248B18A36-23727093-0"}
+fpga -file C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/Debug/Gen_Test.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:31:02 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:31:02 INFO  : 'con' command is executed.
+20:31:02 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+20:31:02 INFO  : Launch script is exported to file 'C:\Users\diepw50\CPRE-488-Labs\MP-1\sw\PP_Output_Gen_Test\.sdk\launch_scripts\single_application_debug\debugger_gen_test-default.tcl'
+20:53:21 INFO  : Hardware specification for platform project 'design_1_wrapper' is updated.
+20:53:33 INFO  : Result from executing command 'getProjects': design_1_wrapper
+20:53:33 INFO  : Result from executing command 'getPlatforms': design_1_wrapper|C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm
+20:53:34 INFO  : Checking for BSP changes to sync application flags for project 'Gen_Test'...
+20:53:35 INFO  : Updating application flags with new BSP settings...
+20:53:35 ERROR : Failed to update application flags from BSP for 'Gen_Test'. Reason: null
+java.lang.NullPointerException
+	at com.xilinx.sdk.sw.internal.SwDb.getComponentAppCompilerFlags(SwDb.java:762)
+	at com.xilinx.sdx.sw.internal.SDxSwPlatform.getSwPlatformCompilerFlags(SDxSwPlatform.java:1155)
+	at com.xilinx.sdx.sdk.core.build.AppSwBuildOptionsHelper.inferSwPlatformFlags(AppSwBuildOptionsHelper.java:54)
+	at com.xilinx.sdx.sdk.core.build.AppSwBuildOptionsHelper.updateBuildOptions(AppSwBuildOptionsHelper.java:46)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.updateSwBuildOptions(SdkMakefileGenerationListener.java:215)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.syncAppFlags(SdkMakefileGenerationListener.java:99)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.preMakefileGeneration(SdkMakefileGenerationListener.java:48)
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.notifyPreMakefileGenerationListeners(XilinxGnuMakefileGenerator.java:91)
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.generateMakefiles(XilinxGnuMakefileGenerator.java:40)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performMakefileGeneration(CommonBuilder.java:1008)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPrebuildGeneration(CommonBuilder.java:873)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:748)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:510)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:459)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:795)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:216)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:259)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:312)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:315)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:367)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:388)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:501)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:408)
+	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:288)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:60)
+20:53:37 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:53:37 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B18A36" && level==0 && jtag_device_ctx=="jsn-Zed-210248B18A36-23727093-0"}' command is executed.
+20:53:39 INFO  : FPGA configured successfully with bitstream "C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/_ide/bitstream/design_1_wrapper.bit"
+20:53:43 INFO  : Checking for BSP changes to sync application flags for project 'Gen_Test'...
+20:53:43 INFO  : Updating application flags with new BSP settings...
+20:53:43 ERROR : Failed to update application flags from BSP for 'Gen_Test'. Reason: null
+java.lang.NullPointerException
+	at com.xilinx.sdk.sw.internal.SwDb.getComponentAppCompilerFlags(SwDb.java:762)
+	at com.xilinx.sdx.sw.internal.SDxSwPlatform.getSwPlatformCompilerFlags(SDxSwPlatform.java:1155)
+	at com.xilinx.sdx.sdk.core.build.AppSwBuildOptionsHelper.inferSwPlatformFlags(AppSwBuildOptionsHelper.java:54)
+	at com.xilinx.sdx.sdk.core.build.AppSwBuildOptionsHelper.updateBuildOptions(AppSwBuildOptionsHelper.java:46)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.updateSwBuildOptions(SdkMakefileGenerationListener.java:215)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.syncAppFlags(SdkMakefileGenerationListener.java:99)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.preMakefileGeneration(SdkMakefileGenerationListener.java:48)
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.notifyPreMakefileGenerationListeners(XilinxGnuMakefileGenerator.java:91)
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.generateMakefiles(XilinxGnuMakefileGenerator.java:40)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performMakefileGeneration(CommonBuilder.java:1008)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPrebuildGeneration(CommonBuilder.java:873)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:748)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:510)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:459)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:795)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:216)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:259)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:312)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:315)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:367)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:388)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:501)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:408)
+	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:288)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:60)
+20:53:52 INFO  : Checking for BSP changes to sync application flags for project 'Gen_Test'...
+20:53:52 INFO  : Updating application flags with new BSP settings...
+20:53:52 ERROR : Failed to update application flags from BSP for 'Gen_Test'. Reason: null
+java.lang.NullPointerException
+	at com.xilinx.sdk.sw.internal.SwDb.getComponentAppCompilerFlags(SwDb.java:762)
+	at com.xilinx.sdx.sw.internal.SDxSwPlatform.getSwPlatformCompilerFlags(SDxSwPlatform.java:1155)
+	at com.xilinx.sdx.sdk.core.build.AppSwBuildOptionsHelper.inferSwPlatformFlags(AppSwBuildOptionsHelper.java:54)
+	at com.xilinx.sdx.sdk.core.build.AppSwBuildOptionsHelper.updateBuildOptions(AppSwBuildOptionsHelper.java:46)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.updateSwBuildOptions(SdkMakefileGenerationListener.java:215)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.syncAppFlags(SdkMakefileGenerationListener.java:99)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.preMakefileGeneration(SdkMakefileGenerationListener.java:48)
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.notifyPreMakefileGenerationListeners(XilinxGnuMakefileGenerator.java:91)
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.generateMakefiles(XilinxGnuMakefileGenerator.java:40)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performMakefileGeneration(CommonBuilder.java:1008)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPrebuildGeneration(CommonBuilder.java:873)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:748)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:510)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:459)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:795)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:216)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:259)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:312)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:315)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:367)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:388)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:501)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:408)
+	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:288)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:60)
+20:53:56 INFO  : Disconnected from the channel tcfchan#36.
+20:53:57 INFO  : The hardware specfication used by project 'Gen_Test' is out of sync with the platform. Resource files extracted from the hardware specfiication will be updated.
+20:53:57 INFO  : The file 'C:\Users\diepw50\CPRE-488-Labs\MP-1\sw\PP_Output_Gen_Test\Gen_Test\_ide\bitstream\design_1_wrapper.bit' stored in project is removed.
+20:53:57 INFO  : The updated bitstream files are copied from platform to folder 'C:\Users\diepw50\CPRE-488-Labs\MP-1\sw\PP_Output_Gen_Test\Gen_Test\_ide\bitstream' in project 'Gen_Test'.
+20:53:57 INFO  : The file 'C:\Users\diepw50\CPRE-488-Labs\MP-1\sw\PP_Output_Gen_Test\Gen_Test\_ide\psinit\ps7_init.tcl' stored in project is removed.
+20:54:00 INFO  : The updated ps init files are copied from platform to folder 'C:\Users\diepw50\CPRE-488-Labs\MP-1\sw\PP_Output_Gen_Test\Gen_Test\_ide\psinit' in project 'Gen_Test'.
+20:54:00 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:54:00 INFO  : Jtag cable 'Digilent Zed 210248B18A36' is selected.
+20:54:00 INFO  : 'jtag frequency' command is executed.
+20:54:00 INFO  : Context for 'APU' is selected.
+20:54:00 INFO  : System reset is completed.
+20:54:03 INFO  : 'after 3000' command is executed.
+20:54:03 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B18A36" && level==0 && jtag_device_ctx=="jsn-Zed-210248B18A36-23727093-0"}' command is executed.
+20:54:05 INFO  : FPGA configured successfully with bitstream "C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/_ide/bitstream/design_1_wrapper.bit"
+20:54:05 INFO  : Context for 'APU' is selected.
+20:54:05 INFO  : Hardware design and registers information is loaded from 'C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+20:54:05 INFO  : 'configparams force-mem-access 1' command is executed.
+20:54:05 INFO  : Context for 'APU' is selected.
+20:54:05 INFO  : Sourcing of 'C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/_ide/psinit/ps7_init.tcl' is done.
+20:54:06 INFO  : 'ps7_init' command is executed.
+20:54:06 INFO  : 'ps7_post_config' command is executed.
+20:54:06 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:54:06 INFO  : The application 'C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/Debug/Gen_Test.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:54:06 INFO  : 'configparams force-mem-access 0' command is executed.
+20:54:06 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B18A36" && level==0 && jtag_device_ctx=="jsn-Zed-210248B18A36-23727093-0"}
+fpga -file C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/Debug/Gen_Test.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:54:06 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:54:06 INFO  : 'con' command is executed.
+20:54:06 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+20:54:06 INFO  : Launch script is exported to file 'C:\Users\diepw50\CPRE-488-Labs\MP-1\sw\PP_Output_Gen_Test\.sdk\launch_scripts\single_application_debug\debugger_gen_test-default.tcl'
+21:05:00 INFO  : Disconnected from the channel tcfchan#39.
+21:05:17 INFO  : Hardware specification for platform project 'design_1_wrapper' is updated.
+21:05:59 INFO  : Result from executing command 'getProjects': design_1_wrapper
+21:05:59 INFO  : Result from executing command 'getPlatforms': design_1_wrapper|C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm
+21:05:59 INFO  : Checking for BSP changes to sync application flags for project 'Gen_Test'...
+21:06:00 INFO  : Updating application flags with new BSP settings...
+21:06:01 ERROR : Failed to update application flags from BSP for 'Gen_Test'. Reason: null
+java.lang.NullPointerException
+	at com.xilinx.sdk.sw.internal.SwDb.getComponentAppCompilerFlags(SwDb.java:762)
+	at com.xilinx.sdx.sw.internal.SDxSwPlatform.getSwPlatformCompilerFlags(SDxSwPlatform.java:1155)
+	at com.xilinx.sdx.sdk.core.build.AppSwBuildOptionsHelper.inferSwPlatformFlags(AppSwBuildOptionsHelper.java:54)
+	at com.xilinx.sdx.sdk.core.build.AppSwBuildOptionsHelper.updateBuildOptions(AppSwBuildOptionsHelper.java:46)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.updateSwBuildOptions(SdkMakefileGenerationListener.java:215)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.syncAppFlags(SdkMakefileGenerationListener.java:99)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.preMakefileGeneration(SdkMakefileGenerationListener.java:48)
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.notifyPreMakefileGenerationListeners(XilinxGnuMakefileGenerator.java:91)
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.generateMakefiles(XilinxGnuMakefileGenerator.java:40)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performMakefileGeneration(CommonBuilder.java:1008)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPrebuildGeneration(CommonBuilder.java:873)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:748)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:510)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:459)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:795)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:216)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:259)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:312)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:315)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:367)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:388)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:501)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:408)
+	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:288)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:60)
+21:06:11 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:06:11 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B18A36" && level==0 && jtag_device_ctx=="jsn-Zed-210248B18A36-23727093-0"}' command is executed.
+21:06:13 INFO  : FPGA configured successfully with bitstream "C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/_ide/bitstream/design_1_wrapper.bit"
+21:06:31 INFO  : The hardware specfication used by project 'Gen_Test' is out of sync with the platform. Resource files extracted from the hardware specfiication will be updated.
+21:06:31 INFO  : The file 'C:\Users\diepw50\CPRE-488-Labs\MP-1\sw\PP_Output_Gen_Test\Gen_Test\_ide\bitstream\design_1_wrapper.bit' stored in project is removed.
+21:06:31 INFO  : The updated bitstream files are copied from platform to folder 'C:\Users\diepw50\CPRE-488-Labs\MP-1\sw\PP_Output_Gen_Test\Gen_Test\_ide\bitstream' in project 'Gen_Test'.
+21:06:31 INFO  : The file 'C:\Users\diepw50\CPRE-488-Labs\MP-1\sw\PP_Output_Gen_Test\Gen_Test\_ide\psinit\ps7_init.tcl' stored in project is removed.
+21:06:34 INFO  : The updated ps init files are copied from platform to folder 'C:\Users\diepw50\CPRE-488-Labs\MP-1\sw\PP_Output_Gen_Test\Gen_Test\_ide\psinit' in project 'Gen_Test'.
+21:06:36 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:06:36 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B18A36" && level==0 && jtag_device_ctx=="jsn-Zed-210248B18A36-23727093-0"}' command is executed.
+21:06:38 INFO  : FPGA configured successfully with bitstream "C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/_ide/bitstream/design_1_wrapper.bit"
+21:06:57 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:06:57 INFO  : Jtag cable 'Digilent Zed 210248B18A36' is selected.
+21:06:57 INFO  : 'jtag frequency' command is executed.
+21:06:57 INFO  : Context for 'APU' is selected.
+21:06:57 INFO  : System reset is completed.
+21:07:00 INFO  : 'after 3000' command is executed.
+21:07:00 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B18A36" && level==0 && jtag_device_ctx=="jsn-Zed-210248B18A36-23727093-0"}' command is executed.
+21:07:02 INFO  : FPGA configured successfully with bitstream "C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/_ide/bitstream/design_1_wrapper.bit"
+21:07:02 INFO  : Context for 'APU' is selected.
+21:07:02 INFO  : Hardware design and registers information is loaded from 'C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+21:07:02 INFO  : 'configparams force-mem-access 1' command is executed.
+21:07:02 INFO  : Context for 'APU' is selected.
+21:07:02 INFO  : Sourcing of 'C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/_ide/psinit/ps7_init.tcl' is done.
+21:07:03 INFO  : 'ps7_init' command is executed.
+21:07:03 INFO  : 'ps7_post_config' command is executed.
+21:07:03 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:07:03 INFO  : The application 'C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/Debug/Gen_Test.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:07:03 INFO  : 'configparams force-mem-access 0' command is executed.
+21:07:03 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B18A36" && level==0 && jtag_device_ctx=="jsn-Zed-210248B18A36-23727093-0"}
+fpga -file C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/Debug/Gen_Test.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:07:03 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:07:03 INFO  : 'con' command is executed.
+21:07:03 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+21:07:03 INFO  : Launch script is exported to file 'C:\Users\diepw50\CPRE-488-Labs\MP-1\sw\PP_Output_Gen_Test\.sdk\launch_scripts\single_application_debug\debugger_gen_test-default.tcl'
+21:22:23 INFO  : Disconnected from the channel tcfchan#41.
+21:22:33 INFO  : Hardware specification for platform project 'design_1_wrapper' is updated.
+21:22:40 INFO  : Result from executing command 'getProjects': design_1_wrapper
+21:22:40 INFO  : Result from executing command 'getPlatforms': design_1_wrapper|C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm
+21:22:40 INFO  : Checking for BSP changes to sync application flags for project 'Gen_Test'...
+21:22:41 INFO  : Updating application flags with new BSP settings...
+21:22:41 ERROR : Failed to update application flags from BSP for 'Gen_Test'. Reason: null
+java.lang.NullPointerException
+	at com.xilinx.sdk.sw.internal.SwDb.getComponentAppCompilerFlags(SwDb.java:762)
+	at com.xilinx.sdx.sw.internal.SDxSwPlatform.getSwPlatformCompilerFlags(SDxSwPlatform.java:1155)
+	at com.xilinx.sdx.sdk.core.build.AppSwBuildOptionsHelper.inferSwPlatformFlags(AppSwBuildOptionsHelper.java:54)
+	at com.xilinx.sdx.sdk.core.build.AppSwBuildOptionsHelper.updateBuildOptions(AppSwBuildOptionsHelper.java:46)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.updateSwBuildOptions(SdkMakefileGenerationListener.java:215)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.syncAppFlags(SdkMakefileGenerationListener.java:99)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.preMakefileGeneration(SdkMakefileGenerationListener.java:48)
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.notifyPreMakefileGenerationListeners(XilinxGnuMakefileGenerator.java:91)
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.generateMakefiles(XilinxGnuMakefileGenerator.java:40)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performMakefileGeneration(CommonBuilder.java:1008)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPrebuildGeneration(CommonBuilder.java:873)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:748)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:510)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:459)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:795)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:216)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:259)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:312)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:315)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:367)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:388)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:501)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:408)
+	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:288)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:60)
+21:22:42 INFO  : The hardware specfication used by project 'Gen_Test' is out of sync with the platform. Resource files extracted from the hardware specfiication will be updated.
+21:22:42 INFO  : The file 'C:\Users\diepw50\CPRE-488-Labs\MP-1\sw\PP_Output_Gen_Test\Gen_Test\_ide\bitstream\design_1_wrapper.bit' stored in project is removed.
+21:22:42 INFO  : The updated bitstream files are copied from platform to folder 'C:\Users\diepw50\CPRE-488-Labs\MP-1\sw\PP_Output_Gen_Test\Gen_Test\_ide\bitstream' in project 'Gen_Test'.
+21:22:42 INFO  : The file 'C:\Users\diepw50\CPRE-488-Labs\MP-1\sw\PP_Output_Gen_Test\Gen_Test\_ide\psinit\ps7_init.tcl' stored in project is removed.
+21:22:45 INFO  : The updated ps init files are copied from platform to folder 'C:\Users\diepw50\CPRE-488-Labs\MP-1\sw\PP_Output_Gen_Test\Gen_Test\_ide\psinit' in project 'Gen_Test'.
+21:22:55 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:22:55 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B18A36" && level==0 && jtag_device_ctx=="jsn-Zed-210248B18A36-23727093-0"}' command is executed.
+21:22:57 INFO  : FPGA configured successfully with bitstream "C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/_ide/bitstream/design_1_wrapper.bit"
+21:23:04 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:23:04 INFO  : Jtag cable 'Digilent Zed 210248B18A36' is selected.
+21:23:04 INFO  : 'jtag frequency' command is executed.
+21:23:04 INFO  : Context for 'APU' is selected.
+21:23:04 INFO  : System reset is completed.
+21:23:07 INFO  : 'after 3000' command is executed.
+21:23:07 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B18A36" && level==0 && jtag_device_ctx=="jsn-Zed-210248B18A36-23727093-0"}' command is executed.
+21:23:09 INFO  : FPGA configured successfully with bitstream "C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/_ide/bitstream/design_1_wrapper.bit"
+21:23:10 INFO  : Context for 'APU' is selected.
+21:23:10 INFO  : Hardware design and registers information is loaded from 'C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+21:23:10 INFO  : 'configparams force-mem-access 1' command is executed.
+21:23:10 INFO  : Context for 'APU' is selected.
+21:23:10 INFO  : Sourcing of 'C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/_ide/psinit/ps7_init.tcl' is done.
+21:23:10 INFO  : 'ps7_init' command is executed.
+21:23:10 INFO  : 'ps7_post_config' command is executed.
+21:23:10 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:23:10 INFO  : The application 'C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/Debug/Gen_Test.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:23:10 INFO  : 'configparams force-mem-access 0' command is executed.
+21:23:10 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B18A36" && level==0 && jtag_device_ctx=="jsn-Zed-210248B18A36-23727093-0"}
+fpga -file C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/Debug/Gen_Test.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:23:10 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:23:10 INFO  : 'con' command is executed.
+21:23:10 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+21:23:10 INFO  : Launch script is exported to file 'C:\Users\diepw50\CPRE-488-Labs\MP-1\sw\PP_Output_Gen_Test\.sdk\launch_scripts\single_application_debug\debugger_gen_test-default.tcl'
+21:32:40 INFO  : Disconnected from the channel tcfchan#44.
+21:32:54 INFO  : Hardware specification for platform project 'design_1_wrapper' is updated.
+21:32:59 INFO  : Result from executing command 'getProjects': design_1_wrapper
+21:32:59 INFO  : Result from executing command 'getPlatforms': design_1_wrapper|C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm
+21:32:59 INFO  : Checking for BSP changes to sync application flags for project 'Gen_Test'...
+21:33:02 INFO  : Updating application flags with new BSP settings...
+21:33:02 ERROR : Failed to update application flags from BSP for 'Gen_Test'. Reason: null
+java.lang.NullPointerException
+	at com.xilinx.sdk.sw.internal.SwDb.getComponentAppCompilerFlags(SwDb.java:762)
+	at com.xilinx.sdx.sw.internal.SDxSwPlatform.getSwPlatformCompilerFlags(SDxSwPlatform.java:1155)
+	at com.xilinx.sdx.sdk.core.build.AppSwBuildOptionsHelper.inferSwPlatformFlags(AppSwBuildOptionsHelper.java:54)
+	at com.xilinx.sdx.sdk.core.build.AppSwBuildOptionsHelper.updateBuildOptions(AppSwBuildOptionsHelper.java:46)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.updateSwBuildOptions(SdkMakefileGenerationListener.java:215)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.syncAppFlags(SdkMakefileGenerationListener.java:99)
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.preMakefileGeneration(SdkMakefileGenerationListener.java:48)
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.notifyPreMakefileGenerationListeners(XilinxGnuMakefileGenerator.java:91)
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.generateMakefiles(XilinxGnuMakefileGenerator.java:40)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performMakefileGeneration(CommonBuilder.java:1008)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPrebuildGeneration(CommonBuilder.java:873)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:748)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:510)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:459)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:795)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:216)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:259)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:312)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:315)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:367)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:388)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:501)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:408)
+	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:288)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:60)
+21:33:02 INFO  : The hardware specfication used by project 'Gen_Test' is out of sync with the platform. Resource files extracted from the hardware specfiication will be updated.
+21:33:02 INFO  : The file 'C:\Users\diepw50\CPRE-488-Labs\MP-1\sw\PP_Output_Gen_Test\Gen_Test\_ide\bitstream\design_1_wrapper.bit' stored in project is removed.
+21:33:02 INFO  : The updated bitstream files are copied from platform to folder 'C:\Users\diepw50\CPRE-488-Labs\MP-1\sw\PP_Output_Gen_Test\Gen_Test\_ide\bitstream' in project 'Gen_Test'.
+21:33:02 INFO  : The file 'C:\Users\diepw50\CPRE-488-Labs\MP-1\sw\PP_Output_Gen_Test\Gen_Test\_ide\psinit\ps7_init.tcl' stored in project is removed.
+21:33:05 INFO  : The updated ps init files are copied from platform to folder 'C:\Users\diepw50\CPRE-488-Labs\MP-1\sw\PP_Output_Gen_Test\Gen_Test\_ide\psinit' in project 'Gen_Test'.
+21:33:15 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:33:15 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B18A36" && level==0 && jtag_device_ctx=="jsn-Zed-210248B18A36-23727093-0"}' command is executed.
+21:33:18 INFO  : FPGA configured successfully with bitstream "C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/_ide/bitstream/design_1_wrapper.bit"
+21:33:23 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:33:23 INFO  : Jtag cable 'Digilent Zed 210248B18A36' is selected.
+21:33:23 INFO  : 'jtag frequency' command is executed.
+21:33:23 INFO  : Context for 'APU' is selected.
+21:33:23 INFO  : System reset is completed.
+21:33:26 INFO  : 'after 3000' command is executed.
+21:33:26 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B18A36" && level==0 && jtag_device_ctx=="jsn-Zed-210248B18A36-23727093-0"}' command is executed.
+21:33:28 INFO  : FPGA configured successfully with bitstream "C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/_ide/bitstream/design_1_wrapper.bit"
+21:33:28 INFO  : Context for 'APU' is selected.
+21:33:28 INFO  : Hardware design and registers information is loaded from 'C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+21:33:28 INFO  : 'configparams force-mem-access 1' command is executed.
+21:33:28 INFO  : Context for 'APU' is selected.
+21:33:28 INFO  : Sourcing of 'C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/_ide/psinit/ps7_init.tcl' is done.
+21:33:29 INFO  : 'ps7_init' command is executed.
+21:33:29 INFO  : 'ps7_post_config' command is executed.
+21:33:29 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:33:29 INFO  : The application 'C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/Debug/Gen_Test.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:33:29 INFO  : 'configparams force-mem-access 0' command is executed.
+21:33:29 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B18A36" && level==0 && jtag_device_ctx=="jsn-Zed-210248B18A36-23727093-0"}
+fpga -file C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/PP_Output_Gen_Test/Gen_Test/Debug/Gen_Test.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:33:29 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:33:29 INFO  : 'con' command is executed.
+21:33:29 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+21:33:29 INFO  : Launch script is exported to file 'C:\Users\diepw50\CPRE-488-Labs\MP-1\sw\PP_Output_Gen_Test\.sdk\launch_scripts\single_application_debug\debugger_gen_test-default.tcl'

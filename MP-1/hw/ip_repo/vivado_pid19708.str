@@ -475,3 +475,782 @@ selectButton("OptionPane.button", "OK"); // JButton (v, B)
 // HMemoryUtils.trashcanNow. Engine heap size: 1,002 MB. GUI used memory: 123 MB. Current time: 2/20/26, 3:30:06 PM CST
 // HMemoryUtils.trashcanNow. Engine heap size: 1,002 MB. GUI used memory: 121 MB. Current time: 2/20/26, 4:00:08 PM CST
 // HMemoryUtils.trashcanNow. Engine heap size: 1,002 MB. GUI used memory: 120 MB. Current time: 2/20/26, 4:30:11 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 1,002 MB. GUI used memory: 120 MB. Current time: 2/20/26, 5:00:14 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 1,002 MB. GUI used memory: 120 MB. Current time: 2/20/26, 5:30:17 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 1,002 MB. GUI used memory: 120 MB. Current time: 2/20/26, 6:00:19 PM CST
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,002 MB. GUI used memory: 120 MB. Current time: 2/20/26, 6:30:21 PM CST
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 11419 seconds
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "File Groups", 2); // ar (J, cs)
+selectButton(PAResourceItoN.MessageBanner_CHANGES_DETECTED_IN_VIVADO_PROJECT_THAT, "Merge changes from File Groups Wizard"); // h (M, cs)
+// TclEventType: PACKAGER_COMPONENT_RESET
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// Tcl Message: ipx::merge_project_changes files [ipx::current_core] 
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Customization Parameters", 3); // ar (J, cs)
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+selectButton(PAResourceItoN.MessageBanner_CHANGES_DETECTED_IN_VIVADO_PROJECT_THAT, "Merge changes from Customization Parameters Wizard"); // h (M, cs)
+// TclEventType: PACKAGER_COMPONENT_RESET
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// Tcl Message: ipx::merge_project_changes hdl_parameters [ipx::current_core] 
+// Tcl Message: INFO: [IP_Flow 19-3166] Bus Interface 'S00_AXI': References existing memory map 'S00_AXI'. 
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Review and Package", 7); // ar (J, cs)
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+selectButton(PAResourceQtoS.ReviewContentPanel_RE_PACKAGE_IP, "Re-Package IP"); // a (c, cs)
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// Tcl Message: set_property core_revision 29 [ipx::current_core] 
+// Tcl Message: ipx::create_xgui_files [ipx::current_core] 
+// Tcl Message: ipx::update_checksums [ipx::current_core] 
+// Tcl Message: ipx::save_core [ipx::current_core] 
+// TclEventType: CREATE_IP_CATALOG
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: CREATE_IP_CATALOG
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// Tcl Message: update_ip_catalog -rebuild -repo_path c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0 
+// Tcl Message: INFO: [IP_Flow 19-725] Reloaded user IP repository 'c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0' 
+// TclEventType: FILE_SET_CHANGE
+selectButton("OptionPane.button", "OK"); // JButton (v, B)
+selectButton(PAResourceQtoS.ReviewContentPanel_RE_PACKAGE_IP, "Re-Package IP"); // a (c, cs)
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// Tcl Message: set_property core_revision 30 [ipx::current_core] 
+// Tcl Message: ipx::create_xgui_files [ipx::current_core] 
+// Tcl Message: ipx::update_checksums [ipx::current_core] 
+// Tcl Message: ipx::save_core [ipx::current_core] 
+// TclEventType: CREATE_IP_CATALOG
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: CREATE_IP_CATALOG
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// Tcl Message: update_ip_catalog -rebuild -repo_path c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0 
+// Tcl Message: INFO: [IP_Flow 19-725] Reloaded user IP repository 'c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0' 
+selectButton("OptionPane.button", "OK"); // JButton (v, B)
+// TclEventType: FILE_SET_CHANGE
+// [GUI Memory]: 193 MB (+751kb) [04:49:54]
+// HMemoryUtils.trashcanNow. Engine heap size: 1,002 MB. GUI used memory: 131 MB. Current time: 2/20/26, 7:00:22 PM CST
+// Elapsed time: 2009 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, axi_ppm4_v1_0(arch_imp) (axi_ppm4_v1_0.vhd)]", 1, true); // B (F, cs) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, axi_ppm4_v1_0(arch_imp) (axi_ppm4_v1_0.vhd)]", 1, true, false, false, false, false, true); // B (F, cs) - Double Click - Node
+// Elapsed time: 18 seconds
+selectCodeEditor("axi_ppm4_v1_0.vhd", 138, 316); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 138, 316, false, false, false, false, true); // bP (w, cs) - Double Click
+typeControlKey((HResource) null, "axi_ppm4_v1_0.vhd", 'c'); // bP (w, cs)
+// Elapsed time: 10 seconds
+selectCodeEditor("axi_ppm4_v1_0.vhd", 425, 499); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 277, 322); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 463, 237); // bP (w, cs)
+typeControlKey((HResource) null, "axi_ppm4_v1_0.vhd", 'v'); // bP (w, cs)
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("axi_ppm4_v1_0.vhd", 181, 339); // bP (w, cs)
+typeControlKey((HResource) null, "axi_ppm4_v1_0.vhd", 'v'); // bP (w, cs)
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Package IP - axi_ppm4", 1); // m (l, cs)
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Customization Parameters", 3); // ar (J, cs)
+selectButton(PAResourceItoN.MessageBanner_CHANGES_DETECTED_IN_VIVADO_PROJECT_THAT, "Merge changes from Customization Parameters Wizard"); // h (M, cs)
+// TclEventType: PACKAGER_COMPONENT_RESET
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// Tcl Message: ipx::merge_project_changes hdl_parameters [ipx::current_core] 
+// Tcl Message: INFO: [IP_Flow 19-3166] Bus Interface 'S00_AXI': References existing memory map 'S00_AXI'. 
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Review and Package", 7); // ar (J, cs)
+selectButton(PAResourceQtoS.ReviewContentPanel_RE_PACKAGE_IP, "Re-Package IP"); // a (c, cs)
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// Tcl Message: set_property core_revision 31 [ipx::current_core] 
+// Tcl Message: ipx::create_xgui_files [ipx::current_core] 
+// Tcl Message: ipx::update_checksums [ipx::current_core] 
+// Tcl Message: ipx::save_core [ipx::current_core] 
+// TclEventType: CREATE_IP_CATALOG
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: CREATE_IP_CATALOG
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// Tcl Message: update_ip_catalog -rebuild -repo_path c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0 
+// Tcl Message: INFO: [IP_Flow 19-725] Reloaded user IP repository 'c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0' 
+// TclEventType: FILE_SET_CHANGE
+selectButton("OptionPane.button", "OK"); // JButton (v, B)
+// Elapsed time: 461 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "axi_ppm4_v1_0.vhd", 2); // m (l, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, axi_ppm4_v1_0(arch_imp) (axi_ppm4_v1_0.vhd), axi_ppm4_v1_0_S00_AXI_inst : axi_ppm4_v1_0_S00_AXI(arch_imp) (axi_ppm4_v1_0_S00_AXI.vhd)]", 2, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, axi_ppm4_v1_0(arch_imp) (axi_ppm4_v1_0.vhd), axi_ppm4_v1_0_S00_AXI_inst : axi_ppm4_v1_0_S00_AXI(arch_imp) (axi_ppm4_v1_0_S00_AXI.vhd)]", 2, false, false, false, false, false, true); // B (F, cs) - Double Click
+selectCodeEditor("axi_ppm4_v1_0_S00_AXI.vhd", 229, 233); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0_S00_AXI.vhd", 229, 233, false, false, false, false, true); // bP (w, cs) - Double Click
+typeControlKey((HResource) null, "axi_ppm4_v1_0_S00_AXI.vhd", 'c'); // bP (w, cs)
+typeControlKey((HResource) null, "axi_ppm4_v1_0_S00_AXI.vhd", 'v'); // bP (w, cs)
+// Elapsed time: 154 seconds
+selectCodeEditor("axi_ppm4_v1_0_S00_AXI.vhd", 290, 201); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0_S00_AXI.vhd", 290, 201, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("axi_ppm4_v1_0_S00_AXI.vhd", 343, 202); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0_S00_AXI.vhd", 323, 202); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0_S00_AXI.vhd", 323, 202, false, false, false, false, true); // bP (w, cs) - Double Click
+// HMemoryUtils.trashcanNow. Engine heap size: 1,002 MB. GUI used memory: 140 MB. Current time: 2/20/26, 7:30:24 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 1,002 MB. GUI used memory: 138 MB. Current time: 2/20/26, 8:00:27 PM CST
+// Elapsed time: 3066 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "axi_ppm4_v1_0.vhd", 2); // m (l, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, axi_ppm4_v1_0(arch_imp) (axi_ppm4_v1_0.vhd)]", 1, true); // B (F, cs) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, axi_ppm4_v1_0(arch_imp) (axi_ppm4_v1_0.vhd)]", 1, true, false, false, false, false, true); // B (F, cs) - Double Click - Node
+selectCodeEditor("axi_ppm4_v1_0.vhd", 154, 229); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 118, 99); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 110, 233); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 833, 387); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 109, 371); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 109, 371, false, false, false, false, true); // bP (w, cs) - Double Click
+// Elapsed time: 18 seconds
+selectCodeEditor("axi_ppm4_v1_0.vhd", 162, 577); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 162, 577, false, false, false, false, true); // bP (w, cs) - Double Click
+// Elapsed time: 17 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "axi_ppm4_v1_0_S00_AXI.vhd", 3); // m (l, cs)
+// Elapsed time: 17 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "axi_ppm4_v1_0.vhd", 2); // m (l, cs)
+// Elapsed time: 22 seconds
+selectCodeEditor("axi_ppm4_v1_0.vhd", 346, 278); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 346, 278, false, false, false, false, true); // bP (w, cs) - Double Click
+// Elapsed time: 27 seconds
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "s00_reg10_out"); // l (au, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 534, 343); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 216, 235); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 216, 235, false, false, false, false, true); // bP (w, cs) - Double Click
+// Elapsed time: 17 seconds
+selectCodeEditor("axi_ppm4_v1_0.vhd", 150, 34); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 150, 34, false, false, false, false, true); // bP (w, cs) - Double Click
+// Elapsed time: 12 seconds
+selectCodeEditor("axi_ppm4_v1_0.vhd", 133, 96); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 133, 96, false, false, false, false, true); // bP (w, cs) - Double Click
+// Elapsed time: 10 seconds
+selectCodeEditor("axi_ppm4_v1_0.vhd", 163, 367); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 163, 367, false, false, false, false, true); // bP (w, cs) - Double Click
+// Elapsed time: 18 seconds
+selectCodeEditor("axi_ppm4_v1_0.vhd", 279, 250); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 415, 355); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 230, 140); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 241, 166); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 241, 156); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 370, 360); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 309, 312); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 415, 344); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 256, 144); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 256, 144, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("axi_ppm4_v1_0.vhd", 125, 142); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 125, 142, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("axi_ppm4_v1_0.vhd", 246, 141); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 246, 141, false, false, false, false, true); // bP (w, cs) - Double Click
+typeControlKey((HResource) null, "axi_ppm4_v1_0.vhd", 'c'); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 361, 325); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 361, 325, false, false, false, false, true); // bP (w, cs) - Double Click
+typeControlKey((HResource) null, "axi_ppm4_v1_0.vhd", 'v'); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 253, 174); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 253, 174, false, false, false, false, true); // bP (w, cs) - Double Click
+typeControlKey((HResource) null, "axi_ppm4_v1_0.vhd", 'c'); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 322, 333); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 323, 333, false, false, false, false, true); // bP (w, cs) - Double Click
+typeControlKey((HResource) null, "axi_ppm4_v1_0.vhd", 'v'); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 251, 188); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 251, 188, false, false, false, false, true); // bP (w, cs) - Double Click
+typeControlKey((HResource) null, "axi_ppm4_v1_0.vhd", 'c'); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 310, 349); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 310, 366); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 310, 366, false, false, false, false, true); // bP (w, cs) - Double Click
+typeControlKey((HResource) null, "axi_ppm4_v1_0.vhd", 'v'); // bP (w, cs)
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("axi_ppm4_v1_0.vhd", 200, 297); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 291, 283); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 113, 229); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 113, 229, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("axi_ppm4_v1_0.vhd", 179, 218); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 179, 218, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("axi_ppm4_v1_0.vhd", 175, 297); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 175, 297, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("axi_ppm4_v1_0.vhd", 192, 363); // bP (w, cs)
+// Elapsed time: 11 seconds
+selectCodeEditor("axi_ppm4_v1_0.vhd", 241, 270); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 153, 208); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 225, 212); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 244, 210); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 244, 210, false, false, false, false, true); // bP (w, cs) - Double Click
+// Elapsed time: 11 seconds
+selectCodeEditor("axi_ppm4_v1_0.vhd", 203, 341); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 312, 253); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 202, 228); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 312, 222); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 312, 222, false, false, false, false, true); // bP (w, cs) - Double Click
+// Elapsed time: 10 seconds
+selectCodeEditor("axi_ppm4_v1_0.vhd", 266, 103); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 266, 103, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("axi_ppm4_v1_0.vhd", 506, 398); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 236, 407); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 235, 408, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("axi_ppm4_v1_0.vhd", 529, 402); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 516, 405); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 265, 232); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 265, 232, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("axi_ppm4_v1_0.vhd", 265, 232); // bP (w, cs)
+typeControlKey((HResource) null, "axi_ppm4_v1_0.vhd", 'c'); // bP (w, cs)
+// Elapsed time: 14 seconds
+selectCodeEditor("axi_ppm4_v1_0.vhd", 387, 204); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 387, 204, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("axi_ppm4_v1_0.vhd", 387, 204); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 360, 100, true, false, false, false, false); // bP (w, cs) - Shift Key
+selectCodeEditor("axi_ppm4_v1_0.vhd", 225, 107, true, false, false, false, false); // bP (w, cs) - Shift Key
+typeControlKey((HResource) null, "axi_ppm4_v1_0.vhd", 'c'); // bP (w, cs)
+// Elapsed time: 21 seconds
+selectCodeEditor("axi_ppm4_v1_0.vhd", 207, 234); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 233, 228, false, false, false, true, false); // bP (w, cs) - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_PASTE, "Paste"); // ai (ao, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 404, 231); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 200, 139); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 200, 139, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("axi_ppm4_v1_0.vhd", 210, 145); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 210, 145, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("axi_ppm4_v1_0.vhd", 402, 233); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 163, 259); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 358, 234); // bP (w, cs)
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Package IP - axi_ppm4", 1); // m (l, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "axi_ppm4_v1_0.vhd", 2); // m (l, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 559, 221); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 201, 106); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 201, 106, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("axi_ppm4_v1_0.vhd", 293, 232); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 293, 232, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("axi_ppm4_v1_0.vhd", 283, 223); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 283, 223, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("axi_ppm4_v1_0.vhd", 260, 248); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 260, 248, false, false, false, false, true); // bP (w, cs) - Double Click
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("axi_ppm4_v1_0.vhd", 358, 232); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 358, 232, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("axi_ppm4_v1_0.vhd", 358, 232); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 240, 95); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 240, 95, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("axi_ppm4_v1_0.vhd", 240, 95); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 261, 214); // bP (w, cs)
+typeControlKey((HResource) null, "axi_ppm4_v1_0.vhd", 'c'); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 233, 231); // bP (w, cs)
+typeControlKey((HResource) null, "axi_ppm4_v1_0.vhd", 'v'); // bP (w, cs)
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("axi_ppm4_v1_0.vhd", 489, 226); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 605, 322); // bP (w, cs)
+typeControlKey((HResource) null, "axi_ppm4_v1_0.vhd", 'c'); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 637, 319); // bP (w, cs)
+typeControlKey((HResource) null, "axi_ppm4_v1_0.vhd", 'v'); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 560, 314); // bP (w, cs)
+// Elapsed time: 13 seconds
+selectCodeEditor("axi_ppm4_v1_0.vhd", 305, 345); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 289, 347); // bP (w, cs)
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Package IP - axi_ppm4", 1); // m (l, cs)
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Customization Parameters", 3); // ar (J, cs)
+selectButton(PAResourceItoN.MessageBanner_CHANGES_DETECTED_IN_VIVADO_PROJECT_THAT, "Merge changes from Customization Parameters Wizard"); // h (M, cs)
+// TclEventType: PACKAGER_COMPONENT_RESET
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// Tcl Message: ipx::merge_project_changes hdl_parameters [ipx::current_core] 
+// Tcl Message: INFO: [IP_Flow 19-3166] Bus Interface 'S00_AXI': References existing memory map 'S00_AXI'. 
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Review and Package", 7); // ar (J, cs)
+selectButton(PAResourceQtoS.ReviewContentPanel_RE_PACKAGE_IP, "Re-Package IP"); // a (c, cs)
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// Tcl Message: set_property core_revision 32 [ipx::current_core] 
+// Tcl Message: ipx::create_xgui_files [ipx::current_core] 
+// Tcl Message: ipx::update_checksums [ipx::current_core] 
+// Tcl Message: ipx::save_core [ipx::current_core] 
+// TclEventType: CREATE_IP_CATALOG
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: CREATE_IP_CATALOG
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// Tcl Message: update_ip_catalog -rebuild -repo_path c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0 
+// Tcl Message: INFO: [IP_Flow 19-725] Reloaded user IP repository 'c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0' 
+// TclEventType: FILE_SET_CHANGE
+selectButton("OptionPane.button", "OK"); // JButton (v, B)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "axi_ppm4_v1_0_S00_AXI.vhd", 3); // m (l, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "axi_ppm4_v1_0.vhd", 2); // m (l, cs)
+// [GUI Memory]: 204 MB (+1941kb) [06:16:13]
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Package IP - axi_ppm4", 1); // m (l, cs)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,002 MB. GUI used memory: 145 MB. Current time: 2/20/26, 8:30:29 PM CST
+// Elapsed time: 1018 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 4); // B (F, cs)
+// Elapsed time: 52 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "axi_ppm4_v1_0_S00_AXI.vhd", 3); // m (l, cs)
+selectCodeEditor("axi_ppm4_v1_0_S00_AXI.vhd", 397, 211); // bP (w, cs)
+typeControlKey(null, null, 'z');
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "axi_ppm4_v1_0.vhd", 2); // m (l, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Package IP - axi_ppm4", 1); // m (l, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "axi_ppm4_v1_0.vhd", 2); // m (l, cs)
+// Elapsed time: 188 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // aa (q, cs)
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // af (cs)
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // af (cs)
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // af (cs)
+selectMenuItem(PAResourceCommand.PACommandNames_NEW_PROJECT, "New..."); // ai (cs)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // aa (q, cs)
+// Run Command: PAResourceCommand.PACommandNames_NEW_PROJECT
+// f (cs): New Project: addNotify
+selectButton("NEXT", "Next >"); // JButton (j, f)
+setText(PAResourceOtoP.ProjectNameChooser_PROJECT_NAME, "mp-1"); // ac (Q, f)
+selectButton(PAResourceOtoP.ProjectNameChooser_CHOOSE_PROJECT_LOCATION, (String) null); // t (an, f)
+// Elapsed time: 22 seconds
+setFolderChooser("C:/Users/diepw50/CPRE-488-Labs/MP-1/hw");
+// Elapsed time: 14 seconds
+setText(PAResourceOtoP.ProjectNameChooser_PROJECT_NAME, "MP1_1"); // ac (Q, f)
+selectButton("CANCEL", "Cancel"); // JButton (j, f)
+// 'g' command handler elapsed time: 53 seconds
+dismissDialog("New Project"); // f (cs)
+// Elapsed time: 142 seconds
+selectCodeEditor("axi_ppm4_v1_0.vhd", 188, 344); // bP (w, cs)
+// Elapsed time: 35 seconds
+selectCodeEditor("axi_ppm4_v1_0.vhd", 355, 171); // bP (w, cs)
+typeControlKey((HResource) null, "axi_ppm4_v1_0.vhd", 'c'); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 226, 236); // bP (w, cs)
+typeControlKey((HResource) null, "axi_ppm4_v1_0.vhd", 'v'); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 293, 235); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 310, 235); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 309, 231, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("axi_ppm4_v1_0.vhd", 129, 255); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 129, 255, false, false, false, false, true); // bP (w, cs) - Double Click
+typeControlKey((HResource) null, "axi_ppm4_v1_0.vhd", 'c'); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 199, 231); // bP (w, cs)
+typeControlKey((HResource) null, "axi_ppm4_v1_0.vhd", 'v'); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 350, 256); // bP (w, cs)
+// Elapsed time: 15 seconds
+selectCodeEditor("axi_ppm4_v1_0.vhd", 331, 297); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 333, 296); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 333, 297, false, false, false, false, true); // bP (w, cs) - Double Click
+// Elapsed time: 72 seconds
+selectCodeEditor("axi_ppm4_v1_0.vhd", 138, 211); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 138, 211, false, false, false, false, true); // bP (w, cs) - Double Click
+// Elapsed time: 11 seconds
+selectCodeEditor("axi_ppm4_v1_0.vhd", 214, 338); // bP (w, cs)
+typeControlKey((HResource) null, "axi_ppm4_v1_0.vhd", 'v'); // bP (w, cs)
+// Elapsed time: 25 seconds
+selectCodeEditor("axi_ppm4_v1_0.vhd", 193, 206); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 207, 206); // bP (w, cs)
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("axi_ppm4_v1_0.vhd", 267, 281); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 87, 239); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 87, 239, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("axi_ppm4_v1_0.vhd", 87, 239); // bP (w, cs)
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 28 seconds
+selectCodeEditor("axi_ppm4_v1_0.vhd", 259, 251); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 388, 279); // bP (w, cs)
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("axi_ppm4_v1_0.vhd", 322, 251); // bP (w, cs)
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 24 seconds
+selectCodeEditor("axi_ppm4_v1_0.vhd", 86, 270); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 79, 272); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 177, 281); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 246, 279); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 245, 277, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("axi_ppm4_v1_0.vhd", 255, 290); // bP (w, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Package IP - axi_ppm4", 1); // m (l, cs)
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Customization Parameters", 3); // ar (J, cs)
+selectButton(PAResourceItoN.MessageBanner_CHANGES_DETECTED_IN_VIVADO_PROJECT_THAT, "Merge changes from Customization Parameters Wizard"); // h (M, cs)
+// TclEventType: PACKAGER_COMPONENT_RESET
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// Tcl Message: ipx::merge_project_changes hdl_parameters [ipx::current_core] 
+// Tcl Message: INFO: [IP_Flow 19-3166] Bus Interface 'S00_AXI': References existing memory map 'S00_AXI'. 
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Review and Package", 7); // ar (J, cs)
+selectButton(PAResourceQtoS.ReviewContentPanel_RE_PACKAGE_IP, "Re-Package IP"); // a (c, cs)
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// Tcl Message: set_property core_revision 33 [ipx::current_core] 
+// Tcl Message: ipx::create_xgui_files [ipx::current_core] 
+// Tcl Message: ipx::update_checksums [ipx::current_core] 
+// Tcl Message: ipx::save_core [ipx::current_core] 
+// TclEventType: CREATE_IP_CATALOG
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: CREATE_IP_CATALOG
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// Tcl Message: update_ip_catalog -rebuild -repo_path c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0 
+// Tcl Message: INFO: [IP_Flow 19-725] Reloaded user IP repository 'c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0' 
+selectButton("OptionPane.button", "OK"); // JButton (v, B)
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "axi_ppm4_v1_0.vhd", 2); // m (l, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 65, 279); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 65, 279, false, false, false, false, true); // bP (w, cs) - Double Click
+// Elapsed time: 13 seconds
+selectCodeEditor("axi_ppm4_v1_0.vhd", 89, 201); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 263, 243); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 263, 243, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("axi_ppm4_v1_0.vhd", 257, 271); // bP (w, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Package IP - axi_ppm4", 1); // m (l, cs)
+// [GUI Memory]: 215 MB (+159kb) [06:50:30]
+// Elapsed time: 803 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "axi_ppm4_v1_0.vhd", 2); // m (l, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 108, 216); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 108, 216, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("axi_ppm4_v1_0.vhd", 78, 73); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 293, 80); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 396, 137); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 260, 138); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 94, 448); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 221, 421); // bP (w, cs)
+// Elapsed time: 10 seconds
+selectCodeEditor("axi_ppm4_v1_0.vhd", 86, 344); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 86, 344, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("axi_ppm4_v1_0.vhd", 227, 391); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 227, 391, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("axi_ppm4_v1_0.vhd", 230, 393); // bP (w, cs)
+// Elapsed time: 23 seconds
+selectCodeEditor("axi_ppm4_v1_0.vhd", 87, 198); // bP (w, cs)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,002 MB. GUI used memory: 152 MB. Current time: 2/20/26, 9:00:31 PM CST
+// Elapsed time: 18 seconds
+selectCodeEditor("axi_ppm4_v1_0.vhd", 174, 210); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 155, 203); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 160, 210); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 139, 208); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 139, 208, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("axi_ppm4_v1_0.vhd", 116, 211); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 116, 211, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("axi_ppm4_v1_0.vhd", 140, 249); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 140, 249, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("axi_ppm4_v1_0.vhd", 266, 245); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 266, 245, false, false, false, false, true); // bP (w, cs) - Double Click
+typeControlKey((HResource) null, "axi_ppm4_v1_0.vhd", 'c'); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 241, 102); // bP (w, cs)
+typeControlKey((HResource) null, "axi_ppm4_v1_0.vhd", 'v'); // bP (w, cs)
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("axi_ppm4_v1_0.vhd", 184, 241); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 182, 244, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("axi_ppm4_v1_0.vhd", 166, 258); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 166, 258, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("axi_ppm4_v1_0.vhd", 295, 257); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 295, 257, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("axi_ppm4_v1_0.vhd", 332, 255); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 109, 208); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 109, 208, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("axi_ppm4_v1_0.vhd", 160, 201); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 287, 261); // bP (w, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Package IP - axi_ppm4", 1); // m (l, cs)
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "File Groups", 2); // ar (J, cs)
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Customization Parameters", 3); // ar (J, cs)
+selectButton(PAResourceItoN.MessageBanner_CHANGES_DETECTED_IN_VIVADO_PROJECT_THAT, "Merge changes from Customization Parameters Wizard"); // h (M, cs)
+// TclEventType: PACKAGER_COMPONENT_RESET
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// Tcl Message: ipx::merge_project_changes hdl_parameters [ipx::current_core] 
+// Tcl Message: INFO: [IP_Flow 19-3166] Bus Interface 'S00_AXI': References existing memory map 'S00_AXI'. 
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Review and Package", 7); // ar (J, cs)
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+selectButton(PAResourceQtoS.ReviewContentPanel_RE_PACKAGE_IP, "Re-Package IP"); // a (c, cs)
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// Tcl Message: set_property core_revision 34 [ipx::current_core] 
+// Tcl Message: ipx::create_xgui_files [ipx::current_core] 
+// Tcl Message: ipx::update_checksums [ipx::current_core] 
+// Tcl Message: ipx::save_core [ipx::current_core] 
+// TclEventType: CREATE_IP_CATALOG
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: CREATE_IP_CATALOG
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// Tcl Message: update_ip_catalog -rebuild -repo_path c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0 
+// Tcl Message: INFO: [IP_Flow 19-725] Reloaded user IP repository 'c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0' 
+// TclEventType: FILE_SET_CHANGE
+selectButton("OptionPane.button", "OK"); // JButton (v, B)
+// Elapsed time: 394 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "axi_ppm4_v1_0.vhd", 2); // m (l, cs)
+// Elapsed time: 42 seconds
+selectCodeEditor("axi_ppm4_v1_0.vhd", 346, 256); // bP (w, cs)
+typeControlKey((HResource) null, "axi_ppm4_v1_0.vhd", 'c'); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 335, 165); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 77, 184); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 56, 184); // bP (w, cs)
+typeControlKey((HResource) null, "axi_ppm4_v1_0.vhd", 'c'); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 63, 139); // bP (w, cs)
+typeControlKey((HResource) null, "axi_ppm4_v1_0.vhd", 'v'); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 338, 408); // bP (w, cs)
+typeControlKey((HResource) null, "axi_ppm4_v1_0.vhd", 'c'); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 94, 214); // bP (w, cs)
+typeControlKey((HResource) null, "axi_ppm4_v1_0.vhd", 'v'); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 1014, 161); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 405, 168); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 256, 495); // bP (w, cs)
+typeControlKey((HResource) null, "axi_ppm4_v1_0.vhd", 'c'); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 355, 371); // bP (w, cs)
+typeControlKey((HResource) null, "axi_ppm4_v1_0.vhd", 'v'); // bP (w, cs)
+// Elapsed time: 33 seconds
+selectCodeEditor("axi_ppm4_v1_0.vhd", 145, 216); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 145, 216, false, false, false, false, true); // bP (w, cs) - Double Click
+// Elapsed time: 43 seconds
+selectCodeEditor("axi_ppm4_v1_0.vhd", 186, 359); // bP (w, cs)
+// Elapsed time: 27 seconds
+selectCodeEditor("axi_ppm4_v1_0.vhd", 209, 382); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 210, 383, false, false, false, false, true); // bP (w, cs) - Double Click
+typeControlKey((HResource) null, "axi_ppm4_v1_0.vhd", 'c'); // bP (w, cs)
+// Elapsed time: 16 seconds
+selectCodeEditor("axi_ppm4_v1_0.vhd", 541, 233); // bP (w, cs)
+typeControlKey((HResource) null, "axi_ppm4_v1_0.vhd", 'v'); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 297, 231); // bP (w, cs)
+typeControlKey((HResource) null, "axi_ppm4_v1_0.vhd", 'c'); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 598, 232); // bP (w, cs)
+typeControlKey((HResource) null, "axi_ppm4_v1_0.vhd", 'v'); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 77, 276); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 79, 275, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("axi_ppm4_v1_0.vhd", 132, 257); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 132, 257, false, false, false, false, true); // bP (w, cs) - Double Click
+typeControlKey((HResource) null, "axi_ppm4_v1_0.vhd", 'v'); // bP (w, cs)
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("axi_ppm4_v1_0.vhd", 355, 271); // bP (w, cs)
+// Elapsed time: 27 seconds
+selectCodeEditor("axi_ppm4_v1_0.vhd", 2, 343); // bP (w, cs)
+// Elapsed time: 15 seconds
+selectCodeEditor("axi_ppm4_v1_0.vhd", 291, 339); // bP (w, cs)
+// Elapsed time: 37 seconds
+selectCodeEditor("axi_ppm4_v1_0.vhd", 311, 192, true, false, false, false, false); // bP (w, cs) - Shift Key
+// WARNING: HEventQueue.dispatchEvent() is taking  2133 ms.
+selectCodeEditor("axi_ppm4_v1_0.vhd", 1, 340); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 279, 496, true, false, false, false, false); // bP (w, cs) - Shift Key
+selectCodeEditor("axi_ppm4_v1_0.vhd", 306, 292); // bP (w, cs)
+// Elapsed time: 19 seconds
+selectCodeEditor("axi_ppm4_v1_0.vhd", 216, 256); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 216, 256, false, false, false, false, true); // bP (w, cs) - Double Click
+typeControlKey((HResource) null, "axi_ppm4_v1_0.vhd", 'c'); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 282, 211); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 282, 211, false, false, false, false, true); // bP (w, cs) - Double Click
+typeControlKey((HResource) null, "axi_ppm4_v1_0.vhd", 'v'); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 332, 207); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 295, 599); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 489, 250); // bP (w, cs)
+// Elapsed time: 45 seconds
+selectCodeEditor("axi_ppm4_v1_0.vhd", 152, 307); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 105, 321); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 104, 321, false, false, false, false, true); // bP (w, cs) - Double Click
+typeControlKey((HResource) null, "axi_ppm4_v1_0.vhd", 'c'); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 225, 325); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 223, 325, false, false, false, false, true); // bP (w, cs) - Double Click
+typeControlKey((HResource) null, "axi_ppm4_v1_0.vhd", 'v'); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 80, 338); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 80, 338, false, false, false, false, true); // bP (w, cs) - Double Click
+typeControlKey((HResource) null, "axi_ppm4_v1_0.vhd", 'c'); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 209, 346); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 209, 346, false, false, false, false, true); // bP (w, cs) - Double Click
+typeControlKey((HResource) null, "axi_ppm4_v1_0.vhd", 'v'); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 79, 321); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 79, 321, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("axi_ppm4_v1_0.vhd", 76, 346); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 76, 346, false, false, false, false, true); // bP (w, cs) - Double Click
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("axi_ppm4_v1_0.vhd", 247, 345); // bP (w, cs)
+typeControlKey((HResource) null, "axi_ppm4_v1_0.vhd", 'c'); // bP (w, cs)
+// Elapsed time: 51 seconds
+selectCodeEditor("axi_ppm4_v1_0.vhd", 345, 194); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 204, 190); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 204, 190, false, false, false, false, true); // bP (w, cs) - Double Click
+typeControlKey((HResource) null, "axi_ppm4_v1_0.vhd", 'c'); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 47, 185); // bP (w, cs)
+typeControlKey((HResource) null, "axi_ppm4_v1_0.vhd", 'v'); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 144, 189); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 144, 189, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("axi_ppm4_v1_0.vhd", 144, 189); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 196, 186); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 174, 188); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 173, 187, false, false, false, false, true); // bP (w, cs) - Double Click
+typeControlKey((HResource) null, "axi_ppm4_v1_0.vhd", 'v'); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 126, 185); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 149, 186); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 355, 238); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 170, 209); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 287, 206); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 98, 186); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 273, 214); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 350, 181); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 95, 209); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 95, 208, false, false, false, false, true); // bP (w, cs) - Double Click
+typeControlKey((HResource) null, "axi_ppm4_v1_0.vhd", 'c'); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 187, 194); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 187, 194, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("axi_ppm4_v1_0.vhd", 193, 184); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 193, 184, false, false, false, false, true); // bP (w, cs) - Double Click
+typeControlKey((HResource) null, "axi_ppm4_v1_0.vhd", 'v'); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 138, 202); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 282, 214); // bP (w, cs)
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 17 seconds
+selectCodeEditor("axi_ppm4_v1_0.vhd", 444, 464); // bP (w, cs)
+// Elapsed time: 18 seconds
+selectCodeEditor("axi_ppm4_v1_0.vhd", 303, 322); // bP (w, cs)
+// Elapsed time: 35 seconds
+selectCodeEditor("axi_ppm4_v1_0.vhd", 289, 210); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 289, 210, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("axi_ppm4_v1_0.vhd", 166, 251); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 166, 252, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("axi_ppm4_v1_0.vhd", 76, 253); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 194, 276); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 194, 276, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("axi_ppm4_v1_0.vhd", 99, 274); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 99, 274, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("axi_ppm4_v1_0.vhd", 228, 272); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 227, 272, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("axi_ppm4_v1_0.vhd", 181, 250); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 181, 250, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("axi_ppm4_v1_0.vhd", 183, 254); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 183, 254, false, false, false, false, true); // bP (w, cs) - Double Click
+typeControlKey((HResource) null, "axi_ppm4_v1_0.vhd", 'c'); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 209, 279); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 211, 279, false, false, false, false, true); // bP (w, cs) - Double Click
+typeControlKey((HResource) null, "axi_ppm4_v1_0.vhd", 'v'); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 255, 259); // bP (w, cs)
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // m (l, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Package IP - axi_ppm4", 1); // m (l, cs)
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Customization Parameters", 3); // ar (J, cs)
+selectButton(PAResourceItoN.MessageBanner_CHANGES_DETECTED_IN_VIVADO_PROJECT_THAT, "Merge changes from Customization Parameters Wizard"); // h (M, cs)
+// TclEventType: PACKAGER_COMPONENT_RESET
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// Tcl Message: ipx::merge_project_changes hdl_parameters [ipx::current_core] 
+// Tcl Message: INFO: [IP_Flow 19-3166] Bus Interface 'S00_AXI': References existing memory map 'S00_AXI'. 
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Review and Package", 7); // ar (J, cs)
+selectButton(PAResourceItoN.MessageBanner_CHANGES_DETECTED_IN_IP_THAT_REQUIRE, "IP has been modified."); // h (M, cs)
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+selectButton(PAResourceQtoS.ReviewContentPanel_RE_PACKAGE_IP, "Re-Package IP"); // a (c, cs)
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// Tcl Message: set_property core_revision 35 [ipx::current_core] 
+// Tcl Message: ipx::create_xgui_files [ipx::current_core] 
+// Tcl Message: ipx::update_checksums [ipx::current_core] 
+// Tcl Message: ipx::save_core [ipx::current_core] 
+// TclEventType: CREATE_IP_CATALOG
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: CREATE_IP_CATALOG
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// Tcl Message: update_ip_catalog -rebuild -repo_path c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0 
+// Tcl Message: INFO: [IP_Flow 19-725] Reloaded user IP repository 'c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0' 
+// TclEventType: FILE_SET_CHANGE
+// [GUI Memory]: 230 MB (+4546kb) [07:19:35]
+selectButton("OptionPane.button", "OK"); // JButton (v, B)
+// Elapsed time: 355 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "axi_ppm4_v1_0.vhd", 2); // m (l, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "axi_ppm4_v1_0_S00_AXI.vhd", 3); // m (l, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "axi_ppm4_v1_0.vhd", 2); // m (l, cs)
+// Elapsed time: 117 seconds
+selectCodeEditor("axi_ppm4_v1_0.vhd", 262, 328); // bP (w, cs)
+typeControlKey((HResource) null, "axi_ppm4_v1_0.vhd", 'c'); // bP (w, cs)
+// Elapsed time: 79 seconds
+selectCodeEditor("axi_ppm4_v1_0.vhd", 125, 275); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 58, 273); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 265, 299); // bP (w, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 42, 279); // bP (w, cs)
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("axi_ppm4_v1_0.vhd", 381, 259); // bP (w, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Package IP - axi_ppm4", 1); // m (l, cs)
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Customization Parameters", 3); // ar (J, cs)
+selectButton(PAResourceItoN.MessageBanner_CHANGES_DETECTED_IN_VIVADO_PROJECT_THAT, "Merge changes from Customization Parameters Wizard"); // h (M, cs)
+// TclEventType: PACKAGER_COMPONENT_RESET
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// Tcl Message: ipx::merge_project_changes hdl_parameters [ipx::current_core] 
+// Tcl Message: INFO: [IP_Flow 19-3166] Bus Interface 'S00_AXI': References existing memory map 'S00_AXI'. 
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Customization GUI", 6); // ar (J, cs)
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Review and Package", 7); // ar (J, cs)
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+selectButton(PAResourceQtoS.ReviewContentPanel_RE_PACKAGE_IP, "Re-Package IP"); // a (c, cs)
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// Tcl Message: set_property core_revision 36 [ipx::current_core] 
+// Tcl Message: ipx::create_xgui_files [ipx::current_core] 
+// Tcl Message: ipx::update_checksums [ipx::current_core] 
+// Tcl Message: ipx::save_core [ipx::current_core] 
+// TclEventType: CREATE_IP_CATALOG
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: CREATE_IP_CATALOG
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// Tcl Message: update_ip_catalog -rebuild -repo_path c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0 
+// Tcl Message: INFO: [IP_Flow 19-725] Reloaded user IP repository 'c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0' 
+selectButton("OptionPane.button", "OK"); // JButton (v, B)
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 22 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "axi_ppm4_v1_0_S00_AXI.vhd", 3); // m (l, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "axi_ppm4_v1_0.vhd", 2); // m (l, cs)
+selectCodeEditor("axi_ppm4_v1_0.vhd", 278, 270); // bP (w, cs)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,002 MB. GUI used memory: 168 MB. Current time: 2/20/26, 9:30:33 PM CST

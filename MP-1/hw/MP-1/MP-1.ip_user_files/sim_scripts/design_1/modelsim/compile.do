@@ -71,8 +71,8 @@ vcom -work proc_sys_reset_v5_0_13  -93 \
 
 vcom -work xil_defaultlib  -93 \
 "../../../bd/design_1/ip/design_1_rst_ps7_0_100M_0/sim/design_1_rst_ps7_0_100M_0.vhd" \
-"../../../bd/design_1/ipshared/6f06/hdl/axi_ppm4_v1_0_S00_AXI.vhd" \
-"../../../bd/design_1/ipshared/6f06/hdl/axi_ppm4_v1_0.vhd" \
+"../../../bd/design_1/ipshared/224a/hdl/axi_ppm4_v1_0_S00_AXI.vhd" \
+"../../../bd/design_1/ipshared/224a/hdl/axi_ppm4_v1_0.vhd" \
 "../../../bd/design_1/ip/design_1_axi_ppm4_0_0/sim/design_1_axi_ppm4_0_0.vhd" \
 
 vlog -work xlconstant_v1_1_7  -incr "+incdir+../../../../MP-1.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../MP-1.srcs/sources_1/bd/design_1/ipshared/6b56/hdl" "+incdir+../../../../MP-1.srcs/sources_1/bd/design_1/ipshared/1b7e/hdl/verilog" "+incdir+../../../../MP-1.srcs/sources_1/bd/design_1/ipshared/122e/hdl/verilog" "+incdir+../../../../MP-1.srcs/sources_1/bd/design_1/ipshared/b205/hdl/verilog" "+incdir+../../../../MP-1.srcs/sources_1/bd/design_1/ipshared/c968/hdl/verilog" "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
@@ -85,20 +85,17 @@ vlog -work xil_defaultlib  -incr "+incdir+../../../../MP-1.srcs/sources_1/bd/des
 "../../../bd/design_1/ip/design_1_xlconstant_1_0/sim/design_1_xlconstant_1_0.v" \
 "../../../bd/design_1/ip/design_1_xlconstant_2_0/sim/design_1_xlconstant_2_0.v" \
 
-vcom -work xil_defaultlib  -93 \
-"../../../bd/design_1/ip/design_1_system_ila_0_1/bd_0/sim/bd_36cd.vhd" \
-"../../../bd/design_1/ip/design_1_system_ila_0_1/bd_0/ip/ip_0/sim/bd_36cd_ila_lib_0.vhd" \
-"../../../bd/design_1/ip/design_1_system_ila_0_1/sim/design_1_system_ila_0_1.vhd" \
-"../../../bd/design_1/ip/design_1_ila_0_0/sim/design_1_ila_0_0.vhd" \
-
 vlog -work xlslice_v1_0_2  -incr "+incdir+../../../../MP-1.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../MP-1.srcs/sources_1/bd/design_1/ipshared/6b56/hdl" "+incdir+../../../../MP-1.srcs/sources_1/bd/design_1/ipshared/1b7e/hdl/verilog" "+incdir+../../../../MP-1.srcs/sources_1/bd/design_1/ipshared/122e/hdl/verilog" "+incdir+../../../../MP-1.srcs/sources_1/bd/design_1/ipshared/b205/hdl/verilog" "+incdir+../../../../MP-1.srcs/sources_1/bd/design_1/ipshared/c968/hdl/verilog" "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
 "../../../../MP-1.srcs/sources_1/bd/design_1/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v" \
 
 vlog -work xil_defaultlib  -incr "+incdir+../../../../MP-1.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../MP-1.srcs/sources_1/bd/design_1/ipshared/6b56/hdl" "+incdir+../../../../MP-1.srcs/sources_1/bd/design_1/ipshared/1b7e/hdl/verilog" "+incdir+../../../../MP-1.srcs/sources_1/bd/design_1/ipshared/122e/hdl/verilog" "+incdir+../../../../MP-1.srcs/sources_1/bd/design_1/ipshared/b205/hdl/verilog" "+incdir+../../../../MP-1.srcs/sources_1/bd/design_1/ipshared/c968/hdl/verilog" "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
 "../../../bd/design_1/ip/design_1_xlslice_0_0/sim/design_1_xlslice_0_0.v" \
+"../../../bd/design_1/ip/design_1_xlslice_0_1/sim/design_1_xlslice_0_1.v" \
 
 vcom -work xil_defaultlib  -93 \
-"../../../bd/design_1/ip/design_1_ila_1_0/sim/design_1_ila_1_0.vhd" \
+"../../../bd/design_1/ip/design_1_system_ila_0_0/bd_0/sim/bd_f60c.vhd" \
+"../../../bd/design_1/ip/design_1_system_ila_0_0/bd_0/ip/ip_0/sim/bd_f60c_ila_lib_0.vhd" \
+"../../../bd/design_1/ip/design_1_system_ila_0_0/sim/design_1_system_ila_0_0.vhd" \
 
 vlog -work generic_baseblocks_v2_1_0  -incr "+incdir+../../../../MP-1.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../MP-1.srcs/sources_1/bd/design_1/ipshared/6b56/hdl" "+incdir+../../../../MP-1.srcs/sources_1/bd/design_1/ipshared/1b7e/hdl/verilog" "+incdir+../../../../MP-1.srcs/sources_1/bd/design_1/ipshared/122e/hdl/verilog" "+incdir+../../../../MP-1.srcs/sources_1/bd/design_1/ipshared/b205/hdl/verilog" "+incdir+../../../../MP-1.srcs/sources_1/bd/design_1/ipshared/c968/hdl/verilog" "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
 "../../../../MP-1.srcs/sources_1/bd/design_1/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v" \

@@ -1,0 +1,25 @@
+$date
+        2026-Feb-20 20:03:33
+$end
+$version
+        Vivado v2020.1 (64-bit)
+$end
+$timescale
+        1ps
+$end
+$scope module dut $end
+$var reg 6 " design_1_i/system_ila_1/U0/probe0_1 [5:0] $end
+$var reg 1 ( _TRIGGER $end
+$var reg 1 ) _WINDOW $end
+$var reg 1 * _GAP $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b11110 "
+0(
+1)
+0*
+$end
+#4096
+1(

@@ -1,7 +1,7 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
---Date        : Fri Feb 20 19:07:31 2026
+--Date        : Fri Feb 20 21:29:14 2026
 --Host        : CO2041-07 running 64-bit major release  (build 9200)
 --Command     : generate_target design_1.bd
 --Design      : design_1
@@ -615,7 +615,7 @@ entity design_1 is
     s00_ppm_out_0 : out STD_LOGIC
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of design_1 : entity is "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=15,numReposBlks=13,numNonXlnxBlks=1,numHierBlks=2,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=7,da_board_cnt=1,da_clkrst_cnt=3,da_ps7_cnt=1,synth_mode=OOC_per_IP}";
+  attribute CORE_GENERATION_INFO of design_1 : entity is "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=14,numReposBlks=12,numNonXlnxBlks=1,numHierBlks=2,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=7,da_board_cnt=1,da_clkrst_cnt=5,da_ps7_cnt=1,synth_mode=OOC_per_IP}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of design_1 : entity is "design_1.hwdef";
 end design_1;
@@ -732,123 +732,30 @@ architecture STRUCTURE of design_1 is
     dout : out STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   end component design_1_xlconstant_2_0;
-  component design_1_system_ila_0_1 is
-  port (
-    clk : in STD_LOGIC;
-    probe0 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe1 : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    probe2 : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    probe3 : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    probe4 : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    probe5 : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    probe6 : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    probe7 : in STD_LOGIC_VECTOR ( 31 downto 0 )
-  );
-  end component design_1_system_ila_0_1;
-  component design_1_ila_0_0 is
-  port (
-    clk : in STD_LOGIC;
-    probe0 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe1 : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    probe2 : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    probe3 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe4 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe5 : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    probe6 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe7 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe8 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe9 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe10 : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    probe11 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe12 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe13 : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    probe14 : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    probe15 : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    probe16 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe17 : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    probe18 : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    probe19 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe20 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe21 : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    probe22 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe23 : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    probe24 : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    probe25 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe26 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe27 : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    probe28 : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    probe29 : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    probe30 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe31 : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    probe32 : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    probe33 : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    probe34 : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    probe35 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe36 : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    probe37 : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    probe38 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe39 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe40 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe41 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe42 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe43 : in STD_LOGIC_VECTOR ( 0 to 0 )
-  );
-  end component design_1_ila_0_0;
   component design_1_xlslice_0_0 is
   port (
     Din : in STD_LOGIC_VECTOR ( 31 downto 0 );
     Dout : out STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   end component design_1_xlslice_0_0;
-  component design_1_ila_1_0 is
+  component design_1_xlslice_0_1 is
+  port (
+    Din : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    Dout : out STD_LOGIC_VECTOR ( 5 downto 0 )
+  );
+  end component design_1_xlslice_0_1;
+  component design_1_system_ila_0_0 is
   port (
     clk : in STD_LOGIC;
-    probe0 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe0 : in STD_LOGIC_VECTOR ( 31 downto 0 );
     probe1 : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    probe2 : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    probe3 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe4 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe2 : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    probe3 : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    probe4 : in STD_LOGIC_VECTOR ( 31 downto 0 );
     probe5 : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    probe6 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe7 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe8 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe9 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe10 : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    probe11 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe12 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe13 : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    probe14 : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    probe15 : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    probe16 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe17 : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    probe18 : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    probe19 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe20 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe21 : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    probe22 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe23 : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    probe24 : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    probe25 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe26 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe27 : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    probe28 : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    probe29 : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    probe30 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe31 : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    probe32 : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    probe33 : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    probe34 : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    probe35 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe36 : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    probe37 : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    probe38 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe39 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe40 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe41 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe42 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe43 : in STD_LOGIC_VECTOR ( 0 to 0 )
+    probe6 : in STD_LOGIC_VECTOR ( 31 downto 0 )
   );
-  end component design_1_ila_1_0;
+  end component design_1_system_ila_0_0;
   component design_1_axi_ppm4_0_0 is
   port (
     s00_ppm_in : in STD_LOGIC;
@@ -883,13 +790,16 @@ architecture STRUCTURE of design_1 is
     s00_axi_rready : in STD_LOGIC
   );
   end component design_1_axi_ppm4_0_0;
+  signal M00_AXI_arready_1 : STD_LOGIC;
+  signal M00_AXI_awready_1 : STD_LOGIC;
+  signal M00_AXI_bresp_1 : STD_LOGIC_VECTOR ( 1 downto 0 );
+  signal M00_AXI_bvalid_1 : STD_LOGIC;
+  signal M00_AXI_rdata_1 : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal M00_AXI_rresp_1 : STD_LOGIC_VECTOR ( 1 downto 0 );
+  signal M00_AXI_rvalid_1 : STD_LOGIC;
+  signal M00_AXI_wready_1 : STD_LOGIC;
   signal axi_ppm4_0_s00_ppm_out : STD_LOGIC;
-  signal constant_low_dout : STD_LOGIC_VECTOR ( 0 to 0 );
   signal ppm_in_0_1 : STD_LOGIC;
-  attribute DEBUG : string;
-  attribute DEBUG of ppm_in_0_1 : signal is "true";
-  attribute MARK_DEBUG : boolean;
-  attribute MARK_DEBUG of ppm_in_0_1 : signal is std.standard.true;
   signal processing_system7_0_DDR_ADDR : STD_LOGIC_VECTOR ( 14 downto 0 );
   signal processing_system7_0_DDR_BA : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal processing_system7_0_DDR_CAS_N : STD_LOGIC;
@@ -951,19 +861,22 @@ architecture STRUCTURE of design_1 is
   signal processing_system7_0_M_AXI_GP0_WREADY : STD_LOGIC;
   signal processing_system7_0_M_AXI_GP0_WSTRB : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal processing_system7_0_M_AXI_GP0_WVALID : STD_LOGIC;
-  signal ps7_0_axi_periph_M00_AXI_ARREADY : STD_LOGIC;
-  signal ps7_0_axi_periph_M00_AXI_AWREADY : STD_LOGIC;
-  signal ps7_0_axi_periph_M00_AXI_BRESP : STD_LOGIC_VECTOR ( 1 downto 0 );
-  signal ps7_0_axi_periph_M00_AXI_BVALID : STD_LOGIC;
-  signal ps7_0_axi_periph_M00_AXI_RDATA : STD_LOGIC_VECTOR ( 31 downto 0 );
-  signal ps7_0_axi_periph_M00_AXI_RRESP : STD_LOGIC_VECTOR ( 1 downto 0 );
-  signal ps7_0_axi_periph_M00_AXI_RVALID : STD_LOGIC;
-  signal ps7_0_axi_periph_M00_AXI_WREADY : STD_LOGIC;
+  signal ps7_0_axi_periph_M00_AXI_araddr : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal ps7_0_axi_periph_M00_AXI_arprot : STD_LOGIC_VECTOR ( 2 downto 0 );
+  signal ps7_0_axi_periph_M00_AXI_arvalid : STD_LOGIC;
   signal ps7_0_axi_periph_M00_AXI_awaddr : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal ps7_0_axi_periph_M00_AXI_awprot : STD_LOGIC_VECTOR ( 2 downto 0 );
+  signal ps7_0_axi_periph_M00_AXI_awvalid : STD_LOGIC;
+  signal ps7_0_axi_periph_M00_AXI_bready : STD_LOGIC;
+  signal ps7_0_axi_periph_M00_AXI_rready : STD_LOGIC;
   signal ps7_0_axi_periph_M00_AXI_wdata : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal ps7_0_axi_periph_M00_AXI_wstrb : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal ps7_0_axi_periph_M00_AXI_wvalid : STD_LOGIC;
   signal rst_ps7_0_100M_peripheral_aresetn : STD_LOGIC_VECTOR ( 0 to 0 );
   signal s00_reg0_out : STD_LOGIC_VECTOR ( 31 downto 0 );
+  attribute DEBUG : string;
   attribute DEBUG of s00_reg0_out : signal is "true";
+  attribute MARK_DEBUG : boolean;
   attribute MARK_DEBUG of s00_reg0_out : signal is std.standard.true;
   signal s00_reg10_out : STD_LOGIC_VECTOR ( 31 downto 0 );
   attribute DEBUG of s00_reg10_out : signal is "true";
@@ -983,29 +896,22 @@ architecture STRUCTURE of design_1 is
   signal s00_reg15_out : STD_LOGIC_VECTOR ( 31 downto 0 );
   attribute DEBUG of s00_reg15_out : signal is "true";
   attribute MARK_DEBUG of s00_reg15_out : signal is std.standard.true;
-  signal xlconstant_0_dout : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal xlconstant_0_dout1 : STD_LOGIC_VECTOR ( 2 downto 0 );
-  signal xlconstant_1_dout : STD_LOGIC_VECTOR ( 3 downto 0 );
-  signal xlconstant_2_dout : STD_LOGIC_VECTOR ( 5 downto 0 );
   signal xlslice_0_Dout : STD_LOGIC_VECTOR ( 5 downto 0 );
+  signal xlslice_1_Dout : STD_LOGIC_VECTOR ( 5 downto 0 );
+  signal NLW_constant_high_dout_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal NLW_constant_low_dout_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_processing_system7_0_TTC0_WAVE0_OUT_UNCONNECTED : STD_LOGIC;
   signal NLW_processing_system7_0_TTC0_WAVE1_OUT_UNCONNECTED : STD_LOGIC;
   signal NLW_processing_system7_0_TTC0_WAVE2_OUT_UNCONNECTED : STD_LOGIC;
   signal NLW_processing_system7_0_USB0_VBUS_PWRSELECT_UNCONNECTED : STD_LOGIC;
   signal NLW_processing_system7_0_USB0_PORT_INDCTL_UNCONNECTED : STD_LOGIC_VECTOR ( 1 downto 0 );
-  signal NLW_ps7_0_axi_periph_M00_AXI_arvalid_UNCONNECTED : STD_LOGIC;
-  signal NLW_ps7_0_axi_periph_M00_AXI_awvalid_UNCONNECTED : STD_LOGIC;
-  signal NLW_ps7_0_axi_periph_M00_AXI_bready_UNCONNECTED : STD_LOGIC;
-  signal NLW_ps7_0_axi_periph_M00_AXI_rready_UNCONNECTED : STD_LOGIC;
-  signal NLW_ps7_0_axi_periph_M00_AXI_wvalid_UNCONNECTED : STD_LOGIC;
-  signal NLW_ps7_0_axi_periph_M00_AXI_araddr_UNCONNECTED : STD_LOGIC_VECTOR ( 31 downto 0 );
-  signal NLW_ps7_0_axi_periph_M00_AXI_arprot_UNCONNECTED : STD_LOGIC_VECTOR ( 2 downto 0 );
-  signal NLW_ps7_0_axi_periph_M00_AXI_awprot_UNCONNECTED : STD_LOGIC_VECTOR ( 2 downto 0 );
-  signal NLW_ps7_0_axi_periph_M00_AXI_wstrb_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal NLW_rst_ps7_0_100M_mb_reset_UNCONNECTED : STD_LOGIC;
   signal NLW_rst_ps7_0_100M_bus_struct_reset_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_rst_ps7_0_100M_interconnect_aresetn_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_rst_ps7_0_100M_peripheral_reset_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal NLW_xlconstant_0_dout_UNCONNECTED : STD_LOGIC_VECTOR ( 2 downto 0 );
+  signal NLW_xlconstant_1_dout_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal NLW_xlconstant_2_dout_UNCONNECTED : STD_LOGIC_VECTOR ( 5 downto 0 );
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of DDR_cas_n : signal is "xilinx.com:interface:ddrx:1.0 DDR CAS_N";
   attribute X_INTERFACE_INFO of DDR_ck_n : signal is "xilinx.com:interface:ddrx:1.0 DDR CK_N";
@@ -1037,26 +943,26 @@ begin
 axi_ppm4_0: component design_1_axi_ppm4_0_0
      port map (
       s00_axi_aclk => processing_system7_0_FCLK_CLK0,
-      s00_axi_araddr(5 downto 0) => xlconstant_2_dout(5 downto 0),
+      s00_axi_araddr(5 downto 0) => xlslice_1_Dout(5 downto 0),
       s00_axi_aresetn => rst_ps7_0_100M_peripheral_aresetn(0),
-      s00_axi_arprot(2 downto 0) => xlconstant_0_dout1(2 downto 0),
-      s00_axi_arready => ps7_0_axi_periph_M00_AXI_ARREADY,
-      s00_axi_arvalid => constant_low_dout(0),
+      s00_axi_arprot(2 downto 0) => ps7_0_axi_periph_M00_AXI_arprot(2 downto 0),
+      s00_axi_arready => M00_AXI_arready_1,
+      s00_axi_arvalid => ps7_0_axi_periph_M00_AXI_arvalid,
       s00_axi_awaddr(5 downto 0) => xlslice_0_Dout(5 downto 0),
-      s00_axi_awprot(2 downto 0) => xlconstant_0_dout1(2 downto 0),
-      s00_axi_awready => ps7_0_axi_periph_M00_AXI_AWREADY,
-      s00_axi_awvalid => xlconstant_0_dout(0),
-      s00_axi_bready => xlconstant_0_dout(0),
-      s00_axi_bresp(1 downto 0) => ps7_0_axi_periph_M00_AXI_BRESP(1 downto 0),
-      s00_axi_bvalid => ps7_0_axi_periph_M00_AXI_BVALID,
-      s00_axi_rdata(31 downto 0) => ps7_0_axi_periph_M00_AXI_RDATA(31 downto 0),
-      s00_axi_rready => constant_low_dout(0),
-      s00_axi_rresp(1 downto 0) => ps7_0_axi_periph_M00_AXI_RRESP(1 downto 0),
-      s00_axi_rvalid => ps7_0_axi_periph_M00_AXI_RVALID,
+      s00_axi_awprot(2 downto 0) => ps7_0_axi_periph_M00_AXI_awprot(2 downto 0),
+      s00_axi_awready => M00_AXI_awready_1,
+      s00_axi_awvalid => ps7_0_axi_periph_M00_AXI_awvalid,
+      s00_axi_bready => ps7_0_axi_periph_M00_AXI_bready,
+      s00_axi_bresp(1 downto 0) => M00_AXI_bresp_1(1 downto 0),
+      s00_axi_bvalid => M00_AXI_bvalid_1,
+      s00_axi_rdata(31 downto 0) => M00_AXI_rdata_1(31 downto 0),
+      s00_axi_rready => ps7_0_axi_periph_M00_AXI_rready,
+      s00_axi_rresp(1 downto 0) => M00_AXI_rresp_1(1 downto 0),
+      s00_axi_rvalid => M00_AXI_rvalid_1,
       s00_axi_wdata(31 downto 0) => ps7_0_axi_periph_M00_AXI_wdata(31 downto 0),
-      s00_axi_wready => ps7_0_axi_periph_M00_AXI_WREADY,
-      s00_axi_wstrb(3 downto 0) => xlconstant_1_dout(3 downto 0),
-      s00_axi_wvalid => xlconstant_0_dout(0),
+      s00_axi_wready => M00_AXI_wready_1,
+      s00_axi_wstrb(3 downto 0) => ps7_0_axi_periph_M00_AXI_wstrb(3 downto 0),
+      s00_axi_wvalid => ps7_0_axi_periph_M00_AXI_wvalid,
       s00_ppm_in => ppm_in_0_1,
       s00_ppm_out => axi_ppm4_0_s00_ppm_out,
       s00_reg0_out(31 downto 0) => s00_reg0_out(31 downto 0),
@@ -1069,107 +975,11 @@ axi_ppm4_0: component design_1_axi_ppm4_0_0
     );
 constant_high: component design_1_xlconstant_0_0
      port map (
-      dout(0) => xlconstant_0_dout(0)
+      dout(0) => NLW_constant_high_dout_UNCONNECTED(0)
     );
 constant_low: component design_1_xlconstant_0_1
      port map (
-      dout(0) => constant_low_dout(0)
-    );
-ila_0: component design_1_ila_0_0
-     port map (
-      clk => processing_system7_0_FCLK_CLK0,
-      probe0(0) => '0',
-      probe1(31 downto 0) => B"00000000000000000000000000000000",
-      probe10(31 downto 0) => B"00000000000000000000000000000000",
-      probe11(0) => '0',
-      probe12(0) => '0',
-      probe13(1 downto 0) => B"00",
-      probe14(31 downto 0) => B"00000000000000000000000000000000",
-      probe15(3 downto 0) => B"1111",
-      probe16(0) => '0',
-      probe17(2 downto 0) => B"000",
-      probe18(2 downto 0) => B"000",
-      probe19(0) => '0',
-      probe2(1 downto 0) => B"00",
-      probe20(0) => '0',
-      probe21(7 downto 0) => B"00000000",
-      probe22(0) => '0',
-      probe23(2 downto 0) => B"010",
-      probe24(1 downto 0) => B"01",
-      probe25(0) => '0',
-      probe26(0) => '0',
-      probe27(7 downto 0) => B"00000000",
-      probe28(2 downto 0) => B"010",
-      probe29(1 downto 0) => B"01",
-      probe3(0) => '0',
-      probe30(0) => '0',
-      probe31(3 downto 0) => B"0011",
-      probe32(3 downto 0) => B"0011",
-      probe33(3 downto 0) => B"0000",
-      probe34(3 downto 0) => B"0000",
-      probe35(0) => '0',
-      probe36(3 downto 0) => B"0000",
-      probe37(3 downto 0) => B"0000",
-      probe38(0) => '0',
-      probe39(0) => '0',
-      probe4(0) => '0',
-      probe40(0) => '0',
-      probe41(0) => '0',
-      probe42(0) => '0',
-      probe43(0) => '0',
-      probe5(31 downto 0) => B"00000000000000000000000000000000",
-      probe6(0) => '0',
-      probe7(0) => '0',
-      probe8(0) => '0',
-      probe9(0) => '0'
-    );
-ila_1: component design_1_ila_1_0
-     port map (
-      clk => processing_system7_0_FCLK_CLK0,
-      probe0(0) => '0',
-      probe1(31 downto 0) => B"00000000000000000000000000000000",
-      probe10(31 downto 0) => ps7_0_axi_periph_M00_AXI_wdata(31 downto 0),
-      probe11(0) => '0',
-      probe12(0) => '0',
-      probe13(1 downto 0) => B"00",
-      probe14(31 downto 0) => B"00000000000000000000000000000000",
-      probe15(3 downto 0) => B"1111",
-      probe16(0) => '0',
-      probe17(2 downto 0) => B"000",
-      probe18(2 downto 0) => B"000",
-      probe19(0) => '0',
-      probe2(1 downto 0) => B"00",
-      probe20(0) => '0',
-      probe21(7 downto 0) => B"00000000",
-      probe22(0) => '0',
-      probe23(2 downto 0) => B"010",
-      probe24(1 downto 0) => B"01",
-      probe25(0) => '0',
-      probe26(0) => '0',
-      probe27(7 downto 0) => B"00000000",
-      probe28(2 downto 0) => B"010",
-      probe29(1 downto 0) => B"01",
-      probe3(0) => '0',
-      probe30(0) => '0',
-      probe31(3 downto 0) => B"0011",
-      probe32(3 downto 0) => B"0011",
-      probe33(3 downto 0) => B"0000",
-      probe34(3 downto 0) => B"0000",
-      probe35(0) => '0',
-      probe36(3 downto 0) => B"0000",
-      probe37(3 downto 0) => B"0000",
-      probe38(0) => '0',
-      probe39(0) => '0',
-      probe4(0) => '0',
-      probe40(0) => '0',
-      probe41(0) => '0',
-      probe42(0) => '0',
-      probe43(0) => '0',
-      probe5(31 downto 0) => ps7_0_axi_periph_M00_AXI_awaddr(31 downto 0),
-      probe6(0) => '0',
-      probe7(0) => '0',
-      probe8(0) => '0',
-      probe9(0) => axi_ppm4_0_s00_ppm_out
+      dout(0) => NLW_constant_low_dout_UNCONNECTED(0)
     );
 processing_system7_0: component design_1_processing_system7_0_0
      port map (
@@ -1248,25 +1058,25 @@ ps7_0_axi_periph: entity work.design_1_ps7_0_axi_periph_0
       ARESETN => rst_ps7_0_100M_peripheral_aresetn(0),
       M00_ACLK => processing_system7_0_FCLK_CLK0,
       M00_ARESETN => rst_ps7_0_100M_peripheral_aresetn(0),
-      M00_AXI_araddr(31 downto 0) => NLW_ps7_0_axi_periph_M00_AXI_araddr_UNCONNECTED(31 downto 0),
-      M00_AXI_arprot(2 downto 0) => NLW_ps7_0_axi_periph_M00_AXI_arprot_UNCONNECTED(2 downto 0),
-      M00_AXI_arready => ps7_0_axi_periph_M00_AXI_ARREADY,
-      M00_AXI_arvalid => NLW_ps7_0_axi_periph_M00_AXI_arvalid_UNCONNECTED,
+      M00_AXI_araddr(31 downto 0) => ps7_0_axi_periph_M00_AXI_araddr(31 downto 0),
+      M00_AXI_arprot(2 downto 0) => ps7_0_axi_periph_M00_AXI_arprot(2 downto 0),
+      M00_AXI_arready => M00_AXI_arready_1,
+      M00_AXI_arvalid => ps7_0_axi_periph_M00_AXI_arvalid,
       M00_AXI_awaddr(31 downto 0) => ps7_0_axi_periph_M00_AXI_awaddr(31 downto 0),
-      M00_AXI_awprot(2 downto 0) => NLW_ps7_0_axi_periph_M00_AXI_awprot_UNCONNECTED(2 downto 0),
-      M00_AXI_awready => ps7_0_axi_periph_M00_AXI_AWREADY,
-      M00_AXI_awvalid => NLW_ps7_0_axi_periph_M00_AXI_awvalid_UNCONNECTED,
-      M00_AXI_bready => NLW_ps7_0_axi_periph_M00_AXI_bready_UNCONNECTED,
-      M00_AXI_bresp(1 downto 0) => ps7_0_axi_periph_M00_AXI_BRESP(1 downto 0),
-      M00_AXI_bvalid => ps7_0_axi_periph_M00_AXI_BVALID,
-      M00_AXI_rdata(31 downto 0) => ps7_0_axi_periph_M00_AXI_RDATA(31 downto 0),
-      M00_AXI_rready => NLW_ps7_0_axi_periph_M00_AXI_rready_UNCONNECTED,
-      M00_AXI_rresp(1 downto 0) => ps7_0_axi_periph_M00_AXI_RRESP(1 downto 0),
-      M00_AXI_rvalid => ps7_0_axi_periph_M00_AXI_RVALID,
+      M00_AXI_awprot(2 downto 0) => ps7_0_axi_periph_M00_AXI_awprot(2 downto 0),
+      M00_AXI_awready => M00_AXI_awready_1,
+      M00_AXI_awvalid => ps7_0_axi_periph_M00_AXI_awvalid,
+      M00_AXI_bready => ps7_0_axi_periph_M00_AXI_bready,
+      M00_AXI_bresp(1 downto 0) => M00_AXI_bresp_1(1 downto 0),
+      M00_AXI_bvalid => M00_AXI_bvalid_1,
+      M00_AXI_rdata(31 downto 0) => M00_AXI_rdata_1(31 downto 0),
+      M00_AXI_rready => ps7_0_axi_periph_M00_AXI_rready,
+      M00_AXI_rresp(1 downto 0) => M00_AXI_rresp_1(1 downto 0),
+      M00_AXI_rvalid => M00_AXI_rvalid_1,
       M00_AXI_wdata(31 downto 0) => ps7_0_axi_periph_M00_AXI_wdata(31 downto 0),
-      M00_AXI_wready => ps7_0_axi_periph_M00_AXI_WREADY,
-      M00_AXI_wstrb(3 downto 0) => NLW_ps7_0_axi_periph_M00_AXI_wstrb_UNCONNECTED(3 downto 0),
-      M00_AXI_wvalid => NLW_ps7_0_axi_periph_M00_AXI_wvalid_UNCONNECTED,
+      M00_AXI_wready => M00_AXI_wready_1,
+      M00_AXI_wstrb(3 downto 0) => ps7_0_axi_periph_M00_AXI_wstrb(3 downto 0),
+      M00_AXI_wvalid => ps7_0_axi_periph_M00_AXI_wvalid,
       S00_ACLK => processing_system7_0_FCLK_CLK0,
       S00_ARESETN => rst_ps7_0_100M_peripheral_aresetn(0),
       S00_AXI_araddr(31 downto 0) => processing_system7_0_M_AXI_GP0_ARADDR(31 downto 0),
@@ -1321,33 +1131,37 @@ rst_ps7_0_100M: component design_1_rst_ps7_0_100M_0
       peripheral_reset(0) => NLW_rst_ps7_0_100M_peripheral_reset_UNCONNECTED(0),
       slowest_sync_clk => processing_system7_0_FCLK_CLK0
     );
-system_ila_0: component design_1_system_ila_0_1
+system_ila_0: component design_1_system_ila_0_0
      port map (
       clk => processing_system7_0_FCLK_CLK0,
-      probe0(0) => ppm_in_0_1,
-      probe1(31 downto 0) => s00_reg0_out(31 downto 0),
-      probe2(31 downto 0) => s00_reg10_out(31 downto 0),
-      probe3(31 downto 0) => s00_reg11_out(31 downto 0),
-      probe4(31 downto 0) => s00_reg12_out(31 downto 0),
-      probe5(31 downto 0) => s00_reg13_out(31 downto 0),
-      probe6(31 downto 0) => s00_reg14_out(31 downto 0),
-      probe7(31 downto 0) => s00_reg15_out(31 downto 0)
+      probe0(31 downto 0) => s00_reg0_out(31 downto 0),
+      probe1(31 downto 0) => s00_reg10_out(31 downto 0),
+      probe2(31 downto 0) => s00_reg11_out(31 downto 0),
+      probe3(31 downto 0) => s00_reg12_out(31 downto 0),
+      probe4(31 downto 0) => s00_reg13_out(31 downto 0),
+      probe5(31 downto 0) => s00_reg14_out(31 downto 0),
+      probe6(31 downto 0) => s00_reg15_out(31 downto 0)
     );
 xlconstant_0: component design_1_xlconstant_0_2
      port map (
-      dout(2 downto 0) => xlconstant_0_dout1(2 downto 0)
+      dout(2 downto 0) => NLW_xlconstant_0_dout_UNCONNECTED(2 downto 0)
     );
 xlconstant_1: component design_1_xlconstant_1_0
      port map (
-      dout(3 downto 0) => xlconstant_1_dout(3 downto 0)
+      dout(3 downto 0) => NLW_xlconstant_1_dout_UNCONNECTED(3 downto 0)
     );
 xlconstant_2: component design_1_xlconstant_2_0
      port map (
-      dout(5 downto 0) => xlconstant_2_dout(5 downto 0)
+      dout(5 downto 0) => NLW_xlconstant_2_dout_UNCONNECTED(5 downto 0)
     );
 xlslice_0: component design_1_xlslice_0_0
      port map (
       Din(31 downto 0) => ps7_0_axi_periph_M00_AXI_awaddr(31 downto 0),
       Dout(5 downto 0) => xlslice_0_Dout(5 downto 0)
+    );
+xlslice_1: component design_1_xlslice_0_1
+     port map (
+      Din(31 downto 0) => ps7_0_axi_periph_M00_AXI_araddr(31 downto 0),
+      Dout(5 downto 0) => xlslice_1_Dout(5 downto 0)
     );
 end STRUCTURE;

@@ -177,12 +177,6 @@ proc create_root_design { parentCell } {
    CONFIG.CONST_VAL {0} \
  ] $constant_low
 
-  # Create instance: ila_0, and set properties
-  set ila_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:ila:6.2 ila_0 ]
-
-  # Create instance: ila_1, and set properties
-  set ila_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:ila:6.2 ila_1 ]
-
   # Create instance: processing_system7_0, and set properties
   set processing_system7_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0 ]
   set_property -dict [ list \
@@ -591,7 +585,7 @@ proc create_root_design { parentCell } {
   set system_ila_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:system_ila:1.1 system_ila_0 ]
   set_property -dict [ list \
    CONFIG.C_MON_TYPE {NATIVE} \
-   CONFIG.C_NUM_OF_PROBES {8} \
+   CONFIG.C_NUM_OF_PROBES {7} \
    CONFIG.C_PROBE0_TYPE {0} \
    CONFIG.C_PROBE1_TYPE {0} \
    CONFIG.C_PROBE2_TYPE {0} \
@@ -599,7 +593,6 @@ proc create_root_design { parentCell } {
    CONFIG.C_PROBE4_TYPE {0} \
    CONFIG.C_PROBE5_TYPE {0} \
    CONFIG.C_PROBE6_TYPE {0} \
-   CONFIG.C_PROBE7_TYPE {0} \
  ] $system_ila_0
 
   # Create instance: xlconstant_0, and set properties
@@ -631,6 +624,14 @@ proc create_root_design { parentCell } {
    CONFIG.DOUT_WIDTH {6} \
  ] $xlslice_0
 
+  # Create instance: xlslice_1, and set properties
+  set xlslice_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 xlslice_1 ]
+  set_property -dict [ list \
+   CONFIG.DIN_FROM {5} \
+   CONFIG.DIN_TO {0} \
+   CONFIG.DOUT_WIDTH {6} \
+ ] $xlslice_1
+
   # Create interface connections
   connect_bd_intf_net -intf_net processing_system7_0_DDR [get_bd_intf_ports DDR] [get_bd_intf_pins processing_system7_0/DDR]
   connect_bd_intf_net -intf_net processing_system7_0_FIXED_IO [get_bd_intf_ports FIXED_IO] [get_bd_intf_pins processing_system7_0/FIXED_IO]
@@ -638,34 +639,46 @@ proc create_root_design { parentCell } {
   connect_bd_intf_net -intf_net ps7_0_axi_periph_M00_AXI [get_bd_intf_pins axi_ppm4_0/S00_AXI] [get_bd_intf_pins ps7_0_axi_periph/M00_AXI]
 
   # Create port connections
-  connect_bd_net -net axi_ppm4_0_s00_ppm_out [get_bd_ports s00_ppm_out_0] [get_bd_pins axi_ppm4_0/s00_ppm_out] [get_bd_pins ila_1/probe9]
-  connect_bd_net -net constant_low_dout [get_bd_pins axi_ppm4_0/s00_axi_arvalid] [get_bd_pins axi_ppm4_0/s00_axi_rready] [get_bd_pins constant_low/dout]
-  connect_bd_net -net ppm_in_0_1 [get_bd_ports ppm_in_0] [get_bd_pins axi_ppm4_0/s00_ppm_in] [get_bd_pins system_ila_0/probe0]
-  set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_nets ppm_in_0_1]
-  connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins axi_ppm4_0/s00_axi_aclk] [get_bd_pins ila_0/clk] [get_bd_pins ila_1/clk] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins ps7_0_axi_periph/ACLK] [get_bd_pins ps7_0_axi_periph/M00_ACLK] [get_bd_pins ps7_0_axi_periph/S00_ACLK] [get_bd_pins rst_ps7_0_100M/slowest_sync_clk] [get_bd_pins system_ila_0/clk]
+  connect_bd_net -net M00_AXI_arready_1 [get_bd_pins axi_ppm4_0/s00_axi_arready] [get_bd_pins ps7_0_axi_periph/M00_AXI_arready]
+  connect_bd_net -net M00_AXI_awready_1 [get_bd_pins axi_ppm4_0/s00_axi_awready] [get_bd_pins ps7_0_axi_periph/M00_AXI_awready]
+  connect_bd_net -net M00_AXI_bresp_1 [get_bd_pins axi_ppm4_0/s00_axi_bresp] [get_bd_pins ps7_0_axi_periph/M00_AXI_bresp]
+  connect_bd_net -net M00_AXI_bvalid_1 [get_bd_pins axi_ppm4_0/s00_axi_bvalid] [get_bd_pins ps7_0_axi_periph/M00_AXI_bvalid]
+  connect_bd_net -net M00_AXI_rdata_1 [get_bd_pins axi_ppm4_0/s00_axi_rdata] [get_bd_pins ps7_0_axi_periph/M00_AXI_rdata]
+  connect_bd_net -net M00_AXI_rresp_1 [get_bd_pins axi_ppm4_0/s00_axi_rresp] [get_bd_pins ps7_0_axi_periph/M00_AXI_rresp]
+  connect_bd_net -net M00_AXI_rvalid_1 [get_bd_pins axi_ppm4_0/s00_axi_rvalid] [get_bd_pins ps7_0_axi_periph/M00_AXI_rvalid]
+  connect_bd_net -net M00_AXI_wready_1 [get_bd_pins axi_ppm4_0/s00_axi_wready] [get_bd_pins ps7_0_axi_periph/M00_AXI_wready]
+  connect_bd_net -net axi_ppm4_0_s00_ppm_out [get_bd_ports s00_ppm_out_0] [get_bd_pins axi_ppm4_0/s00_ppm_out]
+  connect_bd_net -net ppm_in_0_1 [get_bd_ports ppm_in_0] [get_bd_pins axi_ppm4_0/s00_ppm_in]
+  connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins axi_ppm4_0/s00_axi_aclk] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins ps7_0_axi_periph/ACLK] [get_bd_pins ps7_0_axi_periph/M00_ACLK] [get_bd_pins ps7_0_axi_periph/S00_ACLK] [get_bd_pins rst_ps7_0_100M/slowest_sync_clk] [get_bd_pins system_ila_0/clk]
   connect_bd_net -net processing_system7_0_FCLK_RESET0_N [get_bd_pins processing_system7_0/FCLK_RESET0_N] [get_bd_pins rst_ps7_0_100M/ext_reset_in]
-  connect_bd_net -net ps7_0_axi_periph_M00_AXI_awaddr [get_bd_pins ila_1/probe5] [get_bd_pins ps7_0_axi_periph/M00_AXI_awaddr] [get_bd_pins xlslice_0/Din]
-  connect_bd_net -net ps7_0_axi_periph_M00_AXI_wdata [get_bd_pins axi_ppm4_0/s00_axi_wdata] [get_bd_pins ila_1/probe10] [get_bd_pins ps7_0_axi_periph/M00_AXI_wdata]
+  connect_bd_net -net ps7_0_axi_periph_M00_AXI_araddr [get_bd_pins ps7_0_axi_periph/M00_AXI_araddr] [get_bd_pins xlslice_1/Din]
+  connect_bd_net -net ps7_0_axi_periph_M00_AXI_arprot [get_bd_pins axi_ppm4_0/s00_axi_arprot] [get_bd_pins ps7_0_axi_periph/M00_AXI_arprot]
+  connect_bd_net -net ps7_0_axi_periph_M00_AXI_arvalid [get_bd_pins axi_ppm4_0/s00_axi_arvalid] [get_bd_pins ps7_0_axi_periph/M00_AXI_arvalid]
+  connect_bd_net -net ps7_0_axi_periph_M00_AXI_awaddr [get_bd_pins ps7_0_axi_periph/M00_AXI_awaddr] [get_bd_pins xlslice_0/Din]
+  connect_bd_net -net ps7_0_axi_periph_M00_AXI_awprot [get_bd_pins axi_ppm4_0/s00_axi_awprot] [get_bd_pins ps7_0_axi_periph/M00_AXI_awprot]
+  connect_bd_net -net ps7_0_axi_periph_M00_AXI_awvalid [get_bd_pins axi_ppm4_0/s00_axi_awvalid] [get_bd_pins ps7_0_axi_periph/M00_AXI_awvalid]
+  connect_bd_net -net ps7_0_axi_periph_M00_AXI_bready [get_bd_pins axi_ppm4_0/s00_axi_bready] [get_bd_pins ps7_0_axi_periph/M00_AXI_bready]
+  connect_bd_net -net ps7_0_axi_periph_M00_AXI_rready [get_bd_pins axi_ppm4_0/s00_axi_rready] [get_bd_pins ps7_0_axi_periph/M00_AXI_rready]
+  connect_bd_net -net ps7_0_axi_periph_M00_AXI_wdata [get_bd_pins axi_ppm4_0/s00_axi_wdata] [get_bd_pins ps7_0_axi_periph/M00_AXI_wdata]
+  connect_bd_net -net ps7_0_axi_periph_M00_AXI_wstrb [get_bd_pins axi_ppm4_0/s00_axi_wstrb] [get_bd_pins ps7_0_axi_periph/M00_AXI_wstrb]
+  connect_bd_net -net ps7_0_axi_periph_M00_AXI_wvalid [get_bd_pins axi_ppm4_0/s00_axi_wvalid] [get_bd_pins ps7_0_axi_periph/M00_AXI_wvalid]
   connect_bd_net -net rst_ps7_0_100M_peripheral_aresetn [get_bd_pins axi_ppm4_0/s00_axi_aresetn] [get_bd_pins ps7_0_axi_periph/ARESETN] [get_bd_pins ps7_0_axi_periph/M00_ARESETN] [get_bd_pins ps7_0_axi_periph/S00_ARESETN] [get_bd_pins rst_ps7_0_100M/peripheral_aresetn]
-  connect_bd_net -net s00_reg0_out [get_bd_pins axi_ppm4_0/s00_reg0_out] [get_bd_pins system_ila_0/probe1]
+  connect_bd_net -net s00_reg0_out [get_bd_pins axi_ppm4_0/s00_reg0_out] [get_bd_pins system_ila_0/probe0]
   set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_nets s00_reg0_out]
-  connect_bd_net -net s00_reg10_out [get_bd_pins axi_ppm4_0/s00_reg10_out] [get_bd_pins system_ila_0/probe2]
+  connect_bd_net -net s00_reg10_out [get_bd_pins axi_ppm4_0/s00_reg10_out] [get_bd_pins system_ila_0/probe1]
   set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_nets s00_reg10_out]
-  connect_bd_net -net s00_reg11_out [get_bd_pins axi_ppm4_0/s00_reg11_out] [get_bd_pins system_ila_0/probe3]
+  connect_bd_net -net s00_reg11_out [get_bd_pins axi_ppm4_0/s00_reg11_out] [get_bd_pins system_ila_0/probe2]
   set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_nets s00_reg11_out]
-  connect_bd_net -net s00_reg12_out [get_bd_pins axi_ppm4_0/s00_reg12_out] [get_bd_pins system_ila_0/probe4]
+  connect_bd_net -net s00_reg12_out [get_bd_pins axi_ppm4_0/s00_reg12_out] [get_bd_pins system_ila_0/probe3]
   set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_nets s00_reg12_out]
-  connect_bd_net -net s00_reg13_out [get_bd_pins axi_ppm4_0/s00_reg13_out] [get_bd_pins system_ila_0/probe5]
+  connect_bd_net -net s00_reg13_out [get_bd_pins axi_ppm4_0/s00_reg13_out] [get_bd_pins system_ila_0/probe4]
   set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_nets s00_reg13_out]
-  connect_bd_net -net s00_reg14_out [get_bd_pins axi_ppm4_0/s00_reg14_out] [get_bd_pins system_ila_0/probe6]
+  connect_bd_net -net s00_reg14_out [get_bd_pins axi_ppm4_0/s00_reg14_out] [get_bd_pins system_ila_0/probe5]
   set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_nets s00_reg14_out]
-  connect_bd_net -net s00_reg15_out [get_bd_pins axi_ppm4_0/s00_reg15_out] [get_bd_pins system_ila_0/probe7]
+  connect_bd_net -net s00_reg15_out [get_bd_pins axi_ppm4_0/s00_reg15_out] [get_bd_pins system_ila_0/probe6]
   set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_nets s00_reg15_out]
-  connect_bd_net -net xlconstant_0_dout [get_bd_pins axi_ppm4_0/s00_axi_awvalid] [get_bd_pins axi_ppm4_0/s00_axi_bready] [get_bd_pins axi_ppm4_0/s00_axi_wvalid] [get_bd_pins constant_high/dout]
-  connect_bd_net -net xlconstant_0_dout1 [get_bd_pins axi_ppm4_0/s00_axi_arprot] [get_bd_pins axi_ppm4_0/s00_axi_awprot] [get_bd_pins xlconstant_0/dout]
-  connect_bd_net -net xlconstant_1_dout [get_bd_pins axi_ppm4_0/s00_axi_wstrb] [get_bd_pins xlconstant_1/dout]
-  connect_bd_net -net xlconstant_2_dout [get_bd_pins axi_ppm4_0/s00_axi_araddr] [get_bd_pins xlconstant_2/dout]
   connect_bd_net -net xlslice_0_Dout [get_bd_pins axi_ppm4_0/s00_axi_awaddr] [get_bd_pins xlslice_0/Dout]
+  connect_bd_net -net xlslice_1_Dout [get_bd_pins axi_ppm4_0/s00_axi_araddr] [get_bd_pins xlslice_1/Dout]
 
   # Create address segments
   assign_bd_address -offset 0x43C00000 -range 0x00010000 -target_address_space [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs axi_ppm4_0/S00_AXI/S00_AXI_reg] -force

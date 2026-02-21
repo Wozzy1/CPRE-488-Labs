@@ -1,58 +1,70 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"1.07938",
-   "Default View_TopLeft":"-183,743",
+   "Default View_ScaleFactor":"1.16629",
+   "Default View_TopLeft":"799,-29",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:9.0 non-TLS
 #  -string -flagsOSRD
-preplace port DDR -pg 1 -lvl 5 -x 1590 -y 510 -defaultsOSRD
-preplace port FIXED_IO -pg 1 -lvl 5 -x 1590 -y 530 -defaultsOSRD
-preplace port ppm_in_0 -pg 1 -lvl 0 -x -40 -y 1290 -defaultsOSRD
-preplace port s00_ppm_out_0 -pg 1 -lvl 5 -x 1590 -y 840 -defaultsOSRD
-preplace inst processing_system7_0 -pg 1 -lvl 1 -x 260 -y 580 -defaultsOSRD
-preplace inst ps7_0_axi_periph -pg 1 -lvl 2 -x 730 -y 260 -defaultsOSRD
-preplace inst rst_ps7_0_100M -pg 1 -lvl 1 -x 260 -y 800 -defaultsOSRD
-preplace inst constant_high -pg 1 -lvl 2 -x 730 -y 910 -defaultsOSRD
-preplace inst constant_low -pg 1 -lvl 2 -x 730 -y 1210 -defaultsOSRD
-preplace inst xlconstant_0 -pg 1 -lvl 2 -x 730 -y 810 -defaultsOSRD
-preplace inst xlconstant_1 -pg 1 -lvl 2 -x 730 -y 1010 -defaultsOSRD
-preplace inst xlconstant_2 -pg 1 -lvl 2 -x 730 -y 1110 -defaultsOSRD
-preplace inst system_ila_0 -pg 1 -lvl 4 -x 1480 -y 1270 -defaultsOSRD
-preplace inst ila_0 -pg 1 -lvl 2 -x 730 -y 600 -defaultsOSRD
-preplace inst xlslice_0 -pg 1 -lvl 2 -x 730 -y 710 -defaultsOSRD
-preplace inst ila_1 -pg 1 -lvl 1 -x 260 -y 1390 -defaultsOSRD
-preplace inst axi_ppm4_0 -pg 1 -lvl 3 -x 1160 -y 910 -defaultsOSRD
-preplace netloc processing_system7_0_FCLK_CLK0 1 0 4 10 410 530 1270 970 1190 NJ
-preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 2 50 430 470
-preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 1 2 540 1280 990J
-preplace netloc ppm_in_0_1 1 0 4 0J 1900 NJ 1900 980 1210 NJ
-preplace netloc axi_ppm4_0_s00_ppm_out 1 0 5 20 0 N 0 N 0 1390J 840 NJ
-preplace netloc xlconstant_0_dout 1 2 1 950 750n
-preplace netloc constant_low_dout 1 2 1 960 970n
-preplace netloc xlconstant_0_dout1 1 2 1 930 730n
-preplace netloc xlconstant_1_dout 1 2 1 940J 810n
-preplace netloc xlconstant_2_dout 1 2 1 950J 930n
-preplace netloc s00_reg0_out 1 3 1 1390 860n
-preplace netloc s00_reg10_out 1 3 1 1380 880n
-preplace netloc s00_reg11_out 1 3 1 1370 900n
-preplace netloc s00_reg12_out 1 3 1 1360 920n
-preplace netloc s00_reg13_out 1 3 1 1350 940n
-preplace netloc s00_reg14_out 1 3 1 1340 960n
-preplace netloc s00_reg15_out 1 3 1 1330 980n
-preplace netloc ps7_0_axi_periph_M00_AXI_wdata 1 0 3 40 440 520 520 920
-preplace netloc ps7_0_axi_periph_M00_AXI_awaddr 1 0 3 30 420 500 10 920
-preplace netloc xlslice_0_Dout 1 2 1 NJ 710
-preplace netloc processing_system7_0_FIXED_IO 1 1 4 480J 530 NJ 530 NJ 530 NJ
-preplace netloc processing_system7_0_DDR 1 1 4 510J 510 NJ 510 NJ 510 NJ
-preplace netloc processing_system7_0_M_AXI_GP0 1 1 1 490 200n
-preplace netloc ps7_0_axi_periph_M00_AXI 1 2 1 930 70n
-levelinfo -pg 1 -40 260 730 1160 1480 1590
-pagesize -pg 1 -db -bbox -sgen -160 -10 1750 2180
+preplace port DDR -pg 1 -lvl 5 -x 1610 -y 20 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 5 -x 1610 -y 780 -defaultsOSRD
+preplace port ppm_in_0 -pg 1 -lvl 0 -x -10 -y 770 -defaultsOSRD
+preplace port s00_ppm_out_0 -pg 1 -lvl 5 -x 1610 -y 230 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 1 -x 260 -y 230 -defaultsOSRD
+preplace inst ps7_0_axi_periph -pg 1 -lvl 2 -x 730 -y 270 -defaultsOSRD
+preplace inst rst_ps7_0_100M -pg 1 -lvl 1 -x 260 -y 480 -defaultsOSRD
+preplace inst constant_high -pg 1 -lvl 1 -x 260 -y 830 -defaultsOSRD
+preplace inst constant_low -pg 1 -lvl 1 -x 260 -y 930 -defaultsOSRD
+preplace inst xlconstant_0 -pg 1 -lvl 3 -x 1170 -y 620 -defaultsOSRD
+preplace inst xlconstant_1 -pg 1 -lvl 1 -x 260 -y 1030 -defaultsOSRD
+preplace inst xlconstant_2 -pg 1 -lvl 3 -x 1170 -y 840 -defaultsOSRD
+preplace inst xlslice_0 -pg 1 -lvl 2 -x 730 -y 590 -defaultsOSRD
+preplace inst xlslice_1 -pg 1 -lvl 2 -x 730 -y 690 -defaultsOSRD
+preplace inst system_ila_0 -pg 1 -lvl 4 -x 1500 -y -140 -defaultsOSRD
+preplace inst axi_ppm4_0 -pg 1 -lvl 3 -x 1170 -y 300 -defaultsOSRD
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 4 20 370 480 -10 950 -210 N
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 2 30 380 470
+preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 1 2 500 520 N
+preplace netloc axi_ppm4_0_s00_ppm_out 1 3 2 NJ 230 N
+preplace netloc ps7_0_axi_periph_M00_AXI_awaddr 1 1 2 510 10 920
+preplace netloc xlslice_0_Dout 1 2 1 930J 100n
+preplace netloc ps7_0_axi_periph_M00_AXI_awprot 1 2 1 N 120
+preplace netloc ps7_0_axi_periph_M00_AXI_awvalid 1 2 1 N 140
+preplace netloc M00_AXI_awready_1 1 2 1 N 160
+preplace netloc ps7_0_axi_periph_M00_AXI_wdata 1 2 1 N 180
+preplace netloc ps7_0_axi_periph_M00_AXI_wstrb 1 2 1 N 200
+preplace netloc ps7_0_axi_periph_M00_AXI_wvalid 1 2 1 N 220
+preplace netloc M00_AXI_wready_1 1 2 1 N 240
+preplace netloc M00_AXI_bresp_1 1 2 1 N 260
+preplace netloc M00_AXI_bvalid_1 1 2 1 N 280
+preplace netloc ps7_0_axi_periph_M00_AXI_bready 1 2 1 N 300
+preplace netloc ps7_0_axi_periph_M00_AXI_araddr 1 1 2 520 530 920
+preplace netloc xlslice_1_Dout 1 2 1 960J 320n
+preplace netloc ps7_0_axi_periph_M00_AXI_arprot 1 2 1 N 340
+preplace netloc ps7_0_axi_periph_M00_AXI_arvalid 1 2 1 N 360
+preplace netloc M00_AXI_arready_1 1 2 1 N 380
+preplace netloc M00_AXI_rdata_1 1 2 1 N 400
+preplace netloc M00_AXI_rresp_1 1 2 1 N 420
+preplace netloc M00_AXI_rvalid_1 1 2 1 N 440
+preplace netloc ps7_0_axi_periph_M00_AXI_rready 1 2 1 N 460
+preplace netloc ppm_in_0_1 1 0 3 10J -20 NJ -20 940J
+preplace netloc s00_reg0_out 1 3 1 1340 -190n
+preplace netloc s00_reg10_out 1 3 1 1350 -170n
+preplace netloc s00_reg11_out 1 3 1 1360 -150n
+preplace netloc s00_reg12_out 1 3 1 1370 -130n
+preplace netloc s00_reg13_out 1 3 1 1380 -110n
+preplace netloc s00_reg14_out 1 3 1 1390 -90n
+preplace netloc s00_reg15_out 1 3 1 1400 -70n
+preplace netloc processing_system7_0_FIXED_IO 1 1 4 490J 0 NJ 0 NJ 0 1590
+preplace netloc processing_system7_0_DDR 1 1 4 500J 20 NJ 20 NJ 20 N
+preplace netloc processing_system7_0_M_AXI_GP0 1 1 1 N 210
+preplace netloc ps7_0_axi_periph_M00_AXI 1 2 1 N 80
+levelinfo -pg 1 -10 260 730 1170 1500 1610
+pagesize -pg 1 -db -bbox -sgen -130 -270 1770 1670
 "
 }
 {
    "da_axi4_cnt":"7",
    "da_board_cnt":"1",
-   "da_clkrst_cnt":"3",
+   "da_clkrst_cnt":"5",
    "da_ps7_cnt":"1"
 }

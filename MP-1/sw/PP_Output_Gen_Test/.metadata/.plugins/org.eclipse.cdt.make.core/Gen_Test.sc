@@ -4,6 +4,8 @@
     <instance id="xilinx.gnu.armv7.exe.debug.1725488679;xilinx.gnu.armv7.exe.debug.1725488679.">
                 
         <collector id="org.eclipse.cdt.make.core.PerProjectSICollector">
+            <includePath path="#undef __ARM_FEATURE_FP16_VECTOR_ARITHMETIC" removed="true"/>
+            <includePath path="#undef __ARM_FEATURE_FP16_FML" removed="true"/>
             <includePath path="#undef __ARM_FEATURE_FMA" removed="true"/>
             <includePath path="#undef __ARM_NEON__" removed="true"/>
             <includePath path="#undef __ARM_FEATURE_CRC32" removed="true"/>
@@ -1282,6 +1284,8 @@
     <instance id="xilinx.gnu.armv7.exe.debug.1725488679;xilinx.gnu.armv7.exe.debug.1725488679.;xilinx.gnu.armv7.c.toolchain.compiler.debug.921799955;xilinx.gnu.armv7.c.compiler.input.1727375655">
                 
         <collector id="org.eclipse.cdt.make.core.PerProjectSICollector">
+            <includePath path="#undef __ARM_FEATURE_FP16_FML" removed="true"/>
+            <includePath path="#undef __ARM_FEATURE_FMA" removed="true"/>
             <includePath path="#undef __ARM_FP16_FORMAT_IEEE" removed="true"/>
             <includePath path="#undef __ARM_FP16_FORMAT_ALTERNATIVE" removed="true"/>
             <includePath path="#undef __ARM_FEATURE_CLZ" removed="true"/>

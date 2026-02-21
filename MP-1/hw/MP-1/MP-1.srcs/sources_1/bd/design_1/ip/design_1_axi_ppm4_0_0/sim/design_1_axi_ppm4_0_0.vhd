@@ -47,7 +47,7 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: iastate.edu:user:axi_ppm4:1.0
--- IP Revision: 31
+-- IP Revision: 36
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;

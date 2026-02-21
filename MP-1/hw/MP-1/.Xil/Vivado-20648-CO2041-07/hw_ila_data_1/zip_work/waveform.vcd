@@ -1,5 +1,5 @@
 $date
-        2026-Feb-20 17:00:16
+        2026-Feb-20 19:55:36
 $end
 $version
         Vivado v2020.1 (64-bit)
@@ -9,7 +9,7 @@ $timescale
 $end
 $scope module dut $end
 $var reg 1 " design_1_i/probe0 $end
-$var reg 32 # design_1_i/ps7_0_axi_periph_M00_AXI_awaddr [31:0] $end
+$var reg 32 # design_1_i/probe1 [31:0] $end
 $var reg 2 C design_1_i/probe2 [1:0] $end
 $var reg 1 E design_1_i/probe3 $end
 $var reg 1 F design_1_i/probe4 $end
@@ -60,7 +60,7 @@ $enddefinitions $end
 #0
 $dumpvars
 0"
-b11001011111111111111111111011110 #
+b0 #
 b0 C
 0E
 0F

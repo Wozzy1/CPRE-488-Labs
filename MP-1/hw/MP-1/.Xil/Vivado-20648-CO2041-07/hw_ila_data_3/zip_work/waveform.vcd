@@ -1,0 +1,73 @@
+$date
+        2026-Feb-20 20:08:39
+$end
+$version
+        Vivado v2020.1 (64-bit)
+$end
+$timescale
+        1ps
+$end
+$scope module dut $end
+$var reg 1 " design_1_i/system_ila_0/U0/probe0_1 $end
+$var reg 32 # design_1_i/system_ila_0/U0/probe1_1 [31:0] $end
+$var reg 32 C design_1_i/system_ila_0/U0/probe2_1 [31:0] $end
+$var reg 32 c design_1_i/system_ila_0/U0/probe3_1 [31:0] $end
+$var reg 32 %" design_1_i/system_ila_0/U0/probe4_1 [31:0] $end
+$var reg 32 E" design_1_i/system_ila_0/U0/probe5_1 [31:0] $end
+$var reg 32 e" design_1_i/system_ila_0/U0/probe6_1 [31:0] $end
+$var reg 32 '# design_1_i/system_ila_0/U0/probe7_1 [31:0] $end
+$var reg 1 G# design_1_i/system_ila_0/U0/probe8_1 $end
+$var reg 2 H# design_1_i/system_ila_0/U0/probe9_1 [1:0] $end
+$var reg 1 J# design_1_i/system_ila_0/U0/probe10_1 $end
+$var reg 32 K# design_1_i/system_ila_0/U0/probe11_1 [31:0] $end
+$var reg 2 k# design_1_i/system_ila_0/U0/probe12_1 [1:0] $end
+$var reg 1 m# design_1_i/system_ila_0/U0/probe13_1 $end
+$var reg 1 n# design_1_i/system_ila_0/U0/probe14_1 $end
+$var reg 1 o# design_1_i/system_ila_0/U0/probe15_1 $end
+$var reg 3 p# design_1_i/system_ila_0/U0/probe16_1 [2:0] $end
+$var reg 1 s# design_1_i/system_ila_0/U0/probe17_1 $end
+$var reg 3 t# design_1_i/system_ila_0/U0/probe18_1 [2:0] $end
+$var reg 1 w# design_1_i/system_ila_0/U0/probe19_1 $end
+$var reg 1 x# design_1_i/system_ila_0/U0/probe20_1 $end
+$var reg 1 y# design_1_i/system_ila_0/U0/probe21_1 $end
+$var reg 32 z# design_1_i/system_ila_0/U0/probe22_1 [31:0] $end
+$var reg 4 <$ design_1_i/system_ila_0/U0/probe23_1 [3:0] $end
+$var reg 1 @$ design_1_i/system_ila_0/U0/probe24_1 $end
+$var reg 1 A$ _TRIGGER $end
+$var reg 1 B$ _WINDOW $end
+$var reg 1 C$ _GAP $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0"
+b0 #
+b0 C
+b0 c
+b0 %"
+b0 E"
+b0 e"
+b0 '#
+0G#
+b0 H#
+0J#
+b0 K#
+b0 k#
+0m#
+0n#
+1o#
+b1 p#
+0s#
+b111 t#
+0w#
+1x#
+1y#
+b11111100111111110111110111111110 z#
+b1111 <$
+0@$
+0A$
+1B$
+0C$
+$end
+#4096
+1A$

@@ -1,0 +1,734 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Fri Feb 20 15:17:26 2026
+# Process ID: 20648
+# Current directory: C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent24152 C:\Users\diepw50\CPRE-488-Labs\MP-1\hw\MP-1\MP-1.xpr
+# Log file: C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/vivado.log
+# Journal file: C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.xpr
+update_compile_order -fileset sources_1
+open_bd_design {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd}
+connect_bd_net [get_bd_ports ppm_in_0] [get_bd_pins axi_ppm4_0/s00_ppm_in]
+startgroup
+make_bd_pins_external  [get_bd_pins axi_ppm4_0/s00_ppm_out]
+endgroup
+save_bd_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+report_ip_status -name ip_status 
+upgrade_ip -vlnv iastate.edu:user:axi_ppm4:1.0 [get_ips  design_1_axi_ppm4_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips design_1_axi_ppm4_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd]
+catch { config_ip_cache -export [get_ips -all design_1_processing_system7_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_rst_ps7_0_100M_0] }
+catch { config_ip_cache -export [get_ips -all design_1_system_ila_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_axi_ppm4_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_auto_pc_0] }
+export_ip_user_files -of_objects [get_files C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs design_1_system_ila_0_0_synth_1 design_1_axi_ppm4_0_0_synth_1 -jobs 10
+wait_on_run design_1_system_ila_0_0_synth_1
+wait_on_run design_1_axi_ppm4_0_0_synth_1
+export_simulation -of_objects [get_files C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd] -directory C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.ip_user_files -ipstatic_source_dir C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.cache/compile_simlib/modelsim} {questa=C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.cache/compile_simlib/questa} {riviera=C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.cache/compile_simlib/riviera} {activehdl=C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+update_ip_catalog -rebuild -scan_changes
+report_ip_status -name ip_status
+upgrade_ip -vlnv iastate.edu:user:axi_ppm4:1.0 [get_ips  design_1_axi_ppm4_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips design_1_axi_ppm4_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd]
+catch { config_ip_cache -export [get_ips -all design_1_system_ila_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_axi_ppm4_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_auto_pc_0] }
+export_ip_user_files -of_objects [get_files C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs design_1_system_ila_0_0_synth_1 design_1_axi_ppm4_0_0_synth_1 -jobs 10
+wait_on_run design_1_system_ila_0_0_synth_1
+wait_on_run design_1_axi_ppm4_0_0_synth_1
+export_simulation -of_objects [get_files C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd] -directory C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.ip_user_files -ipstatic_source_dir C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.cache/compile_simlib/modelsim} {questa=C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.cache/compile_simlib/questa} {riviera=C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.cache/compile_simlib/riviera} {activehdl=C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+open_run impl_1
+open_bd_design {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd}
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_0
+endgroup
+connect_bd_net [get_bd_pins xlconstant_0/dout] [get_bd_pins axi_ppm4_0/s00_axi_bready]
+connect_bd_net [get_bd_pins axi_ppm4_0/s00_axi_awvalid] [get_bd_pins xlconstant_0/dout]
+connect_bd_net [get_bd_pins axi_ppm4_0/s00_axi_wvalid] [get_bd_pins xlconstant_0/dout]
+copy_bd_objs /  [get_bd_cells {xlconstant_0}]
+set_property location {1 256 -445} [get_bd_cells xlconstant_1]
+set_property -dict [list CONFIG.CONST_VAL {0}] [get_bd_cells xlconstant_1]
+set_property name constant_low [get_bd_cells xlconstant_1]
+set_property name constant_high [get_bd_cells xlconstant_0]
+connect_bd_net [get_bd_pins axi_ppm4_0/s00_axi_rready] [get_bd_pins constant_low/dout]
+connect_bd_net [get_bd_pins axi_ppm4_0/s00_axi_arvalid] [get_bd_pins constant_low/dout]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_0
+endgroup
+set_property -dict [list CONFIG.CONST_WIDTH {32} CONFIG.CONST_VAL {0}] [get_bd_cells xlconstant_0]
+connect_bd_net [get_bd_pins ps7_0_axi_periph/M00_AXI_awaddr] [get_bd_pins axi_ppm4_0/s00_axi_awaddr]
+connect_bd_net [get_bd_pins ps7_0_axi_periph/M00_AXI_wdata] [get_bd_pins axi_ppm4_0/s00_axi_wdata]
+set_property -dict [list CONFIG.CONST_WIDTH {3}] [get_bd_cells xlconstant_0]
+connect_bd_net [get_bd_pins axi_ppm4_0/s00_axi_awprot] [get_bd_pins xlconstant_0/dout]
+connect_bd_net [get_bd_pins axi_ppm4_0/s00_axi_arprot] [get_bd_pins xlconstant_0/dout]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_1
+endgroup
+set_property -dict [list CONFIG.CONST_WIDTH {4} CONFIG.CONST_VAL {0}] [get_bd_cells xlconstant_1]
+connect_bd_net [get_bd_pins axi_ppm4_0/s00_axi_wstrb] [get_bd_pins xlconstant_1/dout]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_2
+endgroup
+set_property -dict [list CONFIG.CONST_WIDTH {32} CONFIG.CONST_VAL {0}] [get_bd_cells xlconstant_2]
+set_property -dict [list CONFIG.CONST_WIDTH {6}] [get_bd_cells xlconstant_2]
+connect_bd_net [get_bd_pins axi_ppm4_0/s00_axi_araddr] [get_bd_pins xlconstant_2/dout]
+save_bd_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 xlslice_0
+endgroup
+set_property location {2 704 -179} [get_bd_cells xlslice_0]
+set_property location {2 588 -192} [get_bd_cells xlslice_0]
+save_bd_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+reset_run impl_1 -prev_step 
+set_property -dict [list CONFIG.DIN_FROM {5} CONFIG.DOUT_WIDTH {6}] [get_bd_cells xlslice_0]
+delete_bd_objs [get_bd_nets ps7_0_axi_periph_M00_AXI_awaddr]
+connect_bd_net [get_bd_pins ps7_0_axi_periph/M00_AXI_awaddr] [get_bd_pins xlslice_0/Din]
+connect_bd_net [get_bd_pins xlslice_0/Dout] [get_bd_pins axi_ppm4_0/s00_axi_awaddr]
+save_bd_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+set_property pfm_name {} [get_files -all {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd}]
+write_hw_platform -fixed -include_bit -force -file C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/design_1_wrapper.xsa
+reset_run impl_1
+launch_runs impl_1 -jobs 10
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z020_1] 0]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+open_bd_design {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd}
+startgroup
+set_property HDL_ATTRIBUTE.DEBUG false [get_bd_nets { ppm_in_0_1 } ]
+disconnect_bd_net [get_bd_net ppm_in_0_1] [get_bd_pins system_ila_0/probe0]
+apply_bd_automation -rule xilinx.com:bd_rule:resize [get_bd_cells system_ila_0]
+endgroup
+set_property HDL_ATTRIBUTE.DEBUG true [get_bd_nets {ppm_in_0_1 }]
+apply_bd_automation -rule xilinx.com:bd_rule:debug -dict [list \
+                                                          [get_bd_nets ppm_in_0_1] {PROBE_TYPE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" } \
+                                                         ]
+close_hw_manager
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z020_1] 0]
+refresh_hw_sysmon  [get_hw_sysmons localhost:3121/xilinx_tcf/Digilent/210248B18A36/xc7z020_1/SYSMON]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+open_bd_design {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd}
+set_property HDL_ATTRIBUTE.DEBUG true [get_bd_nets {ps7_0_axi_periph_M00_AXI_awaddr }]
+apply_bd_automation -rule xilinx.com:bd_rule:debug -dict [list \
+                                                          [get_bd_nets ps7_0_axi_periph_M00_AXI_awaddr] {PROBE_TYPE "Data and Trigger" CLK_SRC "None (Connect manually)" SYSTEM_ILA "Auto" } \
+                                                         ]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (100 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins system_ila_1/clk]
+save_bd_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+reset_run synth_1
+reset_run design_1_system_ila_1_0_synth_1
+reset_run design_1_system_ila_0_1_synth_1
+validate_bd_design -force
+startgroup
+endgroup
+validate_bd_design -force
+delete_bd_objs [get_bd_cells system_ila_1]
+apply_bd_automation -rule xilinx.com:bd_rule:debug -dict [list \
+                                                          [get_bd_nets ps7_0_axi_periph_M00_AXI_awaddr] {PROBE_TYPE "Data and Trigger" CLK_SRC "None (Connect manually)" SYSTEM_ILA "Auto" } \
+                                                         ]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (100 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins system_ila_1/clk]
+validate_bd_design
+save_bd_design
+validate_bd_design -force
+delete_bd_objs [get_bd_cells system_ila_1]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:ila:6.2 ila_0
+endgroup
+delete_bd_objs [get_bd_cells ila_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:system_ila:1.1 system_ila_1
+endgroup
+delete_bd_objs [get_bd_cells system_ila_1]
+startgroup
+set_property HDL_ATTRIBUTE.DEBUG false [get_bd_nets { ps7_0_axi_periph_M00_AXI_awaddr } ]
+endgroup
+set_property HDL_ATTRIBUTE.DEBUG true [get_bd_nets {ps7_0_axi_periph_M00_AXI_awaddr }]
+apply_bd_automation -rule xilinx.com:bd_rule:debug -dict [list \
+                                                          [get_bd_nets ps7_0_axi_periph_M00_AXI_awaddr] {PROBE_TYPE "Data and Trigger" CLK_SRC "None (Connect manually)" SYSTEM_ILA "New" } \
+                                                         ]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (100 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins system_ila_1/clk]
+validate_bd_design
+save_bd_design
+launch_runs synth_1 -jobs 10
+wait_on_run synth_1
+validate_bd_design -force
+startgroup
+endgroup
+validate_bd_design -force
+validate_bd_design -force
+save_bd_design
+reset_run synth_1
+reset_run design_1_system_ila_0_1_synth_1
+reset_run design_1_system_ila_1_3_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+generate_target all [get_files  C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd]
+catch { config_ip_cache -export [get_ips -all design_1_system_ila_0_1] }
+catch { config_ip_cache -export [get_ips -all design_1_system_ila_1_3] }
+export_ip_user_files -of_objects [get_files C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs design_1_system_ila_0_1_synth_1 design_1_system_ila_1_3_synth_1 -jobs 10
+wait_on_run design_1_system_ila_0_1_synth_1
+wait_on_run design_1_system_ila_1_3_synth_1
+export_simulation -of_objects [get_files C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd] -directory C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.ip_user_files -ipstatic_source_dir C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.cache/compile_simlib/modelsim} {questa=C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.cache/compile_simlib/questa} {riviera=C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.cache/compile_simlib/riviera} {activehdl=C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:ila:6.2 ila_0
+endgroup
+connect_bd_net [get_bd_pins ila_0/probe1] [get_bd_pins ps7_0_axi_periph/M00_AXI_awaddr]
+delete_bd_objs [get_bd_cells system_ila_1]
+connect_bd_net [get_bd_pins ila_0/clk] [get_bd_pins processing_system7_0/FCLK_CLK0]
+save_bd_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}]]
+open_bd_design {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd}
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}]]
+open_bd_design {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd}
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}]]
+open_bd_design {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd}
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}]]
+save_wave_config {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
+close_hw_manager
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd]
+refresh_design
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7z020_1]
+set_property PROBES.FILE {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/impl_1/design_1_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/impl_1/design_1_wrapper.ltx} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}]]
+save_wave_config {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
+open_bd_design {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd}
+set_property pfm_name {} [get_files -all {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd}]
+write_hw_platform -fixed -include_bit -force -file C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/design_1_wrapper.xsa
+save_wave_config {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
+close_hw_manager
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7z020_1]
+set_property PROBES.FILE {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/impl_1/design_1_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/impl_1/design_1_wrapper.ltx} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/ila_0"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_2 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}]]
+add_wave -into {hw_ila_data_1.wcfg} -radix hex { {design_1_i/probe5} }
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/ila_0"}]]
+open_bd_design {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd}
+add_wave -into {hw_ila_data_1.wcfg} -radix hex { {design_1_i/ps7_0_axi_periph_M00_AXI_awaddr} }
+open_bd_design {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd}
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/ila_0"}]]
+set_property TRIGGER_COMPARE_VALUE eq32'hCBFF_FFDE [get_hw_probes design_1_i/ps7_0_axi_periph_M00_AXI_awaddr -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/ila_0"}]]
+set_property TRIGGER_COMPARE_VALUE neq32'hCBFF_FFDE [get_hw_probes design_1_i/ps7_0_axi_periph_M00_AXI_awaddr -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/ila_0"}]
+open_bd_design {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd}
+delete_bd_objs [get_bd_nets xlslice_0_Dout]
+delete_bd_objs [get_bd_nets ps7_0_axi_periph_M00_AXI_wdata]
+delete_bd_objs [get_bd_nets ps7_0_axi_periph_M00_AXI_awaddr]
+save_bd_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+set_property pfm_name {} [get_files -all {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd}]
+write_hw_platform -fixed -include_bit -force -file C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/design_1_wrapper.xsa
+open_bd_design {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd}
+delete_bd_objs [get_bd_cells xlslice_0]
+set_property location {2 770 305} [get_bd_cells rst_ps7_0_100M]
+set_property location {1557 -269} [get_bd_ports s00_ppm_out_0]
+set_property location {1556 -251} [get_bd_intf_ports DDR]
+set_property location {1559 -242} [get_bd_intf_ports DDR]
+update_ip_catalog -rebuild -scan_changes
+report_ip_status -name ip_status
+upgrade_ip -vlnv iastate.edu:user:axi_ppm4:1.0 [get_ips  design_1_axi_ppm4_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips design_1_axi_ppm4_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd]
+catch { config_ip_cache -export [get_ips -all design_1_axi_ppm4_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_system_ila_0_1] }
+catch { config_ip_cache -export [get_ips -all design_1_auto_pc_0] }
+export_ip_user_files -of_objects [get_files C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs design_1_axi_ppm4_0_0_synth_1 -jobs 10
+wait_on_run design_1_axi_ppm4_0_0_synth_1
+export_simulation -of_objects [get_files C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd] -directory C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.ip_user_files -ipstatic_source_dir C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.cache/compile_simlib/modelsim} {questa=C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.cache/compile_simlib/questa} {riviera=C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.cache/compile_simlib/riviera} {activehdl=C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+startgroup
+connect_bd_net -net s00_reg0_out [get_bd_pins axi_ppm4_0/s00_reg0_out]
+set_property HDL_ATTRIBUTE.DEBUG true [get_bd_nets {s00_reg0_out }]
+endgroup
+undo
+startgroup
+connect_bd_net -net s00_reg0_out [get_bd_pins axi_ppm4_0/s00_reg0_out]
+connect_bd_net -net s00_reg10_out [get_bd_pins axi_ppm4_0/s00_reg10_out]
+connect_bd_net -net s00_reg11_out [get_bd_pins axi_ppm4_0/s00_reg11_out]
+connect_bd_net -net s00_reg12_out [get_bd_pins axi_ppm4_0/s00_reg12_out]
+connect_bd_net -net s00_reg13_out [get_bd_pins axi_ppm4_0/s00_reg13_out]
+connect_bd_net -net s00_reg14_out [get_bd_pins axi_ppm4_0/s00_reg14_out]
+connect_bd_net -net s00_reg15_out [get_bd_pins axi_ppm4_0/s00_reg15_out]
+set_property HDL_ATTRIBUTE.DEBUG true [get_bd_nets {s00_reg0_out s00_reg10_out s00_reg11_out s00_reg12_out s00_reg13_out s00_reg14_out s00_reg15_out }]
+endgroup
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:debug -dict [list \
+                                                          [get_bd_nets s00_reg0_out] {PROBE_TYPE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets s00_reg10_out] {PROBE_TYPE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets s00_reg11_out] {PROBE_TYPE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets s00_reg12_out] {PROBE_TYPE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets s00_reg13_out] {PROBE_TYPE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets s00_reg14_out] {PROBE_TYPE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets s00_reg15_out] {PROBE_TYPE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" } \
+                                                         ]
+endgroup
+set_property location {3 1180 -398} [get_bd_cells system_ila_0]
+save_bd_design
+regenerate_bd_layout
+undo
+validate_bd_design
+save_bd_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+save_wave_config {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
+save_wave_config {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.hw/hw_1/wave/hw_ila_data_2/hw_ila_data_2.wcfg}
+close_hw_manager
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd]
+refresh_design
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7z020_1]
+set_property PROBES.FILE {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/impl_1/design_1_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/impl_1/design_1_wrapper.ltx} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+set_property PROBES.FILE {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/impl_1/debug_nets.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/impl_1/debug_nets.ltx} [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+set_property PROBES.FILE {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/impl_1/design_1_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/impl_1/design_1_wrapper.ltx} [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+open_bd_design {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd}
+set_property pfm_name {} [get_files -all {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd}]
+write_hw_platform -fixed -include_bit -force -file C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/design_1_wrapper.xsa
+close_hw_manager
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7z020_1]
+set_property PROBES.FILE {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/impl_1/design_1_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/impl_1/design_1_wrapper.ltx} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/ila_0"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_2 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}]]
+add_wave -into {hw_ila_data_2.wcfg} -radix hex { {design_1_i/system_ila_0/U0/probe1_1} {design_1_i/system_ila_0/U0/probe2_1} {design_1_i/system_ila_0/U0/probe3_1} {design_1_i/system_ila_0/U0/probe4_1} {design_1_i/system_ila_0/U0/probe5_1} {design_1_i/system_ila_0/U0/probe6_1} {design_1_i/system_ila_0/U0/probe7_1} {design_1_i/system_ila_0/U0/probe0_1} }
+set_property NAME.CUSTOM ppm_in_0_1 [get_hw_probes design_1_i/system_ila_0/U0/probe0_1] 
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}] -trigger_now
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}] -trigger_now
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}] -trigger_now
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}]]
+open_bd_design {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd}
+set_property TRIGGER_COMPARE_VALUE neq32'hXXXX_XXXX [get_hw_probes design_1_i/system_ila_0/U0/probe2_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}]]
+set_property TRIGGER_COMPARE_VALUE neq32'h0XXX_XXXX [get_hw_probes design_1_i/system_ila_0/U0/probe2_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}]]
+set_property TRIGGER_COMPARE_VALUE neq32'h0000_0000 [get_hw_probes design_1_i/system_ila_0/U0/probe2_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}]]
+set_property TRIGGER_COMPARE_VALUE neq32'hXXXX_XXXX [get_hw_probes design_1_i/system_ila_0/U0/probe3_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}]]
+set_property TRIGGER_COMPARE_VALUE neq32'h0000_0000 [get_hw_probes design_1_i/system_ila_0/U0/probe3_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}]]
+set_property TRIGGER_COMPARE_VALUE eq32'h0000_0000 [get_hw_probes design_1_i/system_ila_0/U0/probe4_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}]]
+set_property TRIGGER_COMPARE_VALUE eq32'h0000_0000 [get_hw_probes design_1_i/system_ila_0/U0/probe5_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}]]
+set_property TRIGGER_COMPARE_VALUE neq32'h0000_0000 [get_hw_probes design_1_i/system_ila_0/U0/probe4_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}]]
+set_property TRIGGER_COMPARE_VALUE neq32'h0000_0000 [get_hw_probes design_1_i/system_ila_0/U0/probe5_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}]]
+set_property TRIGGER_COMPARE_VALUE neq32'hXXXX_XXXX [get_hw_probes design_1_i/system_ila_0/U0/probe6_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}]]
+set_property TRIGGER_COMPARE_VALUE neq32'h0000_0000 [get_hw_probes design_1_i/system_ila_0/U0/probe6_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}]]
+set_property TRIGGER_COMPARE_VALUE neq32'hXXXX_XXXX [get_hw_probes design_1_i/system_ila_0/U0/probe7_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}]]
+set_property TRIGGER_COMPARE_VALUE neq32'h0000_0000 [get_hw_probes design_1_i/system_ila_0/U0/probe7_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}]
+set_property TRIGGER_COMPARE_VALUE eq1'bX [get_hw_probes design_1_i/system_ila_0/U0/probe0_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}]
+open_bd_design {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd}
+connect_bd_net [get_bd_pins ps7_0_axi_periph/M00_AXI_wdata] [get_bd_pins axi_ppm4_0/s00_axi_wdata]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 xlslice_0
+endgroup
+connect_bd_net [get_bd_pins ps7_0_axi_periph/M00_AXI_awaddr] [get_bd_pins xlslice_0/Din]
+startgroup
+set_property -dict [list CONFIG.DIN_TO {5} CONFIG.DIN_FROM {5}] [get_bd_cells xlslice_0]
+endgroup
+startgroup
+set_property -dict [list CONFIG.DIN_TO {0} CONFIG.DIN_FROM {5} CONFIG.DOUT_WIDTH {6}] [get_bd_cells xlslice_0]
+endgroup
+connect_bd_net [get_bd_pins xlslice_0/Dout] [get_bd_pins axi_ppm4_0/s00_axi_awaddr]
+regenerate_bd_layout
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:system_ila:1.1 system_ila_1
+endgroup
+delete_bd_objs [get_bd_cells system_ila_1]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:ila:6.2 ila_1
+endgroup
+set_property location {1 340 1388} [get_bd_cells ila_1]
+open_bd_design {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd}
+connect_bd_net [get_bd_pins ila_1/probe5] [get_bd_pins ps7_0_axi_periph/M00_AXI_awaddr]
+connect_bd_net [get_bd_pins ila_1/probe10] [get_bd_pins ps7_0_axi_periph/M00_AXI_wdata]
+connect_bd_net [get_bd_pins ila_1/probe9] [get_bd_pins axi_ppm4_0/s00_ppm_out]
+save_bd_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+connect_bd_net [get_bd_pins ila_1/clk] [get_bd_pins processing_system7_0/FCLK_CLK0]
+save_bd_design
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+reset_run impl_1
+update_ip_catalog -rebuild -scan_changes
+report_ip_status -name ip_status
+upgrade_ip -vlnv iastate.edu:user:axi_ppm4:1.0 [get_ips  design_1_axi_ppm4_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips design_1_axi_ppm4_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd]
+catch { config_ip_cache -export [get_ips -all design_1_axi_ppm4_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_system_ila_0_1] }
+catch { config_ip_cache -export [get_ips -all design_1_auto_pc_0] }
+export_ip_user_files -of_objects [get_files C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs design_1_axi_ppm4_0_0_synth_1 -jobs 20
+wait_on_run design_1_axi_ppm4_0_0_synth_1
+export_simulation -of_objects [get_files C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd] -directory C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.ip_user_files -ipstatic_source_dir C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.cache/compile_simlib/modelsim} {questa=C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.cache/compile_simlib/questa} {riviera=C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.cache/compile_simlib/riviera} {activehdl=C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 20
+wait_on_run impl_1
+open_bd_design {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd}
+set_property pfm_name {} [get_files -all {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd}]
+write_hw_platform -fixed -include_bit -force -file C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/design_1_wrapper.xsa
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}]
+open_bd_design {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd}
+delete_bd_objs [get_bd_nets xlconstant_0_dout1] [get_bd_nets xlconstant_0_dout] [get_bd_nets xlconstant_1_dout] [get_bd_nets xlconstant_2_dout] [get_bd_nets constant_low_dout]
+delete_bd_objs [get_bd_nets ps7_0_axi_periph_M00_AXI_wdata]
+set_property location {3 1099 294} [get_bd_cells axi_ppm4_0]
+connect_bd_net [get_bd_pins ps7_0_axi_periph/M00_AXI_awprot] [get_bd_pins axi_ppm4_0/s00_axi_awprot]
+connect_bd_net [get_bd_pins ps7_0_axi_periph/M00_AXI_awvalid] [get_bd_pins axi_ppm4_0/s00_axi_awvalid]
+connect_bd_net [get_bd_pins ps7_0_axi_periph/M00_AXI_awready] [get_bd_pins axi_ppm4_0/s00_axi_awready]
+connect_bd_net [get_bd_pins ps7_0_axi_periph/M00_AXI_wdata] [get_bd_pins axi_ppm4_0/s00_axi_wdata]
+connect_bd_net [get_bd_pins ps7_0_axi_periph/M00_AXI_wstrb] [get_bd_pins axi_ppm4_0/s00_axi_wstrb]
+connect_bd_net [get_bd_pins ps7_0_axi_periph/M00_AXI_wvalid] [get_bd_pins axi_ppm4_0/s00_axi_wvalid]
+connect_bd_net [get_bd_pins ps7_0_axi_periph/M00_AXI_wready] [get_bd_pins axi_ppm4_0/s00_axi_wready]
+connect_bd_net [get_bd_pins ps7_0_axi_periph/M00_AXI_bresp] [get_bd_pins axi_ppm4_0/s00_axi_bresp]
+connect_bd_net [get_bd_pins ps7_0_axi_periph/M00_AXI_bvalid] [get_bd_pins axi_ppm4_0/s00_axi_bvalid]
+connect_bd_net [get_bd_pins ps7_0_axi_periph/M00_AXI_bready] [get_bd_pins axi_ppm4_0/s00_axi_bready]
+copy_bd_objs /  [get_bd_cells {xlslice_0}]
+set_property location {2 765 761} [get_bd_cells xlslice_1]
+connect_bd_net [get_bd_pins ps7_0_axi_periph/M00_AXI_araddr] [get_bd_pins xlslice_1/Din]
+connect_bd_net [get_bd_pins axi_ppm4_0/s00_axi_araddr] [get_bd_pins xlslice_1/Dout]
+connect_bd_net [get_bd_pins axi_ppm4_0/s00_axi_arprot] [get_bd_pins ps7_0_axi_periph/M00_AXI_arprot]
+connect_bd_net [get_bd_pins ps7_0_axi_periph/M00_AXI_arvalid] [get_bd_pins axi_ppm4_0/s00_axi_arvalid]
+connect_bd_net [get_bd_pins ps7_0_axi_periph/M00_AXI_arready] [get_bd_pins axi_ppm4_0/s00_axi_arready]
+connect_bd_net [get_bd_pins ps7_0_axi_periph/M00_AXI_rdata] [get_bd_pins axi_ppm4_0/s00_axi_rdata]
+connect_bd_net [get_bd_pins ps7_0_axi_periph/M00_AXI_rresp] [get_bd_pins axi_ppm4_0/s00_axi_rresp]
+connect_bd_net [get_bd_pins ps7_0_axi_periph/M00_AXI_rvalid] [get_bd_pins axi_ppm4_0/s00_axi_rvalid]
+connect_bd_net [get_bd_pins ps7_0_axi_periph/M00_AXI_rready] [get_bd_pins axi_ppm4_0/s00_axi_rready]
+regenerate_bd_layout
+save_bd_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 20
+wait_on_run impl_1
+reset_run impl_1 -prev_step 
+open_bd_design {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd}
+delete_bd_objs [get_bd_intf_nets ps7_0_axi_periph_M00_AXI]
+delete_bd_objs [get_bd_nets s00_reg12_out] [get_bd_nets s00_reg0_out] [get_bd_nets s00_reg10_out] [get_bd_nets s00_reg11_out] [get_bd_nets s00_reg13_out] [get_bd_nets s00_reg14_out] [get_bd_nets s00_reg15_out] [get_bd_cells system_ila_0]
+undo
+delete_bd_objs [get_bd_nets ppm_in_0_1]
+undo
+disconnect_bd_net /ppm_in_0_1 [get_bd_pins system_ila_0/probe0]
+set_property HDL_ATTRIBUTE.DEBUG true [get_bd_nets {ps7_0_axi_periph_M00_AXI_wvalid M00_AXI_rvalid_1 ps7_0_axi_periph_M00_AXI_arprot M00_AXI_arready_1 ps7_0_axi_periph_M00_AXI_bready ps7_0_axi_periph_M00_AXI_arvalid M00_AXI_rdata_1 M00_AXI_bvalid_1 M00_AXI_rresp_1 M00_AXI_awready_1 ps7_0_axi_periph_M00_AXI_rready ps7_0_axi_periph_M00_AXI_awvalid xlslice_0_Dout ps7_0_axi_periph_M00_AXI_awprot xlslice_1_Dout ppm_in_0_1 M00_AXI_wready_1 M00_AXI_bresp_1 ps7_0_axi_periph_M00_AXI_wstrb ps7_0_axi_periph_M00_AXI_wdata }]
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:debug -dict [list \
+                                                          [get_bd_nets M00_AXI_arready_1] {PROBE_TYPE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets M00_AXI_awready_1] {PROBE_TYPE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets M00_AXI_bresp_1] {PROBE_TYPE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets M00_AXI_bvalid_1] {PROBE_TYPE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets M00_AXI_rdata_1] {PROBE_TYPE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets M00_AXI_rresp_1] {PROBE_TYPE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets M00_AXI_rvalid_1] {PROBE_TYPE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets M00_AXI_wready_1] {PROBE_TYPE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets ppm_in_0_1] {PROBE_TYPE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets ps7_0_axi_periph_M00_AXI_arprot] {PROBE_TYPE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets ps7_0_axi_periph_M00_AXI_arvalid] {PROBE_TYPE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets ps7_0_axi_periph_M00_AXI_awprot] {PROBE_TYPE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets ps7_0_axi_periph_M00_AXI_awvalid] {PROBE_TYPE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets ps7_0_axi_periph_M00_AXI_bready] {PROBE_TYPE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets ps7_0_axi_periph_M00_AXI_rready] {PROBE_TYPE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets ps7_0_axi_periph_M00_AXI_wdata] {PROBE_TYPE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets ps7_0_axi_periph_M00_AXI_wstrb] {PROBE_TYPE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets ps7_0_axi_periph_M00_AXI_wvalid] {PROBE_TYPE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets xlslice_0_Dout] {PROBE_TYPE "Data and Trigger" CLK_SRC "None (Connect manually)" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets xlslice_1_Dout] {PROBE_TYPE "Data and Trigger" CLK_SRC "None (Connect manually)" SYSTEM_ILA "Auto" } \
+                                                         ]
+endgroup
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (100 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins system_ila_1/clk]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (100 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins system_ila_2/clk]
+endgroup
+startgroup
+set_property -dict [list CONFIG.C_BRAM_CNT {6} CONFIG.C_DATA_DEPTH {8192}] [get_bd_cells system_ila_0]
+endgroup
+startgroup
+set_property -dict [list CONFIG.C_DATA_DEPTH {8192}] [get_bd_cells system_ila_1]
+endgroup
+startgroup
+set_property -dict [list CONFIG.C_DATA_DEPTH {8192}] [get_bd_cells system_ila_2]
+endgroup
+save_bd_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 20
+connect_bd_intf_net -boundary_type upper [get_bd_intf_pins ps7_0_axi_periph/M00_AXI] [get_bd_intf_pins axi_ppm4_0/S00_AXI]
+save_bd_design
+launch_runs impl_1 -to_step write_bitstream -jobs 20
+wait_on_run impl_1
+validate_bd_design -force
+startgroup
+set_property -dict [list CONFIG.C_BRAM_CNT {14} CONFIG.C_PROBE23_WIDTH {4} CONFIG.C_PROBE22_WIDTH {32} CONFIG.C_PROBE18_WIDTH {3} CONFIG.C_PROBE16_WIDTH {3} CONFIG.C_PROBE_WIDTH_PROPAGATION {MANUAL}] [get_bd_cells system_ila_0]
+endgroup
+save_bd_design
+reset_run synth_1
+reset_run design_1_system_ila_0_1_synth_1
+reset_run design_1_system_ila_1_0_synth_1
+reset_run design_1_system_ila_2_0_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 20
+wait_on_run impl_1
+startgroup
+set_property -dict [list CONFIG.C_BRAM_CNT {70} CONFIG.C_PROBE12_WIDTH {2} CONFIG.C_PROBE11_WIDTH {32} CONFIG.C_PROBE9_WIDTH {2} CONFIG.C_PROBE7_WIDTH {32} CONFIG.C_PROBE6_WIDTH {32} CONFIG.C_PROBE5_WIDTH {32} CONFIG.C_PROBE4_WIDTH {32} CONFIG.C_PROBE3_WIDTH {32} CONFIG.C_PROBE2_WIDTH {32} CONFIG.C_PROBE1_WIDTH {32}] [get_bd_cells system_ila_0]
+endgroup
+save_bd_design
+reset_run synth_1
+reset_run design_1_system_ila_0_1_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 20
+wait_on_run impl_1
+set_property pfm_name {} [get_files -all {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd}]
+write_hw_platform -fixed -include_bit -force -file C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/design_1_wrapper.xsa
+save_wave_config {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
+save_wave_config {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.hw/hw_1/wave/hw_ila_data_2/hw_ila_data_2.wcfg}
+close_hw_manager
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd]
+refresh_design
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7z020_1]
+set_property PROBES.FILE {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/impl_1/design_1_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/impl_1/design_1_wrapper.ltx} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/ila_0"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_2 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/ila_1"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_3 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_4 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_1/U0/ila_lib"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_5 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_2/U0/ila_lib"}]]
+open_bd_design {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd}
+add_wave -into {hw_ila_data_1.wcfg} -radix hex { {design_1_i/probe0} {design_1_i/probe1} {design_1_i/probe2} {design_1_i/probe3} {design_1_i/probe4} {design_1_i/probe5} {design_1_i/probe6} {design_1_i/probe7} {design_1_i/probe8} {design_1_i/probe9} {design_1_i/probe10} {design_1_i/probe11} {design_1_i/probe12} {design_1_i/probe13} {design_1_i/probe14} {design_1_i/probe15} {design_1_i/probe16} {design_1_i/probe17} {design_1_i/probe18} {design_1_i/probe19} {design_1_i/probe20} {design_1_i/probe21} {design_1_i/probe22} {design_1_i/probe23} {design_1_i/probe24} {design_1_i/probe25} {design_1_i/probe26} {design_1_i/probe27} {design_1_i/probe28} {design_1_i/probe29} {design_1_i/probe30} {design_1_i/probe31} {design_1_i/probe32} {design_1_i/probe33} {design_1_i/probe34} {design_1_i/probe35} {design_1_i/probe36} {design_1_i/probe37} {design_1_i/probe38} {design_1_i/probe39} {design_1_i/probe40} {design_1_i/probe41} {design_1_i/probe42} {design_1_i/probe43} }
+open_bd_design {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd}
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/ila_0"}]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/ila_0"}]]
+open_bd_design {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd}
+open_bd_design {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd}
+open_bd_design {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd}
+open_bd_design {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd}
+open_bd_design {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd}
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/ila_0"}]]
+open_bd_design {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd}
+open_bd_design {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd}
+add_wave -into {hw_ila_data_1.wcfg} -radix hex { {design_1_i/probe1} }
+add_wave -into {hw_ila_data_1.wcfg} -radix hex { {design_1_i/probe5} }
+add_wave -into {hw_ila_data_1.wcfg} -radix hex { {design_1_i/probe10} }
+add_wave -into {hw_ila_data_1.wcfg} -radix hex { {design_1_i/probe14} }
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/ila_0"}]
+set_property TRIGGER_COMPARE_VALUE neq32'hXXXX_XXXX [get_hw_probes design_1_i/probe1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/ila_0"}]]
+set_property TRIGGER_COMPARE_VALUE neq32'h0000_0000 [get_hw_probes design_1_i/probe1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/ila_0"}]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/ila_0"}]
+open_bd_design {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd}
+add_wave -into {hw_ila_data_2.wcfg} -radix hex { {design_1_i/ps7_0_axi_periph_M00_AXI_awaddr} {design_1_i/axi_ppm4_0_s00_ppm_out} }
+save_wave_config {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.hw/hw_1/wave/hw_ila_data_5/hw_ila_data_5.wcfg}
+save_wave_config {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
+save_wave_config {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.hw/hw_1/wave/hw_ila_data_3/hw_ila_data_3.wcfg}
+save_wave_config {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.hw/hw_1/wave/hw_ila_data_2/hw_ila_data_2.wcfg}
+save_wave_config {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.hw/hw_1/wave/hw_ila_data_5/hw_ila_data_5.wcfg}
+save_wave_config {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
+save_wave_config {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.hw/hw_1/wave/hw_ila_data_4/hw_ila_data_4.wcfg}
+set_property TRIGGER_COMPARE_VALUE neq6'hXX [get_hw_probes design_1_i/system_ila_2/U0/probe0_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_2/U0/ila_lib"}]]
+set_property TRIGGER_COMPARE_VALUE neq6'h00 [get_hw_probes design_1_i/system_ila_2/U0/probe0_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_2/U0/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_1/U0/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_1/U0/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_1/U0/ila_lib"}]]
+open_bd_design {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd}
+set_property TRIGGER_COMPARE_VALUE neq1'bX [get_hw_probes design_1_i/axi_ppm4_0_s00_ppm_out -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/ila_1"}]]
+set_property TRIGGER_COMPARE_VALUE neq32'h0000_0000 [get_hw_probes design_1_i/ps7_0_axi_periph_M00_AXI_awaddr -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/ila_1"}]]
+set_property TRIGGER_COMPARE_VALUE eq32'h0000_0000 [get_hw_probes design_1_i/ps7_0_axi_periph_M00_AXI_awaddr -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/ila_1"}]]
+set_property TRIGGER_COMPARE_VALUE neq1'b0 [get_hw_probes design_1_i/axi_ppm4_0_s00_ppm_out -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/ila_1"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/ila_1"}]
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/ila_1"}]
+upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/ila_1"}]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/ila_1"}] -trigger_now
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/ila_1"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/ila_1"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/ila_1"}]
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/ila_1"}]
+upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/ila_1"}]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/ila_1"}] -trigger_now
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/ila_1"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/ila_1"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/ila_1"}] -trigger_now
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/ila_1"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/ila_1"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/ila_1"}] -trigger_now
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/ila_1"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/ila_1"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/ila_1"}] -trigger_now
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/ila_1"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/ila_1"}]]
+set_property TRIGGER_COMPARE_VALUE neq32'hXXXX_XXXX [get_hw_probes design_1_i/system_ila_0/U0/probe22_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}]]
+set_property TRIGGER_COMPARE_VALUE neq32'h0000_0000 [get_hw_probes design_1_i/system_ila_0/U0/probe22_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}] -trigger_now
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}] -trigger_now
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}] -trigger_now
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}] -trigger_now
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/ila_1"}] -trigger_now
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/ila_1"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/ila_1"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/ila_1"}] -trigger_now
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/ila_1"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/ila_1"}]]
+open_bd_design {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd}
+add_wave -into {hw_ila_data_3.wcfg} -radix hex { {design_1_i/system_ila_0/U0/probe1_1} {design_1_i/system_ila_0/U0/probe2_1} {design_1_i/system_ila_0/U0/probe3_1} {design_1_i/system_ila_0/U0/probe4_1} {design_1_i/system_ila_0/U0/probe5_1} {design_1_i/system_ila_0/U0/probe6_1} {design_1_i/system_ila_0/U0/probe7_1} }
+set_property NAME.CUSTOM s00_reg0_out [get_hw_probes design_1_i/system_ila_0/U0/probe1_1] 
+set_property NAME.CUSTOM s00_reg10_out [get_hw_probes design_1_i/system_ila_0/U0/probe2_1] 
+set_property NAME.CUSTOM s00_reg11_out [get_hw_probes design_1_i/system_ila_0/U0/probe3_1] 
+set_property NAME.CUSTOM s00_reg12_out [get_hw_probes design_1_i/system_ila_0/U0/probe4_1] 
+set_property NAME.CUSTOM s00_reg13_out [get_hw_probes design_1_i/system_ila_0/U0/probe5_1] 
+set_property NAME.CUSTOM s00_reg14_out [get_hw_probes design_1_i/system_ila_0/U0/probe6_1] 
+set_property NAME.CUSTOM s00_reg15_out [get_hw_probes design_1_i/system_ila_0/U0/probe7_1] 
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}] -trigger_now
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}] -trigger_now
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}]]
+open_bd_design {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd}
+update_ip_catalog -rebuild -scan_changes
+report_ip_status -name ip_status
+upgrade_ip -vlnv iastate.edu:user:axi_ppm4:1.0 [get_ips  design_1_axi_ppm4_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips design_1_axi_ppm4_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd]
+catch { config_ip_cache -export [get_ips -all design_1_axi_ppm4_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_system_ila_0_1] }
+catch { [ delete_ip_run [get_ips -all design_1_system_ila_0_1] ] }
+catch { config_ip_cache -export [get_ips -all design_1_system_ila_1_0] }
+catch { config_ip_cache -export [get_ips -all design_1_system_ila_2_0] }
+catch { config_ip_cache -export [get_ips -all design_1_auto_pc_0] }
+export_ip_user_files -of_objects [get_files C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs design_1_axi_ppm4_0_0_synth_1 -jobs 20
+wait_on_run design_1_axi_ppm4_0_0_synth_1
+export_simulation -of_objects [get_files C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd] -directory C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.ip_user_files -ipstatic_source_dir C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.cache/compile_simlib/modelsim} {questa=C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.cache/compile_simlib/questa} {riviera=C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.cache/compile_simlib/riviera} {activehdl=C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 20
+wait_on_run impl_1
+set_property pfm_name {} [get_files -all {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd}]
+write_hw_platform -fixed -include_bit -force -file C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/design_1_wrapper.xsa
+save_wave_config {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.hw/hw_1/wave/hw_ila_data_3/hw_ila_data_3.wcfg}
+save_wave_config {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.hw/hw_1/wave/hw_ila_data_2/hw_ila_data_2.wcfg}
+save_wave_config {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.hw/hw_1/wave/hw_ila_data_5/hw_ila_data_5.wcfg}
+save_wave_config {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
+save_wave_config {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.hw/hw_1/wave/hw_ila_data_4/hw_ila_data_4.wcfg}
+close_hw_manager

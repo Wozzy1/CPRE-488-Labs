@@ -2,10 +2,10 @@
 # Vivado v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Fri Feb 20 15:17:26 2026
-# Process ID: 20648
+# Start of session at: Fri Feb 20 20:38:36 2026
+# Process ID: 2172
 # Current directory: C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent24152 C:\Users\diepw50\CPRE-488-Labs\MP-1\hw\MP-1\MP-1.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent27392 C:\Users\diepw50\CPRE-488-Labs\MP-1\hw\MP-1\MP-1.xpr
 # Log file: C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/vivado.log
 # Journal file: C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1\vivado.jou
 #-----------------------------------------------------------
@@ -19,11 +19,7 @@ INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/diepw50/CPRE-488-Lab
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/ppm2_1.0'.
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm_1.0'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.1/data/ip'.
-WARNING: [BD 41-1661] One or more IPs have been locked in the design 'design_1.bd'. Please run report_ip_status for more details and recommendations on how to fix this issue.
-List of locked IPs:
-design_1_axi_ppm4_0_0
-
-update_compile_order -fileset sources_1
+open_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:05 . Memory (MB): peak = 1014.602 ; gain = 0.000
 open_bd_design {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd}
 Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
 WARNING: [BD 41-176] The physical port 'S_AXI_GP2_rd_socket' specified in the portmap, is not found on the block! 
@@ -33,83 +29,30 @@ WARNING: [BD 41-176] The physical port 'S_AXI_GP3_wr_socket' specified in the po
 Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - ps7_0_axi_periph
 Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
 Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_100M
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - constant_high
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - constant_low
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - xlconstant_0
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - xlconstant_1
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - xlconstant_2
+Adding component instance block -- xilinx.com:ip:ila:6.2 - ila_0
+INFO: [xilinx.com:ip:ila:6.2-6] /ila_0: Xilinx recommends using the System ILA IP in IP Integrator. The System ILA IP is functionally equivalent to an ILA and offers additional benefits in debugging interfaces both within IP Integrator and the Hardware Manager. Consult the Programming and Debug User Guide UG908 for further details.
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_0
+Adding component instance block -- xilinx.com:ip:ila:6.2 - ila_1
+INFO: [xilinx.com:ip:ila:6.2-6] /ila_1: Xilinx recommends using the System ILA IP in IP Integrator. The System ILA IP is functionally equivalent to an ILA and offers additional benefits in debugging interfaces both within IP Integrator and the Hardware Manager. Consult the Programming and Debug User Guide UG908 for further details.
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_1
 Adding component instance block -- xilinx.com:ip:system_ila:1.1 - system_ila_0
+Adding component instance block -- xilinx.com:ip:system_ila:1.1 - system_ila_1
+Adding component instance block -- xilinx.com:ip:system_ila:1.1 - system_ila_2
 Adding component instance block -- iastate.edu:user:axi_ppm4:1.0 - axi_ppm4_0
 Successfully read diagram <design_1> from BD file <C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd>
-connect_bd_net [get_bd_ports ppm_in_0] [get_bd_pins axi_ppm4_0/s00_ppm_in]
-startgroup
-make_bd_pins_external  [get_bd_pins axi_ppm4_0/s00_ppm_out]
-endgroup
-save_bd_design
-Wrote  : <C:\Users\diepw50\CPRE-488-Labs\MP-1\hw\MP-1\MP-1.srcs\sources_1\bd\design_1\design_1.bd> 
-Wrote  : <C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 10
-WARNING: [Runs 36-337] The following IPs are either missing output products or output products are not up-to-date for Synthesis target. Since these IPs are locked, no update to the output products can be done. 
-Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
-C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd
-
-WARNING: [Runs 36-337] The following IPs are either missing output products or output products are not up-to-date for Implementation target. Since these IPs are locked, no update to the output products can be done. 
-Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
-C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd
-
-[Fri Feb 20 15:21:43 2026] Launched synth_1...
-Run output will be captured here: C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/synth_1/runme.log
-[Fri Feb 20 15:21:43 2026] Launched impl_1...
-Run output will be captured here: C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/impl_1/runme.log
-report_ip_status -name ip_status 
-upgrade_ip -vlnv iastate.edu:user:axi_ppm4:1.0 [get_ips  design_1_axi_ppm4_0_0] -log ip_upgrade.log
-Upgrading 'C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd'
-WARNING: [Vivado 12-1017] Problems encountered:
-1. Failed to delete one or more files in run directory C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/design_1_axi_ppm4_0_0_synth_1
-
-INFO: [IP_Flow 19-3422] Upgraded design_1_axi_ppm4_0_0 (axi_ppm4_v1.0 1.0) from revision 17 to revision 27
-Wrote  : <C:\Users\diepw50\CPRE-488-Labs\MP-1\hw\MP-1\MP-1.srcs\sources_1\bd\design_1\design_1.bd> 
-INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/ip_upgrade.log'.
-export_ip_user_files -of_objects [get_ips design_1_axi_ppm4_0_0] -no_script -sync -force -quiet
-generate_target all [get_files  C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd]
-WARNING: [BD 41-1781] Updates have been made to one or more nets/interface connections marked for debug.
-Debug nets, which are already connected to any ILA IP core in the block-design, will be automatically available for debug in Hardware Manager.
-For unconnected Debug nets, please open synthesized design and use 'Set Up Debug' wizard to insert, modify or delete Debug Cores. 
-WARNING: [BD 41-176] The physical port 'S_AXI_GP2_rd_socket' specified in the portmap, is not found on the block! 
-WARNING: [BD 41-176] The physical port 'S_AXI_GP2_wr_socket' specified in the portmap, is not found on the block! 
-WARNING: [BD 41-176] The physical port 'S_AXI_GP3_rd_socket' specified in the portmap, is not found on the block! 
-WARNING: [BD 41-176] The physical port 'S_AXI_GP3_wr_socket' specified in the portmap, is not found on the block! 
-WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_ILA_CLK_FREQ(100000000) on '/ila_lib' with propagated value(1e+08). Command ignored
-Wrote  : <C:\Users\diepw50\CPRE-488-Labs\MP-1\hw\MP-1\MP-1.srcs\sources_1\bd\design_1\design_1.bd> 
-VHDL Output written to : C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/synth/design_1.vhd
-VHDL Output written to : C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/sim/design_1.vhd
-VHDL Output written to : C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
-WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI_GP0'. A default connection has been created.
-INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_100M .
-Exporting to file c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_0/bd_0/hw_handoff/design_1_system_ila_0_0.hwh
-Generated Block Design Tcl file c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_0/bd_0/hw_handoff/design_1_system_ila_0_0_bd.tcl
-Generated Hardware Definition File c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_0/bd_0/synth/design_1_system_ila_0_0.hwdef
-INFO: [BD 41-1029] Generation completed for the IP Integrator block system_ila_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_ppm4_0 .
-WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
-INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
-Exporting to file C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
-Generated Block Design Tcl file C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
-Generated Hardware Definition File C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/synth/design_1.hwdef
-generate_target: Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1309.461 ; gain = 244.258
-catch { config_ip_cache -export [get_ips -all design_1_processing_system7_0_0] }
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_processing_system7_0_0, cache-ID = dd156716fadeee42; cache size = 31.912 MB.
-catch { config_ip_cache -export [get_ips -all design_1_rst_ps7_0_100M_0] }
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_rst_ps7_0_100M_0, cache-ID = 73e35eb125e35ed5; cache size = 31.912 MB.
-catch { config_ip_cache -export [get_ips -all design_1_system_ila_0_0] }
-catch { config_ip_cache -export [get_ips -all design_1_axi_ppm4_0_0] }
-catch { config_ip_cache -export [get_ips -all design_1_auto_pc_0] }
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = 56354ab39623b423; cache size = 31.912 MB.
-export_ip_user_files -of_objects [get_files C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
-create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd]
-launch_runs design_1_system_ila_0_0_synth_1 design_1_axi_ppm4_0_0_synth_1 -jobs 10
-[Fri Feb 20 15:22:28 2026] Launched design_1_system_ila_0_0_synth_1, design_1_axi_ppm4_0_0_synth_1...
-Run output will be captured here:
-design_1_system_ila_0_0_synth_1: C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/design_1_system_ila_0_0_synth_1/runme.log
-design_1_axi_ppm4_0_0_synth_1: C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/design_1_axi_ppm4_0_0_synth_1/runme.log
-export_simulation -of_objects [get_files C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd] -directory C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.ip_user_files -ipstatic_source_dir C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.cache/compile_simlib/modelsim} {questa=C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.cache/compile_simlib/questa} {riviera=C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.cache/compile_simlib/riviera} {activehdl=C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+update_compile_order -fileset sources_1
+delete_bd_objs [get_bd_nets s00_reg10_out] [get_bd_nets s00_reg12_out] [get_bd_nets s00_reg13_out] [get_bd_nets s00_reg0_out] [get_bd_nets s00_reg15_out] [get_bd_nets s00_reg11_out] [get_bd_nets s00_reg14_out] [get_bd_cells system_ila_0]
+delete_bd_objs [get_bd_cells system_ila_1]
+delete_bd_objs [get_bd_cells ila_0]
+regenerate_bd_layout
+delete_bd_objs [get_bd_cells ila_1]
+delete_bd_objs [get_bd_cells system_ila_2]
+regenerate_bd_layout
 update_ip_catalog -rebuild -scan_changes
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0'.
@@ -119,7 +62,7 @@ INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/diepw50/CPRE-488-Lab
 report_ip_status -name ip_status
 upgrade_ip -vlnv iastate.edu:user:axi_ppm4:1.0 [get_ips  design_1_axi_ppm4_0_0] -log ip_upgrade.log
 Upgrading 'C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd'
-INFO: [IP_Flow 19-3422] Upgraded design_1_axi_ppm4_0_0 (axi_ppm4_v1.0 1.0) from revision 27 to revision 28
+INFO: [IP_Flow 19-3422] Upgraded design_1_axi_ppm4_0_0 (axi_ppm4_v1.0 1.0) from revision 32 to revision 33
 Wrote  : <C:\Users\diepw50\CPRE-488-Labs\MP-1\hw\MP-1\MP-1.srcs\sources_1\bd\design_1\design_1.bd> 
 Wrote  : <C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
 INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/ip_upgrade.log'.
@@ -128,791 +71,170 @@ generate_target all [get_files  C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1
 WARNING: [BD 41-1781] Updates have been made to one or more nets/interface connections marked for debug.
 Debug nets, which are already connected to any ILA IP core in the block-design, will be automatically available for debug in Hardware Manager.
 For unconnected Debug nets, please open synthesized design and use 'Set Up Debug' wizard to insert, modify or delete Debug Cores. 
-WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_ILA_CLK_FREQ(100000000) on '/ila_lib' with propagated value(1e+08). Command ignored
+WARNING: [BD 41-1271] The connection to the pin: /ps7_0_axi_periph/M00_AXI_arvalid has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /ps7_0_axi_periph/M00_AXI_bready has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /ps7_0_axi_periph/M00_AXI_wvalid has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /ps7_0_axi_periph/M00_AXI_rready has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /ps7_0_axi_periph/M00_AXI_awaddr has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_awready has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /ps7_0_axi_periph/M00_AXI_awprot has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_arready has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_wready has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /ps7_0_axi_periph/M00_AXI_awvalid has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /ps7_0_axi_periph/M00_AXI_wdata has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /ps7_0_axi_periph/M00_AXI_wstrb has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /ps7_0_axi_periph/M00_AXI_arprot has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_bresp has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_bvalid has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /ps7_0_axi_periph/M00_AXI_araddr has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_rdata has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_rresp has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_rvalid has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
 Wrote  : <C:\Users\diepw50\CPRE-488-Labs\MP-1\hw\MP-1\MP-1.srcs\sources_1\bd\design_1\design_1.bd> 
 VHDL Output written to : C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/synth/design_1.vhd
 VHDL Output written to : C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/sim/design_1.vhd
 VHDL Output written to : C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
-Exporting to file c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_0/bd_0/hw_handoff/design_1_system_ila_0_0.hwh
-Generated Block Design Tcl file c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_0/bd_0/hw_handoff/design_1_system_ila_0_0_bd.tcl
-Generated Hardware Definition File c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_0/bd_0/synth/design_1_system_ila_0_0.hwdef
-INFO: [BD 41-1029] Generation completed for the IP Integrator block system_ila_0 .
 INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_ppm4_0 .
 WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
 INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
 Exporting to file C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
 Generated Block Design Tcl file C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
 Generated Hardware Definition File C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/synth/design_1.hwdef
-catch { config_ip_cache -export [get_ips -all design_1_system_ila_0_0] }
 catch { config_ip_cache -export [get_ips -all design_1_axi_ppm4_0_0] }
 catch { config_ip_cache -export [get_ips -all design_1_auto_pc_0] }
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = 56354ab39623b423; cache size = 32.525 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = 56354ab39623b423; cache size = 132.322 MB.
 export_ip_user_files -of_objects [get_files C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
 create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd]
-launch_runs design_1_system_ila_0_0_synth_1 design_1_axi_ppm4_0_0_synth_1 -jobs 10
-[Fri Feb 20 15:23:07 2026] Launched design_1_system_ila_0_0_synth_1, design_1_axi_ppm4_0_0_synth_1...
-Run output will be captured here:
-design_1_system_ila_0_0_synth_1: C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/design_1_system_ila_0_0_synth_1/runme.log
-design_1_axi_ppm4_0_0_synth_1: C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/design_1_axi_ppm4_0_0_synth_1/runme.log
+launch_runs design_1_axi_ppm4_0_0_synth_1 -jobs 10
+[Fri Feb 20 20:46:19 2026] Launched design_1_axi_ppm4_0_0_synth_1...
+Run output will be captured here: C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/design_1_axi_ppm4_0_0_synth_1/runme.log
 export_simulation -of_objects [get_files C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd] -directory C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.ip_user_files -ipstatic_source_dir C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.cache/compile_simlib/modelsim} {questa=C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.cache/compile_simlib/questa} {riviera=C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.cache/compile_simlib/riviera} {activehdl=C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 10
-[Fri Feb 20 15:26:02 2026] Launched synth_1...
-Run output will be captured here: C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/synth_1/runme.log
-[Fri Feb 20 15:26:02 2026] Launched impl_1...
-Run output will be captured here: C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/impl_1/runme.log
-open_run impl_1
-INFO: [Device 21-403] Loading part xc7z020clg484-1
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.035 . Memory (MB): peak = 1512.879 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 207 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-INFO: [Project 1-479] Netlist was created with Vivado 2020.1
-INFO: [Project 1-570] Preparing netlist for logic optimization
-INFO: [Timing 38-478] Restoring timing data from binary archive.
-INFO: [Timing 38-479] Binary timing data restore complete.
-INFO: [Project 1-856] Restoring constraints from binary archive.
-INFO: [Project 1-853] Binary constraint restore complete.
-Reading XDEF placement.
-Reading placer database...
-Reading XDEF routing.
-Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.244 . Memory (MB): peak = 2220.129 ; gain = 0.000
-Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
-Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.244 . Memory (MB): peak = 2220.129 ; gain = 0.000
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2220.129 ; gain = 0.000
-INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 38 instances were transformed.
-  CFGLUT5 => CFGLUT5 (SRL16E, SRLC32E): 32 instances
-  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 6 instances
-
-open_run: Time (s): cpu = 00:00:11 ; elapsed = 00:00:09 . Memory (MB): peak = 2398.586 ; gain = 1051.445
-WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Please run report_bus_skew to ensure that bus skew requirements are met.
-INFO: [Vivado 12-8231] Launching Vitis
-INFO: [Vivado 12-417] Running vitis
-INFO: [Vivado 12-8232] Vitis launch initiated. Please check console for any further messages.
-open_bd_design {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd}
-startgroup
-create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_0
-endgroup
-connect_bd_net [get_bd_pins xlconstant_0/dout] [get_bd_pins axi_ppm4_0/s00_axi_bready]
-WARNING: [BD 41-1306] The connection to interface pin /axi_ppm4_0/s00_axi_bready is being overridden by the user. This pin will not be connected as a part of interface connection S00_AXI
-connect_bd_net [get_bd_pins axi_ppm4_0/s00_axi_awvalid] [get_bd_pins xlconstant_0/dout]
-WARNING: [BD 41-1306] The connection to interface pin /axi_ppm4_0/s00_axi_awvalid is being overridden by the user. This pin will not be connected as a part of interface connection S00_AXI
-connect_bd_net [get_bd_pins axi_ppm4_0/s00_axi_wvalid] [get_bd_pins xlconstant_0/dout]
-WARNING: [BD 41-1306] The connection to interface pin /axi_ppm4_0/s00_axi_wvalid is being overridden by the user. This pin will not be connected as a part of interface connection S00_AXI
-copy_bd_objs /  [get_bd_cells {xlconstant_0}]
-set_property location {1 256 -445} [get_bd_cells xlconstant_1]
-expected number but got ""
-ERROR: [IP_Flow 19-3317] Tcl Error found in 'validate_PARAM_VALUE.CONST_VAL' method. expected number but got ""
-set_property -dict [list CONFIG.CONST_VAL {0}] [get_bd_cells xlconstant_1]
-set_property name constant_low [get_bd_cells xlconstant_1]
-set_property name constant_high [get_bd_cells xlconstant_0]
-connect_bd_net [get_bd_pins axi_ppm4_0/s00_axi_rready] [get_bd_pins constant_low/dout]
-WARNING: [BD 41-1306] The connection to interface pin /axi_ppm4_0/s00_axi_rready is being overridden by the user. This pin will not be connected as a part of interface connection S00_AXI
-connect_bd_net [get_bd_pins axi_ppm4_0/s00_axi_arvalid] [get_bd_pins constant_low/dout]
-WARNING: [BD 41-1306] The connection to interface pin /axi_ppm4_0/s00_axi_arvalid is being overridden by the user. This pin will not be connected as a part of interface connection S00_AXI
-startgroup
-create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_0
-endgroup
-set_property -dict [list CONFIG.CONST_WIDTH {32} CONFIG.CONST_VAL {0}] [get_bd_cells xlconstant_0]
-connect_bd_net [get_bd_pins ps7_0_axi_periph/M00_AXI_awaddr] [get_bd_pins axi_ppm4_0/s00_axi_awaddr]
-WARNING: [BD 41-1306] The connection to interface pin /ps7_0_axi_periph/M00_AXI_awaddr is being overridden by the user. This pin will not be connected as a part of interface connection M00_AXI
-WARNING: [BD 41-1306] The connection to interface pin /axi_ppm4_0/s00_axi_awaddr is being overridden by the user. This pin will not be connected as a part of interface connection S00_AXI
-connect_bd_net [get_bd_pins ps7_0_axi_periph/M00_AXI_wdata] [get_bd_pins axi_ppm4_0/s00_axi_wdata]
-WARNING: [BD 41-1306] The connection to interface pin /ps7_0_axi_periph/M00_AXI_wdata is being overridden by the user. This pin will not be connected as a part of interface connection M00_AXI
-WARNING: [BD 41-1306] The connection to interface pin /axi_ppm4_0/s00_axi_wdata is being overridden by the user. This pin will not be connected as a part of interface connection S00_AXI
-set_property -dict [list CONFIG.CONST_WIDTH {3}] [get_bd_cells xlconstant_0]
-connect_bd_net [get_bd_pins axi_ppm4_0/s00_axi_awprot] [get_bd_pins xlconstant_0/dout]
-WARNING: [BD 41-1306] The connection to interface pin /axi_ppm4_0/s00_axi_awprot is being overridden by the user. This pin will not be connected as a part of interface connection S00_AXI
-connect_bd_net [get_bd_pins axi_ppm4_0/s00_axi_arprot] [get_bd_pins xlconstant_0/dout]
-WARNING: [BD 41-1306] The connection to interface pin /axi_ppm4_0/s00_axi_arprot is being overridden by the user. This pin will not be connected as a part of interface connection S00_AXI
-startgroup
-create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_1
-endgroup
-expected number but got ""
-ERROR: [IP_Flow 19-3317] Tcl Error found in 'validate_PARAM_VALUE.CONST_VAL' method. expected number but got ""
-expected number but got ""
-ERROR: [IP_Flow 19-3317] Tcl Error found in 'validate_PARAM_VALUE.CONST_VAL' method. expected number but got ""
-set_property -dict [list CONFIG.CONST_WIDTH {4} CONFIG.CONST_VAL {0}] [get_bd_cells xlconstant_1]
-connect_bd_net [get_bd_pins axi_ppm4_0/s00_axi_wstrb] [get_bd_pins xlconstant_1/dout]
-WARNING: [BD 41-1306] The connection to interface pin /axi_ppm4_0/s00_axi_wstrb is being overridden by the user. This pin will not be connected as a part of interface connection S00_AXI
-startgroup
-create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_2
-endgroup
-set_property -dict [list CONFIG.CONST_WIDTH {32} CONFIG.CONST_VAL {0}] [get_bd_cells xlconstant_2]
-WARNING: [BD 41-1282] Ignoring parameter WIZ_DATA_WIDTH
-WARNING: [BD 41-1282] Ignoring parameter WIZ_NUM_REG
-WARNING: [BD 41-1282] Ignoring parameter WIZ_DATA_WIDTH
-WARNING: [BD 41-1282] Ignoring parameter WIZ_NUM_REG
-set_property -dict [list CONFIG.CONST_WIDTH {6}] [get_bd_cells xlconstant_2]
-connect_bd_net [get_bd_pins axi_ppm4_0/s00_axi_araddr] [get_bd_pins xlconstant_2/dout]
-WARNING: [BD 41-1306] The connection to interface pin /axi_ppm4_0/s00_axi_araddr is being overridden by the user. This pin will not be connected as a part of interface connection S00_AXI
-save_bd_design
-Wrote  : <C:\Users\diepw50\CPRE-488-Labs\MP-1\hw\MP-1\MP-1.srcs\sources_1\bd\design_1\design_1.bd> 
-Wrote  : <C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 10
-WARNING: [BD 41-1781] Updates have been made to one or more nets/interface connections marked for debug.
-Debug nets, which are already connected to any ILA IP core in the block-design, will be automatically available for debug in Hardware Manager.
-For unconnected Debug nets, please open synthesized design and use 'Set Up Debug' wizard to insert, modify or delete Debug Cores. 
-WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_ILA_CLK_FREQ(100000000) on '/ila_lib' with propagated value(1e+08). Command ignored
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_arvalid has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_bready has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_wvalid has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_rready has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /ps7_0_axi_periph/M00_AXI_awaddr has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_awprot has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_awvalid has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /ps7_0_axi_periph/M00_AXI_wdata has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_wstrb has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_arprot has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_araddr has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-Wrote  : <C:\Users\diepw50\CPRE-488-Labs\MP-1\hw\MP-1\MP-1.srcs\sources_1\bd\design_1\design_1.bd> 
-CRITICAL WARNING: [BD 41-2383] Width mismatch when connecting input pin '/axi_ppm4_0/s00_axi_awaddr'(6) to pin '/ps7_0_axi_periph/M00_AXI_awaddr'(32) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
-VHDL Output written to : C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/synth/design_1.vhd
-CRITICAL WARNING: [BD 41-2383] Width mismatch when connecting input pin '/axi_ppm4_0/s00_axi_awaddr'(6) to pin '/ps7_0_axi_periph/M00_AXI_awaddr'(32) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
-VHDL Output written to : C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/sim/design_1.vhd
-VHDL Output written to : C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
-Exporting to file c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_0/bd_0/hw_handoff/design_1_system_ila_0_0.hwh
-Generated Block Design Tcl file c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_0/bd_0/hw_handoff/design_1_system_ila_0_0_bd.tcl
-Generated Hardware Definition File c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_0/bd_0/synth/design_1_system_ila_0_0.hwdef
-INFO: [BD 41-1029] Generation completed for the IP Integrator block system_ila_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block constant_high .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block constant_low .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_1 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_2 .
-WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
-INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
-Exporting to file C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
-Generated Block Design Tcl file C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
-Generated Hardware Definition File C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/synth/design_1.hwdef
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = 56354ab39623b423; cache size = 39.220 MB.
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_system_ila_0_0, cache-ID = 010cf9f32ea9d947; cache size = 39.220 MB.
-[Fri Feb 20 16:15:46 2026] Launched synth_1...
-Run output will be captured here: C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/synth_1/runme.log
-[Fri Feb 20 16:15:46 2026] Launched impl_1...
-Run output will be captured here: C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/impl_1/runme.log
-launch_runs: Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 2619.758 ; gain = 3.602
-startgroup
-create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 xlslice_0
-endgroup
-set_property location {2 704 -179} [get_bd_cells xlslice_0]
-set_property location {2 588 -192} [get_bd_cells xlslice_0]
-save_bd_design
-Wrote  : <C:\Users\diepw50\CPRE-488-Labs\MP-1\hw\MP-1\MP-1.srcs\sources_1\bd\design_1\design_1.bd> 
-Wrote  : <C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 10
-WARNING: [BD 41-1781] Updates have been made to one or more nets/interface connections marked for debug.
-Debug nets, which are already connected to any ILA IP core in the block-design, will be automatically available for debug in Hardware Manager.
-For unconnected Debug nets, please open synthesized design and use 'Set Up Debug' wizard to insert, modify or delete Debug Cores. 
-WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_ILA_CLK_FREQ(100000000) on '/ila_lib' with propagated value(1e+08). Command ignored
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_arvalid has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_bready has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_wvalid has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_rready has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /ps7_0_axi_periph/M00_AXI_awaddr has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_awprot has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_awvalid has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /ps7_0_axi_periph/M00_AXI_wdata has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_wstrb has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_arprot has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_araddr has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
-Please check your design and connect them as needed: 
-/xlslice_0/Din
-
-Wrote  : <C:\Users\diepw50\CPRE-488-Labs\MP-1\hw\MP-1\MP-1.srcs\sources_1\bd\design_1\design_1.bd> 
-CRITICAL WARNING: [BD 41-2383] Width mismatch when connecting input pin '/axi_ppm4_0/s00_axi_awaddr'(6) to pin '/ps7_0_axi_periph/M00_AXI_awaddr'(32) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
-VHDL Output written to : C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/synth/design_1.vhd
-CRITICAL WARNING: [BD 41-2383] Width mismatch when connecting input pin '/axi_ppm4_0/s00_axi_awaddr'(6) to pin '/ps7_0_axi_periph/M00_AXI_awaddr'(32) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
-VHDL Output written to : C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/sim/design_1.vhd
-VHDL Output written to : C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
-Exporting to file c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_0/bd_0/hw_handoff/design_1_system_ila_0_0.hwh
-Generated Block Design Tcl file c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_0/bd_0/hw_handoff/design_1_system_ila_0_0_bd.tcl
-Generated Hardware Definition File c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_0/bd_0/synth/design_1_system_ila_0_0.hwdef
-INFO: [BD 41-1029] Generation completed for the IP Integrator block system_ila_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_0 .
-WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
-INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
-Exporting to file C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
-Generated Block Design Tcl file C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
-Generated Hardware Definition File C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/synth/design_1.hwdef
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = 56354ab39623b423; cache size = 39.220 MB.
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_system_ila_0_0, cache-ID = 010cf9f32ea9d947; cache size = 39.220 MB.
-[Fri Feb 20 16:17:50 2026] Launched synth_1...
-Run output will be captured here: C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/synth_1/runme.log
-[Fri Feb 20 16:17:50 2026] Launched impl_1...
-Run output will be captured here: C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/impl_1/runme.log
-launch_runs: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 2621.820 ; gain = 1.414
-can't use empty string as operand of "-"
-ERROR: [IP_Flow 19-3477] Update of parameter 'PARAM_VALUE.DOUT_WIDTH' failed for IP 'xlslice_0'. can't use empty string as operand of "-"
-reset_run impl_1 -prev_step 
-set_property -dict [list CONFIG.DIN_FROM {5} CONFIG.DOUT_WIDTH {6}] [get_bd_cells xlslice_0]
-delete_bd_objs [get_bd_nets ps7_0_axi_periph_M00_AXI_awaddr]
-connect_bd_net [get_bd_pins ps7_0_axi_periph/M00_AXI_awaddr] [get_bd_pins xlslice_0/Din]
-WARNING: [BD 41-1306] The connection to interface pin /ps7_0_axi_periph/M00_AXI_awaddr is being overridden by the user. This pin will not be connected as a part of interface connection M00_AXI
-connect_bd_net [get_bd_pins xlslice_0/Dout] [get_bd_pins axi_ppm4_0/s00_axi_awaddr]
-WARNING: [BD 41-1306] The connection to interface pin /axi_ppm4_0/s00_axi_awaddr is being overridden by the user. This pin will not be connected as a part of interface connection S00_AXI
-save_bd_design
-Wrote  : <C:\Users\diepw50\CPRE-488-Labs\MP-1\hw\MP-1\MP-1.srcs\sources_1\bd\design_1\design_1.bd> 
-Wrote  : <C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 10
-WARNING: [BD 41-1781] Updates have been made to one or more nets/interface connections marked for debug.
-Debug nets, which are already connected to any ILA IP core in the block-design, will be automatically available for debug in Hardware Manager.
-For unconnected Debug nets, please open synthesized design and use 'Set Up Debug' wizard to insert, modify or delete Debug Cores. 
-WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_ILA_CLK_FREQ(100000000) on '/ila_lib' with propagated value(1e+08). Command ignored
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_arvalid has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_bready has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_wvalid has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_rready has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /ps7_0_axi_periph/M00_AXI_awaddr has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_awprot has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_awvalid has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /ps7_0_axi_periph/M00_AXI_wdata has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_wstrb has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_arprot has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_araddr has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-Wrote  : <C:\Users\diepw50\CPRE-488-Labs\MP-1\hw\MP-1\MP-1.srcs\sources_1\bd\design_1\design_1.bd> 
-VHDL Output written to : C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/synth/design_1.vhd
-VHDL Output written to : C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/sim/design_1.vhd
-VHDL Output written to : C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
-Exporting to file c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_0/bd_0/hw_handoff/design_1_system_ila_0_0.hwh
-Generated Block Design Tcl file c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_0/bd_0/hw_handoff/design_1_system_ila_0_0_bd.tcl
-Generated Hardware Definition File c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_0/bd_0/synth/design_1_system_ila_0_0.hwdef
-INFO: [BD 41-1029] Generation completed for the IP Integrator block system_ila_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_0 .
-WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
-INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
-Exporting to file C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
-Generated Block Design Tcl file C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
-Generated Hardware Definition File C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/synth/design_1.hwdef
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = 56354ab39623b423; cache size = 39.220 MB.
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_system_ila_0_0, cache-ID = 010cf9f32ea9d947; cache size = 39.220 MB.
-[Fri Feb 20 16:19:21 2026] Launched synth_1...
-Run output will be captured here: C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/synth_1/runme.log
-[Fri Feb 20 16:19:21 2026] Launched impl_1...
-Run output will be captured here: C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/impl_1/runme.log
-launch_runs: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 2622.637 ; gain = 0.816
-set_property pfm_name {} [get_files -all {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd}]
-write_hw_platform -fixed -include_bit -force -file C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/design_1_wrapper.xsa
-INFO: [Vivado 12-4895] Creating Hardware Platform: C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/design_1_wrapper.xsa ...
-INFO: [Hsi 55-2053] elapsed time for repository (C:/Xilinx/Vivado/2020.1/data\embeddedsw) loading 0 seconds
-INFO: [Vivado 12-4896] Successfully created Hardware Platform: C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/design_1_wrapper.xsa
-write_hw_platform: Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2805.141 ; gain = 182.504
-reset_run impl_1
-launch_runs impl_1 -jobs 10
-[Fri Feb 20 16:26:01 2026] Launched impl_1...
-Run output will be captured here: C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/impl_1/runme.log
-open_hw_manager
-connect_hw_server -allow_non_jtag
-INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
-INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
-INFO: [Labtools 27-3417] Launching cs_server...
-INFO: [Labtools 27-2221] Launch Output:
-
-
-****** Xilinx cs_server v2020.1.0
-  **** Build date : May 13 2020-20:10:29
-    ** Copyright 2017-2020 Xilinx, Inc. All Rights Reserved.
-
-
-
-open_hw_target
-INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210248B18A36
-current_hw_device [get_hw_devices xc7z020_1]
-refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z020_1] 0]
-INFO: [Labtools 27-2302] Device xc7z020 (JTAG device index = 1) is programmed with a design that has 1 ILA core(s).
-refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
-INFO: [Labtools 27-2302] Device xc7z020 (JTAG device index = 1) is programmed with a design that has 1 ILA core(s).
-WARNING: [Labtools 27-1347] Unable to find Debug Probes file [C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/impl_1/design_1_wrapper.ltx]. Please update hw_device property [PROBES.FILE]
- Update of hw_probe objects, will be skipped.
-ERROR: [Common 17-48] File not found: C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/impl_1/design_1_wrapper.ltx
-open_bd_design {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd}
-startgroup
-set_property HDL_ATTRIBUTE.DEBUG false [get_bd_nets { ppm_in_0_1 } ]
-disconnect_bd_net [get_bd_net ppm_in_0_1] [get_bd_pins system_ila_0/probe0]
-apply_bd_automation -rule xilinx.com:bd_rule:resize [get_bd_cells system_ila_0]
-endgroup
-set_property HDL_ATTRIBUTE.DEBUG true [get_bd_nets {ppm_in_0_1 }]
-true
-apply_bd_automation -rule xilinx.com:bd_rule:debug -dict [list \
-                                                          [get_bd_nets ppm_in_0_1] {PROBE_TYPE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" } \
-                                                         ]
-Debug Automation : Instantiating new System ILA block '/system_ila_0' with mode NATIVE, 0 slot interface pins and 1 probe pins. Also setting parameters on this block, corresponding to newly enabled interface pins and probe pins as specified via Debug Automation.
-Debug Automation : Connecting source clock pin /processing_system7_0/FCLK_CLK0 to the following sink clock pins :
-/system_ila_0/clk
-Debug Automation : Connecting net /ppm_in_0_1, to System ILA probe pin /system_ila_0/probe0 for debug.
-close_hw_manager
-open_hw_manager
-connect_hw_server -allow_non_jtag
-INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
-INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
-INFO: [Labtools 27-3414] Connected to existing cs_server.
-open_hw_target
-INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210248B18A36
-current_hw_device [get_hw_devices xc7z020_1]
-refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z020_1] 0]
-INFO: [Labtools 27-2302] Device xc7z020 (JTAG device index = 1) is programmed with a design that has 1 ILA core(s).
-refresh_hw_sysmon  [get_hw_sysmons localhost:3121/xilinx_tcf/Digilent/210248B18A36/xc7z020_1/SYSMON]
-refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
-INFO: [Labtools 27-2302] Device xc7z020 (JTAG device index = 1) is programmed with a design that has 1 ILA core(s).
-WARNING: [Labtools 27-1347] Unable to find Debug Probes file [C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/impl_1/design_1_wrapper.ltx]. Please update hw_device property [PROBES.FILE]
- Update of hw_probe objects, will be skipped.
-ERROR: [Common 17-48] File not found: C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/impl_1/design_1_wrapper.ltx
-open_bd_design {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd}
-set_property HDL_ATTRIBUTE.DEBUG true [get_bd_nets {ps7_0_axi_periph_M00_AXI_awaddr }]
-true
-apply_bd_automation -rule xilinx.com:bd_rule:debug -dict [list \
-                                                          [get_bd_nets ps7_0_axi_periph_M00_AXI_awaddr] {PROBE_TYPE "Data and Trigger" CLK_SRC "None (Connect manually)" SYSTEM_ILA "Auto" } \
-                                                         ]
-Debug Automation : Instantiating new System ILA block '/system_ila_1' with mode NATIVE, 0 slot interface pins and 1 probe pins. Also setting parameters on this block, corresponding to newly enabled interface pins and probe pins as specified via Debug Automation.
-Debug Automation : Connecting net /ps7_0_axi_periph_M00_AXI_awaddr, to System ILA probe pin /system_ila_1/probe0 for debug.
-apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (100 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins system_ila_1/clk]
-save_bd_design
-Wrote  : <C:\Users\diepw50\CPRE-488-Labs\MP-1\hw\MP-1\MP-1.srcs\sources_1\bd\design_1\design_1.bd> 
-Wrote  : <C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
-reset_run synth_1
-WARNING: [Vivado 12-1017] Problems encountered:
-1. Failed to delete one or more files in run directory C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/synth_1
-
-launch_runs impl_1 -to_step write_bitstream -jobs 10
-WARNING: [BD 41-1781] Updates have been made to one or more nets/interface connections marked for debug.
-Debug nets, which are already connected to any ILA IP core in the block-design, will be automatically available for debug in Hardware Manager.
-For unconnected Debug nets, please open synthesized design and use 'Set Up Debug' wizard to insert, modify or delete Debug Cores. 
-WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_ILA_CLK_FREQ(100000000) on '/ila_lib' with propagated value(1e+08). Command ignored
-WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_ILA_CLK_FREQ(100000000) on '/ila_lib' with propagated value(1e+08). Command ignored
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_arvalid has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_bready has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_wvalid has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_rready has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /ps7_0_axi_periph/M00_AXI_awaddr has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_awprot has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_awvalid has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /ps7_0_axi_periph/M00_AXI_wdata has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_wstrb has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_arprot has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_araddr has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-Wrote  : <C:\Users\diepw50\CPRE-488-Labs\MP-1\hw\MP-1\MP-1.srcs\sources_1\bd\design_1\design_1.bd> 
-CRITICAL WARNING: [BD 41-2383] Width mismatch when connecting input pin '/system_ila_1/probe0'(1) to pin '/ps7_0_axi_periph/M00_AXI_awaddr'(32) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
-VHDL Output written to : C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/synth/design_1.vhd
-CRITICAL WARNING: [BD 41-2383] Width mismatch when connecting input pin '/system_ila_1/probe0'(1) to pin '/ps7_0_axi_periph/M00_AXI_awaddr'(32) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
-VHDL Output written to : C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/sim/design_1.vhd
-VHDL Output written to : C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
-Exporting to file c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_1/bd_0/hw_handoff/design_1_system_ila_0_1.hwh
-Generated Block Design Tcl file c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_1/bd_0/hw_handoff/design_1_system_ila_0_1_bd.tcl
-Generated Hardware Definition File c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_1/bd_0/synth/design_1_system_ila_0_1.hwdef
-INFO: [BD 41-1029] Generation completed for the IP Integrator block system_ila_0 .
-Exporting to file c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/ip/design_1_system_ila_1_0/bd_0/hw_handoff/design_1_system_ila_1_0.hwh
-Generated Block Design Tcl file c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/ip/design_1_system_ila_1_0/bd_0/hw_handoff/design_1_system_ila_1_0_bd.tcl
-Generated Hardware Definition File c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/ip/design_1_system_ila_1_0/bd_0/synth/design_1_system_ila_1_0.hwdef
-INFO: [BD 41-1029] Generation completed for the IP Integrator block system_ila_1 .
-WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
-INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
-Exporting to file C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
-Generated Block Design Tcl file C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
-Generated Hardware Definition File C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/synth/design_1.hwdef
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = 56354ab39623b423; cache size = 39.220 MB.
-[Fri Feb 20 16:36:48 2026] Launched design_1_system_ila_1_0_synth_1, design_1_system_ila_0_1_synth_1, synth_1...
-Run output will be captured here:
-design_1_system_ila_1_0_synth_1: C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/design_1_system_ila_1_0_synth_1/runme.log
-design_1_system_ila_0_1_synth_1: C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/design_1_system_ila_0_1_synth_1/runme.log
-synth_1: C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/synth_1/runme.log
-[Fri Feb 20 16:36:48 2026] Launched impl_1...
-Run output will be captured here: C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/impl_1/runme.log
-launch_runs: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 4263.695 ; gain = 50.324
-reset_run synth_1
-WARNING: [Vivado 12-1017] Problems encountered:
-1. Failed to delete one or more files in run directory C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/synth_1
-
-reset_run design_1_system_ila_1_0_synth_1
-WARNING: [Vivado 12-1017] Problems encountered:
-1. Failed to delete one or more files in run directory C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/design_1_system_ila_1_0_synth_1
-
-reset_run design_1_system_ila_0_1_synth_1
-WARNING: [Vivado 12-1017] Problems encountered:
-1. Failed to delete one or more files in run directory C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/design_1_system_ila_0_1_synth_1
-
-validate_bd_design -force
-WARNING: [BD 41-1781] Updates have been made to one or more nets/interface connections marked for debug.
-Debug nets, which are already connected to any ILA IP core in the block-design, will be automatically available for debug in Hardware Manager.
-For unconnected Debug nets, please open synthesized design and use 'Set Up Debug' wizard to insert, modify or delete Debug Cores. 
-WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_ILA_CLK_FREQ(100000000) on '/ila_lib' with propagated value(1e+08). Command ignored
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_arvalid has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_bready has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_wvalid has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_rready has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /ps7_0_axi_periph/M00_AXI_awaddr has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_awprot has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_awvalid has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /ps7_0_axi_periph/M00_AXI_wdata has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_wstrb has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_arprot has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_araddr has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-startgroup
-endgroup
-validate_bd_design -force
-WARNING: [BD 41-1781] Updates have been made to one or more nets/interface connections marked for debug.
-Debug nets, which are already connected to any ILA IP core in the block-design, will be automatically available for debug in Hardware Manager.
-For unconnected Debug nets, please open synthesized design and use 'Set Up Debug' wizard to insert, modify or delete Debug Cores. 
-WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_ILA_CLK_FREQ(100000000) on '/ila_lib' with propagated value(1e+08). Command ignored
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_arvalid has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_bready has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_wvalid has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_rready has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /ps7_0_axi_periph/M00_AXI_awaddr has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_awprot has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_awvalid has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /ps7_0_axi_periph/M00_AXI_wdata has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_wstrb has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_arprot has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_araddr has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-delete_bd_objs [get_bd_cells system_ila_1]
-apply_bd_automation -rule xilinx.com:bd_rule:debug -dict [list \
-                                                          [get_bd_nets ps7_0_axi_periph_M00_AXI_awaddr] {PROBE_TYPE "Data and Trigger" CLK_SRC "None (Connect manually)" SYSTEM_ILA "Auto" } \
-                                                         ]
-Debug Automation : Instantiating new System ILA block '/system_ila_1' with mode NATIVE, 0 slot interface pins and 1 probe pins. Also setting parameters on this block, corresponding to newly enabled interface pins and probe pins as specified via Debug Automation.
-Debug Automation : Connecting net /ps7_0_axi_periph_M00_AXI_awaddr, to System ILA probe pin /system_ila_1/probe0 for debug.
-apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (100 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins system_ila_1/clk]
-validate_bd_design
-WARNING: [BD 41-1781] Updates have been made to one or more nets/interface connections marked for debug.
-Debug nets, which are already connected to any ILA IP core in the block-design, will be automatically available for debug in Hardware Manager.
-For unconnected Debug nets, please open synthesized design and use 'Set Up Debug' wizard to insert, modify or delete Debug Cores. 
-WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_ILA_CLK_FREQ(100000000) on '/ila_lib' with propagated value(1e+08). Command ignored
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_arvalid has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_bready has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_wvalid has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_rready has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /ps7_0_axi_periph/M00_AXI_awaddr has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_awprot has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_awvalid has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /ps7_0_axi_periph/M00_AXI_wdata has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_wstrb has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_arprot has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_araddr has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-save_bd_design
-Wrote  : <C:\Users\diepw50\CPRE-488-Labs\MP-1\hw\MP-1\MP-1.srcs\sources_1\bd\design_1\design_1.bd> 
-Wrote  : <C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
-validate_bd_design -force
-WARNING: [BD 41-1781] Updates have been made to one or more nets/interface connections marked for debug.
-Debug nets, which are already connected to any ILA IP core in the block-design, will be automatically available for debug in Hardware Manager.
-For unconnected Debug nets, please open synthesized design and use 'Set Up Debug' wizard to insert, modify or delete Debug Cores. 
-WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_ILA_CLK_FREQ(100000000) on '/ila_lib' with propagated value(1e+08). Command ignored
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_arvalid has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_bready has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_wvalid has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_rready has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /ps7_0_axi_periph/M00_AXI_awaddr has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_awprot has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_awvalid has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /ps7_0_axi_periph/M00_AXI_wdata has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_wstrb has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_arprot has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_araddr has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-delete_bd_objs [get_bd_cells system_ila_1]
 startgroup
 create_bd_cell -type ip -vlnv xilinx.com:ip:ila:6.2 ila_0
 INFO: [xilinx.com:ip:ila:6.2-6] /ila_0: Xilinx recommends using the System ILA IP in IP Integrator. The System ILA IP is functionally equivalent to an ILA and offers additional benefits in debugging interfaces both within IP Integrator and the Hardware Manager. Consult the Programming and Debug User Guide UG908 for further details.
 endgroup
 delete_bd_objs [get_bd_cells ila_0]
+regenerate_bd_layout
 startgroup
-create_bd_cell -type ip -vlnv xilinx.com:ip:system_ila:1.1 system_ila_1
+create_bd_cell -type ip -vlnv xilinx.com:ip:ila:6.2 ila_0
+INFO: [xilinx.com:ip:ila:6.2-6] /ila_0: Xilinx recommends using the System ILA IP in IP Integrator. The System ILA IP is functionally equivalent to an ILA and offers additional benefits in debugging interfaces both within IP Integrator and the Hardware Manager. Consult the Programming and Debug User Guide UG908 for further details.
 endgroup
-delete_bd_objs [get_bd_cells system_ila_1]
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+delete_bd_objs [get_bd_cells ila_0]
 startgroup
-set_property HDL_ATTRIBUTE.DEBUG false [get_bd_nets { ps7_0_axi_periph_M00_AXI_awaddr } ]
-endgroup
-set_property HDL_ATTRIBUTE.DEBUG true [get_bd_nets {ps7_0_axi_periph_M00_AXI_awaddr }]
+connect_bd_net -net s00_reg0_out [get_bd_pins axi_ppm4_0/s00_reg0_out]
+connect_bd_net -net s00_reg10_out [get_bd_pins axi_ppm4_0/s00_reg10_out]
+connect_bd_net -net s00_reg11_out [get_bd_pins axi_ppm4_0/s00_reg11_out]
+connect_bd_net -net s00_reg12_out [get_bd_pins axi_ppm4_0/s00_reg12_out]
+connect_bd_net -net s00_reg13_out [get_bd_pins axi_ppm4_0/s00_reg13_out]
+connect_bd_net -net s00_reg14_out [get_bd_pins axi_ppm4_0/s00_reg14_out]
+connect_bd_net -net s00_reg15_out [get_bd_pins axi_ppm4_0/s00_reg15_out]
+set_property HDL_ATTRIBUTE.DEBUG true [get_bd_nets {s00_reg0_out s00_reg10_out s00_reg11_out s00_reg12_out s00_reg13_out s00_reg14_out s00_reg15_out }]
 true
+endgroup
+startgroup
 apply_bd_automation -rule xilinx.com:bd_rule:debug -dict [list \
-                                                          [get_bd_nets ps7_0_axi_periph_M00_AXI_awaddr] {PROBE_TYPE "Data and Trigger" CLK_SRC "None (Connect manually)" SYSTEM_ILA "New" } \
+                                                          [get_bd_nets s00_reg0_out] {PROBE_TYPE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets s00_reg10_out] {PROBE_TYPE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets s00_reg11_out] {PROBE_TYPE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets s00_reg12_out] {PROBE_TYPE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets s00_reg13_out] {PROBE_TYPE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets s00_reg14_out] {PROBE_TYPE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets s00_reg15_out] {PROBE_TYPE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" } \
                                                          ]
-Debug Automation : Instantiating new System ILA block '/system_ila_1' with mode NATIVE, 0 slot interface pins and 1 probe pins. Also setting parameters on this block, corresponding to newly enabled interface pins and probe pins as specified via Debug Automation.
-Debug Automation : Connecting net /ps7_0_axi_periph_M00_AXI_awaddr, to System ILA probe pin /system_ila_1/probe0 for debug.
-apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (100 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins system_ila_1/clk]
+Debug Automation : Instantiating new System ILA block '/system_ila_0' with mode NATIVE, 0 slot interface pins and 7 probe pins. Also setting parameters on this block, corresponding to newly enabled interface pins and probe pins as specified via Debug Automation.
+Debug Automation : Connecting source clock pin /processing_system7_0/FCLK_CLK0 to the following sink clock pins :
+/system_ila_0/clk
+Debug Automation : Connecting net /s00_reg0_out, to System ILA probe pin /system_ila_0/probe0 for debug.
+Debug Automation : Connecting net /s00_reg10_out, to System ILA probe pin /system_ila_0/probe1 for debug.
+Debug Automation : Connecting net /s00_reg11_out, to System ILA probe pin /system_ila_0/probe2 for debug.
+Debug Automation : Connecting net /s00_reg12_out, to System ILA probe pin /system_ila_0/probe3 for debug.
+Debug Automation : Connecting net /s00_reg13_out, to System ILA probe pin /system_ila_0/probe4 for debug.
+Debug Automation : Connecting net /s00_reg14_out, to System ILA probe pin /system_ila_0/probe5 for debug.
+Debug Automation : Connecting net /s00_reg15_out, to System ILA probe pin /system_ila_0/probe6 for debug.
+endgroup
 validate_bd_design
 WARNING: [BD 41-1781] Updates have been made to one or more nets/interface connections marked for debug.
 Debug nets, which are already connected to any ILA IP core in the block-design, will be automatically available for debug in Hardware Manager.
 For unconnected Debug nets, please open synthesized design and use 'Set Up Debug' wizard to insert, modify or delete Debug Cores. 
 WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_ILA_CLK_FREQ(100000000) on '/ila_lib' with propagated value(1e+08). Command ignored
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_arvalid has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_bready has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_wvalid has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_rready has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /ps7_0_axi_periph/M00_AXI_arvalid has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /ps7_0_axi_periph/M00_AXI_bready has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /ps7_0_axi_periph/M00_AXI_wvalid has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /ps7_0_axi_periph/M00_AXI_rready has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
 WARNING: [BD 41-1271] The connection to the pin: /ps7_0_axi_periph/M00_AXI_awaddr has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_awprot has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_awvalid has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_awready has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /ps7_0_axi_periph/M00_AXI_awprot has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_arready has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_wready has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /ps7_0_axi_periph/M00_AXI_awvalid has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
 WARNING: [BD 41-1271] The connection to the pin: /ps7_0_axi_periph/M00_AXI_wdata has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_wstrb has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_arprot has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_araddr has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-save_bd_design
-Wrote  : <C:\Users\diepw50\CPRE-488-Labs\MP-1\hw\MP-1\MP-1.srcs\sources_1\bd\design_1\design_1.bd> 
-Wrote  : <C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
-launch_runs synth_1 -jobs 10
-INFO: [BD 41-1662] The design 'design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_arvalid has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_bready has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_wvalid has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_rready has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /ps7_0_axi_periph/M00_AXI_awaddr has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_awprot has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_awvalid has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /ps7_0_axi_periph/M00_AXI_wdata has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_wstrb has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_arprot has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_araddr has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-CRITICAL WARNING: [BD 41-2383] Width mismatch when connecting input pin '/system_ila_1/probe0'(1) to pin '/ps7_0_axi_periph/M00_AXI_awaddr'(32) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
-VHDL Output written to : C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/synth/design_1.vhd
-CRITICAL WARNING: [BD 41-2383] Width mismatch when connecting input pin '/system_ila_1/probe0'(1) to pin '/ps7_0_axi_periph/M00_AXI_awaddr'(32) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
-VHDL Output written to : C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/sim/design_1.vhd
-VHDL Output written to : C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
-Exporting to file c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_1/bd_0/hw_handoff/design_1_system_ila_0_1.hwh
-Generated Block Design Tcl file c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_1/bd_0/hw_handoff/design_1_system_ila_0_1_bd.tcl
-Generated Hardware Definition File c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_1/bd_0/synth/design_1_system_ila_0_1.hwdef
-INFO: [BD 41-1029] Generation completed for the IP Integrator block system_ila_0 .
-WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
-INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
-Exporting to file c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/ip/design_1_system_ila_1_3/bd_0/hw_handoff/design_1_system_ila_1_3.hwh
-Generated Block Design Tcl file c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/ip/design_1_system_ila_1_3/bd_0/hw_handoff/design_1_system_ila_1_3_bd.tcl
-Generated Hardware Definition File c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/ip/design_1_system_ila_1_3/bd_0/synth/design_1_system_ila_1_3.hwdef
-INFO: [BD 41-1029] Generation completed for the IP Integrator block system_ila_1 .
-Exporting to file C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
-Generated Block Design Tcl file C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
-Generated Hardware Definition File C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/synth/design_1.hwdef
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = 56354ab39623b423; cache size = 39.220 MB.
-[Fri Feb 20 16:41:03 2026] Launched design_1_system_ila_0_1_synth_1, design_1_system_ila_1_3_synth_1...
-Run output will be captured here:
-design_1_system_ila_0_1_synth_1: C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/design_1_system_ila_0_1_synth_1/runme.log
-design_1_system_ila_1_3_synth_1: C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/design_1_system_ila_1_3_synth_1/runme.log
-[Fri Feb 20 16:41:03 2026] Launched synth_1...
-Run output will be captured here: C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/synth_1/runme.log
-validate_bd_design -force
-WARNING: [BD 41-1781] Updates have been made to one or more nets/interface connections marked for debug.
-Debug nets, which are already connected to any ILA IP core in the block-design, will be automatically available for debug in Hardware Manager.
-For unconnected Debug nets, please open synthesized design and use 'Set Up Debug' wizard to insert, modify or delete Debug Cores. 
-WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_ILA_CLK_FREQ(100000000) on '/ila_lib' with propagated value(1e+08). Command ignored
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_arvalid has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_bready has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_wvalid has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_rready has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /ps7_0_axi_periph/M00_AXI_awaddr has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_awprot has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_awvalid has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /ps7_0_axi_periph/M00_AXI_wdata has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_wstrb has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_arprot has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_araddr has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /ps7_0_axi_periph/M00_AXI_wstrb has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /ps7_0_axi_periph/M00_AXI_arprot has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_bresp has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_bvalid has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /ps7_0_axi_periph/M00_AXI_araddr has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_rdata has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_rresp has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_rvalid has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
 startgroup
+set_property HDL_ATTRIBUTE.DEBUG false [get_bd_nets { M00_AXI_rvalid_1 ps7_0_axi_periph_M00_AXI_wvalid ps7_0_axi_periph_M00_AXI_arprot M00_AXI_arready_1 ps7_0_axi_periph_M00_AXI_arvalid M00_AXI_bvalid_1 ps7_0_axi_periph_M00_AXI_bready M00_AXI_rdata_1 M00_AXI_awready_1 M00_AXI_rresp_1 ps7_0_axi_periph_M00_AXI_araddr ps7_0_axi_periph_M00_AXI_awvalid ps7_0_axi_periph_M00_AXI_awprot M00_AXI_wready_1 M00_AXI_bresp_1 ps7_0_axi_periph_M00_AXI_wstrb ps7_0_axi_periph_M00_AXI_wdata ps7_0_axi_periph_M00_AXI_rready } ]
 endgroup
-validate_bd_design -force
-WARNING: [BD 41-1781] Updates have been made to one or more nets/interface connections marked for debug.
-Debug nets, which are already connected to any ILA IP core in the block-design, will be automatically available for debug in Hardware Manager.
-For unconnected Debug nets, please open synthesized design and use 'Set Up Debug' wizard to insert, modify or delete Debug Cores. 
-WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_ILA_CLK_FREQ(100000000) on '/ila_lib' with propagated value(1e+08). Command ignored
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_arvalid has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_bready has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_wvalid has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_rready has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /ps7_0_axi_periph/M00_AXI_awaddr has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_awprot has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_awvalid has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /ps7_0_axi_periph/M00_AXI_wdata has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_wstrb has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_arprot has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_araddr has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-validate_bd_design -force
-WARNING: [BD 41-1781] Updates have been made to one or more nets/interface connections marked for debug.
-Debug nets, which are already connected to any ILA IP core in the block-design, will be automatically available for debug in Hardware Manager.
-For unconnected Debug nets, please open synthesized design and use 'Set Up Debug' wizard to insert, modify or delete Debug Cores. 
-WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_ILA_CLK_FREQ(100000000) on '/ila_lib' with propagated value(1e+08). Command ignored
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_arvalid has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_bready has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_wvalid has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_rready has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /ps7_0_axi_periph/M00_AXI_awaddr has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_awprot has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_awvalid has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /ps7_0_axi_periph/M00_AXI_wdata has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_wstrb has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_arprot has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_araddr has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-save_bd_design
-Wrote  : <C:\Users\diepw50\CPRE-488-Labs\MP-1\hw\MP-1\MP-1.srcs\sources_1\bd\design_1\design_1.bd> 
-Wrote  : <C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
-reset_run synth_1
-WARNING: [Vivado 12-1017] Problems encountered:
-1. Failed to delete one or more files in run directory C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/synth_1
-
-reset_run design_1_system_ila_0_1_synth_1
-reset_run design_1_system_ila_1_3_synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 10
-INFO: [BD 41-1662] The design 'design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_arvalid has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_bready has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_wvalid has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_rready has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /ps7_0_axi_periph/M00_AXI_awaddr has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_awprot has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_awvalid has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /ps7_0_axi_periph/M00_AXI_wdata has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_wstrb has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_arprot has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_araddr has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-CRITICAL WARNING: [BD 41-2383] Width mismatch when connecting input pin '/system_ila_1/probe0'(1) to pin '/ps7_0_axi_periph/M00_AXI_awaddr'(32) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
-VHDL Output written to : C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/synth/design_1.vhd
-CRITICAL WARNING: [BD 41-2383] Width mismatch when connecting input pin '/system_ila_1/probe0'(1) to pin '/ps7_0_axi_periph/M00_AXI_awaddr'(32) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
-VHDL Output written to : C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/sim/design_1.vhd
-VHDL Output written to : C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
-Exporting to file c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_1/bd_0/hw_handoff/design_1_system_ila_0_1.hwh
-Generated Block Design Tcl file c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_1/bd_0/hw_handoff/design_1_system_ila_0_1_bd.tcl
-Generated Hardware Definition File c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_1/bd_0/synth/design_1_system_ila_0_1.hwdef
-INFO: [BD 41-1029] Generation completed for the IP Integrator block system_ila_0 .
-Exporting to file c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/ip/design_1_system_ila_1_3/bd_0/hw_handoff/design_1_system_ila_1_3.hwh
-Generated Block Design Tcl file c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/ip/design_1_system_ila_1_3/bd_0/hw_handoff/design_1_system_ila_1_3_bd.tcl
-Generated Hardware Definition File c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/ip/design_1_system_ila_1_3/bd_0/synth/design_1_system_ila_1_3.hwdef
-INFO: [BD 41-1029] Generation completed for the IP Integrator block system_ila_1 .
-WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
-INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
-Exporting to file C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
-Generated Block Design Tcl file C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
-Generated Hardware Definition File C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/synth/design_1.hwdef
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = 56354ab39623b423; cache size = 39.220 MB.
-[Fri Feb 20 16:42:20 2026] Launched design_1_system_ila_0_1_synth_1, design_1_system_ila_1_3_synth_1, synth_1...
-Run output will be captured here:
-design_1_system_ila_0_1_synth_1: C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/design_1_system_ila_0_1_synth_1/runme.log
-design_1_system_ila_1_3_synth_1: C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/design_1_system_ila_1_3_synth_1/runme.log
-synth_1: C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/synth_1/runme.log
-[Fri Feb 20 16:42:20 2026] Launched impl_1...
-Run output will be captured here: C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/impl_1/runme.log
-generate_target all [get_files  C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd]
-INFO: [BD 41-1637] Generated targets are already up-to-date for block design 'design_1' - hence not re-generating.
-catch { config_ip_cache -export [get_ips -all design_1_system_ila_0_1] }
-catch { config_ip_cache -export [get_ips -all design_1_system_ila_1_3] }
-export_ip_user_files -of_objects [get_files C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
-create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd]
-launch_runs design_1_system_ila_0_1_synth_1 design_1_system_ila_1_3_synth_1 -jobs 10
-[Fri Feb 20 16:42:39 2026] Launched design_1_system_ila_0_1_synth_1, design_1_system_ila_1_3_synth_1...
-Run output will be captured here:
-design_1_system_ila_0_1_synth_1: C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/design_1_system_ila_0_1_synth_1/runme.log
-design_1_system_ila_1_3_synth_1: C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/design_1_system_ila_1_3_synth_1/runme.log
-export_simulation -of_objects [get_files C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd] -directory C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.ip_user_files -ipstatic_source_dir C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.cache/compile_simlib/modelsim} {questa=C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.cache/compile_simlib/questa} {riviera=C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.cache/compile_simlib/riviera} {activehdl=C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
-reset_run synth_1
-WARNING: [Vivado 12-1017] Problems encountered:
-1. Failed to delete one or more files in run directory C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/synth_1
-
-launch_runs impl_1 -to_step write_bitstream -jobs 10
-[Fri Feb 20 16:43:04 2026] Launched design_1_system_ila_0_1_synth_1, design_1_system_ila_1_3_synth_1, synth_1...
-Run output will be captured here:
-design_1_system_ila_0_1_synth_1: C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/design_1_system_ila_0_1_synth_1/runme.log
-design_1_system_ila_1_3_synth_1: C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/design_1_system_ila_1_3_synth_1/runme.log
-synth_1: C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/synth_1/runme.log
-[Fri Feb 20 16:43:05 2026] Launched impl_1...
-Run output will be captured here: C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/impl_1/runme.log
 startgroup
-create_bd_cell -type ip -vlnv xilinx.com:ip:ila:6.2 ila_0
-INFO: [xilinx.com:ip:ila:6.2-6] /ila_0: Xilinx recommends using the System ILA IP in IP Integrator. The System ILA IP is functionally equivalent to an ILA and offers additional benefits in debugging interfaces both within IP Integrator and the Hardware Manager. Consult the Programming and Debug User Guide UG908 for further details.
+set_property HDL_ATTRIBUTE.DEBUG false [get_bd_nets { xlslice_0_Dout xlslice_1_Dout } ]
 endgroup
-connect_bd_net [get_bd_pins ila_0/probe1] [get_bd_pins ps7_0_axi_periph/M00_AXI_awaddr]
-WARNING: [BD 41-1306] The connection to interface pin /ila_0/probe1 is being overridden by the user. This pin will not be connected as a part of interface connection SLOT_0_AXI
-delete_bd_objs [get_bd_cells system_ila_1]
-connect_bd_net [get_bd_pins ila_0/clk] [get_bd_pins processing_system7_0/FCLK_CLK0]
+startgroup
+set_property HDL_ATTRIBUTE.DEBUG false [get_bd_nets { ppm_in_0_1 } ]
+endgroup
 save_bd_design
 Wrote  : <C:\Users\diepw50\CPRE-488-Labs\MP-1\hw\MP-1\MP-1.srcs\sources_1\bd\design_1\design_1.bd> 
 Wrote  : <C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
 reset_run synth_1
-WARNING: [Vivado 12-1017] Problems encountered:
-1. Failed to delete one or more files in run directory C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/synth_1
-
 launch_runs impl_1 -to_step write_bitstream -jobs 10
 WARNING: [BD 41-1781] Updates have been made to one or more nets/interface connections marked for debug.
 Debug nets, which are already connected to any ILA IP core in the block-design, will be automatically available for debug in Hardware Manager.
 For unconnected Debug nets, please open synthesized design and use 'Set Up Debug' wizard to insert, modify or delete Debug Cores. 
-WARNING: [IP_Flow 19-4684] Expected long value for param C_ILA_CLK_FREQ but, float/scientific notation value 1e+08 is provided. The value is converted to long type(100000000)
-WARNING: [IP_Flow 19-4684] Expected long value for param C_ILA_CLK_FREQ but, float/scientific notation value 1e+08 is provided. The value is converted to long type(100000000)
 WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_ILA_CLK_FREQ(100000000) on '/ila_lib' with propagated value(1e+08). Command ignored
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_arvalid has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_bready has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_wvalid has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_rready has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /ps7_0_axi_periph/M00_AXI_arvalid has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /ps7_0_axi_periph/M00_AXI_bready has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /ps7_0_axi_periph/M00_AXI_wvalid has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /ps7_0_axi_periph/M00_AXI_rready has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
 WARNING: [BD 41-1271] The connection to the pin: /ps7_0_axi_periph/M00_AXI_awaddr has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_awprot has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_awvalid has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_awready has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /ps7_0_axi_periph/M00_AXI_awprot has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_arready has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_wready has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /ps7_0_axi_periph/M00_AXI_awvalid has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
 WARNING: [BD 41-1271] The connection to the pin: /ps7_0_axi_periph/M00_AXI_wdata has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_wstrb has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_arprot has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
-WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_araddr has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /ps7_0_axi_periph/M00_AXI_wstrb has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /ps7_0_axi_periph/M00_AXI_arprot has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_bresp has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_bvalid has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /ps7_0_axi_periph/M00_AXI_araddr has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_rdata has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_rresp has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_rvalid has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
 Wrote  : <C:\Users\diepw50\CPRE-488-Labs\MP-1\hw\MP-1\MP-1.srcs\sources_1\bd\design_1\design_1.bd> 
 VHDL Output written to : C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/synth/design_1.vhd
 VHDL Output written to : C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/sim/design_1.vhd
 VHDL Output written to : C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
-Exporting to file c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_1/bd_0/hw_handoff/design_1_system_ila_0_1.hwh
-Generated Block Design Tcl file c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_1/bd_0/hw_handoff/design_1_system_ila_0_1_bd.tcl
-Generated Hardware Definition File c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_1/bd_0/synth/design_1_system_ila_0_1.hwdef
+Exporting to file c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_0/bd_0/hw_handoff/design_1_system_ila_0_0.hwh
+Generated Block Design Tcl file c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_0/bd_0/hw_handoff/design_1_system_ila_0_0_bd.tcl
+Generated Hardware Definition File c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_0/bd_0/synth/design_1_system_ila_0_0.hwdef
 INFO: [BD 41-1029] Generation completed for the IP Integrator block system_ila_0 .
-WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/ip/design_1_ila_0_0/design_1_ila_0_0_ooc.xdc'
-INFO: [BD 41-1029] Generation completed for the IP Integrator block ila_0 .
 WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
 INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
 Exporting to file C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
 Generated Block Design Tcl file C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
 Generated Hardware Definition File C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/synth/design_1.hwdef
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = 56354ab39623b423; cache size = 53.159 MB.
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_system_ila_0_1, cache-ID = 04853e7960940ff1; cache size = 53.159 MB.
-[Fri Feb 20 16:46:21 2026] Launched design_1_ila_0_0_synth_1, synth_1...
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = 56354ab39623b423; cache size = 132.844 MB.
+[Fri Feb 20 20:49:46 2026] Launched design_1_system_ila_0_0_synth_1, synth_1...
 Run output will be captured here:
-design_1_ila_0_0_synth_1: C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/design_1_ila_0_0_synth_1/runme.log
+design_1_system_ila_0_0_synth_1: C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/design_1_system_ila_0_0_synth_1/runme.log
 synth_1: C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/synth_1/runme.log
-[Fri Feb 20 16:46:21 2026] Launched impl_1...
+[Fri Feb 20 20:49:46 2026] Launched impl_1...
 Run output will be captured here: C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/impl_1/runme.log
-launch_runs: Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 5285.816 ; gain = 0.000
-refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
-INFO: [Labtools 27-2302] Device xc7z020 (JTAG device index = 1) is programmed with a design that has 1 ILA core(s).
-WARNING: [Labtools 27-3413] Dropping logic core with cellname:'design_1_i/ila_0' at location 'uuid_BE177176557E59FEACE2FE04795A2B22' from probes file, since it cannot be found on the programmed device.
-display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}]]
-open_bd_design {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd}
-run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}]
-INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2026-Feb-20 16:51:37
-wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}]
-display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}]]
-INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2026-Feb-20 16:51:37
-INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
-open_bd_design {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd}
-run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}]
-INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2026-Feb-20 16:52:26
-wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}]
-display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}]]
-INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2026-Feb-20 16:52:26
-INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
-open_bd_design {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd}
-run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}]
-INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2026-Feb-20 16:52:59
-wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}]
-display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}]]
-INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2026-Feb-20 16:52:59
-INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
-save_wave_config {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
-close_hw_manager
-create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd]
-refresh_design
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.071 . Memory (MB): peak = 5285.816 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 654 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-INFO: [Project 1-479] Netlist was created with Vivado 2020.1
-INFO: [Project 1-570] Preparing netlist for logic optimization
-INFO: [Timing 38-478] Restoring timing data from binary archive.
-INFO: [Timing 38-479] Binary timing data restore complete.
-INFO: [Project 1-856] Restoring constraints from binary archive.
-INFO: [Project 1-853] Binary constraint restore complete.
-Reading XDEF placement.
-Reading placer database...
-Reading XDEF routing.
-Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.479 . Memory (MB): peak = 5285.816 ; gain = 0.000
-Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
-Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.479 . Memory (MB): peak = 5285.816 ; gain = 0.000
-refresh_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 5285.816 ; gain = 0.000
-WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Please run report_bus_skew to ensure that bus skew requirements are met.
+launch_runs: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1483.367 ; gain = 14.684
 open_hw_manager
 connect_hw_server -allow_non_jtag
 INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
@@ -934,13 +256,328 @@ set_property PROBES.FILE {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/
 set_property FULL_PROBES.FILE {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/impl_1/design_1_wrapper.ltx} [get_hw_devices xc7z020_1]
 current_hw_device [get_hw_devices xc7z020_1]
 refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
-INFO: [Labtools 27-2302] Device xc7z020 (JTAG device index = 1) is programmed with a design that has 1 ILA core(s).
-WARNING: [Labtools 27-3413] Dropping logic core with cellname:'design_1_i/ila_0' at location 'uuid_BE177176557E59FEACE2FE04795A2B22' from probes file, since it cannot be found on the programmed device.
-display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}]]
-save_wave_config {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
+INFO: [Labtools 27-2302] Device xc7z020 (JTAG device index = 1) is programmed with a design that has 5 ILA core(s).
+WARNING: [Labtools 27-1974] Mismatch between the design programmed into the device xc7z020_1 and the probes file(s) C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/impl_1/design_1_wrapper.ltx.
+The device design has 5 ILA core(s) and 0 VIO core(s). 1 ILA core(s) and 0 VIO core(s) are matched in the probes file(s).
+Resolution: 
+1. Reprogram device with the correct programming file and associated probes file(s) OR
+2. Goto device properties and associate the correct probes file(s) with the programming file already programmed in the device.
 open_bd_design {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd}
 set_property pfm_name {} [get_files -all {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd}]
 write_hw_platform -fixed -include_bit -force -file C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/design_1_wrapper.xsa
 INFO: [Vivado 12-4895] Creating Hardware Platform: C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/design_1_wrapper.xsa ...
+INFO: [Hsi 55-2053] elapsed time for repository (C:/Xilinx/Vivado/2020.1/data\embeddedsw) loading 0 seconds
 INFO: [Vivado 12-4896] Successfully created Hardware Platform: C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/design_1_wrapper.xsa
-write_hw_platform: Time (s): cpu = 00:00:16 ; elapsed = 00:00:15 . Memory (MB): peak = 5285.816 ; gain = 0.000
+write_hw_platform: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2926.039 ; gain = 75.691
+close_hw_manager
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3414] Connected to existing cs_server.
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210248B18A36
+set_property PROGRAM.FILE {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7z020_1]
+set_property PROBES.FILE {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/impl_1/design_1_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/impl_1/design_1_wrapper.ltx} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-2302] Device xc7z020 (JTAG device index = 1) is programmed with a design that has 1 ILA core(s).
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}]]
+WARNING: Simulation object design_1_i/probe1 was not found in the design.
+WARNING: Simulation object design_1_i/probe5 was not found in the design.
+WARNING: Simulation object design_1_i/probe10 was not found in the design.
+WARNING: Simulation object design_1_i/probe14 was not found in the design.
+add_wave -into {hw_ila_data_1.wcfg} -radix hex { {design_1_i/system_ila_0/U0/probe0_1} {design_1_i/system_ila_0/U0/probe1_1} {design_1_i/system_ila_0/U0/probe2_1} {design_1_i/system_ila_0/U0/probe3_1} {design_1_i/system_ila_0/U0/probe4_1} {design_1_i/system_ila_0/U0/probe5_1} {design_1_i/system_ila_0/U0/probe6_1} }
+set_property NAME.CUSTOM s00_reg0_out [get_hw_probes design_1_i/system_ila_0/U0/probe0_1] 
+set_property NAME.CUSTOM s00_reg10_out [get_hw_probes design_1_i/system_ila_0/U0/probe1_1] 
+set_property NAME.CUSTOM s00_reg11_out [get_hw_probes design_1_i/system_ila_0/U0/probe2_1] 
+set_property NAME.CUSTOM s00_reg12_out [get_hw_probes design_1_i/system_ila_0/U0/probe3_1] 
+set_property NAME.CUSTOM s00_reg13_out [get_hw_probes design_1_i/system_ila_0/U0/probe4_1] 
+set_property NAME.CUSTOM s00_reg14_out [get_hw_probes design_1_i/system_ila_0/U0/probe5_1] 
+set_property NAME.CUSTOM s00_reg15_out [get_hw_probes design_1_i/system_ila_0/U0/probe6_1] 
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}] -trigger_now
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2026-Feb-20 20:59:04
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_1_i/system_ila_0/U0/ila_lib"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2026-Feb-20 20:59:04
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+open_bd_design {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd}
+update_ip_catalog -rebuild -scan_changes
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/ppm3_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/ppm2_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm_1.0'.
+report_ip_status -name ip_status
+upgrade_ip -vlnv iastate.edu:user:axi_ppm4:1.0 [get_ips  design_1_axi_ppm4_0_0] -log ip_upgrade.log
+Upgrading 'C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd'
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/design_1_axi_ppm4_0_0_synth_1
+
+INFO: [IP_Flow 19-3422] Upgraded design_1_axi_ppm4_0_0 (axi_ppm4_v1.0 1.0) from revision 33 to revision 34
+Wrote  : <C:\Users\diepw50\CPRE-488-Labs\MP-1\hw\MP-1\MP-1.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips design_1_axi_ppm4_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd]
+WARNING: [BD 41-1781] Updates have been made to one or more nets/interface connections marked for debug.
+Debug nets, which are already connected to any ILA IP core in the block-design, will be automatically available for debug in Hardware Manager.
+For unconnected Debug nets, please open synthesized design and use 'Set Up Debug' wizard to insert, modify or delete Debug Cores. 
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_ILA_CLK_FREQ(100000000) on '/ila_lib' with propagated value(1e+08). Command ignored
+WARNING: [BD 41-1271] The connection to the pin: /ps7_0_axi_periph/M00_AXI_arvalid has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /ps7_0_axi_periph/M00_AXI_bready has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /ps7_0_axi_periph/M00_AXI_wvalid has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /ps7_0_axi_periph/M00_AXI_rready has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /ps7_0_axi_periph/M00_AXI_awaddr has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_awready has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /ps7_0_axi_periph/M00_AXI_awprot has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_arready has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_wready has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /ps7_0_axi_periph/M00_AXI_awvalid has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /ps7_0_axi_periph/M00_AXI_wdata has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /ps7_0_axi_periph/M00_AXI_wstrb has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /ps7_0_axi_periph/M00_AXI_arprot has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_bresp has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_bvalid has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /ps7_0_axi_periph/M00_AXI_araddr has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_rdata has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_rresp has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_rvalid has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+Wrote  : <C:\Users\diepw50\CPRE-488-Labs\MP-1\hw\MP-1\MP-1.srcs\sources_1\bd\design_1\design_1.bd> 
+VHDL Output written to : C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/synth/design_1.vhd
+VHDL Output written to : C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/sim/design_1.vhd
+VHDL Output written to : C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_ppm4_0 .
+Exporting to file c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_0/bd_0/hw_handoff/design_1_system_ila_0_0.hwh
+Generated Block Design Tcl file c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_0/bd_0/hw_handoff/design_1_system_ila_0_0_bd.tcl
+Generated Hardware Definition File c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_0/bd_0/synth/design_1_system_ila_0_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block system_ila_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+catch { config_ip_cache -export [get_ips -all design_1_axi_ppm4_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_system_ila_0_0] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_system_ila_0_0, cache-ID = 6fa2dac7689e5251; cache size = 141.267 MB.
+catch { [ delete_ip_run [get_ips -all design_1_system_ila_0_0] ] }
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/design_1_system_ila_0_0_synth_1
+
+catch { config_ip_cache -export [get_ips -all design_1_auto_pc_0] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = 56354ab39623b423; cache size = 141.267 MB.
+export_ip_user_files -of_objects [get_files C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs design_1_axi_ppm4_0_0_synth_1 -jobs 10
+[Fri Feb 20 21:01:56 2026] Launched design_1_axi_ppm4_0_0_synth_1...
+Run output will be captured here: C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/design_1_axi_ppm4_0_0_synth_1/runme.log
+export_simulation -of_objects [get_files C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd] -directory C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.ip_user_files -ipstatic_source_dir C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.cache/compile_simlib/modelsim} {questa=C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.cache/compile_simlib/questa} {riviera=C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.cache/compile_simlib/riviera} {activehdl=C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Fri Feb 20 21:02:45 2026] Launched synth_1...
+Run output will be captured here: C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/synth_1/runme.log
+[Fri Feb 20 21:02:45 2026] Launched impl_1...
+Run output will be captured here: C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/impl_1/runme.log
+set_property pfm_name {} [get_files -all {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd}]
+write_hw_platform -fixed -include_bit -force -file C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/design_1_wrapper.xsa
+INFO: [Vivado 12-4895] Creating Hardware Platform: C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/design_1_wrapper.xsa ...
+INFO: [Vivado 12-4896] Successfully created Hardware Platform: C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/design_1_wrapper.xsa
+write_hw_platform: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 3084.887 ; gain = 0.000
+open_bd_design {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd}
+update_ip_catalog -rebuild -scan_changes
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/ppm3_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/ppm2_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm_1.0'.
+report_ip_status -name ip_status
+upgrade_ip -vlnv iastate.edu:user:axi_ppm4:1.0 [get_ips  design_1_axi_ppm4_0_0] -log ip_upgrade.log
+Upgrading 'C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd'
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/design_1_axi_ppm4_0_0_synth_1
+
+INFO: [IP_Flow 19-3422] Upgraded design_1_axi_ppm4_0_0 (axi_ppm4_v1.0 1.0) from revision 34 to revision 35
+Wrote  : <C:\Users\diepw50\CPRE-488-Labs\MP-1\hw\MP-1\MP-1.srcs\sources_1\bd\design_1\design_1.bd> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips design_1_axi_ppm4_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd]
+WARNING: [BD 41-1781] Updates have been made to one or more nets/interface connections marked for debug.
+Debug nets, which are already connected to any ILA IP core in the block-design, will be automatically available for debug in Hardware Manager.
+For unconnected Debug nets, please open synthesized design and use 'Set Up Debug' wizard to insert, modify or delete Debug Cores. 
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_ILA_CLK_FREQ(100000000) on '/ila_lib' with propagated value(1e+08). Command ignored
+WARNING: [BD 41-1271] The connection to the pin: /ps7_0_axi_periph/M00_AXI_arvalid has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /ps7_0_axi_periph/M00_AXI_bready has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /ps7_0_axi_periph/M00_AXI_wvalid has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /ps7_0_axi_periph/M00_AXI_rready has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /ps7_0_axi_periph/M00_AXI_awaddr has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_awready has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /ps7_0_axi_periph/M00_AXI_awprot has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_arready has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_wready has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /ps7_0_axi_periph/M00_AXI_awvalid has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /ps7_0_axi_periph/M00_AXI_wdata has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /ps7_0_axi_periph/M00_AXI_wstrb has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /ps7_0_axi_periph/M00_AXI_arprot has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_bresp has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_bvalid has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /ps7_0_axi_periph/M00_AXI_araddr has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_rdata has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_rresp has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_rvalid has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+Wrote  : <C:\Users\diepw50\CPRE-488-Labs\MP-1\hw\MP-1\MP-1.srcs\sources_1\bd\design_1\design_1.bd> 
+VHDL Output written to : C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/synth/design_1.vhd
+VHDL Output written to : C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/sim/design_1.vhd
+VHDL Output written to : C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_ppm4_0 .
+Exporting to file c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_0/bd_0/hw_handoff/design_1_system_ila_0_0.hwh
+Generated Block Design Tcl file c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_0/bd_0/hw_handoff/design_1_system_ila_0_0_bd.tcl
+Generated Hardware Definition File c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_0/bd_0/synth/design_1_system_ila_0_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block system_ila_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+catch { config_ip_cache -export [get_ips -all design_1_axi_ppm4_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_system_ila_0_0] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_system_ila_0_0, cache-ID = 6fa2dac7689e5251; cache size = 141.789 MB.
+catch { config_ip_cache -export [get_ips -all design_1_auto_pc_0] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = 56354ab39623b423; cache size = 141.789 MB.
+export_ip_user_files -of_objects [get_files C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs design_1_axi_ppm4_0_0_synth_1 -jobs 10
+[Fri Feb 20 21:19:46 2026] Launched design_1_axi_ppm4_0_0_synth_1...
+Run output will be captured here: C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/design_1_axi_ppm4_0_0_synth_1/runme.log
+export_simulation -of_objects [get_files C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd] -directory C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.ip_user_files -ipstatic_source_dir C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.cache/compile_simlib/modelsim} {questa=C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.cache/compile_simlib/questa} {riviera=C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.cache/compile_simlib/riviera} {activehdl=C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Fri Feb 20 21:20:00 2026] Launched design_1_axi_ppm4_0_0_synth_1, synth_1...
+Run output will be captured here:
+design_1_axi_ppm4_0_0_synth_1: C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/design_1_axi_ppm4_0_0_synth_1/runme.log
+synth_1: C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/synth_1/runme.log
+[Fri Feb 20 21:20:00 2026] Launched impl_1...
+Run output will be captured here: C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/impl_1/runme.log
+set_property pfm_name {} [get_files -all {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd}]
+write_hw_platform -fixed -include_bit -force -file C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/design_1_wrapper.xsa
+INFO: [Vivado 12-4895] Creating Hardware Platform: C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/design_1_wrapper.xsa ...
+INFO: [Vivado 12-4896] Successfully created Hardware Platform: C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/design_1_wrapper.xsa
+write_hw_platform: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 3183.105 ; gain = 11.648
+open_bd_design {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd}
+open_bd_design {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd}
+open_bd_design {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd}
+update_ip_catalog -rebuild -scan_changes
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/ppm3_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/ppm2_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm_1.0'.
+report_ip_status -name ip_status
+upgrade_ip -vlnv iastate.edu:user:axi_ppm4:1.0 [get_ips  design_1_axi_ppm4_0_0] -log ip_upgrade.log
+Upgrading 'C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd'
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/design_1_axi_ppm4_0_0_synth_1
+
+INFO: [IP_Flow 19-3422] Upgraded design_1_axi_ppm4_0_0 (axi_ppm4_v1.0 1.0) from revision 35 to revision 36
+Wrote  : <C:\Users\diepw50\CPRE-488-Labs\MP-1\hw\MP-1\MP-1.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips design_1_axi_ppm4_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd]
+WARNING: [BD 41-1781] Updates have been made to one or more nets/interface connections marked for debug.
+Debug nets, which are already connected to any ILA IP core in the block-design, will be automatically available for debug in Hardware Manager.
+For unconnected Debug nets, please open synthesized design and use 'Set Up Debug' wizard to insert, modify or delete Debug Cores. 
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_ILA_CLK_FREQ(100000000) on '/ila_lib' with propagated value(1e+08). Command ignored
+WARNING: [BD 41-1271] The connection to the pin: /ps7_0_axi_periph/M00_AXI_arvalid has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /ps7_0_axi_periph/M00_AXI_bready has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /ps7_0_axi_periph/M00_AXI_wvalid has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /ps7_0_axi_periph/M00_AXI_rready has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /ps7_0_axi_periph/M00_AXI_awaddr has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_awready has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /ps7_0_axi_periph/M00_AXI_awprot has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_arready has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_wready has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /ps7_0_axi_periph/M00_AXI_awvalid has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /ps7_0_axi_periph/M00_AXI_wdata has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /ps7_0_axi_periph/M00_AXI_wstrb has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /ps7_0_axi_periph/M00_AXI_arprot has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_bresp has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_bvalid has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /ps7_0_axi_periph/M00_AXI_araddr has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_rdata has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_rresp has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+WARNING: [BD 41-1271] The connection to the pin: /axi_ppm4_0/s00_axi_rvalid has been overridden by the user. This pin will not be connected as a part of the interface connection: ps7_0_axi_periph_M00_AXI 
+Wrote  : <C:\Users\diepw50\CPRE-488-Labs\MP-1\hw\MP-1\MP-1.srcs\sources_1\bd\design_1\design_1.bd> 
+VHDL Output written to : C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/synth/design_1.vhd
+VHDL Output written to : C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/sim/design_1.vhd
+VHDL Output written to : C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_ppm4_0 .
+Exporting to file c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_0/bd_0/hw_handoff/design_1_system_ila_0_0.hwh
+Generated Block Design Tcl file c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_0/bd_0/hw_handoff/design_1_system_ila_0_0_bd.tcl
+Generated Hardware Definition File c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_0/bd_0/synth/design_1_system_ila_0_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block system_ila_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+catch { config_ip_cache -export [get_ips -all design_1_axi_ppm4_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_system_ila_0_0] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_system_ila_0_0, cache-ID = 6fa2dac7689e5251; cache size = 142.292 MB.
+catch { config_ip_cache -export [get_ips -all design_1_auto_pc_0] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = 56354ab39623b423; cache size = 142.292 MB.
+export_ip_user_files -of_objects [get_files C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs design_1_axi_ppm4_0_0_synth_1 -jobs 10
+[Fri Feb 20 21:29:18 2026] Launched design_1_axi_ppm4_0_0_synth_1...
+Run output will be captured here: C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/design_1_axi_ppm4_0_0_synth_1/runme.log
+export_simulation -of_objects [get_files C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd] -directory C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.ip_user_files -ipstatic_source_dir C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.cache/compile_simlib/modelsim} {questa=C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.cache/compile_simlib/questa} {riviera=C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.cache/compile_simlib/riviera} {activehdl=C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Fri Feb 20 21:29:35 2026] Launched design_1_axi_ppm4_0_0_synth_1, synth_1...
+Run output will be captured here:
+design_1_axi_ppm4_0_0_synth_1: C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/design_1_axi_ppm4_0_0_synth_1/runme.log
+synth_1: C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/synth_1/runme.log
+[Fri Feb 20 21:29:35 2026] Launched impl_1...
+Run output will be captured here: C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/impl_1/runme.log
+set_property location {1444 242} [get_bd_ports s00_ppm_out_0]
+set_property location {1647 262} [get_bd_ports s00_ppm_out_0]
+open_run impl_1
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.057 . Memory (MB): peak = 3276.859 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 334 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2020.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.314 . Memory (MB): peak = 3923.195 ; gain = 0.000
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.314 . Memory (MB): peak = 3923.195 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 3923.195 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 146 instances were transformed.
+  CFGLUT5 => CFGLUT5 (SRL16E, SRLC32E): 140 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 6 instances
+
+open_run: Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 4050.973 ; gain = 845.828
+WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Please run report_bus_skew to ensure that bus skew requirements are met.
+set_property pfm_name {} [get_files -all {C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_1/design_1.bd}]
+write_hw_platform -fixed -include_bit -force -file C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/design_1_wrapper.xsa
+INFO: [Vivado 12-4895] Creating Hardware Platform: C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/design_1_wrapper.xsa ...
+INFO: [Vivado 12-4896] Successfully created Hardware Platform: C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/design_1_wrapper.xsa
+write_hw_platform: Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 4235.262 ; gain = 177.781

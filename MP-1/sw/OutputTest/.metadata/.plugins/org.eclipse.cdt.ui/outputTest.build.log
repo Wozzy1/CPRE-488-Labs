@@ -1,4 +1,4 @@
-00:49:14 **** Incremental Build of configuration Debug for project outputTest ****
+03:55:53 **** Incremental Build of configuration Debug for project outputTest ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
@@ -6,14 +6,24 @@ a9-linaro-pre-build-step
 make --no-print-directory main-build
 'Building file: ../src/helloworld.c'
 'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/sw/design_2_wrapper_outputTest/domain_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+arm-none-eabi-gcc -Wall -O2 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/sw/design_2_wrapper_outputTest/domain_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
 ../src/helloworld.c: In function 'main':
-../src/helloworld.c:184:13: warning: unused variable 'btnr_rise' [-Wunused-variable]
-  184 |         int btnr_rise = (btnr == 1 && prev_btnr == 0);
+../src/helloworld.c:366:13: warning: unused variable 'btnr_rise' [-Wunused-variable]
+  366 |         int btnr_rise = (btnr == 1 && prev_btnr == 0);
       |             ^~~~~~~~~
-../src/helloworld.c:183:13: warning: unused variable 'btnl_rise' [-Wunused-variable]
-  183 |         int btnl_rise = (btnl == 1 && prev_btnl == 0);
+../src/helloworld.c:365:13: warning: unused variable 'btnl_rise' [-Wunused-variable]
+  365 |         int btnl_rise = (btnl == 1 && prev_btnl == 0);
       |             ^~~~~~~~~
+At top level:
+../src/helloworld.c:149:20: warning: 'vrb_axis' defined but not used [-Wunused-variable]
+  149 | static ControlAxis vrb_axis      = {0.5,  60000.0, 163000.0};
+      |                    ^~~~~~~~
+../src/helloworld.c:148:20: warning: 'vra_axis' defined but not used [-Wunused-variable]
+  148 | static ControlAxis vra_axis      = {0.5,  60000.0, 163000.0};
+      |                    ^~~~~~~~
+../src/helloworld.c:147:20: warning: 'yaw_axis' defined but not used [-Wunused-variable]
+  147 | static ControlAxis yaw_axis      = {0.5,  70000.0, 157000.0};
+      |                    ^~~~~~~~
 'Finished building: ../src/helloworld.c'
 ' '
 'Building target: outputTest.elf'
@@ -24,9 +34,9 @@ arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=non
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size outputTest.elf  |tee "outputTest.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  25900	   1144	  28728	  55772	   d9dc	outputTest.elf
+  25068	   1216	  28744	  55028	   d6f4	outputTest.elf
 'Finished building: outputTest.elf.size'
 ' '
 
-00:49:15 Build Finished (took 729ms)
+03:55:54 Build Finished (took 761ms)
 

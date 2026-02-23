@@ -46,10 +46,12 @@
  */
 
 #include <stdio.h>
+#include <stdbool.h>
 #include "platform.h"
 #include "xil_printf.h"
 #include "xparameters.h"
 #include "xil_io.h"
+#include "xuartps_hw.h"
 #include "sleep.h"
 
 #define PPM_BASE XPAR_AXI_PPM4_0_S00_AXI_BASEADDR
@@ -71,32 +73,9 @@
 #define CAPTURE_COUNT 6U
 #define MAX_SAVED_FRAMES 256U
 
-static u32 saved_frames[MAX_SAVED_FRAMES][CAPTURE_COUNT];
-static u32 saved_count = 0U;
-static int max_frames_reported = 0;
-static u32 record_index = 0U;
-static u32 play_index = 0U;
+#define ATTACK_SPEED 0.05
+#define DECAY_SPEED  0.03
 
-static void save_register_snapshot(u32 frame_idx)
-{
-    saved_frames[frame_idx][0] = Xil_In32(PPM_BASE + REG10);
-    saved_frames[frame_idx][1] = Xil_In32(PPM_BASE + REG11);
-    saved_frames[frame_idx][2] = Xil_In32(PPM_BASE + REG12);
-    saved_frames[frame_idx][3] = Xil_In32(PPM_BASE + REG13);
-    saved_frames[frame_idx][4] = Xil_In32(PPM_BASE + REG14);
-    saved_frames[frame_idx][5] = Xil_In32(PPM_BASE + REG15);
-}
-
-static void load_most_recent_frame(void)
-{
-    /* Copy the latest captured frame (r10..r15) into generator regs (r4..r9). */
-    Xil_Out32(PPM_BASE + REG4, Xil_In32(PPM_BASE + REG10));
-    Xil_Out32(PPM_BASE + REG5, Xil_In32(PPM_BASE + REG11));
-    Xil_Out32(PPM_BASE + REG6, Xil_In32(PPM_BASE + REG12));
-    Xil_Out32(PPM_BASE + REG7, Xil_In32(PPM_BASE + REG13));
-    Xil_Out32(PPM_BASE + REG8, Xil_In32(PPM_BASE + REG14));
-    Xil_Out32(PPM_BASE + REG9, Xil_In32(PPM_BASE + REG15));
-}
 
 /* SW0 comes from AXI GPIO channel 1, bit 0. */
 #define SW0_MASK 0x1U
@@ -106,6 +85,11 @@ static void load_most_recent_frame(void)
 #define SW2_MASK 0x4U
 /* SW3 is bit 3 on the same switch GPIO input. */
 #define SW3_MASK 0x8U
+/* SW4 is bit 4 on the same switch GPIO input. */
+#define SW4_MASK 0x10U
+
+#define SW7_MASK 0x80U
+
 /* Button bit mapping: bit4=BTNU, bit3=BTNR, bit2=BTNL, bit1=BTND, bit0=BTNC */
 #define BTNC_MASK 0x1U
 #define BTND_MASK 0x2U
@@ -139,6 +123,7 @@ static void load_most_recent_frame(void)
 #define BTN_GPIO_BASEADDR 0x41200000U
 #endif
 
+
 static inline u32 access_switches(void)
 {
     return Xil_In32((UINTPTR)SW_GPIO_BASEADDR);
@@ -149,12 +134,206 @@ static inline u32 access_buttons(void)
     return Xil_In32((UINTPTR)BTN_GPIO_BASEADDR);
 }
 
+typedef struct {
+    double timer;      /* 0.0 to 1.0 */
+    double min_val;
+    double max_val;
+} ControlAxis;
+
+/* roll, pitch, throttle, yaw, vr(a), vr(b) */
+static ControlAxis roll_axis     = {0.5,  67000.0, 150000.0};
+static ControlAxis pitch_axis    = {0.5,  67000.0, 150000.0};
+static ControlAxis throttle_axis = {0.0,  60000.0, 163000.0};
+static ControlAxis yaw_axis      = {0.5,  70000.0, 157000.0};
+static ControlAxis vra_axis      = {0.5,  60000.0, 163000.0};
+static ControlAxis vrb_axis      = {0.5,  60000.0, 163000.0};
+
+/* One-loop key state flags. If no key comes in this loop, decay logic runs. */
+static bool roll_pos = false;
+static bool roll_neg = false;
+static bool pitch_pos = false;
+static bool pitch_neg = false;
+static bool throttle_pos = false;
+
+static int update_keyboard_axis(ControlAxis *axis, bool key_pos, bool key_neg, bool is_throttle)
+{
+    if (key_pos) {
+        axis->timer += ATTACK_SPEED;
+    } else if (key_neg) {
+        axis->timer -= ATTACK_SPEED;
+    } else {
+        if (!is_throttle) {
+            if (axis->timer > 0.5) axis->timer -= DECAY_SPEED;
+            if (axis->timer < 0.5) axis->timer += DECAY_SPEED;
+        } else {
+            axis->timer -= DECAY_SPEED;
+        }
+    }
+
+    if (axis->timer > 1.0) axis->timer = 1.0;
+    if (axis->timer < 0.0) axis->timer = 0.0;
+
+    {
+        double range = axis->max_val - axis->min_val;
+        return (int)(axis->timer * range + axis->min_val + 0.5);
+    }
+}
+
+static void poll_keyboard_commands(void)
+{
+    roll_pos = false;
+    roll_neg = false;
+    pitch_pos = false;
+    pitch_neg = false;
+    throttle_pos = false;
+
+    while (XUartPs_IsReceiveData(STDIN_BASEADDRESS)) {
+        char c = inbyte();
+        switch (c) {
+        case 'w':
+        case 'W':
+            pitch_pos = true;
+            break;
+        case 's':
+        case 'S':
+            pitch_neg = true;
+            break;
+        case 'a':
+        case 'A':
+            roll_neg = true;
+            break;
+        case 'd':
+        case 'D':
+            roll_pos = true;
+            break;
+        case ' ':
+            throttle_pos = true;
+            break;
+        default:
+            break;
+        }
+    }
+}
+
+static void write_keyboard_frame_to_regs(void)
+{
+    u32 roll        = (u32)update_keyboard_axis(&roll_axis, roll_pos, roll_neg, false);
+    u32 pitch       = (u32)update_keyboard_axis(&pitch_axis, pitch_pos, pitch_neg, false);
+    u32 throttle    = (u32)update_keyboard_axis(&throttle_axis, throttle_pos, false, true);
+    u32 yaw         = Xil_In32(PPM_BASE + REG13);
+    u32 vra         = Xil_In32(PPM_BASE + REG14);
+    u32 vrb         = Xil_In32(PPM_BASE + REG15);
+    xil_printf("KEY: r4=%u r5=%u r6=%u r7=%u r8=%u r9=%u\r\n",
+                roll, pitch, throttle, yaw, vra, vrb);
+
+    Xil_Out32(PPM_BASE + REG4, roll);
+    Xil_Out32(PPM_BASE + REG5, pitch);
+    Xil_Out32(PPM_BASE + REG6, throttle);
+    Xil_Out32(PPM_BASE + REG7, yaw);
+    Xil_Out32(PPM_BASE + REG8, vra);
+    Xil_Out32(PPM_BASE + REG9, vrb);
+}
+
+/* Channel values in capture clock counts: roll, pitch, throttle, yaw, vr(a), vr(b). */
+static const u32 chan_min[CAPTURE_COUNT] = {67000U, 67000U, 60000U, 70000U, 60000U, 60000U};
+// static const u32 chan_min[CAPTURE_COUNT] = {82000U, 75000U, 78000U, 60000U, 60000U, 60000U};
+static const u32 chan_max[CAPTURE_COUNT] = {150000U, 150000U, 163000U, 157000U, 163000U, 163000U};
+
+static double smoothstep(double x)
+{
+    if (x < 0.0) x = 0.0;
+    if (x > 1.0) x = 1.0;
+    return x * x * (3.0 - 2.0 * x);
+}
+
+static u32 filter_one(u32 raw, u32 lo, u32 hi)
+{
+    double norm, smoothed, out;
+    if (hi <= lo) {
+        return raw;
+    }
+    if (raw <= lo) {
+        return lo;
+    }
+    if (raw >= hi) {
+        return hi;
+    }
+
+    norm = ((double)raw - (double)lo) / ((double)hi - (double)lo);
+    smoothed = smoothstep(norm);
+    out = (smoothed * ((double)hi - (double)lo)) + (double)lo;
+    if (out < 0.0) {
+        out = 0.0;
+    }
+    return (u32)(out + 0.5);
+}
+
+static void filter_values(const u32 in_vals[CAPTURE_COUNT], u32 out_vals[CAPTURE_COUNT])
+{
+    u32 i;
+    for (i = 0U; i < CAPTURE_COUNT; i++) {
+        out_vals[i] = filter_one(in_vals[i], chan_min[i], chan_max[i]);
+    }
+}
+
+
+
+static u32 saved_frames[MAX_SAVED_FRAMES][CAPTURE_COUNT];
+static u32 saved_count = 0U;
+static int max_frames_reported = 0;
+static u32 record_index = 0U;
+static u32 play_index = 0U;
+
+static void save_register_snapshot(u32 frame_idx)
+{
+    saved_frames[frame_idx][0] = Xil_In32(PPM_BASE + REG10);
+    saved_frames[frame_idx][1] = Xil_In32(PPM_BASE + REG11);
+    saved_frames[frame_idx][2] = Xil_In32(PPM_BASE + REG12);
+    saved_frames[frame_idx][3] = Xil_In32(PPM_BASE + REG13);
+    saved_frames[frame_idx][4] = Xil_In32(PPM_BASE + REG14);
+    saved_frames[frame_idx][5] = Xil_In32(PPM_BASE + REG15);
+}
+
+static void load_most_recent_frame(int use_filter)
+{
+    u32 raw[CAPTURE_COUNT];
+    u32 vals[CAPTURE_COUNT];
+
+    raw[0] = Xil_In32(PPM_BASE + REG10);
+    raw[1] = Xil_In32(PPM_BASE + REG11);
+    raw[2] = Xil_In32(PPM_BASE + REG12);
+    raw[3] = Xil_In32(PPM_BASE + REG13);
+    raw[4] = Xil_In32(PPM_BASE + REG14);
+    raw[5] = Xil_In32(PPM_BASE + REG15);
+
+    if (use_filter) {
+        filter_values(raw, vals);
+    } else {
+        vals[0] = raw[0];
+        vals[1] = raw[1];
+        vals[2] = raw[2];
+        vals[3] = raw[3];
+        vals[4] = raw[4];
+        vals[5] = raw[5];
+    }
+
+    Xil_Out32(PPM_BASE + REG4, vals[0]);
+    Xil_Out32(PPM_BASE + REG5, vals[1]);
+    Xil_Out32(PPM_BASE + REG6, vals[2]);
+    Xil_Out32(PPM_BASE + REG7, vals[3]);
+    Xil_Out32(PPM_BASE + REG8, vals[4]);
+    Xil_Out32(PPM_BASE + REG9, vals[5]);
+}
+
 int main()
 {
     int last_sw0 = -1;
     int last_sw1 = -1;
     int last_sw2 = -1;
     int last_sw3 = -1;
+    int last_sw4 = -1;
+    int last_sw7 = -1;
+
     int prev_btnc = 0;
     int prev_btnd = 0;
     int prev_btnl = 0;
@@ -169,10 +348,13 @@ int main()
     while (1) {
         u32 sw_data = access_switches();
         u32 btn_data = access_buttons();
+        poll_keyboard_commands();
         int sw0 = ((sw_data & SW0_MASK) != 0U) ? 1 : 0;
         int sw1 = ((sw_data & SW1_MASK) != 0U) ? 1 : 0;
         int sw2 = ((sw_data & SW2_MASK) != 0U) ? 1 : 0;
         int sw3 = ((sw_data & SW3_MASK) != 0U) ? 1 : 0;
+        int sw4 = ((sw_data & SW4_MASK) != 0U) ? 1 : 0;
+        int sw7 = ((sw_data & SW7_MASK) != 0U) ? 1 : 0;
         int btnc = ((btn_data & BTNC_MASK) != 0U) ? 1 : 0;
         int btnd = ((btn_data & BTND_MASK) != 0U) ? 1 : 0;
         int btnl = ((btn_data & BTNL_MASK) != 0U) ? 1 : 0;
@@ -196,7 +378,11 @@ int main()
                            (u32)Xil_In32(PPM_BASE + REG0));
             } else {
                 Xil_Out32(PPM_BASE + REG0, 1U);  /* software relay */
-                load_most_recent_frame();
+                if (sw7 == 1) {
+                    write_keyboard_frame_to_regs();
+                } else {
+                    load_most_recent_frame(sw4);
+                }
 
                 xil_printf("SW0=1 -> software relay (REG0=%u)\r\n",
                            (u32)Xil_In32(PPM_BASE + REG0));
@@ -205,7 +391,11 @@ int main()
         }
 
         if (sw0 == 1) {
-            load_most_recent_frame();
+            if (sw7 == 1) {
+                write_keyboard_frame_to_regs();
+            } else {
+                load_most_recent_frame(sw4);
+            }
         }
 
         if (sw1 != last_sw1) {
@@ -234,6 +424,24 @@ int main()
                 xil_printf("SW3=0 -> play mode disabled\r\n");
             }
             last_sw3 = sw3;
+        }
+
+        if (sw4 != last_sw4) {
+            if (sw4 == 1) {
+                xil_printf("SW4=1 -> filter mode enabled\r\n");
+            } else {
+                xil_printf("SW4=0 -> filter mode disabled\r\n");
+            }
+            last_sw4 = sw4;
+        }
+
+        if (sw7 != last_sw7) {
+            if (sw7 == 1) {
+                xil_printf("SW7=1 -> keyboard mode enabled\r\n");
+            } else {
+                xil_printf("SW7=0 -> keyboard mode disabled\r\n");
+            }
+            last_sw7 = sw7;
         }
 
         if (sw2 == 1) {

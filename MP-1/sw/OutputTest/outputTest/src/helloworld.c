@@ -130,6 +130,8 @@
 #define THROTTLE_HOLD_BAND       0.015   /* +/- this around last released pos = hold */
 #define THROTTLE_DECAY_SPEED     0.006   /* very slow passive drift, nearly hover */
 #define THROTTLE_BRAKE_SPEED     0.045   /* C key: active descent */
+
+bool kill = false;
 /* Channel values in capture clock counts: roll, pitch, throttle, yaw, vr(a), vr(b). */
 static const u32 chan_min[CAPTURE_COUNT] = {67000U, 67000U, 60000U, 70000U, 60000U, 60000U};
 static const u32 chan_max[CAPTURE_COUNT] = {150000U, 150000U, 163000U, 157000U, 163000U, 163000U};
@@ -292,6 +294,7 @@ static void poll_keyboard_commands(void)
     while (XUartPs_IsReceiveData(STDIN_BASEADDRESS)) {
         char c = inbyte();
         switch (c) {
+        case 'x': case 'X': kill = true; break;
         case 'w': case 'W': last_w_time = now; break;
         case 's': case 'S': last_s_time = now; break;
         case 'a': case 'A': last_a_time = now; break;
@@ -405,6 +408,11 @@ int main()
         u32 sw_data = access_switches();
         u32 btn_data = access_buttons();
         poll_keyboard_commands();
+        if (kill) {
+            // kills throttle
+            Xil_Out32(PPM_BASE + REG6, 60000);
+            break;
+        }
         int sw0 = ((sw_data & SW0_MASK) != 0U) ? 1 : 0;
         int sw1 = ((sw_data & SW1_MASK) != 0U) ? 1 : 0;
         int sw2 = ((sw_data & SW2_MASK) != 0U) ? 1 : 0;

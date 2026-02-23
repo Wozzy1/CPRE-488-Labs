@@ -361,7 +361,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>NUM_READ_OUTSTANDING</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI.NUM_READ_OUTSTANDING">8</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI.NUM_READ_OUTSTANDING">2</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -370,7 +370,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>NUM_WRITE_OUTSTANDING</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI.NUM_WRITE_OUTSTANDING">8</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI.NUM_WRITE_OUTSTANDING">2</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -406,7 +406,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>NUM_READ_THREADS</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI.NUM_READ_THREADS">4</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI.NUM_READ_THREADS">1</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -415,7 +415,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>NUM_WRITE_THREADS</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI.NUM_WRITE_THREADS">4</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI.NUM_WRITE_THREADS">1</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -590,11 +590,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Feb 21 07:57:41 UTC 2026</spirit:value>
+            <spirit:value>Mon Feb 23 04:28:12 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:7c091d10</spirit:value>
+            <spirit:value>9:1a66a514</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -605,7 +605,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:7c091d10</spirit:value>
+            <spirit:value>9:1a66a514</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -621,11 +621,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Feb 21 07:57:41 UTC 2026</spirit:value>
+            <spirit:value>Mon Feb 23 04:28:12 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:7c091d10</spirit:value>
+            <spirit:value>9:1a66a514</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -641,11 +641,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Feb 21 07:57:41 UTC 2026</spirit:value>
+            <spirit:value>Mon Feb 23 04:28:12 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:88c73e26</spirit:value>
+            <spirit:value>9:eea88622</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -661,11 +661,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Feb 21 07:57:41 UTC 2026</spirit:value>
+            <spirit:value>Mon Feb 23 04:28:12 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:88c73e26</spirit:value>
+            <spirit:value>9:eea88622</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -679,11 +679,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Feb 21 07:58:07 UTC 2026</spirit:value>
+            <spirit:value>Mon Feb 23 04:29:01 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:7c091d10</spirit:value>
+            <spirit:value>9:1a66a514</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1060,11 +1060,11 @@
     <spirit:fileSet>
       <spirit:name>xilinx_vhdlsynthesis_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../ipshared/c864/hdl/axi_ppm5_v1_0_S00_AXI.vhd</spirit:name>
+        <spirit:name>../../ipshared/ccef/hdl/axi_ppm5_v1_0_S00_AXI.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/c864/hdl/axi_ppm5_v1_0.vhd</spirit:name>
+        <spirit:name>../../ipshared/ccef/hdl/axi_ppm5_v1_0.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
@@ -1079,11 +1079,11 @@
     <spirit:fileSet>
       <spirit:name>xilinx_vhdlbehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../ipshared/c864/hdl/axi_ppm5_v1_0_S00_AXI.vhd</spirit:name>
+        <spirit:name>../../ipshared/ccef/hdl/axi_ppm5_v1_0_S00_AXI.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/c864/hdl/axi_ppm5_v1_0.vhd</spirit:name>
+        <spirit:name>../../ipshared/ccef/hdl/axi_ppm5_v1_0.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
@@ -1192,7 +1192,7 @@
   <spirit:vendorExtensions>
     <xilinx:coreExtensions>
       <xilinx:displayName>axi_ppm5_v1.0</xilinx:displayName>
-      <xilinx:coreRevision>3</xilinx:coreRevision>
+      <xilinx:coreRevision>6</xilinx:coreRevision>
       <xilinx:tags>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@152ec443_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm5_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@58f67908_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm5_1.0</xilinx:tag>
@@ -1217,6 +1217,60 @@
         <xilinx:tag xilinx:name="ui.data.coregen.dd@435e3b3b_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm5_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@537923d5_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm5_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@3252e36d_ARCHIVE_LOCATION">c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm5_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1d9b0c5a_ARCHIVE_LOCATION">c:/Users/cihem/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm5_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2b2cfa51_ARCHIVE_LOCATION">c:/Users/cihem/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm5_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2a01058_ARCHIVE_LOCATION">c:/Users/cihem/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm5_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2eb7c877_ARCHIVE_LOCATION">c:/Users/cihem/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm5_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@56df3f25_ARCHIVE_LOCATION">c:/Users/cihem/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm5_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5ab65191_ARCHIVE_LOCATION">c:/Users/cihem/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm5_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5cd7dd60_ARCHIVE_LOCATION">c:/Users/cihem/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm5_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5733fdc7_ARCHIVE_LOCATION">c:/Users/cihem/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm5_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5107b8b7_ARCHIVE_LOCATION">c:/Users/cihem/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm5_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2002cab_ARCHIVE_LOCATION">c:/Users/cihem/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm5_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@45b8a0a2_ARCHIVE_LOCATION">c:/Users/cihem/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm5_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@81ec402_ARCHIVE_LOCATION">c:/Users/cihem/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm5_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5633b7a7_ARCHIVE_LOCATION">c:/Users/cihem/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm5_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@15ccaf07_ARCHIVE_LOCATION">c:/Users/cihem/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm5_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2122e031_ARCHIVE_LOCATION">c:/Users/cihem/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm5_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@400f87e2_ARCHIVE_LOCATION">c:/Users/cihem/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm5_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@516d4265_ARCHIVE_LOCATION">c:/Users/cihem/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm5_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@58bf5503_ARCHIVE_LOCATION">c:/Users/cihem/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm5_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1d9d81b8_ARCHIVE_LOCATION">c:/Users/cihem/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm5_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@52b8a7c3_ARCHIVE_LOCATION">c:/Users/cihem/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm5_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@59673c73_ARCHIVE_LOCATION">c:/Users/cihem/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm5_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@18ad5af8_ARCHIVE_LOCATION">c:/Users/cihem/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm5_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@672f6dd7_ARCHIVE_LOCATION">c:/Users/cihem/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm5_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1e5cfbc2_ARCHIVE_LOCATION">c:/Users/cihem/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm5_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@73122b3e_ARCHIVE_LOCATION">c:/Users/cihem/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm5_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5c2453e_ARCHIVE_LOCATION">c:/Users/cihem/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm5_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4a2b7cdd_ARCHIVE_LOCATION">c:/Users/cihem/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm5_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4fa9a9df_ARCHIVE_LOCATION">c:/Users/cihem/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm5_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6ba37204_ARCHIVE_LOCATION">c:/Users/cihem/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm5_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b0a4814_ARCHIVE_LOCATION">c:/Users/cihem/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm5_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@47461b0f_ARCHIVE_LOCATION">c:/Users/cihem/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm5_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2b7c9a0b_ARCHIVE_LOCATION">c:/Users/cihem/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm5_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@77056c12_ARCHIVE_LOCATION">c:/Users/cihem/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm5_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@31db96fd_ARCHIVE_LOCATION">c:/Users/cihem/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm5_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6050f04b_ARCHIVE_LOCATION">c:/Users/cihem/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm5_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b36c2e9_ARCHIVE_LOCATION">c:/Users/cihem/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm5_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7e9b9f01_ARCHIVE_LOCATION">c:/Users/cihem/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm5_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@343d8255_ARCHIVE_LOCATION">c:/Users/cihem/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm5_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@64c559d4_ARCHIVE_LOCATION">c:/Users/cihem/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm5_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4bdf307b_ARCHIVE_LOCATION">c:/Users/cihem/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm5_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@10c40028_ARCHIVE_LOCATION">c:/Users/cihem/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm5_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@690a771a_ARCHIVE_LOCATION">c:/Users/cihem/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm5_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@35af710f_ARCHIVE_LOCATION">c:/Users/cihem/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm5_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@625d4118_ARCHIVE_LOCATION">c:/Users/cihem/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm5_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@71ead3bc_ARCHIVE_LOCATION">c:/Users/cihem/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm5_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@736df841_ARCHIVE_LOCATION">c:/Users/cihem/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm5_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4f637e05_ARCHIVE_LOCATION">c:/Users/cihem/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm5_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4305a0ff_ARCHIVE_LOCATION">c:/Users/cihem/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm5_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6c0f9e79_ARCHIVE_LOCATION">c:/Users/cihem/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm5_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6580cecc_ARCHIVE_LOCATION">c:/Users/cihem/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm5_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2a7b094e_ARCHIVE_LOCATION">c:/Users/cihem/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm5_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7a35b935_ARCHIVE_LOCATION">c:/Users/cihem/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm5_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@69ac141e_ARCHIVE_LOCATION">c:/Users/cihem/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm5_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@228dffb3_ARCHIVE_LOCATION">c:/Users/cihem/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm5_1.0</xilinx:tag>
       </xilinx:tags>
       <xilinx:configElementInfos>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.ADDR_WIDTH" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
@@ -1237,10 +1291,10 @@
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.HAS_WSTRB" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.ID_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.MAX_BURST_LENGTH" xilinx:valueSource="ip_propagated" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.NUM_READ_OUTSTANDING" xilinx:valueSource="constant_prop" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.NUM_READ_THREADS" xilinx:valueSource="constant_prop" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.NUM_WRITE_OUTSTANDING" xilinx:valueSource="constant_prop" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.NUM_WRITE_THREADS" xilinx:valueSource="constant_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.NUM_READ_OUTSTANDING" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.NUM_READ_THREADS" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.NUM_WRITE_OUTSTANDING" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.NUM_WRITE_THREADS" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.PHASE" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.PROTOCOL" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.READ_WRITE_MODE" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
@@ -1262,9 +1316,9 @@
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2020.1</xilinx:xilinxVersion>
-      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="add540ec"/>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="addc58e4"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="ed1368d5"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="27806c01"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="9c80bae6"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="0cd6307f"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="e7b50784"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="a93ce1a9"/>

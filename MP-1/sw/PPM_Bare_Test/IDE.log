@@ -394,3 +394,15 @@ con
 ----------------End of Script----------------
 
 02:19:17 INFO  : Launch script is exported to file 'C:\Users\diepw50\CPRE-488-Labs\MP-1\sw\PPM_Bare_Test\.sdk\launch_scripts\single_application_debug\debugger_bare_test-default.tcl'
+19:15:49 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\cihem\CPRE-488-Labs\MP-1\sw\PPM_Bare_Test\temp_xsdb_launch_script.tcl
+19:15:51 INFO  : XSCT server has started successfully.
+19:15:51 INFO  : Successfully done setting XSCT server connection channel  
+19:15:51 INFO  : plnx-install-location is set to ''
+19:15:51 INFO  : Successfully done setting workspace for the tool. 
+19:15:53 INFO  : Registering command handlers for Vitis TCF services
+19:15:53 ERROR : Error encountered while initializing user repository paths
+Reason: No Platforms Found.
+
+
+19:15:53 INFO  : Platform repository initialization has completed.
+19:15:56 INFO  : Successfully done query RDI_DATADIR 

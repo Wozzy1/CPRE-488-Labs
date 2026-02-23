@@ -1,8 +1,8 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
---Date        : Sat Feb 21 01:57:41 2026
---Host        : CO2041-08 running 64-bit major release  (build 9200)
+--Date        : Sun Feb 22 22:28:12 2026
+--Host        : CO2041-11 running 64-bit major release  (build 9200)
 --Command     : generate_target design_2_wrapper.bd
 --Design      : design_2_wrapper
 --Purpose     : IP block netlist
@@ -34,8 +34,10 @@ entity design_2_wrapper is
     FIXED_IO_ps_clk : inout STD_LOGIC;
     FIXED_IO_ps_porb : inout STD_LOGIC;
     FIXED_IO_ps_srstb : inout STD_LOGIC;
+    btns_5bits_tri_i : in STD_LOGIC_VECTOR ( 4 downto 0 );
     s00_ppm_in_0 : in STD_LOGIC;
-    s00_ppm_out_0 : out STD_LOGIC
+    s00_ppm_out_0 : out STD_LOGIC;
+    sws_8bits_tri_i : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
 end design_2_wrapper;
 
@@ -64,7 +66,9 @@ architecture STRUCTURE of design_2_wrapper is
     FIXED_IO_ddr_vrp : inout STD_LOGIC;
     FIXED_IO_ps_srstb : inout STD_LOGIC;
     FIXED_IO_ps_clk : inout STD_LOGIC;
-    FIXED_IO_ps_porb : inout STD_LOGIC
+    FIXED_IO_ps_porb : inout STD_LOGIC;
+    btns_5bits_tri_i : in STD_LOGIC_VECTOR ( 4 downto 0 );
+    sws_8bits_tri_i : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
   end component design_2;
 begin
@@ -91,7 +95,9 @@ design_2_i: component design_2
       FIXED_IO_ps_clk => FIXED_IO_ps_clk,
       FIXED_IO_ps_porb => FIXED_IO_ps_porb,
       FIXED_IO_ps_srstb => FIXED_IO_ps_srstb,
+      btns_5bits_tri_i(4 downto 0) => btns_5bits_tri_i(4 downto 0),
       s00_ppm_in_0 => s00_ppm_in_0,
-      s00_ppm_out_0 => s00_ppm_out_0
+      s00_ppm_out_0 => s00_ppm_out_0,
+      sws_8bits_tri_i(7 downto 0) => sws_8bits_tri_i(7 downto 0)
     );
 end STRUCTURE;

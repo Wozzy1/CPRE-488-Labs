@@ -9545,3 +9545,54 @@ Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-26: Launc
 
 !ENTRY com.xilinx.sdk.utils 0 0 2026-02-21 02:19:17.390
 !MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-26: Launching Debugger_bare_test-Default
+!SESSION 2026-02-22 19:15:15.384 -----------------------------------------------
+eclipse.buildId=2020.1
+java.version=9.0.4
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2026-02-22 19:15:46.042
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.ui 4 4 2026-02-22 19:15:48.149
+!MESSAGE Plug-in 'org.eclipse.ui.editors' contributed an invalid Menu Extension (Path: 'navigate' is invalid): org.eclipse.ui.edit.text.gotoLastEditPosition
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-22 19:15:51.350
+!MESSAGE XSCT Command: [set sdk::sdk_chan tcfchan#0], Thread: Thread-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-22 19:15:51.350
+!MESSAGE XSCT Command: [plnx-install-path  ; ::scw::scw_mode gui], Thread: Thread-8
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-22 19:15:51.370
+!MESSAGE XSCT command with result: [set sdk::sdk_chan tcfchan#0], Result: [null, tcfchan#0]. Thread: Thread-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-22 19:15:51.371
+!MESSAGE XSCT command with result: [plnx-install-path  ; ::scw::scw_mode gui], Result: [null, ]. Thread: Thread-8
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-22 19:15:51.371
+!MESSAGE XSCT Command: [setws C:/Users/cihem/CPRE-488-Labs/MP-1/sw/PPM_Bare_Test], Thread: Thread-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-22 19:15:51.372
+!MESSAGE XSCT command with result: [setws C:/Users/cihem/CPRE-488-Labs/MP-1/sw/PPM_Bare_Test], Result: [null, ]. Thread: Thread-15
+
+!ENTRY org.eclipse.launchbar.core 2 0 2026-02-22 19:15:52.677
+!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2026-02-22 19:15:52.678
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2026-02-22 19:15:52.678
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-22 19:15:53.828
+!MESSAGE XSCT Command: [::hsi::utils::init_repo], Thread: Worker-3: Initializing s/w repositories
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-22 19:15:56.688
+!MESSAGE XSCT command with result: [::hsi::utils::init_repo], Result: [null, ]. Thread: Worker-3: Initializing s/w repositories
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-22 19:15:56.689
+!MESSAGE XSCT Command: [set query_var1 $::env(RDI_DATADIR)], Thread: Worker-3: Initializing s/w repositories
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-22 19:15:56.690
+!MESSAGE XSCT command with result: [set query_var1 $::env(RDI_DATADIR)], Result: [null, C:/Xilinx/Vitis/2020.1/data]. Thread: Worker-3: Initializing s/w repositories

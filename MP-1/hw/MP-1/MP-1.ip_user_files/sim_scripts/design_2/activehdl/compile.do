@@ -10,9 +10,13 @@ vlib activehdl/xil_defaultlib
 vlib activehdl/lib_cdc_v1_0_2
 vlib activehdl/proc_sys_reset_v5_0_13
 vlib activehdl/generic_baseblocks_v2_1_0
+vlib activehdl/axi_register_slice_v2_1_21
 vlib activehdl/fifo_generator_v13_2_5
 vlib activehdl/axi_data_fifo_v2_1_20
-vlib activehdl/axi_register_slice_v2_1_21
+vlib activehdl/axi_crossbar_v2_1_22
+vlib activehdl/axi_lite_ipif_v3_0_4
+vlib activehdl/interrupt_control_v3_1_4
+vlib activehdl/axi_gpio_v2_0_23
 vlib activehdl/axi_protocol_converter_v2_1_21
 
 vmap xilinx_vip activehdl/xilinx_vip
@@ -24,9 +28,13 @@ vmap xil_defaultlib activehdl/xil_defaultlib
 vmap lib_cdc_v1_0_2 activehdl/lib_cdc_v1_0_2
 vmap proc_sys_reset_v5_0_13 activehdl/proc_sys_reset_v5_0_13
 vmap generic_baseblocks_v2_1_0 activehdl/generic_baseblocks_v2_1_0
+vmap axi_register_slice_v2_1_21 activehdl/axi_register_slice_v2_1_21
 vmap fifo_generator_v13_2_5 activehdl/fifo_generator_v13_2_5
 vmap axi_data_fifo_v2_1_20 activehdl/axi_data_fifo_v2_1_20
-vmap axi_register_slice_v2_1_21 activehdl/axi_register_slice_v2_1_21
+vmap axi_crossbar_v2_1_22 activehdl/axi_crossbar_v2_1_22
+vmap axi_lite_ipif_v3_0_4 activehdl/axi_lite_ipif_v3_0_4
+vmap interrupt_control_v3_1_4 activehdl/interrupt_control_v3_1_4
+vmap axi_gpio_v2_0_23 activehdl/axi_gpio_v2_0_23
 vmap axi_protocol_converter_v2_1_21 activehdl/axi_protocol_converter_v2_1_21
 
 vlog -work xilinx_vip  -sv2k12 "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
@@ -67,8 +75,8 @@ vcom -work proc_sys_reset_v5_0_13 -93 \
 
 vcom -work xil_defaultlib -93 \
 "../../../bd/design_2/ip/design_2_rst_ps7_0_100M_0/sim/design_2_rst_ps7_0_100M_0.vhd" \
-"../../../bd/design_2/ipshared/c864/hdl/axi_ppm5_v1_0_S00_AXI.vhd" \
-"../../../bd/design_2/ipshared/c864/hdl/axi_ppm5_v1_0.vhd" \
+"../../../bd/design_2/ipshared/ccef/hdl/axi_ppm5_v1_0_S00_AXI.vhd" \
+"../../../bd/design_2/ipshared/ccef/hdl/axi_ppm5_v1_0.vhd" \
 "../../../bd/design_2/ip/design_2_axi_ppm5_0_0/sim/design_2_axi_ppm5_0_0.vhd" \
 "../../../bd/design_2/ip/design_2_system_ila_0_0/bd_0/sim/bd_074c.vhd" \
 "../../../bd/design_2/ip/design_2_system_ila_0_0/bd_0/ip/ip_0/sim/bd_074c_ila_lib_0.vhd" \
@@ -76,6 +84,9 @@ vcom -work xil_defaultlib -93 \
 
 vlog -work generic_baseblocks_v2_1_0  -v2k5 "+incdir+../../../../MP-1.srcs/sources_1/bd/design_2/ipshared/ec67/hdl" "+incdir+../../../../MP-1.srcs/sources_1/bd/design_2/ipshared/6b56/hdl" "+incdir+../../../../MP-1.srcs/sources_1/bd/design_2/ipshared/1b7e/hdl/verilog" "+incdir+../../../../MP-1.srcs/sources_1/bd/design_2/ipshared/122e/hdl/verilog" "+incdir+../../../../MP-1.srcs/sources_1/bd/design_2/ipshared/b205/hdl/verilog" "+incdir+../../../../MP-1.srcs/sources_1/bd/design_2/ipshared/c968/hdl/verilog" "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
 "../../../../MP-1.srcs/sources_1/bd/design_2/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v" \
+
+vlog -work axi_register_slice_v2_1_21  -v2k5 "+incdir+../../../../MP-1.srcs/sources_1/bd/design_2/ipshared/ec67/hdl" "+incdir+../../../../MP-1.srcs/sources_1/bd/design_2/ipshared/6b56/hdl" "+incdir+../../../../MP-1.srcs/sources_1/bd/design_2/ipshared/1b7e/hdl/verilog" "+incdir+../../../../MP-1.srcs/sources_1/bd/design_2/ipshared/122e/hdl/verilog" "+incdir+../../../../MP-1.srcs/sources_1/bd/design_2/ipshared/b205/hdl/verilog" "+incdir+../../../../MP-1.srcs/sources_1/bd/design_2/ipshared/c968/hdl/verilog" "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
+"../../../../MP-1.srcs/sources_1/bd/design_2/ipshared/2ef9/hdl/axi_register_slice_v2_1_vl_rfs.v" \
 
 vlog -work fifo_generator_v13_2_5  -v2k5 "+incdir+../../../../MP-1.srcs/sources_1/bd/design_2/ipshared/ec67/hdl" "+incdir+../../../../MP-1.srcs/sources_1/bd/design_2/ipshared/6b56/hdl" "+incdir+../../../../MP-1.srcs/sources_1/bd/design_2/ipshared/1b7e/hdl/verilog" "+incdir+../../../../MP-1.srcs/sources_1/bd/design_2/ipshared/122e/hdl/verilog" "+incdir+../../../../MP-1.srcs/sources_1/bd/design_2/ipshared/b205/hdl/verilog" "+incdir+../../../../MP-1.srcs/sources_1/bd/design_2/ipshared/c968/hdl/verilog" "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
 "../../../../MP-1.srcs/sources_1/bd/design_2/ipshared/276e/simulation/fifo_generator_vlog_beh.v" \
@@ -89,8 +100,24 @@ vlog -work fifo_generator_v13_2_5  -v2k5 "+incdir+../../../../MP-1.srcs/sources_
 vlog -work axi_data_fifo_v2_1_20  -v2k5 "+incdir+../../../../MP-1.srcs/sources_1/bd/design_2/ipshared/ec67/hdl" "+incdir+../../../../MP-1.srcs/sources_1/bd/design_2/ipshared/6b56/hdl" "+incdir+../../../../MP-1.srcs/sources_1/bd/design_2/ipshared/1b7e/hdl/verilog" "+incdir+../../../../MP-1.srcs/sources_1/bd/design_2/ipshared/122e/hdl/verilog" "+incdir+../../../../MP-1.srcs/sources_1/bd/design_2/ipshared/b205/hdl/verilog" "+incdir+../../../../MP-1.srcs/sources_1/bd/design_2/ipshared/c968/hdl/verilog" "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
 "../../../../MP-1.srcs/sources_1/bd/design_2/ipshared/47c9/hdl/axi_data_fifo_v2_1_vl_rfs.v" \
 
-vlog -work axi_register_slice_v2_1_21  -v2k5 "+incdir+../../../../MP-1.srcs/sources_1/bd/design_2/ipshared/ec67/hdl" "+incdir+../../../../MP-1.srcs/sources_1/bd/design_2/ipshared/6b56/hdl" "+incdir+../../../../MP-1.srcs/sources_1/bd/design_2/ipshared/1b7e/hdl/verilog" "+incdir+../../../../MP-1.srcs/sources_1/bd/design_2/ipshared/122e/hdl/verilog" "+incdir+../../../../MP-1.srcs/sources_1/bd/design_2/ipshared/b205/hdl/verilog" "+incdir+../../../../MP-1.srcs/sources_1/bd/design_2/ipshared/c968/hdl/verilog" "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
-"../../../../MP-1.srcs/sources_1/bd/design_2/ipshared/2ef9/hdl/axi_register_slice_v2_1_vl_rfs.v" \
+vlog -work axi_crossbar_v2_1_22  -v2k5 "+incdir+../../../../MP-1.srcs/sources_1/bd/design_2/ipshared/ec67/hdl" "+incdir+../../../../MP-1.srcs/sources_1/bd/design_2/ipshared/6b56/hdl" "+incdir+../../../../MP-1.srcs/sources_1/bd/design_2/ipshared/1b7e/hdl/verilog" "+incdir+../../../../MP-1.srcs/sources_1/bd/design_2/ipshared/122e/hdl/verilog" "+incdir+../../../../MP-1.srcs/sources_1/bd/design_2/ipshared/b205/hdl/verilog" "+incdir+../../../../MP-1.srcs/sources_1/bd/design_2/ipshared/c968/hdl/verilog" "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
+"../../../../MP-1.srcs/sources_1/bd/design_2/ipshared/b68e/hdl/axi_crossbar_v2_1_vl_rfs.v" \
+
+vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../MP-1.srcs/sources_1/bd/design_2/ipshared/ec67/hdl" "+incdir+../../../../MP-1.srcs/sources_1/bd/design_2/ipshared/6b56/hdl" "+incdir+../../../../MP-1.srcs/sources_1/bd/design_2/ipshared/1b7e/hdl/verilog" "+incdir+../../../../MP-1.srcs/sources_1/bd/design_2/ipshared/122e/hdl/verilog" "+incdir+../../../../MP-1.srcs/sources_1/bd/design_2/ipshared/b205/hdl/verilog" "+incdir+../../../../MP-1.srcs/sources_1/bd/design_2/ipshared/c968/hdl/verilog" "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
+"../../../bd/design_2/ip/design_2_xbar_0/sim/design_2_xbar_0.v" \
+
+vcom -work axi_lite_ipif_v3_0_4 -93 \
+"../../../../MP-1.srcs/sources_1/bd/design_2/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd" \
+
+vcom -work interrupt_control_v3_1_4 -93 \
+"../../../../MP-1.srcs/sources_1/bd/design_2/ipshared/a040/hdl/interrupt_control_v3_1_vh_rfs.vhd" \
+
+vcom -work axi_gpio_v2_0_23 -93 \
+"../../../../MP-1.srcs/sources_1/bd/design_2/ipshared/bb35/hdl/axi_gpio_v2_0_vh_rfs.vhd" \
+
+vcom -work xil_defaultlib -93 \
+"../../../bd/design_2/ip/design_2_axi_gpio_0_0/sim/design_2_axi_gpio_0_0.vhd" \
+"../../../bd/design_2/ip/design_2_axi_gpio_1_0/sim/design_2_axi_gpio_1_0.vhd" \
 
 vlog -work axi_protocol_converter_v2_1_21  -v2k5 "+incdir+../../../../MP-1.srcs/sources_1/bd/design_2/ipshared/ec67/hdl" "+incdir+../../../../MP-1.srcs/sources_1/bd/design_2/ipshared/6b56/hdl" "+incdir+../../../../MP-1.srcs/sources_1/bd/design_2/ipshared/1b7e/hdl/verilog" "+incdir+../../../../MP-1.srcs/sources_1/bd/design_2/ipshared/122e/hdl/verilog" "+incdir+../../../../MP-1.srcs/sources_1/bd/design_2/ipshared/b205/hdl/verilog" "+incdir+../../../../MP-1.srcs/sources_1/bd/design_2/ipshared/c968/hdl/verilog" "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
 "../../../../MP-1.srcs/sources_1/bd/design_2/ipshared/8dfa/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \

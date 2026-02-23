@@ -36,8 +36,8 @@
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
   "../../../bd/design_2/ip/design_2_rst_ps7_0_100M_0/sim/design_2_rst_ps7_0_100M_0.vhd" \
-  "../../../bd/design_2/ipshared/c864/hdl/axi_ppm5_v1_0_S00_AXI.vhd" \
-  "../../../bd/design_2/ipshared/c864/hdl/axi_ppm5_v1_0.vhd" \
+  "../../../bd/design_2/ipshared/ccef/hdl/axi_ppm5_v1_0_S00_AXI.vhd" \
+  "../../../bd/design_2/ipshared/ccef/hdl/axi_ppm5_v1_0.vhd" \
   "../../../bd/design_2/ip/design_2_axi_ppm5_0_0/sim/design_2_axi_ppm5_0_0.vhd" \
   "../../../bd/design_2/ip/design_2_system_ila_0_0/bd_0/sim/bd_074c.vhd" \
   "../../../bd/design_2/ip/design_2_system_ila_0_0/bd_0/ip/ip_0/sim/bd_074c_ila_lib_0.vhd" \
@@ -45,6 +45,9 @@
 -endlib
 -makelib xcelium_lib/generic_baseblocks_v2_1_0 \
   "../../../../MP-1.srcs/sources_1/bd/design_2/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v" \
+-endlib
+-makelib xcelium_lib/axi_register_slice_v2_1_21 \
+  "../../../../MP-1.srcs/sources_1/bd/design_2/ipshared/2ef9/hdl/axi_register_slice_v2_1_vl_rfs.v" \
 -endlib
 -makelib xcelium_lib/fifo_generator_v13_2_5 \
   "../../../../MP-1.srcs/sources_1/bd/design_2/ipshared/276e/simulation/fifo_generator_vlog_beh.v" \
@@ -58,8 +61,24 @@
 -makelib xcelium_lib/axi_data_fifo_v2_1_20 \
   "../../../../MP-1.srcs/sources_1/bd/design_2/ipshared/47c9/hdl/axi_data_fifo_v2_1_vl_rfs.v" \
 -endlib
--makelib xcelium_lib/axi_register_slice_v2_1_21 \
-  "../../../../MP-1.srcs/sources_1/bd/design_2/ipshared/2ef9/hdl/axi_register_slice_v2_1_vl_rfs.v" \
+-makelib xcelium_lib/axi_crossbar_v2_1_22 \
+  "../../../../MP-1.srcs/sources_1/bd/design_2/ipshared/b68e/hdl/axi_crossbar_v2_1_vl_rfs.v" \
+-endlib
+-makelib xcelium_lib/xil_defaultlib \
+  "../../../bd/design_2/ip/design_2_xbar_0/sim/design_2_xbar_0.v" \
+-endlib
+-makelib xcelium_lib/axi_lite_ipif_v3_0_4 \
+  "../../../../MP-1.srcs/sources_1/bd/design_2/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd" \
+-endlib
+-makelib xcelium_lib/interrupt_control_v3_1_4 \
+  "../../../../MP-1.srcs/sources_1/bd/design_2/ipshared/a040/hdl/interrupt_control_v3_1_vh_rfs.vhd" \
+-endlib
+-makelib xcelium_lib/axi_gpio_v2_0_23 \
+  "../../../../MP-1.srcs/sources_1/bd/design_2/ipshared/bb35/hdl/axi_gpio_v2_0_vh_rfs.vhd" \
+-endlib
+-makelib xcelium_lib/xil_defaultlib \
+  "../../../bd/design_2/ip/design_2_axi_gpio_0_0/sim/design_2_axi_gpio_0_0.vhd" \
+  "../../../bd/design_2/ip/design_2_axi_gpio_1_0/sim/design_2_axi_gpio_1_0.vhd" \
 -endlib
 -makelib xcelium_lib/axi_protocol_converter_v2_1_21 \
   "../../../../MP-1.srcs/sources_1/bd/design_2/ipshared/8dfa/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \

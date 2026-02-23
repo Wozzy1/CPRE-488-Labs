@@ -1,0 +1,10 @@
+21:21:42 **** Build of configuration Debug for project outputTest_system ****
+make all 
+Generating bif file for the system project
+generate_system_bif.bat 54906 C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/design_2_wrapper_outputTest.xpfm domain_ps7_cortexa9_0 C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/outputTest_system/Debug/system.bif
+sdcard_gen --xpfm C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/design_2_wrapper_outputTest.xpfm --sys_config design_2_wrapper_outputTest --bif C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/outputTest_system/Debug/system.bif --bitstream C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/outputTest/_ide/bitstream/design_2_wrapper_outputTest.bit --elf C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/outputTest/Debug/outputTest.elf,ps7_cortexa9_0
+creating BOOT.BIN using C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/outputTest/_ide/bitstream/design_2_wrapper_outputTest.bit
+Running C:/Xilinx/Vitis/2020.1/bin/bootgen  -image C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/outputTest_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
+
+21:21:46 Build Finished (took 4s.3ms)
+

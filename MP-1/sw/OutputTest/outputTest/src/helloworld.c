@@ -51,6 +51,7 @@
 #include "xil_printf.h"
 #include "xparameters.h"
 #include "xil_io.h"
+#include "xtime_l.h"
 #include "xuartps_hw.h"
 #include "sleep.h"
 
@@ -72,10 +73,6 @@
 #define REG15  0x3C
 #define CAPTURE_COUNT 6U
 #define MAX_SAVED_FRAMES 256U
-
-#define ATTACK_SPEED 0.05
-#define DECAY_SPEED  0.03
-
 
 /* SW0 comes from AXI GPIO channel 1, bit 0. */
 #define SW0_MASK 0x1U
@@ -124,6 +121,72 @@
 #endif
 
 
+// Keyboard input defines
+#define ATTACK_SPEED          0.08    // faster response
+#define DECAY_SPEED           0.05
+#define THROTTLE_ATTACK_LAUNCH   0.10    /* punch off the ground */
+#define THROTTLE_ATTACK_CRUISE   0.018   /* fine control at altitude */
+#define THROTTLE_LIFTOFF         0.30    /* threshold where attack slows */
+#define THROTTLE_HOLD_BAND       0.015   /* +/- this around last released pos = hold */
+#define THROTTLE_DECAY_SPEED     0.006   /* very slow passive drift, nearly hover */
+#define THROTTLE_BRAKE_SPEED     0.045   /* C key: active descent */
+/* Channel values in capture clock counts: roll, pitch, throttle, yaw, vr(a), vr(b). */
+static const u32 chan_min[CAPTURE_COUNT] = {67000U, 67000U, 60000U, 70000U, 60000U, 60000U};
+static const u32 chan_max[CAPTURE_COUNT] = {150000U, 150000U, 163000U, 157000U, 163000U, 163000U};
+
+// Filter defines
+#define WINDOW_SIZE 8U
+
+typedef struct {
+    u32  buf[WINDOW_SIZE];   /* circular buffer of raw samples */
+    u32  head;               /* next write position */
+    u32  count;              /* samples filled so far (saturates at WINDOW_SIZE) */
+    u32  sum;                /* running sum for O(1) average */
+} SlidingWindow;
+
+static SlidingWindow sw_filter[CAPTURE_COUNT];
+
+static void sliding_window_init(void)
+{
+    u32 i, j;
+    for (i = 0U; i < CAPTURE_COUNT; i++) {
+        sw_filter[i].head  = 0U;
+        sw_filter[i].count = 0U;
+        sw_filter[i].sum   = 0U;
+        for (j = 0U; j < WINDOW_SIZE; j++) {
+            sw_filter[i].buf[j] = 0U;
+        }
+    }
+}
+
+static u32 sliding_window_update(SlidingWindow *w, u32 new_sample)
+{
+    /* Subtract the oldest sample from the running sum */
+    w->sum -= w->buf[w->head];
+    /* Write new sample into the slot */
+    w->buf[w->head] = new_sample;
+    w->sum += new_sample;
+    /* Advance head */
+    w->head = (w->head + 1U) % WINDOW_SIZE;
+    /* Track fill level until window is full */
+    if (w->count < WINDOW_SIZE) {
+        w->count++;
+    }
+    return w->sum / w->count;
+}
+
+static void filter_values(const u32 in_vals[CAPTURE_COUNT], u32 out_vals[CAPTURE_COUNT])
+{
+    u32 i;
+    for (i = 0U; i < CAPTURE_COUNT; i++) {
+        u32 averaged = sliding_window_update(&sw_filter[i], in_vals[i]);
+        /* Still clamp to known-good range so bad RC frames don't escape */
+        if (averaged < chan_min[i]) averaged = chan_min[i];
+        if (averaged > chan_max[i]) averaged = chan_max[i];
+        out_vals[i] = averaged;
+    }
+}
+
 static inline u32 access_switches(void)
 {
     return Xil_In32((UINTPTR)SW_GPIO_BASEADDR);
@@ -138,15 +201,16 @@ typedef struct {
     double timer;      /* 0.0 to 1.0 */
     double min_val;
     double max_val;
+    double hold_target;   /* throttle position to hold when no key pressed */
 } ControlAxis;
 
 /* roll, pitch, throttle, yaw, vr(a), vr(b) */
-static ControlAxis roll_axis     = {0.5,  67000.0, 150000.0};
-static ControlAxis pitch_axis    = {0.5,  67000.0, 150000.0};
-static ControlAxis throttle_axis = {0.0,  60000.0, 163000.0};
-static ControlAxis yaw_axis      = {0.5,  70000.0, 157000.0};
-static ControlAxis vra_axis      = {0.5,  60000.0, 163000.0};
-static ControlAxis vrb_axis      = {0.5,  60000.0, 163000.0};
+static ControlAxis roll_axis     = {0.5,  67000.0, 150000.0, 0.0};
+static ControlAxis pitch_axis    = {0.5,  67000.0, 150000.0, 0.0};
+static ControlAxis throttle_axis = {0.0,  60000.0, 163000.0, 0.0};
+static ControlAxis yaw_axis      = {0.5,  70000.0, 157000.0, 0.0};
+static ControlAxis vra_axis      = {0.5,  60000.0, 163000.0, 0.0};
+static ControlAxis vrb_axis      = {0.5,  60000.0, 163000.0, 0.0};
 
 /* One-loop key state flags. If no key comes in this loop, decay logic runs. */
 static bool roll_pos = false;
@@ -154,22 +218,63 @@ static bool roll_neg = false;
 static bool pitch_pos = false;
 static bool pitch_neg = false;
 static bool throttle_pos = false;
+static bool throttle_neg = false;
 
-static int update_keyboard_axis(ControlAxis *axis, bool key_pos, bool key_neg, bool is_throttle)
+static XTime last_w_time = 0;
+static XTime last_s_time = 0;
+static XTime last_a_time = 0;
+static XTime last_d_time = 0;
+static XTime last_space_time = 0;
+static XTime last_c_time = 0;
+static XTime last_q_time = 0;
+static XTime last_e_time = 0;
+static bool yaw_pos = false;
+static bool yaw_neg = false;
+
+/* Zynq global timer = CPU_3x_AND_2x_CLK / 2. At 666MHz CPU, timer = 333MHz.
+   At 333MHz CPU, timer = 166MHz. Adjust TIMER_HZ if your clock differs.    */
+#define TIMER_HZ          166500000ULL   /* ticks per second */
+#define KEY_TIMEOUT_MS    80ULL          /* key stays "held" for 80ms */
+const u64 timeout_ticks = (TIMER_HZ / 1000ULL) * KEY_TIMEOUT_MS;
+
+static int update_keyboard_axis(ControlAxis *axis, bool inc, bool dec, bool is_throttle)
 {
-    if (key_pos) {
-        axis->timer += ATTACK_SPEED;
-    } else if (key_neg) {
-        axis->timer -= ATTACK_SPEED;
-    } else {
-        if (!is_throttle) {
-            if (axis->timer > 0.5) axis->timer -= DECAY_SPEED;
-            if (axis->timer < 0.5) axis->timer += DECAY_SPEED;
+    if (!is_throttle) {
+        if (inc && !dec) {
+            axis->timer += ATTACK_SPEED;
+        } else if (dec && !inc) {
+            axis->timer -= ATTACK_SPEED;
         } else {
-            axis->timer -= DECAY_SPEED;
+            if      (axis->timer > 0.55) axis->timer -= DECAY_SPEED;
+            else if (axis->timer < 0.45) axis->timer += DECAY_SPEED;
+            else                          axis->timer  = 0.5;
+        }
+    } else {
+        if (inc && !dec) {
+            double t = axis->timer;
+            double attack = THROTTLE_ATTACK_LAUNCH
+                            + (THROTTLE_ATTACK_CRUISE - THROTTLE_ATTACK_LAUNCH)
+                            * (t / THROTTLE_LIFTOFF < 1.0 ? t / THROTTLE_LIFTOFF : 1.0);
+            axis->timer += attack;
+            /* Update hold target continuously while climbing */
+            axis->hold_target = axis->timer;
+
+        } else if (dec && !inc) {
+            axis->timer -= THROTTLE_BRAKE_SPEED;
+            /* Update hold target while descending too */
+            axis->hold_target = axis->timer;
+
+        } else {
+            /* No key held: drift very slowly toward hold_target, not toward zero */
+            double diff = axis->timer - axis->hold_target;
+            if (diff > THROTTLE_HOLD_BAND) {
+                axis->timer -= THROTTLE_DECAY_SPEED;
+            } else if (diff < -THROTTLE_HOLD_BAND) {
+                axis->timer += THROTTLE_DECAY_SPEED;
+            }
+            /* Inside the band: do nothing. Throttle holds position. */
         }
     }
-
     if (axis->timer > 1.0) axis->timer = 1.0;
     if (axis->timer < 0.0) axis->timer = 0.0;
 
@@ -181,50 +286,43 @@ static int update_keyboard_axis(ControlAxis *axis, bool key_pos, bool key_neg, b
 
 static void poll_keyboard_commands(void)
 {
-    roll_pos = false;
-    roll_neg = false;
-    pitch_pos = false;
-    pitch_neg = false;
-    throttle_pos = false;
+    XTime now;
+    XTime_GetTime(&now);
 
     while (XUartPs_IsReceiveData(STDIN_BASEADDRESS)) {
         char c = inbyte();
         switch (c) {
-        case 'w':
-        case 'W':
-            pitch_pos = true;
-            break;
-        case 's':
-        case 'S':
-            pitch_neg = true;
-            break;
-        case 'a':
-        case 'A':
-            roll_neg = true;
-            break;
-        case 'd':
-        case 'D':
-            roll_pos = true;
-            break;
-        case ' ':
-            throttle_pos = true;
-            break;
-        default:
-            break;
+        case 'w': case 'W': last_w_time = now; break;
+        case 's': case 'S': last_s_time = now; break;
+        case 'a': case 'A': last_a_time = now; break;
+        case 'd': case 'D': last_d_time = now; break;
+        case ' ':            last_space_time = now; break;
+        case 'c': case 'C': last_c_time = now; break;
+        case 'q': case 'Q': last_q_time = now; break;
+        case 'e': case 'E': last_e_time = now; break;
+        default: break;
         }
     }
+
+    // Evaluate ALL flags after draining the buffer, not inside it
+    pitch_pos    = (now - last_w_time     < timeout_ticks);
+    pitch_neg    = (now - last_s_time     < timeout_ticks);
+    roll_neg     = (now - last_a_time     < timeout_ticks);
+    roll_pos     = (now - last_d_time     < timeout_ticks);
+    throttle_pos = (now - last_space_time < timeout_ticks);
+    throttle_neg = (now - last_c_time     < timeout_ticks);
+    yaw_neg      = (now - last_q_time     < timeout_ticks);
+    yaw_pos      = (now - last_e_time     < timeout_ticks);
 }
 
 static void write_keyboard_frame_to_regs(void)
 {
-    u32 roll        = (u32)update_keyboard_axis(&roll_axis, roll_pos, roll_neg, false);
-    u32 pitch       = (u32)update_keyboard_axis(&pitch_axis, pitch_pos, pitch_neg, false);
-    u32 throttle    = (u32)update_keyboard_axis(&throttle_axis, throttle_pos, false, true);
-    u32 yaw         = Xil_In32(PPM_BASE + REG13);
-    u32 vra         = Xil_In32(PPM_BASE + REG14);
-    u32 vrb         = Xil_In32(PPM_BASE + REG15);
-    xil_printf("KEY: r4=%u r5=%u r6=%u r7=%u r8=%u r9=%u\r\n",
-                roll, pitch, throttle, yaw, vra, vrb);
+    u32 roll     = (u32)update_keyboard_axis(&roll_axis,     roll_pos,     roll_neg,     false);
+    u32 pitch    = (u32)update_keyboard_axis(&pitch_axis,    pitch_pos,    pitch_neg,    false);
+    u32 throttle = (u32)update_keyboard_axis(&throttle_axis, throttle_pos, throttle_neg, true);
+    u32 yaw      = (u32)update_keyboard_axis(&yaw_axis,      yaw_pos,      yaw_neg,      false);
+    u32 vra      = Xil_In32(PPM_BASE + REG14);
+    u32 vrb      = Xil_In32(PPM_BASE + REG15);
 
     Xil_Out32(PPM_BASE + REG4, roll);
     Xil_Out32(PPM_BASE + REG5, pitch);
@@ -233,49 +331,6 @@ static void write_keyboard_frame_to_regs(void)
     Xil_Out32(PPM_BASE + REG8, vra);
     Xil_Out32(PPM_BASE + REG9, vrb);
 }
-
-/* Channel values in capture clock counts: roll, pitch, throttle, yaw, vr(a), vr(b). */
-static const u32 chan_min[CAPTURE_COUNT] = {67000U, 67000U, 60000U, 70000U, 60000U, 60000U};
-// static const u32 chan_min[CAPTURE_COUNT] = {82000U, 75000U, 78000U, 60000U, 60000U, 60000U};
-static const u32 chan_max[CAPTURE_COUNT] = {150000U, 150000U, 163000U, 157000U, 163000U, 163000U};
-
-static double smoothstep(double x)
-{
-    if (x < 0.0) x = 0.0;
-    if (x > 1.0) x = 1.0;
-    return x * x * (3.0 - 2.0 * x);
-}
-
-static u32 filter_one(u32 raw, u32 lo, u32 hi)
-{
-    double norm, smoothed, out;
-    if (hi <= lo) {
-        return raw;
-    }
-    if (raw <= lo) {
-        return lo;
-    }
-    if (raw >= hi) {
-        return hi;
-    }
-
-    norm = ((double)raw - (double)lo) / ((double)hi - (double)lo);
-    smoothed = smoothstep(norm);
-    out = (smoothed * ((double)hi - (double)lo)) + (double)lo;
-    if (out < 0.0) {
-        out = 0.0;
-    }
-    return (u32)(out + 0.5);
-}
-
-static void filter_values(const u32 in_vals[CAPTURE_COUNT], u32 out_vals[CAPTURE_COUNT])
-{
-    u32 i;
-    for (i = 0U; i < CAPTURE_COUNT; i++) {
-        out_vals[i] = filter_one(in_vals[i], chan_min[i], chan_max[i]);
-    }
-}
-
 
 
 static u32 saved_frames[MAX_SAVED_FRAMES][CAPTURE_COUNT];
@@ -327,12 +382,12 @@ static void load_most_recent_frame(int use_filter)
 
 int main()
 {
-    int last_sw0 = -1;
-    int last_sw1 = -1;
-    int last_sw2 = -1;
-    int last_sw3 = -1;
-    int last_sw4 = -1;
-    int last_sw7 = -1;
+    int last_sw0 = -1;  // sw mode
+    int last_sw1 = -1;  // debug mode
+    int last_sw2 = -1;  // record mode
+    int last_sw3 = -1;  // play recording
+    int last_sw4 = -1;  // fliter sw input
+    int last_sw7 = -1;  // keyboard input
 
     int prev_btnc = 0;
     int prev_btnd = 0;
@@ -342,6 +397,7 @@ int main()
     u32 prev_reg1 = Xil_In32(PPM_BASE + REG1);
 
     init_platform();
+    sliding_window_init();
 
     print("AXI PPM relay mode by SW0\r\n");
 
@@ -543,7 +599,7 @@ int main()
         prev_btnl = btnl;
         prev_btnr = btnr;
         prev_btnu = btnu;
-        usleep(100000);
+        usleep(20000);
     }
 
     cleanup_platform();

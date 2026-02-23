@@ -1,5 +1,5 @@
-set_property SRC_FILE_INFO {cfile:c:/Users/cihem/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_2/ip/design_2_processing_system7_0_0/design_2_processing_system7_0_0/design_2_processing_system7_0_0_in_context.xdc rfile:../../../MP-1.srcs/sources_1/bd/design_2/ip/design_2_processing_system7_0_0/design_2_processing_system7_0_0/design_2_processing_system7_0_0_in_context.xdc id:1 order:EARLY scoped_inst:design_2_i/processing_system7_0} [current_design]
-set_property SRC_FILE_INFO {cfile:C:/Users/cihem/CPRE-488-Labs/MP-1/docs/ZedBoard/zedboard_master.xdc rfile:../../../../../docs/ZedBoard/zedboard_master.xdc id:2} [current_design]
+set_property SRC_FILE_INFO {cfile:c:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_2/ip/design_2_processing_system7_0_0/design_2_processing_system7_0_0/design_2_processing_system7_0_0_in_context.xdc rfile:../../../MP-1.srcs/sources_1/bd/design_2/ip/design_2_processing_system7_0_0/design_2_processing_system7_0_0/design_2_processing_system7_0_0_in_context.xdc id:1 order:EARLY scoped_inst:design_2_i/processing_system7_0} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Users/diepw50/CPRE-488-Labs/MP-1/docs/ZedBoard/zedboard_master.xdc rfile:../../../../../docs/ZedBoard/zedboard_master.xdc id:2} [current_design]
 current_instance design_2_i/processing_system7_0
 set_property src_info {type:SCOPED_XDC file:1 line:2 export:INPUT save:INPUT read:READ} [current_design]
 create_clock -period 10.000 [get_ports {}]

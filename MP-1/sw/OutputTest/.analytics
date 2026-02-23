@@ -53,3 +53,27 @@ timestamp=[2026-02-23 02:47:55], mode=BUILD, duration=0:00:00.231, duration_ms=2
 timestamp=[2026-02-23 03:33:59], mode=BUILD, duration=0:00:00.750, duration_ms=750, data={name=outputTest, configuration=Debug, clean_build=false}
 timestamp=[2026-02-23 03:48:06], mode=BUILD, duration=0:00:00.736, duration_ms=736, data={name=outputTest, configuration=Debug, clean_build=false}
 timestamp=[2026-02-23 03:55:54], mode=BUILD, duration=0:00:00.765, duration_ms=765, data={name=outputTest, configuration=Debug, clean_build=false}
+timestamp=[2026-02-23 04:12:48], mode=WORKBENCH_START, duration=0:00:05.567, duration_ms=5567, data={}
+timestamp=[2026-02-23 04:12:48], mode=WORKBENCH_UI_INIT, duration=0:00:00.502, duration_ms=502, data={editors_count=4, platform_editors_count=1, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,design_2_wrapper_outputTest,outputTest,outputTest_system}
+timestamp=[2026-02-23 04:12:49], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.029, duration_ms=29, data={}
+timestamp=[2026-02-23 04:14:08], mode=PLATFORM_GENERATION, duration=0:00:17.404, duration_ms=17404, data={name=design_2_wrapper_outputTest}
+timestamp=[2026-02-23 04:14:12], mode=BUILD, duration=0:00:01.001, duration_ms=1001, data={name=outputTest, configuration=Debug, clean_build=false}
+timestamp=[2026-02-23 04:14:13], mode=BUILD, duration=0:00:00.915, duration_ms=915, data={name=outputTest_system, configuration=Debug, clean_build=false}
+timestamp=[2026-02-23 04:20:24], mode=PLATFORM_GENERATION, duration=0:00:01.015, duration_ms=1015, data={name=design_2_wrapper_outputTest}
+timestamp=[2026-02-23 04:21:52], mode=BUILD, duration=0:00:00.226, duration_ms=226, data={name=outputTest, configuration=Debug, clean_build=false}
+timestamp=[2026-02-23 04:21:56], mode=BUILD, duration=0:00:04.068, duration_ms=4068, data={name=outputTest_system, configuration=Debug, clean_build=false}
+timestamp=[2026-02-23 04:22:24], mode=BUILD, duration=0:00:00.166, duration_ms=166, data={name=outputTest, configuration=Debug, clean_build=false}
+timestamp=[2026-02-23 04:25:09], mode=BUILD, duration=0:00:00.761, duration_ms=761, data={name=outputTest, configuration=Debug, clean_build=false}
+timestamp=[2026-02-23 04:38:51], mode=BUILD, duration=0:00:00.703, duration_ms=703, data={name=outputTest, configuration=Debug, clean_build=false}
+timestamp=[2026-02-23 05:02:10], mode=BUILD, duration=0:00:00.746, duration_ms=746, data={name=outputTest, configuration=Debug, clean_build=false}
+timestamp=[2026-02-23 05:14:09], mode=BUILD, duration=0:00:00.730, duration_ms=730, data={name=outputTest, configuration=Debug, clean_build=false}
+timestamp=[2026-02-23 05:17:38], mode=BUILD, duration=0:00:00.736, duration_ms=736, data={name=outputTest, configuration=Debug, clean_build=false}
+timestamp=[2026-02-23 05:37:56], mode=BUILD, duration=0:00:00.755, duration_ms=755, data={name=outputTest, configuration=Debug, clean_build=false}
+timestamp=[2026-02-23 05:44:27], mode=BUILD, duration=0:00:00.703, duration_ms=703, data={name=outputTest, configuration=Debug, clean_build=false}
+timestamp=[2026-02-23 06:03:01], mode=BUILD, duration=0:00:00.844, duration_ms=844, data={name=outputTest, configuration=Debug, clean_build=false}
+timestamp=[2026-02-23 06:04:23], mode=BUILD, duration=0:00:00.361, duration_ms=361, data={name=outputTest, configuration=Debug, clean_build=false}
+timestamp=[2026-02-23 06:04:42], mode=BUILD, duration=0:00:00.372, duration_ms=372, data={name=outputTest, configuration=Debug, clean_build=false}
+timestamp=[2026-02-23 06:05:31], mode=BUILD, duration=0:00:00.381, duration_ms=381, data={name=outputTest, configuration=Debug, clean_build=false}
+timestamp=[2026-02-23 06:06:18], mode=BUILD, duration=0:00:01.203, duration_ms=1203, data={name=outputTest, configuration=Debug, clean_build=false}
+timestamp=[2026-02-23 06:06:28], mode=BUILD, duration=0:00:00.196, duration_ms=196, data={name=outputTest, configuration=Debug, clean_build=false}
+timestamp=[2026-02-23 06:16:23], mode=BUILD, duration=0:00:00.747, duration_ms=747, data={name=outputTest, configuration=Debug, clean_build=false}

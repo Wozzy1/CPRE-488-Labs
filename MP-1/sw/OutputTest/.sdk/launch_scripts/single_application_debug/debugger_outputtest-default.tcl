@@ -3,16 +3,16 @@ targets -set -nocase -filter {name =~"APU*"}
 rst -system
 after 3000
 targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248A49A84" && level==0 && jtag_device_ctx=="jsn-Zed-210248A49A84-23727093-0"}
-fpga -file C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/outputTest/_ide/bitstream/design_2_wrapper_outputTest.bit
+fpga -file C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/OutputTest/outputTest/_ide/bitstream/design_2_wrapper_outputTest.bit
 targets -set -nocase -filter {name =~"APU*"}
-loadhw -hw C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+loadhw -hw C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
 configparams force-mem-access 1
 targets -set -nocase -filter {name =~"APU*"}
-source C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/outputTest/_ide/psinit/ps7_init.tcl
+source C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/OutputTest/outputTest/_ide/psinit/ps7_init.tcl
 ps7_init
 ps7_post_config
 targets -set -nocase -filter {name =~ "*A9*#0"}
-dow C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/outputTest/Debug/outputTest.elf
+dow C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/OutputTest/outputTest/Debug/outputTest.elf
 configparams force-mem-access 0
 targets -set -nocase -filter {name =~ "*A9*#0"}
 con

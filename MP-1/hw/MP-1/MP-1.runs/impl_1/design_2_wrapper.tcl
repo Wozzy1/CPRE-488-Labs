@@ -17,7 +17,7 @@ proc create_report { reportName command } {
   }
 }
 namespace eval ::optrace {
-  variable script "C:/Users/cihem/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/impl_1/design_2_wrapper.tcl"
+  variable script "C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/impl_1/design_2_wrapper.tcl"
   variable category "vivado_impl"
 }
 
@@ -121,9 +121,7 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param tcl.collectionResultDisplayLimit 0
   set_param chipscope.maxJobs 5
-  set_param xicom.use_bs_reader 1
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7z020clg484-1
   set_property board_part em.avnet.com:zed:part0:1.4 [current_project]
@@ -131,28 +129,28 @@ OPTRACE "create in-memory project" START { }
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
-  set_property webtalk.parent_dir C:/Users/cihem/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.cache/wt [current_project]
-  set_property parent.project_path C:/Users/cihem/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.xpr [current_project]
+  set_property webtalk.parent_dir C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.cache/wt [current_project]
+  set_property parent.project_path C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.xpr [current_project]
   set_property ip_repo_paths {
-  C:/Users/cihem/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm5_1.0
-  C:/Users/cihem/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0
-  C:/Users/cihem/CPRE-488-Labs/MP-1/hw/ip_repo/ppm3_1.0
-  C:/Users/cihem/CPRE-488-Labs/MP-1/hw/ip_repo/ppm2_1.0
-  C:/Users/cihem/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm_1.0
+  C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm5_1.0
+  C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm4_1.0
+  C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/ppm3_1.0
+  C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/ppm2_1.0
+  C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/ip_repo/axi_ppm_1.0
 } [current_project]
   update_ip_catalog
-  set_property ip_output_repo C:/Users/cihem/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.cache/ip [current_project]
+  set_property ip_output_repo C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
-  add_files -quiet C:/Users/cihem/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/synth_1/design_2_wrapper.dcp
+  add_files -quiet C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.runs/synth_1/design_2_wrapper.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
-  add_files C:/Users/cihem/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_2/design_2.bd
+  add_files C:/Users/diepw50/CPRE-488-Labs/MP-1/hw/MP-1/MP-1.srcs/sources_1/bd/design_2/design_2.bd
   set_param project.isImplRun false
 OPTRACE "read constraints: implementation" START { }
-  read_xdc C:/Users/cihem/CPRE-488-Labs/MP-1/docs/ZedBoard/zedboard_master.xdc
+  read_xdc C:/Users/diepw50/CPRE-488-Labs/MP-1/docs/ZedBoard/zedboard_master.xdc
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "add files" END { }
 OPTRACE "link_design" START { }

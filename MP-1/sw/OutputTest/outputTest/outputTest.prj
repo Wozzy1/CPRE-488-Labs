@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ASCII"?>
 <sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="outputTest" location="C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/outputTest" platform="C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/design_2_wrapper_outputTest.xpfm" platformUID="xilinx:zed::0.0(custom)" systemProject="outputTest_system" sysConfig="design_2_wrapper_outputTest" runtime="cpp" cpu="domain_ps7_cortexa9_0" cpuInstance="ps7_cortexa9_0" os="standalone" mssSignature="3aee5348a47e2abe4f0ac443ad12db99">
-  <configuration name="Debug" id="xilinx.gnu.armv7.exe.debug.220068766">
+  <configuration name="Debug" id="xilinx.gnu.armv7.exe.debug.220068766" dirty="true">
     <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
     <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
   </configuration>

@@ -1,6 +1,6 @@
 Nothing to build in platform 'design_2_wrapper_outputTest'
 
-00:11:33 **** Incremental Build of configuration Debug for project outputTest ****
+00:49:14 **** Incremental Build of configuration Debug for project outputTest ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
@@ -9,6 +9,13 @@ make --no-print-directory main-build
 'Building file: ../src/helloworld.c'
 'Invoking: ARM v7 gcc compiler'
 arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/sw/design_2_wrapper_outputTest/domain_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:184:13: warning: unused variable 'btnr_rise' [-Wunused-variable]
+  184 |         int btnr_rise = (btnr == 1 && prev_btnr == 0);
+      |             ^~~~~~~~~
+../src/helloworld.c:183:13: warning: unused variable 'btnl_rise' [-Wunused-variable]
+  183 |         int btnl_rise = (btnl == 1 && prev_btnl == 0);
+      |             ^~~~~~~~~
 'Finished building: ../src/helloworld.c'
 ' '
 'Building target: outputTest.elf'
@@ -19,6 +26,13 @@ arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=non
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size outputTest.elf  |tee "outputTest.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  24140	   1144	  28728	  54012	   d2fc	outputTest.elf
+  25900	   1144	  28728	  55772	   d9dc	outputTest.elf
 'Finished building: outputTest.elf.size'
 ' '
+00:49:15 **** Incremental Build of configuration Debug for project outputTest_system ****
+make all 
+Generating bif file for the system project
+generate_system_bif.bat 54906 C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/design_2_wrapper_outputTest.xpfm domain_ps7_cortexa9_0 C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/outputTest_system/Debug/system.bif
+sdcard_gen --xpfm C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/design_2_wrapper_outputTest.xpfm --sys_config design_2_wrapper_outputTest --bif C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/outputTest_system/Debug/system.bif --bitstream C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/outputTest/_ide/bitstream/design_2_wrapper_outputTest.bit --elf C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/outputTest/Debug/outputTest.elf,ps7_cortexa9_0
+creating BOOT.BIN using C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/outputTest/_ide/bitstream/design_2_wrapper_outputTest.bit
+Running C:/Xilinx/Vitis/2020.1/bin/bootgen  -image C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/outputTest_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN

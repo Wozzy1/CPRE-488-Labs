@@ -75,8 +75,8 @@ vcom -work proc_sys_reset_v5_0_13  -93 \
 
 vcom -work xil_defaultlib  -93 \
 "../../../bd/design_2/ip/design_2_rst_ps7_0_100M_0/sim/design_2_rst_ps7_0_100M_0.vhd" \
-"../../../bd/design_2/ipshared/ccef/hdl/axi_ppm5_v1_0_S00_AXI.vhd" \
-"../../../bd/design_2/ipshared/ccef/hdl/axi_ppm5_v1_0.vhd" \
+"../../../bd/design_2/ipshared/a98e/hdl/axi_ppm5_v1_0_S00_AXI.vhd" \
+"../../../bd/design_2/ipshared/a98e/hdl/axi_ppm5_v1_0.vhd" \
 "../../../bd/design_2/ip/design_2_axi_ppm5_0_0/sim/design_2_axi_ppm5_0_0.vhd" \
 "../../../bd/design_2/ip/design_2_system_ila_0_0/bd_0/sim/bd_074c.vhd" \
 "../../../bd/design_2/ip/design_2_system_ila_0_0/bd_0/ip/ip_0/sim/bd_074c_ila_lib_0.vhd" \

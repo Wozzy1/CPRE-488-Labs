@@ -9674,3 +9674,3396 @@ Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-39: Launc
 
 !ENTRY com.xilinx.sdk.utils 0 0 2026-02-22 23:20:14.131
 !MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-39: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:00:02.898
+!MESSAGE XSCT Command: [disconnect tcfchan#22], Thread: Thread-1203
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:00:02.901
+!MESSAGE XSCT command with result: [disconnect tcfchan#22], Result: [null, ]. Thread: Thread-1203
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:00:09.770
+!MESSAGE XSCT Command: [platform read {C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/platform.spr}], Thread: Worker-48: Reading platform
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:00:12.985
+!MESSAGE XSCT command with result: [platform read {C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/platform.spr}], Result: [null, ]. Thread: Worker-48: Reading platform
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:00:16.340
+!MESSAGE XSCT Command: [platform config -updatehw {C:/Users/cihem/CPRE-488-Labs/MP-1/hw/MP-1/design_2_wrapper_outputTest.xsa}], Thread: Worker-56: Updating hardware platform
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:00:22.787
+!MESSAGE XSCT command with result: [platform config -updatehw {C:/Users/cihem/CPRE-488-Labs/MP-1/hw/MP-1/design_2_wrapper_outputTest.xsa}], Result: [null, ]. Thread: Worker-56: Updating hardware platform
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:00:41.832
+!MESSAGE XSCT Command: [::hsi::utils::closehw C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:00:41.853
+!MESSAGE XSCT command with result: [::hsi::utils::closehw C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:00:41.853
+!MESSAGE XSCT Command: [::hsi::utils::openhw C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:00:44.987
+!MESSAGE XSCT command with result: [::hsi::utils::openhw C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:00:44.988
+!MESSAGE XSCT Command: [::hsi::utils::get_addr_tag_info -json C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:00:44.989
+!MESSAGE XSCT command with result: [::hsi::utils::get_addr_tag_info -json C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa ], Result: [null, {"ps7_cortexa9_0": "",
+"ps7_cortexa9_1": "",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:00:44.990
+!MESSAGE XSCT Command: [::hsi::utils::get_all_periphs -json C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:00:44.994
+!MESSAGE XSCT command with result: [::hsi::utils::get_all_periphs -json C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa], Result: [null, {"axi_ppm4_0": {"hier_name": "axi_ppm4_0",
+"type": "axi_ppm4",
+"version": "1.0",
+"ip_type": "PERIPHERAL",
+},
+"processing_system7_0": {"hier_name": "processing_system7_0",
+"type": "processing_system7",
+"version": "5.5",
+"ip_type": "",
+},
+"ps7_0_axi_periph": {"hier_name": "ps7_0_axi_periph",
+"type": "axi_interconnect",
+"version": "2.1",
+"ip_type": "BUS",
+},
+"rst_ps7_0_100M": {"hier_name": "rst_ps7_0_100M",
+"type": "proc_sys_reset",
+"version": "5.0",
+"ip_type": "PERIPHERAL",
+},
+"system_ila_0": {"hier_name": "system_ila_0",
+"type": "system_ila",
+"version": "1.1",
+"ip_type": "PERIPHERAL",
+},
+"xlslice_0": {"hier_name": "xlslice_0",
+"type": "xlslice",
+"version": "1.0",
+"ip_type": "PERIPHERAL",
+},
+"xlslice_1": {"hier_name": "xlslice_1",
+"type": "xlslice",
+"version": "1.0",
+"ip_type": "PERIPHERAL",
+},
+"ps7_clockc_0": {"hier_name": "ps7_clockc_0",
+"type": "ps7_clockc",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_uart_1": {"hier_name": "ps7_uart_1",
+"type": "ps7_uart",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_pl310_0": {"hier_name": "ps7_pl310_0",
+"type": "ps7_pl310",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_pmu_0": {"hier_name": "ps7_pmu_0",
+"type": "ps7_pmu",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_qspi_0": {"hier_name": "ps7_qspi_0",
+"type": "ps7_qspi",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_qspi_linear_0": {"hier_name": "ps7_qspi_linear_0",
+"type": "ps7_qspi_linear",
+"version": "1.00.a",
+"ip_type": "MEMORY_CNTLR",
+},
+"ps7_axi_interconnect_0": {"hier_name": "ps7_axi_interconnect_0",
+"type": "ps7_axi_interconnect",
+"version": "1.00.a",
+"ip_type": "BUS",
+},
+"ps7_cortexa9_0": {"hier_name": "ps7_cortexa9_0",
+"type": "ps7_cortexa9",
+"version": "5.2",
+"ip_type": "PROCESSOR",
+},
+"ps7_cortexa9_1": {"hier_name": "ps7_cortexa9_1",
+"type": "ps7_cortexa9",
+"version": "5.2",
+"ip_type": "PROCESSOR",
+},
+"ps7_ddr_0": {"hier_name": "ps7_ddr_0",
+"type": "ps7_ddr",
+"version": "1.00.a",
+"ip_type": "MEMORY_CNTLR",
+},
+"ps7_ethernet_0": {"hier_name": "ps7_ethernet_0",
+"type": "ps7_ethernet",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_usb_0": {"hier_name": "ps7_usb_0",
+"type": "ps7_usb",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_sd_0": {"hier_name": "ps7_sd_0",
+"type": "ps7_sdio",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_ttc_0": {"hier_name": "ps7_ttc_0",
+"type": "ps7_ttc",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_gpio_0": {"hier_name": "ps7_gpio_0",
+"type": "ps7_gpio",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_ddrc_0": {"hier_name": "ps7_ddrc_0",
+"type": "ps7_ddrc",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_dev_cfg_0": {"hier_name": "ps7_dev_cfg_0",
+"type": "ps7_dev_cfg",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_xadc_0": {"hier_name": "ps7_xadc_0",
+"type": "ps7_xadc",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_ocmc_0": {"hier_name": "ps7_ocmc_0",
+"type": "ps7_ocmc",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_coresight_comp_0": {"hier_name": "ps7_coresight_comp_0",
+"type": "ps7_coresight_comp",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_gpv_0": {"hier_name": "ps7_gpv_0",
+"type": "ps7_gpv",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_scuc_0": {"hier_name": "ps7_scuc_0",
+"type": "ps7_scuc",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_globaltimer_0": {"hier_name": "ps7_globaltimer_0",
+"type": "ps7_globaltimer",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_intc_dist_0": {"hier_name": "ps7_intc_dist_0",
+"type": "ps7_intc_dist",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_l2cachec_0": {"hier_name": "ps7_l2cachec_0",
+"type": "ps7_l2cachec",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_dma_s": {"hier_name": "ps7_dma_s",
+"type": "ps7_dma",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_iop_bus_config_0": {"hier_name": "ps7_iop_bus_config_0",
+"type": "ps7_iop_bus_config",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_ram_0": {"hier_name": "ps7_ram_0",
+"type": "ps7_ram",
+"version": "1.00.a",
+"ip_type": "MEMORY_CNTLR",
+},
+"ps7_ram_1": {"hier_name": "ps7_ram_1",
+"type": "ps7_ram",
+"version": "1.00.a",
+"ip_type": "MEMORY_CNTLR",
+},
+"ps7_scugic_0": {"hier_name": "ps7_scugic_0",
+"type": "ps7_scugic",
+"version": "1.00.a",
+"ip_type": "INTERRUPT_CNTLR",
+},
+"ps7_scutimer_0": {"hier_name": "ps7_scutimer_0",
+"type": "ps7_scutimer",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_scuwdt_0": {"hier_name": "ps7_scuwdt_0",
+"type": "ps7_scuwdt",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_slcr_0": {"hier_name": "ps7_slcr_0",
+"type": "ps7_slcr",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_dma_ns": {"hier_name": "ps7_dma_ns",
+"type": "ps7_dma",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_afi_0": {"hier_name": "ps7_afi_0",
+"type": "ps7_afi",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_afi_1": {"hier_name": "ps7_afi_1",
+"type": "ps7_afi",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_afi_2": {"hier_name": "ps7_afi_2",
+"type": "ps7_afi",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_afi_3": {"hier_name": "ps7_afi_3",
+"type": "ps7_afi",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_m_axi_gp0": {"hier_name": "ps7_m_axi_gp0",
+"type": "ps7_m_axi_gp",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"system_ila_0_ila_lib": {"hier_name": "system_ila_0/system_ila_0_ila_lib",
+"type": "ila",
+"version": "6.2",
+"ip_type": "PERIPHERAL",
+},
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:00:44.995
+!MESSAGE XSCT Command: [::hsi::utils::get_design_properties -json C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:00:44.996
+!MESSAGE XSCT command with result: [::hsi::utils::get_design_properties -json C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa], Result: [null, {"device": "7z020",
+"family": "zynq",
+"timestamp": "Sat Feb 21 02:35:46 2026",
+"vivado_version": "2020.1",
+"part": "xc7z020clg484-1",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:00:47.443
+!MESSAGE XSCT Command: [::hsi::utils::get_bram_blocks C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa ], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:00:47.445
+!MESSAGE XSCT command with result: [::hsi::utils::get_bram_blocks C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa ], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:00:47.446
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:00:47.459
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#24]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:00:47.460
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:00:47.466
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248A49A84]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:00:47.466
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:00:47.469
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248A49A84]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:00:47.469
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248A49A84" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:00:47.476
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248A49A84" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:00:47.476
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248A49A84" && level==0 && jtag_device_ctx=="jsn-Zed-210248A49A84-23727093-0"}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:00:47.492
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248A49A84" && level==0 && jtag_device_ctx=="jsn-Zed-210248A49A84-23727093-0"}], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:00:47.493
+!MESSAGE XSCT Command: [fpga -file C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/outputTest/_ide/bitstream/design_2_wrapper_outputTest.bit], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:00:49.819
+!MESSAGE XSCT command with result: [fpga -file C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/outputTest/_ide/bitstream/design_2_wrapper_outputTest.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:00:50.633
+!MESSAGE XSCT Command: [::hsi::utils::get_bram_blocks C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa ], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:00:50.635
+!MESSAGE XSCT command with result: [::hsi::utils::get_bram_blocks C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa ], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:03.261
+!MESSAGE XSCT Command: [::hsi::utils::openhw C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:03.262
+!MESSAGE XSCT command with result: [::hsi::utils::openhw C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:03.264
+!MESSAGE XSCT Command: [hsi::internal::extract_hw_files -quiet bit mmi bmm -dir {C:\Users\cihem\CPRE-488-Labs\MP-1\sw\OutputTest\outputTest\_ide\bitstream}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:03.285
+!MESSAGE XSCT command with result: [hsi::internal::extract_hw_files -quiet bit mmi bmm -dir {C:\Users\cihem\CPRE-488-Labs\MP-1\sw\OutputTest\outputTest\_ide\bitstream}], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:03.287
+!MESSAGE XSCT Command: [::hsi::generate_target {psinit} [ ::hsi::get_cells -filter { CONFIGURABLE == true } -hierarchical] -dir {C:\Users\cihem\CPRE-488-Labs\MP-1\sw\OutputTest\outputTest\_ide\psinit} -quiet], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:06.488
+!MESSAGE XSCT command with result: [::hsi::generate_target {psinit} [ ::hsi::get_cells -filter { CONFIGURABLE == true } -hierarchical] -dir {C:\Users\cihem\CPRE-488-Labs\MP-1\sw\OutputTest\outputTest\_ide\psinit} -quiet], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:06.512
+!MESSAGE XSCT Command: [::hsi::utils::get_ps_config_params -json C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa], Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:06.518
+!MESSAGE XSCT command with result: [::hsi::utils::get_ps_config_params -json C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa], Result: [null, {"PCW_APU_PERIPHERAL_FREQMHZ": "666.666667",
+"PCW_DDR_HPRLPR_QUEUE_PARTITION": "HPR(0)/LPR(32)",
+"PCW_DDR_HPR_TO_CRITICAL_PRIORITY_LEVEL": "15",
+"PCW_DDR_LPR_TO_CRITICAL_PRIORITY_LEVEL": "2",
+"PCW_DDR_PORT0_HPR_ENABLE": "0",
+"PCW_DDR_PORT1_HPR_ENABLE": "0",
+"PCW_DDR_PORT2_HPR_ENABLE": "0",
+"PCW_DDR_PORT3_HPR_ENABLE": "0",
+"PCW_DDR_WRITE_TO_CRITICAL_PRIORITY_LEVEL": "2",
+"PCW_FPGA0_PERIPHERAL_FREQMHZ": "100.000000",
+"PCW_UIPARAM_DDR_BUS_WIDTH": "32 Bit",
+"PCW_UIPARAM_DDR_FREQ_MHZ": "533.333313",
+}]. Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:06.518
+!MESSAGE XSCT Command: [::hsi::utils::get_all_register_data -json C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa ps7_cortexa9_0], Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:06.523
+!MESSAGE XSCT command with result: [::hsi::utils::get_all_register_data -json C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa ps7_cortexa9_0], Result: [null, {"axi_ppm4_0": {},
+"ps7_afi_0": {},
+"ps7_afi_1": {},
+"ps7_afi_2": {},
+"ps7_afi_3": {},
+"ps7_coresight_comp_0": {},
+"ps7_ddr_0": {},
+"ps7_ddrc_0": {},
+"ps7_dev_cfg_0": {},
+"ps7_dma_ns": {},
+"ps7_dma_s": {},
+"ps7_ethernet_0": {},
+"ps7_globaltimer_0": {},
+"ps7_gpio_0": {},
+"ps7_gpv_0": {},
+"ps7_intc_dist_0": {},
+"ps7_iop_bus_config_0": {},
+"ps7_l2cachec_0": {},
+"ps7_ocmc_0": {},
+"ps7_pl310_0": {},
+"ps7_pmu_0": {},
+"ps7_qspi_0": {},
+"ps7_qspi_linear_0": {},
+"ps7_ram_0": {},
+"ps7_ram_1": {},
+"ps7_scuc_0": {},
+"ps7_scugic_0": {},
+"ps7_scutimer_0": {},
+"ps7_scuwdt_0": {},
+"ps7_sd_0": {},
+"ps7_slcr_0": {},
+"ps7_ttc_0": {},
+"ps7_uart_1": {},
+"ps7_usb_0": {},
+"ps7_xadc_0": {},
+}]. Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:06.523
+!MESSAGE XSCT Command: [::hsi::utils::get_addr_ranges -json C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa ps7_cortexa9_0], Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:06.530
+!MESSAGE XSCT command with result: [::hsi::utils::get_addr_ranges -json C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa ps7_cortexa9_0], Result: [null, {"axi_ppm4_0_S00_AXI": {"name": "axi_ppm4_0",
+"base": "0x43C00000",
+"high": "0x43C0FFFF",
+"size": "65536",
+"slaveintf": "S00_AXI",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_afi_0": {"name": "ps7_afi_0",
+"base": "0xF8008000",
+"high": "0xF8008FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_afi_1": {"name": "ps7_afi_1",
+"base": "0xF8009000",
+"high": "0xF8009FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_afi_2": {"name": "ps7_afi_2",
+"base": "0xF800A000",
+"high": "0xF800AFFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_afi_3": {"name": "ps7_afi_3",
+"base": "0xF800B000",
+"high": "0xF800BFFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_coresight_comp_0": {"name": "ps7_coresight_comp_0",
+"base": "0xF8800000",
+"high": "0xF88FFFFF",
+"size": "1048576",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_ddrc_0": {"name": "ps7_ddrc_0",
+"base": "0xF8006000",
+"high": "0xF8006FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_dev_cfg_0": {"name": "ps7_dev_cfg_0",
+"base": "0xF8007000",
+"high": "0xF80070FF",
+"size": "256",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_dma_ns": {"name": "ps7_dma_ns",
+"base": "0xF8004000",
+"high": "0xF8004FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_dma_s": {"name": "ps7_dma_s",
+"base": "0xF8003000",
+"high": "0xF8003FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_ethernet_0": {"name": "ps7_ethernet_0",
+"base": "0xE000B000",
+"high": "0xE000BFFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_globaltimer_0": {"name": "ps7_globaltimer_0",
+"base": "0xF8F00200",
+"high": "0xF8F002FF",
+"size": "256",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_gpio_0": {"name": "ps7_gpio_0",
+"base": "0xE000A000",
+"high": "0xE000AFFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_gpv_0": {"name": "ps7_gpv_0",
+"base": "0xF8900000",
+"high": "0xF89FFFFF",
+"size": "1048576",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_intc_dist_0": {"name": "ps7_intc_dist_0",
+"base": "0xF8F01000",
+"high": "0xF8F01FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_iop_bus_config_0": {"name": "ps7_iop_bus_config_0",
+"base": "0xE0200000",
+"high": "0xE0200FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_l2cachec_0": {"name": "ps7_l2cachec_0",
+"base": "0xF8F02000",
+"high": "0xF8F02FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_ocmc_0": {"name": "ps7_ocmc_0",
+"base": "0xF800C000",
+"high": "0xF800CFFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_pl310_0": {"name": "ps7_pl310_0",
+"base": "0xF8F02000",
+"high": "0xF8F02FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_pmu_0": {"name": "ps7_pmu_0",
+"base": "0xF8893000",
+"high": "0xF8893FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_qspi_0": {"name": "ps7_qspi_0",
+"base": "0xE000D000",
+"high": "0xE000DFFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_qspi_linear_0": {"name": "ps7_qspi_linear_0",
+"base": "0xFC000000",
+"high": "0xFCFFFFFF",
+"size": "16777216",
+"slaveintf": "",
+"type": "FLASH",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_scuc_0": {"name": "ps7_scuc_0",
+"base": "0xF8F00000",
+"high": "0xF8F000FC",
+"size": "253",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_scugic_0": {"name": "ps7_scugic_0",
+"base": "0xF8F00100",
+"high": "0xF8F001FF",
+"size": "256",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_scutimer_0": {"name": "ps7_scutimer_0",
+"base": "0xF8F00600",
+"high": "0xF8F0061F",
+"size": "32",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_scuwdt_0": {"name": "ps7_scuwdt_0",
+"base": "0xF8F00620",
+"high": "0xF8F006FF",
+"size": "224",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_sd_0": {"name": "ps7_sd_0",
+"base": "0xE0100000",
+"high": "0xE0100FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_slcr_0": {"name": "ps7_slcr_0",
+"base": "0xF8000000",
+"high": "0xF8000FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_ttc_0": {"name": "ps7_ttc_0",
+"base": "0xF8001000",
+"high": "0xF8001FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_uart_1": {"name": "ps7_uart_1",
+"base": "0xE0001000",
+"high": "0xE0001FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_usb_0": {"name": "ps7_usb_0",
+"base": "0xE0002000",
+"high": "0xE0002FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_xadc_0": {"name": "ps7_xadc_0",
+"base": "0xF8007100",
+"high": "0xF8007120",
+"size": "33",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_ddr_0": {"name": "ps7_ddr_0",
+"base": "0x00100000",
+"high": "0x1FFFFFFF",
+"size": "535822336",
+"slaveintf": "",
+"type": "MEMORY",
+"flags": "7",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_ram_0": {"name": "ps7_ram_0",
+"base": "0x00000000",
+"high": "0x0002FFFF",
+"size": "196608",
+"slaveintf": "",
+"type": "MEMORY",
+"flags": "7",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_ram_1": {"name": "ps7_ram_1",
+"base": "0xFFFF0000",
+"high": "0xFFFFFDFF",
+"size": "65024",
+"slaveintf": "",
+"type": "MEMORY",
+"flags": "7",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+}]. Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:06.531
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa ps7_cortexa9_0 C_DEBUG_ENABLED], Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:06.532
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa ps7_cortexa9_0 C_DEBUG_ENABLED], Result: [null, ]. Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:06.532
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa ps7_cortexa9_0 C_DEBUG_EVENT_COUNTERS], Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:06.533
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa ps7_cortexa9_0 C_DEBUG_EVENT_COUNTERS], Result: [null, ]. Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:06.533
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa ps7_cortexa9_0 C_DEBUG_LATENCY_COUNTERS], Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:06.534
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa ps7_cortexa9_0 C_DEBUG_LATENCY_COUNTERS], Result: [null, ]. Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:06.534
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa ps7_cortexa9_0 C_DEBUG_COUNTER_WIDTH], Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:06.535
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa ps7_cortexa9_0 C_DEBUG_COUNTER_WIDTH], Result: [null, ]. Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:06.535
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa ps7_cortexa9_0 C_FREQ], Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:06.536
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa ps7_cortexa9_0 C_FREQ], Result: [null, ]. Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:06.537
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa ps7_cortexa9_0 C_CPU_CLK_FREQ_HZ], Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:06.537
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa ps7_cortexa9_0 C_CPU_CLK_FREQ_HZ], Result: [null, 666666687]. Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:06.538
+!MESSAGE XSCT Command: [::hsi::utils::get_cpu_nr -json C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa], Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:06.540
+!MESSAGE XSCT command with result: [::hsi::utils::get_cpu_nr -json C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa], Result: [null, {"ps7_cortexa9_0": {"bscan": "",
+"index": "0",
+},
+"ps7_cortexa9_1": {"bscan": "",
+"index": "1",
+},
+}]. Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:06.540
+!MESSAGE XSCT Command: [::hsi::utils::get_all_register_data -json C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa ps7_cortexa9_1], Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:06.553
+!MESSAGE XSCT command with result: [::hsi::utils::get_all_register_data -json C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa ps7_cortexa9_1], Result: [null, {"axi_ppm4_0": {},
+"ps7_afi_0": {},
+"ps7_afi_1": {},
+"ps7_afi_2": {},
+"ps7_afi_3": {},
+"ps7_coresight_comp_0": {},
+"ps7_ddr_0": {},
+"ps7_ddrc_0": {},
+"ps7_dev_cfg_0": {},
+"ps7_dma_ns": {},
+"ps7_dma_s": {},
+"ps7_ethernet_0": {},
+"ps7_globaltimer_0": {},
+"ps7_gpio_0": {},
+"ps7_gpv_0": {},
+"ps7_intc_dist_0": {},
+"ps7_iop_bus_config_0": {},
+"ps7_l2cachec_0": {},
+"ps7_ocmc_0": {},
+"ps7_pl310_0": {},
+"ps7_pmu_0": {},
+"ps7_qspi_0": {},
+"ps7_qspi_linear_0": {},
+"ps7_ram_0": {},
+"ps7_ram_1": {},
+"ps7_scuc_0": {},
+"ps7_scugic_0": {},
+"ps7_scutimer_0": {},
+"ps7_scuwdt_0": {},
+"ps7_sd_0": {},
+"ps7_slcr_0": {},
+"ps7_ttc_0": {},
+"ps7_uart_1": {},
+"ps7_usb_0": {},
+"ps7_xadc_0": {},
+}]. Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:06.554
+!MESSAGE XSCT Command: [::hsi::utils::get_addr_ranges -json C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa ps7_cortexa9_1], Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:06.560
+!MESSAGE XSCT command with result: [::hsi::utils::get_addr_ranges -json C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa ps7_cortexa9_1], Result: [null, {"axi_ppm4_0_S00_AXI": {"name": "axi_ppm4_0",
+"base": "0x43C00000",
+"high": "0x43C0FFFF",
+"size": "65536",
+"slaveintf": "S00_AXI",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_afi_0": {"name": "ps7_afi_0",
+"base": "0xF8008000",
+"high": "0xF8008FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_afi_1": {"name": "ps7_afi_1",
+"base": "0xF8009000",
+"high": "0xF8009FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_afi_2": {"name": "ps7_afi_2",
+"base": "0xF800A000",
+"high": "0xF800AFFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_afi_3": {"name": "ps7_afi_3",
+"base": "0xF800B000",
+"high": "0xF800BFFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_coresight_comp_0": {"name": "ps7_coresight_comp_0",
+"base": "0xF8800000",
+"high": "0xF88FFFFF",
+"size": "1048576",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_ddrc_0": {"name": "ps7_ddrc_0",
+"base": "0xF8006000",
+"high": "0xF8006FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_dev_cfg_0": {"name": "ps7_dev_cfg_0",
+"base": "0xF8007000",
+"high": "0xF80070FF",
+"size": "256",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_dma_ns": {"name": "ps7_dma_ns",
+"base": "0xF8004000",
+"high": "0xF8004FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_dma_s": {"name": "ps7_dma_s",
+"base": "0xF8003000",
+"high": "0xF8003FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_ethernet_0": {"name": "ps7_ethernet_0",
+"base": "0xE000B000",
+"high": "0xE000BFFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_globaltimer_0": {"name": "ps7_globaltimer_0",
+"base": "0xF8F00200",
+"high": "0xF8F002FF",
+"size": "256",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_gpio_0": {"name": "ps7_gpio_0",
+"base": "0xE000A000",
+"high": "0xE000AFFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_gpv_0": {"name": "ps7_gpv_0",
+"base": "0xF8900000",
+"high": "0xF89FFFFF",
+"size": "1048576",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_intc_dist_0": {"name": "ps7_intc_dist_0",
+"base": "0xF8F01000",
+"high": "0xF8F01FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_iop_bus_config_0": {"name": "ps7_iop_bus_config_0",
+"base": "0xE0200000",
+"high": "0xE0200FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_l2cachec_0": {"name": "ps7_l2cachec_0",
+"base": "0xF8F02000",
+"high": "0xF8F02FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_ocmc_0": {"name": "ps7_ocmc_0",
+"base": "0xF800C000",
+"high": "0xF800CFFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_pl310_0": {"name": "ps7_pl310_0",
+"base": "0xF8F02000",
+"high": "0xF8F02FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_pmu_0": {"name": "ps7_pmu_0",
+"base": "0xF8893000",
+"high": "0xF8893FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_qspi_0": {"name": "ps7_qspi_0",
+"base": "0xE000D000",
+"high": "0xE000DFFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_qspi_linear_0": {"name": "ps7_qspi_linear_0",
+"base": "0xFC000000",
+"high": "0xFCFFFFFF",
+"size": "16777216",
+"slaveintf": "",
+"type": "FLASH",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_scuc_0": {"name": "ps7_scuc_0",
+"base": "0xF8F00000",
+"high": "0xF8F000FC",
+"size": "253",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_scugic_0": {"name": "ps7_scugic_0",
+"base": "0xF8F00100",
+"high": "0xF8F001FF",
+"size": "256",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_scutimer_0": {"name": "ps7_scutimer_0",
+"base": "0xF8F00600",
+"high": "0xF8F0061F",
+"size": "32",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_scuwdt_0": {"name": "ps7_scuwdt_0",
+"base": "0xF8F00620",
+"high": "0xF8F006FF",
+"size": "224",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_sd_0": {"name": "ps7_sd_0",
+"base": "0xE0100000",
+"high": "0xE0100FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_slcr_0": {"name": "ps7_slcr_0",
+"base": "0xF8000000",
+"high": "0xF8000FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_ttc_0": {"name": "ps7_ttc_0",
+"base": "0xF8001000",
+"high": "0xF8001FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_uart_1": {"name": "ps7_uart_1",
+"base": "0xE0001000",
+"high": "0xE0001FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_usb_0": {"name": "ps7_usb_0",
+"base": "0xE0002000",
+"high": "0xE0002FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_xadc_0": {"name": "ps7_xadc_0",
+"base": "0xF8007100",
+"high": "0xF8007120",
+"size": "33",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_ddr_0": {"name": "ps7_ddr_0",
+"base": "0x00100000",
+"high": "0x1FFFFFFF",
+"size": "535822336",
+"slaveintf": "",
+"type": "MEMORY",
+"flags": "7",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_ram_0": {"name": "ps7_ram_0",
+"base": "0x00000000",
+"high": "0x0002FFFF",
+"size": "196608",
+"slaveintf": "",
+"type": "MEMORY",
+"flags": "7",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_ram_1": {"name": "ps7_ram_1",
+"base": "0xFFFF0000",
+"high": "0xFFFFFDFF",
+"size": "65024",
+"slaveintf": "",
+"type": "MEMORY",
+"flags": "7",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+}]. Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:06.561
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa ps7_cortexa9_1 C_DEBUG_ENABLED], Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:06.567
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa ps7_cortexa9_1 C_DEBUG_ENABLED], Result: [null, ]. Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:06.568
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa ps7_cortexa9_1 C_DEBUG_EVENT_COUNTERS], Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:06.592
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa ps7_cortexa9_1 C_DEBUG_EVENT_COUNTERS], Result: [null, ]. Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:06.592
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa ps7_cortexa9_1 C_DEBUG_LATENCY_COUNTERS], Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:06.593
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa ps7_cortexa9_1 C_DEBUG_LATENCY_COUNTERS], Result: [null, ]. Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:06.593
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa ps7_cortexa9_1 C_DEBUG_COUNTER_WIDTH], Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:06.594
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa ps7_cortexa9_1 C_DEBUG_COUNTER_WIDTH], Result: [null, ]. Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:06.595
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa ps7_cortexa9_1 C_FREQ], Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:06.596
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa ps7_cortexa9_1 C_FREQ], Result: [null, ]. Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:06.596
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa ps7_cortexa9_1 C_CPU_CLK_FREQ_HZ], Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:06.597
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa ps7_cortexa9_1 C_CPU_CLK_FREQ_HZ], Result: [null, 666666687]. Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:06.597
+!MESSAGE XSCT Command: [::hsi::utils::get_connected_periphs C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa ps7_cortexa9_0], Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:06.598
+!MESSAGE XSCT command with result: [::hsi::utils::get_connected_periphs C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa ps7_cortexa9_0], Result: [null, axi_ppm4_0 ps7_afi_0 ps7_afi_1 ps7_afi_2 ps7_afi_3 ps7_coresight_comp_0 ps7_ddr_0 ps7_ddrc_0 ps7_dev_cfg_0 ps7_dma_ns ps7_dma_s ps7_ethernet_0 ps7_globaltimer_0 ps7_gpio_0 ps7_gpv_0 ps7_intc_dist_0 ps7_iop_bus_config_0 ps7_l2cachec_0 ps7_ocmc_0 ps7_pl310_0 ps7_pmu_0 ps7_qspi_0 ps7_qspi_linear_0 ps7_ram_0 ps7_ram_1 ps7_scuc_0 ps7_scugic_0 ps7_scutimer_0 ps7_scuwdt_0 ps7_sd_0 ps7_slcr_0 ps7_ttc_0 ps7_uart_1 ps7_usb_0 ps7_xadc_0]. Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:06.598
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_files_on_hw C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa bit], Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:06.600
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_files_on_hw C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa bit], Result: [null, design_2_wrapper_outputTest.bit]. Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:06.600
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:06.601
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#24]. Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:06.601
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:06.607
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248A49A84]. Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:06.607
+!MESSAGE XSCT Command: [version -server], Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:06.608
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2020.1]. Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:06.609
+!MESSAGE XSCT Command: [version], Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:06.609
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2020.1
+SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:06.609
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:06.612
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248A49A84]. Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:06.613
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248A49A84" && level==1}], Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:06.620
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248A49A84" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:06.620
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:06.623
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248A49A84]. Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:06.624
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248A49A84" && level==1}], Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:06.630
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248A49A84" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:06.631
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:06.634
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248A49A84]. Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:06.634
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248A49A84" && level==1}], Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:06.641
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248A49A84" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:06.641
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:06.644
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248A49A84]. Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:06.645
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248A49A84" && level==1}], Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:06.652
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248A49A84" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:06.652
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:06.655
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248A49A84]. Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:06.656
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248A49A84" && level==1}], Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:06.664
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248A49A84" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:06.664
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:06.668
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248A49A84]. Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:06.668
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248A49A84" && level==1}], Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:06.676
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248A49A84" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:06.677
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Zed 210248A49A84" && level == 0}], Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:06.684
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Zed 210248A49A84" && level == 0}], Result: [null, ]. Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:06.684
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:06.685
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:06.686
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:06.691
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:06.691
+!MESSAGE XSCT Command: [rst -system], Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:06.762
+!MESSAGE XSCT command with result: [rst -system], Result: [null, ]. Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:06.763
+!MESSAGE XSCT Command: [after 3000], Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:09.768
+!MESSAGE XSCT command with result: [after 3000], Result: [null, ]. Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:09.776
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:09.780
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248A49A84]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:09.781
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248A49A84" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:09.788
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248A49A84" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:09.789
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248A49A84" && level==0 && jtag_device_ctx=="jsn-Zed-210248A49A84-23727093-0"}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:09.802
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248A49A84" && level==0 && jtag_device_ctx=="jsn-Zed-210248A49A84-23727093-0"}], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:09.802
+!MESSAGE XSCT Command: [fpga -file C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/outputTest/_ide/bitstream/design_2_wrapper_outputTest.bit], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:12.121
+!MESSAGE XSCT command with result: [fpga -file C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/outputTest/_ide/bitstream/design_2_wrapper_outputTest.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:12.134
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:12.140
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:12.140
+!MESSAGE XSCT Command: [loadhw -hw C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs], Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:12.160
+!MESSAGE XSCT command with result: [loadhw -hw C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs], Result: [null, design_1_wrapper_19]. Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:12.161
+!MESSAGE XSCT Command: [configparams force-mem-access 1], Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:12.162
+!MESSAGE XSCT command with result: [configparams force-mem-access 1], Result: [null, ]. Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:12.162
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:12.166
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:12.166
+!MESSAGE XSCT Command: [source C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/outputTest/_ide/psinit/ps7_init.tcl], Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:12.168
+!MESSAGE XSCT command with result: [source C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/outputTest/_ide/psinit/ps7_init.tcl], Result: [null, ]. Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:12.168
+!MESSAGE XSCT Command: [ps7_init], Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:12.362
+!MESSAGE XSCT command with result: [ps7_init], Result: [null, ]. Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:12.362
+!MESSAGE XSCT Command: [ps7_post_config], Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:12.366
+!MESSAGE XSCT command with result: [ps7_post_config], Result: [null, ]. Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:12.366
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A9*#0"}], Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:12.370
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A9*#0"}], Result: [null, ]. Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:12.371
+!MESSAGE XSCT Command: [dow C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/outputTest/Debug/outputTest.elf], Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:12.482
+!MESSAGE XSCT command with result: [dow C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/outputTest/Debug/outputTest.elf], Result: [null, ]. Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:12.483
+!MESSAGE XSCT Command: [configparams force-mem-access 0], Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:12.505
+!MESSAGE XSCT command with result: [configparams force-mem-access 0], Result: [null, ]. Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:12.568
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A9*#0"}], Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:12.581
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A9*#0"}], Result: [null, ]. Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:12.581
+!MESSAGE XSCT Command: [con], Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:01:12.593
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-54: Launching SystemDebugger_outputTest_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:10:14.301
+!MESSAGE XSCT Command: [disconnect tcfchan#24], Thread: Thread-1294
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:10:14.304
+!MESSAGE XSCT command with result: [disconnect tcfchan#24], Result: [null, ]. Thread: Thread-1294
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:10:17.867
+!MESSAGE XSCT Command: [platform read {C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/platform.spr}], Thread: Worker-31: Reading platform
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:10:20.954
+!MESSAGE XSCT command with result: [platform read {C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/platform.spr}], Result: [null, ]. Thread: Worker-31: Reading platform
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:10:23.845
+!MESSAGE XSCT Command: [platform config -updatehw {C:/Users/cihem/CPRE-488-Labs/MP-1/hw/MP-1/design_2_wrapper_outputTest.xsa}], Thread: Worker-59: Updating hardware platform
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:10:29.482
+!MESSAGE XSCT command with result: [platform config -updatehw {C:/Users/cihem/CPRE-488-Labs/MP-1/hw/MP-1/design_2_wrapper_outputTest.xsa}], Result: [null, ]. Thread: Worker-59: Updating hardware platform
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:10:46.097
+!MESSAGE XSCT Command: [::hsi::utils::closehw C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:10:46.116
+!MESSAGE XSCT command with result: [::hsi::utils::closehw C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:10:46.116
+!MESSAGE XSCT Command: [::hsi::utils::openhw C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:10:48.957
+!MESSAGE XSCT command with result: [::hsi::utils::openhw C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:10:48.958
+!MESSAGE XSCT Command: [::hsi::utils::get_addr_tag_info -json C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:10:48.960
+!MESSAGE XSCT command with result: [::hsi::utils::get_addr_tag_info -json C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa ], Result: [null, {"ps7_cortexa9_0": "",
+"ps7_cortexa9_1": "",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:10:48.960
+!MESSAGE XSCT Command: [::hsi::utils::get_all_periphs -json C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:10:48.965
+!MESSAGE XSCT command with result: [::hsi::utils::get_all_periphs -json C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa], Result: [null, {"axi_ppm4_0": {"hier_name": "axi_ppm4_0",
+"type": "axi_ppm4",
+"version": "1.0",
+"ip_type": "PERIPHERAL",
+},
+"processing_system7_0": {"hier_name": "processing_system7_0",
+"type": "processing_system7",
+"version": "5.5",
+"ip_type": "",
+},
+"ps7_0_axi_periph": {"hier_name": "ps7_0_axi_periph",
+"type": "axi_interconnect",
+"version": "2.1",
+"ip_type": "BUS",
+},
+"rst_ps7_0_100M": {"hier_name": "rst_ps7_0_100M",
+"type": "proc_sys_reset",
+"version": "5.0",
+"ip_type": "PERIPHERAL",
+},
+"system_ila_0": {"hier_name": "system_ila_0",
+"type": "system_ila",
+"version": "1.1",
+"ip_type": "PERIPHERAL",
+},
+"xlslice_0": {"hier_name": "xlslice_0",
+"type": "xlslice",
+"version": "1.0",
+"ip_type": "PERIPHERAL",
+},
+"xlslice_1": {"hier_name": "xlslice_1",
+"type": "xlslice",
+"version": "1.0",
+"ip_type": "PERIPHERAL",
+},
+"ps7_clockc_0": {"hier_name": "ps7_clockc_0",
+"type": "ps7_clockc",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_uart_1": {"hier_name": "ps7_uart_1",
+"type": "ps7_uart",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_pl310_0": {"hier_name": "ps7_pl310_0",
+"type": "ps7_pl310",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_pmu_0": {"hier_name": "ps7_pmu_0",
+"type": "ps7_pmu",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_qspi_0": {"hier_name": "ps7_qspi_0",
+"type": "ps7_qspi",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_qspi_linear_0": {"hier_name": "ps7_qspi_linear_0",
+"type": "ps7_qspi_linear",
+"version": "1.00.a",
+"ip_type": "MEMORY_CNTLR",
+},
+"ps7_axi_interconnect_0": {"hier_name": "ps7_axi_interconnect_0",
+"type": "ps7_axi_interconnect",
+"version": "1.00.a",
+"ip_type": "BUS",
+},
+"ps7_cortexa9_0": {"hier_name": "ps7_cortexa9_0",
+"type": "ps7_cortexa9",
+"version": "5.2",
+"ip_type": "PROCESSOR",
+},
+"ps7_cortexa9_1": {"hier_name": "ps7_cortexa9_1",
+"type": "ps7_cortexa9",
+"version": "5.2",
+"ip_type": "PROCESSOR",
+},
+"ps7_ddr_0": {"hier_name": "ps7_ddr_0",
+"type": "ps7_ddr",
+"version": "1.00.a",
+"ip_type": "MEMORY_CNTLR",
+},
+"ps7_ethernet_0": {"hier_name": "ps7_ethernet_0",
+"type": "ps7_ethernet",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_usb_0": {"hier_name": "ps7_usb_0",
+"type": "ps7_usb",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_sd_0": {"hier_name": "ps7_sd_0",
+"type": "ps7_sdio",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_ttc_0": {"hier_name": "ps7_ttc_0",
+"type": "ps7_ttc",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_gpio_0": {"hier_name": "ps7_gpio_0",
+"type": "ps7_gpio",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_ddrc_0": {"hier_name": "ps7_ddrc_0",
+"type": "ps7_ddrc",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_dev_cfg_0": {"hier_name": "ps7_dev_cfg_0",
+"type": "ps7_dev_cfg",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_xadc_0": {"hier_name": "ps7_xadc_0",
+"type": "ps7_xadc",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_ocmc_0": {"hier_name": "ps7_ocmc_0",
+"type": "ps7_ocmc",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_coresight_comp_0": {"hier_name": "ps7_coresight_comp_0",
+"type": "ps7_coresight_comp",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_gpv_0": {"hier_name": "ps7_gpv_0",
+"type": "ps7_gpv",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_scuc_0": {"hier_name": "ps7_scuc_0",
+"type": "ps7_scuc",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_globaltimer_0": {"hier_name": "ps7_globaltimer_0",
+"type": "ps7_globaltimer",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_intc_dist_0": {"hier_name": "ps7_intc_dist_0",
+"type": "ps7_intc_dist",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_l2cachec_0": {"hier_name": "ps7_l2cachec_0",
+"type": "ps7_l2cachec",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_dma_s": {"hier_name": "ps7_dma_s",
+"type": "ps7_dma",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_iop_bus_config_0": {"hier_name": "ps7_iop_bus_config_0",
+"type": "ps7_iop_bus_config",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_ram_0": {"hier_name": "ps7_ram_0",
+"type": "ps7_ram",
+"version": "1.00.a",
+"ip_type": "MEMORY_CNTLR",
+},
+"ps7_ram_1": {"hier_name": "ps7_ram_1",
+"type": "ps7_ram",
+"version": "1.00.a",
+"ip_type": "MEMORY_CNTLR",
+},
+"ps7_scugic_0": {"hier_name": "ps7_scugic_0",
+"type": "ps7_scugic",
+"version": "1.00.a",
+"ip_type": "INTERRUPT_CNTLR",
+},
+"ps7_scutimer_0": {"hier_name": "ps7_scutimer_0",
+"type": "ps7_scutimer",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_scuwdt_0": {"hier_name": "ps7_scuwdt_0",
+"type": "ps7_scuwdt",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_slcr_0": {"hier_name": "ps7_slcr_0",
+"type": "ps7_slcr",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_dma_ns": {"hier_name": "ps7_dma_ns",
+"type": "ps7_dma",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_afi_0": {"hier_name": "ps7_afi_0",
+"type": "ps7_afi",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_afi_1": {"hier_name": "ps7_afi_1",
+"type": "ps7_afi",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_afi_2": {"hier_name": "ps7_afi_2",
+"type": "ps7_afi",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_afi_3": {"hier_name": "ps7_afi_3",
+"type": "ps7_afi",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"ps7_m_axi_gp0": {"hier_name": "ps7_m_axi_gp0",
+"type": "ps7_m_axi_gp",
+"version": "1.00.a",
+"ip_type": "PERIPHERAL",
+},
+"system_ila_0_ila_lib": {"hier_name": "system_ila_0/system_ila_0_ila_lib",
+"type": "ila",
+"version": "6.2",
+"ip_type": "PERIPHERAL",
+},
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:10:48.966
+!MESSAGE XSCT Command: [::hsi::utils::get_design_properties -json C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:10:48.967
+!MESSAGE XSCT command with result: [::hsi::utils::get_design_properties -json C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa], Result: [null, {"device": "7z020",
+"family": "zynq",
+"timestamp": "Sat Feb 21 02:35:46 2026",
+"vivado_version": "2020.1",
+"part": "xc7z020clg484-1",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:10:51.781
+!MESSAGE XSCT Command: [::hsi::utils::get_bram_blocks C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa ], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:10:51.783
+!MESSAGE XSCT command with result: [::hsi::utils::get_bram_blocks C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa ], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:10:51.783
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:10:51.804
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#26]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:10:51.804
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:10:51.810
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248A49A84]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:10:51.810
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:10:51.813
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248A49A84]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:10:51.813
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248A49A84" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:10:51.819
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248A49A84" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:10:51.820
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248A49A84" && level==0 && jtag_device_ctx=="jsn-Zed-210248A49A84-23727093-0"}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:10:51.834
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248A49A84" && level==0 && jtag_device_ctx=="jsn-Zed-210248A49A84-23727093-0"}], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:10:51.834
+!MESSAGE XSCT Command: [fpga -file C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/outputTest/_ide/bitstream/design_2_wrapper_outputTest.bit], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:10:54.184
+!MESSAGE XSCT command with result: [fpga -file C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/outputTest/_ide/bitstream/design_2_wrapper_outputTest.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:10:54.990
+!MESSAGE XSCT Command: [::hsi::utils::get_bram_blocks C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa ], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:10:54.992
+!MESSAGE XSCT command with result: [::hsi::utils::get_bram_blocks C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa ], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:06.623
+!MESSAGE XSCT Command: [::hsi::utils::openhw C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:06.624
+!MESSAGE XSCT command with result: [::hsi::utils::openhw C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:06.626
+!MESSAGE XSCT Command: [hsi::internal::extract_hw_files -quiet bit mmi bmm -dir {C:\Users\cihem\CPRE-488-Labs\MP-1\sw\OutputTest\outputTest\_ide\bitstream}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:06.646
+!MESSAGE XSCT command with result: [hsi::internal::extract_hw_files -quiet bit mmi bmm -dir {C:\Users\cihem\CPRE-488-Labs\MP-1\sw\OutputTest\outputTest\_ide\bitstream}], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:06.648
+!MESSAGE XSCT Command: [::hsi::generate_target {psinit} [ ::hsi::get_cells -filter { CONFIGURABLE == true } -hierarchical] -dir {C:\Users\cihem\CPRE-488-Labs\MP-1\sw\OutputTest\outputTest\_ide\psinit} -quiet], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:09.535
+!MESSAGE XSCT command with result: [::hsi::generate_target {psinit} [ ::hsi::get_cells -filter { CONFIGURABLE == true } -hierarchical] -dir {C:\Users\cihem\CPRE-488-Labs\MP-1\sw\OutputTest\outputTest\_ide\psinit} -quiet], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:09.573
+!MESSAGE XSCT Command: [::hsi::utils::get_ps_config_params -json C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa], Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:09.598
+!MESSAGE XSCT command with result: [::hsi::utils::get_ps_config_params -json C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa], Result: [null, {"PCW_APU_PERIPHERAL_FREQMHZ": "666.666667",
+"PCW_DDR_HPRLPR_QUEUE_PARTITION": "HPR(0)/LPR(32)",
+"PCW_DDR_HPR_TO_CRITICAL_PRIORITY_LEVEL": "15",
+"PCW_DDR_LPR_TO_CRITICAL_PRIORITY_LEVEL": "2",
+"PCW_DDR_PORT0_HPR_ENABLE": "0",
+"PCW_DDR_PORT1_HPR_ENABLE": "0",
+"PCW_DDR_PORT2_HPR_ENABLE": "0",
+"PCW_DDR_PORT3_HPR_ENABLE": "0",
+"PCW_DDR_WRITE_TO_CRITICAL_PRIORITY_LEVEL": "2",
+"PCW_FPGA0_PERIPHERAL_FREQMHZ": "100.000000",
+"PCW_UIPARAM_DDR_BUS_WIDTH": "32 Bit",
+"PCW_UIPARAM_DDR_FREQ_MHZ": "533.333313",
+}]. Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:09.598
+!MESSAGE XSCT Command: [::hsi::utils::get_all_register_data -json C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa ps7_cortexa9_0], Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:09.604
+!MESSAGE XSCT command with result: [::hsi::utils::get_all_register_data -json C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa ps7_cortexa9_0], Result: [null, {"axi_ppm4_0": {},
+"ps7_afi_0": {},
+"ps7_afi_1": {},
+"ps7_afi_2": {},
+"ps7_afi_3": {},
+"ps7_coresight_comp_0": {},
+"ps7_ddr_0": {},
+"ps7_ddrc_0": {},
+"ps7_dev_cfg_0": {},
+"ps7_dma_ns": {},
+"ps7_dma_s": {},
+"ps7_ethernet_0": {},
+"ps7_globaltimer_0": {},
+"ps7_gpio_0": {},
+"ps7_gpv_0": {},
+"ps7_intc_dist_0": {},
+"ps7_iop_bus_config_0": {},
+"ps7_l2cachec_0": {},
+"ps7_ocmc_0": {},
+"ps7_pl310_0": {},
+"ps7_pmu_0": {},
+"ps7_qspi_0": {},
+"ps7_qspi_linear_0": {},
+"ps7_ram_0": {},
+"ps7_ram_1": {},
+"ps7_scuc_0": {},
+"ps7_scugic_0": {},
+"ps7_scutimer_0": {},
+"ps7_scuwdt_0": {},
+"ps7_sd_0": {},
+"ps7_slcr_0": {},
+"ps7_ttc_0": {},
+"ps7_uart_1": {},
+"ps7_usb_0": {},
+"ps7_xadc_0": {},
+}]. Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:09.605
+!MESSAGE XSCT Command: [::hsi::utils::get_addr_ranges -json C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa ps7_cortexa9_0], Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:09.611
+!MESSAGE XSCT command with result: [::hsi::utils::get_addr_ranges -json C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa ps7_cortexa9_0], Result: [null, {"axi_ppm4_0_S00_AXI": {"name": "axi_ppm4_0",
+"base": "0x43C00000",
+"high": "0x43C0FFFF",
+"size": "65536",
+"slaveintf": "S00_AXI",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_afi_0": {"name": "ps7_afi_0",
+"base": "0xF8008000",
+"high": "0xF8008FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_afi_1": {"name": "ps7_afi_1",
+"base": "0xF8009000",
+"high": "0xF8009FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_afi_2": {"name": "ps7_afi_2",
+"base": "0xF800A000",
+"high": "0xF800AFFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_afi_3": {"name": "ps7_afi_3",
+"base": "0xF800B000",
+"high": "0xF800BFFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_coresight_comp_0": {"name": "ps7_coresight_comp_0",
+"base": "0xF8800000",
+"high": "0xF88FFFFF",
+"size": "1048576",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_ddrc_0": {"name": "ps7_ddrc_0",
+"base": "0xF8006000",
+"high": "0xF8006FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_dev_cfg_0": {"name": "ps7_dev_cfg_0",
+"base": "0xF8007000",
+"high": "0xF80070FF",
+"size": "256",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_dma_ns": {"name": "ps7_dma_ns",
+"base": "0xF8004000",
+"high": "0xF8004FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_dma_s": {"name": "ps7_dma_s",
+"base": "0xF8003000",
+"high": "0xF8003FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_ethernet_0": {"name": "ps7_ethernet_0",
+"base": "0xE000B000",
+"high": "0xE000BFFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_globaltimer_0": {"name": "ps7_globaltimer_0",
+"base": "0xF8F00200",
+"high": "0xF8F002FF",
+"size": "256",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_gpio_0": {"name": "ps7_gpio_0",
+"base": "0xE000A000",
+"high": "0xE000AFFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_gpv_0": {"name": "ps7_gpv_0",
+"base": "0xF8900000",
+"high": "0xF89FFFFF",
+"size": "1048576",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_intc_dist_0": {"name": "ps7_intc_dist_0",
+"base": "0xF8F01000",
+"high": "0xF8F01FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_iop_bus_config_0": {"name": "ps7_iop_bus_config_0",
+"base": "0xE0200000",
+"high": "0xE0200FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_l2cachec_0": {"name": "ps7_l2cachec_0",
+"base": "0xF8F02000",
+"high": "0xF8F02FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_ocmc_0": {"name": "ps7_ocmc_0",
+"base": "0xF800C000",
+"high": "0xF800CFFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_pl310_0": {"name": "ps7_pl310_0",
+"base": "0xF8F02000",
+"high": "0xF8F02FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_pmu_0": {"name": "ps7_pmu_0",
+"base": "0xF8893000",
+"high": "0xF8893FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_qspi_0": {"name": "ps7_qspi_0",
+"base": "0xE000D000",
+"high": "0xE000DFFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_qspi_linear_0": {"name": "ps7_qspi_linear_0",
+"base": "0xFC000000",
+"high": "0xFCFFFFFF",
+"size": "16777216",
+"slaveintf": "",
+"type": "FLASH",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_scuc_0": {"name": "ps7_scuc_0",
+"base": "0xF8F00000",
+"high": "0xF8F000FC",
+"size": "253",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_scugic_0": {"name": "ps7_scugic_0",
+"base": "0xF8F00100",
+"high": "0xF8F001FF",
+"size": "256",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_scutimer_0": {"name": "ps7_scutimer_0",
+"base": "0xF8F00600",
+"high": "0xF8F0061F",
+"size": "32",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_scuwdt_0": {"name": "ps7_scuwdt_0",
+"base": "0xF8F00620",
+"high": "0xF8F006FF",
+"size": "224",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_sd_0": {"name": "ps7_sd_0",
+"base": "0xE0100000",
+"high": "0xE0100FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_slcr_0": {"name": "ps7_slcr_0",
+"base": "0xF8000000",
+"high": "0xF8000FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_ttc_0": {"name": "ps7_ttc_0",
+"base": "0xF8001000",
+"high": "0xF8001FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_uart_1": {"name": "ps7_uart_1",
+"base": "0xE0001000",
+"high": "0xE0001FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_usb_0": {"name": "ps7_usb_0",
+"base": "0xE0002000",
+"high": "0xE0002FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_xadc_0": {"name": "ps7_xadc_0",
+"base": "0xF8007100",
+"high": "0xF8007120",
+"size": "33",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_ddr_0": {"name": "ps7_ddr_0",
+"base": "0x00100000",
+"high": "0x1FFFFFFF",
+"size": "535822336",
+"slaveintf": "",
+"type": "MEMORY",
+"flags": "7",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_ram_0": {"name": "ps7_ram_0",
+"base": "0x00000000",
+"high": "0x0002FFFF",
+"size": "196608",
+"slaveintf": "",
+"type": "MEMORY",
+"flags": "7",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_ram_1": {"name": "ps7_ram_1",
+"base": "0xFFFF0000",
+"high": "0xFFFFFDFF",
+"size": "65024",
+"slaveintf": "",
+"type": "MEMORY",
+"flags": "7",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+}]. Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:09.611
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa ps7_cortexa9_0 C_DEBUG_ENABLED], Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:09.613
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa ps7_cortexa9_0 C_DEBUG_ENABLED], Result: [null, ]. Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:09.613
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa ps7_cortexa9_0 C_DEBUG_EVENT_COUNTERS], Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:09.614
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa ps7_cortexa9_0 C_DEBUG_EVENT_COUNTERS], Result: [null, ]. Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:09.614
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa ps7_cortexa9_0 C_DEBUG_LATENCY_COUNTERS], Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:09.615
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa ps7_cortexa9_0 C_DEBUG_LATENCY_COUNTERS], Result: [null, ]. Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:09.616
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa ps7_cortexa9_0 C_DEBUG_COUNTER_WIDTH], Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:09.616
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa ps7_cortexa9_0 C_DEBUG_COUNTER_WIDTH], Result: [null, ]. Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:09.617
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa ps7_cortexa9_0 C_FREQ], Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:09.618
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa ps7_cortexa9_0 C_FREQ], Result: [null, ]. Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:09.618
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa ps7_cortexa9_0 C_CPU_CLK_FREQ_HZ], Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:09.619
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa ps7_cortexa9_0 C_CPU_CLK_FREQ_HZ], Result: [null, 666666687]. Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:09.619
+!MESSAGE XSCT Command: [::hsi::utils::get_cpu_nr -json C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa], Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:09.621
+!MESSAGE XSCT command with result: [::hsi::utils::get_cpu_nr -json C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa], Result: [null, {"ps7_cortexa9_0": {"bscan": "",
+"index": "0",
+},
+"ps7_cortexa9_1": {"bscan": "",
+"index": "1",
+},
+}]. Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:09.621
+!MESSAGE XSCT Command: [::hsi::utils::get_all_register_data -json C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa ps7_cortexa9_1], Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:09.624
+!MESSAGE XSCT command with result: [::hsi::utils::get_all_register_data -json C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa ps7_cortexa9_1], Result: [null, {"axi_ppm4_0": {},
+"ps7_afi_0": {},
+"ps7_afi_1": {},
+"ps7_afi_2": {},
+"ps7_afi_3": {},
+"ps7_coresight_comp_0": {},
+"ps7_ddr_0": {},
+"ps7_ddrc_0": {},
+"ps7_dev_cfg_0": {},
+"ps7_dma_ns": {},
+"ps7_dma_s": {},
+"ps7_ethernet_0": {},
+"ps7_globaltimer_0": {},
+"ps7_gpio_0": {},
+"ps7_gpv_0": {},
+"ps7_intc_dist_0": {},
+"ps7_iop_bus_config_0": {},
+"ps7_l2cachec_0": {},
+"ps7_ocmc_0": {},
+"ps7_pl310_0": {},
+"ps7_pmu_0": {},
+"ps7_qspi_0": {},
+"ps7_qspi_linear_0": {},
+"ps7_ram_0": {},
+"ps7_ram_1": {},
+"ps7_scuc_0": {},
+"ps7_scugic_0": {},
+"ps7_scutimer_0": {},
+"ps7_scuwdt_0": {},
+"ps7_sd_0": {},
+"ps7_slcr_0": {},
+"ps7_ttc_0": {},
+"ps7_uart_1": {},
+"ps7_usb_0": {},
+"ps7_xadc_0": {},
+}]. Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:09.625
+!MESSAGE XSCT Command: [::hsi::utils::get_addr_ranges -json C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa ps7_cortexa9_1], Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:09.630
+!MESSAGE XSCT command with result: [::hsi::utils::get_addr_ranges -json C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa ps7_cortexa9_1], Result: [null, {"axi_ppm4_0_S00_AXI": {"name": "axi_ppm4_0",
+"base": "0x43C00000",
+"high": "0x43C0FFFF",
+"size": "65536",
+"slaveintf": "S00_AXI",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_afi_0": {"name": "ps7_afi_0",
+"base": "0xF8008000",
+"high": "0xF8008FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_afi_1": {"name": "ps7_afi_1",
+"base": "0xF8009000",
+"high": "0xF8009FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_afi_2": {"name": "ps7_afi_2",
+"base": "0xF800A000",
+"high": "0xF800AFFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_afi_3": {"name": "ps7_afi_3",
+"base": "0xF800B000",
+"high": "0xF800BFFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_coresight_comp_0": {"name": "ps7_coresight_comp_0",
+"base": "0xF8800000",
+"high": "0xF88FFFFF",
+"size": "1048576",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_ddrc_0": {"name": "ps7_ddrc_0",
+"base": "0xF8006000",
+"high": "0xF8006FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_dev_cfg_0": {"name": "ps7_dev_cfg_0",
+"base": "0xF8007000",
+"high": "0xF80070FF",
+"size": "256",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_dma_ns": {"name": "ps7_dma_ns",
+"base": "0xF8004000",
+"high": "0xF8004FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_dma_s": {"name": "ps7_dma_s",
+"base": "0xF8003000",
+"high": "0xF8003FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_ethernet_0": {"name": "ps7_ethernet_0",
+"base": "0xE000B000",
+"high": "0xE000BFFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_globaltimer_0": {"name": "ps7_globaltimer_0",
+"base": "0xF8F00200",
+"high": "0xF8F002FF",
+"size": "256",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_gpio_0": {"name": "ps7_gpio_0",
+"base": "0xE000A000",
+"high": "0xE000AFFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_gpv_0": {"name": "ps7_gpv_0",
+"base": "0xF8900000",
+"high": "0xF89FFFFF",
+"size": "1048576",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_intc_dist_0": {"name": "ps7_intc_dist_0",
+"base": "0xF8F01000",
+"high": "0xF8F01FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_iop_bus_config_0": {"name": "ps7_iop_bus_config_0",
+"base": "0xE0200000",
+"high": "0xE0200FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_l2cachec_0": {"name": "ps7_l2cachec_0",
+"base": "0xF8F02000",
+"high": "0xF8F02FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_ocmc_0": {"name": "ps7_ocmc_0",
+"base": "0xF800C000",
+"high": "0xF800CFFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_pl310_0": {"name": "ps7_pl310_0",
+"base": "0xF8F02000",
+"high": "0xF8F02FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_pmu_0": {"name": "ps7_pmu_0",
+"base": "0xF8893000",
+"high": "0xF8893FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_qspi_0": {"name": "ps7_qspi_0",
+"base": "0xE000D000",
+"high": "0xE000DFFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_qspi_linear_0": {"name": "ps7_qspi_linear_0",
+"base": "0xFC000000",
+"high": "0xFCFFFFFF",
+"size": "16777216",
+"slaveintf": "",
+"type": "FLASH",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_scuc_0": {"name": "ps7_scuc_0",
+"base": "0xF8F00000",
+"high": "0xF8F000FC",
+"size": "253",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_scugic_0": {"name": "ps7_scugic_0",
+"base": "0xF8F00100",
+"high": "0xF8F001FF",
+"size": "256",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_scutimer_0": {"name": "ps7_scutimer_0",
+"base": "0xF8F00600",
+"high": "0xF8F0061F",
+"size": "32",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_scuwdt_0": {"name": "ps7_scuwdt_0",
+"base": "0xF8F00620",
+"high": "0xF8F006FF",
+"size": "224",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_sd_0": {"name": "ps7_sd_0",
+"base": "0xE0100000",
+"high": "0xE0100FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_slcr_0": {"name": "ps7_slcr_0",
+"base": "0xF8000000",
+"high": "0xF8000FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_ttc_0": {"name": "ps7_ttc_0",
+"base": "0xF8001000",
+"high": "0xF8001FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_uart_1": {"name": "ps7_uart_1",
+"base": "0xE0001000",
+"high": "0xE0001FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_usb_0": {"name": "ps7_usb_0",
+"base": "0xE0002000",
+"high": "0xE0002FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_xadc_0": {"name": "ps7_xadc_0",
+"base": "0xF8007100",
+"high": "0xF8007120",
+"size": "33",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_ddr_0": {"name": "ps7_ddr_0",
+"base": "0x00100000",
+"high": "0x1FFFFFFF",
+"size": "535822336",
+"slaveintf": "",
+"type": "MEMORY",
+"flags": "7",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_ram_0": {"name": "ps7_ram_0",
+"base": "0x00000000",
+"high": "0x0002FFFF",
+"size": "196608",
+"slaveintf": "",
+"type": "MEMORY",
+"flags": "7",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_ram_1": {"name": "ps7_ram_1",
+"base": "0xFFFF0000",
+"high": "0xFFFFFDFF",
+"size": "65024",
+"slaveintf": "",
+"type": "MEMORY",
+"flags": "7",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+}]. Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:09.631
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa ps7_cortexa9_1 C_DEBUG_ENABLED], Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:09.632
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa ps7_cortexa9_1 C_DEBUG_ENABLED], Result: [null, ]. Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:09.632
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa ps7_cortexa9_1 C_DEBUG_EVENT_COUNTERS], Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:09.633
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa ps7_cortexa9_1 C_DEBUG_EVENT_COUNTERS], Result: [null, ]. Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:09.633
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa ps7_cortexa9_1 C_DEBUG_LATENCY_COUNTERS], Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:09.634
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa ps7_cortexa9_1 C_DEBUG_LATENCY_COUNTERS], Result: [null, ]. Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:09.634
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa ps7_cortexa9_1 C_DEBUG_COUNTER_WIDTH], Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:09.635
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa ps7_cortexa9_1 C_DEBUG_COUNTER_WIDTH], Result: [null, ]. Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:09.636
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa ps7_cortexa9_1 C_FREQ], Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:09.637
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa ps7_cortexa9_1 C_FREQ], Result: [null, ]. Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:09.637
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa ps7_cortexa9_1 C_CPU_CLK_FREQ_HZ], Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:09.638
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa ps7_cortexa9_1 C_CPU_CLK_FREQ_HZ], Result: [null, 666666687]. Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:09.638
+!MESSAGE XSCT Command: [::hsi::utils::get_connected_periphs C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa ps7_cortexa9_0], Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:09.639
+!MESSAGE XSCT command with result: [::hsi::utils::get_connected_periphs C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa ps7_cortexa9_0], Result: [null, axi_ppm4_0 ps7_afi_0 ps7_afi_1 ps7_afi_2 ps7_afi_3 ps7_coresight_comp_0 ps7_ddr_0 ps7_ddrc_0 ps7_dev_cfg_0 ps7_dma_ns ps7_dma_s ps7_ethernet_0 ps7_globaltimer_0 ps7_gpio_0 ps7_gpv_0 ps7_intc_dist_0 ps7_iop_bus_config_0 ps7_l2cachec_0 ps7_ocmc_0 ps7_pl310_0 ps7_pmu_0 ps7_qspi_0 ps7_qspi_linear_0 ps7_ram_0 ps7_ram_1 ps7_scuc_0 ps7_scugic_0 ps7_scutimer_0 ps7_scuwdt_0 ps7_sd_0 ps7_slcr_0 ps7_ttc_0 ps7_uart_1 ps7_usb_0 ps7_xadc_0]. Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:09.640
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_files_on_hw C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa bit], Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:09.641
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_files_on_hw C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa bit], Result: [null, design_2_wrapper_outputTest.bit]. Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:09.641
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:09.642
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#26]. Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:09.642
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:09.648
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248A49A84]. Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:09.648
+!MESSAGE XSCT Command: [version -server], Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:09.649
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2020.1]. Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:09.649
+!MESSAGE XSCT Command: [version], Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:09.650
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2020.1
+SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:09.650
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:09.653
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248A49A84]. Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:09.653
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248A49A84" && level==1}], Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:09.660
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248A49A84" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:09.660
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:09.663
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248A49A84]. Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:09.664
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248A49A84" && level==1}], Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:09.670
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248A49A84" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:09.671
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:09.673
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248A49A84]. Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:09.673
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248A49A84" && level==1}], Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:09.680
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248A49A84" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:09.680
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:09.683
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248A49A84]. Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:09.684
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248A49A84" && level==1}], Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:09.690
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248A49A84" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:09.690
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:09.693
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248A49A84]. Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:09.694
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248A49A84" && level==1}], Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:09.700
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248A49A84" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:09.701
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:09.703
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248A49A84]. Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:09.704
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248A49A84" && level==1}], Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:09.710
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248A49A84" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:09.711
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Zed 210248A49A84" && level == 0}], Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:09.719
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Zed 210248A49A84" && level == 0}], Result: [null, ]. Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:09.719
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:09.720
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:09.720
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:09.724
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:09.725
+!MESSAGE XSCT Command: [rst -system], Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:09.803
+!MESSAGE XSCT command with result: [rst -system], Result: [null, ]. Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:09.804
+!MESSAGE XSCT Command: [after 3000], Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:12.808
+!MESSAGE XSCT command with result: [after 3000], Result: [null, ]. Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:12.816
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:12.823
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248A49A84]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:12.823
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248A49A84" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:12.830
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248A49A84" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:12.831
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248A49A84" && level==0 && jtag_device_ctx=="jsn-Zed-210248A49A84-23727093-0"}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:12.853
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248A49A84" && level==0 && jtag_device_ctx=="jsn-Zed-210248A49A84-23727093-0"}], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:12.853
+!MESSAGE XSCT Command: [fpga -file C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/outputTest/_ide/bitstream/design_2_wrapper_outputTest.bit], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:15.177
+!MESSAGE XSCT command with result: [fpga -file C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/outputTest/_ide/bitstream/design_2_wrapper_outputTest.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:15.188
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:15.193
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:15.194
+!MESSAGE XSCT Command: [loadhw -hw C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs], Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:15.215
+!MESSAGE XSCT command with result: [loadhw -hw C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs], Result: [null, design_1_wrapper_23]. Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:15.215
+!MESSAGE XSCT Command: [configparams force-mem-access 1], Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:15.216
+!MESSAGE XSCT command with result: [configparams force-mem-access 1], Result: [null, ]. Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:15.216
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:15.220
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:15.221
+!MESSAGE XSCT Command: [source C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/outputTest/_ide/psinit/ps7_init.tcl], Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:15.222
+!MESSAGE XSCT command with result: [source C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/outputTest/_ide/psinit/ps7_init.tcl], Result: [null, ]. Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:15.222
+!MESSAGE XSCT Command: [ps7_init], Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:15.419
+!MESSAGE XSCT command with result: [ps7_init], Result: [null, ]. Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:15.419
+!MESSAGE XSCT Command: [ps7_post_config], Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:15.423
+!MESSAGE XSCT command with result: [ps7_post_config], Result: [null, ]. Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:15.423
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A9*#0"}], Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:15.427
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A9*#0"}], Result: [null, ]. Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:15.428
+!MESSAGE XSCT Command: [dow C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/outputTest/Debug/outputTest.elf], Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:15.555
+!MESSAGE XSCT command with result: [dow C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/outputTest/Debug/outputTest.elf], Result: [null, ]. Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:15.556
+!MESSAGE XSCT Command: [configparams force-mem-access 0], Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:15.577
+!MESSAGE XSCT command with result: [configparams force-mem-access 0], Result: [null, ]. Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:15.641
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A9*#0"}], Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:15.646
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A9*#0"}], Result: [null, ]. Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:15.646
+!MESSAGE XSCT Command: [con], Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:15.657
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-59: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:32.366
+!MESSAGE XSCT Command: [disconnect tcfchan#26], Thread: Thread-1385
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:32.368
+!MESSAGE XSCT command with result: [disconnect tcfchan#26], Result: [null, ]. Thread: Thread-1385
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:33.427
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/sw/design_2_wrapper_outputTest/domain_ps7_cortexa9_0/system.mss ], Thread: Worker-57: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:33.430
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/sw/design_2_wrapper_outputTest/domain_ps7_cortexa9_0/system.mss ], Result: [null, ]. Thread: Worker-57: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:33.430
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/sw/design_2_wrapper_outputTest/domain_ps7_cortexa9_0/system.mss], Thread: Worker-57: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:33.432
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/sw/design_2_wrapper_outputTest/domain_ps7_cortexa9_0/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "7.2",
+}]. Thread: Worker-57: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2026-02-23 00:11:33.432
+!MESSAGE Generating MD5 hash for file: C:\Users\cihem\CPRE-488-Labs\MP-1\sw\OutputTest\design_2_wrapper_outputTest\export\design_2_wrapper_outputTest\sw\design_2_wrapper_outputTest\domain_ps7_cortexa9_0\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:33.433
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/sw/design_2_wrapper_outputTest/domain_ps7_cortexa9_0/system.mss], Thread: Worker-57: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:33.434
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/sw/design_2_wrapper_outputTest/domain_ps7_cortexa9_0/system.mss], Result: [null, ]. Thread: Worker-57: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:35.972
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-44: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:35.975
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#27]. Thread: Worker-44: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:35.975
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-44: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:35.981
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248A49A84]. Thread: Worker-44: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:35.981
+!MESSAGE XSCT Command: [version -server], Thread: Worker-44: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:35.982
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2020.1]. Thread: Worker-44: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:35.982
+!MESSAGE XSCT Command: [version], Thread: Worker-44: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:35.982
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2020.1
+SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-44: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:35.983
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-44: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:35.985
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248A49A84]. Thread: Worker-44: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:35.985
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248A49A84" && level==1}], Thread: Worker-44: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:35.992
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248A49A84" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-44: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:35.992
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-44: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:35.995
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248A49A84]. Thread: Worker-44: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:35.995
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248A49A84" && level==1}], Thread: Worker-44: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:36.001
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248A49A84" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-44: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:36.002
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-44: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:36.004
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248A49A84]. Thread: Worker-44: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:36.005
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248A49A84" && level==1}], Thread: Worker-44: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:36.011
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248A49A84" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-44: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:36.012
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-44: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:36.015
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248A49A84]. Thread: Worker-44: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:36.015
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248A49A84" && level==1}], Thread: Worker-44: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:36.022
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248A49A84" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-44: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:36.022
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-44: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:36.025
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248A49A84]. Thread: Worker-44: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:36.025
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248A49A84" && level==1}], Thread: Worker-44: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:36.032
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248A49A84" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-44: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:36.032
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-44: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:36.035
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248A49A84]. Thread: Worker-44: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:36.036
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248A49A84" && level==1}], Thread: Worker-44: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:36.042
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248A49A84" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-44: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:36.043
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Zed 210248A49A84" && level == 0}], Thread: Worker-44: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:36.050
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Zed 210248A49A84" && level == 0}], Result: [null, ]. Thread: Worker-44: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:36.050
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-44: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:36.051
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-44: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:36.051
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-44: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:36.078
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-44: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:36.079
+!MESSAGE XSCT Command: [rst -system], Thread: Worker-44: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:36.155
+!MESSAGE XSCT command with result: [rst -system], Result: [null, ]. Thread: Worker-44: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:36.156
+!MESSAGE XSCT Command: [after 3000], Thread: Worker-44: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:39.162
+!MESSAGE XSCT command with result: [after 3000], Result: [null, ]. Thread: Worker-44: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:39.168
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:39.173
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248A49A84]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:39.173
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248A49A84" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:39.179
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248A49A84" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:39.180
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248A49A84" && level==0 && jtag_device_ctx=="jsn-Zed-210248A49A84-23727093-0"}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:39.192
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248A49A84" && level==0 && jtag_device_ctx=="jsn-Zed-210248A49A84-23727093-0"}], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:39.193
+!MESSAGE XSCT Command: [fpga -file C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/outputTest/_ide/bitstream/design_2_wrapper_outputTest.bit], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:41.515
+!MESSAGE XSCT command with result: [fpga -file C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/outputTest/_ide/bitstream/design_2_wrapper_outputTest.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:41.527
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-44: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:41.534
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-44: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:41.535
+!MESSAGE XSCT Command: [loadhw -hw C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs], Thread: Worker-44: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:41.543
+!MESSAGE XSCT command with result: [loadhw -hw C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs], Result: [null, design_1_wrapper_23]. Thread: Worker-44: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:41.543
+!MESSAGE XSCT Command: [configparams force-mem-access 1], Thread: Worker-44: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:41.544
+!MESSAGE XSCT command with result: [configparams force-mem-access 1], Result: [null, ]. Thread: Worker-44: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:41.544
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-44: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:41.548
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-44: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:41.548
+!MESSAGE XSCT Command: [source C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/outputTest/_ide/psinit/ps7_init.tcl], Thread: Worker-44: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:41.549
+!MESSAGE XSCT command with result: [source C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/outputTest/_ide/psinit/ps7_init.tcl], Result: [null, ]. Thread: Worker-44: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:41.549
+!MESSAGE XSCT Command: [ps7_init], Thread: Worker-44: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:41.737
+!MESSAGE XSCT command with result: [ps7_init], Result: [null, ]. Thread: Worker-44: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:41.738
+!MESSAGE XSCT Command: [ps7_post_config], Thread: Worker-44: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:41.742
+!MESSAGE XSCT command with result: [ps7_post_config], Result: [null, ]. Thread: Worker-44: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:41.742
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A9*#0"}], Thread: Worker-44: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:41.746
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A9*#0"}], Result: [null, ]. Thread: Worker-44: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:41.746
+!MESSAGE XSCT Command: [dow C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/outputTest/Debug/outputTest.elf], Thread: Worker-44: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:41.858
+!MESSAGE XSCT command with result: [dow C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/outputTest/Debug/outputTest.elf], Result: [null, ]. Thread: Worker-44: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:41.859
+!MESSAGE XSCT Command: [configparams force-mem-access 0], Thread: Worker-44: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:41.880
+!MESSAGE XSCT command with result: [configparams force-mem-access 0], Result: [null, ]. Thread: Worker-44: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:41.931
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A9*#0"}], Thread: Worker-44: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:41.936
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A9*#0"}], Result: [null, ]. Thread: Worker-44: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:41.936
+!MESSAGE XSCT Command: [con], Thread: Worker-44: Launching Debugger_outputTest-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-23 00:11:41.947
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-44: Launching Debugger_outputTest-Default

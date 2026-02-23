@@ -714,3 +714,248 @@ con
 23:19:21 INFO  : System reset is completed.
 23:19:24 INFO  : 'after 3000' command is executed.
 23:19:24 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248A49A84" && level==0 && jtag_device_ctx=="jsn-Zed-210248A49A84-23727093-0"}' command is executed.
+23:19:26 INFO  : FPGA configured successfully with bitstream "C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/outputTest/_ide/bitstream/design_2_wrapper_outputTest.bit"
+23:19:26 INFO  : Context for 'APU' is selected.
+23:19:26 INFO  : Hardware design and registers information is loaded from 'C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa'.
+23:19:26 INFO  : 'configparams force-mem-access 1' command is executed.
+23:19:26 INFO  : Context for 'APU' is selected.
+23:19:26 INFO  : Sourcing of 'C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/outputTest/_ide/psinit/ps7_init.tcl' is done.
+23:19:26 INFO  : 'ps7_init' command is executed.
+23:19:26 INFO  : 'ps7_post_config' command is executed.
+23:19:26 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:19:27 INFO  : The application 'C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/outputTest/Debug/outputTest.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:19:27 INFO  : 'configparams force-mem-access 0' command is executed.
+23:19:27 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248A49A84" && level==0 && jtag_device_ctx=="jsn-Zed-210248A49A84-23727093-0"}
+fpga -file C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/outputTest/_ide/bitstream/design_2_wrapper_outputTest.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/outputTest/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/outputTest/Debug/outputTest.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:19:27 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:19:27 INFO  : 'con' command is executed.
+23:19:27 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+23:19:27 INFO  : Launch script is exported to file 'C:\Users\cihem\CPRE-488-Labs\MP-1\sw\OutputTest\.sdk\launch_scripts\single_application_debug\debugger_outputtest-default.tcl'
+23:20:06 INFO  : Disconnected from the channel tcfchan#21.
+23:20:08 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:20:08 INFO  : Jtag cable 'Digilent Zed 210248A49A84' is selected.
+23:20:08 INFO  : 'jtag frequency' command is executed.
+23:20:08 INFO  : Context for 'APU' is selected.
+23:20:08 INFO  : System reset is completed.
+23:20:11 INFO  : 'after 3000' command is executed.
+23:20:11 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248A49A84" && level==0 && jtag_device_ctx=="jsn-Zed-210248A49A84-23727093-0"}' command is executed.
+23:20:13 INFO  : FPGA configured successfully with bitstream "C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/outputTest/_ide/bitstream/design_2_wrapper_outputTest.bit"
+23:20:13 INFO  : Context for 'APU' is selected.
+23:20:13 INFO  : Hardware design and registers information is loaded from 'C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa'.
+23:20:13 INFO  : 'configparams force-mem-access 1' command is executed.
+23:20:13 INFO  : Context for 'APU' is selected.
+23:20:13 INFO  : Sourcing of 'C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/outputTest/_ide/psinit/ps7_init.tcl' is done.
+23:20:13 INFO  : 'ps7_init' command is executed.
+23:20:13 INFO  : 'ps7_post_config' command is executed.
+23:20:13 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:20:14 INFO  : The application 'C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/outputTest/Debug/outputTest.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:20:14 INFO  : 'configparams force-mem-access 0' command is executed.
+23:20:14 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248A49A84" && level==0 && jtag_device_ctx=="jsn-Zed-210248A49A84-23727093-0"}
+fpga -file C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/outputTest/_ide/bitstream/design_2_wrapper_outputTest.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/outputTest/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/outputTest/Debug/outputTest.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:20:14 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:20:14 INFO  : 'con' command is executed.
+23:20:14 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+23:20:14 INFO  : Launch script is exported to file 'C:\Users\cihem\CPRE-488-Labs\MP-1\sw\OutputTest\.sdk\launch_scripts\single_application_debug\debugger_outputtest-default.tcl'
+00:00:02 INFO  : Disconnected from the channel tcfchan#22.
+00:00:22 INFO  : Hardware specification for platform project 'design_2_wrapper_outputTest' is updated.
+00:00:28 INFO  : Result from executing command 'getProjects': design_2_wrapper_outputTest
+00:00:28 INFO  : Result from executing command 'getPlatforms': design_2_wrapper_outputTest|C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/design_2_wrapper_outputTest.xpfm
+00:00:47 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:00:47 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248A49A84" && level==0 && jtag_device_ctx=="jsn-Zed-210248A49A84-23727093-0"}' command is executed.
+00:00:49 INFO  : FPGA configured successfully with bitstream "C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/outputTest/_ide/bitstream/design_2_wrapper_outputTest.bit"
+00:01:03 INFO  : The hardware specfication used by project 'outputTest' is out of sync with the platform. Resource files extracted from the hardware specfiication will be updated.
+00:01:03 INFO  : The file 'C:\Users\cihem\CPRE-488-Labs\MP-1\sw\OutputTest\outputTest\_ide\bitstream\design_2_wrapper_outputTest.bit' stored in project is removed.
+00:01:03 INFO  : The updated bitstream files are copied from platform to folder 'C:\Users\cihem\CPRE-488-Labs\MP-1\sw\OutputTest\outputTest\_ide\bitstream' in project 'outputTest'.
+00:01:03 INFO  : The file 'C:\Users\cihem\CPRE-488-Labs\MP-1\sw\OutputTest\outputTest\_ide\psinit\ps7_init.tcl' stored in project is removed.
+00:01:06 INFO  : The updated ps init files are copied from platform to folder 'C:\Users\cihem\CPRE-488-Labs\MP-1\sw\OutputTest\outputTest\_ide\psinit' in project 'outputTest'.
+00:01:06 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:01:06 INFO  : Jtag cable 'Digilent Zed 210248A49A84' is selected.
+00:01:06 INFO  : 'jtag frequency' command is executed.
+00:01:06 INFO  : Context for 'APU' is selected.
+00:01:06 INFO  : System reset is completed.
+00:01:09 INFO  : 'after 3000' command is executed.
+00:01:09 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248A49A84" && level==0 && jtag_device_ctx=="jsn-Zed-210248A49A84-23727093-0"}' command is executed.
+00:01:12 INFO  : FPGA configured successfully with bitstream "C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/outputTest/_ide/bitstream/design_2_wrapper_outputTest.bit"
+00:01:12 INFO  : Context for 'APU' is selected.
+00:01:12 INFO  : Hardware design and registers information is loaded from 'C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa'.
+00:01:12 INFO  : 'configparams force-mem-access 1' command is executed.
+00:01:12 INFO  : Context for 'APU' is selected.
+00:01:12 INFO  : Sourcing of 'C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/outputTest/_ide/psinit/ps7_init.tcl' is done.
+00:01:12 INFO  : 'ps7_init' command is executed.
+00:01:12 INFO  : 'ps7_post_config' command is executed.
+00:01:12 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:01:12 INFO  : The application 'C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/outputTest/Debug/outputTest.elf' is downloaded to processor 'ps7_cortexa9_0'.
+00:01:12 INFO  : 'configparams force-mem-access 0' command is executed.
+00:01:12 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248A49A84" && level==0 && jtag_device_ctx=="jsn-Zed-210248A49A84-23727093-0"}
+fpga -file C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/outputTest/_ide/bitstream/design_2_wrapper_outputTest.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/outputTest/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/outputTest/Debug/outputTest.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+00:01:12 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:01:12 INFO  : 'con' command is executed.
+00:01:12 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+00:01:12 INFO  : Launch script is exported to file 'C:\Users\cihem\CPRE-488-Labs\MP-1\sw\OutputTest\.sdk\launch_scripts\single_application_debug\systemdebugger_outputtest_system_standalone.tcl'
+00:10:14 INFO  : Disconnected from the channel tcfchan#24.
+00:10:29 INFO  : Hardware specification for platform project 'design_2_wrapper_outputTest' is updated.
+00:10:37 INFO  : Result from executing command 'getProjects': design_2_wrapper_outputTest
+00:10:37 INFO  : Result from executing command 'getPlatforms': design_2_wrapper_outputTest|C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/design_2_wrapper_outputTest.xpfm
+00:10:51 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:10:51 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248A49A84" && level==0 && jtag_device_ctx=="jsn-Zed-210248A49A84-23727093-0"}' command is executed.
+00:10:54 INFO  : FPGA configured successfully with bitstream "C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/outputTest/_ide/bitstream/design_2_wrapper_outputTest.bit"
+00:11:06 INFO  : The hardware specfication used by project 'outputTest' is out of sync with the platform. Resource files extracted from the hardware specfiication will be updated.
+00:11:06 INFO  : The file 'C:\Users\cihem\CPRE-488-Labs\MP-1\sw\OutputTest\outputTest\_ide\bitstream\design_2_wrapper_outputTest.bit' stored in project is removed.
+00:11:06 INFO  : The updated bitstream files are copied from platform to folder 'C:\Users\cihem\CPRE-488-Labs\MP-1\sw\OutputTest\outputTest\_ide\bitstream' in project 'outputTest'.
+00:11:06 INFO  : The file 'C:\Users\cihem\CPRE-488-Labs\MP-1\sw\OutputTest\outputTest\_ide\psinit\ps7_init.tcl' stored in project is removed.
+00:11:09 INFO  : The updated ps init files are copied from platform to folder 'C:\Users\cihem\CPRE-488-Labs\MP-1\sw\OutputTest\outputTest\_ide\psinit' in project 'outputTest'.
+00:11:09 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:11:09 INFO  : Jtag cable 'Digilent Zed 210248A49A84' is selected.
+00:11:09 INFO  : 'jtag frequency' command is executed.
+00:11:09 INFO  : Context for 'APU' is selected.
+00:11:09 INFO  : System reset is completed.
+00:11:12 INFO  : 'after 3000' command is executed.
+00:11:12 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248A49A84" && level==0 && jtag_device_ctx=="jsn-Zed-210248A49A84-23727093-0"}' command is executed.
+00:11:15 INFO  : FPGA configured successfully with bitstream "C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/outputTest/_ide/bitstream/design_2_wrapper_outputTest.bit"
+00:11:15 INFO  : Context for 'APU' is selected.
+00:11:15 INFO  : Hardware design and registers information is loaded from 'C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa'.
+00:11:15 INFO  : 'configparams force-mem-access 1' command is executed.
+00:11:15 INFO  : Context for 'APU' is selected.
+00:11:15 INFO  : Sourcing of 'C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/outputTest/_ide/psinit/ps7_init.tcl' is done.
+00:11:15 INFO  : 'ps7_init' command is executed.
+00:11:15 INFO  : 'ps7_post_config' command is executed.
+00:11:15 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:11:15 INFO  : The application 'C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/outputTest/Debug/outputTest.elf' is downloaded to processor 'ps7_cortexa9_0'.
+00:11:15 INFO  : 'configparams force-mem-access 0' command is executed.
+00:11:15 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248A49A84" && level==0 && jtag_device_ctx=="jsn-Zed-210248A49A84-23727093-0"}
+fpga -file C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/outputTest/_ide/bitstream/design_2_wrapper_outputTest.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/outputTest/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/outputTest/Debug/outputTest.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+00:11:15 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:11:15 INFO  : 'con' command is executed.
+00:11:15 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+00:11:15 INFO  : Launch script is exported to file 'C:\Users\cihem\CPRE-488-Labs\MP-1\sw\OutputTest\.sdk\launch_scripts\single_application_debug\debugger_outputtest-default.tcl'
+00:11:32 INFO  : Disconnected from the channel tcfchan#26.
+00:11:33 INFO  : Checking for BSP changes to sync application flags for project 'outputTest'...
+00:11:35 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:11:36 INFO  : Jtag cable 'Digilent Zed 210248A49A84' is selected.
+00:11:36 INFO  : 'jtag frequency' command is executed.
+00:11:36 INFO  : Context for 'APU' is selected.
+00:11:36 INFO  : System reset is completed.
+00:11:39 INFO  : 'after 3000' command is executed.
+00:11:39 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248A49A84" && level==0 && jtag_device_ctx=="jsn-Zed-210248A49A84-23727093-0"}' command is executed.
+00:11:41 INFO  : FPGA configured successfully with bitstream "C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/outputTest/_ide/bitstream/design_2_wrapper_outputTest.bit"
+00:11:41 INFO  : Context for 'APU' is selected.
+00:11:41 INFO  : Hardware design and registers information is loaded from 'C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa'.
+00:11:41 INFO  : 'configparams force-mem-access 1' command is executed.
+00:11:41 INFO  : Context for 'APU' is selected.
+00:11:41 INFO  : Sourcing of 'C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/outputTest/_ide/psinit/ps7_init.tcl' is done.
+00:11:41 INFO  : 'ps7_init' command is executed.
+00:11:41 INFO  : 'ps7_post_config' command is executed.
+00:11:41 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:11:41 INFO  : The application 'C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/outputTest/Debug/outputTest.elf' is downloaded to processor 'ps7_cortexa9_0'.
+00:11:41 INFO  : 'configparams force-mem-access 0' command is executed.
+00:11:41 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248A49A84" && level==0 && jtag_device_ctx=="jsn-Zed-210248A49A84-23727093-0"}
+fpga -file C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/outputTest/_ide/bitstream/design_2_wrapper_outputTest.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/export/design_2_wrapper_outputTest/hw/design_2_wrapper_outputTest.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/outputTest/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/cihem/CPRE-488-Labs/MP-1/sw/OutputTest/outputTest/Debug/outputTest.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+00:11:41 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:11:41 INFO  : 'con' command is executed.
+00:11:41 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+00:11:41 INFO  : Launch script is exported to file 'C:\Users\cihem\CPRE-488-Labs\MP-1\sw\OutputTest\.sdk\launch_scripts\single_application_debug\debugger_outputtest-default.tcl'

@@ -154,6 +154,14 @@ architecture arch_imp of axi_ppm5_v1_0_S00_AXI is
 	-- Frame counter exposed at reg1; increments whenever eof pulses.
 	signal frame_counter : std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0) := (others => '0');
 
+	-- Generate FSM signals (software relay output path)
+	signal gen_ps, gen_ns : capture_state_type := IDLE;
+	signal gen_current_clk : unsigned(31 downto 0) := (others => '0');
+	signal gen_idle_clks : unsigned(31 downto 0) := (others => '0');
+	signal sw_ppm_out : std_logic := '1';
+	constant PULSE_CLKS : unsigned(31 downto 0) := to_unsigned(40000, 32);
+	constant FRAME_CLKS : unsigned(31 downto 0) := to_unsigned(2000000, 32);
+
 begin
 	-- I/O Connections assignments
 
@@ -815,15 +823,186 @@ begin
 		end case;
 	end process;
 
+	-- Generate-FSM clock/state process:
+	-- advances state and keeps a per-state cycle counter.
+	gen_clk_proc : process(S_AXI_ACLK)
+	begin
+		if rising_edge(S_AXI_ACLK) then
+			if S_AXI_ARESETN = '0' then
+				gen_ps <= IDLE;
+				gen_current_clk <= (others => '0');
+			elsif gen_ps /= gen_ns then
+				gen_ps <= gen_ns;
+				gen_current_clk <= (others => '0');
+			else
+				gen_ps <= gen_ns;
+				gen_current_clk <= gen_current_clk + 1;
+			end if;
+		end if;
+	end process;
+
+	-- Compute IDLE duration from software-programmed channel widths (regs 4..9).
+	compute_generate_idle_clks : process(slv_reg4, slv_reg5, slv_reg6, slv_reg7, slv_reg8, slv_reg9)
+		variable used_clks : unsigned(31 downto 0);
+	begin
+		used_clks := unsigned(slv_reg4)
+		             + unsigned(slv_reg5)
+		             + unsigned(slv_reg6)
+		             + unsigned(slv_reg7)
+		             + unsigned(slv_reg8)
+		             + unsigned(slv_reg9)
+		             + resize(PULSE_CLKS * 7, 32);
+
+		if used_clks >= FRAME_CLKS then
+			gen_idle_clks <= (others => '0');
+		else
+			gen_idle_clks <= FRAME_CLKS - used_clks;
+		end if;
+	end process;
+
+	-- Generate-FSM combinational logic:
+	-- emits a 6-channel PPM frame on sw_ppm_out using regs 4..9 as widths.
+	generate_ppm : process(slv_reg4, slv_reg5, slv_reg6, slv_reg7, slv_reg8, slv_reg9, gen_current_clk, gen_ps, gen_idle_clks)
+	begin
+		gen_ns <= IDLE;
+		sw_ppm_out <= '1';
+
+		case gen_ps is
+			when IDLE =>
+				if gen_current_clk < gen_idle_clks then
+					sw_ppm_out <= '1';
+					gen_ns <= IDLE;
+				else
+					sw_ppm_out <= '0';
+					gen_ns <= PULSE1;
+				end if;
+
+			when PULSE1 =>
+				if gen_current_clk < PULSE_CLKS then
+					sw_ppm_out <= '0';
+					gen_ns <= PULSE1;
+				else
+					sw_ppm_out <= '1';
+					gen_ns <= C1;
+				end if;
+			when C1 =>
+				if gen_current_clk < unsigned(slv_reg4) then
+					sw_ppm_out <= '1';
+					gen_ns <= C1;
+				else
+					sw_ppm_out <= '0';
+					gen_ns <= PULSE2;
+				end if;
+
+			when PULSE2 =>
+				if gen_current_clk < PULSE_CLKS then
+					sw_ppm_out <= '0';
+					gen_ns <= PULSE2;
+				else
+					sw_ppm_out <= '1';
+					gen_ns <= C2;
+				end if;
+			when C2 =>
+				if gen_current_clk < unsigned(slv_reg5) then
+					sw_ppm_out <= '1';
+					gen_ns <= C2;
+				else
+					sw_ppm_out <= '0';
+					gen_ns <= PULSE3;
+				end if;
+
+			when PULSE3 =>
+				if gen_current_clk < PULSE_CLKS then
+					sw_ppm_out <= '0';
+					gen_ns <= PULSE3;
+				else
+					sw_ppm_out <= '1';
+					gen_ns <= C3;
+				end if;
+			when C3 =>
+				if gen_current_clk < unsigned(slv_reg6) then
+					sw_ppm_out <= '1';
+					gen_ns <= C3;
+				else
+					sw_ppm_out <= '0';
+					gen_ns <= PULSE4;
+				end if;
+
+			when PULSE4 =>
+				if gen_current_clk < PULSE_CLKS then
+					sw_ppm_out <= '0';
+					gen_ns <= PULSE4;
+				else
+					sw_ppm_out <= '1';
+					gen_ns <= C4;
+				end if;
+			when C4 =>
+				if gen_current_clk < unsigned(slv_reg7) then
+					sw_ppm_out <= '1';
+					gen_ns <= C4;
+				else
+					sw_ppm_out <= '0';
+					gen_ns <= PULSE5;
+				end if;
+
+			when PULSE5 =>
+				if gen_current_clk < PULSE_CLKS then
+					sw_ppm_out <= '0';
+					gen_ns <= PULSE5;
+				else
+					sw_ppm_out <= '1';
+					gen_ns <= C5;
+				end if;
+			when C5 =>
+				if gen_current_clk < unsigned(slv_reg8) then
+					sw_ppm_out <= '1';
+					gen_ns <= C5;
+				else
+					sw_ppm_out <= '0';
+					gen_ns <= PULSE6;
+				end if;
+
+			when PULSE6 =>
+				if gen_current_clk < PULSE_CLKS then
+					sw_ppm_out <= '0';
+					gen_ns <= PULSE6;
+				else
+					sw_ppm_out <= '1';
+					gen_ns <= C6;
+				end if;
+			when C6 =>
+				if gen_current_clk < unsigned(slv_reg9) then
+					sw_ppm_out <= '1';
+					gen_ns <= C6;
+				else
+					sw_ppm_out <= '0';
+					gen_ns <= PULSE7;
+				end if;
+
+			when PULSE7 =>
+				if gen_current_clk < PULSE_CLKS then
+					sw_ppm_out <= '0';
+					gen_ns <= PULSE7;
+				else
+					sw_ppm_out <= '1';
+					gen_ns <= IDLE;
+				end if;
+
+			when others =>
+				sw_ppm_out <= '1';
+				gen_ns <= IDLE;
+		end case;
+	end process;
+
 	-- reg0(0) mode select:
 	--   0 -> hardware relay mode (direct pass-through)
-	--   1 -> software relay mode (software drives output bit via reg1(0))
+	--   1 -> software relay mode (connect generate-FSM output here)
 	process (S_PPM_IN, slv_reg0)
 	begin
 		if slv_reg0(0) = '0' then
 			S_PPM_OUT <= S_PPM_IN;
 		else
-			S_PPM_OUT <= '1'; -- Connect to the output signal of generate state machine when done
+			S_PPM_OUT <= sw_ppm_out; -- Connect to the output signal of generate state machine when done
 		end if;
 	end process;
 

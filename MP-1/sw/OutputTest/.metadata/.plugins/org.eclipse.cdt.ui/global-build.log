@@ -1,6 +1,6 @@
 Nothing to build in platform 'design_2_wrapper_outputTest'
 
-23:19:18 **** Incremental Build of configuration Debug for project outputTest ****
+00:11:33 **** Incremental Build of configuration Debug for project outputTest ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
@@ -19,6 +19,6 @@ arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=non
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size outputTest.elf  |tee "outputTest.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  23952	   1144	  28728	  53824	   d240	outputTest.elf
+  24140	   1144	  28728	  54012	   d2fc	outputTest.elf
 'Finished building: outputTest.elf.size'
 ' '

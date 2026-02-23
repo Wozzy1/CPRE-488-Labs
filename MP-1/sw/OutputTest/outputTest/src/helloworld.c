@@ -56,6 +56,12 @@
 
 #define REG0   0x00
 #define REG1   0x04
+#define REG4   0x10
+#define REG5   0x14
+#define REG6   0x18
+#define REG7   0x1C
+#define REG8   0x20
+#define REG9   0x24
 #define REG10  0x28
 #define REG11  0x2C
 #define REG12  0x30
@@ -78,6 +84,25 @@ static void save_register_snapshot(u32 frame_idx)
     saved_frames[frame_idx][3] = Xil_In32(PPM_BASE + REG13);
     saved_frames[frame_idx][4] = Xil_In32(PPM_BASE + REG14);
     saved_frames[frame_idx][5] = Xil_In32(PPM_BASE + REG15);
+}
+
+static void load_dummy_frame(void)
+{
+    /* Dummy software-relay frame for generate FSM (regs 4..9). */
+    Xil_Out32(PPM_BASE + REG4, 100000U);
+    Xil_Out32(PPM_BASE + REG5, 100000U);
+    Xil_Out32(PPM_BASE + REG6, 100000U);
+    Xil_Out32(PPM_BASE + REG7, 100000U);
+    Xil_Out32(PPM_BASE + REG8, 100000U);
+    Xil_Out32(PPM_BASE + REG9, 100000U);
+
+    xil_printf("Loaded dummy frame: r4=%u r5=%u r6=%u r7=%u r8=%u r9=%u\r\n",
+               (u32)Xil_In32(PPM_BASE + REG4),
+               (u32)Xil_In32(PPM_BASE + REG5),
+               (u32)Xil_In32(PPM_BASE + REG6),
+               (u32)Xil_In32(PPM_BASE + REG7),
+               (u32)Xil_In32(PPM_BASE + REG8),
+               (u32)Xil_In32(PPM_BASE + REG9));
 }
 
 /* SW0 comes from AXI GPIO channel 1, bit 0. */
@@ -162,6 +187,7 @@ int main()
                            (u32)Xil_In32(PPM_BASE + REG0));
             } else {
                 Xil_Out32(PPM_BASE + REG0, 1U);  /* software relay */
+                load_dummy_frame();
                 xil_printf("SW0=1 -> software relay (REG0=%u)\r\n",
                            (u32)Xil_In32(PPM_BASE + REG0));
             }
@@ -229,7 +255,6 @@ int main()
         prev_btnc = btnc;
         prev_btnd = btnd;
         prev_btnu = btnu;
-        usleep(10000);
     }
 
     cleanup_platform();

@@ -120,18 +120,6 @@
 #define BTN_GPIO_BASEADDR 0x41200000U
 #endif
 
-
-// Keyboard input defines
-#define ATTACK_SPEED          0.08    // faster response
-#define DECAY_SPEED           0.05
-#define THROTTLE_ATTACK_LAUNCH   0.10    /* punch off the ground */
-#define THROTTLE_ATTACK_CRUISE   0.018   /* fine control at altitude */
-#define THROTTLE_LIFTOFF         0.30    /* threshold where attack slows */
-#define THROTTLE_HOLD_BAND       0.015   /* +/- this around last released pos = hold */
-#define THROTTLE_DECAY_SPEED     0.006   /* very slow passive drift, nearly hover */
-#define THROTTLE_BRAKE_SPEED     0.045   /* C key: active descent */
-
-bool kill = false;
 /* Channel values in capture clock counts: roll, pitch, throttle, yaw, vr(a), vr(b). */
 static const u32 chan_min[CAPTURE_COUNT] = {67000U, 67000U, 60000U, 70000U, 60000U, 60000U};
 static const u32 chan_max[CAPTURE_COUNT] = {150000U, 150000U, 163000U, 157000U, 163000U, 163000U};
@@ -199,6 +187,23 @@ static inline u32 access_buttons(void)
     return Xil_In32((UINTPTR)BTN_GPIO_BASEADDR);
 }
 
+// Keyboard input defines
+#define ATTACK_SPEED          	 0.005    // faster response
+#define ATTACK_INITIAL			 0.10
+#define ATTACK_MID				 0.02
+#define ATTACK_LOWER_THRESHOLD   0.30
+#define ATTACK_UPPER_THRESHOLD   0.70
+
+#define DECAY_SPEED           	 0.005
+#define THROTTLE_ATTACK_LAUNCH   0.10    /* punch off the ground */
+#define THROTTLE_ATTACK_CRUISE   0.018   /* fine control at altitude */
+#define THROTTLE_LIFTOFF         0.30    /* threshold where attack slows */
+#define THROTTLE_HOLD_BAND       0.015   /* +/- this around last released pos = hold */
+#define THROTTLE_DECAY_SPEED     0.006   /* very slow passive drift, nearly hover */
+#define THROTTLE_BRAKE_SPEED     0.045   /* C key: active descent */
+
+bool kill = false;
+
 typedef struct {
     double timer;      /* 0.0 to 1.0 */
     double min_val;
@@ -207,12 +212,12 @@ typedef struct {
 } ControlAxis;
 
 /* roll, pitch, throttle, yaw, vr(a), vr(b) */
-static ControlAxis roll_axis     = {0.5,  67000.0, 150000.0, 0.0};
-static ControlAxis pitch_axis    = {0.5,  67000.0, 150000.0, 0.0};
-static ControlAxis throttle_axis = {0.0,  60000.0, 163000.0, 0.0};
-static ControlAxis yaw_axis      = {0.5,  70000.0, 157000.0, 0.0};
-static ControlAxis vra_axis      = {0.5,  60000.0, 163000.0, 0.0};
-static ControlAxis vrb_axis      = {0.5,  60000.0, 163000.0, 0.0};
+static ControlAxis roll_axis     = {0.5,  65000.0, 158000.0, 0.0};
+static ControlAxis pitch_axis    = {0.5,  68000.0, 150000.0, 0.0};
+static ControlAxis throttle_axis = {0.0,  60000.0, 158000.0, 0.0};
+static ControlAxis yaw_axis      = {0.5,  60000.0, 163000.0, 0.0};
+//static ControlAxis vra_axis      = {0.5,  60000.0, 163000.0, 0.0};
+//static ControlAxis vrb_axis      = {0.5,  60000.0, 163000.0, 0.0};
 
 /* One-loop key state flags. If no key comes in this loop, decay logic runs. */
 static bool roll_pos = false;
@@ -235,20 +240,28 @@ static bool yaw_neg = false;
 
 /* Zynq global timer = CPU_3x_AND_2x_CLK / 2. At 666MHz CPU, timer = 333MHz.
    At 333MHz CPU, timer = 166MHz. Adjust TIMER_HZ if your clock differs.    */
-#define TIMER_HZ          166500000ULL   /* ticks per second */
-#define KEY_TIMEOUT_MS    80ULL          /* key stays "held" for 80ms */
+#define TIMER_HZ          100000000ULL   /* ticks per second */
+#define KEY_TIMEOUT_MS    40ULL          /* key stays "held" for 80ms */
 const u64 timeout_ticks = (TIMER_HZ / 1000ULL) * KEY_TIMEOUT_MS;
 
 static int update_keyboard_axis(ControlAxis *axis, bool inc, bool dec, bool is_throttle)
 {
     if (!is_throttle) {
         if (inc && !dec) {
-            axis->timer += ATTACK_SPEED;
+//            axis->timer += ATTACK_SPEED;
+            double t = axis->timer;
+        	double attack = (t > 0.48 && t < 0.52 ? ATTACK_INITIAL : ATTACK_MID) + ATTACK_MID
+        			* (t / ATTACK_LOWER_THRESHOLD < 1.0 ? 0.5 : 1.0);
+        	axis->timer += attack;
         } else if (dec && !inc) {
-            axis->timer -= ATTACK_SPEED;
+//            axis->timer -= ATTACK_SPEED;
+            double t = axis->timer;
+        	double attack = (t > 0.48 && t < 0.52 ? ATTACK_INITIAL : ATTACK_MID) + ATTACK_MID
+        			* (t / ATTACK_UPPER_THRESHOLD > 1.0 ? 0.5 : 1.0);
+        	axis->timer -= attack;
         } else {
-            if      (axis->timer > 0.55) axis->timer -= DECAY_SPEED;
-            else if (axis->timer < 0.45) axis->timer += DECAY_SPEED;
+            if      (axis->timer > 0.52) axis->timer -= DECAY_SPEED;
+            else if (axis->timer < 0.48) axis->timer += DECAY_SPEED;
             else                          axis->timer  = 0.5;
         }
     } else {
@@ -326,6 +339,9 @@ static void write_keyboard_frame_to_regs(void)
     u32 yaw      = (u32)update_keyboard_axis(&yaw_axis,      yaw_pos,      yaw_neg,      false);
     u32 vra      = Xil_In32(PPM_BASE + REG14);
     u32 vrb      = Xil_In32(PPM_BASE + REG15);
+
+    xil_printf("KEY: r10=%u r11=%u r12=%u r13=%u r14=%u r15=%u\r\n",
+    		roll, pitch, throttle, yaw, vra, vrb);
 
     Xil_Out32(PPM_BASE + REG4, roll);
     Xil_Out32(PPM_BASE + REG5, pitch);

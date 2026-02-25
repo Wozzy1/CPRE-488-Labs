@@ -1,6 +1,6 @@
 Nothing to build in platform 'design_2_wrapper_outputTest'
 
-06:16:23 **** Incremental Build of configuration Debug for project outputTest ****
+17:40:55 **** Incremental Build of configuration Debug for project outputTest ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
@@ -14,19 +14,12 @@ C:/Users/diepw50/CPRE-488-Labs/MP-1/sw/OutputTest/design_2_wrapper_outputTest/ex
    65 | #pragma message ("For the sleep routines, Global timer is being used")
       |         ^~~~~~~
 ../src/helloworld.c: In function 'main':
-../src/helloworld.c:422:13: warning: unused variable 'btnr_rise' [-Wunused-variable]
-  422 |         int btnr_rise = (btnr == 1 && prev_btnr == 0);
+../src/helloworld.c:446:13: warning: unused variable 'btnr_rise' [-Wunused-variable]
+  446 |         int btnr_rise = (btnr == 1 && prev_btnr == 0);
       |             ^~~~~~~~~
-../src/helloworld.c:421:13: warning: unused variable 'btnl_rise' [-Wunused-variable]
-  421 |         int btnl_rise = (btnl == 1 && prev_btnl == 0);
+../src/helloworld.c:445:13: warning: unused variable 'btnl_rise' [-Wunused-variable]
+  445 |         int btnl_rise = (btnl == 1 && prev_btnl == 0);
       |             ^~~~~~~~~
-At top level:
-../src/helloworld.c:213:20: warning: 'vrb_axis' defined but not used [-Wunused-variable]
-  213 | static ControlAxis vrb_axis      = {0.5,  60000.0, 163000.0, 0.0};
-      |                    ^~~~~~~~
-../src/helloworld.c:212:20: warning: 'vra_axis' defined but not used [-Wunused-variable]
-  212 | static ControlAxis vra_axis      = {0.5,  60000.0, 163000.0, 0.0};
-      |                    ^~~~~~~~
 'Finished building: ../src/helloworld.c'
 ' '
 'Building target: outputTest.elf'
@@ -37,6 +30,6 @@ arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=non
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size outputTest.elf  |tee "outputTest.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  26112	   1272	  29080	  56464	   dc90	outputTest.elf
+  26236	   1272	  29080	  56588	   dd0c	outputTest.elf
 'Finished building: outputTest.elf.size'
 ' '

@@ -1,0 +1,288 @@
+!SESSION 2026-02-26 17:11:21.908 -----------------------------------------------
+eclipse.buildId=2020.1
+java.version=9.0.4
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+This is a continuation of log file C:\Users\cihem\CPRE-488-Labs\MP-2\sw\.metadata\.bak_0.log
+Created Time: 2026-02-26 18:51:37.937
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-26 18:51:37.937
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/Users/cihem/CPRE-488-Labs/MP-2/sw/TPG/export/TPG/hw/system_wrapper.xsa ps7_cortexa9_1 C_DEBUG_ENABLED], Thread: Worker-32: Launching Debugger_MP2-TPG-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-26 18:51:37.937
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/Users/cihem/CPRE-488-Labs/MP-2/sw/TPG/export/TPG/hw/system_wrapper.xsa ps7_cortexa9_1 C_DEBUG_ENABLED], Result: [null, ]. Thread: Worker-32: Launching Debugger_MP2-TPG-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-26 18:51:37.937
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/Users/cihem/CPRE-488-Labs/MP-2/sw/TPG/export/TPG/hw/system_wrapper.xsa ps7_cortexa9_1 C_DEBUG_EVENT_COUNTERS], Thread: Worker-32: Launching Debugger_MP2-TPG-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-26 18:51:37.937
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/Users/cihem/CPRE-488-Labs/MP-2/sw/TPG/export/TPG/hw/system_wrapper.xsa ps7_cortexa9_1 C_DEBUG_EVENT_COUNTERS], Result: [null, ]. Thread: Worker-32: Launching Debugger_MP2-TPG-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-26 18:51:37.937
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/Users/cihem/CPRE-488-Labs/MP-2/sw/TPG/export/TPG/hw/system_wrapper.xsa ps7_cortexa9_1 C_DEBUG_LATENCY_COUNTERS], Thread: Worker-32: Launching Debugger_MP2-TPG-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-26 18:51:37.942
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/Users/cihem/CPRE-488-Labs/MP-2/sw/TPG/export/TPG/hw/system_wrapper.xsa ps7_cortexa9_1 C_DEBUG_LATENCY_COUNTERS], Result: [null, ]. Thread: Worker-32: Launching Debugger_MP2-TPG-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-26 18:51:37.942
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/Users/cihem/CPRE-488-Labs/MP-2/sw/TPG/export/TPG/hw/system_wrapper.xsa ps7_cortexa9_1 C_DEBUG_COUNTER_WIDTH], Thread: Worker-32: Launching Debugger_MP2-TPG-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-26 18:51:37.942
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/Users/cihem/CPRE-488-Labs/MP-2/sw/TPG/export/TPG/hw/system_wrapper.xsa ps7_cortexa9_1 C_DEBUG_COUNTER_WIDTH], Result: [null, ]. Thread: Worker-32: Launching Debugger_MP2-TPG-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-26 18:51:37.942
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/Users/cihem/CPRE-488-Labs/MP-2/sw/TPG/export/TPG/hw/system_wrapper.xsa ps7_cortexa9_1 C_FREQ], Thread: Worker-32: Launching Debugger_MP2-TPG-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-26 18:51:37.942
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/Users/cihem/CPRE-488-Labs/MP-2/sw/TPG/export/TPG/hw/system_wrapper.xsa ps7_cortexa9_1 C_FREQ], Result: [null, ]. Thread: Worker-32: Launching Debugger_MP2-TPG-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-26 18:51:37.942
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/Users/cihem/CPRE-488-Labs/MP-2/sw/TPG/export/TPG/hw/system_wrapper.xsa ps7_cortexa9_1 C_CPU_CLK_FREQ_HZ], Thread: Worker-32: Launching Debugger_MP2-TPG-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-26 18:51:37.942
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/Users/cihem/CPRE-488-Labs/MP-2/sw/TPG/export/TPG/hw/system_wrapper.xsa ps7_cortexa9_1 C_CPU_CLK_FREQ_HZ], Result: [null, 666666687]. Thread: Worker-32: Launching Debugger_MP2-TPG-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-26 18:51:37.942
+!MESSAGE XSCT Command: [::hsi::utils::get_connected_periphs C:/Users/cihem/CPRE-488-Labs/MP-2/sw/TPG/export/TPG/hw/system_wrapper.xsa ps7_cortexa9_0], Thread: Worker-32: Launching Debugger_MP2-TPG-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-26 18:51:37.942
+!MESSAGE XSCT command with result: [::hsi::utils::get_connected_periphs C:/Users/cihem/CPRE-488-Labs/MP-2/sw/TPG/export/TPG/hw/system_wrapper.xsa ps7_cortexa9_0], Result: [null, axi_cama_bta axi_cama_gpio axi_iic_hdmi axi_vdma_a ps7_afi_0 ps7_afi_1 ps7_afi_2 ps7_afi_3 ps7_coresight_comp_0 ps7_ddr_0 ps7_ddrc_0 ps7_dev_cfg_0 ps7_dma_ns ps7_dma_s ps7_ethernet_0 ps7_globaltimer_0 ps7_gpio_0 ps7_gpv_0 ps7_i2c_0 ps7_intc_dist_0 ps7_iop_bus_config_0 ps7_l2cachec_0 ps7_ocmc_0 ps7_pl310_0 ps7_pmu_0 ps7_qspi_0 ps7_qspi_linear_0 ps7_ram_0 ps7_ram_1 ps7_scuc_0 ps7_scugic_0 ps7_scutimer_0 ps7_scuwdt_0 ps7_sd_0 ps7_slcr_0 ps7_uart_1 ps7_usb_0 ps7_xadc_0 v_tpg_0 video_dynclk vtg]. Thread: Worker-32: Launching Debugger_MP2-TPG-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-26 18:51:37.942
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_files_on_hw C:/Users/cihem/CPRE-488-Labs/MP-2/sw/TPG/export/TPG/hw/system_wrapper.xsa bit], Thread: Worker-32: Launching Debugger_MP2-TPG-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-26 18:51:37.942
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_files_on_hw C:/Users/cihem/CPRE-488-Labs/MP-2/sw/TPG/export/TPG/hw/system_wrapper.xsa bit], Result: [null, system_wrapper.bit]. Thread: Worker-32: Launching Debugger_MP2-TPG-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-26 18:51:37.942
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-32: Launching Debugger_MP2-TPG-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-26 18:51:37.942
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#37]. Thread: Worker-32: Launching Debugger_MP2-TPG-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-26 18:51:37.942
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-32: Launching Debugger_MP2-TPG-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-26 18:51:38.077
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248525658]. Thread: Worker-32: Launching Debugger_MP2-TPG-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-26 18:51:38.077
+!MESSAGE XSCT Command: [version -server], Thread: Worker-32: Launching Debugger_MP2-TPG-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-26 18:51:38.080
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2020.1]. Thread: Worker-32: Launching Debugger_MP2-TPG-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-26 18:51:38.080
+!MESSAGE XSCT Command: [version], Thread: Worker-32: Launching Debugger_MP2-TPG-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-26 18:51:38.081
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2020.1
+SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-32: Launching Debugger_MP2-TPG-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-26 18:51:38.081
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-32: Launching Debugger_MP2-TPG-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-26 18:51:38.082
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248525658]. Thread: Worker-32: Launching Debugger_MP2-TPG-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-26 18:51:38.082
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248525658" && level==1}], Thread: Worker-32: Launching Debugger_MP2-TPG-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-26 18:51:38.089
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248525658" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-32: Launching Debugger_MP2-TPG-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-26 18:51:38.089
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-32: Launching Debugger_MP2-TPG-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-26 18:51:38.092
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248525658]. Thread: Worker-32: Launching Debugger_MP2-TPG-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-26 18:51:38.092
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248525658" && level==1}], Thread: Worker-32: Launching Debugger_MP2-TPG-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-26 18:51:38.098
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248525658" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-32: Launching Debugger_MP2-TPG-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-26 18:51:38.098
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-32: Launching Debugger_MP2-TPG-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-26 18:51:38.103
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248525658]. Thread: Worker-32: Launching Debugger_MP2-TPG-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-26 18:51:38.103
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248525658" && level==1}], Thread: Worker-32: Launching Debugger_MP2-TPG-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-26 18:51:38.109
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248525658" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-32: Launching Debugger_MP2-TPG-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-26 18:51:38.109
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-32: Launching Debugger_MP2-TPG-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-26 18:51:38.112
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248525658]. Thread: Worker-32: Launching Debugger_MP2-TPG-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-26 18:51:38.112
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248525658" && level==1}], Thread: Worker-32: Launching Debugger_MP2-TPG-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-26 18:51:38.118
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248525658" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-32: Launching Debugger_MP2-TPG-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-26 18:51:38.118
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-32: Launching Debugger_MP2-TPG-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-26 18:51:38.122
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248525658]. Thread: Worker-32: Launching Debugger_MP2-TPG-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-26 18:51:38.122
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248525658" && level==1}], Thread: Worker-32: Launching Debugger_MP2-TPG-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-26 18:51:38.128
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248525658" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-32: Launching Debugger_MP2-TPG-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-26 18:51:38.128
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-32: Launching Debugger_MP2-TPG-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-26 18:51:38.132
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248525658]. Thread: Worker-32: Launching Debugger_MP2-TPG-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-26 18:51:38.132
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248525658" && level==1}], Thread: Worker-32: Launching Debugger_MP2-TPG-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-26 18:51:38.140
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248525658" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-32: Launching Debugger_MP2-TPG-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-26 18:51:38.140
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Zed 210248525658" && level == 0}], Thread: Worker-32: Launching Debugger_MP2-TPG-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-26 18:51:38.146
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Zed 210248525658" && level == 0}], Result: [null, ]. Thread: Worker-32: Launching Debugger_MP2-TPG-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-26 18:51:38.146
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-32: Launching Debugger_MP2-TPG-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-26 18:51:38.146
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-32: Launching Debugger_MP2-TPG-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-26 18:51:38.146
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-32: Launching Debugger_MP2-TPG-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-26 18:51:38.151
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-32: Launching Debugger_MP2-TPG-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-26 18:51:38.151
+!MESSAGE XSCT Command: [rst -system], Thread: Worker-32: Launching Debugger_MP2-TPG-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-26 18:51:38.218
+!MESSAGE XSCT command with result: [rst -system], Result: [null, ]. Thread: Worker-32: Launching Debugger_MP2-TPG-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-26 18:51:38.218
+!MESSAGE XSCT Command: [after 3000], Thread: Worker-32: Launching Debugger_MP2-TPG-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-26 18:51:41.228
+!MESSAGE XSCT command with result: [after 3000], Result: [null, ]. Thread: Worker-32: Launching Debugger_MP2-TPG-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-26 18:51:41.236
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-26 18:51:41.240
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zed 210248525658]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-26 18:51:41.240
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248525658" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-26 18:51:41.246
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248525658" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-26 18:51:41.246
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248525658" && level==0 && jtag_device_ctx=="jsn-Zed-210248525658-23727093-0"}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-26 18:51:41.260
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248525658" && level==0 && jtag_device_ctx=="jsn-Zed-210248525658-23727093-0"}], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-26 18:51:41.260
+!MESSAGE XSCT Command: [fpga -file C:/Users/cihem/CPRE-488-Labs/MP-2/sw/MP2-TPG/_ide/bitstream/system_wrapper.bit], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-26 18:51:43.567
+!MESSAGE XSCT command with result: [fpga -file C:/Users/cihem/CPRE-488-Labs/MP-2/sw/MP2-TPG/_ide/bitstream/system_wrapper.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-26 18:51:43.597
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-32: Launching Debugger_MP2-TPG-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-26 18:51:43.603
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-32: Launching Debugger_MP2-TPG-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-26 18:51:43.603
+!MESSAGE XSCT Command: [loadhw -hw C:/Users/cihem/CPRE-488-Labs/MP-2/sw/TPG/export/TPG/hw/system_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs], Thread: Worker-32: Launching Debugger_MP2-TPG-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-26 18:51:43.693
+!MESSAGE XSCT command with result: [loadhw -hw C:/Users/cihem/CPRE-488-Labs/MP-2/sw/TPG/export/TPG/hw/system_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs], Result: [null, system_wrapper_9]. Thread: Worker-32: Launching Debugger_MP2-TPG-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-26 18:51:43.693
+!MESSAGE XSCT Command: [configparams force-mem-access 1], Thread: Worker-32: Launching Debugger_MP2-TPG-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-26 18:51:43.693
+!MESSAGE XSCT command with result: [configparams force-mem-access 1], Result: [null, ]. Thread: Worker-32: Launching Debugger_MP2-TPG-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-26 18:51:43.693
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-32: Launching Debugger_MP2-TPG-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-26 18:51:43.700
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-32: Launching Debugger_MP2-TPG-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-26 18:51:43.702
+!MESSAGE XSCT Command: [source C:/Users/cihem/CPRE-488-Labs/MP-2/sw/MP2-TPG/_ide/psinit/ps7_init.tcl], Thread: Worker-32: Launching Debugger_MP2-TPG-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-26 18:51:43.702
+!MESSAGE XSCT command with result: [source C:/Users/cihem/CPRE-488-Labs/MP-2/sw/MP2-TPG/_ide/psinit/ps7_init.tcl], Result: [null, ]. Thread: Worker-32: Launching Debugger_MP2-TPG-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-26 18:51:43.702
+!MESSAGE XSCT Command: [ps7_init], Thread: Worker-32: Launching Debugger_MP2-TPG-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-26 18:51:43.882
+!MESSAGE XSCT command with result: [ps7_init], Result: [null, ]. Thread: Worker-32: Launching Debugger_MP2-TPG-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-26 18:51:43.882
+!MESSAGE XSCT Command: [ps7_post_config], Thread: Worker-32: Launching Debugger_MP2-TPG-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-26 18:51:43.882
+!MESSAGE XSCT command with result: [ps7_post_config], Result: [null, ]. Thread: Worker-32: Launching Debugger_MP2-TPG-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-26 18:51:43.882
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A9*#0"}], Thread: Worker-32: Launching Debugger_MP2-TPG-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-26 18:51:43.892
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A9*#0"}], Result: [null, ]. Thread: Worker-32: Launching Debugger_MP2-TPG-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-26 18:51:43.892
+!MESSAGE XSCT Command: [dow C:/Users/cihem/CPRE-488-Labs/MP-2/sw/MP2-TPG/Debug/MP2-TPG.elf], Thread: Worker-32: Launching Debugger_MP2-TPG-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-26 18:51:44.968
+!MESSAGE XSCT command with result: [dow C:/Users/cihem/CPRE-488-Labs/MP-2/sw/MP2-TPG/Debug/MP2-TPG.elf], Result: [null, ]. Thread: Worker-32: Launching Debugger_MP2-TPG-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-26 18:51:44.968
+!MESSAGE XSCT Command: [configparams force-mem-access 0], Thread: Worker-32: Launching Debugger_MP2-TPG-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-26 18:51:44.990
+!MESSAGE XSCT command with result: [configparams force-mem-access 0], Result: [null, ]. Thread: Worker-32: Launching Debugger_MP2-TPG-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-26 18:51:45.069
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A9*#0"}], Thread: Worker-32: Launching Debugger_MP2-TPG-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-26 18:51:45.085
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A9*#0"}], Result: [null, ]. Thread: Worker-32: Launching Debugger_MP2-TPG-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-26 18:51:45.085
+!MESSAGE XSCT Command: [con], Thread: Worker-32: Launching Debugger_MP2-TPG-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-26 18:51:45.101
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-32: Launching Debugger_MP2-TPG-Default

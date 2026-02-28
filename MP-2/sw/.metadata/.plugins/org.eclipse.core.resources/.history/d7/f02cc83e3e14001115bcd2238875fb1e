@@ -181,63 +181,6 @@ void start_input_video_pipeline(AXI_VDMA<ScuGicInterruptController>& vdma_driver
 ///////////////////////////////////
 // SW processing of video frames //
 ///////////////////////////////////
-enum class BayerPattern { RGGB, BGGR, GRBG, GBRG };
-
-// Convert 16-bit RGB565 pixel to 8-bit R,G,B (0..255)
-static inline void rgb565_to_rgb888(uint16_t pix, uint8_t &R, uint8_t &G, uint8_t &B)
-{
-  // RGB565: RRRRRGGGGGGBBBBB
-  uint8_t r5 = (pix >> 11) & 0x1F;
-  uint8_t g6 = (pix >>  5) & 0x3F;
-  uint8_t b5 = (pix >>  0) & 0x1F;
-
-  // Scale up to 8-bit
-  R = (r5 * 255) / 31;
-  G = (g6 * 255) / 63;
-  B = (b5 * 255) / 31;
-}
-
-static inline uint8_t bayer_select(uint8_t R, uint8_t G, uint8_t B, int x, int y, BayerPattern pat)
-{
-  bool yEven = ((y & 1) == 0);
-  bool xEven = ((x & 1) == 0);
-
-  switch (pat) {
-    case BayerPattern::RGGB:
-      // Row0: R G
-      // Row1: G B
-      if (yEven && xEven)  return R;
-      if (yEven && !xEven) return G;
-      if (!yEven && xEven) return G;
-      return B;
-
-    case BayerPattern::BGGR:
-      // Row0: B G
-      // Row1: G R
-      if (yEven && xEven)  return B;
-      if (yEven && !xEven) return G;
-      if (!yEven && xEven) return G;
-      return R;
-
-    case BayerPattern::GRBG:
-      // Row0: G R
-      // Row1: B G
-      if (yEven && xEven)  return G;
-      if (yEven && !xEven) return R;
-      if (!yEven && xEven) return B;
-      return G;
-
-    case BayerPattern::GBRG:
-      // Row0: G B
-      // Row1: R G
-      if (yEven && xEven)  return G;
-      if (yEven && !xEven) return B;
-      if (!yEven && xEven) return R;
-      return G;
-  }
-  return 0;
-}
-
 void camera_loop(void)
 {
   Xuint32 parkptr; // Store Park location for VDMA Write or Read channel
@@ -273,48 +216,12 @@ void camera_loop(void)
   // SW Pass-through: SW Copying Write VDMA Frame Buffer to HDMI read VDMA Frame Buffer (Note: This will display Upside down)
   // Copy 1000 frames using SW before going back to VDMA pass-through mode
   // YOUR Color Conversion SW algorithm will replace this SW pass-through code
-//  for (j = 0; j < 1000; j++) {
-//    for (i = 0; i < 1920*1080; i++) {
-//      pMM2S_Mem[i] = pS2MM_Mem[1920*1080-i-1];
-//    }
-//  }
-  // Choose the Bayer pattern that matches your MATLAB + your demosaic IP config
-  const BayerPattern PAT = BayerPattern::GRBG; // <- change if needed
-
-  const int WIDTH  = 1920;
-  const int HEIGHT = 1080;
-
   for (j = 0; j < 1000; j++) {
-
-    for (int y = 0; y < HEIGHT; y++) {
-      for (int x = 0; x < WIDTH; x++) {
-
-        int idx = y * WIDTH + x;
-
-        // If your image is upside down in the current setup, keep the same flip they used before:
-        // int src_idx = (WIDTH * HEIGHT) - idx - 1;   // old behavior (global reverse)
-        //
-        // Better “vertical flip” (common for camera buffers):
-        int src_idx = (HEIGHT - 1 - y) * WIDTH + x;
-
-        uint16_t srcPix = pS2MM_Mem[src_idx];
-
-        // Convert RGB565 -> R,G,B (8-bit each)
-        uint8_t R, G, B;
-        rgb565_to_rgb888(srcPix, R, G, B);
-
-        // Pick single Bayer sample (8-bit)
-        uint8_t b = bayer_select(R, G, B, x, y, PAT);
-
-        // Store to output buffer.
-        // We store Bayer in low byte. High byte = 0.
-        pMM2S_Mem[idx] = (uint16_t)b;
-      }
+    for (i = 0; i < 1920*1080; i++) {
+      pMM2S_Mem[i] = pS2MM_Mem[1920*1080-i-1];
     }
-
-    // If caches are enabled, flushing matters on Zynq
-    Xil_DCacheFlush();
   }
+
 
   // Grab the VDMA Control Registers, and take VDMA channels out of Park
   // (i.e., Allow each VDMA channel to sequence through all frame buffers)

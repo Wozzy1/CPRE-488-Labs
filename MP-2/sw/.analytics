@@ -33,3 +33,13 @@ timestamp=[2026-02-27 17:08:43], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00
 timestamp=[2026-02-27 17:09:24], mode=PLATFORM_GENERATION, duration=0:00:22.019, duration_ms=22019, data={name=TPG}
 timestamp=[2026-02-27 17:09:27], mode=BUILD, duration=0:00:01.866, duration_ms=1866, data={name=MP2-TPG, configuration=Debug, clean_build=false}
 timestamp=[2026-02-27 18:42:37], mode=BUILD, duration=0:00:01.182, duration_ms=1182, data={name=MP2-TPG, configuration=Debug, clean_build=false}
+timestamp=[2026-03-02 17:58:47], mode=WORKBENCH_START, duration=0:00:06.923, duration_ms=6923, data={}
+timestamp=[2026-03-02 17:58:47], mode=WORKBENCH_UI_INIT, duration=0:00:00.554, duration_ms=554, data={editors_count=5, platform_editors_count=1, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=MP2-TPG,MP2-TPG_system,RemoteSystemsTempFiles,TPG}
+timestamp=[2026-03-02 17:58:47], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.043, duration_ms=43, data={}
+timestamp=[2026-03-02 18:08:41], mode=PLATFORM_GENERATION, duration=0:00:24.911, duration_ms=24911, data={name=TPG}
+timestamp=[2026-03-02 18:08:46], mode=BUILD, duration=0:00:03.516, duration_ms=3516, data={name=MP2-TPG, configuration=Debug, clean_build=false}
+timestamp=[2026-03-02 19:16:00], mode=BUILD, duration=0:00:01.236, duration_ms=1236, data={name=MP2-TPG, configuration=Debug, clean_build=false}
+timestamp=[2026-03-02 19:24:00], mode=BUILD, duration=0:00:01.240, duration_ms=1240, data={name=MP2-TPG, configuration=Debug, clean_build=false}
+timestamp=[2026-03-02 19:27:56], mode=BUILD, duration=0:00:01.187, duration_ms=1187, data={name=MP2-TPG, configuration=Debug, clean_build=false}
+timestamp=[2026-03-02 19:30:46], mode=BUILD, duration=0:00:01.245, duration_ms=1245, data={name=MP2-TPG, configuration=Debug, clean_build=false}
+timestamp=[2026-03-02 19:52:21], mode=BUILD, duration=0:00:01.300, duration_ms=1300, data={name=MP2-TPG, configuration=Debug, clean_build=false}

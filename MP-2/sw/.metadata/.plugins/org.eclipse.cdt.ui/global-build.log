@@ -1,6 +1,6 @@
 Nothing to build in platform 'TPG'
 
-18:42:36 **** Incremental Build of configuration Debug for project MP2-TPG ****
+19:52:20 **** Incremental Build of configuration Debug for project MP2-TPG ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
@@ -17,10 +17,10 @@ C:/Users/cihem/CPRE-488-Labs/MP-2/sw/TPG/export/TPG/sw/TPG/standalone_domain/bsp
 C:/Users/cihem/CPRE-488-Labs/MP-2/sw/TPG/export/TPG/sw/TPG/standalone_domain/bspinclude/include/xbasic_types.h:99:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
    99 | #warning  Please refer the Standalone BSP UG647 for further details
       |  ^~~~~~~
-../src/camera_app.cc: In function 'void camera_loop()':
-../src/camera_app.cc:246:7: warning: unused variable 'i' [-Wunused-variable]
-  246 |   int i, j; // Loop indexes
-      |       ^
+In file included from ../src/camera_app.cc:9:
+C:/Users/cihem/CPRE-488-Labs/MP-2/sw/TPG/export/TPG/sw/TPG/standalone_domain/bspinclude/include/xtime_l.h:65:70: note: #pragma message: For the sleep routines, Global timer is being used
+   65 | #pragma message ("For the sleep routines, Global timer is being used")
+      |                                                                      ^
 'Finished building: ../src/camera_app.cc'
 ' '
 'Building target: MP2-TPG.elf'
@@ -31,6 +31,6 @@ arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=non
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size MP2-TPG.elf  |tee "MP2-TPG.elf.size"
    text	   data	    bss	    dec	    hex	filename
- 457660	   4024	  32512	 494196	  78a74	MP2-TPG.elf
+ 459512	   4024	  32512	 496048	  791b0	MP2-TPG.elf
 'Finished building: MP2-TPG.elf.size'
 ' '

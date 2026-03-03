@@ -1427,3 +1427,344 @@ con
 17:11:08 INFO  : Launch script is exported to file 'C:\Users\cihem\CPRE-488-Labs\MP-2\sw\.sdk\launch_scripts\single_application_debug\debugger_mp2-tpg-default.tcl'
 18:42:34 INFO  : Disconnected from the channel tcfchan#2.
 18:42:36 INFO  : Checking for BSP changes to sync application flags for project 'MP2-TPG'...
+17:58:43 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\cihem\CPRE-488-Labs\MP-2\sw\temp_xsdb_launch_script.tcl
+17:58:45 INFO  : XSCT server has started successfully.
+17:58:45 INFO  : plnx-install-location is set to ''
+17:58:45 INFO  : Successfully done setting XSCT server connection channel  
+17:58:45 INFO  : Successfully done setting workspace for the tool. 
+17:58:47 INFO  : Platform repository initialization has completed.
+17:58:47 INFO  : Registering command handlers for Vitis TCF services
+17:58:50 INFO  : Successfully done query RDI_DATADIR 
+18:08:41 INFO  : Result from executing command 'getProjects': TPG
+18:08:41 INFO  : Result from executing command 'getPlatforms': TPG|C:/Users/cihem/CPRE-488-Labs/MP-2/sw/TPG/export/TPG/TPG.xpfm
+18:08:41 INFO  : Checking for BSP changes to sync application flags for project 'MP2-TPG'...
+19:15:59 INFO  : Checking for BSP changes to sync application flags for project 'MP2-TPG'...
+19:16:38 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:16:38 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248525658" && level==0 && jtag_device_ctx=="jsn-Zed-210248525658-23727093-0"}' command is executed.
+19:16:40 INFO  : FPGA configured successfully with bitstream "C:/Users/cihem/CPRE-488-Labs/MP-2/sw/MP2-TPG/_ide/bitstream/system_wrapper.bit"
+19:17:08 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:17:08 INFO  : Jtag cable 'Digilent Zed 210248525658' is selected.
+19:17:08 INFO  : 'jtag frequency' command is executed.
+19:17:08 INFO  : Context for 'APU' is selected.
+19:17:08 INFO  : System reset is completed.
+19:17:11 INFO  : 'after 3000' command is executed.
+19:17:11 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248525658" && level==0 && jtag_device_ctx=="jsn-Zed-210248525658-23727093-0"}' command is executed.
+19:17:13 INFO  : FPGA configured successfully with bitstream "C:/Users/cihem/CPRE-488-Labs/MP-2/sw/MP2-TPG/_ide/bitstream/system_wrapper.bit"
+19:17:13 INFO  : Context for 'APU' is selected.
+19:17:14 INFO  : Hardware design and registers information is loaded from 'C:/Users/cihem/CPRE-488-Labs/MP-2/sw/TPG/export/TPG/hw/system_wrapper.xsa'.
+19:17:14 INFO  : 'configparams force-mem-access 1' command is executed.
+19:17:14 INFO  : Context for 'APU' is selected.
+19:17:14 INFO  : Sourcing of 'C:/Users/cihem/CPRE-488-Labs/MP-2/sw/MP2-TPG/_ide/psinit/ps7_init.tcl' is done.
+19:17:14 INFO  : 'ps7_init' command is executed.
+19:17:14 INFO  : 'ps7_post_config' command is executed.
+19:17:14 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:17:15 INFO  : The application 'C:/Users/cihem/CPRE-488-Labs/MP-2/sw/MP2-TPG/Debug/MP2-TPG.elf' is downloaded to processor 'ps7_cortexa9_0'.
+19:17:15 INFO  : 'configparams force-mem-access 0' command is executed.
+19:17:15 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248525658" && level==0 && jtag_device_ctx=="jsn-Zed-210248525658-23727093-0"}
+fpga -file C:/Users/cihem/CPRE-488-Labs/MP-2/sw/MP2-TPG/_ide/bitstream/system_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/cihem/CPRE-488-Labs/MP-2/sw/TPG/export/TPG/hw/system_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/cihem/CPRE-488-Labs/MP-2/sw/MP2-TPG/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/cihem/CPRE-488-Labs/MP-2/sw/MP2-TPG/Debug/MP2-TPG.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+19:17:15 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:17:15 INFO  : 'con' command is executed.
+19:17:15 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+19:17:15 INFO  : Launch script is exported to file 'C:\Users\cihem\CPRE-488-Labs\MP-2\sw\.sdk\launch_scripts\single_application_debug\debugger_mp2-tpg-default.tcl'
+19:23:52 INFO  : Disconnected from the channel tcfchan#2.
+19:23:59 INFO  : Checking for BSP changes to sync application flags for project 'MP2-TPG'...
+19:24:12 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:24:12 INFO  : Jtag cable 'Digilent Zed 210248525658' is selected.
+19:24:12 INFO  : 'jtag frequency' command is executed.
+19:24:12 INFO  : Context for 'APU' is selected.
+19:24:12 INFO  : System reset is completed.
+19:24:15 INFO  : 'after 3000' command is executed.
+19:24:15 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248525658" && level==0 && jtag_device_ctx=="jsn-Zed-210248525658-23727093-0"}' command is executed.
+19:24:17 INFO  : FPGA configured successfully with bitstream "C:/Users/cihem/CPRE-488-Labs/MP-2/sw/MP2-TPG/_ide/bitstream/system_wrapper.bit"
+19:24:18 INFO  : Context for 'APU' is selected.
+19:24:18 INFO  : Hardware design and registers information is loaded from 'C:/Users/cihem/CPRE-488-Labs/MP-2/sw/TPG/export/TPG/hw/system_wrapper.xsa'.
+19:24:18 INFO  : 'configparams force-mem-access 1' command is executed.
+19:24:18 INFO  : Context for 'APU' is selected.
+19:24:18 INFO  : Sourcing of 'C:/Users/cihem/CPRE-488-Labs/MP-2/sw/MP2-TPG/_ide/psinit/ps7_init.tcl' is done.
+19:24:18 INFO  : 'ps7_init' command is executed.
+19:24:18 INFO  : 'ps7_post_config' command is executed.
+19:24:18 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:24:19 INFO  : The application 'C:/Users/cihem/CPRE-488-Labs/MP-2/sw/MP2-TPG/Debug/MP2-TPG.elf' is downloaded to processor 'ps7_cortexa9_0'.
+19:24:19 INFO  : 'configparams force-mem-access 0' command is executed.
+19:24:19 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248525658" && level==0 && jtag_device_ctx=="jsn-Zed-210248525658-23727093-0"}
+fpga -file C:/Users/cihem/CPRE-488-Labs/MP-2/sw/MP2-TPG/_ide/bitstream/system_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/cihem/CPRE-488-Labs/MP-2/sw/TPG/export/TPG/hw/system_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/cihem/CPRE-488-Labs/MP-2/sw/MP2-TPG/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/cihem/CPRE-488-Labs/MP-2/sw/MP2-TPG/Debug/MP2-TPG.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+19:24:19 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:24:19 INFO  : 'con' command is executed.
+19:24:19 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+19:24:19 INFO  : Launch script is exported to file 'C:\Users\cihem\CPRE-488-Labs\MP-2\sw\.sdk\launch_scripts\single_application_debug\debugger_mp2-tpg-default.tcl'
+19:24:37 INFO  : Disconnected from the channel tcfchan#3.
+19:24:38 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:24:38 INFO  : Jtag cable 'Digilent Zed 210248525658' is selected.
+19:24:38 INFO  : 'jtag frequency' command is executed.
+19:24:38 INFO  : Context for 'APU' is selected.
+19:24:38 INFO  : System reset is completed.
+19:24:41 INFO  : 'after 3000' command is executed.
+19:24:41 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248525658" && level==0 && jtag_device_ctx=="jsn-Zed-210248525658-23727093-0"}' command is executed.
+19:24:43 INFO  : FPGA configured successfully with bitstream "C:/Users/cihem/CPRE-488-Labs/MP-2/sw/MP2-TPG/_ide/bitstream/system_wrapper.bit"
+19:24:43 INFO  : Context for 'APU' is selected.
+19:24:43 INFO  : Hardware design and registers information is loaded from 'C:/Users/cihem/CPRE-488-Labs/MP-2/sw/TPG/export/TPG/hw/system_wrapper.xsa'.
+19:24:43 INFO  : 'configparams force-mem-access 1' command is executed.
+19:24:43 INFO  : Context for 'APU' is selected.
+19:24:43 INFO  : Sourcing of 'C:/Users/cihem/CPRE-488-Labs/MP-2/sw/MP2-TPG/_ide/psinit/ps7_init.tcl' is done.
+19:24:43 INFO  : 'ps7_init' command is executed.
+19:24:43 INFO  : 'ps7_post_config' command is executed.
+19:24:43 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:24:44 INFO  : The application 'C:/Users/cihem/CPRE-488-Labs/MP-2/sw/MP2-TPG/Debug/MP2-TPG.elf' is downloaded to processor 'ps7_cortexa9_0'.
+19:24:45 INFO  : 'configparams force-mem-access 0' command is executed.
+19:24:45 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248525658" && level==0 && jtag_device_ctx=="jsn-Zed-210248525658-23727093-0"}
+fpga -file C:/Users/cihem/CPRE-488-Labs/MP-2/sw/MP2-TPG/_ide/bitstream/system_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/cihem/CPRE-488-Labs/MP-2/sw/TPG/export/TPG/hw/system_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/cihem/CPRE-488-Labs/MP-2/sw/MP2-TPG/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/cihem/CPRE-488-Labs/MP-2/sw/MP2-TPG/Debug/MP2-TPG.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+19:24:45 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:24:45 INFO  : 'con' command is executed.
+19:24:45 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+19:24:45 INFO  : Launch script is exported to file 'C:\Users\cihem\CPRE-488-Labs\MP-2\sw\.sdk\launch_scripts\single_application_debug\debugger_mp2-tpg-default.tcl'
+19:27:54 INFO  : Disconnected from the channel tcfchan#4.
+19:27:55 INFO  : Checking for BSP changes to sync application flags for project 'MP2-TPG'...
+19:28:11 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:28:11 INFO  : Jtag cable 'Digilent Zed 210248525658' is selected.
+19:28:11 INFO  : 'jtag frequency' command is executed.
+19:28:11 INFO  : Context for 'APU' is selected.
+19:28:11 INFO  : System reset is completed.
+19:28:14 INFO  : 'after 3000' command is executed.
+19:28:14 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248525658" && level==0 && jtag_device_ctx=="jsn-Zed-210248525658-23727093-0"}' command is executed.
+19:28:16 INFO  : FPGA configured successfully with bitstream "C:/Users/cihem/CPRE-488-Labs/MP-2/sw/MP2-TPG/_ide/bitstream/system_wrapper.bit"
+19:28:16 INFO  : Context for 'APU' is selected.
+19:28:16 INFO  : Hardware design and registers information is loaded from 'C:/Users/cihem/CPRE-488-Labs/MP-2/sw/TPG/export/TPG/hw/system_wrapper.xsa'.
+19:28:16 INFO  : 'configparams force-mem-access 1' command is executed.
+19:28:16 INFO  : Context for 'APU' is selected.
+19:28:16 INFO  : Sourcing of 'C:/Users/cihem/CPRE-488-Labs/MP-2/sw/MP2-TPG/_ide/psinit/ps7_init.tcl' is done.
+19:28:17 INFO  : 'ps7_init' command is executed.
+19:28:17 INFO  : 'ps7_post_config' command is executed.
+19:28:17 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:28:18 INFO  : The application 'C:/Users/cihem/CPRE-488-Labs/MP-2/sw/MP2-TPG/Debug/MP2-TPG.elf' is downloaded to processor 'ps7_cortexa9_0'.
+19:28:18 INFO  : 'configparams force-mem-access 0' command is executed.
+19:28:18 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248525658" && level==0 && jtag_device_ctx=="jsn-Zed-210248525658-23727093-0"}
+fpga -file C:/Users/cihem/CPRE-488-Labs/MP-2/sw/MP2-TPG/_ide/bitstream/system_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/cihem/CPRE-488-Labs/MP-2/sw/TPG/export/TPG/hw/system_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/cihem/CPRE-488-Labs/MP-2/sw/MP2-TPG/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/cihem/CPRE-488-Labs/MP-2/sw/MP2-TPG/Debug/MP2-TPG.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+19:28:18 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:28:18 INFO  : 'con' command is executed.
+19:28:18 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+19:28:18 INFO  : Launch script is exported to file 'C:\Users\cihem\CPRE-488-Labs\MP-2\sw\.sdk\launch_scripts\single_application_debug\debugger_mp2-tpg-default.tcl'
+19:28:36 INFO  : Disconnected from the channel tcfchan#5.
+19:28:37 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:28:37 INFO  : Jtag cable 'Digilent Zed 210248525658' is selected.
+19:28:37 INFO  : 'jtag frequency' command is executed.
+19:28:37 INFO  : Context for 'APU' is selected.
+19:28:37 INFO  : System reset is completed.
+19:28:40 INFO  : 'after 3000' command is executed.
+19:28:40 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248525658" && level==0 && jtag_device_ctx=="jsn-Zed-210248525658-23727093-0"}' command is executed.
+19:28:42 INFO  : FPGA configured successfully with bitstream "C:/Users/cihem/CPRE-488-Labs/MP-2/sw/MP2-TPG/_ide/bitstream/system_wrapper.bit"
+19:28:42 INFO  : Context for 'APU' is selected.
+19:28:42 INFO  : Hardware design and registers information is loaded from 'C:/Users/cihem/CPRE-488-Labs/MP-2/sw/TPG/export/TPG/hw/system_wrapper.xsa'.
+19:28:42 INFO  : 'configparams force-mem-access 1' command is executed.
+19:28:42 INFO  : Context for 'APU' is selected.
+19:28:43 INFO  : Sourcing of 'C:/Users/cihem/CPRE-488-Labs/MP-2/sw/MP2-TPG/_ide/psinit/ps7_init.tcl' is done.
+19:28:43 INFO  : 'ps7_init' command is executed.
+19:28:43 INFO  : 'ps7_post_config' command is executed.
+19:28:43 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:28:44 INFO  : The application 'C:/Users/cihem/CPRE-488-Labs/MP-2/sw/MP2-TPG/Debug/MP2-TPG.elf' is downloaded to processor 'ps7_cortexa9_0'.
+19:28:44 INFO  : 'configparams force-mem-access 0' command is executed.
+19:28:44 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248525658" && level==0 && jtag_device_ctx=="jsn-Zed-210248525658-23727093-0"}
+fpga -file C:/Users/cihem/CPRE-488-Labs/MP-2/sw/MP2-TPG/_ide/bitstream/system_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/cihem/CPRE-488-Labs/MP-2/sw/TPG/export/TPG/hw/system_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/cihem/CPRE-488-Labs/MP-2/sw/MP2-TPG/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/cihem/CPRE-488-Labs/MP-2/sw/MP2-TPG/Debug/MP2-TPG.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+19:28:44 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:28:44 INFO  : 'con' command is executed.
+19:28:44 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+19:28:44 INFO  : Launch script is exported to file 'C:\Users\cihem\CPRE-488-Labs\MP-2\sw\.sdk\launch_scripts\single_application_debug\debugger_mp2-tpg-default.tcl'
+19:30:38 INFO  : Disconnected from the channel tcfchan#6.
+19:30:45 INFO  : Checking for BSP changes to sync application flags for project 'MP2-TPG'...
+19:31:07 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:31:08 INFO  : Jtag cable 'Digilent Zed 210248525658' is selected.
+19:31:08 INFO  : 'jtag frequency' command is executed.
+19:31:08 INFO  : Context for 'APU' is selected.
+19:31:08 INFO  : System reset is completed.
+19:31:11 INFO  : 'after 3000' command is executed.
+19:31:11 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248525658" && level==0 && jtag_device_ctx=="jsn-Zed-210248525658-23727093-0"}' command is executed.
+19:31:13 INFO  : FPGA configured successfully with bitstream "C:/Users/cihem/CPRE-488-Labs/MP-2/sw/MP2-TPG/_ide/bitstream/system_wrapper.bit"
+19:31:13 INFO  : Context for 'APU' is selected.
+19:31:13 INFO  : Hardware design and registers information is loaded from 'C:/Users/cihem/CPRE-488-Labs/MP-2/sw/TPG/export/TPG/hw/system_wrapper.xsa'.
+19:31:13 INFO  : 'configparams force-mem-access 1' command is executed.
+19:31:13 INFO  : Context for 'APU' is selected.
+19:31:13 INFO  : Sourcing of 'C:/Users/cihem/CPRE-488-Labs/MP-2/sw/MP2-TPG/_ide/psinit/ps7_init.tcl' is done.
+19:31:13 INFO  : 'ps7_init' command is executed.
+19:31:13 INFO  : 'ps7_post_config' command is executed.
+19:31:13 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:31:14 INFO  : The application 'C:/Users/cihem/CPRE-488-Labs/MP-2/sw/MP2-TPG/Debug/MP2-TPG.elf' is downloaded to processor 'ps7_cortexa9_0'.
+19:31:14 INFO  : 'configparams force-mem-access 0' command is executed.
+19:31:14 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248525658" && level==0 && jtag_device_ctx=="jsn-Zed-210248525658-23727093-0"}
+fpga -file C:/Users/cihem/CPRE-488-Labs/MP-2/sw/MP2-TPG/_ide/bitstream/system_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/cihem/CPRE-488-Labs/MP-2/sw/TPG/export/TPG/hw/system_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/cihem/CPRE-488-Labs/MP-2/sw/MP2-TPG/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/cihem/CPRE-488-Labs/MP-2/sw/MP2-TPG/Debug/MP2-TPG.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+19:31:15 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:31:15 INFO  : 'con' command is executed.
+19:31:15 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+19:31:15 INFO  : Launch script is exported to file 'C:\Users\cihem\CPRE-488-Labs\MP-2\sw\.sdk\launch_scripts\single_application_debug\debugger_mp2-tpg-default.tcl'
+19:31:29 INFO  : Disconnected from the channel tcfchan#7.
+19:31:29 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:31:30 INFO  : Jtag cable 'Digilent Zed 210248525658' is selected.
+19:31:30 INFO  : 'jtag frequency' command is executed.
+19:31:30 INFO  : Context for 'APU' is selected.
+19:31:30 INFO  : System reset is completed.
+19:31:33 INFO  : 'after 3000' command is executed.
+19:31:33 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248525658" && level==0 && jtag_device_ctx=="jsn-Zed-210248525658-23727093-0"}' command is executed.
+19:31:35 INFO  : FPGA configured successfully with bitstream "C:/Users/cihem/CPRE-488-Labs/MP-2/sw/MP2-TPG/_ide/bitstream/system_wrapper.bit"
+19:31:35 INFO  : Context for 'APU' is selected.
+19:31:35 INFO  : Hardware design and registers information is loaded from 'C:/Users/cihem/CPRE-488-Labs/MP-2/sw/TPG/export/TPG/hw/system_wrapper.xsa'.
+19:31:35 INFO  : 'configparams force-mem-access 1' command is executed.
+19:31:35 INFO  : Context for 'APU' is selected.
+19:31:35 INFO  : Sourcing of 'C:/Users/cihem/CPRE-488-Labs/MP-2/sw/MP2-TPG/_ide/psinit/ps7_init.tcl' is done.
+19:31:35 INFO  : 'ps7_init' command is executed.
+19:31:35 INFO  : 'ps7_post_config' command is executed.
+19:31:35 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:31:36 INFO  : The application 'C:/Users/cihem/CPRE-488-Labs/MP-2/sw/MP2-TPG/Debug/MP2-TPG.elf' is downloaded to processor 'ps7_cortexa9_0'.
+19:31:36 INFO  : 'configparams force-mem-access 0' command is executed.
+19:31:36 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248525658" && level==0 && jtag_device_ctx=="jsn-Zed-210248525658-23727093-0"}
+fpga -file C:/Users/cihem/CPRE-488-Labs/MP-2/sw/MP2-TPG/_ide/bitstream/system_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/cihem/CPRE-488-Labs/MP-2/sw/TPG/export/TPG/hw/system_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/cihem/CPRE-488-Labs/MP-2/sw/MP2-TPG/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/cihem/CPRE-488-Labs/MP-2/sw/MP2-TPG/Debug/MP2-TPG.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+19:31:36 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:31:36 INFO  : 'con' command is executed.
+19:31:36 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+19:31:36 INFO  : Launch script is exported to file 'C:\Users\cihem\CPRE-488-Labs\MP-2\sw\.sdk\launch_scripts\single_application_debug\debugger_mp2-tpg-default.tcl'
+19:52:18 INFO  : Disconnected from the channel tcfchan#8.
+19:52:20 INFO  : Checking for BSP changes to sync application flags for project 'MP2-TPG'...

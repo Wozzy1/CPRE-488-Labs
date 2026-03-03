@@ -8,7 +8,7 @@ inFile = "C:\Users\cihem\CPRE-488-Labs\MP-2\Submit\part5\RGB_image.jpg";
 % inFile stores the full path to the image file you want to process
 
 % --- Must match your Bayer pattern setting in Vivado ---
-pattern = "grbg";   % change to "bggr", "grbg", or "gbrg" if needed
+pattern = "rggb";   % change to "bggr", "grbg", or "gbrg" if needed
 % pattern tells the script which Bayer mosaic layout to emulate:
 % rggb means:
 %   Row 1: R G R G ...

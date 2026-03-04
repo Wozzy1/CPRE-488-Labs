@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/cihem/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/MP2.runs/impl_1'
+HD_PWD='C:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/MP2.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

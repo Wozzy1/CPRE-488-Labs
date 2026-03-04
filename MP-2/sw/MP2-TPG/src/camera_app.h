@@ -18,6 +18,8 @@
 #include "cam/OV5640.h"
 #include "video/VideoOutput.h"
 #include "video/AXI_VDMA.h"
+#include "xvprocss.h"
+#include "xv_demosaic.h"
 // #include "xcsi.h" // Uncomment when using CSI camera for video input
 
 #include "hdmi/hdmi_config.h"

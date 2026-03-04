@@ -609,16 +609,10 @@
       }
     },
     "interface_nets": {
-      "xbar_M01_AXI": {
+      "vfb_0_m_vfb": {
         "interface_ports": [
-          "xbar/M01_AXI",
-          "phy/s_axi"
-        ]
-      },
-      "xbar_M00_AXI": {
-        "interface_ports": [
-          "xbar/M00_AXI",
-          "rx/s_axi"
+          "video_out",
+          "vfb_0/m_vfb"
         ]
       },
       "phy_rx_mipi_ppi_if": {
@@ -639,16 +633,22 @@
           "xbar/S00_AXI"
         ]
       },
+      "xbar_M00_AXI": {
+        "interface_ports": [
+          "xbar/M00_AXI",
+          "rx/s_axi"
+        ]
+      },
       "mipi_phy_if_1": {
         "interface_ports": [
           "mipi_phy_if",
           "phy/rx_mipi_phy_if"
         ]
       },
-      "vfb_0_m_vfb": {
+      "xbar_M01_AXI": {
         "interface_ports": [
-          "video_out",
-          "vfb_0/m_vfb"
+          "xbar/M01_AXI",
+          "phy/s_axi"
         ]
       }
     },

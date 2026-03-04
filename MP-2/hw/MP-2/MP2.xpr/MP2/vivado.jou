@@ -2,27 +2,194 @@
 # Vivado v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Thu Feb 26 08:18:27 2026
-# Process ID: 17956
-# Current directory: D:/TPG-test1/MP2
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent18472 D:\TPG-test1\MP2\MP2.xpr
-# Log file: D:/TPG-test1/MP2/vivado.log
-# Journal file: D:/TPG-test1/MP2\vivado.jou
+# Start of session at: Tue Mar  3 14:36:19 2026
+# Process ID: 12816
+# Current directory: C:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9276 C:\Users\diepw50\CPRE-488-Labs\MP-2\hw\MP-2\MP2.xpr\MP2\MP2.xpr
+# Log file: C:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/vivado.log
+# Journal file: C:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project D:/TPG-test1/MP2/MP2.xpr
+open_project C:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/MP2.xpr
+open_bd_design {C:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/MP2.srcs/sources_1/bd/system/system.bd}
 update_compile_order -fileset sources_1
-open_bd_design {D:/TPG-test1/MP2/MP2.srcs/sources_1/bd/system/system.bd}
-launch_runs impl_1 -to_step write_bitstream -jobs 16
-wait_on_run impl_1
-open_run impl_1
-close_design
-set_property pfm_name {} [get_files -all {D:/TPG-test1/MP2/MP2.srcs/sources_1/bd/system/system.bd}]
-write_hw_platform -fixed -include_bit -force -file D:/TPG-test1/MP2-xsa/system_wrapper.xsa
+delete_bd_objs [get_bd_intf_nets axis_subset_converter_0_M_AXIS]
 startgroup
-set_property -dict [list CONFIG.NUM_MI {7}] [get_bd_cells ps7_0_axi_periph]
+create_bd_cell -type ip -vlnv xilinx.com:ip:v_demosaic:1.0 v_demosaic_0
+endgroup
+connect_bd_intf_net [get_bd_intf_pins axis_subset_converter_0/M_AXIS] [get_bd_intf_pins v_demosaic_0/s_axis_video]
+startgroup
+set_property location {8 2645 1285} [get_bd_cells rst_vid_clk_dyn]
+set_property location {9 3555 1685} [get_bd_cells cama_gpio_oen]
+set_property location {7 2295 1195} [get_bd_cells video_dynclk]
+set_property location {8 3005 415} [get_bd_cells axi_mem_intercon_1]
+set_property location {9 3535 1025} [get_bd_cells v_axi4s_vid_out_0]
+set_property location {9 3425 1505} [get_bd_cells axi_cama_bta]
+set_property location {8 2895 1005} [get_bd_cells vtg]
+set_property location {9 3425 1705} [get_bd_cells axi_iic_hdmi]
+set_property location {9 3425 1235} [get_bd_cells cama_gpio_dir]
+set_property location {9 3425 1375} [get_bd_cells axi_cama_gpio]
+set_property location {9 3445 775} [get_bd_cells processing_system7_0]
+set_property location {8 2895 755} [get_bd_cells xlconcat_0]
+set_property location {7 2295 785} [get_bd_cells xlconcat_1]
+set_property location {7 2895 105} [get_bd_cells axi_mem_intercon]
+set_property location {7 2895 1545} [get_bd_cells DVIClocking_0]
+set_property location {6 1945 795} [get_bd_cells axi_vdma_a]
+endgroup
+set_property location {4.5 1657 734} [get_bd_cells v_demosaic_0]
+set_property location {5 1649 709} [get_bd_cells v_demosaic_0]
+set_property location {5 1675 725} [get_bd_cells v_demosaic_0]
+connect_bd_net [get_bd_pins rst_system_150M/peripheral_aresetn] [get_bd_pins v_demosaic_0/ap_rst_n]
+connect_bd_net [get_bd_pins v_demosaic_0/ap_clk] [get_bd_pins clk_wiz_0/clk_out2]
+connect_bd_intf_net -boundary_type upper [get_bd_intf_pins ps7_0_axi_periph/M05_AXI] [get_bd_intf_pins v_demosaic_0/s_axi_CTRL]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:v_proc_ss:2.2 v_proc_ss_0
+endgroup
+set_property location {5 1534 774} [get_bd_cells v_demosaic_0]
+connect_bd_intf_net [get_bd_intf_pins v_demosaic_0/m_axis_video] [get_bd_intf_pins v_proc_ss_0/s_axis]
+set_property location {5.5 2022 742} [get_bd_cells v_proc_ss_0]
+set_property location {6 2057 770} [get_bd_cells v_proc_ss_0]
+set_property location {6 2061 758} [get_bd_cells v_proc_ss_0]
+set_property location {6 2011 845} [get_bd_cells v_proc_ss_0]
+set_property location {6 2015 838} [get_bd_cells v_proc_ss_0]
+set_property location {6 2020 828} [get_bd_cells v_proc_ss_0]
+set_property location {6 2020 803} [get_bd_cells v_proc_ss_0]
+connect_bd_net [get_bd_pins v_proc_ss_0/aclk_axis] [get_bd_pins clk_wiz_0/clk_out2]
+connect_bd_net [get_bd_pins v_proc_ss_0/aresetn_ctrl] [get_bd_pins rst_system_150M/peripheral_aresetn]
+startgroup
+set_property -dict [list CONFIG.NUM_MI {9}] [get_bd_cells ps7_0_axi_periph]
+endgroup
+connect_bd_intf_net -boundary_type upper [get_bd_intf_pins ps7_0_axi_periph/M08_AXI] [get_bd_intf_pins v_proc_ss_0/s_axi_ctrl]
+startgroup
+set_property location {8 3047 1382} [get_bd_cells rst_vid_clk_dyn]
+set_property location {10 4067 1692} [get_bd_cells cama_gpio_oen]
+set_property location {8 3047 1212} [get_bd_cells video_dynclk]
+set_property location {9 3577 432} [get_bd_cells axi_mem_intercon_1]
+set_property location {10 4097 1062} [get_bd_cells v_axi4s_vid_out_0]
+set_property location {10 4077 1572} [get_bd_cells axi_cama_bta]
+set_property location {9 3577 1022} [get_bd_cells vtg]
+set_property location {10 4087 1822} [get_bd_cells axi_iic_hdmi]
+set_property location {10 4087 1302} [get_bd_cells cama_gpio_dir]
+set_property location {10 4087 1442} [get_bd_cells axi_cama_gpio]
+set_property location {10 4097 792} [get_bd_cells processing_system7_0]
+set_property location {9 3557 772} [get_bd_cells xlconcat_0]
+set_property location {8 3037 602} [get_bd_cells xlconcat_1]
+set_property location {9 3557 122} [get_bd_cells axi_mem_intercon]
+set_property location {9 3557 1562} [get_bd_cells DVIClocking_0]
+set_property location {8 3037 812} [get_bd_cells axi_vdma_a]
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:v_proc_ss:2.2 v_proc_ss_1
+endgroup
+set_property location {6.5 2488 864} [get_bd_cells v_proc_ss_1]
+set_property location {7 2442 870} [get_bd_cells v_proc_ss_1]
+set_property location {6 2037 813} [get_bd_cells v_proc_ss_0]
+set_property location {7 2436 817} [get_bd_cells v_proc_ss_1]
+connect_bd_intf_net [get_bd_intf_pins v_proc_ss_0/m_axis] [get_bd_intf_pins v_proc_ss_1/s_axis]
+undo
+connect_bd_intf_net [get_bd_intf_pins v_proc_ss_0/m_axi_mm] [get_bd_intf_pins v_proc_ss_1/s_axi_ctrl]
+connect_bd_intf_net [get_bd_intf_pins v_proc_ss_0/m_axis] [get_bd_intf_pins v_proc_ss_1/s_axis]
+undo
+undo
+connect_bd_intf_net [get_bd_intf_pins v_proc_ss_0/m_axi_mm] [get_bd_intf_pins v_proc_ss_1/s_axi_ctrl]
+connect_bd_intf_net [get_bd_intf_pins v_proc_ss_0/m_axis] [get_bd_intf_pins v_proc_ss_1/s_axis]
+connect_bd_net [get_bd_pins v_proc_ss_0/aresetn_io_axis] [get_bd_pins v_proc_ss_1/aresetn_ctrl]
+connect_bd_net [get_bd_pins v_proc_ss_1/aclk_axis] [get_bd_pins clk_wiz_0/clk_out2]
+startgroup
+set_property -dict [list CONFIG.ALGORITHM {1} CONFIG.ENABLE_ZIPPER_REMOVAL {false}] [get_bd_cells v_demosaic_0]
+endgroup
+startgroup
+set_property -dict [list CONFIG.C_TOPOLOGY {3} CONFIG.C_SAMPLES_PER_CLK {1} CONFIG.C_MAX_DATA_WIDTH {8} CONFIG.C_CSC_ENABLE_WINDOW {false} CONFIG.C_COLORSPACE_SUPPORT {2}] [get_bd_cells v_proc_ss_0]
+delete_bd_objs [get_bd_nets v_proc_ss_0_aresetn_io_axis] [get_bd_intf_nets v_proc_ss_0_m_axi_mm]
+endgroup
+connect_bd_net [get_bd_pins v_proc_ss_0/aclk] [get_bd_pins clk_wiz_0/clk_out2]
+connect_bd_net [get_bd_pins v_proc_ss_0/aresetn] [get_bd_pins rst_system_150M/peripheral_aresetn]
+startgroup
+set_property -dict [list CONFIG.C_TOPOLOGY {5} CONFIG.C_SAMPLES_PER_CLK {1} CONFIG.C_MAX_DATA_WIDTH {8} CONFIG.C_H_CHROMA_ALGORITHM {0}] [get_bd_cells v_proc_ss_1]
+endgroup
+startgroup
+set_property -dict [list CONFIG.NUM_MI {11}] [get_bd_cells ps7_0_axi_periph]
+endgroup
+connect_bd_intf_net [get_bd_intf_pins v_proc_ss_1/s_axi_ctrl] -boundary_type upper [get_bd_intf_pins ps7_0_axi_periph/M09_AXI]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axis_subset_converter:1.1 axis_subset_converter_1
+endgroup
+connect_bd_intf_net [get_bd_intf_pins v_proc_ss_1/m_axis] [get_bd_intf_pins axis_subset_converter_1/S_AXIS]
+startgroup
+set_property location {10.5 4585 1039} [get_bd_cells axi_vdma_a]
+set_property location {11 4585 1039} [get_bd_cells rst_vid_clk_dyn]
+set_property location {11 4585 1039} [get_bd_cells cama_gpio_oen]
+set_property location {11 4585 1039} [get_bd_cells video_dynclk]
+set_property location {11 4585 1039} [get_bd_cells axi_mem_intercon_1]
+set_property location {11 4585 1039} [get_bd_cells axi_cama_bta]
+set_property location {11 4585 1039} [get_bd_cells vtg]
+set_property location {11 4585 1039} [get_bd_cells axi_iic_hdmi]
+set_property location {11 4585 1039} [get_bd_cells cama_gpio_dir]
+set_property location {11 4585 1039} [get_bd_cells axi_cama_gpio]
+set_property location {11 4585 1039} [get_bd_cells processing_system7_0]
+set_property location {11 4585 1039} [get_bd_cells xlconcat_0]
+set_property location {11 4585 1039} [get_bd_cells xlconcat_1]
+set_property location {10 4585 1039} [get_bd_cells axi_mem_intercon]
+set_property location {10 4585 1039} [get_bd_cells DVIClocking_0]
+set_property location {9 4585 1039} [get_bd_cells v_axi4s_vid_out_0]
+endgroup
+undo
+startgroup
+set_property location {9 3426 1442} [get_bd_cells rst_vid_clk_dyn]
+set_property location {11 4406 1872} [get_bd_cells cama_gpio_oen]
+set_property location {9 3406 1272} [get_bd_cells video_dynclk]
+set_property location {10 3896 492} [get_bd_cells axi_mem_intercon_1]
+set_property location {11 4486 1392} [get_bd_cells v_axi4s_vid_out_0]
+set_property location {11 4386 1992} [get_bd_cells axi_cama_bta]
+set_property location {10 3806 1122} [get_bd_cells vtg]
+set_property location {11 4366 2132} [get_bd_cells axi_iic_hdmi]
+set_property location {11 4366 1672} [get_bd_cells cama_gpio_dir]
+set_property location {11 4366 1792} [get_bd_cells axi_cama_gpio]
+set_property location {11 4366 1462} [get_bd_cells processing_system7_0]
+set_property location {10 3796 832} [get_bd_cells xlconcat_0]
+set_property location {9 3236 662} [get_bd_cells xlconcat_1]
+set_property location {10 3796 182} [get_bd_cells axi_mem_intercon]
+set_property location {10 3796 1662} [get_bd_cells DVIClocking_0]
+set_property location {9 3236 872} [get_bd_cells axi_vdma_a]
+endgroup
+set_property location {7.5 2788 844} [get_bd_cells axis_subset_converter_1]
+connect_bd_intf_net [get_bd_intf_pins axis_subset_converter_1/M_AXIS] [get_bd_intf_pins axi_vdma_a/S_AXIS_S2MM]
+startgroup
+set_property -dict [list CONFIG.S_TDATA_NUM_BYTES.VALUE_SRC USER CONFIG.M_TDATA_NUM_BYTES.VALUE_SRC PROPAGATED] [get_bd_cells axis_subset_converter_1]
+set_property -dict [list CONFIG.S_TDATA_NUM_BYTES {3} CONFIG.TDATA_REMAP {tdata[7:0]}] [get_bd_cells axis_subset_converter_1]
+endgroup
+connect_bd_net [get_bd_pins v_proc_ss_1/aclk] [get_bd_pins clk_wiz_0/clk_out2]
+connect_bd_net [get_bd_pins axis_subset_converter_1/aclk] [get_bd_pins clk_wiz_0/clk_out2]
+connect_bd_net [get_bd_pins v_proc_ss_1/aresetn] [get_bd_pins rst_system_150M/peripheral_aresetn]
+connect_bd_net [get_bd_pins axis_subset_converter_1/aresetn] [get_bd_pins rst_system_150M/peripheral_aresetn]
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/clk_wiz_0/clk_out2 (150 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins ps7_0_axi_periph/M08_ACLK]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/clk_wiz_0/clk_out2 (150 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins ps7_0_axi_periph/M09_ACLK]
+endgroup
+set_property location {5 1629 822} [get_bd_cells v_demosaic_0]
+set_property location {5 1618 810} [get_bd_cells v_demosaic_0]
+save_bd_design
+reset_run synth_1
+reset_run system_xbar_5_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 20
+startgroup
+set_property -dict [list CONFIG.NUM_MI {10}] [get_bd_cells ps7_0_axi_periph]
 endgroup
 save_bd_design
-validate_bd_design
+launch_runs impl_1 -to_step write_bitstream -jobs 20
+wait_on_run impl_1
+assign_bd_address [get_bd_addr_segs {v_demosaic_0/s_axi_CTRL/Reg v_proc_ss_0/s_axi_ctrl/Reg v_proc_ss_1/s_axi_ctrl/Reg }]
 save_bd_design
-archive_project D:/TPG-test1/MP2.xpr.zip -temp_dir D:/phjunk -force -exclude_run_results
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 20
+wait_on_run impl_1
+startgroup
+set_property -dict [list CONFIG.M_TDATA_NUM_BYTES {1} CONFIG.TDATA_REMAP {tdata[7:0]}] [get_bd_cells axis_subset_converter_0]
+endgroup
+save_bd_design
+reset_run synth_1
+reset_run system_axis_subset_converter_0_1_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 20
+wait_on_run impl_1
+set_property pfm_name {} [get_files -all {C:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/MP2.srcs/sources_1/bd/system/system.bd}]
+write_hw_platform -fixed -include_bit -force -file C:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/system_wrapper.xsa

@@ -2,24 +2,25 @@
 # Vivado v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Thu Feb 26 08:18:27 2026
-# Process ID: 17956
-# Current directory: D:/TPG-test1/MP2
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent18472 D:\TPG-test1\MP2\MP2.xpr
-# Log file: D:/TPG-test1/MP2/vivado.log
-# Journal file: D:/TPG-test1/MP2\vivado.jou
+# Start of session at: Tue Mar  3 14:36:19 2026
+# Process ID: 12816
+# Current directory: C:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9276 C:\Users\diepw50\CPRE-488-Labs\MP-2\hw\MP-2\MP2.xpr\MP2\MP2.xpr
+# Log file: C:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/vivado.log
+# Journal file: C:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project D:/TPG-test1/MP2/MP2.xpr
-INFO: [Project 1-313] Project file moved from 'D:/phjunk/PrjAr/_X_' since last save.
+open_project C:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/MP2.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/cihem/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2' since last save.
 Scanning sources...
 Finished scanning sources
+WARNING: [filemgmt 56-3] IP Repository Path: Could not find the directory 'C:/Users/CPRE488_dev/git/cpre490h/Labs/Demo2019UpgradedHDMI/ZedBoard-FMC-Pcam-Adapter-DEMO.ipdefs/repo_0'.
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/CPRE488_dev/git/cpre490h/Labs/Demo2019UpgradedHDMI/ZedBoard-FMC-Pcam-Adapter-DEMO.ipdefs/repo_0'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/CPRE488_dev/git/cpre490h/Labs/Demo2019UpgradedHDMI/ZedBoard-FMC-Pcam-Adapter-DEMO.ipdefs/repo_0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.1/data/ip'.
-open_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:07 . Memory (MB): peak = 1080.680 ; gain = 0.000
-update_compile_order -fileset sources_1
-open_bd_design {D:/TPG-test1/MP2/MP2.srcs/sources_1/bd/system/system.bd}
+open_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 1013.508 ; gain = 0.000
+open_bd_design {C:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/MP2.srcs/sources_1/bd/system/system.bd}
 Adding component instance block -- xilinx.com:module_ref:DVIClocking:1.0 - DVIClocking_0
 Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
 WARNING: [BD 41-176] The physical port 'M_AXI_GP0_aximm_wr_socket' specified in the portmap, is not found on the block! 
@@ -49,127 +50,543 @@ Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - ps7_0_ax
 Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
 Adding component instance block -- xilinx.com:ip:axi_register_slice:2.1 - s00_regslice
 Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
-Adding component instance block -- xilinx.com:ip:axi_clock_converter:2.1 - auto_cc
 Adding component instance block -- xilinx.com:ip:clk_wiz:6.0 - video_dynclk
 Adding component instance block -- xilinx.com:ip:v_tc:6.2 - vtg
 Adding component instance block -- xilinx.com:ip:axi_iic:2.0 - axi_iic_hdmi
-Adding component instance block -- xilinx.com:ip:v_tpg:8.0 - v_tpg_0
 Adding component instance block -- xilinx.com:ip:axis_subset_converter:1.1 - axis_subset_converter_0
+Adding component instance block -- xilinx.com:ip:mipi_csi2_rx_subsystem:5.0 - mipi_csi2_rx_subsyst_0
 WARNING: [BD 41-1731] Type mismatch between connected pins: /DVIClocking_0/PixelClk(undef) and /rst_vid_clk_dyn/slowest_sync_clk(clk)
 WARNING: [BD 41-1731] Type mismatch between connected pins: /DVIClocking_0/PixelClk(undef) and /v_axi4s_vid_out_0/vid_io_out_clk(clk)
 WARNING: [BD 41-1731] Type mismatch between connected pins: /DVIClocking_0/PixelClk(undef) and /vtg/clk(clk)
 WARNING: [BD 41-1731] Type mismatch between connected pins: /video_dynclk/pxl_clk_5x(clk) and /DVIClocking_0/PixelClk5X(undef)
-Successfully read diagram <system> from BD file <D:/TPG-test1/MP2/MP2.srcs/sources_1/bd/system/system.bd>
-open_bd_design: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 1163.625 ; gain = 82.945
-launch_runs impl_1 -to_step write_bitstream -jobs 16
-[Thu Feb 26 08:19:34 2026] Launched system_DVIClocking_0_0_synth_1, system_xbar_5_synth_1, system_axi_vdma_a_0_synth_1, system_v_tpg_0_0_synth_1, system_axis_subset_converter_0_1_synth_1, system_auto_cc_0_synth_1, system_auto_pc_0_synth_1, system_auto_pc_1_synth_1, system_auto_pc_2_synth_1, system_s00_regslice_0_synth_1, synth_1...
-Run output will be captured here:
-system_DVIClocking_0_0_synth_1: D:/TPG-test1/MP2/MP2.runs/system_DVIClocking_0_0_synth_1/runme.log
-system_xbar_5_synth_1: D:/TPG-test1/MP2/MP2.runs/system_xbar_5_synth_1/runme.log
-system_axi_vdma_a_0_synth_1: D:/TPG-test1/MP2/MP2.runs/system_axi_vdma_a_0_synth_1/runme.log
-system_v_tpg_0_0_synth_1: D:/TPG-test1/MP2/MP2.runs/system_v_tpg_0_0_synth_1/runme.log
-system_axis_subset_converter_0_1_synth_1: D:/TPG-test1/MP2/MP2.runs/system_axis_subset_converter_0_1_synth_1/runme.log
-system_auto_cc_0_synth_1: D:/TPG-test1/MP2/MP2.runs/system_auto_cc_0_synth_1/runme.log
-system_auto_pc_0_synth_1: D:/TPG-test1/MP2/MP2.runs/system_auto_pc_0_synth_1/runme.log
-system_auto_pc_1_synth_1: D:/TPG-test1/MP2/MP2.runs/system_auto_pc_1_synth_1/runme.log
-system_auto_pc_2_synth_1: D:/TPG-test1/MP2/MP2.runs/system_auto_pc_2_synth_1/runme.log
-system_s00_regslice_0_synth_1: D:/TPG-test1/MP2/MP2.runs/system_s00_regslice_0_synth_1/runme.log
-synth_1: D:/TPG-test1/MP2/MP2.runs/synth_1/runme.log
-[Thu Feb 26 08:19:34 2026] Launched impl_1...
-Run output will be captured here: D:/TPG-test1/MP2/MP2.runs/impl_1/runme.log
-launch_runs: Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 1189.102 ; gain = 0.000
-open_run impl_1
-INFO: [Device 21-403] Loading part xc7z020clg484-1
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.420 . Memory (MB): peak = 1550.059 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 797 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-INFO: [Project 1-479] Netlist was created with Vivado 2020.1
-INFO: [Project 1-570] Preparing netlist for logic optimization
-INFO: [Timing 38-478] Restoring timing data from binary archive.
-INFO: [Timing 38-479] Binary timing data restore complete.
-INFO: [Project 1-856] Restoring constraints from binary archive.
-INFO: [Project 1-853] Binary constraint restore complete.
-Reading XDEF placement.
-Reading placer database...
-Reading XDEF routing.
-Read XDEF File: Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2298.578 ; gain = 7.375
-Restored from archive | CPU: 1.000000 secs | Memory: 0.000000 MB |
-Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2298.578 ; gain = 7.375
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 2298.578 ; gain = 0.000
-INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 21 instances were transformed.
-  IOBUF => IOBUF (IBUF, OBUFT): 14 instances
-  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 4 instances
-  RAM32X1D => RAM32X1D (RAMD32(x2)): 2 instances
-  SRLC32E => SRL16E: 1 instance 
-
-open_run: Time (s): cpu = 00:00:25 ; elapsed = 00:00:19 . Memory (MB): peak = 2471.668 ; gain = 1253.969
-open_report: Time (s): cpu = 00:00:12 ; elapsed = 00:00:08 . Memory (MB): peak = 2547.887 ; gain = 54.746
-CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
-WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Please run report_bus_skew to ensure that bus skew requirements are met.
-close_design
-set_property pfm_name {} [get_files -all {D:/TPG-test1/MP2/MP2.srcs/sources_1/bd/system/system.bd}]
-write_hw_platform -fixed -include_bit -force -file D:/TPG-test1/MP2-xsa/system_wrapper.xsa
-INFO: [Vivado 12-4895] Creating Hardware Platform: D:/TPG-test1/MP2-xsa/system_wrapper.xsa ...
-INFO: [Hsi 55-2053] elapsed time for repository (C:/Xilinx/Vivado/2020.1/data\embeddedsw) loading 1 seconds
-INFO: [Vivado 12-4896] Successfully created Hardware Platform: D:/TPG-test1/MP2-xsa/system_wrapper.xsa
-write_hw_platform: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 2708.273 ; gain = 0.000
+Successfully read diagram <system> from BD file <C:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/MP2.srcs/sources_1/bd/system/system.bd>
+WARNING: [BD 41-1731] Type mismatch between connected pins: /phy/system_rst_out(undef) and /system_rst_out(rst)
+open_bd_design: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1657.285 ; gain = 108.688
+update_compile_order -fileset sources_1
 INFO: [Vivado 12-8231] Launching Vitis
 INFO: [Vivado 12-417] Running vitis
 INFO: [Vivado 12-8232] Vitis launch initiated. Please check console for any further messages.
+delete_bd_objs [get_bd_intf_nets axis_subset_converter_0_M_AXIS]
 startgroup
-set_property -dict [list CONFIG.NUM_MI {7}] [get_bd_cells ps7_0_axi_periph]
+create_bd_cell -type ip -vlnv xilinx.com:ip:v_demosaic:1.0 v_demosaic_0
+endgroup
+connect_bd_intf_net [get_bd_intf_pins axis_subset_converter_0/M_AXIS] [get_bd_intf_pins v_demosaic_0/s_axis_video]
+startgroup
+set_property location {8 2645 1285} [get_bd_cells rst_vid_clk_dyn]
+set_property location {9 3555 1685} [get_bd_cells cama_gpio_oen]
+set_property location {7 2295 1195} [get_bd_cells video_dynclk]
+set_property location {8 3005 415} [get_bd_cells axi_mem_intercon_1]
+set_property location {9 3535 1025} [get_bd_cells v_axi4s_vid_out_0]
+set_property location {9 3425 1505} [get_bd_cells axi_cama_bta]
+set_property location {8 2895 1005} [get_bd_cells vtg]
+set_property location {9 3425 1705} [get_bd_cells axi_iic_hdmi]
+set_property location {9 3425 1235} [get_bd_cells cama_gpio_dir]
+set_property location {9 3425 1375} [get_bd_cells axi_cama_gpio]
+set_property location {9 3445 775} [get_bd_cells processing_system7_0]
+set_property location {8 2895 755} [get_bd_cells xlconcat_0]
+set_property location {7 2295 785} [get_bd_cells xlconcat_1]
+set_property location {7 2895 105} [get_bd_cells axi_mem_intercon]
+set_property location {7 2895 1545} [get_bd_cells DVIClocking_0]
+set_property location {6 1945 795} [get_bd_cells axi_vdma_a]
+endgroup
+set_property location {4.5 1657 734} [get_bd_cells v_demosaic_0]
+set_property location {5 1649 709} [get_bd_cells v_demosaic_0]
+set_property location {5 1675 725} [get_bd_cells v_demosaic_0]
+connect_bd_net [get_bd_pins rst_system_150M/peripheral_aresetn] [get_bd_pins v_demosaic_0/ap_rst_n]
+connect_bd_net [get_bd_pins v_demosaic_0/ap_clk] [get_bd_pins clk_wiz_0/clk_out2]
+connect_bd_intf_net -boundary_type upper [get_bd_intf_pins ps7_0_axi_periph/M05_AXI] [get_bd_intf_pins v_demosaic_0/s_axi_CTRL]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:v_proc_ss:2.2 v_proc_ss_0
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+WARNING: [BD 41-1306] The connection to interface pin /reset_sel_axi_mm/gpio_io_o is being overridden by the user. This pin will not be connected as a part of interface connection GPIO
+WARNING: [BD 41-1306] The connection to interface pin /reset_sel_axi_mm/gpio_io_i is being overridden by the user. This pin will not be connected as a part of interface connection GPIO
+WARNING: [BD 41-1731] Type mismatch between connected pins: /reset_sel_axi_mm/gpio_io_o(undef) and /smartconnect_1/aresetn(rst)
+WARNING: [BD 41-1731] Type mismatch between connected pins: /reset_sel_axi_mm/gpio_io_o(undef) and /vdma_trunc/aresetn(rst)
+WARNING: [BD 41-1731] Type mismatch between connected pins: /reset_sel_axi_mm/gpio_io_o(undef) and /vdma_pad/aresetn(rst)
+WARNING: [BD 41-1731] Type mismatch between connected pins: /reset_sel_axi_mm/gpio_io_o(undef) and /video_router/M03_AXIS_ARESETN(rst)
+WARNING: [BD 41-1731] Type mismatch between connected pins: /reset_sel_axi_mm/gpio_io_o(undef) and /video_router/S03_AXIS_ARESETN(rst)
+WARNING: [BD 41-1731] Type mismatch between connected pins: /reset_sel_axi_mm/gpio_io_o(undef) and /video_router/S09_AXIS_ARESETN(rst)
+WARNING: [BD 41-1731] Type mismatch between connected pins: /reset_sel_axi_mm/gpio_io_o(undef) and /dint/ap_rst_n(rst)
+WARNING: [BD 41-1731] Type mismatch between connected pins: /reset_sel_axi_mm/gpio_io_o(undef) and /deint_cc/m_axis_aresetn(rst)
+WARNING: [BD 41-1306] The connection to interface pin /reset_sel_axis/gpio_io_o is being overridden by the user. This pin will not be connected as a part of interface connection GPIO
+WARNING: [BD 41-1306] The connection to interface pin /reset_sel_axis/gpio_io_i is being overridden by the user. This pin will not be connected as a part of interface connection GPIO
+WARNING: [BD 41-1306] The connection to interface pin /deint_ss/m_axis_tuser is being overridden by the user. This pin will not be connected as a part of interface connection M_AXIS
+WARNING: [BD 41-1306] The connection to interface pin /deint_cc/s_axis_tuser is being overridden by the user. This pin will not be connected as a part of interface connection S_AXIS
+WARNING: [BD 41-1306] The connection to interface pin /deint_cc/m_axis_tuser is being overridden by the user. This pin will not be connected as a part of interface connection M_AXIS
+WARNING: [BD 41-1306] The connection to interface pin /dint/s_axis_video_TUSER is being overridden by the user. This pin will not be connected as a part of interface connection s_axis_video
+1
+true
+true
+Slave segment '/axi_vdma/S_AXI_LITE/Reg' is being assigned into address space '/s_axi_ctrl' at <0x0000_0000 [ 64K ]>.
+Slave segment '/csc/s_axi_CTRL/Reg' is being assigned into address space '/s_axi_ctrl' at <0x0001_0000 [ 64K ]>.
+Slave segment '/dint/s_axi_CTRL/Reg' is being assigned into address space '/s_axi_ctrl' at <0x0002_0000 [ 64K ]>.
+Slave segment '/hcr/s_axi_CTRL/Reg' is being assigned into address space '/s_axi_ctrl' at <0x0003_0000 [ 64K ]>.
+Slave segment '/hsc/s_axi_CTRL/Reg' is being assigned into address space '/s_axi_ctrl' at <0x0004_0000 [ 64K ]>.
+Slave segment '/ltr/s_axi_CTRL/Reg' is being assigned into address space '/s_axi_ctrl' at <0x0005_0000 [ 64K ]>.
+Slave segment '/reset_sel_axi_mm/S_AXI/Reg' is being assigned into address space '/s_axi_ctrl' at <0x0006_0000 [ 64K ]>.
+Slave segment '/reset_sel_axis/S_AXI/Reg' is being assigned into address space '/s_axi_ctrl' at <0x0007_0000 [ 64K ]>.
+Slave segment '/vcr_i/s_axi_CTRL/Reg' is being assigned into address space '/s_axi_ctrl' at <0x0008_0000 [ 64K ]>.
+Slave segment '/vcr_o/s_axi_CTRL/Reg' is being assigned into address space '/s_axi_ctrl' at <0x0009_0000 [ 64K ]>.
+Slave segment '/video_router/xbar/S_AXI_CTRL/Reg' is being assigned into address space '/s_axi_ctrl' at <0x000A_0000 [ 64K ]>.
+Slave segment '/vsc/s_axi_CTRL/Reg' is being assigned into address space '/s_axi_ctrl' at <0x000B_0000 [ 64K ]>.
+endgroup
+set_property location {5 1534 774} [get_bd_cells v_demosaic_0]
+connect_bd_intf_net [get_bd_intf_pins v_demosaic_0/m_axis_video] [get_bd_intf_pins v_proc_ss_0/s_axis]
+set_property location {5.5 2022 742} [get_bd_cells v_proc_ss_0]
+set_property location {6 2057 770} [get_bd_cells v_proc_ss_0]
+set_property location {6 2061 758} [get_bd_cells v_proc_ss_0]
+set_property location {6 2011 845} [get_bd_cells v_proc_ss_0]
+set_property location {6 2015 838} [get_bd_cells v_proc_ss_0]
+set_property location {6 2020 828} [get_bd_cells v_proc_ss_0]
+set_property location {6 2020 803} [get_bd_cells v_proc_ss_0]
+connect_bd_net [get_bd_pins v_proc_ss_0/aclk_axis] [get_bd_pins clk_wiz_0/clk_out2]
+connect_bd_net [get_bd_pins v_proc_ss_0/aresetn_ctrl] [get_bd_pins rst_system_150M/peripheral_aresetn]
+startgroup
+set_property -dict [list CONFIG.NUM_MI {9}] [get_bd_cells ps7_0_axi_periph]
+endgroup
+connect_bd_intf_net -boundary_type upper [get_bd_intf_pins ps7_0_axi_periph/M08_AXI] [get_bd_intf_pins v_proc_ss_0/s_axi_ctrl]
+startgroup
+set_property location {8 3047 1382} [get_bd_cells rst_vid_clk_dyn]
+set_property location {10 4067 1692} [get_bd_cells cama_gpio_oen]
+set_property location {8 3047 1212} [get_bd_cells video_dynclk]
+set_property location {9 3577 432} [get_bd_cells axi_mem_intercon_1]
+set_property location {10 4097 1062} [get_bd_cells v_axi4s_vid_out_0]
+set_property location {10 4077 1572} [get_bd_cells axi_cama_bta]
+set_property location {9 3577 1022} [get_bd_cells vtg]
+set_property location {10 4087 1822} [get_bd_cells axi_iic_hdmi]
+set_property location {10 4087 1302} [get_bd_cells cama_gpio_dir]
+set_property location {10 4087 1442} [get_bd_cells axi_cama_gpio]
+set_property location {10 4097 792} [get_bd_cells processing_system7_0]
+set_property location {9 3557 772} [get_bd_cells xlconcat_0]
+set_property location {8 3037 602} [get_bd_cells xlconcat_1]
+set_property location {9 3557 122} [get_bd_cells axi_mem_intercon]
+set_property location {9 3557 1562} [get_bd_cells DVIClocking_0]
+set_property location {8 3037 812} [get_bd_cells axi_vdma_a]
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:v_proc_ss:2.2 v_proc_ss_1
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+WARNING: [BD 41-1306] The connection to interface pin /reset_sel_axi_mm/gpio_io_o is being overridden by the user. This pin will not be connected as a part of interface connection GPIO
+WARNING: [BD 41-1306] The connection to interface pin /reset_sel_axi_mm/gpio_io_i is being overridden by the user. This pin will not be connected as a part of interface connection GPIO
+WARNING: [BD 41-1731] Type mismatch between connected pins: /reset_sel_axi_mm/gpio_io_o(undef) and /smartconnect_1/aresetn(rst)
+WARNING: [BD 41-1731] Type mismatch between connected pins: /reset_sel_axi_mm/gpio_io_o(undef) and /vdma_trunc/aresetn(rst)
+WARNING: [BD 41-1731] Type mismatch between connected pins: /reset_sel_axi_mm/gpio_io_o(undef) and /vdma_pad/aresetn(rst)
+WARNING: [BD 41-1731] Type mismatch between connected pins: /reset_sel_axi_mm/gpio_io_o(undef) and /video_router/M03_AXIS_ARESETN(rst)
+WARNING: [BD 41-1731] Type mismatch between connected pins: /reset_sel_axi_mm/gpio_io_o(undef) and /video_router/S03_AXIS_ARESETN(rst)
+WARNING: [BD 41-1731] Type mismatch between connected pins: /reset_sel_axi_mm/gpio_io_o(undef) and /video_router/S09_AXIS_ARESETN(rst)
+WARNING: [BD 41-1731] Type mismatch between connected pins: /reset_sel_axi_mm/gpio_io_o(undef) and /dint/ap_rst_n(rst)
+WARNING: [BD 41-1731] Type mismatch between connected pins: /reset_sel_axi_mm/gpio_io_o(undef) and /deint_cc/m_axis_aresetn(rst)
+WARNING: [BD 41-1306] The connection to interface pin /reset_sel_axis/gpio_io_o is being overridden by the user. This pin will not be connected as a part of interface connection GPIO
+WARNING: [BD 41-1306] The connection to interface pin /reset_sel_axis/gpio_io_i is being overridden by the user. This pin will not be connected as a part of interface connection GPIO
+WARNING: [BD 41-1306] The connection to interface pin /deint_ss/m_axis_tuser is being overridden by the user. This pin will not be connected as a part of interface connection M_AXIS
+WARNING: [BD 41-1306] The connection to interface pin /deint_cc/s_axis_tuser is being overridden by the user. This pin will not be connected as a part of interface connection S_AXIS
+WARNING: [BD 41-1306] The connection to interface pin /deint_cc/m_axis_tuser is being overridden by the user. This pin will not be connected as a part of interface connection M_AXIS
+WARNING: [BD 41-1306] The connection to interface pin /dint/s_axis_video_TUSER is being overridden by the user. This pin will not be connected as a part of interface connection s_axis_video
+1
+true
+true
+Slave segment '/axi_vdma/S_AXI_LITE/Reg' is being assigned into address space '/s_axi_ctrl' at <0x0000_0000 [ 64K ]>.
+Slave segment '/csc/s_axi_CTRL/Reg' is being assigned into address space '/s_axi_ctrl' at <0x0001_0000 [ 64K ]>.
+Slave segment '/dint/s_axi_CTRL/Reg' is being assigned into address space '/s_axi_ctrl' at <0x0002_0000 [ 64K ]>.
+Slave segment '/hcr/s_axi_CTRL/Reg' is being assigned into address space '/s_axi_ctrl' at <0x0003_0000 [ 64K ]>.
+Slave segment '/hsc/s_axi_CTRL/Reg' is being assigned into address space '/s_axi_ctrl' at <0x0004_0000 [ 64K ]>.
+Slave segment '/ltr/s_axi_CTRL/Reg' is being assigned into address space '/s_axi_ctrl' at <0x0005_0000 [ 64K ]>.
+Slave segment '/reset_sel_axi_mm/S_AXI/Reg' is being assigned into address space '/s_axi_ctrl' at <0x0006_0000 [ 64K ]>.
+Slave segment '/reset_sel_axis/S_AXI/Reg' is being assigned into address space '/s_axi_ctrl' at <0x0007_0000 [ 64K ]>.
+Slave segment '/vcr_i/s_axi_CTRL/Reg' is being assigned into address space '/s_axi_ctrl' at <0x0008_0000 [ 64K ]>.
+Slave segment '/vcr_o/s_axi_CTRL/Reg' is being assigned into address space '/s_axi_ctrl' at <0x0009_0000 [ 64K ]>.
+Slave segment '/video_router/xbar/S_AXI_CTRL/Reg' is being assigned into address space '/s_axi_ctrl' at <0x000A_0000 [ 64K ]>.
+Slave segment '/vsc/s_axi_CTRL/Reg' is being assigned into address space '/s_axi_ctrl' at <0x000B_0000 [ 64K ]>.
+endgroup
+set_property location {6.5 2488 864} [get_bd_cells v_proc_ss_1]
+set_property location {7 2442 870} [get_bd_cells v_proc_ss_1]
+set_property location {6 2037 813} [get_bd_cells v_proc_ss_0]
+set_property location {7 2436 817} [get_bd_cells v_proc_ss_1]
+connect_bd_intf_net [get_bd_intf_pins v_proc_ss_0/m_axis] [get_bd_intf_pins v_proc_ss_1/s_axis]
+undo
+INFO: [Common 17-17] undo 'connect_bd_intf_net [get_bd_intf_pins v_proc_ss_0/m_axis] [get_bd_intf_pins v_proc_ss_1/s_axis]'
+connect_bd_intf_net [get_bd_intf_pins v_proc_ss_0/m_axi_mm] [get_bd_intf_pins v_proc_ss_1/s_axi_ctrl]
+connect_bd_intf_net [get_bd_intf_pins v_proc_ss_0/m_axis] [get_bd_intf_pins v_proc_ss_1/s_axis]
+undo
+INFO: [Common 17-17] undo 'connect_bd_intf_net [get_bd_intf_pins v_proc_ss_0/m_axis] [get_bd_intf_pins v_proc_ss_1/s_axis]'
+undo
+INFO: [Common 17-17] undo 'connect_bd_intf_net [get_bd_intf_pins v_proc_ss_0/m_axi_mm] [get_bd_intf_pins v_proc_ss_1/s_axi_ctrl]'
+connect_bd_intf_net [get_bd_intf_pins v_proc_ss_0/m_axi_mm] [get_bd_intf_pins v_proc_ss_1/s_axi_ctrl]
+connect_bd_intf_net [get_bd_intf_pins v_proc_ss_0/m_axis] [get_bd_intf_pins v_proc_ss_1/s_axis]
+connect_bd_net [get_bd_pins v_proc_ss_0/aresetn_io_axis] [get_bd_pins v_proc_ss_1/aresetn_ctrl]
+connect_bd_net [get_bd_pins v_proc_ss_1/aclk_axis] [get_bd_pins clk_wiz_0/clk_out2]
+startgroup
+set_property -dict [list CONFIG.ALGORITHM {1} CONFIG.ENABLE_ZIPPER_REMOVAL {false}] [get_bd_cells v_demosaic_0]
+endgroup
+startgroup
+set_property -dict [list CONFIG.C_TOPOLOGY {3} CONFIG.C_SAMPLES_PER_CLK {1} CONFIG.C_MAX_DATA_WIDTH {8} CONFIG.C_CSC_ENABLE_WINDOW {false} CONFIG.C_COLORSPACE_SUPPORT {2}] [get_bd_cells v_proc_ss_0]
+3
+true
+true
+Slave segment '/csc/s_axi_CTRL/Reg' is being assigned into address space '/s_axi_ctrl' at <0x0000_0000 [ 64K ]>.
+WARNING: [BD 41-1684] Pin /v_proc_ss_0/aclk_axis is now disabled. All connections to this pin have been removed. 
+delete_bd_objs [get_bd_nets v_proc_ss_0_aresetn_io_axis] [get_bd_intf_nets v_proc_ss_0_m_axi_mm]
+endgroup
+connect_bd_net [get_bd_pins v_proc_ss_0/aclk] [get_bd_pins clk_wiz_0/clk_out2]
+connect_bd_net [get_bd_pins v_proc_ss_0/aresetn] [get_bd_pins rst_system_150M/peripheral_aresetn]
+startgroup
+set_property -dict [list CONFIG.C_TOPOLOGY {5} CONFIG.C_SAMPLES_PER_CLK {1} CONFIG.C_MAX_DATA_WIDTH {8} CONFIG.C_H_CHROMA_ALGORITHM {0}] [get_bd_cells v_proc_ss_1]
+5
+true
+true
+Slave segment '/hcr/s_axi_CTRL/Reg' is being assigned into address space '/s_axi_ctrl' at <0x0000_0000 [ 64K ]>.
+WARNING: [BD 41-1684] Pin /v_proc_ss_1/aclk_axis is now disabled. All connections to this pin have been removed. 
+endgroup
+startgroup
+set_property -dict [list CONFIG.NUM_MI {11}] [get_bd_cells ps7_0_axi_periph]
+endgroup
+connect_bd_intf_net [get_bd_intf_pins v_proc_ss_1/s_axi_ctrl] -boundary_type upper [get_bd_intf_pins ps7_0_axi_periph/M09_AXI]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axis_subset_converter:1.1 axis_subset_converter_1
+endgroup
+connect_bd_intf_net [get_bd_intf_pins v_proc_ss_1/m_axis] [get_bd_intf_pins axis_subset_converter_1/S_AXIS]
+startgroup
+set_property location {10.5 4585 1039} [get_bd_cells axi_vdma_a]
+set_property location {11 4585 1039} [get_bd_cells rst_vid_clk_dyn]
+set_property location {11 4585 1039} [get_bd_cells cama_gpio_oen]
+set_property location {11 4585 1039} [get_bd_cells video_dynclk]
+set_property location {11 4585 1039} [get_bd_cells axi_mem_intercon_1]
+set_property location {11 4585 1039} [get_bd_cells axi_cama_bta]
+set_property location {11 4585 1039} [get_bd_cells vtg]
+set_property location {11 4585 1039} [get_bd_cells axi_iic_hdmi]
+set_property location {11 4585 1039} [get_bd_cells cama_gpio_dir]
+set_property location {11 4585 1039} [get_bd_cells axi_cama_gpio]
+set_property location {11 4585 1039} [get_bd_cells processing_system7_0]
+set_property location {11 4585 1039} [get_bd_cells xlconcat_0]
+set_property location {11 4585 1039} [get_bd_cells xlconcat_1]
+set_property location {10 4585 1039} [get_bd_cells axi_mem_intercon]
+set_property location {10 4585 1039} [get_bd_cells DVIClocking_0]
+set_property location {9 4585 1039} [get_bd_cells v_axi4s_vid_out_0]
+endgroup
+undo
+INFO: [Common 17-17] undo 'endgroup'
+INFO: [Common 17-17] undo 'set_property location {9 4585 1039} [get_bd_cells v_axi4s_vid_out_0]'
+INFO: [Common 17-17] undo 'set_property location {10 4585 1039} [get_bd_cells DVIClocking_0]'
+INFO: [Common 17-17] undo 'set_property location {10 4585 1039} [get_bd_cells axi_mem_intercon]'
+INFO: [Common 17-17] undo 'set_property location {11 4585 1039} [get_bd_cells xlconcat_1]'
+INFO: [Common 17-17] undo 'set_property location {11 4585 1039} [get_bd_cells xlconcat_0]'
+INFO: [Common 17-17] undo 'set_property location {11 4585 1039} [get_bd_cells processing_system7_0]'
+INFO: [Common 17-17] undo 'set_property location {11 4585 1039} [get_bd_cells axi_cama_gpio]'
+INFO: [Common 17-17] undo 'set_property location {11 4585 1039} [get_bd_cells cama_gpio_dir]'
+INFO: [Common 17-17] undo 'set_property location {11 4585 1039} [get_bd_cells axi_iic_hdmi]'
+INFO: [Common 17-17] undo 'set_property location {11 4585 1039} [get_bd_cells vtg]'
+INFO: [Common 17-17] undo 'set_property location {11 4585 1039} [get_bd_cells axi_cama_bta]'
+INFO: [Common 17-17] undo 'set_property location {11 4585 1039} [get_bd_cells axi_mem_intercon_1]'
+INFO: [Common 17-17] undo 'set_property location {11 4585 1039} [get_bd_cells video_dynclk]'
+INFO: [Common 17-17] undo 'set_property location {11 4585 1039} [get_bd_cells cama_gpio_oen]'
+INFO: [Common 17-17] undo 'set_property location {11 4585 1039} [get_bd_cells rst_vid_clk_dyn]'
+INFO: [Common 17-17] undo 'set_property location {10.5 4585 1039} [get_bd_cells axi_vdma_a]'
+INFO: [Common 17-17] undo 'startgroup'
+startgroup
+set_property location {9 3426 1442} [get_bd_cells rst_vid_clk_dyn]
+set_property location {11 4406 1872} [get_bd_cells cama_gpio_oen]
+set_property location {9 3406 1272} [get_bd_cells video_dynclk]
+set_property location {10 3896 492} [get_bd_cells axi_mem_intercon_1]
+set_property location {11 4486 1392} [get_bd_cells v_axi4s_vid_out_0]
+set_property location {11 4386 1992} [get_bd_cells axi_cama_bta]
+set_property location {10 3806 1122} [get_bd_cells vtg]
+set_property location {11 4366 2132} [get_bd_cells axi_iic_hdmi]
+set_property location {11 4366 1672} [get_bd_cells cama_gpio_dir]
+set_property location {11 4366 1792} [get_bd_cells axi_cama_gpio]
+set_property location {11 4366 1462} [get_bd_cells processing_system7_0]
+set_property location {10 3796 832} [get_bd_cells xlconcat_0]
+set_property location {9 3236 662} [get_bd_cells xlconcat_1]
+set_property location {10 3796 182} [get_bd_cells axi_mem_intercon]
+set_property location {10 3796 1662} [get_bd_cells DVIClocking_0]
+set_property location {9 3236 872} [get_bd_cells axi_vdma_a]
+endgroup
+set_property location {7.5 2788 844} [get_bd_cells axis_subset_converter_1]
+connect_bd_intf_net [get_bd_intf_pins axis_subset_converter_1/M_AXIS] [get_bd_intf_pins axi_vdma_a/S_AXIS_S2MM]
+startgroup
+set_property -dict [list CONFIG.S_TDATA_NUM_BYTES.VALUE_SRC USER CONFIG.M_TDATA_NUM_BYTES.VALUE_SRC PROPAGATED] [get_bd_cells axis_subset_converter_1]
+set_property -dict [list CONFIG.S_TDATA_NUM_BYTES {3} CONFIG.TDATA_REMAP {tdata[7:0]}] [get_bd_cells axis_subset_converter_1]
+endgroup
+connect_bd_net [get_bd_pins v_proc_ss_1/aclk] [get_bd_pins clk_wiz_0/clk_out2]
+connect_bd_net [get_bd_pins axis_subset_converter_1/aclk] [get_bd_pins clk_wiz_0/clk_out2]
+connect_bd_net [get_bd_pins v_proc_ss_1/aresetn] [get_bd_pins rst_system_150M/peripheral_aresetn]
+connect_bd_net [get_bd_pins axis_subset_converter_1/aresetn] [get_bd_pins rst_system_150M/peripheral_aresetn]
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/clk_wiz_0/clk_out2 (150 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins ps7_0_axi_periph/M08_ACLK]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/clk_wiz_0/clk_out2 (150 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins ps7_0_axi_periph/M09_ACLK]
+endgroup
+set_property location {5 1629 822} [get_bd_cells v_demosaic_0]
+set_property location {5 1618 810} [get_bd_cells v_demosaic_0]
+save_bd_design
+Wrote  : <C:\Users\diepw50\CPRE-488-Labs\MP-2\hw\MP-2\MP2.xpr\MP2\MP2.srcs\sources_1\bd\system\system.bd> 
+Wrote  : <C:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/MP2.srcs/sources_1/bd/system/ui/bd_c954508f.ui> 
+reset_run synth_1
+reset_run system_xbar_5_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 20
+ERROR: [BD 41-758] The following clock pins are not connected to a valid clock source: 
+/ps7_0_axi_periph/M10_ACLK
+
+ERROR: [BD 41-1031] Hdl Generation failed for the IP Integrator design C:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/MP2.srcs/sources_1/bd/system/system.bd 
+ERROR: [Vivado 12-4756] Launch of runs aborted due to earlier errors while preparing sub-designs for run execution.
+startgroup
+set_property -dict [list CONFIG.NUM_MI {10}] [get_bd_cells ps7_0_axi_periph]
 endgroup
 save_bd_design
-Wrote  : <D:\TPG-test1\MP2\MP2.srcs\sources_1\bd\system\system.bd> 
-Wrote  : <D:/TPG-test1/MP2/MP2.srcs/sources_1/bd/system/ui/bd_c954508f.ui> 
-validate_bd_design
+Wrote  : <C:\Users\diepw50\CPRE-488-Labs\MP-2\hw\MP-2\MP2.xpr\MP2\MP2.srcs\sources_1\bd\system\system.bd> 
+Wrote  : <C:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/MP2.srcs/sources_1/bd/system/ui/bd_c954508f.ui> 
+launch_runs impl_1 -to_step write_bitstream -jobs 20
+CRITICAL WARNING: [BD 41-1356] Slave segment </v_demosaic_0/s_axi_CTRL/Reg> is not assigned into address space </processing_system7_0/Data>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </v_proc_ss_0/s_axi_ctrl/Reg> is not assigned into address space </processing_system7_0/Data>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </v_proc_ss_1/s_axi_ctrl/Reg> is not assigned into address space </processing_system7_0/Data>. Please use Address Editor to either assign or exclude it.
+WARNING: [BD 41-1741] </mipi_csi2_rx_subsyst_0/csirxss_s_axi/Reg> is a hierarchical segment with a fixed address of <0x0000_0000 [ 8K ]>. Its current mapping into </processing_system7_0/Data> at <0x43C2_0000 [ 4K ]> is illegal because at that range lower level scoped segments could be hidden.
+CRITICAL WARNING: [BD 41-1356] Slave segment </v_demosaic_0/s_axi_CTRL/Reg> is not assigned into address space </processing_system7_0/Data>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </v_proc_ss_0/s_axi_ctrl/Reg> is not assigned into address space </processing_system7_0/Data>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </v_proc_ss_1/s_axi_ctrl/Reg> is not assigned into address space </processing_system7_0/Data>. Please use Address Editor to either assign or exclude it.
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
 INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
 INFO: [xilinx.com:ip:clk_wiz:6.0-1] /video_dynclk clk_wiz propagate
-validate_bd_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:23 . Memory (MB): peak = 2708.273 ; gain = 0.000
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /video_dynclk clk_wiz propagate
+CRITICAL WARNING: [BD 41-237] Bus Interface property TDATA_NUM_BYTES does not match between /v_demosaic_0/s_axis_video(1) and /axis_subset_converter_0/M_AXIS(2)
+Wrote  : <C:\Users\diepw50\CPRE-488-Labs\MP-2\hw\MP-2\MP2.xpr\MP2\MP2.srcs\sources_1\bd\system\system.bd> 
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon_1/m00_couplers/auto_pc/m_axi_rid'(2) to pin: '/axi_mem_intercon_1/m00_couplers/M_AXI_rid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon_1/m00_couplers/auto_pc/m_axi_bid'(2) to pin: '/axi_mem_intercon_1/m00_couplers/M_AXI_bid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP2_AWID'(6) to pin: '/axi_mem_intercon_1/M00_AXI_awid'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP2_ARID'(6) to pin: '/axi_mem_intercon_1/M00_AXI_arid'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP2_WID'(6) to pin: '/axi_mem_intercon_1/M00_AXI_wid'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/v_demosaic_0/s_axis_video_TDATA'(8) to pin: '/axis_subset_converter_0/m_axis_tdata'(16) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/v_demosaic_0/s_axis_video_TDEST'(1) to pin: '/axis_subset_converter_0/m_axis_tdest'(10) - Only lower order bits will be connected.
+VHDL Output written to : C:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/MP2.srcs/sources_1/bd/system/synth/system.vhd
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon_1/m00_couplers/auto_pc/m_axi_rid'(2) to pin: '/axi_mem_intercon_1/m00_couplers/M_AXI_rid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon_1/m00_couplers/auto_pc/m_axi_bid'(2) to pin: '/axi_mem_intercon_1/m00_couplers/M_AXI_bid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP2_AWID'(6) to pin: '/axi_mem_intercon_1/M00_AXI_awid'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP2_ARID'(6) to pin: '/axi_mem_intercon_1/M00_AXI_arid'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP2_WID'(6) to pin: '/axi_mem_intercon_1/M00_AXI_wid'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/v_demosaic_0/s_axis_video_TDATA'(8) to pin: '/axis_subset_converter_0/m_axis_tdata'(16) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/v_demosaic_0/s_axis_video_TDEST'(1) to pin: '/axis_subset_converter_0/m_axis_tdest'(10) - Only lower order bits will be connected.
+VHDL Output written to : C:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/MP2.srcs/sources_1/bd/system/sim/system.vhd
+VHDL Output written to : C:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/MP2.srcs/sources_1/bd/system/hdl/system_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_vdma_a .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+Exporting to file c:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/MP2.srcs/sources_1/bd/system/ip/system_mipi_csi2_rx_subsyst_0_0/bd_0/hw_handoff/system_mipi_csi2_rx_subsyst_0_0.hwh
+Generated Block Design Tcl file c:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/MP2.srcs/sources_1/bd/system/ip/system_mipi_csi2_rx_subsyst_0_0/bd_0/hw_handoff/system_mipi_csi2_rx_subsyst_0_0_bd.tcl
+Generated Hardware Definition File c:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/MP2.srcs/sources_1/bd/system/ip/system_mipi_csi2_rx_subsyst_0_0/bd_0/synth/system_mipi_csi2_rx_subsyst_0_0.hwdef
+WARNING: [IP_Flow 19-1971] File named "sim/system_v_demosaic_0_0.v" already exists in file group "xilinx_verilogsimulationwrapper", cannot add it again.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block v_demosaic_0 .
+WARNING: [IP_Flow 19-1971] File named "sim/bd_2d50_csc_0.v" already exists in file group "xilinx_verilogsimulationwrapper", cannot add it again.
+Exporting to file c:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/MP2.srcs/sources_1/bd/system/ip/system_v_proc_ss_0_0/bd_0/hw_handoff/system_v_proc_ss_0_0.hwh
+Generated Block Design Tcl file c:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/MP2.srcs/sources_1/bd/system/ip/system_v_proc_ss_0_0/bd_0/hw_handoff/system_v_proc_ss_0_0_bd.tcl
+Generated Hardware Definition File c:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/MP2.srcs/sources_1/bd/system/ip/system_v_proc_ss_0_0/bd_0/synth/system_v_proc_ss_0_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block v_proc_ss_0 .
+WARNING: [IP_Flow 19-1971] File named "sim/bd_ed01_hcr_0.v" already exists in file group "xilinx_verilogsimulationwrapper", cannot add it again.
+Exporting to file c:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/MP2.srcs/sources_1/bd/system/ip/system_v_proc_ss_1_0/bd_0/hw_handoff/system_v_proc_ss_1_0.hwh
+Generated Block Design Tcl file c:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/MP2.srcs/sources_1/bd/system/ip/system_v_proc_ss_1_0/bd_0/hw_handoff/system_v_proc_ss_1_0_bd.tcl
+Generated Hardware Definition File c:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/MP2.srcs/sources_1/bd/system/ip/system_v_proc_ss_1_0/bd_0/synth/system_v_proc_ss_1_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block v_proc_ss_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_subset_converter_1 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/MP2.srcs/sources_1/bd/system/ip/system_auto_pc_0/system_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s00_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/MP2.srcs/sources_1/bd/system/ip/system_auto_pc_1/system_auto_pc_1_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon_1/m00_couplers/auto_pc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/s00_regslice .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/MP2.srcs/sources_1/bd/system/ip/system_auto_pc_2/system_auto_pc_2_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/MP2.srcs/sources_1/bd/system/ip/system_auto_cc_0/system_auto_cc_0_ooc.xdc'
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/m05_couplers/auto_cc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/MP2.srcs/sources_1/bd/system/ip/system_auto_cc_1/system_auto_cc_1_ooc.xdc'
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/m08_couplers/auto_cc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/MP2.srcs/sources_1/bd/system/ip/system_auto_cc_2/system_auto_cc_2_ooc.xdc'
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/m09_couplers/auto_cc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_mmu .
+Exporting to file C:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/MP2.srcs/sources_1/bd/system/hw_handoff/system.hwh
+Generated Block Design Tcl file C:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/MP2.srcs/sources_1/bd/system/hw_handoff/system_bd.tcl
+Generated Hardware Definition File C:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/MP2.srcs/sources_1/bd/system/synth/system.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP system_auto_pc_0, cache-ID = c69c5d048bd86f3f; cache size = 35.100 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP system_auto_pc_1, cache-ID = 0e73ac0c0fb37942; cache size = 35.100 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP system_auto_pc_2, cache-ID = 95a28b1bc78eb288; cache size = 35.100 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP system_s00_regslice_0, cache-ID = 28c15c27476d3bce; cache size = 35.100 MB.
+[Tue Mar  3 15:24:02 2026] Launched system_xbar_5_synth_1, system_axi_vdma_a_0_synth_1, system_v_demosaic_0_0_synth_1, system_v_proc_ss_0_0_synth_1, system_axis_subset_converter_1_0_synth_1, bd_ed01_hcr_0_synth_1, system_v_proc_ss_1_0_synth_1, bd_2d50_csc_0_synth_1, system_s00_mmu_0_synth_1, system_auto_cc_2_synth_1, system_auto_cc_1_synth_1, system_auto_cc_0_synth_1, synth_1...
+Run output will be captured here:
+system_xbar_5_synth_1: C:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/MP2.runs/system_xbar_5_synth_1/runme.log
+system_axi_vdma_a_0_synth_1: C:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/MP2.runs/system_axi_vdma_a_0_synth_1/runme.log
+system_v_demosaic_0_0_synth_1: C:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/MP2.runs/system_v_demosaic_0_0_synth_1/runme.log
+system_v_proc_ss_0_0_synth_1: C:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/MP2.runs/system_v_proc_ss_0_0_synth_1/runme.log
+system_axis_subset_converter_1_0_synth_1: C:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/MP2.runs/system_axis_subset_converter_1_0_synth_1/runme.log
+bd_ed01_hcr_0_synth_1: C:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/MP2.runs/bd_ed01_hcr_0_synth_1/runme.log
+system_v_proc_ss_1_0_synth_1: C:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/MP2.runs/system_v_proc_ss_1_0_synth_1/runme.log
+bd_2d50_csc_0_synth_1: C:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/MP2.runs/bd_2d50_csc_0_synth_1/runme.log
+system_s00_mmu_0_synth_1: C:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/MP2.runs/system_s00_mmu_0_synth_1/runme.log
+system_auto_cc_2_synth_1: C:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/MP2.runs/system_auto_cc_2_synth_1/runme.log
+system_auto_cc_1_synth_1: C:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/MP2.runs/system_auto_cc_1_synth_1/runme.log
+system_auto_cc_0_synth_1: C:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/MP2.runs/system_auto_cc_0_synth_1/runme.log
+synth_1: C:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/MP2.runs/synth_1/runme.log
+[Tue Mar  3 15:24:02 2026] Launched impl_1...
+Run output will be captured here: C:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/MP2.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:30 ; elapsed = 00:00:44 . Memory (MB): peak = 2275.363 ; gain = 11.234
+assign_bd_address [get_bd_addr_segs {v_demosaic_0/s_axi_CTRL/Reg v_proc_ss_0/s_axi_ctrl/Reg v_proc_ss_1/s_axi_ctrl/Reg }]
+Slave segment '/v_proc_ss_0/s_axi_ctrl/Reg' is being assigned into address space '/processing_system7_0/Data' at <0x43C3_0000 [ 64K ]>.
+Slave segment '/v_proc_ss_1/s_axi_ctrl/Reg' is being assigned into address space '/processing_system7_0/Data' at <0x43C4_0000 [ 64K ]>.
+Slave segment '/v_demosaic_0/s_axi_CTRL/Reg' is being assigned into address space '/processing_system7_0/Data' at <0x43C5_0000 [ 64K ]>.
 save_bd_design
-Wrote  : <D:\TPG-test1\MP2\MP2.srcs\sources_1\bd\system\system.bd> 
-archive_project D:/TPG-test1/MP2.xpr.zip -temp_dir D:/phjunk -force -exclude_run_results
-INFO: [Coretcl 2-137] starting archive...
-INFO: [Coretcl 2-1499] Saving project copy to temporary location 'D:/phjunk' for archiving project
-Scanning sources...
-Finished scanning sources
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/CPRE488_dev/git/cpre490h/Labs/Demo2019UpgradedHDMI/ZedBoard-FMC-Pcam-Adapter-DEMO.ipdefs/repo_0'.
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.1/data/ip'.
-INFO: [Coretcl 2-1211] Creating project copy for archival...
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/CPRE488_dev/git/cpre490h/Labs/Demo2019UpgradedHDMI/ZedBoard-FMC-Pcam-Adapter-DEMO.ipdefs/repo_0'.
-INFO: [Coretcl 2-135] resetting runs for excluding generated files from archive...
-WARNING: [Coretcl 2-105] Run 'synth_1' is currently active
-INFO: [Coretcl 2-133] re-setting run 'synth_1'...
-WARNING: [Coretcl 2-105] Run 'system_DVIClocking_0_0_synth_1' is currently active
-INFO: [Coretcl 2-133] re-setting run 'system_DVIClocking_0_0_synth_1'...
-WARNING: [Coretcl 2-105] Run 'system_xbar_5_synth_1' is currently active
-INFO: [Coretcl 2-133] re-setting run 'system_xbar_5_synth_1'...
-WARNING: [Coretcl 2-105] Run 'system_axi_vdma_a_0_synth_1' is currently active
-INFO: [Coretcl 2-133] re-setting run 'system_axi_vdma_a_0_synth_1'...
-WARNING: [Coretcl 2-105] Run 'system_v_tpg_0_0_synth_1' is currently active
-INFO: [Coretcl 2-133] re-setting run 'system_v_tpg_0_0_synth_1'...
-WARNING: [Coretcl 2-105] Run 'system_axis_subset_converter_0_1_synth_1' is currently active
-INFO: [Coretcl 2-133] re-setting run 'system_axis_subset_converter_0_1_synth_1'...
-INFO: [Coretcl 2-133] re-setting run 'impl_1'...
-INFO: [Coretcl 2-133] re-setting run 'system_DVIClocking_0_0_impl_1'...
-INFO: [Coretcl 2-133] re-setting run 'system_xbar_5_impl_1'...
-INFO: [Coretcl 2-133] re-setting run 'system_axi_vdma_a_0_impl_1'...
-INFO: [Coretcl 2-133] re-setting run 'system_v_tpg_0_0_impl_1'...
-INFO: [Coretcl 2-133] re-setting run 'system_axis_subset_converter_0_1_impl_1'...
-INFO: [Coretcl 2-1212] Importing remotely added design sources and verilog include files (if any)...
-INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'system_DVIClocking_0_0'
-INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'system_DVIClocking_0_0'
-INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'system_axi_vdma_a_0'
-INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'system_axi_vdma_a_0'
-INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'system_axis_subset_converter_0_1'
-INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'system_axis_subset_converter_0_1'
-INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'system_v_tpg_0_0'
-INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'system_v_tpg_0_0'
-INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'system_xbar_5'
-INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'system_xbar_5'
-INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'constrs_1'
-INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'constrs_1'
-INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'sources_1'
+Wrote  : <C:\Users\diepw50\CPRE-488-Labs\MP-2\hw\MP-2\MP2.xpr\MP2\MP2.srcs\sources_1\bd\system\system.bd> 
+Wrote  : <C:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/MP2.srcs/sources_1/bd/system/ui/bd_c954508f.ui> 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 20
+WARNING: [BD 41-1741] </mipi_csi2_rx_subsyst_0/csirxss_s_axi/Reg> is a hierarchical segment with a fixed address of <0x0000_0000 [ 8K ]>. Its current mapping into </processing_system7_0/Data> at <0x43C2_0000 [ 4K ]> is illegal because at that range lower level scoped segments could be hidden.
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /video_dynclk clk_wiz propagate
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /video_dynclk clk_wiz propagate
+CRITICAL WARNING: [BD 41-237] Bus Interface property TDATA_NUM_BYTES does not match between /v_demosaic_0/s_axis_video(1) and /axis_subset_converter_0/M_AXIS(2)
+Wrote  : <C:\Users\diepw50\CPRE-488-Labs\MP-2\hw\MP-2\MP2.xpr\MP2\MP2.srcs\sources_1\bd\system\system.bd> 
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon_1/m00_couplers/auto_pc/m_axi_rid'(2) to pin: '/axi_mem_intercon_1/m00_couplers/M_AXI_rid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon_1/m00_couplers/auto_pc/m_axi_bid'(2) to pin: '/axi_mem_intercon_1/m00_couplers/M_AXI_bid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP2_AWID'(6) to pin: '/axi_mem_intercon_1/M00_AXI_awid'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP2_ARID'(6) to pin: '/axi_mem_intercon_1/M00_AXI_arid'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP2_WID'(6) to pin: '/axi_mem_intercon_1/M00_AXI_wid'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/v_demosaic_0/s_axis_video_TDATA'(8) to pin: '/axis_subset_converter_0/m_axis_tdata'(16) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/v_demosaic_0/s_axis_video_TDEST'(1) to pin: '/axis_subset_converter_0/m_axis_tdest'(10) - Only lower order bits will be connected.
+VHDL Output written to : C:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/MP2.srcs/sources_1/bd/system/synth/system.vhd
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon_1/m00_couplers/auto_pc/m_axi_rid'(2) to pin: '/axi_mem_intercon_1/m00_couplers/M_AXI_rid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon_1/m00_couplers/auto_pc/m_axi_bid'(2) to pin: '/axi_mem_intercon_1/m00_couplers/M_AXI_bid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP2_AWID'(6) to pin: '/axi_mem_intercon_1/M00_AXI_awid'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP2_ARID'(6) to pin: '/axi_mem_intercon_1/M00_AXI_arid'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP2_WID'(6) to pin: '/axi_mem_intercon_1/M00_AXI_wid'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/v_demosaic_0/s_axis_video_TDATA'(8) to pin: '/axis_subset_converter_0/m_axis_tdata'(16) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/v_demosaic_0/s_axis_video_TDEST'(1) to pin: '/axis_subset_converter_0/m_axis_tdest'(10) - Only lower order bits will be connected.
+VHDL Output written to : C:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/MP2.srcs/sources_1/bd/system/sim/system.vhd
+VHDL Output written to : C:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/MP2.srcs/sources_1/bd/system/hdl/system_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+Exporting to file c:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/MP2.srcs/sources_1/bd/system/ip/system_mipi_csi2_rx_subsyst_0_0/bd_0/hw_handoff/system_mipi_csi2_rx_subsyst_0_0.hwh
+Generated Block Design Tcl file c:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/MP2.srcs/sources_1/bd/system/ip/system_mipi_csi2_rx_subsyst_0_0/bd_0/hw_handoff/system_mipi_csi2_rx_subsyst_0_0_bd.tcl
+Generated Hardware Definition File c:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/MP2.srcs/sources_1/bd/system/ip/system_mipi_csi2_rx_subsyst_0_0/bd_0/synth/system_mipi_csi2_rx_subsyst_0_0.hwdef
+INFO: [BD 41-1637] Generated targets are already up-to-date for block design 'bd_2d50' - hence not re-generating.
+INFO: [BD 41-1637] Generated targets are already up-to-date for block design 'bd_ed01' - hence not re-generating.
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/MP2.srcs/sources_1/bd/system/ip/system_auto_pc_0/system_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s00_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/MP2.srcs/sources_1/bd/system/ip/system_auto_pc_1/system_auto_pc_1_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon_1/m00_couplers/auto_pc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/s00_regslice .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/MP2.srcs/sources_1/bd/system/ip/system_auto_pc_2/system_auto_pc_2_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/MP2.srcs/sources_1/bd/system/ip/system_auto_cc_0/system_auto_cc_0_ooc.xdc'
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/m05_couplers/auto_cc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/MP2.srcs/sources_1/bd/system/ip/system_auto_cc_1/system_auto_cc_1_ooc.xdc'
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/m08_couplers/auto_cc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/MP2.srcs/sources_1/bd/system/ip/system_auto_cc_2/system_auto_cc_2_ooc.xdc'
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/m09_couplers/auto_cc .
+Exporting to file C:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/MP2.srcs/sources_1/bd/system/hw_handoff/system.hwh
+Generated Block Design Tcl file C:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/MP2.srcs/sources_1/bd/system/hw_handoff/system_bd.tcl
+Generated Hardware Definition File C:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/MP2.srcs/sources_1/bd/system/synth/system.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP system_auto_cc_0, cache-ID = 29b4e2b00aa38578; cache size = 51.207 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP system_auto_cc_1, cache-ID = 40014c47ab474ff2; cache size = 51.207 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP system_auto_cc_2, cache-ID = 40014c47ab474ff2; cache size = 51.207 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP system_auto_pc_0, cache-ID = c69c5d048bd86f3f; cache size = 51.207 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP system_auto_pc_1, cache-ID = 0e73ac0c0fb37942; cache size = 51.207 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP system_auto_pc_2, cache-ID = 95a28b1bc78eb288; cache size = 51.207 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP system_s00_regslice_0, cache-ID = 28c15c27476d3bce; cache size = 51.207 MB.
+[Tue Mar  3 15:27:26 2026] Launched system_xbar_5_synth_1, system_v_demosaic_0_0_synth_1, system_v_proc_ss_0_0_synth_1, system_v_proc_ss_1_0_synth_1, synth_1...
+Run output will be captured here:
+system_xbar_5_synth_1: C:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/MP2.runs/system_xbar_5_synth_1/runme.log
+system_v_demosaic_0_0_synth_1: C:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/MP2.runs/system_v_demosaic_0_0_synth_1/runme.log
+system_v_proc_ss_0_0_synth_1: C:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/MP2.runs/system_v_proc_ss_0_0_synth_1/runme.log
+system_v_proc_ss_1_0_synth_1: C:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/MP2.runs/system_v_proc_ss_1_0_synth_1/runme.log
+synth_1: C:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/MP2.runs/synth_1/runme.log
+[Tue Mar  3 15:27:27 2026] Launched impl_1...
+Run output will be captured here: C:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/MP2.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:27 ; elapsed = 00:01:22 . Memory (MB): peak = 2275.363 ; gain = 0.000
+startgroup
+set_property -dict [list CONFIG.M_TDATA_NUM_BYTES {1} CONFIG.TDATA_REMAP {tdata[7:0]}] [get_bd_cells axis_subset_converter_0]
+endgroup
+save_bd_design
+Wrote  : <C:\Users\diepw50\CPRE-488-Labs\MP-2\hw\MP-2\MP2.xpr\MP2\MP2.srcs\sources_1\bd\system\system.bd> 
+Wrote  : <C:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/MP2.srcs/sources_1/bd/system/ui/bd_c954508f.ui> 
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. PID not specified
+
+reset_run system_axis_subset_converter_0_1_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/MP2.runs/system_axis_subset_converter_0_1_synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 20
+WARNING: [BD 41-1741] </mipi_csi2_rx_subsyst_0/csirxss_s_axi/Reg> is a hierarchical segment with a fixed address of <0x0000_0000 [ 8K ]>. Its current mapping into </processing_system7_0/Data> at <0x43C2_0000 [ 4K ]> is illegal because at that range lower level scoped segments could be hidden.
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /video_dynclk clk_wiz propagate
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /video_dynclk clk_wiz propagate
+Wrote  : <C:\Users\diepw50\CPRE-488-Labs\MP-2\hw\MP-2\MP2.xpr\MP2\MP2.srcs\sources_1\bd\system\system.bd> 
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon_1/m00_couplers/auto_pc/m_axi_rid'(2) to pin: '/axi_mem_intercon_1/m00_couplers/M_AXI_rid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon_1/m00_couplers/auto_pc/m_axi_bid'(2) to pin: '/axi_mem_intercon_1/m00_couplers/M_AXI_bid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP2_AWID'(6) to pin: '/axi_mem_intercon_1/M00_AXI_awid'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP2_ARID'(6) to pin: '/axi_mem_intercon_1/M00_AXI_arid'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP2_WID'(6) to pin: '/axi_mem_intercon_1/M00_AXI_wid'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/v_demosaic_0/s_axis_video_TDEST'(1) to pin: '/axis_subset_converter_0/m_axis_tdest'(10) - Only lower order bits will be connected.
+VHDL Output written to : C:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/MP2.srcs/sources_1/bd/system/synth/system.vhd
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon_1/m00_couplers/auto_pc/m_axi_rid'(2) to pin: '/axi_mem_intercon_1/m00_couplers/M_AXI_rid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon_1/m00_couplers/auto_pc/m_axi_bid'(2) to pin: '/axi_mem_intercon_1/m00_couplers/M_AXI_bid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP2_AWID'(6) to pin: '/axi_mem_intercon_1/M00_AXI_awid'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP2_ARID'(6) to pin: '/axi_mem_intercon_1/M00_AXI_arid'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP2_WID'(6) to pin: '/axi_mem_intercon_1/M00_AXI_wid'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/v_demosaic_0/s_axis_video_TDEST'(1) to pin: '/axis_subset_converter_0/m_axis_tdest'(10) - Only lower order bits will be connected.
+VHDL Output written to : C:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/MP2.srcs/sources_1/bd/system/sim/system.vhd
+VHDL Output written to : C:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/MP2.srcs/sources_1/bd/system/hdl/system_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_subset_converter_0 .
+Exporting to file c:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/MP2.srcs/sources_1/bd/system/ip/system_mipi_csi2_rx_subsyst_0_0/bd_0/hw_handoff/system_mipi_csi2_rx_subsyst_0_0.hwh
+Generated Block Design Tcl file c:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/MP2.srcs/sources_1/bd/system/ip/system_mipi_csi2_rx_subsyst_0_0/bd_0/hw_handoff/system_mipi_csi2_rx_subsyst_0_0_bd.tcl
+Generated Hardware Definition File c:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/MP2.srcs/sources_1/bd/system/ip/system_mipi_csi2_rx_subsyst_0_0/bd_0/synth/system_mipi_csi2_rx_subsyst_0_0.hwdef
+INFO: [BD 41-1637] Generated targets are already up-to-date for block design 'bd_2d50' - hence not re-generating.
+INFO: [BD 41-1637] Generated targets are already up-to-date for block design 'bd_ed01' - hence not re-generating.
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/MP2.srcs/sources_1/bd/system/ip/system_auto_pc_0/system_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s00_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/MP2.srcs/sources_1/bd/system/ip/system_auto_pc_1/system_auto_pc_1_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon_1/m00_couplers/auto_pc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/s00_regslice .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/MP2.srcs/sources_1/bd/system/ip/system_auto_pc_2/system_auto_pc_2_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/MP2.srcs/sources_1/bd/system/ip/system_auto_cc_0/system_auto_cc_0_ooc.xdc'
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/m05_couplers/auto_cc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/MP2.srcs/sources_1/bd/system/ip/system_auto_cc_1/system_auto_cc_1_ooc.xdc'
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/m08_couplers/auto_cc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/MP2.srcs/sources_1/bd/system/ip/system_auto_cc_2/system_auto_cc_2_ooc.xdc'
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/m09_couplers/auto_cc .
+Exporting to file C:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/MP2.srcs/sources_1/bd/system/hw_handoff/system.hwh
+Generated Block Design Tcl file C:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/MP2.srcs/sources_1/bd/system/hw_handoff/system_bd.tcl
+Generated Hardware Definition File C:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/MP2.srcs/sources_1/bd/system/synth/system.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP system_auto_cc_0, cache-ID = 29b4e2b00aa38578; cache size = 60.188 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP system_auto_cc_1, cache-ID = 40014c47ab474ff2; cache size = 60.188 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP system_auto_cc_2, cache-ID = 40014c47ab474ff2; cache size = 60.188 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP system_auto_pc_0, cache-ID = c69c5d048bd86f3f; cache size = 60.188 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP system_auto_pc_1, cache-ID = 0e73ac0c0fb37942; cache size = 60.188 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP system_auto_pc_2, cache-ID = 95a28b1bc78eb288; cache size = 60.188 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP system_s00_regslice_0, cache-ID = 28c15c27476d3bce; cache size = 60.188 MB.
+[Tue Mar  3 15:30:02 2026] Launched system_axis_subset_converter_0_1_synth_1, synth_1...
+Run output will be captured here:
+system_axis_subset_converter_0_1_synth_1: C:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/MP2.runs/system_axis_subset_converter_0_1_synth_1/runme.log
+synth_1: C:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/MP2.runs/synth_1/runme.log
+[Tue Mar  3 15:30:02 2026] Launched impl_1...
+Run output will be captured here: C:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/MP2.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 2275.363 ; gain = 0.000
+set_property pfm_name {} [get_files -all {C:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/MP2.srcs/sources_1/bd/system/system.bd}]
+write_hw_platform -fixed -include_bit -force -file C:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/system_wrapper.xsa
+INFO: [Vivado 12-4895] Creating Hardware Platform: C:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/system_wrapper.xsa ...
+INFO: [Hsi 55-2053] elapsed time for repository (C:/Xilinx/Vivado/2020.1/data\embeddedsw) loading 0 seconds
+INFO: [Vivado 12-4896] Successfully created Hardware Platform: C:/Users/diepw50/CPRE-488-Labs/MP-2/hw/MP-2/MP2.xpr/MP2/system_wrapper.xsa

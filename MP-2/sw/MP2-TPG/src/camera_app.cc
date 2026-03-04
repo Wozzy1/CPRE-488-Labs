@@ -148,7 +148,7 @@ void start_input_video_pipeline(AXI_VDMA<ScuGicInterruptController>& vdma_driver
 
   // Configure and enable Color HW pipeline
     // Uncomment when using Color HW pipeline
-//  enable_color_pipeline();
+  enable_color_pipeline();
 
 
   // Chose Video Input source: 1) TPG, or 2) Camera
@@ -352,6 +352,11 @@ void camera_loop(void)
   xil_printf("pS2MM_Mem = %X\n\r", pS2MM_Mem);
   xil_printf("pMM2S_Mem = %X\n\r", pMM2S_Mem);
 
+  for (int j = 0; j < 1000; j++) {
+      for (int i = 0; i < 1920*1080; i++) {
+        pMM2S_Mem[i] = pS2MM_Mem[1920*1080-i-1];
+      }
+    }
 
   // Bayer tile order expected from this sensor mode.
   const BayerPattern PAT = BayerPattern::BGGR;
@@ -440,13 +445,13 @@ void camera_loop(void)
 
   xil_printf("SW processing loop complete!\r\n");
   xil_printf("\r\nReturning to VDMA pass-through operation for 10 seconds\r\n");
-  sleep(10);
+//  sleep(10);
 
   // Uncomment when using TPG for Video input
   // Define convenient volatile pointers for accessing TPG registers
-  volatile unsigned int *TPG_CR  = (unsigned int *)(XPAR_V_TPG_0_S_AXI_CTRL_BASEADDR + 0);    // TPG Control
-  xil_printf("\r\nShutting down: Disabling Test Pattern Generator...\n\r");
-  TPG_CR[0]     = 0x00;  // TPG Control Register (Disable TPG)
+//  volatile unsigned int *TPG_CR  = (unsigned int *)(XPAR_V_TPG_0_S_AXI_CTRL_BASEADDR + 0);    // TPG Control
+//  xil_printf("\r\nShutting down: Disabling Test Pattern Generator...\n\r");
+//  TPG_CR[0]     = 0x00;  // TPG Control Register (Disable TPG)
 
   sleep(1);
 
@@ -456,8 +461,8 @@ void camera_loop(void)
 
 
 // Uncomment for Hardware Image color Pipeline
-// XVprocSs proc_ss_RGB_YCrCb_444;  // To hold info for the Video Processing Subsystem: Color Conversion Only IP core: See xv_procss.h, and xv_csc_l2.h
-// XVprocSs_Config *Config_ptr;
+ XVprocSs proc_ss_RGB_YCrCb_444;  // To hold info for the Video Processing Subsystem: Color Conversion Only IP core: See xv_procss.h, and xv_csc_l2.h
+ XVprocSs_Config *Config_ptr;
 
 /////////////////////////////////////////
 // Enable HW Color processing pipeline //
@@ -475,7 +480,13 @@ int enable_color_pipeline(void) {
    // Add assignments here
 
    // Uncomment as part of Re-sampler IP setup
-//   Xil_Out32((XPAR_V_PROC_SS_2_BASEADDR) + (XV_HCRESAMPLER_CTRL_ADDR_AP_CTRL), (u32)(0x81));  // Control
+   Xil_Out32((XPAR_V_PROC_SS_1_BASEADDR) + (XV_HCRESAMPLER_CTRL_ADDR_AP_CTRL), (u32)(0x81));  // Control
+   Xil_Out32((XPAR_V_PROC_SS_1_BASEADDR) + (XV_HCRESAMPLER_CTRL_ADDR_HWREG_WIDTH_DATA), (u32)(3840/1));
+   Xil_Out32((XPAR_V_PROC_SS_1_BASEADDR) + (XV_HCRESAMPLER_CTRL_ADDR_HWREG_HEIGHT_DATA), (u32)(2160/1));
+
+   Xil_Out32((XPAR_V_PROC_SS_1_BASEADDR) + (XV_HCRESAMPLER_CTRL_ADDR_HWREG_INPUT_VIDEO_FORMAT_DATA), (u32)(1));
+   Xil_Out32((XPAR_V_PROC_SS_1_BASEADDR) + (XV_HCRESAMPLER_CTRL_ADDR_HWREG_OUTPUT_VIDEO_FORMAT_DATA), (u32)(2));
+
    xil_printf("4:4:4 to 4:2:2 Re-sampling IP Configuration and Enable done\r\n");
 
    // Video Processing Subsystem Hardware IP (configured for Only Color Conversion) from 24-bit RGB to YCrCb 4:4:4
@@ -483,22 +494,25 @@ int enable_color_pipeline(void) {
    // This could have been set up with direct register writes, but there are about 20 registers that need to be set for this IP block
 
    // Uncomment to setup Color Conversion IP
-//   Config_ptr = XVprocSs_LookupConfig(XPAR_XVPROCSS_0_DEVICE_ID);
-//   XVprocSs_CfgInitialize(&proc_ss_RGB_YCrCb_444, Config_ptr, XPAR_XVPROCSS_0_BASEADDR);
-//   XVprocSs_SetSubsystemConfig(&proc_ss_RGB_YCrCb_444);
-//   XV_CscSetColorspace(proc_ss_RGB_YCrCb_444.CscPtr, XVIDC_CSF_RGB, XVIDC_CSF_YCRCB_444, XVIDC_BT_709, XVIDC_BT_709, XVIDC_CR_0_255);
-//   XVprocSs_Start(&proc_ss_RGB_YCrCb_444);
+   Config_ptr = XVprocSs_LookupConfig(XPAR_XVPROCSS_0_DEVICE_ID);
+   XVprocSs_CfgInitialize(&proc_ss_RGB_YCrCb_444, Config_ptr, XPAR_XVPROCSS_0_BASEADDR);
+   XVprocSs_SetSubsystemConfig(&proc_ss_RGB_YCrCb_444);
+   XV_CscSetColorspace(proc_ss_RGB_YCrCb_444.CscPtr, XVIDC_CSF_RGB, XVIDC_CSF_YCRCB_444, XVIDC_BT_709, XVIDC_BT_709, XVIDC_CR_0_255);
+   XVprocSs_Start(&proc_ss_RGB_YCrCb_444);
    xil_printf("RGB to 4:4:4 IP Configuration and Enable done\r\n");
 
 
    // Demosaic to convert sensor Bayer pattern into 24-bit RGB
    // TODO Add additional register assignments here to fully configure this core. See Demosaic IP documentation for register details.
    // Hint 1: You will need to configure 3 addition registers
-
    // Add assignment here
 
    // Uncomment as part of Demosaic IP setup
-//   Xil_Out32((XPAR_XV_DEMOSAIC_0_S_AXI_CTRL_BASEADDR) + (XV_DEMOSAIC_CTRL_ADDR_AP_CTRL), (u32)(0x81));// 0b10000001 means start and freerun mode (page 16 in PG286)
+   Xil_Out32((XPAR_XV_DEMOSAIC_0_S_AXI_CTRL_BASEADDR) + (XV_DEMOSAIC_CTRL_ADDR_AP_CTRL), (u32)(0x81));// 0b10000001 means start and freerun mode (page 16 in PG286)
+   Xil_Out32((XPAR_XV_DEMOSAIC_0_S_AXI_CTRL_BASEADDR) + (XV_DEMOSAIC_CTRL_ADDR_HWREG_WIDTH_DATA), (u32)(3840/1));
+   Xil_Out32((XPAR_XV_DEMOSAIC_0_S_AXI_CTRL_BASEADDR) + (XV_DEMOSAIC_CTRL_ADDR_HWREG_HEIGHT_DATA), (u32)(2160/1));
+   Xil_Out32((XPAR_XV_DEMOSAIC_0_S_AXI_CTRL_BASEADDR) + (XV_DEMOSAIC_CTRL_ADDR_HWREG_BAYER_PHASE_DATA), (u32)(0x3));
+
    xil_printf("Demosaic IP Configuring and Enable done\r\n"); // RGRG sensor pattern
 
    return 0;

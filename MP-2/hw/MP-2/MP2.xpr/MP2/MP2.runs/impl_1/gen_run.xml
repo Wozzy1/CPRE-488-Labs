@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z020clg484-1" LaunchTime="1772152098">
+<GenRun Id="impl_1" LaunchPart="xc7z020clg484-1" LaunchTime="1772580969">
   <File Type="BITSTR-BMM" Name="system_wrapper_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="system_wrapper_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="system_wrapper_timing_summary_init.rpt"/>
@@ -182,13 +182,18 @@
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="system_DVIClocking_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="system_xbar_5"/>
-  <BlockFileSet Type="BlockSrcs" Name="system_axi_vdma_a_0"/>
   <BlockFileSet Type="BlockSrcs" Name="system_mipi_csi2_rx_subsyst_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_axis_subset_converter_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="system_axis_subset_converter_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="bd_ed01_hcr_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_v_demosaic_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="bd_22c6_rx_0"/>
   <BlockFileSet Type="BlockSrcs" Name="system_processing_system7_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="bd_22c6_phy_0"/>
   <BlockFileSet Type="BlockSrcs" Name="bd_22c6_xbar_0"/>
   <BlockFileSet Type="BlockSrcs" Name="bd_22c6_r_sync_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="bd_22c6_phy_0"/>
   <BlockFileSet Type="BlockSrcs" Name="bd_22c6_vfb_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_v_proc_ss_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_v_proc_ss_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="bd_2d50_csc_0"/>
 </GenRun>

@@ -137,8 +137,9 @@ void start_input_video_pipeline(AXI_VDMA<ScuGicInterruptController>& vdma_driver
   // Force CSI block disabled during reconfiguration to avoid partial frames.
   *(int *)csi_baseaddr = 0;
 
-  // Configure S2MM geometry so captured frame layout matches output resolution.
-  vdma_driver.configureWrite(timing[static_cast<int>(VideoOutputRes)].h_active, timing[static_cast<int>(VideoOutputRes)].v_active, timing[static_cast<int>(VideoOutputRes)].h_active, timing[static_cast<int>(VideoOutputRes)].v_active);
+  //------------------------------------------------------------------------------THIS LINE FIXES ALL OF OUR PROBLEMS --------------------------------------------------------------------------------
+  vdma_driver.configureWrite((1920*2)/3, 1080, (1920*2)/3, 1080);
+  //------------------------------------------------------------------------------THIS LINE FIXES ALL OF OUR PROBLEMS --------------------------------------------------------------------------------
 
   // Initialize camera over I2C and apply sensor default register sequence.
   cam.init();
@@ -149,7 +150,6 @@ void start_input_video_pipeline(AXI_VDMA<ScuGicInterruptController>& vdma_driver
   // Configure and enable Color HW pipeline
     // Uncomment when using Color HW pipeline
   enable_color_pipeline();
-
 
   // Chose Video Input source: 1) TPG, or 2) Camera
     // Option 1: Uncomment for TPG option
@@ -326,6 +326,12 @@ void camera_loop(void)
 
   xil_printf("\r\nEntering SW processing loop...\r\n");
 
+  // In HW-pipeline mode, keep VDMA in its normal circular/genlock path:
+  // camera -> color pipeline -> S2MM and MM2S -> HDMI.
+  while (1) {
+    sleep(1);
+  }
+
   // Read current park pointer state from VDMA core.
   parkptr = XAxiVdma_ReadReg(XPAR_AXIVDMA_0_BASEADDR, XAXIVDMA_PARKPTR_OFFSET);
   // Clear read-reference bits so we can explicitly set MM2S park frame.
@@ -351,12 +357,6 @@ void camera_loop(void)
   xil_printf("SW processing frames...\r\n");
   xil_printf("pS2MM_Mem = %X\n\r", pS2MM_Mem);
   xil_printf("pMM2S_Mem = %X\n\r", pMM2S_Mem);
-
-  for (int j = 0; j < 1000; j++) {
-      for (int i = 0; i < 1920*1080; i++) {
-        pMM2S_Mem[i] = pS2MM_Mem[1920*1080-i-1];
-      }
-    }
 
   // Bayer tile order expected from this sensor mode.
   const BayerPattern PAT = BayerPattern::BGGR;
@@ -481,8 +481,8 @@ int enable_color_pipeline(void) {
 
    // Uncomment as part of Re-sampler IP setup
    Xil_Out32((XPAR_V_PROC_SS_1_BASEADDR) + (XV_HCRESAMPLER_CTRL_ADDR_AP_CTRL), (u32)(0x81));  // Control
-   Xil_Out32((XPAR_V_PROC_SS_1_BASEADDR) + (XV_HCRESAMPLER_CTRL_ADDR_HWREG_WIDTH_DATA), (u32)(3840/1));
-   Xil_Out32((XPAR_V_PROC_SS_1_BASEADDR) + (XV_HCRESAMPLER_CTRL_ADDR_HWREG_HEIGHT_DATA), (u32)(2160/1));
+   Xil_Out32((XPAR_V_PROC_SS_1_BASEADDR) + (XV_HCRESAMPLER_CTRL_ADDR_HWREG_WIDTH_DATA), (u32)(1920));
+   Xil_Out32((XPAR_V_PROC_SS_1_BASEADDR) + (XV_HCRESAMPLER_CTRL_ADDR_HWREG_HEIGHT_DATA), (u32)(1080));
 
    Xil_Out32((XPAR_V_PROC_SS_1_BASEADDR) + (XV_HCRESAMPLER_CTRL_ADDR_HWREG_INPUT_VIDEO_FORMAT_DATA), (u32)(1));
    Xil_Out32((XPAR_V_PROC_SS_1_BASEADDR) + (XV_HCRESAMPLER_CTRL_ADDR_HWREG_OUTPUT_VIDEO_FORMAT_DATA), (u32)(2));
@@ -509,8 +509,8 @@ int enable_color_pipeline(void) {
 
    // Uncomment as part of Demosaic IP setup
    Xil_Out32((XPAR_XV_DEMOSAIC_0_S_AXI_CTRL_BASEADDR) + (XV_DEMOSAIC_CTRL_ADDR_AP_CTRL), (u32)(0x81));// 0b10000001 means start and freerun mode (page 16 in PG286)
-   Xil_Out32((XPAR_XV_DEMOSAIC_0_S_AXI_CTRL_BASEADDR) + (XV_DEMOSAIC_CTRL_ADDR_HWREG_WIDTH_DATA), (u32)(3840/1));
-   Xil_Out32((XPAR_XV_DEMOSAIC_0_S_AXI_CTRL_BASEADDR) + (XV_DEMOSAIC_CTRL_ADDR_HWREG_HEIGHT_DATA), (u32)(2160/1));
+   Xil_Out32((XPAR_XV_DEMOSAIC_0_S_AXI_CTRL_BASEADDR) + (XV_DEMOSAIC_CTRL_ADDR_HWREG_WIDTH_DATA), (u32)(1920));
+   Xil_Out32((XPAR_XV_DEMOSAIC_0_S_AXI_CTRL_BASEADDR) + (XV_DEMOSAIC_CTRL_ADDR_HWREG_HEIGHT_DATA), (u32)(1080));
    Xil_Out32((XPAR_XV_DEMOSAIC_0_S_AXI_CTRL_BASEADDR) + (XV_DEMOSAIC_CTRL_ADDR_HWREG_BAYER_PHASE_DATA), (u32)(0x3));
 
    xil_printf("Demosaic IP Configuring and Enable done\r\n"); // RGRG sensor pattern

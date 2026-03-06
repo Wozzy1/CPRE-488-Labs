@@ -1,6 +1,6 @@
 Nothing to build in platform 'TPG'
 
-18:00:26 **** Incremental Build of configuration Debug for project MP2-TPG ****
+22:14:09 **** Incremental Build of configuration Debug for project MP2-TPG ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
@@ -8,29 +8,29 @@ a9-linaro-pre-build-step
 make --no-print-directory main-build
 'Building file: ../src/camera_app.cc'
 'Invoking: ARM v7 g++ compiler'
-arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/camera_app.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/diepw50/CPRE-488-Labs/MP-2/sw/TPG/export/TPG/sw/TPG/standalone_domain/bspinclude/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.o" -o "src/camera_app.o" "../src/camera_app.cc"
+arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/camera_app.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/cihem/CPRE-488-Labs/MP-2/sw/TPG/export/TPG/sw/TPG/standalone_domain/bspinclude/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.o" -o "src/camera_app.o" "../src/camera_app.cc"
 In file included from ../src/./camera_app.h:9,
                  from ../src/camera_app.cc:8:
-C:/Users/diepw50/CPRE-488-Labs/MP-2/sw/TPG/export/TPG/sw/TPG/standalone_domain/bspinclude/include/xbasic_types.h:98:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+C:/Users/cihem/CPRE-488-Labs/MP-2/sw/TPG/export/TPG/sw/TPG/standalone_domain/bspinclude/include/xbasic_types.h:98:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
    98 | #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
       |  ^~~~~~~
-C:/Users/diepw50/CPRE-488-Labs/MP-2/sw/TPG/export/TPG/sw/TPG/standalone_domain/bspinclude/include/xbasic_types.h:99:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+C:/Users/cihem/CPRE-488-Labs/MP-2/sw/TPG/export/TPG/sw/TPG/standalone_domain/bspinclude/include/xbasic_types.h:99:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
    99 | #warning  Please refer the Standalone BSP UG647 for further details
       |  ^~~~~~~
 In file included from ../src/camera_app.cc:9:
-C:/Users/diepw50/CPRE-488-Labs/MP-2/sw/TPG/export/TPG/sw/TPG/standalone_domain/bspinclude/include/xtime_l.h:65:70: note: #pragma message: For the sleep routines, Global timer is being used
+C:/Users/cihem/CPRE-488-Labs/MP-2/sw/TPG/export/TPG/sw/TPG/standalone_domain/bspinclude/include/xtime_l.h:65:70: note: #pragma message: For the sleep routines, Global timer is being used
    65 | #pragma message ("For the sleep routines, Global timer is being used")
       |                                                                      ^
 'Finished building: ../src/camera_app.cc'
 ' '
 'Building target: MP2-TPG.elf'
 'Invoking: ARM v7 g++ linker'
-arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/diepw50/CPRE-488-Labs/MP-2/sw/TPG/export/TPG/sw/TPG/standalone_domain/bsplib/lib -o "MP2-TPG.elf"  ./src/verbose/verbose.o  ./src/uart/uart_ps.o  ./src/platform/platform.o  ./src/hdmi/hdmi_config.o  ./src/camera_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/cihem/CPRE-488-Labs/MP-2/sw/TPG/export/TPG/sw/TPG/standalone_domain/bsplib/lib -o "MP2-TPG.elf"  ./src/verbose/verbose.o  ./src/uart/uart_ps.o  ./src/platform/platform.o  ./src/hdmi/hdmi_config.o  ./src/camera_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
 'Finished building target: MP2-TPG.elf'
 ' '
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size MP2-TPG.elf  |tee "MP2-TPG.elf.size"
    text	   data	    bss	    dec	    hex	filename
- 595912	   4352	 308176	 908440	  ddc98	MP2-TPG.elf
+ 591936	   4352	 308176	 904464	  dcd10	MP2-TPG.elf
 'Finished building: MP2-TPG.elf.size'
 ' '

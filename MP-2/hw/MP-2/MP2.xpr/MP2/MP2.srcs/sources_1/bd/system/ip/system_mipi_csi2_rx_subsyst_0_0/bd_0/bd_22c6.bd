@@ -609,16 +609,16 @@
       }
     },
     "interface_nets": {
-      "vfb_0_m_vfb": {
-        "interface_ports": [
-          "video_out",
-          "vfb_0/m_vfb"
-        ]
-      },
       "phy_rx_mipi_ppi_if": {
         "interface_ports": [
           "phy/rx_mipi_ppi_if",
           "rx/rx_mipi_ppi_if"
+        ]
+      },
+      "vfb_0_m_vfb": {
+        "interface_ports": [
+          "video_out",
+          "vfb_0/m_vfb"
         ]
       },
       "rx_m_axis": {

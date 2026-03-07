@@ -346,16 +346,16 @@
           "hcr/s_axi_CTRL"
         ]
       },
-      "intf_net_hcr_m_axis_video": {
-        "interface_ports": [
-          "m_axis",
-          "hcr/m_axis_video"
-        ]
-      },
       "intf_net_bdry_in_s_axis": {
         "interface_ports": [
           "s_axis",
           "hcr/s_axis_video"
+        ]
+      },
+      "intf_net_hcr_m_axis_video": {
+        "interface_ports": [
+          "m_axis",
+          "hcr/m_axis_video"
         ]
       }
     },

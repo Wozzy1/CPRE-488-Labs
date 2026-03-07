@@ -1,6 +1,6 @@
 Nothing to build in platform 'TPG'
 
-22:14:09 **** Incremental Build of configuration Debug for project MP2-TPG ****
+19:58:21 **** Incremental Build of configuration Debug for project MP2-TPG ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
@@ -21,6 +21,9 @@ In file included from ../src/camera_app.cc:9:
 C:/Users/cihem/CPRE-488-Labs/MP-2/sw/TPG/export/TPG/sw/TPG/standalone_domain/bspinclude/include/xtime_l.h:65:70: note: #pragma message: For the sleep routines, Global timer is being used
    65 | #pragma message ("For the sleep routines, Global timer is being used")
       |                                                                      ^
+../src/camera_app.cc: In function 'void capture_current_frame_to_slot(int)':
+../src/camera_app.cc:234:28: warning: comparison of integer expressions of different signedness: 'int' and 'unsigned int' [-Wsign-compare]
+  234 |   if (rd_idx < 0 || rd_idx >= XPAR_AXIVDMA_0_NUM_FSTORES) {
 'Finished building: ../src/camera_app.cc'
 ' '
 'Building target: MP2-TPG.elf'
@@ -31,6 +34,6 @@ arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=non
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size MP2-TPG.elf  |tee "MP2-TPG.elf.size"
    text	   data	    bss	    dec	    hex	filename
- 591936	   4352	 308176	 904464	  dcd10	MP2-TPG.elf
+ 595976	   4384	 308208	 908568	  ddd18	MP2-TPG.elf
 'Finished building: MP2-TPG.elf.size'
 ' '

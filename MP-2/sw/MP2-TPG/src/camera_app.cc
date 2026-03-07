@@ -8,6 +8,60 @@
 #include "./camera_app.h"
 #include "xtime_l.h"
 
+#include <stdio.h>
+#include <stdbool.h>
+#include "xil_printf.h"
+#include "xparameters.h"
+#include "xil_io.h"
+#include "xtime_l.h"
+#include "xuartps_hw.h"
+#include "xgpio.h"
+#include "sleep.h"
+#include <string.h>
+
+
+/* SW0 comes from AXI GPIO channel 1, bit 0. */
+#define SW0_MASK 0x1U
+#define SW1_MASK 0x2U
+#define SW2_MASK 0x4U
+#define SW3_MASK 0x8U
+#define SW4_MASK 0x10U
+#define SW7_MASK 0x80U
+
+/* Button bit mapping: bit4=BTNU, bit3=BTNR, bit2=BTNL, bit1=BTND, bit0=BTNC */
+#define BTNC_MASK 0x1U
+#define BTND_MASK 0x2U
+#define BTNL_MASK 0x4U
+#define BTNR_MASK 0x8U
+#define BTNU_MASK 0x10U
+
+static XGpio sw_gpio_inst;
+static XGpio btn_gpio_inst;
+static bool user_gpio_ready = false;
+
+static int init_user_gpio(void)
+{
+  int status;
+
+  status = XGpio_Initialize(&btn_gpio_inst, XPAR_AXI_GPIO_0_DEVICE_ID);
+  if (status != XST_SUCCESS) {
+    xil_printf("ERROR: AXI GPIO button init failed (%d)\r\n", status);
+    return status;
+  }
+
+  status = XGpio_Initialize(&sw_gpio_inst, XPAR_AXI_GPIO_1_DEVICE_ID);
+  if (status != XST_SUCCESS) {
+    xil_printf("ERROR: AXI GPIO switch init failed (%d)\r\n", status);
+    return status;
+  }
+
+  // All bits are board inputs for both GPIO blocks.
+  XGpio_SetDataDirection(&btn_gpio_inst, 1, 0xFFFFFFFFU);
+  XGpio_SetDataDirection(&sw_gpio_inst, 1, 0xFFFFFFFFU);
+  user_gpio_ready = true;
+  xil_printf("AXI GPIO ready (btn/switch)\r\n");
+  return XST_SUCCESS;
+}
 
 int main()
 {
@@ -18,13 +72,288 @@ int main()
   start_output_video_pipeline(vdma_a_driver, vid, Resolution::R1920_1080_60_PP,read_master_select);
 
   // Bring up camera input path (write VDMA + camera mode + CSI enable).
-  start_input_video_pipeline(vdma_a_driver, *cam_a_ptr, Resolution::R1920_1080_60_PP, OV5640_cfg::mode_t::MODE_1080P_1920_1080_30fps_336M_MIPI, csi_baseaddr_tmp);
+  if (!start_input_video_pipeline(vdma_a_driver, *cam_a_ptr, Resolution::R1920_1080_60_PP, OV5640_cfg::mode_t::MODE_1080P_1920_1080_30fps_336M_MIPI, csi_baseaddr_tmp)) {
+    xil_printf("ERROR: input pipeline startup failed; staying on static frame.\r\n");
+    while (1) {
+      sleep(1);
+    }
+  }
 
   // Run software image-processing loop (demosaic + RGB->YCbCr422 pack).
   camera_loop();
 
   // If camera_loop ever returns, perform clean platform shutdown.
   cleanup_platform();
+}
+
+static inline u32 access_switches(void)
+{
+    if (!user_gpio_ready) {
+      return 0U;
+    }
+    return XGpio_DiscreteRead(&sw_gpio_inst, 1);
+}
+
+static inline u32 access_buttons(void)
+{
+    if (!user_gpio_ready) {
+      return 0U;
+    }
+    return XGpio_DiscreteRead(&btn_gpio_inst, 1);
+}
+
+static constexpr int CAPTURE_MAX_IMAGES = 32;
+static constexpr int FRAME_WIDTH = 1920;
+static constexpr int FRAME_HEIGHT = 1080;
+static constexpr int FRAME_BYTES = FRAME_WIDTH * FRAME_HEIGHT * 2;
+// Reserve a DDR region for up to 32 raw YUV422 frames (about 132 MiB).
+static constexpr uintptr_t capture_baseaddr = 0x0B200000U;
+
+static inline volatile Xuint16 *frame_store_ptr(int frame_idx)
+{
+  return reinterpret_cast<volatile Xuint16 *>(frame_baseaddr + static_cast<uintptr_t>(frame_idx) * FRAME_BYTES);
+}
+
+static inline volatile Xuint16 *capture_slot_ptr(int slot_idx)
+{
+  return reinterpret_cast<volatile Xuint16 *>(capture_baseaddr + static_cast<uintptr_t>(slot_idx) * FRAME_BYTES);
+}
+
+static inline void copy_frame_words(volatile Xuint16 *dst, volatile Xuint16 *src)
+{
+  memcpy((void *)dst, (const void *)src, FRAME_BYTES);
+}
+
+static inline int current_read_frame_index(void)
+{
+  u32 parkptr = XAxiVdma_ReadReg(XPAR_AXIVDMA_0_BASEADDR, XAXIVDMA_PARKPTR_OFFSET);
+  return static_cast<int>((parkptr & XAXIVDMA_PARKPTR_READSTR_MASK) >> XAXIVDMA_READSTR_SHIFT);
+}
+
+enum class DisplaySource { LIVE, STATIC };
+static DisplaySource display_source = DisplaySource::LIVE;
+static int displayed_capture_slot = -1;
+static bool write_stream_paused = false;
+static constexpr int PARKED_FRAME_INDEX = 0;
+
+static inline void park_mm2s_on_frame(int frame_idx)
+{
+  u32 parkptr = XAxiVdma_ReadReg(XPAR_AXIVDMA_0_BASEADDR, XAXIVDMA_PARKPTR_OFFSET);
+  parkptr &= ~XAXIVDMA_PARKPTR_READREF_MASK;
+  parkptr |= (static_cast<u32>(frame_idx) << XAXIVDMA_READREF_SHIFT) & XAXIVDMA_PARKPTR_READREF_MASK;
+  XAxiVdma_WriteReg(XPAR_AXIVDMA_0_BASEADDR, XAXIVDMA_PARKPTR_OFFSET, parkptr);
+
+  u32 mm2s_dmacr = XAxiVdma_ReadReg(XPAR_AXIVDMA_0_BASEADDR, XAXIVDMA_TX_OFFSET + XAXIVDMA_CR_OFFSET);
+  XAxiVdma_WriteReg(XPAR_AXIVDMA_0_BASEADDR, XAXIVDMA_TX_OFFSET + XAXIVDMA_CR_OFFSET, mm2s_dmacr & ~XAXIVDMA_CR_TAIL_EN_MASK);
+}
+
+static inline void unpark_mm2s(void)
+{
+  u32 mm2s_dmacr = XAxiVdma_ReadReg(XPAR_AXIVDMA_0_BASEADDR, XAXIVDMA_TX_OFFSET + XAXIVDMA_CR_OFFSET);
+  XAxiVdma_WriteReg(XPAR_AXIVDMA_0_BASEADDR, XAXIVDMA_TX_OFFSET + XAXIVDMA_CR_OFFSET, mm2s_dmacr | XAXIVDMA_CR_TAIL_EN_MASK);
+}
+
+static bool pause_live_write_stream(void)
+{
+  if (write_stream_paused) {
+    return true;
+  }
+
+  try {
+    vdma_a_driver.stopWrite();
+    write_stream_paused = true;
+    return true;
+  } catch (const std::exception& e) {
+    xil_printf("ERROR: failed to pause write stream: %s\r\n", e.what());
+    return false;
+  }
+}
+
+static bool resume_live_write_stream(void)
+{
+  if (!write_stream_paused) {
+    return true;
+  }
+
+  try {
+    vdma_a_driver.enableWrite();
+    write_stream_paused = false;
+    return true;
+  } catch (const std::exception& e) {
+    xil_printf("WARN: write resume failed, reinitializing write stream: %s\r\n", e.what());
+  }
+
+  try {
+    vdma_a_driver.resetWrite();
+    vdma_a_driver.configureWrite(FRAME_WIDTH, FRAME_HEIGHT, FRAME_WIDTH, FRAME_HEIGHT);
+    vdma_a_driver.enableWrite();
+    write_stream_paused = false;
+    return true;
+  } catch (const std::exception& e) {
+    xil_printf("ERROR: failed to restart write stream: %s\r\n", e.what());
+    return false;
+  }
+}
+
+static bool switch_display_to_live(void)
+{
+  if (display_source == DisplaySource::LIVE) {
+    return true;
+  }
+
+  unpark_mm2s();
+  display_source = DisplaySource::LIVE;
+  displayed_capture_slot = -1;
+  xil_printf("Display source -> LIVE\r\n");
+  return true;
+}
+
+static bool switch_display_to_capture_slot(int slot_idx)
+{
+  if (slot_idx < 0 || slot_idx >= CAPTURE_MAX_IMAGES) {
+    return false;
+  }
+
+  if (display_source == DisplaySource::STATIC && displayed_capture_slot == slot_idx) {
+    return true;
+  }
+
+  // Copy chosen capture into a known frame-store, then park MM2S on it.
+  copy_frame_words(frame_store_ptr(PARKED_FRAME_INDEX), capture_slot_ptr(slot_idx));
+  Xil_DCacheFlushRange((INTPTR)(uintptr_t)frame_store_ptr(PARKED_FRAME_INDEX), FRAME_BYTES);
+  park_mm2s_on_frame(PARKED_FRAME_INDEX);
+  display_source = DisplaySource::STATIC;
+  displayed_capture_slot = slot_idx;
+  xil_printf("Display source -> STATIC slot %d\r\n", slot_idx);
+  return true;
+}
+
+static void capture_current_frame_to_slot(int slot_idx)
+{
+  int rd_idx = current_read_frame_index();
+  if (rd_idx < 0 || rd_idx >= XPAR_AXIVDMA_0_NUM_FSTORES) {
+    rd_idx = 0;
+  }
+  volatile Xuint16 *dst = capture_slot_ptr(slot_idx);
+  copy_frame_words(dst, frame_store_ptr(rd_idx));
+  Xil_DCacheFlushRange((INTPTR)(uintptr_t)dst, FRAME_BYTES);
+}
+
+void camera_interface(void) {
+  int capture_count = 0;
+  int next_capture_slot = 0;
+  int playback_slot = 0;
+  int preview_slot = 0;
+  int prev_sw0 = 0;
+  int prev_btnc = 0;
+  int prev_btnl = 0;
+  int prev_btnr = 0;
+  bool playback_active = false;
+  bool preview_active = false;
+  XTime preview_end_tick = 0;
+  const u64 preview_ticks = 2ULL * static_cast<u64>(COUNTS_PER_SECOND);
+
+  while (1) {
+    u32 sw_data = access_switches();
+    u32 btn_data = access_buttons();
+
+    int sw0 = ((sw_data & SW0_MASK) != 0U) ? 1 : 0;
+    int btnc = ((btn_data & BTNC_MASK) != 0U) ? 1 : 0;
+    int btnl = ((btn_data & BTNL_MASK) != 0U) ? 1 : 0;
+    int btnr = ((btn_data & BTNR_MASK) != 0U) ? 1 : 0;
+
+    // Playback mode toggle via SW0.
+    if (sw0 && !prev_sw0) {
+      if (preview_active) {
+        preview_active = false;
+        (void)switch_display_to_live();
+        (void)resume_live_write_stream();
+      }
+      preview_active = false;
+      playback_active = true;
+      if (capture_count > 0) {
+        playback_slot = (next_capture_slot - 1 + CAPTURE_MAX_IMAGES) % CAPTURE_MAX_IMAGES; // newest image
+        (void)pause_live_write_stream();
+        (void)switch_display_to_capture_slot(playback_slot);
+      } else {
+        xil_printf("Playback mode ON (no captures yet)\r\n");
+      }
+      xil_printf("Playback mode ON\r\n");
+    } else if (!sw0 && prev_sw0) {
+      playback_active = false;
+      preview_active = false;
+      (void)switch_display_to_live();
+      (void)resume_live_write_stream();
+      xil_printf("Playback mode OFF\r\n");
+    }
+
+    // Capture on BTNC rising edge while in live mode.
+    if (!playback_active && !preview_active && btnc && !prev_btnc) {
+      int slot = next_capture_slot;
+      capture_current_frame_to_slot(slot);
+      if (capture_count < CAPTURE_MAX_IMAGES) {
+        ++capture_count;
+      }
+      next_capture_slot = (next_capture_slot + 1) % CAPTURE_MAX_IMAGES;
+
+      // Freeze immediately for 2 seconds by parking display and pausing writes.
+      preview_slot = slot;
+      (void)pause_live_write_stream();
+      (void)switch_display_to_capture_slot(preview_slot);
+      Capture_Frame();
+      XTime now;
+      XTime_GetTime(&now);
+      preview_end_tick = now + preview_ticks;
+      preview_active = true;
+    }
+
+    // Rotate through captured images in playback mode using left/right buttons.
+    if (playback_active && capture_count > 0) {
+      int valid_count = (capture_count < CAPTURE_MAX_IMAGES) ? capture_count : CAPTURE_MAX_IMAGES;
+      int low_slot = 0;
+      int high_slot = valid_count - 1;
+
+      if (btnl && !prev_btnl) {
+        if (capture_count < CAPTURE_MAX_IMAGES) {
+          playback_slot = (playback_slot <= low_slot) ? high_slot : (playback_slot - 1);
+        } else {
+          playback_slot = (playback_slot - 1 + CAPTURE_MAX_IMAGES) % CAPTURE_MAX_IMAGES;
+        }
+        (void)switch_display_to_capture_slot(playback_slot);
+      }
+
+      if (btnr && !prev_btnr) {
+        if (capture_count < CAPTURE_MAX_IMAGES) {
+          playback_slot = (playback_slot >= high_slot) ? low_slot : (playback_slot + 1);
+        } else {
+          playback_slot = (playback_slot + 1) % CAPTURE_MAX_IMAGES;
+        }
+        (void)switch_display_to_capture_slot(playback_slot);
+      }
+    } else if (preview_active) {
+      XTime now;
+      XTime_GetTime(&now);
+      if (now >= preview_end_tick) {
+        preview_active = false;
+        (void)switch_display_to_live();
+        (void)resume_live_write_stream();
+      }
+    }
+
+    prev_sw0 = sw0;
+    prev_btnc = btnc;
+    prev_btnl = btnl;
+    prev_btnr = btnr;
+    usleep(20000);
+  }
+}
+
+void Playback_Mode(void) {
+	 xil_printf("Playback Mode Activated!");
+}
+
+void Capture_Frame(void) {
+	 xil_printf("Captured Frame");
 }
 
 
@@ -38,6 +367,9 @@ void configure_platform(void)
 
   // Program HDMI transmitter over I2C so display sink can lock properly.
   hdmi_config(XPAR_AXI_IIC_HDMI_BASEADDR);
+
+  // Initialize user button/switch GPIO through the driver (safer than raw MMIO reads).
+  init_user_gpio();
 
   xil_printf("Initializing...\r\n");
 
@@ -126,10 +458,15 @@ void start_output_video_pipeline(AXI_VDMA<ScuGicInterruptController>& vdma_drive
 ///////////////////////////////////////////
 // Bring up input pipeline back-to-front //
 ///////////////////////////////////////////
-void start_input_video_pipeline(AXI_VDMA<ScuGicInterruptController>& vdma_driver, OV5640& cam, Resolution VideoOutputRes, OV5640_cfg::mode_t mode, uintptr_t csi_baseaddr)
+bool start_input_video_pipeline(AXI_VDMA<ScuGicInterruptController>& vdma_driver, OV5640& cam, Resolution VideoOutputRes, OV5640_cfg::mode_t mode, uintptr_t csi_baseaddr)
 {
 
   xil_printf("\r\nStart selected Video stream: 1. TPG, or 2. Camera...\r\n");
+  xil_printf("CSI baseaddr = 0x%08lx\r\n", (unsigned long)csi_baseaddr);
+  if (csi_baseaddr == 0U) {
+    xil_printf("ERROR: CSI base address is 0; check BSP/bitstream match.\r\n");
+    return false;
+  }
 
   // Reset S2MM/write side before receiving new camera frames.
   vdma_driver.resetWrite();
@@ -137,9 +474,9 @@ void start_input_video_pipeline(AXI_VDMA<ScuGicInterruptController>& vdma_driver
   // Force CSI block disabled during reconfiguration to avoid partial frames.
   *(int *)csi_baseaddr = 0;
 
-  //------------------------------------------------------------------------------THIS LINE FIXES ALL OF OUR PROBLEMS --------------------------------------------------------------------------------
-  vdma_driver.configureWrite((1920*2)/3, 1080, (1920*2)/3, 1080);
-  //------------------------------------------------------------------------------THIS LINE FIXES ALL OF OUR PROBLEMS --------------------------------------------------------------------------------
+  // Write full 1920x1080 frame geometry so S2MM/MM2S strides match.
+  // Mismatch here can leave HDMI stuck on the static startup frame.
+  vdma_driver.configureWrite(1920, 1080, 1920, 1080);
 
   // Initialize camera over I2C and apply sensor default register sequence.
   cam.init();
@@ -184,7 +521,7 @@ void start_input_video_pipeline(AXI_VDMA<ScuGicInterruptController>& vdma_driver
   xil_printf("VDMA pass-through for 5 Seconds\r\n");
   sleep(5);
 
-
+  return true;
 }
 
 
@@ -329,6 +666,7 @@ void camera_loop(void)
   // In HW-pipeline mode, keep VDMA in its normal circular/genlock path:
   // camera -> color pipeline -> S2MM and MM2S -> HDMI.
   while (1) {
+	camera_interface();
     sleep(1);
   }
 

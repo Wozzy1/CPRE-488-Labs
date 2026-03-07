@@ -183,12 +183,46 @@ public:
 		{
 			throw std::runtime_error(__FILE__ ":" LINE_STRING);
 		}
-		//Use quad frame buffering, if FRMSTR_REG is enabled in hardware
-		//If not, use all configured in hardware
-		XAxiVdma_SetFrmStore(&drv_inst_, 4, XAXIVDMA_READ);
+		// Use the actual frame-store count supported by this hardware instance.
+		XAxiVdma_SetFrmStore(&drv_inst_, drv_inst_.MaxNumFrames, XAXIVDMA_READ);
 		//Clear errors in SR
 		XAxiVdma_ClearChannelErrors(&drv_inst_.ReadChannel, XAXIVDMA_SR_ERR_ALL_MASK);
 		//Enable read channel error and frame count interrupts
+		XAxiVdma_IntrEnable(&drv_inst_, XAXIVDMA_IXR_ERROR_MASK, XAXIVDMA_READ);
+	}
+
+	void configureReadNoSync(uint16_t h_res, uint16_t v_res)
+	{
+		XStatus status;
+		context_.ReadCfg.HoriSizeInput = h_res * drv_inst_.ReadChannel.StreamWidth;
+		context_.ReadCfg.VertSizeInput = v_res;
+		context_.ReadCfg.Stride = context_.ReadCfg.HoriSizeInput;
+		context_.ReadCfg.FrameDelay = 0;
+		context_.ReadCfg.EnableCircularBuf = 1;
+		context_.ReadCfg.EnableSync = 0; // free-run MM2S (no external genlock dependency)
+		context_.ReadCfg.PointNum = 0;
+		context_.ReadCfg.EnableFrameCounter = 0;
+		context_.ReadCfg.FixedFrameStoreAddr = 0;
+		context_.ReadCfg.GenLockRepeat = 1;
+		status = XAxiVdma_DmaConfig(&drv_inst_, XAXIVDMA_READ, &context_.ReadCfg);
+
+		if (XST_SUCCESS != status)
+		{
+			throw std::runtime_error(__FILE__ ":" LINE_STRING);
+		}
+
+		uint32_t addr = frame_buf_base_addr_;
+		for (int iFrm=0; iFrm<drv_inst_.MaxNumFrames; ++iFrm) {
+			context_.ReadCfg.FrameStoreStartAddr[iFrm] = addr;
+			addr += context_.ReadCfg.HoriSizeInput * context_.ReadCfg.VertSizeInput;
+		}
+		status = XAxiVdma_DmaSetBufferAddr(&drv_inst_, XAXIVDMA_READ, context_.ReadCfg.FrameStoreStartAddr);
+		if (XST_SUCCESS != status)
+		{
+			throw std::runtime_error(__FILE__ ":" LINE_STRING);
+		}
+		XAxiVdma_SetFrmStore(&drv_inst_, drv_inst_.MaxNumFrames, XAXIVDMA_READ);
+		XAxiVdma_ClearChannelErrors(&drv_inst_.ReadChannel, XAXIVDMA_SR_ERR_ALL_MASK);
 		XAxiVdma_IntrEnable(&drv_inst_, XAXIVDMA_IXR_ERROR_MASK, XAXIVDMA_READ);
 	}
 
@@ -201,6 +235,45 @@ public:
 		{
 			throw std::runtime_error(__FILE__ ":" LINE_STRING);
 		}
+	}
+
+	void stopRead()
+	{
+		XAxiVdma_DmaStop(&drv_inst_, XAXIVDMA_READ);
+	}
+
+	void configureReadFromAddress(uint16_t h_res, uint16_t v_res, uint32_t src_addr)
+	{
+		XStatus status;
+		context_.ReadCfg.HoriSizeInput = h_res * drv_inst_.ReadChannel.StreamWidth;
+		context_.ReadCfg.VertSizeInput = v_res;
+		context_.ReadCfg.Stride = context_.ReadCfg.HoriSizeInput;
+		context_.ReadCfg.FrameDelay = 0;
+		context_.ReadCfg.EnableCircularBuf = 1;
+		context_.ReadCfg.EnableSync = 0;
+		context_.ReadCfg.PointNum = 0;
+		context_.ReadCfg.EnableFrameCounter = 0;
+		context_.ReadCfg.FixedFrameStoreAddr = 0;
+		context_.ReadCfg.GenLockRepeat = 1;
+		status = XAxiVdma_DmaConfig(&drv_inst_, XAXIVDMA_READ, &context_.ReadCfg);
+		if (XST_SUCCESS != status)
+		{
+			throw std::runtime_error(__FILE__ ":" LINE_STRING);
+		}
+
+		for (int iFrm = 0; iFrm < drv_inst_.MaxNumFrames; ++iFrm) {
+			context_.ReadCfg.FrameStoreStartAddr[iFrm] = src_addr;
+		}
+		status = XAxiVdma_DmaSetBufferAddr(&drv_inst_, XAXIVDMA_READ, context_.ReadCfg.FrameStoreStartAddr);
+		if (XST_SUCCESS != status)
+		{
+			throw std::runtime_error(__FILE__ ":" LINE_STRING);
+		}
+
+		// Keep frame-store count consistent with live mode to avoid mode-switch glitches.
+		XAxiVdma_SetFrmStore(&drv_inst_, drv_inst_.MaxNumFrames, XAXIVDMA_READ);
+		XAxiVdma_ClearChannelErrors(&drv_inst_.ReadChannel, XAXIVDMA_SR_ERR_ALL_MASK);
+		XAxiVdma_IntrEnable(&drv_inst_, XAXIVDMA_IXR_ERROR_MASK, XAXIVDMA_READ);
 	}
 	void configureWrite(uint16_t h_res, uint16_t v_res, uint16_t h_full_res, uint16_t v_full_res)
 	{
@@ -246,9 +319,8 @@ public:
 		{
 			throw std::runtime_error(__FILE__ ":" LINE_STRING);
 		}
-		//Use quad frame buffering, if FRMSTR_REG is enabled in hardware
-		//If not, use all configured in hardware
-		XAxiVdma_SetFrmStore(&drv_inst_, 4, XAXIVDMA_WRITE);
+		// Use the actual frame-store count supported by this hardware instance.
+		XAxiVdma_SetFrmStore(&drv_inst_, drv_inst_.MaxNumFrames, XAXIVDMA_WRITE);
 		//Clear errors in SR
 		XAxiVdma_ClearChannelErrors(&drv_inst_.WriteChannel, XAXIVDMA_SR_ERR_ALL_MASK);
 		//Unmask error interrupts
@@ -265,6 +337,10 @@ public:
 		{
 			throw std::runtime_error(__FILE__ ":" LINE_STRING);
 		}
+	}
+	void stopWrite()
+	{
+		XAxiVdma_DmaStop(&drv_inst_, XAXIVDMA_WRITE);
 	}
 	void readHandler(uint32_t irq_types)
 	{

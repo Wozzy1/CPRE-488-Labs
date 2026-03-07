@@ -1,0 +1,4 @@
+
+*** Running vivado
+    with args -log system_auto_cc_4.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source system_auto_cc_4.tcl
+

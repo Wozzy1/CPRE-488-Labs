@@ -55,14 +55,22 @@ using namespace digilent;
 // Function Prototypes
 void configure_platform(void);
 static void start_output_video_pipeline(AXI_VDMA<ScuGicInterruptController>& vdma_driver, VideoOutput& vid, Resolution VideoOutputRes,u8 master_select);
-static void start_input_video_pipeline(AXI_VDMA<ScuGicInterruptController>& vdma_driver, OV5640& cam, Resolution VideoOutputRes, OV5640_cfg::mode_t mode, uintptr_t csi_baseaddr);
+static bool start_input_video_pipeline(AXI_VDMA<ScuGicInterruptController>& vdma_driver, OV5640& cam, Resolution VideoOutputRes, OV5640_cfg::mode_t mode, uintptr_t csi_baseaddr);
 void camera_loop(void); // SW Color Processing of video frames
 int enable_color_pipeline(void); // HW Color Processing of video frames
 
+void camera_interface(void);
+void Playback_Mode(void);
+void Capture_Frame(void);
+static inline u32 access_switches(void);
+static inline u32 access_buttons(void);
 
-// Assign CSI Base address to 0 when CSI IP block not present
-#ifdef  XPAR_CSISS_0_BASEADDR
+
+// Resolve CSI subsystem control base from whichever macro exists in this BSP.
+#if defined(XPAR_CSISS_0_BASEADDR)
   uintptr_t csi_baseaddr_tmp = XPAR_CSISS_0_BASEADDR;
+#elif defined(XPAR_MIPI_CSI2_RX_SUBSYST_0_BASEADDR)
+  uintptr_t csi_baseaddr_tmp = XPAR_MIPI_CSI2_RX_SUBSYST_0_BASEADDR;
 #else
   uintptr_t csi_baseaddr_tmp = 0;
 #endif

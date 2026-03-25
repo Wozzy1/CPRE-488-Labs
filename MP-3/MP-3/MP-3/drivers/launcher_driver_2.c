@@ -21,26 +21,26 @@
 #include <linux/uaccess.h>
 #include <linux/usb.h>
 #include <linux/mutex.h>
-
 #include "launcher_commands.h"
 
 #define DRIVER_AUTHORS "Wilson Diep, Caleb Hemmestad <diepw50@iastate.edu, cihem@iastate.edu>"
 #define DRIVER_DESCRIPTION "USB Driver to control missle launcher"
 
+
 /* Define these values to match your devices */
-#define USB_SKEL_VENDOR_ID	LAUNCHER_VENDOR_ID
-#define USB_SKEL_PRODUCT_ID	LAUNCHER_PRODUCT_ID
+#define USB_LAUNCHER_VENDOR_ID	0x2123
+#define USB_LAUNCHER_PRODUCT_ID	0x1010
 
 /* table of devices that work with this driver */
 static const struct usb_device_id launcher_table[] = {
-	{ USB_DEVICE(USB_SKEL_VENDOR_ID, USB_SKEL_PRODUCT_ID) },
+	{ USB_DEVICE(USB_LAUNCHER_VENDOR_ID, USB_LAUNCHER_PRODUCT_ID) },
 	{ }					/* Terminating entry */
 };
 MODULE_DEVICE_TABLE(usb, launcher_table);
 
 
 /* Get a minor range for your devices from the usb maintainer */
-#define USB_SKEL_MINOR_BASE	192
+#define USB_LAUNCHER_MINOR_BASE	192
 
 /* our private defines. if this grows any larger, use your own .h file */
 #define MAX_TRANSFER		(PAGE_SIZE - 512)
@@ -380,30 +380,35 @@ static void launcher_write_bulk_callback(struct urb *urb)
 	up(&dev->limit_sem);
 }
 
-static ssize_t launcher_write(struct file *file, const char __user *user_buffer,
+static ssize_t launcher_write(struct file *file, const char *user_buffer,
 			  size_t count, loff_t *ppos)
 {
 	struct usb_launcher *dev;
-	unsigned char ctrl_buffer[LAUNCHER_CTRL_BUFFER_SIZE] = { 0 };
-	unsigned char cmd;
 	int retval = 0;
+	struct urb *urb = NULL;
+	char *buf = NULL;
+	size_t writesize = min(count, (size_t)MAX_TRANSFER);
 
 	dev = file->private_data;
 
 	/* verify that we actually have some data to write */
-	if (count < 1)
-		return -EINVAL;
-
-	if (copy_from_user(&cmd, user_buffer, 1))
-		return -EFAULT;
-
-	ctrl_buffer[0] = LAUNCHER_CTRL_COMMAND_PREFIX;
-	ctrl_buffer[1] = cmd;
-
-	mutex_lock(&dev->io_mutex);
-	if (!dev->interface) {
-		retval = -ENODEV;
+	if (count == 0)
 		goto exit;
+
+	/*
+	 * limit the number of URBs in flight to stop a user from using up all
+	 * RAM
+	 */
+	if (!(file->f_flags & O_NONBLOCK)) {
+		if (down_interruptible(&dev->limit_sem)) {
+			retval = -ERESTARTSYS;
+			goto exit;
+		}
+	} else {
+		if (down_trylock(&dev->limit_sem)) {
+			retval = -EAGAIN;
+			goto exit;
+		}
 	}
 
 	spin_lock_irq(&dev->err_lock);
@@ -416,28 +421,91 @@ static ssize_t launcher_write(struct file *file, const char __user *user_buffer,
 	}
 	spin_unlock_irq(&dev->err_lock);
 	if (retval < 0)
-		goto exit;
+		goto error;
 
-	retval = usb_control_msg(dev->udev,
-				 usb_sndctrlpipe(dev->udev, 0),
-				 LAUNCHER_CTRL_REQUEST,
-				 LAUNCHER_CTRL_REQUEST_TYPE,
-				 LAUNCHER_CTRL_VALUE,
-				 LAUNCHER_CTRL_INDEX,
-				 ctrl_buffer,
-				 LAUNCHER_CTRL_BUFFER_SIZE,
-				 1000);
-	if (retval < 0) {
-		dev_err(&dev->interface->dev,
-			"%s - failed sending control message, error %d\n",
-			__func__, retval);
-		goto exit;
+	/* create a urb, and a buffer for it, and copy the data to the urb */
+	urb = usb_alloc_urb(0, GFP_KERNEL);
+	if (!urb) {
+		retval = -ENOMEM;
+		goto error;
 	}
 
-	retval = 1;
+	
+	buf = usb_alloc_coherent(dev->udev, LAUNCHER_CTRL_BUFFER_SIZE, 
+		GFP_KERNEL, &urb->transfer_dma);
+	if (!buf) {
+		retval = -ENOMEM;
+		goto error;
+	}
+
+	unsigned char cmd;
+	if (copy_from_user(&cmd, user_buffer, 1)) {
+		retval = -EFAULT;
+		goto error;
+	}
+	buf[0] = LAUNCHER_CTRL_COMMAND_PREFIX;
+	buf[1] = cmd;
+	buf[2] = 0x00;
+	buf[3] = 0x00;
+	buf[4] = 0x00;
+	buf[5] = 0x00;
+	buf[6] = 0x00;
+	buf[7] = 0x00;
+
+	/* this lock makes sure we don't submit URBs to gone devices */
+	mutex_lock(&dev->io_mutex);
+	if (!dev->interface) {		/* disconnect() was called */
+		mutex_unlock(&dev->io_mutex);
+		retval = -ENODEV;
+		goto error;
+	}
+
+	/* initialize the urb properly */
+	// TODO replace with our own function to fill the URB
+	usb_control_msg(dev->udev, 
+		usb_sndctrlpipe(dev->udev, 0),
+		LAUNCHER_CTRL_REQUEST, LAUNCHER_CTRL_REQUEST_TYPE,
+		LAUNCHER_CTRL_VALUE, LAUNCHER_CTRL_INDEX,
+		buf, LAUNCHER_CTRL_BUFFER_SIZE,
+		0
+	);
+	// usb_fill_bulk_urb(urb, dev->udev,
+	// 		  usb_sndbulkpipe(dev->udev, dev->bulk_out_endpointAddr),
+	// 		  buf, writesize, launcher_write_bulk_callback, dev);
+
+	urb->transfer_flags |= URB_NO_TRANSFER_DMA_MAP;
+
+	usb_anchor_urb(urb, &dev->submitted);
+
+	/* send the data out the bulk port */
+	retval = usb_submit_urb(urb, GFP_KERNEL);
+	mutex_unlock(&dev->io_mutex);
+	if (retval) {
+		dev_err(&dev->interface->dev,
+			"%s - failed submitting write urb, error %d\n",
+			__func__, retval);
+		goto error_unanchor;
+	}
+
+	/*
+	 * release our reference to this urb, the USB core will eventually free
+	 * it entirely
+	 */
+	usb_free_urb(urb);
+
+
+	return writesize;
+
+error_unanchor:
+	usb_unanchor_urb(urb);
+error:
+	if (urb) {
+		usb_free_coherent(dev->udev, writesize, buf, urb->transfer_dma);
+		usb_free_urb(urb);
+	}
+	up(&dev->limit_sem);
 
 exit:
-	mutex_unlock(&dev->io_mutex);
 	return retval;
 }
 
@@ -458,11 +526,11 @@ static const struct file_operations launcher_fops = {
 static struct usb_class_driver launcher_class = {
 	.name =		"launcher%d",
 	.fops =		&launcher_fops,
-	.minor_base =	USB_SKEL_MINOR_BASE,
+	.minor_base =	USB_LAUNCHER_MINOR_BASE,
 };
 
 static int launcher_probe(struct usb_interface *interface,
-			  const struct usb_device_id *id)
+		      const struct usb_device_id *id)
 {
 	struct usb_launcher *dev;
 	struct usb_host_interface *iface_desc;
@@ -492,39 +560,7 @@ static int launcher_probe(struct usb_interface *interface,
 	iface_desc = interface->cur_altsetting;
 	for (i = 0; i < iface_desc->desc.bNumEndpoints; ++i) {
 		endpoint = &iface_desc->endpoint[i].desc;
-
-		if (!dev->bulk_in_endpointAddr &&
-		    usb_endpoint_is_bulk_in(endpoint)) {
-			/* we found a bulk in endpoint */
-			buffer_size = usb_endpoint_maxp(endpoint);
-			dev->bulk_in_size = buffer_size;
-			dev->bulk_in_endpointAddr = endpoint->bEndpointAddress;
-			dev->bulk_in_buffer = kmalloc(buffer_size, GFP_KERNEL);
-			if (!dev->bulk_in_buffer) {
-				dev_err(&interface->dev,
-					"Could not allocate bulk_in_buffer\n");
-				goto error;
-			}
-			dev->bulk_in_urb = usb_alloc_urb(0, GFP_KERNEL);
-			if (!dev->bulk_in_urb) {
-				dev_err(&interface->dev,
-					"Could not allocate bulk_in_urb\n");
-				goto error;
-			}
-		}
-
-		if (!dev->bulk_out_endpointAddr &&
-		    usb_endpoint_is_bulk_out(endpoint)) {
-			/* we found a bulk out endpoint */
-			dev->bulk_out_endpointAddr = endpoint->bEndpointAddress;
-		}
 	}
-	if (!(dev->bulk_in_endpointAddr && dev->bulk_out_endpointAddr)) {
-		dev_err(&interface->dev,
-			"Could not find both bulk-in and bulk-out endpoints\n");
-		goto error;
-	}
-
 	/* save our data pointer in this interface device */
 	usb_set_intfdata(interface, dev);
 
@@ -540,7 +576,7 @@ static int launcher_probe(struct usb_interface *interface,
 
 	/* let the user know what node this device is now attached to */
 	dev_info(&interface->dev,
-		 "USB launcher device now attached to /dev/launcher%d",
+		 "USB Skeleton device now attached to USBSkel-%d",
 		 interface->minor);
 	return 0;
 
@@ -572,7 +608,7 @@ static void launcher_disconnect(struct usb_interface *interface)
 	/* decrement our usage count */
 	kref_put(&dev->kref, launcher_delete);
 
-	dev_info(&interface->dev, "USB launcher #%d now disconnected", minor);
+	dev_info(&interface->dev, "USB Skeleton #%d now disconnected", minor);
 }
 
 static void launcher_draw_down(struct usb_launcher *dev)
@@ -622,7 +658,7 @@ static int launcher_post_reset(struct usb_interface *intf)
 }
 
 static struct usb_driver launcher_driver = {
-	.name =		LAUNCHER_NODE,
+	.name =		"launchereton",
 	.probe =	launcher_probe,
 	.disconnect =	launcher_disconnect,
 	.suspend =	launcher_suspend,

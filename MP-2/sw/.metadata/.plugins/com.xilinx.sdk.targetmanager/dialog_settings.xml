@@ -3,7 +3,7 @@
 	<item value="Local" key="MP2-TPG-target"/>
 	<item value="false" key="MP2-TPG-partial_bit"/>
 	<item value="false" key="MP2-TPG-skip_rev_check"/>
-	<item value="{&quot;cables&quot;:[{&quot;name&quot;:&quot;Digilent Zed 210248B9DA56&quot;,&quot;indexContextMap&quot;:{&quot;2&quot;:&quot;jsn-Zed-210248B9DA56-4ba00477-0&quot;,&quot;3&quot;:&quot;jsn-Zed-210248B9DA56-23727093-0&quot;}}]}" key="devices_info_Local"/>
+	<item value="{&quot;cables&quot;:[{&quot;name&quot;:&quot;Digilent Zed 210248B18B23&quot;,&quot;indexContextMap&quot;:{&quot;2&quot;:&quot;jsn-Zed-210248B18B23-4ba00477-0&quot;,&quot;3&quot;:&quot;jsn-Zed-210248B18B23-23727093-0&quot;}}]}" key="devices_info_Local"/>
 	<item value="Auto Detect" key="MP2-TPG-device"/>
 	<item value="_ide/bitstream/system_wrapper.bit" key="MP2-TPG-bitFile"/>
 	<item value="MP2-TPG" key="programfpga.sdxproject"/>

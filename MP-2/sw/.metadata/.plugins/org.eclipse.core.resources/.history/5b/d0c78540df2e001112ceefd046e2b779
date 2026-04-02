@@ -708,6 +708,9 @@ void camera_loop(void)
   // Select which byte in each 16-bit DMA word contains valid Bayer sample.
   const bool CAMERA_RAW_IN_LOW_BYTE = true;
 
+  const int magenta_r = 37;
+  const int magenta_g = 150;
+  const int magenta_b = 150;
   // Timestamps used to compute software pipeline throughput.
   XTime tStart, tEnd;
   XTime_GetTime(&tStart);

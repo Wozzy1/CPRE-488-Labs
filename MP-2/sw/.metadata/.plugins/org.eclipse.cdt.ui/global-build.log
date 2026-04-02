@@ -1,6 +1,6 @@
 Nothing to build in platform 'TPG'
 
-19:55:07 **** Incremental Build of configuration Debug for project cannon-camera ****
+17:42:29 **** Incremental Build of configuration Debug for project MP2-TPG ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step

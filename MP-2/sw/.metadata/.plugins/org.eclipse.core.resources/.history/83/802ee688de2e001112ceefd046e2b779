@@ -665,11 +665,10 @@ void camera_loop(void)
 
   // In HW-pipeline mode, keep VDMA in its normal circular/genlock path:
   // camera -> color pipeline -> S2MM and MM2S -> HDMI.
-  // disabling hardware and buttons
-//  while (1) {
-//	camera_interface();
-//    sleep(1);
-//  }
+  while (1) {
+	camera_interface();
+    sleep(1);
+  }
 
   // Read current park pointer state from VDMA core.
   parkptr = XAxiVdma_ReadReg(XPAR_AXIVDMA_0_BASEADDR, XAXIVDMA_PARKPTR_OFFSET);

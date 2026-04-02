@@ -1,4 +1,4 @@
-17:18:23 **** Incremental Build of configuration Debug for project MP2-TPG ****
+17:42:29 **** Incremental Build of configuration Debug for project MP2-TPG ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
@@ -6,5 +6,5 @@ a9-linaro-pre-build-step
 make --no-print-directory main-build
 make[1]: Nothing to be done for 'main-build'.
 
-17:18:24 Build Finished (took 224ms)
+17:42:29 Build Finished (took 276ms)
 

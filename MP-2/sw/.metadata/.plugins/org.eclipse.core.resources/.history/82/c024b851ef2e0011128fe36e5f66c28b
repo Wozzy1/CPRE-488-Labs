@@ -1,0 +1,1250 @@
+/*
+ * main2.cc
+ *
+ *  Created on: Apr 12, 2019
+ *      Author: ROGyorgE
+ */
+
+#include "./camera_app.h"
+#include "xtime_l.h"
+
+#include <stdio.h>
+#include <stdbool.h>
+#include "xil_printf.h"
+#include "xparameters.h"
+#include "xil_io.h"
+#include "xtime_l.h"
+#include "xuartps_hw.h"
+#include "xgpio.h"
+#include "sleep.h"
+#include <string.h>
+
+
+/* SW0 comes from AXI GPIO channel 1, bit 0. */
+#define SW0_MASK 0x1U
+#define SW1_MASK 0x2U
+#define SW2_MASK 0x4U
+#define SW3_MASK 0x8U
+#define SW4_MASK 0x10U
+#define SW7_MASK 0x80U
+
+/* Button bit mapping: bit4=BTNU, bit3=BTNR, bit2=BTNL, bit1=BTND, bit0=BTNC */
+#define BTNC_MASK 0x1U
+#define BTND_MASK 0x2U
+#define BTNL_MASK 0x4U
+#define BTNR_MASK 0x8U
+#define BTNU_MASK 0x10U
+
+static XGpio sw_gpio_inst;
+static XGpio btn_gpio_inst;
+static bool user_gpio_ready = false;
+
+static int init_user_gpio(void)
+{
+  int status;
+
+  status = XGpio_Initialize(&btn_gpio_inst, XPAR_AXI_GPIO_0_DEVICE_ID);
+  if (status != XST_SUCCESS) {
+    xil_printf("ERROR: AXI GPIO button init failed (%d)\r\n", status);
+    return status;
+  }
+
+  status = XGpio_Initialize(&sw_gpio_inst, XPAR_AXI_GPIO_1_DEVICE_ID);
+  if (status != XST_SUCCESS) {
+    xil_printf("ERROR: AXI GPIO switch init failed (%d)\r\n", status);
+    return status;
+  }
+
+  // All bits are board inputs for both GPIO blocks.
+  XGpio_SetDataDirection(&btn_gpio_inst, 1, 0xFFFFFFFFU);
+  XGpio_SetDataDirection(&sw_gpio_inst, 1, 0xFFFFFFFFU);
+  user_gpio_ready = true;
+  xil_printf("AXI GPIO ready (btn/switch)\r\n");
+  return XST_SUCCESS;
+}
+
+int main()
+{
+  // Bring up board-level services first (UART, caches, HDMI I2C, camera reset GPIO).
+  configure_platform();
+
+  // Bring up HDMI output path (VTC + read VDMA + frame buffers with known test colors).
+  start_output_video_pipeline(vdma_a_driver, vid, Resolution::R1920_1080_60_PP,read_master_select);
+
+  // Bring up camera input path (write VDMA + camera mode + CSI enable).
+  if (!start_input_video_pipeline(vdma_a_driver, *cam_a_ptr, Resolution::R1920_1080_60_PP, OV5640_cfg::mode_t::MODE_1080P_1920_1080_30fps_336M_MIPI, csi_baseaddr_tmp)) {
+    xil_printf("ERROR: input pipeline startup failed; staying on static frame.\r\n");
+    while (1) {
+      sleep(1);
+    }
+  }
+
+  // Run software image-processing loop (demosaic + RGB->YCbCr422 pack).
+  camera_loop();
+
+  // If camera_loop ever returns, perform clean platform shutdown.
+  cleanup_platform();
+}
+
+static inline u32 access_switches(void)
+{
+    if (!user_gpio_ready) {
+      return 0U;
+    }
+    return XGpio_DiscreteRead(&sw_gpio_inst, 1);
+}
+
+static inline u32 access_buttons(void)
+{
+    if (!user_gpio_ready) {
+      return 0U;
+    }
+    return XGpio_DiscreteRead(&btn_gpio_inst, 1);
+}
+
+static constexpr int CAPTURE_MAX_IMAGES = 32;
+static constexpr int FRAME_WIDTH = 1920;
+static constexpr int FRAME_HEIGHT = 1080;
+static constexpr int FRAME_BYTES = FRAME_WIDTH * FRAME_HEIGHT * 2;
+// Reserve a DDR region for up to 32 raw YUV422 frames (about 132 MiB).
+static constexpr uintptr_t capture_baseaddr = 0x0B200000U;
+static constexpr uintptr_t zoom_baseaddr = capture_baseaddr + static_cast<uintptr_t>(CAPTURE_MAX_IMAGES) * FRAME_BYTES;
+static constexpr uintptr_t ddr_end_addr = 0x20000000U;
+static constexpr uintptr_t record_baseaddr = zoom_baseaddr + FRAME_BYTES;
+static constexpr int RECORD_SECONDS = 10;
+static constexpr int RECORD_SAMPLE_FPS = 5;
+static constexpr u32 RECORD_SAMPLE_MS = 1000U / RECORD_SAMPLE_FPS;
+static constexpr int RECORD_BUFFER_CAPACITY = static_cast<int>((ddr_end_addr - record_baseaddr) / FRAME_BYTES);
+static constexpr int RECORD_FRAME_CAPACITY = ((RECORD_SECONDS * RECORD_SAMPLE_FPS) < RECORD_BUFFER_CAPACITY) ? (RECORD_SECONDS * RECORD_SAMPLE_FPS) : RECORD_BUFFER_CAPACITY;
+
+static inline volatile Xuint16 *frame_store_ptr(int frame_idx)
+{
+  return reinterpret_cast<volatile Xuint16 *>(frame_baseaddr + static_cast<uintptr_t>(frame_idx) * FRAME_BYTES);
+}
+
+static inline volatile Xuint16 *capture_slot_ptr(int slot_idx)
+{
+  return reinterpret_cast<volatile Xuint16 *>(capture_baseaddr + static_cast<uintptr_t>(slot_idx) * FRAME_BYTES);
+}
+
+static inline volatile Xuint16 *zoom_frame_ptr(void)
+{
+  return reinterpret_cast<volatile Xuint16 *>(zoom_baseaddr);
+}
+
+static inline volatile Xuint16 *record_slot_ptr(int slot_idx)
+{
+  return reinterpret_cast<volatile Xuint16 *>(record_baseaddr + static_cast<uintptr_t>(slot_idx) * FRAME_BYTES);
+}
+
+static inline void copy_frame_words(volatile Xuint16 *dst, volatile Xuint16 *src)
+{
+  memcpy((void *)dst, (const void *)src, FRAME_BYTES);
+}
+
+static inline int current_read_frame_index(void)
+{
+  u32 parkptr = XAxiVdma_ReadReg(XPAR_AXIVDMA_0_BASEADDR, XAXIVDMA_PARKPTR_OFFSET);
+  return static_cast<int>((parkptr & XAXIVDMA_PARKPTR_READSTR_MASK) >> XAXIVDMA_READSTR_SHIFT);
+}
+
+static inline int current_write_frame_index(void)
+{
+  u32 parkptr = XAxiVdma_ReadReg(XPAR_AXIVDMA_0_BASEADDR, XAXIVDMA_PARKPTR_OFFSET);
+  return static_cast<int>((parkptr & XAXIVDMA_PARKPTR_WRTSTR_MASK) >> XAXIVDMA_WRTSTR_SHIFT);
+}
+
+struct CameraZoomPreset {
+  int numer;
+  int denom;
+  const char *label;
+};
+
+static constexpr CameraZoomPreset CAMERA_ZOOM_PRESETS[] = {
+  {1, 1, "1.0x"},
+  {5, 4, "1.25x"},
+  {3, 2, "1.5x"},
+  {2, 1, "2.0x"},
+};
+
+static int current_zoom_level = 0;
+static bool playback_active = false;
+static bool preview_active = false;
+static bool record_armed = false;
+static bool record_active = false;
+static bool record_playback_active = false;
+static bool record_clip_ready = false;
+static int record_frame_count = 0;
+static int displayed_record_slot = -1;
+static int playback_record_slot = 0;
+static XTime record_start_tick = 0;
+static XTime record_next_frame_tick = 0;
+static XTime record_playback_next_tick = 0;
+
+enum class DisplaySource { LIVE, STATIC, ZOOM, RECORD, SW };
+static DisplaySource display_source = DisplaySource::LIVE;
+static int displayed_capture_slot = -1;
+static bool write_stream_paused = false;
+static constexpr int PARKED_FRAME_INDEX = 0;
+
+static inline void park_mm2s_on_frame(int frame_idx)
+{
+  u32 parkptr = XAxiVdma_ReadReg(XPAR_AXIVDMA_0_BASEADDR, XAXIVDMA_PARKPTR_OFFSET);
+  parkptr &= ~XAXIVDMA_PARKPTR_READREF_MASK;
+  parkptr |= (static_cast<u32>(frame_idx) << XAXIVDMA_READREF_SHIFT) & XAXIVDMA_PARKPTR_READREF_MASK;
+  XAxiVdma_WriteReg(XPAR_AXIVDMA_0_BASEADDR, XAXIVDMA_PARKPTR_OFFSET, parkptr);
+
+  u32 mm2s_dmacr = XAxiVdma_ReadReg(XPAR_AXIVDMA_0_BASEADDR, XAXIVDMA_TX_OFFSET + XAXIVDMA_CR_OFFSET);
+  XAxiVdma_WriteReg(XPAR_AXIVDMA_0_BASEADDR, XAXIVDMA_TX_OFFSET + XAXIVDMA_CR_OFFSET, mm2s_dmacr & ~XAXIVDMA_CR_TAIL_EN_MASK);
+}
+
+static inline void unpark_mm2s(void)
+{
+  u32 mm2s_dmacr = XAxiVdma_ReadReg(XPAR_AXIVDMA_0_BASEADDR, XAXIVDMA_TX_OFFSET + XAXIVDMA_CR_OFFSET);
+  XAxiVdma_WriteReg(XPAR_AXIVDMA_0_BASEADDR, XAXIVDMA_TX_OFFSET + XAXIVDMA_CR_OFFSET, mm2s_dmacr | XAXIVDMA_CR_TAIL_EN_MASK);
+}
+
+static bool pause_live_write_stream(void)
+{
+  if (write_stream_paused) {
+    return true;
+  }
+
+  try {
+    vdma_a_driver.stopWrite();
+    write_stream_paused = true;
+    return true;
+  } catch (const std::exception& e) {
+    xil_printf("ERROR: failed to pause write stream: %s\r\n", e.what());
+    return false;
+  }
+}
+
+static bool resume_live_write_stream(void)
+{
+  if (!write_stream_paused) {
+    return true;
+  }
+
+  try {
+    vdma_a_driver.enableWrite();
+    write_stream_paused = false;
+    return true;
+  } catch (const std::exception& e) {
+    xil_printf("WARN: write resume failed, reinitializing write stream: %s\r\n", e.what());
+  }
+
+  try {
+    vdma_a_driver.resetWrite();
+    vdma_a_driver.configureWrite(FRAME_WIDTH, FRAME_HEIGHT, FRAME_WIDTH, FRAME_HEIGHT);
+    vdma_a_driver.enableWrite();
+    write_stream_paused = false;
+    return true;
+  } catch (const std::exception& e) {
+    xil_printf("ERROR: failed to restart write stream: %s\r\n", e.what());
+    return false;
+  }
+}
+
+static bool switch_display_to_live(void)
+{
+  if (display_source == DisplaySource::LIVE) {
+    return true;
+  }
+
+  try {
+    vdma_a_driver.stopRead();
+  } catch (const std::exception&) {
+  }
+  vdma_a_driver.resetRead();
+  vdma_a_driver.configureRead(FRAME_WIDTH, FRAME_HEIGHT, read_master_select);
+  vdma_a_driver.enableRead();
+  display_source = DisplaySource::LIVE;
+  displayed_capture_slot = -1;
+  xil_printf("Display source -> LIVE\r\n");
+  return true;
+}
+
+static bool switch_display_to_zoom(void)
+{
+  if (display_source == DisplaySource::ZOOM) {
+    return true;
+  }
+
+  try {
+    vdma_a_driver.stopRead();
+  } catch (const std::exception&) {
+  }
+  vdma_a_driver.resetRead();
+  vdma_a_driver.configureReadFromAddress(FRAME_WIDTH, FRAME_HEIGHT, static_cast<uint32_t>(zoom_baseaddr));
+  vdma_a_driver.enableRead();
+  display_source = DisplaySource::ZOOM;
+  displayed_capture_slot = -1;
+  xil_printf("Display source -> ZOOM\r\n");
+  return true;
+}
+
+static bool switch_display_to_sw(void)
+{
+  if (display_source == DisplaySource::SW) {
+    return true;
+  }
+
+  try {
+    vdma_a_driver.stopRead();
+  } catch (const std::exception&) {
+  }
+  vdma_a_driver.resetRead();
+  vdma_a_driver.configureReadFromAddress(FRAME_WIDTH, FRAME_HEIGHT, XAxiVdma_ReadReg(XPAR_AXIVDMA_0_BASEADDR, XAXIVDMA_S2MM_ADDR_OFFSET+XAXIVDMA_START_ADDR_OFFSET));
+  vdma_a_driver.enableRead();
+  display_source = DisplaySource::SW;
+  displayed_capture_slot = -1;
+  xil_printf("Display source -> SW\r\n");
+  return true;
+}
+static bool switch_display_to_record_slot(int slot_idx)
+{
+  if (slot_idx < 0 || slot_idx >= record_frame_count) {
+    return false;
+  }
+  volatile Xuint16 *dst = zoom_frame_ptr();
+  volatile Xuint16 *src = record_slot_ptr(slot_idx);
+  copy_frame_words(dst, src);
+  Xil_DCacheFlushRange((INTPTR)(uintptr_t)dst, FRAME_BYTES);
+
+  if (display_source != DisplaySource::RECORD) {
+    try {
+      vdma_a_driver.stopRead();
+    } catch (const std::exception&) {
+    }
+    vdma_a_driver.resetRead();
+    vdma_a_driver.configureReadFromAddress(FRAME_WIDTH, FRAME_HEIGHT, static_cast<uint32_t>(zoom_baseaddr));
+    vdma_a_driver.enableRead();
+  }
+
+  display_source = DisplaySource::RECORD;
+  displayed_capture_slot = -1;
+  displayed_record_slot = slot_idx;
+  return true;
+}
+
+static bool switch_display_to_capture_slot(int slot_idx)
+{
+  if (slot_idx < 0 || slot_idx >= CAPTURE_MAX_IMAGES) {
+    return false;
+  }
+
+  if (display_source == DisplaySource::STATIC && displayed_capture_slot == slot_idx) {
+    return true;
+  }
+
+  // Copy chosen capture into a known frame-store, then park MM2S on it.
+  copy_frame_words(frame_store_ptr(PARKED_FRAME_INDEX), capture_slot_ptr(slot_idx));
+  Xil_DCacheFlushRange((INTPTR)(uintptr_t)frame_store_ptr(PARKED_FRAME_INDEX), FRAME_BYTES);
+  park_mm2s_on_frame(PARKED_FRAME_INDEX);
+  display_source = DisplaySource::STATIC;
+  displayed_capture_slot = slot_idx;
+  xil_printf("Display source -> STATIC slot %d\r\n", slot_idx);
+  return true;
+}
+
+static void capture_current_frame_to_slot(int slot_idx)
+{
+  int rd_idx = current_read_frame_index();
+  if (rd_idx < 0 || rd_idx >= XPAR_AXIVDMA_0_NUM_FSTORES) {
+    rd_idx = 0;
+  }
+  volatile Xuint16 *dst = capture_slot_ptr(slot_idx);
+  copy_frame_words(dst, frame_store_ptr(rd_idx));
+  Xil_DCacheFlushRange((INTPTR)(uintptr_t)dst, FRAME_BYTES);
+}
+
+static int latest_completed_write_frame_index(void)
+{
+  int wr_idx = current_write_frame_index();
+  if (wr_idx < 0 || wr_idx >= XPAR_AXIVDMA_0_NUM_FSTORES) {
+    return 0;
+  }
+
+  wr_idx -= 1;
+  if (wr_idx < 0) {
+    wr_idx += XPAR_AXIVDMA_0_NUM_FSTORES;
+  }
+  return wr_idx;
+}
+
+static void capture_live_frame_to_record_slot(int slot_idx)
+{
+  int src_idx = latest_completed_write_frame_index();
+  volatile Xuint16 *src = frame_store_ptr(src_idx);
+  volatile Xuint16 *dst = record_slot_ptr(slot_idx);
+  Xil_DCacheInvalidateRange((INTPTR)(uintptr_t)src, FRAME_BYTES);
+  copy_frame_words(dst, src);
+  Xil_DCacheFlushRange((INTPTR)(uintptr_t)dst, FRAME_BYTES);
+}
+
+static void update_zoom_level(int next_zoom_level)
+{
+  if (next_zoom_level < 0) {
+    next_zoom_level = 0;
+  }
+  int max_zoom_level = static_cast<int>(sizeof(CAMERA_ZOOM_PRESETS) / sizeof(CAMERA_ZOOM_PRESETS[0])) - 1;
+  if (next_zoom_level > max_zoom_level) {
+    next_zoom_level = max_zoom_level;
+  }
+  if (next_zoom_level == current_zoom_level) {
+    return;
+  }
+
+  current_zoom_level = next_zoom_level;
+  xil_printf("Zoom -> %s\r\n", CAMERA_ZOOM_PRESETS[current_zoom_level].label);
+}
+
+static void render_zoomed_live_frame(void)
+{
+  if (current_zoom_level == 0) {
+    return;
+  }
+
+  const CameraZoomPreset& zoom = CAMERA_ZOOM_PRESETS[current_zoom_level];
+  int rd_idx = current_read_frame_index();
+  if (rd_idx < 0 || rd_idx >= XPAR_AXIVDMA_0_NUM_FSTORES) {
+    rd_idx = 0;
+  }
+
+  volatile Xuint16 *src = frame_store_ptr(rd_idx);
+  volatile Xuint16 *dst = zoom_frame_ptr();
+  const int center_x = FRAME_WIDTH / 2;
+  const int center_y = FRAME_HEIGHT / 2;
+
+  Xil_DCacheInvalidateRange((INTPTR)(uintptr_t)src, FRAME_BYTES);
+
+  for (int y = 0; y < FRAME_HEIGHT; ++y) {
+    int src_y = center_y + ((y - center_y) * zoom.denom) / zoom.numer;
+    if (src_y < 0) {
+      src_y = 0;
+    } else if (src_y >= FRAME_HEIGHT) {
+      src_y = FRAME_HEIGHT - 1;
+    }
+
+    for (int x = 0; x < FRAME_WIDTH; x += 2) {
+      int src_x = center_x + ((x - center_x) * zoom.denom) / zoom.numer;
+      if (src_x < 0) {
+        src_x = 0;
+      } else if (src_x >= FRAME_WIDTH - 1) {
+        src_x = FRAME_WIDTH - 2;
+      }
+      src_x &= ~1;
+
+      int dst_idx0 = y * FRAME_WIDTH + x;
+      int dst_idx1 = dst_idx0 + 1;
+      int src_idx0 = src_y * FRAME_WIDTH + src_x;
+      int src_idx1 = src_idx0 + 1;
+      dst[dst_idx0] = src[src_idx0];
+      dst[dst_idx1] = src[src_idx1];
+    }
+  }
+
+  Xil_DCacheFlushRange((INTPTR)(uintptr_t)dst, FRAME_BYTES);
+}
+
+static void camera_interface_step(void) {
+  static int capture_count = 0;
+  static int next_capture_slot = 0;
+  static int playback_slot = 0;
+  static int preview_slot = 0;
+  static int prev_sw0 = 0;
+  static int prev_sw7 = 0;
+  static int prev_btnc = 0;
+  static int prev_btnd = 0;
+  static int prev_btnl = 0;
+  static int prev_btnr = 0;
+  static int prev_btnu = 0;
+  static XTime preview_end_tick = 0;
+  const u64 preview_ticks = 2ULL * static_cast<u64>(COUNTS_PER_SECOND);
+
+  u32 sw_data = access_switches();
+  u32 btn_data = access_buttons();
+
+  int sw0 = ((sw_data & SW0_MASK) != 0U) ? 1 : 0;
+  int sw7 = ((sw_data & 0x80) != 0U) ? 1 : 0;	// sw7 controls hw or sw
+  int btnc = ((btn_data & BTNC_MASK) != 0U) ? 1 : 0;
+  int btnd = ((btn_data & BTND_MASK) != 0U) ? 1 : 0;
+  int btnl = ((btn_data & BTNL_MASK) != 0U) ? 1 : 0;
+  int btnr = ((btn_data & BTNR_MASK) != 0U) ? 1 : 0;
+  int btnu = ((btn_data & BTNU_MASK) != 0U) ? 1 : 0;
+
+  if (sw7 && !prev_sw7) {
+	  (void)switch_display_to_sw();
+  }
+
+  // Playback mode toggle via SW0.
+  if (sw0 && !prev_sw0) {
+    if (record_active || record_playback_active || record_armed) {
+      prev_sw0 = sw0;
+      prev_btnc = btnc;
+      prev_btnd = btnd;
+      prev_btnl = btnl;
+      prev_btnr = btnr;
+      prev_btnu = btnu;
+      return;
+    }
+    if (preview_active) {
+      preview_active = false;
+      (void)switch_display_to_live();
+      (void)resume_live_write_stream();
+    }
+    preview_active = false;
+    playback_active = true;
+    if (capture_count > 0) {
+      playback_slot = (next_capture_slot - 1 + CAPTURE_MAX_IMAGES) % CAPTURE_MAX_IMAGES; // newest image
+      (void)pause_live_write_stream();
+      (void)switch_display_to_capture_slot(playback_slot);
+    } else {
+      xil_printf("Playback mode ON (no captures yet)\r\n");
+    }
+    xil_printf("Playback mode ON\r\n");
+  } else if (!sw0 && prev_sw0) {
+    playback_active = false;
+    preview_active = false;
+    if (current_zoom_level == 0) {
+      (void)switch_display_to_live();
+    } else {
+      (void)switch_display_to_zoom();
+    }
+    (void)resume_live_write_stream();
+    xil_printf("Playback mode OFF\r\n");
+  }
+
+  // Capture on BTNC rising edge while in live mode.
+  if (!playback_active && !preview_active && btnc && !prev_btnc) {
+    int slot = next_capture_slot;
+    capture_current_frame_to_slot(slot);
+    if (capture_count < CAPTURE_MAX_IMAGES) {
+      ++capture_count;
+    }
+    next_capture_slot = (next_capture_slot + 1) % CAPTURE_MAX_IMAGES;
+
+    // Freeze immediately for 2 seconds by parking display and pausing writes.
+    preview_slot = slot;
+    (void)pause_live_write_stream();
+    (void)switch_display_to_capture_slot(preview_slot);
+    Capture_Frame();
+    XTime now;
+    XTime_GetTime(&now);
+    preview_end_tick = now + preview_ticks;
+    preview_active = true;
+  }
+
+  if (!playback_active && !preview_active && btnu && !prev_btnu) {
+    update_zoom_level(current_zoom_level + 1);
+    if (current_zoom_level == 0) {
+      (void)switch_display_to_live();
+    } else {
+      (void)switch_display_to_zoom();
+    }
+  }
+
+  if (!playback_active && !preview_active && btnd && !prev_btnd) {
+    update_zoom_level(current_zoom_level - 1);
+    if (current_zoom_level == 0) {
+      (void)switch_display_to_live();
+    } else {
+      (void)switch_display_to_zoom();
+    }
+  }
+
+  // Rotate through captured images in playback mode using left/right buttons.
+  if (playback_active && capture_count > 0) {
+    int valid_count = (capture_count < CAPTURE_MAX_IMAGES) ? capture_count : CAPTURE_MAX_IMAGES;
+    int low_slot = 0;
+    int high_slot = valid_count - 1;
+
+    if (btnl && !prev_btnl) {
+      if (capture_count < CAPTURE_MAX_IMAGES) {
+        playback_slot = (playback_slot <= low_slot) ? high_slot : (playback_slot - 1);
+      } else {
+        playback_slot = (playback_slot - 1 + CAPTURE_MAX_IMAGES) % CAPTURE_MAX_IMAGES;
+      }
+      (void)switch_display_to_capture_slot(playback_slot);
+    }
+
+    if (btnr && !prev_btnr) {
+      if (capture_count < CAPTURE_MAX_IMAGES) {
+        playback_slot = (playback_slot >= high_slot) ? low_slot : (playback_slot + 1);
+      } else {
+        playback_slot = (playback_slot + 1) % CAPTURE_MAX_IMAGES;
+      }
+      (void)switch_display_to_capture_slot(playback_slot);
+    }
+  } else if (preview_active) {
+    XTime now;
+    XTime_GetTime(&now);
+    if (now >= preview_end_tick) {
+      preview_active = false;
+      (void)switch_display_to_live();
+      (void)resume_live_write_stream();
+    }
+  }
+
+  prev_sw0 = sw0;
+  prev_sw7 = sw7;
+  prev_btnc = btnc;
+  prev_btnd = btnd;
+  prev_btnl = btnl;
+  prev_btnr = btnr;
+  prev_btnu = btnu;
+}
+
+void camera_interface(void) {
+  while (1) {
+    camera_interface_step();
+    usleep(20000);
+  }
+}
+
+void Playback_Mode(void) {
+	 xil_printf("Playback Mode Activated!");
+}
+
+void Capture_Frame(void) {
+	 xil_printf("Captured Frame");
+}
+
+
+/////////////////////////////////
+// Start bringing up the board //
+/////////////////////////////////
+void configure_platform(void)
+{
+  // Initialize BSP/platform services used by the rest of the app.
+  init_platform();
+
+  // Program HDMI transmitter over I2C so display sink can lock properly.
+  hdmi_config(XPAR_AXI_IIC_HDMI_BASEADDR);
+
+  // Initialize user button/switch GPIO through the driver (safer than raw MMIO reads).
+  init_user_gpio();
+
+  xil_printf("Initializing...\r\n");
+
+  // Start message after base platform init completes.
+  xil_printf("Starting system...\r\n");
+  // Assert camera reset/power GPIO low to force a clean camera restart.
+  gpio_driver.clearBit(gpio_driver.Bits::CAM_GPIO0);
+  // Hold reset long enough for hardware to settle.
+  ::usleep(1000000);
+  // Release camera reset/power GPIO high.
+  gpio_driver.setBit(gpio_driver.Bits::CAM_GPIO0);
+  // Wait after release so sensor is stable before I2C transactions.
+  ::usleep(1000000);
+  xil_printf("CAM GPIO complete\r\n");
+
+  // Select TCA9546 I2C mux channel connected to the camera.
+  muxch_a_ptr = std::make_unique<TCA9546>(iic_driver, 0, 1 << 0);
+  // Create OV5640 camera driver instance on selected mux channel.
+  cam_a_ptr = std::make_unique<OV5640>(*muxch_a_ptr, nopgpio);
+  // Select frame-store index 0 as default MM2S master selection.
+  read_master_select  = 0x00;
+}
+
+
+////////////////////////////////////////////
+// Bring up output pipeline back-to-front //
+////////////////////////////////////////////
+void start_output_video_pipeline(AXI_VDMA<ScuGicInterruptController>& vdma_driver, VideoOutput& vid, Resolution VideoOutputRes, u8 master_select)
+{
+
+  // Reset VTC so timing state starts from a known baseline.
+  xil_printf("\r\nVTC resetting...\r\n");
+  vid.reset();
+
+  // Reset MM2S/read side so HDMI reads start from known channel state.
+  xil_printf("VDMA Read Channel resetting...\r\n");
+  vdma_driver.resetRead();
+
+  // Configure VTC + dynamic clock for requested output resolution/timing.
+  xil_printf("Waiting for clocks to lock...\r\n");
+  vid.configure(VideoOutputRes);
+  xil_printf("Clocks locked\r\n");
+
+  // Configure MM2S dimensions so each line/frame matches output timing.
+  vdma_driver.configureRead(timing[static_cast<int>(VideoOutputRes)].h_active, timing[static_cast<int>(VideoOutputRes)].v_active,master_select);
+
+  // Compute total bytes across all frame stores at 16 bpp (2 bytes/pixel).
+  Xuint32 i;
+  Xuint32 storage_size = XPAR_AXIVDMA_0_NUM_FSTORES * ((1920*1080)<<1);
+  // Base pointer to contiguous frame-buffer memory region.
+  volatile Xuint32 *pStorageMem = (Xuint32 *)frame_baseaddr;
+
+  // Frame #1 - Red pixels
+  for (i = 0; i < storage_size / XPAR_AXIVDMA_0_NUM_FSTORES; i += 4) {
+	  *pStorageMem++ = 0xF0525A52;  // Red
+  }
+  // Frame #2 - Green pixels
+  for (i = 0; i < storage_size / XPAR_AXIVDMA_0_NUM_FSTORES; i += 4) {
+	  *pStorageMem++ = 0x36912291; // Green
+  }
+  // Frame #3 - Blue pixels
+  for (i = 0; i < storage_size / XPAR_AXIVDMA_0_NUM_FSTORES; i += 4) {
+	  *pStorageMem++ = 0x6E29F029;  // Blue
+  }
+
+  // Flush CPU cache lines so VDMA sees the initialized frame memory.
+  Xil_DCacheFlush();
+
+  // Enable timing generation first so downstream pipeline is active.
+  vid.enable();
+
+  // Start MM2S/read DMA to display initialized frames over HDMI.
+  vdma_driver.enableRead();
+
+  xil_printf("\r\nStarting HDMI Output:\r\n");
+  xil_printf("If Static Image does not display within 10s restart program\r\n");
+  sleep(10);
+
+  xil_printf("Output Static Image for 5 more seconds\r\n");
+  xil_printf("If Static Image currently not displaying, then restart program\r\n");
+  sleep(5);
+}
+
+
+
+///////////////////////////////////////////
+// Bring up input pipeline back-to-front //
+///////////////////////////////////////////
+bool start_input_video_pipeline(AXI_VDMA<ScuGicInterruptController>& vdma_driver, OV5640& cam, Resolution VideoOutputRes, OV5640_cfg::mode_t mode, uintptr_t csi_baseaddr)
+{
+
+  xil_printf("\r\nStart selected Video stream: 1. TPG, or 2. Camera...\r\n");
+  xil_printf("CSI baseaddr = 0x%08lx\r\n", (unsigned long)csi_baseaddr);
+  if (csi_baseaddr == 0U) {
+    xil_printf("ERROR: CSI base address is 0; check BSP/bitstream match.\r\n");
+    return false;
+  }
+
+  // Reset S2MM/write side before receiving new camera frames.
+  vdma_driver.resetWrite();
+
+  // Force CSI block disabled during reconfiguration to avoid partial frames.
+  *(int *)csi_baseaddr = 0;
+
+  // Write full 1920x1080 frame geometry so S2MM/MM2S strides match.
+  // Mismatch here can leave HDMI stuck on the static startup frame.
+  vdma_driver.configureWrite(1920, 1080, 1920, 1080);
+
+  // Initialize camera over I2C and apply sensor default register sequence.
+  cam.init();
+
+  // Start S2MM DMA so incoming camera stream is written into memory.
+  vdma_driver.enableWrite();
+
+  // Configure and enable Color HW pipeline
+    // Uncomment when using Color HW pipeline
+  enable_color_pipeline();
+
+  // Chose Video Input source: 1) TPG, or 2) Camera
+    // Option 1: Uncomment for TPG option
+  // Define convenient volatile pointers for accessing TPG registers
+
+//  volatile unsigned int *TPG_CR       = (unsigned int *)(XPAR_V_TPG_0_S_AXI_CTRL_BASEADDR + 0);    // TPG Control
+//  volatile unsigned int *TPG_Act_H    = (unsigned int *)(XPAR_V_TPG_0_S_AXI_CTRL_BASEADDR + 0x10); // Active Height
+//  volatile unsigned int *TPG_Act_W    = (unsigned int *)(XPAR_V_TPG_0_S_AXI_CTRL_BASEADDR + 0x18); // Active Width
+//  volatile unsigned int *TPG_BGP      = (unsigned int *)(XPAR_V_TPG_0_S_AXI_CTRL_BASEADDR + 0x20); // Background Pattern
+//  volatile unsigned int *TPG_FGP      = (unsigned int *)(XPAR_V_TPG_0_S_AXI_CTRL_BASEADDR + 0x28); // Foreground Pattern
+//  volatile unsigned int *TPG_MS       = (unsigned int *)(XPAR_V_TPG_0_S_AXI_CTRL_BASEADDR + 0x38); // Motion Speed
+//  volatile unsigned int *TPG_CF       = (unsigned int *)(XPAR_V_TPG_0_S_AXI_CTRL_BASEADDR + 0x40); // TPG Color Format
+
+  xil_printf("Start Test Pattern Generator...\n\r");
+  // Direct Memory Mapped access of TPG configuration registers
+  // See TPG data sheet for configuring the TPG for other features
+//  TPG_Act_H[0]  = 0x438; // Active Height
+//  TPG_Act_W[0]  = 0x780; // Active Width
+//  TPG_BGP[0]    = 0x0A;  // Background Pattern
+//  TPG_FGP[0]    = 0x00;  // Foreground Pattern
+//  TPG_MS[0]     = 0x04;  // Motion Speed
+//  TPG_CF[0]     = 0x02;  // TPG Color Format
+//  TPG_CR[0]     = 0x81;  // TPG Control
+
+	// Enable CSI stream path after camera and DMA are ready.
+	*(int *)csi_baseaddr = 1; // CSI Enable
+	// Apply requested sensor mode (currently RAW MIPI mode in this lab setup).
+	cam.set_mode(mode);
+	// Enable camera auto white balance profile to improve scene brightness balance.
+	cam.set_awb(OV5640_cfg::awb_t::AWB_ADVANCED);
+
+  xil_printf("VDMA pass-through for 5 Seconds\r\n");
+  sleep(5);
+
+  return true;
+}
+
+
+///////////////////////////////////
+// SW processing of video frames //
+///////////////////////////////////
+enum class BayerPattern { RGGB, BGGR, GRBG, GBRG };
+
+enum class BayerColor { R, G, B };
+
+static inline int clamp_int(int v, int lo, int hi)
+{
+  // Saturate helper prevents out-of-bounds neighbor access near image edges.
+  if (v < lo) return lo;
+  if (v > hi) return hi;
+  return v;
+}
+
+static inline BayerColor bayer_color_at(int x, int y, BayerPattern pat)
+{
+  // Parity of x/y indexes determines color site in a Bayer CFA tile.
+  bool yEven = ((y & 1) == 0);
+  bool xEven = ((x & 1) == 0);
+
+  switch (pat) {
+    case BayerPattern::RGGB:
+      if (yEven && xEven)  return BayerColor::R;
+      if (yEven && !xEven) return BayerColor::G;
+      if (!yEven && xEven) return BayerColor::G;
+      return BayerColor::B;
+    case BayerPattern::BGGR:
+      if (yEven && xEven)  return BayerColor::B;
+      if (yEven && !xEven) return BayerColor::G;
+      if (!yEven && xEven) return BayerColor::G;
+      return BayerColor::R;
+    case BayerPattern::GRBG:
+      if (yEven && xEven)  return BayerColor::G;
+      if (yEven && !xEven) return BayerColor::R;
+      if (!yEven && xEven) return BayerColor::B;
+      return BayerColor::G;
+    case BayerPattern::GBRG:
+      if (yEven && xEven)  return BayerColor::G;
+      if (yEven && !xEven) return BayerColor::B;
+      if (!yEven && xEven) return BayerColor::R;
+      return BayerColor::G;
+  }
+  return BayerColor::G;
+}
+
+static inline uint8_t raw_bayer_sample(volatile Xuint16 *pS2MM_Mem, int x, int y, int width, int height, bool low_byte)
+{
+  // Clamp coordinates so edge taps use nearest valid pixel instead of branching.
+  int xx = clamp_int(x, 0, width - 1);
+  int yy = clamp_int(y, 0, height - 1);
+  // Read one 16-bit memory word produced by VDMA from camera stream.
+  uint16_t w = pS2MM_Mem[yy * width + xx];
+  // Lab datapath carries valid camera sample in only one byte of this 16-bit word.
+  return low_byte ? static_cast<uint8_t>(w & 0x00FFU) : static_cast<uint8_t>((w >> 8) & 0x00FFU);
+}
+
+static inline void demosaic_bilinear_pixel(volatile Xuint16 *pS2MM_Mem, int x, int y, int width, int height, BayerPattern pat, bool low_byte, uint8_t &R, uint8_t &G, uint8_t &B)
+{
+  // Identify which primary color this sensor site directly measures.
+  BayerColor c = bayer_color_at(x, y, pat);
+  // Center sample is the measured value at this pixel location.
+  uint8_t center = raw_bayer_sample(pS2MM_Mem, x, y, width, height, low_byte);
+
+  // Gather 4-neighborhood and diagonal taps for bilinear reconstruction.
+  uint8_t l  = raw_bayer_sample(pS2MM_Mem, x - 1, y,     width, height, low_byte);
+  uint8_t r  = raw_bayer_sample(pS2MM_Mem, x + 1, y,     width, height, low_byte);
+  uint8_t u  = raw_bayer_sample(pS2MM_Mem, x,     y - 1, width, height, low_byte);
+  uint8_t d  = raw_bayer_sample(pS2MM_Mem, x,     y + 1, width, height, low_byte);
+  uint8_t ul = raw_bayer_sample(pS2MM_Mem, x - 1, y - 1, width, height, low_byte);
+  uint8_t ur = raw_bayer_sample(pS2MM_Mem, x + 1, y - 1, width, height, low_byte);
+  uint8_t dl = raw_bayer_sample(pS2MM_Mem, x - 1, y + 1, width, height, low_byte);
+  uint8_t dr = raw_bayer_sample(pS2MM_Mem, x + 1, y + 1, width, height, low_byte);
+
+  if (c == BayerColor::R) {
+    // Red site: keep measured R, interpolate G from cross, B from diagonals.
+    R = center;
+    G = static_cast<uint8_t>((static_cast<int>(l) + static_cast<int>(r) + static_cast<int>(u) + static_cast<int>(d)) / 4);
+    B = static_cast<uint8_t>((static_cast<int>(ul) + static_cast<int>(ur) + static_cast<int>(dl) + static_cast<int>(dr)) / 4);
+    return;
+  }
+
+  if (c == BayerColor::B) {
+    // Blue site: keep measured B, interpolate G from cross, R from diagonals.
+    B = center;
+    G = static_cast<uint8_t>((static_cast<int>(l) + static_cast<int>(r) + static_cast<int>(u) + static_cast<int>(d)) / 4);
+    R = static_cast<uint8_t>((static_cast<int>(ul) + static_cast<int>(ur) + static_cast<int>(dl) + static_cast<int>(dr)) / 4);
+    return;
+  }
+
+  // Green site: keep measured G, then infer which axis corresponds to R/B.
+  G = center;
+  BayerColor left_color = bayer_color_at(x - 1, y, pat);
+  if (left_color == BayerColor::R) {
+    // Horizontal neighbors are red, vertical neighbors are blue.
+    R = static_cast<uint8_t>((static_cast<int>(l) + static_cast<int>(r)) / 2);
+    B = static_cast<uint8_t>((static_cast<int>(u) + static_cast<int>(d)) / 2);
+  } else {
+    // Horizontal neighbors are blue, vertical neighbors are red.
+    R = static_cast<uint8_t>((static_cast<int>(u) + static_cast<int>(d)) / 2);
+    B = static_cast<uint8_t>((static_cast<int>(l) + static_cast<int>(r)) / 2);
+  }
+}
+
+static inline uint8_t clamp_u8_int(int v)
+{
+  // Clamp signed integer math results into byte range for pixel storage.
+  if (v < 0) return 0;
+  if (v > 255) return 255;
+  return static_cast<uint8_t>(v);
+}
+
+static inline void rgb_to_ycbcr(uint8_t R, uint8_t G, uint8_t B, uint8_t &Y, uint8_t &Cb, uint8_t &Cr)
+{
+  // Fixed-point approximation of provided RGB->YCbCr conversion matrix.
+  int yv  = ((47 * static_cast<int>(R) + 157 * static_cast<int>(G) + 16 * static_cast<int>(B)) >> 8) + 16;
+  int cbv = ((-26 * static_cast<int>(R) - 87 * static_cast<int>(G) + 112 * static_cast<int>(B)) >> 8) + 128;
+  int crv = ((112 * static_cast<int>(R) - 102 * static_cast<int>(G) - 10 * static_cast<int>(B)) >> 8) + 128;
+
+  // Clamp channel values to legal 8-bit range after matrix + offset math.
+  Y  = clamp_u8_int(yv);
+  Cb = clamp_u8_int(cbv);
+  Cr = clamp_u8_int(crv);
+}
+
+inline int my_abs(int x) {
+	return x < 0 ? x * -1 : x;
+}
+
+void camera_loop(void)
+{
+  // Holds combined VDMA park register (controls selected read/write frame store).
+  Xuint32 parkptr;
+  // Snapshot of S2MM control register for park/unpark operations.
+  Xuint32 vdma_S2MM_DMACR;
+  // Snapshot of MM2S control register for park/unpark operations.
+  Xuint32 vdma_MM2S_DMACR;
+  // Frame-loop counter used for periodic FPS reporting.
+  int j;
+
+  xil_printf("\r\nEntering SW processing loop...\r\n");
+
+  // In HW-pipeline mode, keep VDMA in its normal circular/genlock path:
+  // camera -> color pipeline -> S2MM and MM2S -> HDMI.
+  XTime fps_window_start;
+  XTime_GetTime(&fps_window_start);
+  int last_write_frame_idx = current_write_frame_index();
+  u64 hw_frame_count = 0;
+  int prev_sw1 = 0;
+  int prev_sw2 = 0;
+  while (1) {
+    camera_interface_step();
+
+    u32 sw_data = access_switches();
+    int sw1 = ((sw_data & SW1_MASK) != 0U) ? 1 : 0;
+    int sw2 = ((sw_data & SW2_MASK) != 0U) ? 1 : 0;
+    XTime now;
+    XTime_GetTime(&now);
+
+    if (sw1 && !prev_sw1 && !record_active) {
+      record_armed = true;
+      record_playback_active = false;
+      record_clip_ready = false;
+      record_frame_count = 0;
+      playback_record_slot = 0;
+      displayed_record_slot = -1;
+      record_start_tick = now + static_cast<u64>(COUNTS_PER_SECOND);
+      if (current_zoom_level == 0) {
+        (void)switch_display_to_live();
+      }
+      xil_printf("Recording armed: starting in 1 second\r\n");
+    }
+
+    if (record_armed && now >= record_start_tick) {
+      record_armed = false;
+      record_active = true;
+      record_frame_count = 0;
+      record_next_frame_tick = now;
+      xil_printf("Recording 10-second clip at %d FPS\r\n", RECORD_SAMPLE_FPS);
+    }
+
+    if (record_active && now >= record_next_frame_tick) {
+      if (record_frame_count < RECORD_FRAME_CAPACITY) {
+        capture_live_frame_to_record_slot(record_frame_count);
+        ++record_frame_count;
+        record_next_frame_tick += (static_cast<u64>(COUNTS_PER_SECOND) * RECORD_SAMPLE_MS) / 1000ULL;
+      }
+      if (record_frame_count >= RECORD_FRAME_CAPACITY) {
+        record_active = false;
+        record_clip_ready = (record_frame_count > 0);
+        xil_printf("Recording complete: %d frames captured\r\n", record_frame_count);
+      }
+    }
+
+    if (sw2 && record_clip_ready && !record_active && !record_armed) {
+      if (!record_playback_active) {
+        record_playback_active = true;
+        playback_record_slot = 0;
+        record_playback_next_tick = now;
+        xil_printf("Recorded clip playback ON\r\n");
+      }
+    } else if ((!sw2 || !record_clip_ready) && record_playback_active) {
+      record_playback_active = false;
+      displayed_record_slot = -1;
+      if (current_zoom_level == 0) {
+        (void)switch_display_to_live();
+      } else {
+        (void)switch_display_to_zoom();
+      }
+      xil_printf("Recorded clip playback OFF\r\n");
+    }
+
+    if (record_playback_active && record_frame_count > 0 && now >= record_playback_next_tick) {
+      (void)switch_display_to_record_slot(playback_record_slot);
+      playback_record_slot = (playback_record_slot + 1) % record_frame_count;
+      record_playback_next_tick += (static_cast<u64>(COUNTS_PER_SECOND) * RECORD_SAMPLE_MS) / 1000ULL;
+    }
+
+    if (!record_active && !record_armed && !record_playback_active &&
+        !playback_active && !preview_active && current_zoom_level > 0) {
+      render_zoomed_live_frame();
+      (void)switch_display_to_zoom();
+    } else if (!record_active && !record_armed && !record_playback_active &&
+               !playback_active && !preview_active &&
+               current_zoom_level == 0 && display_source == DisplaySource::ZOOM) {
+      (void)switch_display_to_live();
+    }
+
+    int write_frame_idx = current_write_frame_index();
+    int frame_delta = write_frame_idx - last_write_frame_idx;
+    if (frame_delta < 0) {
+      frame_delta += XPAR_AXIVDMA_0_NUM_FSTORES;
+    }
+    hw_frame_count += static_cast<u64>(frame_delta);
+    last_write_frame_idx = write_frame_idx;
+
+    u64 ticks = static_cast<u64>(now - fps_window_start);
+    if (ticks >= static_cast<u64>(COUNTS_PER_SECOND)) {
+      u64 fps_x100 = (hw_frame_count * static_cast<u64>(COUNTS_PER_SECOND) * 100ULL) / ticks;
+      u32 elapsed_ms = static_cast<u32>((ticks * 1000ULL) / static_cast<u64>(COUNTS_PER_SECOND));
+      u32 frames_in_window = static_cast<u32>(hw_frame_count);
+      xil_printf("HW camera FPS: %d.%02d (%u frames, %u ms)\r\n",
+                 static_cast<int>(fps_x100 / 100ULL),
+                 static_cast<int>(fps_x100 % 100ULL),
+                 frames_in_window,
+                 elapsed_ms);
+      fps_window_start = now;
+      hw_frame_count = 0;
+    }
+
+    prev_sw1 = sw1;
+    prev_sw2 = sw2;
+    usleep(20000);
+  }
+
+  // Read current park pointer state from VDMA core.
+  parkptr = XAxiVdma_ReadReg(XPAR_AXIVDMA_0_BASEADDR, XAXIVDMA_PARKPTR_OFFSET);
+  // Clear read-reference bits so we can explicitly set MM2S park frame.
+  parkptr &= ~XAXIVDMA_PARKPTR_READREF_MASK;
+  // Clear write-reference bits so we can explicitly set S2MM park frame.
+  parkptr &= ~XAXIVDMA_PARKPTR_WRTREF_MASK;
+  // Set park refs so S2MM writes frame 0 while MM2S reads frame 1.
+  parkptr |= 0x1;
+  // Commit updated park-pointer routing.
+  XAxiVdma_WriteReg(XPAR_AXIVDMA_0_BASEADDR, XAXIVDMA_PARKPTR_OFFSET, parkptr);
+
+  // Put MM2S and S2MM into park mode (disable circular frame-store traversal).
+  vdma_MM2S_DMACR = XAxiVdma_ReadReg(XPAR_AXIVDMA_0_BASEADDR, XAXIVDMA_TX_OFFSET+XAXIVDMA_CR_OFFSET);
+  XAxiVdma_WriteReg(XPAR_AXIVDMA_0_BASEADDR, XAXIVDMA_TX_OFFSET+XAXIVDMA_CR_OFFSET, vdma_MM2S_DMACR & ~XAXIVDMA_CR_TAIL_EN_MASK);
+  vdma_S2MM_DMACR = XAxiVdma_ReadReg(XPAR_AXIVDMA_0_BASEADDR, XAXIVDMA_RX_OFFSET+XAXIVDMA_CR_OFFSET);
+  XAxiVdma_WriteReg(XPAR_AXIVDMA_0_BASEADDR, XAXIVDMA_RX_OFFSET+XAXIVDMA_CR_OFFSET, vdma_S2MM_DMACR & ~XAXIVDMA_CR_TAIL_EN_MASK);
+
+  // Resolve address of parked S2MM frame buffer (camera input frame in memory).
+  // Resolve address of parked MM2S frame buffer (HDMI output frame in memory).
+  volatile Xuint16 *pS2MM_Mem = (Xuint16 *)XAxiVdma_ReadReg(XPAR_AXIVDMA_0_BASEADDR, XAXIVDMA_S2MM_ADDR_OFFSET+XAXIVDMA_START_ADDR_OFFSET);
+  volatile Xuint16 *pMM2S_Mem = (Xuint16 *)XAxiVdma_ReadReg(XPAR_AXIVDMA_0_BASEADDR, XAXIVDMA_MM2S_ADDR_OFFSET+XAXIVDMA_START_ADDR_OFFSET+4);
+
+  xil_printf("SW processing frames...\r\n");
+  xil_printf("pS2MM_Mem = %X\n\r", pS2MM_Mem);
+  xil_printf("pMM2S_Mem = %X\n\r", pMM2S_Mem);
+
+  // Bayer tile order expected from this sensor mode.
+  const BayerPattern PAT = BayerPattern::BGGR;
+  // Frame dimensions fixed by selected mode and VDMA config.
+  const int WIDTH  = 1920;
+  const int HEIGHT = 1080;
+  // Number of frames per timing window for FPS reporting.
+  // Keep this small so timing output appears quickly on UART.
+  const int NUM_FRAMES = 30;
+  // Select which byte in each 16-bit DMA word contains valid Bayer sample.
+  const bool CAMERA_RAW_IN_LOW_BYTE = true;
+
+  int consecutiveMagenta = 0;
+  bool targetFound = 0;
+  bool targetFound2 = 0;
+
+
+  // Timestamps used to compute software pipeline throughput.
+  XTime tStart, tEnd;
+  XTime_GetTime(&tStart);
+
+  // Run continuously so processed output remains on screen.
+  while (1) {
+    // Process a block of frames, then print FPS once per block.
+    for (j = 0; j < NUM_FRAMES; j++) {
+      // Invalidate cached input frame so CPU reads fresh DMA-written camera pixels.
+      Xil_DCacheInvalidateRange((INTPTR)pS2MM_Mem, WIDTH * HEIGHT * sizeof(Xuint16));
+      // Raster scan output image row by row.
+      for (int y = 0; y < HEIGHT; y++) {
+        // 4:2:2 stores two luma samples but shared chroma for each horizontal pair.
+        for (int x = 0; x < WIDTH; x += 2) {
+          // Vertical flip aligns camera memory orientation with display orientation.
+          int srcY = HEIGHT - 1 - y;
+          // First pixel index of this 2-pixel output pair.
+          int x0 = x;
+          // Second pixel index; clamp at right border for odd-width safety.
+          int x1 = (x + 1 < WIDTH) ? (x + 1) : x;
+
+          // Reconstruct full RGB for two neighboring Bayer samples.
+          uint8_t R0, G0, B0, R1, G1, B1;
+          demosaic_bilinear_pixel(pS2MM_Mem, x0, srcY, WIDTH, HEIGHT, PAT, CAMERA_RAW_IN_LOW_BYTE, R0, G0, B0);
+          demosaic_bilinear_pixel(pS2MM_Mem, x1, srcY, WIDTH, HEIGHT, PAT, CAMERA_RAW_IN_LOW_BYTE, R1, G1, B1);
+
+          if (x < 500 && y < 500) {
+        	  R0 = 37;
+        	  R1 = 37;
+        	  G0 = 150;
+        	  G1 = 150;
+        	  B0 = 190;
+        	  B1 = 190;
+          }
+          if (!targetFound && my_abs(R0 - 37) < 30 && my_abs(G0 - 150) < 30 && my_abs(B0 - 150) < 30) {
+        	  consecutiveMagenta++;
+            if (consecutiveMagenta > 20) {
+              targetFound = 1;
+            }
+          }
+          else if (!targetFound && !targetFound2) {
+        	  consecutiveMagenta = 0;
+          }
+          else if (targetFound && !targetFound2) {
+            xil_printf("target found at %d, %d\n", x, y);
+            targetFound2 = 1;
+          }
+
+
+          // Convert both RGB pixels into YCbCr components.
+          uint8_t Y0, Cb0, Cr0, Y1, Cb1, Cr1;
+          rgb_to_ycbcr(R0, G0, B0, Y0, Cb0, Cr0);
+          rgb_to_ycbcr(R1, G1, B1, Y1, Cb1, Cr1);
+
+          // Average chroma horizontally to enforce 4:2:2 chroma subsampling.
+          uint8_t Cb = static_cast<uint8_t>((static_cast<int>(Cb0) + static_cast<int>(Cb1)) / 2);
+          uint8_t Cr = static_cast<uint8_t>((static_cast<int>(Cr0) + static_cast<int>(Cr1)) / 2);
+
+          // Compute linear output addresses for pixel pair.
+          int idx0 = y * WIDTH + x0;
+          int idx1 = y * WIDTH + x1;
+          // Pack output as [Cb|Y0] and [Cr|Y1] (YUYV byte order in memory).
+          pMM2S_Mem[idx0] = static_cast<uint16_t>((static_cast<uint16_t>(Cb) << 8) | Y0);
+          pMM2S_Mem[idx1] = static_cast<uint16_t>((static_cast<uint16_t>(Cr) << 8) | Y1);
+        }
+      }
+      // Flush output frame cache so MM2S/HDMI sees newly written processed pixels.
+      Xil_DCacheFlush();
+    }
+
+    // End timing window and convert elapsed cycles to frames-per-second.
+    XTime_GetTime(&tEnd);
+    u64 ticks = static_cast<u64>(tEnd - tStart);
+    // Guard against divide-by-zero in case timer delta is unexpectedly zero.
+    if (ticks == 0) {
+      ticks = 1;
+    }
+    // Also compute elapsed milliseconds for easier sanity checking on UART.
+    u64 elapsed_ms = (ticks * 1000ULL) / static_cast<u64>(COUNTS_PER_SECOND);
+    // Scale by 100 to print two decimal digits without floating point.
+    u64 fps_x100 = (static_cast<u64>(NUM_FRAMES) * static_cast<u64>(COUNTS_PER_SECOND) * 100ULL) / ticks;
+    xil_printf("SW demosaic+YCbCr422: %d.%02d FPS over %d frames (%llu ms)\r\n",
+               static_cast<int>(fps_x100 / 100ULL),
+               static_cast<int>(fps_x100 % 100ULL),
+               NUM_FRAMES,
+               elapsed_ms);
+    // Restart timing window for next FPS report period.
+    XTime_GetTime(&tStart);
+  }
+
+  // Grab the VDMA Control Registers, and take VDMA channels out of Park
+  // (i.e., Allow each VDMA channel to sequence through all frame buffers)
+  vdma_MM2S_DMACR = XAxiVdma_ReadReg(XPAR_AXIVDMA_0_BASEADDR, XAXIVDMA_TX_OFFSET+XAXIVDMA_CR_OFFSET);
+  XAxiVdma_WriteReg(XPAR_AXIVDMA_0_BASEADDR, XAXIVDMA_TX_OFFSET+XAXIVDMA_CR_OFFSET, vdma_MM2S_DMACR | XAXIVDMA_CR_TAIL_EN_MASK);
+  vdma_S2MM_DMACR = XAxiVdma_ReadReg(XPAR_AXIVDMA_0_BASEADDR, XAXIVDMA_RX_OFFSET+XAXIVDMA_CR_OFFSET);
+  XAxiVdma_WriteReg(XPAR_AXIVDMA_0_BASEADDR, XAXIVDMA_RX_OFFSET+XAXIVDMA_CR_OFFSET, vdma_S2MM_DMACR | XAXIVDMA_CR_TAIL_EN_MASK);
+
+  xil_printf("SW processing loop complete!\r\n");
+  xil_printf("\r\nReturning to VDMA pass-through operation for 10 seconds\r\n");
+//  sleep(10);
+
+  // Uncomment when using TPG for Video input
+  // Define convenient volatile pointers for accessing TPG registers
+//  volatile unsigned int *TPG_CR  = (unsigned int *)(XPAR_V_TPG_0_S_AXI_CTRL_BASEADDR + 0);    // TPG Control
+//  xil_printf("\r\nShutting down: Disabling Test Pattern Generator...\n\r");
+//  TPG_CR[0]     = 0x00;  // TPG Control Register (Disable TPG)
+
+  sleep(1);
+
+  return;
+}
+
+
+
+// Uncomment for Hardware Image color Pipeline
+ XVprocSs proc_ss_RGB_YCrCb_444;  // To hold info for the Video Processing Subsystem: Color Conversion Only IP core: See xv_procss.h, and xv_csc_l2.h
+ XVprocSs_Config *Config_ptr;
+
+/////////////////////////////////////////
+// Enable HW Color processing pipeline //
+/////////////////////////////////////////
+int enable_color_pipeline(void) {
+
+   xil_printf("Hardware Color Image Processing Pipeline Initialization ...\n\r" );
+
+   // Video Processing Subsystem (Only re-sampling) 4:4:4 to 4:2:2  (See IP documentation for register details)
+   // TODO Add additional register assignments here to fully configure this core. See Video Processing Subsystem IP documentation for register details.
+   // Hint 1: You will need to configure 4 additional registers,
+   // Hint 2: You will need to dig through some header files for some of the values,
+   // Hint 3: Set up the Demosaic IP block first. It is a good warm up.
+
+   // Add assignments here
+
+   // Uncomment as part of Re-sampler IP setup
+   Xil_Out32((XPAR_V_PROC_SS_1_BASEADDR) + (XV_HCRESAMPLER_CTRL_ADDR_AP_CTRL), (u32)(0x81));  // Control
+   Xil_Out32((XPAR_V_PROC_SS_1_BASEADDR) + (XV_HCRESAMPLER_CTRL_ADDR_HWREG_WIDTH_DATA), (u32)(1920));
+   Xil_Out32((XPAR_V_PROC_SS_1_BASEADDR) + (XV_HCRESAMPLER_CTRL_ADDR_HWREG_HEIGHT_DATA), (u32)(1080));
+
+   Xil_Out32((XPAR_V_PROC_SS_1_BASEADDR) + (XV_HCRESAMPLER_CTRL_ADDR_HWREG_INPUT_VIDEO_FORMAT_DATA), (u32)(1));
+   Xil_Out32((XPAR_V_PROC_SS_1_BASEADDR) + (XV_HCRESAMPLER_CTRL_ADDR_HWREG_OUTPUT_VIDEO_FORMAT_DATA), (u32)(2));
+
+   xil_printf("4:4:4 to 4:2:2 Re-sampling IP Configuration and Enable done\r\n");
+
+   // Video Processing Subsystem Hardware IP (configured for Only Color Conversion) from 24-bit RGB to YCrCb 4:4:4
+   // For this IP core there was a High level API for setting it up.  Trace through these calls to see how much work they do.
+   // This could have been set up with direct register writes, but there are about 20 registers that need to be set for this IP block
+
+   // Uncomment to setup Color Conversion IP
+   Config_ptr = XVprocSs_LookupConfig(XPAR_XVPROCSS_0_DEVICE_ID);
+   XVprocSs_CfgInitialize(&proc_ss_RGB_YCrCb_444, Config_ptr, XPAR_XVPROCSS_0_BASEADDR);
+   XVprocSs_SetSubsystemConfig(&proc_ss_RGB_YCrCb_444);
+   XV_CscSetColorspace(proc_ss_RGB_YCrCb_444.CscPtr, XVIDC_CSF_RGB, XVIDC_CSF_YCRCB_444, XVIDC_BT_709, XVIDC_BT_709, XVIDC_CR_0_255);
+   XVprocSs_Start(&proc_ss_RGB_YCrCb_444);
+   xil_printf("RGB to 4:4:4 IP Configuration and Enable done\r\n");
+
+
+   // Demosaic to convert sensor Bayer pattern into 24-bit RGB
+   // TODO Add additional register assignments here to fully configure this core. See Demosaic IP documentation for register details.
+   // Hint 1: You will need to configure 3 addition registers
+   // Add assignment here
+
+   // Uncomment as part of Demosaic IP setup
+   Xil_Out32((XPAR_XV_DEMOSAIC_0_S_AXI_CTRL_BASEADDR) + (XV_DEMOSAIC_CTRL_ADDR_AP_CTRL), (u32)(0x81));// 0b10000001 means start and freerun mode (page 16 in PG286)
+   Xil_Out32((XPAR_XV_DEMOSAIC_0_S_AXI_CTRL_BASEADDR) + (XV_DEMOSAIC_CTRL_ADDR_HWREG_WIDTH_DATA), (u32)(1920));
+   Xil_Out32((XPAR_XV_DEMOSAIC_0_S_AXI_CTRL_BASEADDR) + (XV_DEMOSAIC_CTRL_ADDR_HWREG_HEIGHT_DATA), (u32)(1080));
+   Xil_Out32((XPAR_XV_DEMOSAIC_0_S_AXI_CTRL_BASEADDR) + (XV_DEMOSAIC_CTRL_ADDR_HWREG_BAYER_PHASE_DATA), (u32)(0x3));
+
+   xil_printf("Demosaic IP Configuring and Enable done\r\n"); // RGRG sensor pattern
+
+   return 0;
+}

@@ -108,6 +108,14 @@ static constexpr int FRAME_HEIGHT = 1080;
 static constexpr int FRAME_BYTES = FRAME_WIDTH * FRAME_HEIGHT * 2;
 // Reserve a DDR region for up to 32 raw YUV422 frames (about 132 MiB).
 static constexpr uintptr_t capture_baseaddr = 0x0B200000U;
+static constexpr uintptr_t zoom_baseaddr = capture_baseaddr + static_cast<uintptr_t>(CAPTURE_MAX_IMAGES) * FRAME_BYTES;
+static constexpr uintptr_t ddr_end_addr = 0x20000000U;
+static constexpr uintptr_t record_baseaddr = zoom_baseaddr + FRAME_BYTES;
+static constexpr int RECORD_SECONDS = 10;
+static constexpr int RECORD_SAMPLE_FPS = 5;
+static constexpr u32 RECORD_SAMPLE_MS = 1000U / RECORD_SAMPLE_FPS;
+static constexpr int RECORD_BUFFER_CAPACITY = static_cast<int>((ddr_end_addr - record_baseaddr) / FRAME_BYTES);
+static constexpr int RECORD_FRAME_CAPACITY = ((RECORD_SECONDS * RECORD_SAMPLE_FPS) < RECORD_BUFFER_CAPACITY) ? (RECORD_SECONDS * RECORD_SAMPLE_FPS) : RECORD_BUFFER_CAPACITY;
 
 static inline volatile Xuint16 *frame_store_ptr(int frame_idx)
 {
@@ -117,6 +125,16 @@ static inline volatile Xuint16 *frame_store_ptr(int frame_idx)
 static inline volatile Xuint16 *capture_slot_ptr(int slot_idx)
 {
   return reinterpret_cast<volatile Xuint16 *>(capture_baseaddr + static_cast<uintptr_t>(slot_idx) * FRAME_BYTES);
+}
+
+static inline volatile Xuint16 *zoom_frame_ptr(void)
+{
+  return reinterpret_cast<volatile Xuint16 *>(zoom_baseaddr);
+}
+
+static inline volatile Xuint16 *record_slot_ptr(int slot_idx)
+{
+  return reinterpret_cast<volatile Xuint16 *>(record_baseaddr + static_cast<uintptr_t>(slot_idx) * FRAME_BYTES);
 }
 
 static inline void copy_frame_words(volatile Xuint16 *dst, volatile Xuint16 *src)
@@ -130,7 +148,40 @@ static inline int current_read_frame_index(void)
   return static_cast<int>((parkptr & XAXIVDMA_PARKPTR_READSTR_MASK) >> XAXIVDMA_READSTR_SHIFT);
 }
 
-enum class DisplaySource { LIVE, STATIC };
+static inline int current_write_frame_index(void)
+{
+  u32 parkptr = XAxiVdma_ReadReg(XPAR_AXIVDMA_0_BASEADDR, XAXIVDMA_PARKPTR_OFFSET);
+  return static_cast<int>((parkptr & XAXIVDMA_PARKPTR_WRTSTR_MASK) >> XAXIVDMA_WRTSTR_SHIFT);
+}
+
+struct CameraZoomPreset {
+  int numer;
+  int denom;
+  const char *label;
+};
+
+static constexpr CameraZoomPreset CAMERA_ZOOM_PRESETS[] = {
+  {1, 1, "1.0x"},
+  {5, 4, "1.25x"},
+  {3, 2, "1.5x"},
+  {2, 1, "2.0x"},
+};
+
+static int current_zoom_level = 0;
+static bool playback_active = false;
+static bool preview_active = false;
+static bool record_armed = false;
+static bool record_active = false;
+static bool record_playback_active = false;
+static bool record_clip_ready = false;
+static int record_frame_count = 0;
+static int displayed_record_slot = -1;
+static int playback_record_slot = 0;
+static XTime record_start_tick = 0;
+static XTime record_next_frame_tick = 0;
+static XTime record_playback_next_tick = 0;
+
+enum class DisplaySource { LIVE, STATIC, ZOOM, RECORD, SW };
 static DisplaySource display_source = DisplaySource::LIVE;
 static int displayed_capture_slot = -1;
 static bool write_stream_paused = false;
@@ -201,10 +252,79 @@ static bool switch_display_to_live(void)
     return true;
   }
 
-  unpark_mm2s();
+  try {
+    vdma_a_driver.stopRead();
+  } catch (const std::exception&) {
+  }
+  vdma_a_driver.resetRead();
+  vdma_a_driver.configureRead(FRAME_WIDTH, FRAME_HEIGHT, read_master_select);
+  vdma_a_driver.enableRead();
   display_source = DisplaySource::LIVE;
   displayed_capture_slot = -1;
   xil_printf("Display source -> LIVE\r\n");
+  return true;
+}
+
+static bool switch_display_to_zoom(void)
+{
+  if (display_source == DisplaySource::ZOOM) {
+    return true;
+  }
+
+  try {
+    vdma_a_driver.stopRead();
+  } catch (const std::exception&) {
+  }
+  vdma_a_driver.resetRead();
+  vdma_a_driver.configureReadFromAddress(FRAME_WIDTH, FRAME_HEIGHT, static_cast<uint32_t>(zoom_baseaddr));
+  vdma_a_driver.enableRead();
+  display_source = DisplaySource::ZOOM;
+  displayed_capture_slot = -1;
+  xil_printf("Display source -> ZOOM\r\n");
+  return true;
+}
+
+static bool switch_display_to_sw(void)
+{
+  if (display_source == DisplaySource::SW) {
+    return true;
+  }
+
+  try {
+    vdma_a_driver.stopRead();
+  } catch (const std::exception&) {
+  }
+  vdma_a_driver.resetRead();
+  vdma_a_driver.configureReadFromAddress(FRAME_WIDTH, FRAME_HEIGHT, XAxiVdma_ReadReg(XPAR_AXIVDMA_0_BASEADDR, XAXIVDMA_S2MM_ADDR_OFFSET+XAXIVDMA_START_ADDR_OFFSET));
+  vdma_a_driver.enableRead();
+  display_source = DisplaySource::SW;
+  displayed_capture_slot = -1;
+  xil_printf("Display source -> SW\r\n");
+  return true;
+}
+static bool switch_display_to_record_slot(int slot_idx)
+{
+  if (slot_idx < 0 || slot_idx >= record_frame_count) {
+    return false;
+  }
+  volatile Xuint16 *dst = zoom_frame_ptr();
+  volatile Xuint16 *src = record_slot_ptr(slot_idx);
+  copy_frame_words(dst, src);
+  Xil_DCacheFlushRange((INTPTR)(uintptr_t)dst, FRAME_BYTES);
+
+  if (display_source != DisplaySource::RECORD) {
+    try {
+      vdma_a_driver.stopRead();
+    } catch (const std::exception&) {
+    }
+    vdma_a_driver.resetRead();
+    vdma_a_driver.configureReadFromAddress(FRAME_WIDTH, FRAME_HEIGHT, static_cast<uint32_t>(zoom_baseaddr));
+    vdma_a_driver.enableRead();
+  }
+
+  display_source = DisplaySource::RECORD;
+  displayed_capture_slot = -1;
+  displayed_record_slot = slot_idx;
   return true;
 }
 
@@ -239,111 +359,246 @@ static void capture_current_frame_to_slot(int slot_idx)
   Xil_DCacheFlushRange((INTPTR)(uintptr_t)dst, FRAME_BYTES);
 }
 
-void camera_interface(void) {
-  int capture_count = 0;
-  int next_capture_slot = 0;
-  int playback_slot = 0;
-  int preview_slot = 0;
-  int prev_sw0 = 0;
-  int prev_btnc = 0;
-  int prev_btnl = 0;
-  int prev_btnr = 0;
-  bool playback_active = false;
-  bool preview_active = false;
-  XTime preview_end_tick = 0;
+static int latest_completed_write_frame_index(void)
+{
+  int wr_idx = current_write_frame_index();
+  if (wr_idx < 0 || wr_idx >= XPAR_AXIVDMA_0_NUM_FSTORES) {
+    return 0;
+  }
+
+  wr_idx -= 1;
+  if (wr_idx < 0) {
+    wr_idx += XPAR_AXIVDMA_0_NUM_FSTORES;
+  }
+  return wr_idx;
+}
+
+static void capture_live_frame_to_record_slot(int slot_idx)
+{
+  int src_idx = latest_completed_write_frame_index();
+  volatile Xuint16 *src = frame_store_ptr(src_idx);
+  volatile Xuint16 *dst = record_slot_ptr(slot_idx);
+  Xil_DCacheInvalidateRange((INTPTR)(uintptr_t)src, FRAME_BYTES);
+  copy_frame_words(dst, src);
+  Xil_DCacheFlushRange((INTPTR)(uintptr_t)dst, FRAME_BYTES);
+}
+
+static void update_zoom_level(int next_zoom_level)
+{
+  if (next_zoom_level < 0) {
+    next_zoom_level = 0;
+  }
+  int max_zoom_level = static_cast<int>(sizeof(CAMERA_ZOOM_PRESETS) / sizeof(CAMERA_ZOOM_PRESETS[0])) - 1;
+  if (next_zoom_level > max_zoom_level) {
+    next_zoom_level = max_zoom_level;
+  }
+  if (next_zoom_level == current_zoom_level) {
+    return;
+  }
+
+  current_zoom_level = next_zoom_level;
+  xil_printf("Zoom -> %s\r\n", CAMERA_ZOOM_PRESETS[current_zoom_level].label);
+}
+
+static void render_zoomed_live_frame(void)
+{
+  if (current_zoom_level == 0) {
+    return;
+  }
+
+  const CameraZoomPreset& zoom = CAMERA_ZOOM_PRESETS[current_zoom_level];
+  int rd_idx = current_read_frame_index();
+  if (rd_idx < 0 || rd_idx >= XPAR_AXIVDMA_0_NUM_FSTORES) {
+    rd_idx = 0;
+  }
+
+  volatile Xuint16 *src = frame_store_ptr(rd_idx);
+  volatile Xuint16 *dst = zoom_frame_ptr();
+  const int center_x = FRAME_WIDTH / 2;
+  const int center_y = FRAME_HEIGHT / 2;
+
+  Xil_DCacheInvalidateRange((INTPTR)(uintptr_t)src, FRAME_BYTES);
+
+  for (int y = 0; y < FRAME_HEIGHT; ++y) {
+    int src_y = center_y + ((y - center_y) * zoom.denom) / zoom.numer;
+    if (src_y < 0) {
+      src_y = 0;
+    } else if (src_y >= FRAME_HEIGHT) {
+      src_y = FRAME_HEIGHT - 1;
+    }
+
+    for (int x = 0; x < FRAME_WIDTH; x += 2) {
+      int src_x = center_x + ((x - center_x) * zoom.denom) / zoom.numer;
+      if (src_x < 0) {
+        src_x = 0;
+      } else if (src_x >= FRAME_WIDTH - 1) {
+        src_x = FRAME_WIDTH - 2;
+      }
+      src_x &= ~1;
+
+      int dst_idx0 = y * FRAME_WIDTH + x;
+      int dst_idx1 = dst_idx0 + 1;
+      int src_idx0 = src_y * FRAME_WIDTH + src_x;
+      int src_idx1 = src_idx0 + 1;
+      dst[dst_idx0] = src[src_idx0];
+      dst[dst_idx1] = src[src_idx1];
+    }
+  }
+
+  Xil_DCacheFlushRange((INTPTR)(uintptr_t)dst, FRAME_BYTES);
+}
+
+static void camera_interface_step(void) {
+  static int capture_count = 0;
+  static int next_capture_slot = 0;
+  static int playback_slot = 0;
+  static int preview_slot = 0;
+  static int prev_sw0 = 0;
+  static int prev_sw7 = 0;
+  static int prev_btnc = 0;
+  static int prev_btnd = 0;
+  static int prev_btnl = 0;
+  static int prev_btnr = 0;
+  static int prev_btnu = 0;
+  static XTime preview_end_tick = 0;
   const u64 preview_ticks = 2ULL * static_cast<u64>(COUNTS_PER_SECOND);
 
-  while (1) {
-    u32 sw_data = access_switches();
-    u32 btn_data = access_buttons();
+  u32 sw_data = access_switches();
+  u32 btn_data = access_buttons();
 
-    int sw0 = ((sw_data & SW0_MASK) != 0U) ? 1 : 0;
-    int btnc = ((btn_data & BTNC_MASK) != 0U) ? 1 : 0;
-    int btnl = ((btn_data & BTNL_MASK) != 0U) ? 1 : 0;
-    int btnr = ((btn_data & BTNR_MASK) != 0U) ? 1 : 0;
+  int sw0 = ((sw_data & SW0_MASK) != 0U) ? 1 : 0;
+  int sw7 = ((sw_data & 0x80) != 0U) ? 1 : 0;	// sw7 controls hw or sw
+  int btnc = ((btn_data & BTNC_MASK) != 0U) ? 1 : 0;
+  int btnd = ((btn_data & BTND_MASK) != 0U) ? 1 : 0;
+  int btnl = ((btn_data & BTNL_MASK) != 0U) ? 1 : 0;
+  int btnr = ((btn_data & BTNR_MASK) != 0U) ? 1 : 0;
+  int btnu = ((btn_data & BTNU_MASK) != 0U) ? 1 : 0;
 
-    // Playback mode toggle via SW0.
-    if (sw0 && !prev_sw0) {
-      if (preview_active) {
-        preview_active = false;
-        (void)switch_display_to_live();
-        (void)resume_live_write_stream();
-      }
-      preview_active = false;
-      playback_active = true;
-      if (capture_count > 0) {
-        playback_slot = (next_capture_slot - 1 + CAPTURE_MAX_IMAGES) % CAPTURE_MAX_IMAGES; // newest image
-        (void)pause_live_write_stream();
-        (void)switch_display_to_capture_slot(playback_slot);
-      } else {
-        xil_printf("Playback mode ON (no captures yet)\r\n");
-      }
-      xil_printf("Playback mode ON\r\n");
-    } else if (!sw0 && prev_sw0) {
-      playback_active = false;
+  if (sw7 && !prev_sw7) {
+	  (void)switch_display_to_sw();
+  }
+
+  // Playback mode toggle via SW0.
+  if (sw0 && !prev_sw0) {
+    if (record_active || record_playback_active || record_armed) {
+      prev_sw0 = sw0;
+      prev_btnc = btnc;
+      prev_btnd = btnd;
+      prev_btnl = btnl;
+      prev_btnr = btnr;
+      prev_btnu = btnu;
+      return;
+    }
+    if (preview_active) {
       preview_active = false;
       (void)switch_display_to_live();
       (void)resume_live_write_stream();
-      xil_printf("Playback mode OFF\r\n");
     }
-
-    // Capture on BTNC rising edge while in live mode.
-    if (!playback_active && !preview_active && btnc && !prev_btnc) {
-      int slot = next_capture_slot;
-      capture_current_frame_to_slot(slot);
-      if (capture_count < CAPTURE_MAX_IMAGES) {
-        ++capture_count;
-      }
-      next_capture_slot = (next_capture_slot + 1) % CAPTURE_MAX_IMAGES;
-
-      // Freeze immediately for 2 seconds by parking display and pausing writes.
-      preview_slot = slot;
+    preview_active = false;
+    playback_active = true;
+    if (capture_count > 0) {
+      playback_slot = (next_capture_slot - 1 + CAPTURE_MAX_IMAGES) % CAPTURE_MAX_IMAGES; // newest image
       (void)pause_live_write_stream();
-      (void)switch_display_to_capture_slot(preview_slot);
-      Capture_Frame();
-      XTime now;
-      XTime_GetTime(&now);
-      preview_end_tick = now + preview_ticks;
-      preview_active = true;
+      (void)switch_display_to_capture_slot(playback_slot);
+    } else {
+      xil_printf("Playback mode ON (no captures yet)\r\n");
+    }
+    xil_printf("Playback mode ON\r\n");
+  } else if (!sw0 && prev_sw0) {
+    playback_active = false;
+    preview_active = false;
+    if (current_zoom_level == 0) {
+      (void)switch_display_to_live();
+    } else {
+      (void)switch_display_to_zoom();
+    }
+    (void)resume_live_write_stream();
+    xil_printf("Playback mode OFF\r\n");
+  }
+
+  // Capture on BTNC rising edge while in live mode.
+  if (!playback_active && !preview_active && btnc && !prev_btnc) {
+    int slot = next_capture_slot;
+    capture_current_frame_to_slot(slot);
+    if (capture_count < CAPTURE_MAX_IMAGES) {
+      ++capture_count;
+    }
+    next_capture_slot = (next_capture_slot + 1) % CAPTURE_MAX_IMAGES;
+
+    // Freeze immediately for 2 seconds by parking display and pausing writes.
+    preview_slot = slot;
+    (void)pause_live_write_stream();
+    (void)switch_display_to_capture_slot(preview_slot);
+    Capture_Frame();
+    XTime now;
+    XTime_GetTime(&now);
+    preview_end_tick = now + preview_ticks;
+    preview_active = true;
+  }
+
+  if (!playback_active && !preview_active && btnu && !prev_btnu) {
+    update_zoom_level(current_zoom_level + 1);
+    if (current_zoom_level == 0) {
+      (void)switch_display_to_live();
+    } else {
+      (void)switch_display_to_zoom();
+    }
+  }
+
+  if (!playback_active && !preview_active && btnd && !prev_btnd) {
+    update_zoom_level(current_zoom_level - 1);
+    if (current_zoom_level == 0) {
+      (void)switch_display_to_live();
+    } else {
+      (void)switch_display_to_zoom();
+    }
+  }
+
+  // Rotate through captured images in playback mode using left/right buttons.
+  if (playback_active && capture_count > 0) {
+    int valid_count = (capture_count < CAPTURE_MAX_IMAGES) ? capture_count : CAPTURE_MAX_IMAGES;
+    int low_slot = 0;
+    int high_slot = valid_count - 1;
+
+    if (btnl && !prev_btnl) {
+      if (capture_count < CAPTURE_MAX_IMAGES) {
+        playback_slot = (playback_slot <= low_slot) ? high_slot : (playback_slot - 1);
+      } else {
+        playback_slot = (playback_slot - 1 + CAPTURE_MAX_IMAGES) % CAPTURE_MAX_IMAGES;
+      }
+      (void)switch_display_to_capture_slot(playback_slot);
     }
 
-    // Rotate through captured images in playback mode using left/right buttons.
-    if (playback_active && capture_count > 0) {
-      int valid_count = (capture_count < CAPTURE_MAX_IMAGES) ? capture_count : CAPTURE_MAX_IMAGES;
-      int low_slot = 0;
-      int high_slot = valid_count - 1;
-
-      if (btnl && !prev_btnl) {
-        if (capture_count < CAPTURE_MAX_IMAGES) {
-          playback_slot = (playback_slot <= low_slot) ? high_slot : (playback_slot - 1);
-        } else {
-          playback_slot = (playback_slot - 1 + CAPTURE_MAX_IMAGES) % CAPTURE_MAX_IMAGES;
-        }
-        (void)switch_display_to_capture_slot(playback_slot);
+    if (btnr && !prev_btnr) {
+      if (capture_count < CAPTURE_MAX_IMAGES) {
+        playback_slot = (playback_slot >= high_slot) ? low_slot : (playback_slot + 1);
+      } else {
+        playback_slot = (playback_slot + 1) % CAPTURE_MAX_IMAGES;
       }
-
-      if (btnr && !prev_btnr) {
-        if (capture_count < CAPTURE_MAX_IMAGES) {
-          playback_slot = (playback_slot >= high_slot) ? low_slot : (playback_slot + 1);
-        } else {
-          playback_slot = (playback_slot + 1) % CAPTURE_MAX_IMAGES;
-        }
-        (void)switch_display_to_capture_slot(playback_slot);
-      }
-    } else if (preview_active) {
-      XTime now;
-      XTime_GetTime(&now);
-      if (now >= preview_end_tick) {
-        preview_active = false;
-        (void)switch_display_to_live();
-        (void)resume_live_write_stream();
-      }
+      (void)switch_display_to_capture_slot(playback_slot);
     }
+  } else if (preview_active) {
+    XTime now;
+    XTime_GetTime(&now);
+    if (now >= preview_end_tick) {
+      preview_active = false;
+      (void)switch_display_to_live();
+      (void)resume_live_write_stream();
+    }
+  }
 
-    prev_sw0 = sw0;
-    prev_btnc = btnc;
-    prev_btnl = btnl;
-    prev_btnr = btnr;
+  prev_sw0 = sw0;
+  prev_sw7 = sw7;
+  prev_btnc = btnc;
+  prev_btnd = btnd;
+  prev_btnl = btnl;
+  prev_btnr = btnr;
+  prev_btnu = btnu;
+}
+
+void camera_interface(void) {
+  while (1) {
+    camera_interface_step();
     usleep(20000);
   }
 }
@@ -650,6 +905,10 @@ static inline void rgb_to_ycbcr(uint8_t R, uint8_t G, uint8_t B, uint8_t &Y, uin
   Cr = clamp_u8_int(crv);
 }
 
+inline int my_abs(int x) {
+	return x < 0 ? x * -1 : x;
+}
+
 void camera_loop(void)
 {
   // Holds combined VDMA park register (controls selected read/write frame store).
@@ -665,11 +924,123 @@ void camera_loop(void)
 
   // In HW-pipeline mode, keep VDMA in its normal circular/genlock path:
   // camera -> color pipeline -> S2MM and MM2S -> HDMI.
-  // disabling hardware and buttons
-//  while (1) {
-//	camera_interface();
-//    sleep(1);
-//  }
+  XTime fps_window_start;
+  XTime_GetTime(&fps_window_start);
+  int last_write_frame_idx = current_write_frame_index();
+  u64 hw_frame_count = 0;
+  int prev_sw1 = 0;
+  int prev_sw2 = 0;
+  int prev_sw7 = 0;
+  while (1) {
+    camera_interface_step();
+
+    u32 sw_data = access_switches();
+    int sw1 = ((sw_data & SW1_MASK) != 0U) ? 1 : 0;
+    int sw2 = ((sw_data & SW2_MASK) != 0U) ? 1 : 0;
+    int sw7 = ((sw_data & 0x80) != 0U) ? 1 : 0;
+    XTime now;
+    XTime_GetTime(&now);
+
+    if (sw7 && !prev_sw7) {
+    	break;
+    }
+
+    if (sw1 && !prev_sw1 && !record_active) {
+      record_armed = true;
+      record_playback_active = false;
+      record_clip_ready = false;
+      record_frame_count = 0;
+      playback_record_slot = 0;
+      displayed_record_slot = -1;
+      record_start_tick = now + static_cast<u64>(COUNTS_PER_SECOND);
+      if (current_zoom_level == 0) {
+        (void)switch_display_to_live();
+      }
+      xil_printf("Recording armed: starting in 1 second\r\n");
+    }
+
+    if (record_armed && now >= record_start_tick) {
+      record_armed = false;
+      record_active = true;
+      record_frame_count = 0;
+      record_next_frame_tick = now;
+      xil_printf("Recording 10-second clip at %d FPS\r\n", RECORD_SAMPLE_FPS);
+    }
+
+    if (record_active && now >= record_next_frame_tick) {
+      if (record_frame_count < RECORD_FRAME_CAPACITY) {
+        capture_live_frame_to_record_slot(record_frame_count);
+        ++record_frame_count;
+        record_next_frame_tick += (static_cast<u64>(COUNTS_PER_SECOND) * RECORD_SAMPLE_MS) / 1000ULL;
+      }
+      if (record_frame_count >= RECORD_FRAME_CAPACITY) {
+        record_active = false;
+        record_clip_ready = (record_frame_count > 0);
+        xil_printf("Recording complete: %d frames captured\r\n", record_frame_count);
+      }
+    }
+
+    if (sw2 && record_clip_ready && !record_active && !record_armed) {
+      if (!record_playback_active) {
+        record_playback_active = true;
+        playback_record_slot = 0;
+        record_playback_next_tick = now;
+        xil_printf("Recorded clip playback ON\r\n");
+      }
+    } else if ((!sw2 || !record_clip_ready) && record_playback_active) {
+      record_playback_active = false;
+      displayed_record_slot = -1;
+      if (current_zoom_level == 0) {
+        (void)switch_display_to_live();
+      } else {
+        (void)switch_display_to_zoom();
+      }
+      xil_printf("Recorded clip playback OFF\r\n");
+    }
+
+    if (record_playback_active && record_frame_count > 0 && now >= record_playback_next_tick) {
+      (void)switch_display_to_record_slot(playback_record_slot);
+      playback_record_slot = (playback_record_slot + 1) % record_frame_count;
+      record_playback_next_tick += (static_cast<u64>(COUNTS_PER_SECOND) * RECORD_SAMPLE_MS) / 1000ULL;
+    }
+
+    if (!record_active && !record_armed && !record_playback_active &&
+        !playback_active && !preview_active && current_zoom_level > 0) {
+      render_zoomed_live_frame();
+      (void)switch_display_to_zoom();
+    } else if (!record_active && !record_armed && !record_playback_active &&
+               !playback_active && !preview_active &&
+               current_zoom_level == 0 && display_source == DisplaySource::ZOOM) {
+      (void)switch_display_to_live();
+    }
+
+    int write_frame_idx = current_write_frame_index();
+    int frame_delta = write_frame_idx - last_write_frame_idx;
+    if (frame_delta < 0) {
+      frame_delta += XPAR_AXIVDMA_0_NUM_FSTORES;
+    }
+    hw_frame_count += static_cast<u64>(frame_delta);
+    last_write_frame_idx = write_frame_idx;
+
+    u64 ticks = static_cast<u64>(now - fps_window_start);
+    if (ticks >= static_cast<u64>(COUNTS_PER_SECOND)) {
+      u64 fps_x100 = (hw_frame_count * static_cast<u64>(COUNTS_PER_SECOND) * 100ULL) / ticks;
+      u32 elapsed_ms = static_cast<u32>((ticks * 1000ULL) / static_cast<u64>(COUNTS_PER_SECOND));
+      u32 frames_in_window = static_cast<u32>(hw_frame_count);
+      xil_printf("HW camera FPS: %d.%02d (%u frames, %u ms)\r\n",
+                 static_cast<int>(fps_x100 / 100ULL),
+                 static_cast<int>(fps_x100 % 100ULL),
+                 frames_in_window,
+                 elapsed_ms);
+      fps_window_start = now;
+      hw_frame_count = 0;
+    }
+
+    prev_sw1 = sw1;
+    prev_sw2 = sw2;
+    prev_sw7 = sw7;
+    usleep(20000);
+  }
 
   // Read current park pointer state from VDMA core.
   parkptr = XAxiVdma_ReadReg(XPAR_AXIVDMA_0_BASEADDR, XAXIVDMA_PARKPTR_OFFSET);
@@ -689,8 +1060,8 @@ void camera_loop(void)
   XAxiVdma_WriteReg(XPAR_AXIVDMA_0_BASEADDR, XAXIVDMA_RX_OFFSET+XAXIVDMA_CR_OFFSET, vdma_S2MM_DMACR & ~XAXIVDMA_CR_TAIL_EN_MASK);
 
   // Resolve address of parked S2MM frame buffer (camera input frame in memory).
-  volatile Xuint16 *pS2MM_Mem = (Xuint16 *)XAxiVdma_ReadReg(XPAR_AXIVDMA_0_BASEADDR, XAXIVDMA_S2MM_ADDR_OFFSET+XAXIVDMA_START_ADDR_OFFSET);
   // Resolve address of parked MM2S frame buffer (HDMI output frame in memory).
+  volatile Xuint16 *pS2MM_Mem = (Xuint16 *)XAxiVdma_ReadReg(XPAR_AXIVDMA_0_BASEADDR, XAXIVDMA_S2MM_ADDR_OFFSET+XAXIVDMA_START_ADDR_OFFSET);
   volatile Xuint16 *pMM2S_Mem = (Xuint16 *)XAxiVdma_ReadReg(XPAR_AXIVDMA_0_BASEADDR, XAXIVDMA_MM2S_ADDR_OFFSET+XAXIVDMA_START_ADDR_OFFSET+4);
 
   xil_printf("SW processing frames...\r\n");
@@ -707,6 +1078,11 @@ void camera_loop(void)
   const int NUM_FRAMES = 30;
   // Select which byte in each 16-bit DMA word contains valid Bayer sample.
   const bool CAMERA_RAW_IN_LOW_BYTE = true;
+
+  int consecutiveMagenta = 0;
+  bool targetFound = 0;
+  bool targetFound2 = 0;
+
 
   // Timestamps used to compute software pipeline throughput.
   XTime tStart, tEnd;
@@ -734,6 +1110,38 @@ void camera_loop(void)
           demosaic_bilinear_pixel(pS2MM_Mem, x0, srcY, WIDTH, HEIGHT, PAT, CAMERA_RAW_IN_LOW_BYTE, R0, G0, B0);
           demosaic_bilinear_pixel(pS2MM_Mem, x1, srcY, WIDTH, HEIGHT, PAT, CAMERA_RAW_IN_LOW_BYTE, R1, G1, B1);
 
+          if (x < 200 && y < 200) {
+        	  R0 = 70;
+        	  R1 = 70;
+        	  G0 = 70;
+        	  G1 = 70;
+        	  B0 = 70;
+        	  B1 = 70;
+          }
+          if (x == 960 && y == 540) {
+        	  xil_printf("rgb at center pixel is: %d %d %d\r\n", (int)R0, (int)G0, (int)B0);
+          }
+
+          if (!targetFound && my_abs(R0 - 70) < 10 && my_abs(G0 - 70) < 10 && my_abs(B0 - 70) < 10
+                  		  && my_abs(R1 - 70) < 10 && my_abs(G1 - 70) < 10 && my_abs(B1 - 70) < 10) {
+//          if (!targetFound && my_abs(R0 - 70) < 15 && my_abs(G0 - 70) < 15 && my_abs(B0 - 70) < 15
+//        		  && my_abs(R1 - 70) < 15 && my_abs(G1 - 70) < 15 && my_abs(B1 - 70) < 15) {
+//          if (!targetFound && my_abs(R0 - 255) < 30 && my_abs(G0 - 255) < 30 && my_abs(B0 - 255) < 30) {
+        	  consecutiveMagenta++;
+            if (consecutiveMagenta > 20) {
+              targetFound = 1;
+            }
+          }
+          else if (!targetFound && !targetFound2) {
+        	  consecutiveMagenta = 0;
+          }
+          else if (targetFound && !targetFound2) {
+            xil_printf("target found at %d, %d\r\n", x, y);
+            xil_printf("rgb at target is: %d %d %d\r\n", (int)R0, (int)G0, (int)B0);
+            targetFound2 = 1;
+          }
+
+
           // Convert both RGB pixels into YCbCr components.
           uint8_t Y0, Cb0, Cr0, Y1, Cb1, Cr1;
           rgb_to_ycbcr(R0, G0, B0, Y0, Cb0, Cr0);
@@ -751,6 +1159,8 @@ void camera_loop(void)
           pMM2S_Mem[idx1] = static_cast<uint16_t>((static_cast<uint16_t>(Cr) << 8) | Y1);
         }
       }
+      targetFound = 0;
+      targetFound2 = 0;
       // Flush output frame cache so MM2S/HDMI sees newly written processed pixels.
       Xil_DCacheFlush();
     }

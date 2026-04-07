@@ -17,7 +17,9 @@
 #include "xuartps_hw.h"
 #include "xgpio.h"
 #include "sleep.h"
+#include <math.h>
 #include <string.h>
+#include "ff.h"
 
 
 /* SW0 comes from AXI GPIO channel 1, bit 0. */
@@ -177,9 +179,14 @@ static bool record_clip_ready = false;
 static int record_frame_count = 0;
 static int displayed_record_slot = -1;
 static int playback_record_slot = 0;
+static bool target_overlay_active = false;
 static XTime record_start_tick = 0;
 static XTime record_next_frame_tick = 0;
 static XTime record_playback_next_tick = 0;
+static FATFS sd_fatfs;
+static bool sd_card_mounted = false;
+static u32 saved_image_count = 0;
+static u8 ppm_scanline[FRAME_WIDTH * 3];
 
 enum class DisplaySource { LIVE, STATIC, ZOOM, RECORD, SW };
 static DisplaySource display_source = DisplaySource::LIVE;
@@ -383,6 +390,133 @@ static void capture_live_frame_to_record_slot(int slot_idx)
   Xil_DCacheFlushRange((INTPTR)(uintptr_t)dst, FRAME_BYTES);
 }
 
+static inline u8 clamp_color_channel(int value)
+{
+  if (value < 0) {
+    return 0;
+  }
+  if (value > 255) {
+    return 255;
+  }
+  return static_cast<u8>(value);
+}
+
+static inline void yuv422_pair_to_rgb888(Xuint16 yuv0, Xuint16 yuv1,
+                                         u8 &r0, u8 &g0, u8 &b0,
+                                         u8 &r1, u8 &g1, u8 &b1)
+{
+  const int cb = static_cast<int>((yuv0 >> 8) & 0xFFU) - 128;
+  const int y0 = static_cast<int>(yuv0 & 0xFFU);
+  const int cr = static_cast<int>((yuv1 >> 8) & 0xFFU) - 128;
+  const int y1 = static_cast<int>(yuv1 & 0xFFU);
+
+  const int c0 = y0 - 16;
+  const int c1 = y1 - 16;
+  const int d = cb;
+  const int e = cr;
+
+  r0 = clamp_color_channel((298 * c0 + 409 * e + 128) >> 8);
+  g0 = clamp_color_channel((298 * c0 - 100 * d - 208 * e + 128) >> 8);
+  b0 = clamp_color_channel((298 * c0 + 516 * d + 128) >> 8);
+
+  r1 = clamp_color_channel((298 * c1 + 409 * e + 128) >> 8);
+  g1 = clamp_color_channel((298 * c1 - 100 * d - 208 * e + 128) >> 8);
+  b1 = clamp_color_channel((298 * c1 + 516 * d + 128) >> 8);
+}
+
+static bool ensure_sd_card_ready(void)
+{
+  if (sd_card_mounted) {
+    return true;
+  }
+
+  FRESULT fr = f_mount(&sd_fatfs, "0:/", 1);
+  if (fr != FR_OK) {
+    xil_printf("ERROR: SD mount failed (%d)\r\n", fr);
+    return false;
+  }
+
+  fr = f_mkdir("0:/PHOTOS");
+  if (fr != FR_OK && fr != FR_EXIST) {
+    xil_printf("ERROR: photo dir create failed (%d)\r\n", fr);
+    return false;
+  }
+
+  sd_card_mounted = true;
+  xil_printf("SD card mounted at 0:/PHOTOS\r\n");
+  return true;
+}
+
+static bool save_capture_slot_to_sd(int slot_idx)
+{
+  if (slot_idx < 0 || slot_idx >= CAPTURE_MAX_IMAGES) {
+    xil_printf("ERROR: invalid capture slot %d\r\n", slot_idx);
+    return false;
+  }
+
+  if (!ensure_sd_card_ready()) {
+    return false;
+  }
+
+  volatile Xuint16 *src = capture_slot_ptr(slot_idx);
+  Xil_DCacheInvalidateRange((INTPTR)(uintptr_t)src, FRAME_BYTES);
+
+  char filename[64];
+  snprintf(filename, sizeof(filename), "0:/PHOTOS/CAP%03lu.PPM",
+           static_cast<unsigned long>(saved_image_count));
+
+  FIL fil;
+  FRESULT fr = f_open(&fil, filename, FA_CREATE_ALWAYS | FA_WRITE);
+  if (fr != FR_OK) {
+    xil_printf("ERROR: open %s failed (%d)\r\n", filename, fr);
+    return false;
+  }
+
+  char header[32];
+  int header_len = snprintf(header, sizeof(header), "P6\n%d %d\n255\n", FRAME_WIDTH, FRAME_HEIGHT);
+  UINT bytes_written = 0;
+  fr = f_write(&fil, header, static_cast<UINT>(header_len), &bytes_written);
+  if (fr != FR_OK || bytes_written != static_cast<UINT>(header_len)) {
+    xil_printf("ERROR: write header failed (%d, %u)\r\n", fr, bytes_written);
+    f_close(&fil);
+    return false;
+  }
+
+  for (int y = 0; y < FRAME_HEIGHT; ++y) {
+    for (int x = 0; x < FRAME_WIDTH; x += 2) {
+      const int pixel_idx = y * FRAME_WIDTH + x;
+      u8 r0, g0, b0, r1, g1, b1;
+      yuv422_pair_to_rgb888(src[pixel_idx], src[pixel_idx + 1], r0, g0, b0, r1, g1, b1);
+
+      const int line_idx = x * 3;
+      ppm_scanline[line_idx + 0] = r0;
+      ppm_scanline[line_idx + 1] = g0;
+      ppm_scanline[line_idx + 2] = b0;
+      ppm_scanline[line_idx + 3] = r1;
+      ppm_scanline[line_idx + 4] = g1;
+      ppm_scanline[line_idx + 5] = b1;
+    }
+
+    bytes_written = 0;
+    fr = f_write(&fil, ppm_scanline, static_cast<UINT>(sizeof(ppm_scanline)), &bytes_written);
+    if (fr != FR_OK || bytes_written != static_cast<UINT>(sizeof(ppm_scanline))) {
+      xil_printf("ERROR: image row write failed at y=%d (%d, %u)\r\n", y, fr, bytes_written);
+      f_close(&fil);
+      return false;
+    }
+  }
+
+  fr = f_close(&fil);
+  if (fr != FR_OK) {
+    xil_printf("ERROR: close %s failed (%d)\r\n", filename, fr);
+    return false;
+  }
+
+  ++saved_image_count;
+  xil_printf("Saved image to %s\r\n", filename);
+  return true;
+}
+
 static void update_zoom_level(int next_zoom_level)
 {
   if (next_zoom_level < 0) {
@@ -467,16 +601,12 @@ static void camera_interface_step(void) {
   u32 btn_data = access_buttons();
 
   int sw0 = ((sw_data & SW0_MASK) != 0U) ? 1 : 0;
-  int sw7 = ((sw_data & 0x80) != 0U) ? 1 : 0;	// sw7 controls hw or sw
+  int sw7 = ((sw_data & SW7_MASK) != 0U) ? 1 : 0;	// sw7 requests switch into software pipeline
   int btnc = ((btn_data & BTNC_MASK) != 0U) ? 1 : 0;
   int btnd = ((btn_data & BTND_MASK) != 0U) ? 1 : 0;
   int btnl = ((btn_data & BTNL_MASK) != 0U) ? 1 : 0;
   int btnr = ((btn_data & BTNR_MASK) != 0U) ? 1 : 0;
   int btnu = ((btn_data & BTNU_MASK) != 0U) ? 1 : 0;
-
-  if (sw7 && !prev_sw7) {
-	  (void)switch_display_to_sw();
-  }
 
   // Playback mode toggle via SW0.
   if (sw0 && !prev_sw0) {
@@ -520,6 +650,9 @@ static void camera_interface_step(void) {
   if (!playback_active && !preview_active && btnc && !prev_btnc) {
     int slot = next_capture_slot;
     capture_current_frame_to_slot(slot);
+    if (!save_capture_slot_to_sd(slot)) {
+      xil_printf("WARN: capture kept in DDR slot %d, but SD save failed\r\n", slot);
+    }
     if (capture_count < CAPTURE_MAX_IMAGES) {
       ++capture_count;
     }
@@ -837,6 +970,12 @@ static inline uint8_t raw_bayer_sample(volatile Xuint16 *pS2MM_Mem, int x, int y
   return low_byte ? static_cast<uint8_t>(w & 0x00FFU) : static_cast<uint8_t>((w >> 8) & 0x00FFU);
 }
 
+static inline uint8_t frame_word_sample(volatile Xuint16 *frame_mem, int offset_words, bool low_byte)
+{
+  uint16_t w = frame_mem[offset_words];
+  return low_byte ? static_cast<uint8_t>(w & 0x00FFU) : static_cast<uint8_t>((w >> 8) & 0x00FFU);
+}
+
 static inline void demosaic_bilinear_pixel(volatile Xuint16 *pS2MM_Mem, int x, int y, int width, int height, BayerPattern pat, bool low_byte, uint8_t &R, uint8_t &G, uint8_t &B)
 {
   // Identify which primary color this sensor site directly measures.
@@ -909,6 +1048,867 @@ inline int my_abs(int x) {
 	return x < 0 ? x * -1 : x;
 }
 
+struct TargetBox {
+  bool valid;
+  int min_x;
+  int min_y;
+  int max_x;
+  int max_y;
+  int pixel_count;
+};
+
+struct PageBox {
+  bool valid;
+  int min_x;
+  int min_y;
+  int max_x;
+  int max_y;
+  int pixel_count;
+};
+
+struct TargetCross {
+  bool valid;
+  int center_x;
+  int center_y;
+};
+
+struct TargetCircle {
+  bool valid;
+  int center_x;
+  int center_y;
+  int radius;
+};
+
+static TargetCircle last_detected_circle = {false, 0, 0, 0};
+static int overlay_detection_frame_divider = 0;
+
+static inline bool is_red_target_pixel(uint8_t r, uint8_t g, uint8_t b)
+{
+  const int red_over_green = static_cast<int>(r) - static_cast<int>(g);
+  const int red_over_blue = static_cast<int>(r) - static_cast<int>(b);
+  const int green_blue_gap = my_abs(static_cast<int>(g) - static_cast<int>(b));
+  const int red_strength = red_over_green + red_over_blue;
+
+  return (r >= 122U) &&
+         (red_over_green >= 34) &&
+         (red_over_blue >= 34) &&
+         (red_strength >= 82) &&
+         (g <= 168U) &&
+         (b <= 168U) &&
+         (green_blue_gap <= 55);
+}
+
+static inline bool is_white_page_pixel(uint8_t r, uint8_t g, uint8_t b)
+{
+  const int max_rgb = (r > g) ? ((r > b) ? r : b) : ((g > b) ? g : b);
+  const int min_rgb = (r < g) ? ((r < b) ? r : b) : ((g < b) ? g : b);
+  return (r >= 150U) &&
+         (g >= 150U) &&
+         (b >= 150U) &&
+         ((max_rgb - min_rgb) <= 55);
+}
+
+static inline void reset_target_box(TargetBox &box)
+{
+  box.valid = false;
+  box.min_x = FRAME_WIDTH;
+  box.min_y = FRAME_HEIGHT;
+  box.max_x = -1;
+  box.max_y = -1;
+  box.pixel_count = 0;
+}
+
+static inline void reset_page_box(PageBox &box)
+{
+  box.valid = false;
+  box.min_x = FRAME_WIDTH;
+  box.min_y = FRAME_HEIGHT;
+  box.max_x = -1;
+  box.max_y = -1;
+  box.pixel_count = 0;
+}
+
+static inline void accumulate_target_pixel(TargetBox &box, int x, int y)
+{
+  if (x < box.min_x) box.min_x = x;
+  if (x > box.max_x) box.max_x = x;
+  if (y < box.min_y) box.min_y = y;
+  if (y > box.max_y) box.max_y = y;
+  ++box.pixel_count;
+}
+
+static inline void accumulate_page_pixel(PageBox &box, int x, int y)
+{
+  if (x < box.min_x) box.min_x = x;
+  if (x > box.max_x) box.max_x = x;
+  if (y < box.min_y) box.min_y = y;
+  if (y > box.max_y) box.max_y = y;
+  ++box.pixel_count;
+}
+
+static bool detect_white_page_box(volatile Xuint16 *pS2MM_Mem, int width, int height,
+                                  BayerPattern pat, bool low_byte, PageBox &box)
+{
+  reset_page_box(box);
+
+  static constexpr int X_STEP = 8;
+  static constexpr int Y_STEP = 8;
+  static constexpr int MIN_PAGE_PIXELS = 500;
+  static constexpr int MIN_PAGE_WIDTH = FRAME_WIDTH / 5;
+  static constexpr int MIN_PAGE_HEIGHT = FRAME_HEIGHT / 5;
+
+  for (int y = 0; y < height; y += Y_STEP) {
+    const int src_y = height - 1 - y;
+    for (int x = 0; x < width; x += X_STEP) {
+      uint8_t r, g, b;
+      demosaic_bilinear_pixel(pS2MM_Mem, x, src_y, width, height, pat, low_byte, r, g, b);
+      if (is_white_page_pixel(r, g, b)) {
+        accumulate_page_pixel(box, x, y);
+      }
+    }
+  }
+
+  if (box.pixel_count < MIN_PAGE_PIXELS || box.max_x < box.min_x || box.max_y < box.min_y) {
+    reset_page_box(box);
+    return false;
+  }
+
+  box.min_x = clamp_int(box.min_x - 12, 0, width - 1);
+  box.min_y = clamp_int(box.min_y - 12, 0, height - 1);
+  box.max_x = clamp_int(box.max_x + 12, 0, width - 1);
+  box.max_y = clamp_int(box.max_y + 12, 0, height - 1);
+
+  const int page_width = box.max_x - box.min_x + 1;
+  const int page_height = box.max_y - box.min_y + 1;
+  if (page_width < MIN_PAGE_WIDTH || page_height < MIN_PAGE_HEIGHT) {
+    reset_page_box(box);
+    return false;
+  }
+
+  box.valid = true;
+  return true;
+}
+
+static bool detect_red_target_box(volatile Xuint16 *pS2MM_Mem, int width, int height,
+                                  BayerPattern pat, bool low_byte,
+                                  const PageBox &page_box, TargetBox &box)
+{
+  reset_target_box(box);
+
+  static constexpr int X_STEP = 4;
+  static constexpr int Y_STEP = 4;
+  static constexpr int MIN_TARGET_PIXELS = 40;
+  static constexpr int MIN_BOX_WIDTH = 12;
+  static constexpr int MIN_BOX_HEIGHT = 12;
+  static constexpr int MAX_BOX_WIDTH = FRAME_WIDTH / 2;
+  static constexpr int MAX_BOX_HEIGHT = FRAME_HEIGHT / 2;
+
+  int start_x = 0;
+  int start_y = 0;
+  int end_x = width - 1;
+  int end_y = height - 1;
+  if (page_box.valid) {
+    const int page_width = page_box.max_x - page_box.min_x + 1;
+    const int page_height = page_box.max_y - page_box.min_y + 1;
+    start_x = clamp_int(page_box.min_x + page_width / 8, 0, width - 1);
+    end_x = clamp_int(page_box.max_x - page_width / 8, 0, width - 1);
+    start_y = clamp_int(page_box.min_y + page_height / 8, 0, height - 1);
+    end_y = clamp_int(page_box.max_y - page_height / 8, 0, height - 1);
+  }
+
+  for (int y = start_y; y <= end_y; y += Y_STEP) {
+    const int src_y = height - 1 - y;
+    for (int x = start_x; x <= end_x; x += X_STEP) {
+      uint8_t r, g, b;
+      demosaic_bilinear_pixel(pS2MM_Mem, x, src_y, width, height, pat, low_byte, r, g, b);
+      if (is_red_target_pixel(r, g, b)) {
+        accumulate_target_pixel(box, x, y);
+      }
+    }
+  }
+
+  if (box.pixel_count < MIN_TARGET_PIXELS || box.max_x < box.min_x || box.max_y < box.min_y) {
+    reset_target_box(box);
+    return false;
+  }
+
+  box.min_x = clamp_int(box.min_x - 8, 0, width - 1);
+  box.min_y = clamp_int(box.min_y - 8, 0, height - 1);
+  box.max_x = clamp_int(box.max_x + 8, 0, width - 1);
+  box.max_y = clamp_int(box.max_y + 8, 0, height - 1);
+
+  const int box_width = box.max_x - box.min_x + 1;
+  const int box_height = box.max_y - box.min_y + 1;
+  if (box_width < MIN_BOX_WIDTH || box_height < MIN_BOX_HEIGHT ||
+      box_width > MAX_BOX_WIDTH || box_height > MAX_BOX_HEIGHT) {
+    reset_target_box(box);
+    return false;
+  }
+
+  box.valid = true;
+  return true;
+}
+
+static inline bool pixel_on_target_box_border(const TargetBox &box, int x, int y)
+{
+  if (!box.valid) {
+    return false;
+  }
+
+  static constexpr int BORDER_THICKNESS = 4;
+  const bool within_x = (x >= box.min_x && x <= box.max_x);
+  const bool within_y = (y >= box.min_y && y <= box.max_y);
+  const bool on_left = within_y && (x >= box.min_x) && (x < box.min_x + BORDER_THICKNESS);
+  const bool on_right = within_y && (x <= box.max_x) && (x > box.max_x - BORDER_THICKNESS);
+  const bool on_top = within_x && (y >= box.min_y) && (y < box.min_y + BORDER_THICKNESS);
+  const bool on_bottom = within_x && (y <= box.max_y) && (y > box.max_y - BORDER_THICKNESS);
+
+  return on_left || on_right || on_top || on_bottom;
+}
+
+static inline bool sample_rgb_from_yuv_frame(volatile Xuint16 *src, int width, int height, int x, int y,
+                                             u8 &r, u8 &g, u8 &b)
+{
+  if (x < 0 || x >= width || y < 0 || y >= height) {
+    r = g = b = 0;
+    return false;
+  }
+
+  const int pair_x = x & ~1;
+  const int idx = y * width + pair_x;
+  u8 r0, g0, b0, r1, g1, b1;
+  yuv422_pair_to_rgb888(src[idx], src[idx + 1], r0, g0, b0, r1, g1, b1);
+  if ((x & 1) == 0) {
+    r = r0;
+    g = g0;
+    b = b0;
+  } else {
+    r = r1;
+    g = g1;
+    b = b1;
+  }
+  return true;
+}
+
+static bool pixel_has_nearby_red(volatile Xuint16 *src, int width, int height, int x, int y)
+{
+  static const int red_probe_offsets[][2] = {
+    {-20, 0}, {-12, 0}, {12, 0}, {20, 0},
+    {0, -20}, {0, -12}, {0, 12}, {0, 20},
+    {-14, -14}, {14, -14}, {-14, 14}, {14, 14}
+  };
+
+  for (unsigned i = 0; i < (sizeof(red_probe_offsets) / sizeof(red_probe_offsets[0])); ++i) {
+    u8 r, g, b;
+    if (!sample_rgb_from_yuv_frame(src, width, height,
+                                   x + red_probe_offsets[i][0],
+                                   y + red_probe_offsets[i][1],
+                                   r, g, b)) {
+      continue;
+    }
+    if (is_red_target_pixel(r, g, b)) {
+      return true;
+    }
+  }
+
+  return false;
+}
+
+static bool is_target_white_mask_pixel(volatile Xuint16 *src, int width, int height, int x, int y)
+{
+  u8 r, g, b;
+  if (!sample_rgb_from_yuv_frame(src, width, height, x, y, r, g, b)) {
+    return false;
+  }
+
+  if (!is_white_page_pixel(r, g, b)) {
+    return false;
+  }
+
+  return pixel_has_nearby_red(src, width, height, x, y);
+}
+
+static bool is_target_white_edge_pixel(volatile Xuint16 *src, int width, int height, int x, int y)
+{
+  if (!is_target_white_mask_pixel(src, width, height, x, y)) {
+    return false;
+  }
+
+  static const int edge_offsets[8][2] = {
+    {-4, 0}, {4, 0}, {0, -4}, {0, 4},
+    {-4, -4}, {4, -4}, {-4, 4}, {4, 4}
+  };
+
+  int white_neighbors = 0;
+  for (int i = 0; i < 8; ++i) {
+    if (is_target_white_mask_pixel(src, width, height,
+                                   x + edge_offsets[i][0],
+                                   y + edge_offsets[i][1])) {
+      ++white_neighbors;
+    }
+  }
+
+  return white_neighbors <= 6;
+}
+
+static int circle_angle_bin(int dx, int dy)
+{
+  const int adx = my_abs(dx);
+  const int ady = my_abs(dy);
+
+  if (adx >= ady) {
+    if (dx >= 0) {
+      if (dy <= 0) {
+        return (ady * 3 <= adx) ? 0 : 1;
+      }
+      return (ady * 3 <= adx) ? 11 : 10;
+    }
+    if (dy <= 0) {
+      return (ady * 3 <= adx) ? 6 : 5;
+    }
+    return (ady * 3 <= adx) ? 6 : 7;
+  }
+
+  if (dy <= 0) {
+    if (dx >= 0) {
+      return (adx * 3 <= ady) ? 3 : 2;
+    }
+    return (adx * 3 <= ady) ? 3 : 4;
+  }
+
+  if (dx >= 0) {
+    return (adx * 3 <= ady) ? 9 : 10;
+  }
+  return (adx * 3 <= ady) ? 9 : 8;
+}
+
+static bool evaluate_circle_from_seed(volatile Xuint16 *src, int width, int height,
+                                      int seed_x, int seed_y, TargetCircle &best_circle)
+{
+  bool found = false;
+  int best_score = 0;
+  static constexpr int SAMPLE_STEP = 6;
+  static constexpr int START_SPAN = 40;
+  static constexpr int SPAN_STEP = 24;
+  static constexpr int MAX_SPAN = FRAME_HEIGHT / 3;
+
+  for (int half_span = START_SPAN; half_span <= MAX_SPAN; half_span += SPAN_STEP) {
+    const int min_x = clamp_int(seed_x - half_span, 0, width - 1);
+    const int max_x = clamp_int(seed_x + half_span, 0, width - 1);
+    const int min_y = clamp_int(seed_y - half_span, 0, height - 1);
+    const int max_y = clamp_int(seed_y + half_span, 0, height - 1);
+
+    int white_min_x = width;
+    int white_max_x = -1;
+    int white_min_y = height;
+    int white_max_y = -1;
+    int white_count = 0;
+
+    for (int y = min_y; y <= max_y; y += SAMPLE_STEP) {
+      for (int x = min_x; x <= max_x; x += SAMPLE_STEP) {
+        if (!is_target_white_mask_pixel(src, width, height, x, y)) {
+          continue;
+        }
+        ++white_count;
+        if (x < white_min_x) white_min_x = x;
+        if (x > white_max_x) white_max_x = x;
+        if (y < white_min_y) white_min_y = y;
+        if (y > white_max_y) white_max_y = y;
+      }
+    }
+
+    if (white_count < 10 || white_max_x <= white_min_x || white_max_y <= white_min_y) {
+      continue;
+    }
+
+    const int center_x = (white_min_x + white_max_x) / 2;
+    const int center_y = (white_min_y + white_max_y) / 2;
+    const int radius_x = (white_max_x - white_min_x) / 2;
+    const int radius_y = (white_max_y - white_min_y) / 2;
+    const int radius = (radius_x + radius_y) / 2;
+    if (radius < 20 || radius > half_span) {
+      continue;
+    }
+
+    const int tolerance = (radius / 5 > 6) ? (radius / 5) : 6;
+    int support = 0;
+    int edge_support = 0;
+    double radius_error_sum = 0.0;
+    bool bins[12] = {false};
+    int covered_bins = 0;
+
+    for (int y = min_y; y <= max_y; y += SAMPLE_STEP) {
+      for (int x = min_x; x <= max_x; x += SAMPLE_STEP) {
+        if (!is_target_white_mask_pixel(src, width, height, x, y)) {
+          continue;
+        }
+
+        const int dx = x - center_x;
+        const int dy = y - center_y;
+        const int dist = static_cast<int>(sqrtf(static_cast<float>(dx * dx + dy * dy)) + 0.5f);
+        if (my_abs(dist - radius) > tolerance) {
+          continue;
+        }
+
+        ++support;
+        radius_error_sum += static_cast<double>(my_abs(dist - radius));
+        if (is_target_white_edge_pixel(src, width, height, x, y)) {
+          ++edge_support;
+        }
+
+        const int bin = circle_angle_bin(dx, dy);
+        if (!bins[bin]) {
+          bins[bin] = true;
+          ++covered_bins;
+        }
+      }
+    }
+
+    if (support < 8 || edge_support < 5 || covered_bins < 3) {
+      continue;
+    }
+
+    const double mean_error = radius_error_sum / static_cast<double>(support);
+    if (mean_error > static_cast<double>(tolerance)) {
+      continue;
+    }
+
+    const int roundness_penalty = my_abs(radius_x - radius_y);
+    const int score = support * 8 + edge_support * 6 + covered_bins * 20 - roundness_penalty * 2;
+    if (!found || score > best_score) {
+      found = true;
+      best_score = score;
+      best_circle.valid = true;
+      best_circle.center_x = center_x;
+      best_circle.center_y = center_y;
+      best_circle.radius = radius;
+    }
+  }
+
+  return found;
+}
+
+static bool target_pattern_matches(volatile Xuint16 *src, int width, int height, int center_x, int center_y, int radius_guess)
+{
+  if (radius_guess < 20) {
+    return false;
+  }
+
+  static const int numerators[] = {18, 36, 54, 72, 88};
+  static const bool expect_red[] = {true, false, true, false, true};
+  int matched_bands = 0;
+
+  for (int i = 0; i < 5; ++i) {
+    const int radius = (radius_guess * numerators[i]) / 100;
+    int red_hits = 0;
+    int white_hits = 0;
+    int samples = 0;
+
+    const int sample_offsets[8][2] = {
+      { radius, 0 }, {-radius, 0 }, { 0, radius }, { 0, -radius },
+      { radius * 7 / 10, radius * 7 / 10 }, { -radius * 7 / 10, radius * 7 / 10 },
+      { radius * 7 / 10, -radius * 7 / 10 }, { -radius * 7 / 10, -radius * 7 / 10 }
+    };
+
+    for (int s = 0; s < 8; ++s) {
+      u8 r, g, b;
+      if (!sample_rgb_from_yuv_frame(src, width, height,
+                                     center_x + sample_offsets[s][0],
+                                     center_y + sample_offsets[s][1],
+                                     r, g, b)) {
+        continue;
+      }
+      ++samples;
+      if (is_red_target_pixel(r, g, b)) {
+        ++red_hits;
+      } else if (is_white_page_pixel(r, g, b)) {
+        ++white_hits;
+      }
+    }
+
+    if (samples < 5) {
+      continue;
+    }
+
+    if (expect_red[i]) {
+      if (red_hits >= 3) {
+        ++matched_bands;
+      }
+    } else {
+      if (white_hits >= 3) {
+        ++matched_bands;
+      }
+    }
+  }
+
+  return matched_bands >= 3;
+}
+
+static bool target_center_has_strong_red_mass(volatile Xuint16 *src, int width, int height,
+                                              int center_x, int center_y, int radius_guess)
+{
+  if (radius_guess < 16) {
+    return false;
+  }
+
+  const int inner_radius = radius_guess / 3;
+  const int outer_radius = radius_guess;
+  int inner_red_hits = 0;
+  int outer_red_hits = 0;
+  int sample_count = 0;
+
+  for (int dy = -outer_radius; dy <= outer_radius; dy += 6) {
+    for (int dx = -outer_radius; dx <= outer_radius; dx += 6) {
+      const int dist2 = dx * dx + dy * dy;
+      if (dist2 > outer_radius * outer_radius) {
+        continue;
+      }
+
+      u8 r, g, b;
+      if (!sample_rgb_from_yuv_frame(src, width, height, center_x + dx, center_y + dy, r, g, b)) {
+        continue;
+      }
+
+      ++sample_count;
+      if (is_red_target_pixel(r, g, b)) {
+        if (dist2 <= inner_radius * inner_radius) {
+          ++inner_red_hits;
+        } else {
+          ++outer_red_hits;
+        }
+      }
+    }
+  }
+
+  if (sample_count < 20) {
+    return false;
+  }
+
+  return (inner_red_hits >= 4) && (outer_red_hits >= 8);
+}
+
+static bool detect_red_target_box_from_yuv_frame(volatile Xuint16 *src, int width, int height, TargetBox &box)
+{
+  reset_target_box(box);
+  PageBox page_box;
+  reset_page_box(page_box);
+
+  static constexpr int X_STEP = 8;
+  static constexpr int Y_STEP = 8;
+  for (int y = 0; y < height; y += Y_STEP) {
+    for (int x = 0; x < width; x += X_STEP) {
+      const int pair_x = x & ~1;
+      const int idx = y * width + pair_x;
+      u8 r0, g0, b0, r1, g1, b1;
+      yuv422_pair_to_rgb888(src[idx], src[idx + 1], r0, g0, b0, r1, g1, b1);
+      if (is_white_page_pixel(r0, g0, b0)) {
+        accumulate_page_pixel(page_box, pair_x, y);
+      }
+      if (is_white_page_pixel(r1, g1, b1)) {
+        accumulate_page_pixel(page_box, pair_x + 1, y);
+      }
+    }
+  }
+
+  bool page_visible = false;
+  if (page_box.pixel_count >= 400 && page_box.max_x >= page_box.min_x && page_box.max_y >= page_box.min_y) {
+    page_box.min_x = clamp_int(page_box.min_x - 12, 0, width - 1);
+    page_box.min_y = clamp_int(page_box.min_y - 12, 0, height - 1);
+    page_box.max_x = clamp_int(page_box.max_x + 12, 0, width - 1);
+    page_box.max_y = clamp_int(page_box.max_y + 12, 0, height - 1);
+    page_box.valid = true;
+    page_visible = true;
+  }
+
+  int start_x = 0;
+  int end_x = width - 2;
+  int start_y = 0;
+  int end_y = height - 1;
+  int allowed_width = width;
+  int allowed_height = height;
+  if (page_visible) {
+    const int page_width = page_box.max_x - page_box.min_x + 1;
+    const int page_height = page_box.max_y - page_box.min_y + 1;
+    start_x = clamp_int(page_box.min_x - page_width / 8, 0, width - 2);
+    end_x = clamp_int(page_box.max_x + page_width / 8, 0, width - 2);
+    start_y = clamp_int(page_box.min_y - page_height / 8, 0, height - 1);
+    end_y = clamp_int(page_box.max_y + page_height / 8, 0, height - 1);
+    allowed_width = page_width * 5 / 4;
+    allowed_height = page_height * 5 / 4;
+  }
+  start_x &= ~1;
+  end_x &= ~1;
+
+  u32 sum_x = 0;
+  u32 sum_y = 0;
+
+  for (int y = start_y; y <= end_y; y += 4) {
+    for (int x = start_x; x <= end_x; x += 4) {
+      const int idx = y * width + (x & ~1);
+      u8 r0, g0, b0, r1, g1, b1;
+      yuv422_pair_to_rgb888(src[idx], src[idx + 1], r0, g0, b0, r1, g1, b1);
+      if (is_red_target_pixel(r0, g0, b0)) {
+        accumulate_target_pixel(box, x, y);
+        sum_x += static_cast<u32>(x);
+        sum_y += static_cast<u32>(y);
+      }
+      if (is_red_target_pixel(r1, g1, b1)) {
+        accumulate_target_pixel(box, x + 1, y);
+        sum_x += static_cast<u32>(x + 1);
+        sum_y += static_cast<u32>(y);
+      }
+    }
+  }
+
+  if (box.pixel_count < 45 || box.max_x < box.min_x || box.max_y < box.min_y) {
+    reset_target_box(box);
+    return false;
+  }
+
+  int center_x = static_cast<int>(sum_x / static_cast<u32>(box.pixel_count));
+  int center_y = static_cast<int>(sum_y / static_cast<u32>(box.pixel_count));
+  if (page_visible) {
+    center_x = (page_box.min_x + page_box.max_x) / 2;
+    center_y = (page_box.min_y + page_box.max_y) / 2;
+  }
+
+  int max_dx = 0;
+  int max_dy = 0;
+  for (int y = start_y; y <= end_y; y += 4) {
+    for (int x = start_x; x <= end_x; x += 4) {
+      const int idx = y * width + (x & ~1);
+      u8 r0, g0, b0, r1, g1, b1;
+      yuv422_pair_to_rgb888(src[idx], src[idx + 1], r0, g0, b0, r1, g1, b1);
+      if (is_red_target_pixel(r0, g0, b0)) {
+        const int dx = my_abs(x - center_x);
+        const int dy = my_abs(y - center_y);
+        if (dx > max_dx) max_dx = dx;
+        if (dy > max_dy) max_dy = dy;
+      }
+      if (is_red_target_pixel(r1, g1, b1)) {
+        const int dx = my_abs((x + 1) - center_x);
+        const int dy = my_abs(y - center_y);
+        if (dx > max_dx) max_dx = dx;
+        if (dy > max_dy) max_dy = dy;
+      }
+    }
+  }
+
+  const int half_width = max_dx + 28;
+  const int half_height = max_dy + 28;
+  const int radius_guess = (half_width > half_height) ? half_width : half_height;
+  const bool pattern_ok = target_pattern_matches(src, width, height, center_x, center_y, radius_guess);
+  const bool mass_ok = target_center_has_strong_red_mass(src, width, height, center_x, center_y, radius_guess);
+  if (!pattern_ok && !mass_ok) {
+    reset_target_box(box);
+    return false;
+  }
+
+  box.min_x = clamp_int(center_x - half_width, 0, width - 1);
+  box.min_y = clamp_int(center_y - half_height, 0, height - 1);
+  box.max_x = clamp_int(center_x + half_width, 0, width - 1);
+  box.max_y = clamp_int(center_y + half_height, 0, height - 1);
+  const int box_width = box.max_x - box.min_x + 1;
+  const int box_height = box.max_y - box.min_y + 1;
+  if (box_width < 30 || box_height < 30 ||
+      box_width > allowed_width || box_height > allowed_height) {
+    reset_target_box(box);
+    return false;
+  }
+
+  box.valid = true;
+  return true;
+}
+
+static bool detect_red_target_cross_from_yuv_frame(volatile Xuint16 *src, int width, int height, TargetCross &cross)
+{
+  cross.valid = false;
+  cross.center_x = 0;
+  cross.center_y = 0;
+
+  static u16 row_red_counts[FRAME_HEIGHT];
+  static u16 col_red_counts[FRAME_WIDTH];
+  memset(row_red_counts, 0, sizeof(row_red_counts));
+  memset(col_red_counts, 0, sizeof(col_red_counts));
+
+  int start_x = 0;
+  int end_x = width - 2;
+  int start_y = 0;
+  int end_y = height - 1;
+  start_x &= ~1;
+  end_x &= ~1;
+
+  int total_red_hits = 0;
+  static constexpr int SAMPLE_STEP = 2;
+  for (int y = start_y; y <= end_y; y += SAMPLE_STEP) {
+    for (int x = start_x; x <= end_x; x += SAMPLE_STEP) {
+      const int idx = y * width + (x & ~1);
+      u8 r0, g0, b0, r1, g1, b1;
+      yuv422_pair_to_rgb888(src[idx], src[idx + 1], r0, g0, b0, r1, g1, b1);
+      if (is_red_target_pixel(r0, g0, b0)) {
+        ++row_red_counts[y];
+        ++col_red_counts[x];
+        ++total_red_hits;
+      }
+      if (is_red_target_pixel(r1, g1, b1)) {
+        ++row_red_counts[y];
+        ++col_red_counts[x + 1];
+        ++total_red_hits;
+      }
+    }
+  }
+
+  if (total_red_hits < 20) {
+    return false;
+  }
+
+  int best_row = -1;
+  int best_row_count = 0;
+  for (int y = start_y; y <= end_y; ++y) {
+    if (row_red_counts[y] > best_row_count) {
+      best_row_count = row_red_counts[y];
+      best_row = y;
+    }
+  }
+
+  int best_col = -1;
+  int best_col_count = 0;
+  for (int x = start_x; x <= end_x; ++x) {
+    if (col_red_counts[x] > best_col_count) {
+      best_col_count = col_red_counts[x];
+      best_col = x;
+    }
+  }
+
+  if (best_row < 0 || best_col < 0 || best_row_count < 3 || best_col_count < 3) {
+    return false;
+  }
+
+  cross.valid = true;
+  cross.center_x = best_col;
+  cross.center_y = best_row;
+  return true;
+}
+
+static bool detect_white_target_circle_from_yuv_frame(volatile Xuint16 *src, int width, int height, TargetCircle &circle)
+{
+  circle.valid = false;
+  circle.center_x = 0;
+  circle.center_y = 0;
+  circle.radius = 0;
+  const int scan_row_step = height / 8;
+  const int x_step = 8;
+  bool found = false;
+  int best_score = 0;
+
+  for (int row = scan_row_step / 2; row < height; row += scan_row_step) {
+    for (int x = 0; x < width; x += x_step) {
+      if (!is_target_white_mask_pixel(src, width, height, x, row)) {
+        continue;
+      }
+
+      TargetCircle candidate = {};
+      if (!evaluate_circle_from_seed(src, width, height, x, row, candidate)) {
+        continue;
+      }
+
+      const int score = candidate.radius;
+      if (!found || score > best_score) {
+        found = true;
+        best_score = score;
+        circle = candidate;
+      }
+
+      x += candidate.radius;
+    }
+  }
+
+  return found;
+}
+
+static inline void draw_red_pair(volatile Xuint16 *dst, int width, int height, int x, int y)
+{
+  if (x < 0 || x >= width || y < 0 || y >= height) {
+    return;
+  }
+
+  static constexpr u8 RED_Y = 82U;
+  static constexpr u8 RED_CB = 90U;
+  static constexpr u8 RED_CR = 240U;
+
+  const int pair_x = clamp_int(x & ~1, 0, width - 2);
+  const int idx = y * width + pair_x;
+  dst[idx] = static_cast<uint16_t>((static_cast<uint16_t>(RED_CB) << 8) | RED_Y);
+  dst[idx + 1] = static_cast<uint16_t>((static_cast<uint16_t>(RED_CR) << 8) | RED_Y);
+}
+
+static void render_target_overlay_frame(void)
+{
+  const int src_idx = latest_completed_write_frame_index();
+  volatile Xuint16 *src = frame_store_ptr(src_idx);
+  volatile Xuint16 *dst = zoom_frame_ptr();
+  Xil_DCacheInvalidateRange((INTPTR)(uintptr_t)src, FRAME_BYTES);
+  copy_frame_words(dst, src);
+
+  TargetCircle circle = last_detected_circle;
+  const bool should_refresh_detection = (overlay_detection_frame_divider == 0);
+  overlay_detection_frame_divider = (overlay_detection_frame_divider + 1) % 3;
+
+  if (should_refresh_detection) {
+    if (detect_white_target_circle_from_yuv_frame(src, FRAME_WIDTH, FRAME_HEIGHT, circle)) {
+      last_detected_circle = circle;
+    } else {
+      last_detected_circle.valid = false;
+      circle.valid = false;
+    }
+  }
+
+  if (circle.valid) {
+    static constexpr int OUTLINE_THICKNESS = 3;
+    static constexpr int CROSS_HALF_SIZE = 18;
+    const int radius_sq = circle.radius * circle.radius;
+
+    for (int y = clamp_int(circle.center_y - circle.radius - OUTLINE_THICKNESS, 0, FRAME_HEIGHT - 1);
+         y <= clamp_int(circle.center_y + circle.radius + OUTLINE_THICKNESS, 0, FRAME_HEIGHT - 1);
+         ++y) {
+      for (int x = clamp_int(circle.center_x - circle.radius - OUTLINE_THICKNESS, 0, FRAME_WIDTH - 1);
+           x <= clamp_int(circle.center_x + circle.radius + OUTLINE_THICKNESS, 0, FRAME_WIDTH - 1);
+           ++x) {
+        const int dx = x - circle.center_x;
+        const int dy = y - circle.center_y;
+        const int dist_sq = dx * dx + dy * dy;
+        const int delta = my_abs(dist_sq - radius_sq);
+        if (delta <= (2 * circle.radius * OUTLINE_THICKNESS)) {
+          draw_red_pair(dst, FRAME_WIDTH, FRAME_HEIGHT, x, y);
+        }
+      }
+    }
+
+    for (int y = clamp_int(circle.center_y - 2, 0, FRAME_HEIGHT - 1);
+         y <= clamp_int(circle.center_y + 2, 0, FRAME_HEIGHT - 1);
+         ++y) {
+      for (int x = clamp_int(circle.center_x - CROSS_HALF_SIZE, 0, FRAME_WIDTH - 1);
+           x <= clamp_int(circle.center_x + CROSS_HALF_SIZE, 0, FRAME_WIDTH - 1);
+           ++x) {
+        draw_red_pair(dst, FRAME_WIDTH, FRAME_HEIGHT, x, y);
+      }
+    }
+
+    for (int x = clamp_int(circle.center_x - 2, 0, FRAME_WIDTH - 1);
+         x <= clamp_int(circle.center_x + 2, 0, FRAME_WIDTH - 1);
+         ++x) {
+      for (int y = clamp_int(circle.center_y - CROSS_HALF_SIZE, 0, FRAME_HEIGHT - 1);
+           y <= clamp_int(circle.center_y + CROSS_HALF_SIZE, 0, FRAME_HEIGHT - 1);
+           ++y) {
+        draw_red_pair(dst, FRAME_WIDTH, FRAME_HEIGHT, x, y);
+      }
+    }
+  }
+
+  Xil_DCacheFlushRange((INTPTR)(uintptr_t)dst, FRAME_BYTES);
+  target_overlay_active = true;
+}
+
 void camera_loop(void)
 {
   // Holds combined VDMA park register (controls selected read/write frame store).
@@ -942,6 +1942,7 @@ void camera_loop(void)
     XTime_GetTime(&now);
 
     if (sw7 && !prev_sw7) {
+      xil_printf("SW7 asserted: switching to software processing pipeline\r\n");
     	break;
     }
 
@@ -1005,7 +2006,11 @@ void camera_loop(void)
     }
 
     if (!record_active && !record_armed && !record_playback_active &&
-        !playback_active && !preview_active && current_zoom_level > 0) {
+        !playback_active && !preview_active) {
+      render_target_overlay_frame();
+      (void)switch_display_to_zoom();
+    } else if (!record_active && !record_armed && !record_playback_active &&
+               !playback_active && !preview_active && current_zoom_level > 0) {
       render_zoomed_live_frame();
       (void)switch_display_to_zoom();
     } else if (!record_active && !record_armed && !record_playback_active &&
@@ -1068,21 +2073,14 @@ void camera_loop(void)
   xil_printf("pS2MM_Mem = %X\n\r", pS2MM_Mem);
   xil_printf("pMM2S_Mem = %X\n\r", pMM2S_Mem);
 
-  // Bayer tile order expected from this sensor mode.
-  const BayerPattern PAT = BayerPattern::BGGR;
   // Frame dimensions fixed by selected mode and VDMA config.
   const int WIDTH  = 1920;
   const int HEIGHT = 1080;
   // Number of frames per timing window for FPS reporting.
   // Keep this small so timing output appears quickly on UART.
   const int NUM_FRAMES = 30;
-  // Select which byte in each 16-bit DMA word contains valid Bayer sample.
+  // Match the original SA-4B software path exactly while we re-establish color.
   const bool CAMERA_RAW_IN_LOW_BYTE = true;
-
-  int consecutiveMagenta = 0;
-  bool targetFound = 0;
-  bool targetFound2 = 0;
-
 
   // Timestamps used to compute software pipeline throughput.
   XTime tStart, tEnd;
@@ -1094,73 +2092,24 @@ void camera_loop(void)
     for (j = 0; j < NUM_FRAMES; j++) {
       // Invalidate cached input frame so CPU reads fresh DMA-written camera pixels.
       Xil_DCacheInvalidateRange((INTPTR)pS2MM_Mem, WIDTH * HEIGHT * sizeof(Xuint16));
-      // Raster scan output image row by row.
-      for (int y = 0; y < HEIGHT; y++) {
-        // 4:2:2 stores two luma samples but shared chroma for each horizontal pair.
+      // First restore the exact SA-4B software color path before re-adding target overlay.
+      for (int y = 0; y < HEIGHT; y += 2) {
         for (int x = 0; x < WIDTH; x += 2) {
-          // Vertical flip aligns camera memory orientation with display orientation.
-          int srcY = HEIGHT - 1 - y;
-          // First pixel index of this 2-pixel output pair.
-          int x0 = x;
-          // Second pixel index; clamp at right border for odd-width safety.
-          int x1 = (x + 1 < WIDTH) ? (x + 1) : x;
+          const int offset = WIDTH * y + x;
+          const uint8_t b = frame_word_sample(pS2MM_Mem, offset, CAMERA_RAW_IN_LOW_BYTE);
+          const uint8_t g = frame_word_sample(pS2MM_Mem, offset + 1, CAMERA_RAW_IN_LOW_BYTE);
+          const uint8_t r = frame_word_sample(pS2MM_Mem, offset + WIDTH + 1, CAMERA_RAW_IN_LOW_BYTE);
 
-          // Reconstruct full RGB for two neighboring Bayer samples.
-          uint8_t R0, G0, B0, R1, G1, B1;
-          demosaic_bilinear_pixel(pS2MM_Mem, x0, srcY, WIDTH, HEIGHT, PAT, CAMERA_RAW_IN_LOW_BYTE, R0, G0, B0);
-          demosaic_bilinear_pixel(pS2MM_Mem, x1, srcY, WIDTH, HEIGHT, PAT, CAMERA_RAW_IN_LOW_BYTE, R1, G1, B1);
+          const uint8_t yv = static_cast<uint8_t>((r >> 2) + (g >> 1) + (b >> 3));
+          const uint8_t cb = static_cast<uint8_t>((((int)b - (int)yv) >> 1) + (((int)b - (int)yv) >> 2) + 128);
+          const uint8_t cr = static_cast<uint8_t>((((int)r - (int)yv) >> 1) + (((int)r - (int)yv) >> 2) + 128);
 
-          if (x < 200 && y < 200) {
-        	  R0 = 70;
-        	  R1 = 70;
-        	  G0 = 70;
-        	  G1 = 70;
-        	  B0 = 70;
-        	  B1 = 70;
-          }
-          if (x == 960 && y == 540) {
-        	  xil_printf("rgb at center pixel is: %d %d %d\r\n", (int)R0, (int)G0, (int)B0);
-          }
-
-          if (!targetFound && my_abs(R0 - 70) < 10 && my_abs(G0 - 70) < 10 && my_abs(B0 - 70) < 10
-                  		  && my_abs(R1 - 70) < 10 && my_abs(G1 - 70) < 10 && my_abs(B1 - 70) < 10) {
-//          if (!targetFound && my_abs(R0 - 70) < 15 && my_abs(G0 - 70) < 15 && my_abs(B0 - 70) < 15
-//        		  && my_abs(R1 - 70) < 15 && my_abs(G1 - 70) < 15 && my_abs(B1 - 70) < 15) {
-//          if (!targetFound && my_abs(R0 - 255) < 30 && my_abs(G0 - 255) < 30 && my_abs(B0 - 255) < 30) {
-        	  consecutiveMagenta++;
-            if (consecutiveMagenta > 20) {
-              targetFound = 1;
-            }
-          }
-          else if (!targetFound && !targetFound2) {
-        	  consecutiveMagenta = 0;
-          }
-          else if (targetFound && !targetFound2) {
-            xil_printf("target found at %d, %d\r\n", x, y);
-            xil_printf("rgb at target is: %d %d %d\r\n", (int)R0, (int)G0, (int)B0);
-            targetFound2 = 1;
-          }
-
-
-          // Convert both RGB pixels into YCbCr components.
-          uint8_t Y0, Cb0, Cr0, Y1, Cb1, Cr1;
-          rgb_to_ycbcr(R0, G0, B0, Y0, Cb0, Cr0);
-          rgb_to_ycbcr(R1, G1, B1, Y1, Cb1, Cr1);
-
-          // Average chroma horizontally to enforce 4:2:2 chroma subsampling.
-          uint8_t Cb = static_cast<uint8_t>((static_cast<int>(Cb0) + static_cast<int>(Cb1)) / 2);
-          uint8_t Cr = static_cast<uint8_t>((static_cast<int>(Cr0) + static_cast<int>(Cr1)) / 2);
-
-          // Compute linear output addresses for pixel pair.
-          int idx0 = y * WIDTH + x0;
-          int idx1 = y * WIDTH + x1;
-          // Pack output as [Cb|Y0] and [Cr|Y1] (YUYV byte order in memory).
-          pMM2S_Mem[idx0] = static_cast<uint16_t>((static_cast<uint16_t>(Cb) << 8) | Y0);
-          pMM2S_Mem[idx1] = static_cast<uint16_t>((static_cast<uint16_t>(Cr) << 8) | Y1);
+          pMM2S_Mem[offset] = static_cast<uint16_t>((static_cast<uint16_t>(cb) << 8) | yv);
+          pMM2S_Mem[offset + 1] = static_cast<uint16_t>((static_cast<uint16_t>(cr) << 8) | yv);
+          pMM2S_Mem[offset + WIDTH] = static_cast<uint16_t>((static_cast<uint16_t>(cb) << 8) | yv);
+          pMM2S_Mem[offset + WIDTH + 1] = static_cast<uint16_t>((static_cast<uint16_t>(cr) << 8) | yv);
         }
       }
-      targetFound = 0;
-      targetFound2 = 0;
       // Flush output frame cache so MM2S/HDMI sees newly written processed pixels.
       Xil_DCacheFlush();
     }

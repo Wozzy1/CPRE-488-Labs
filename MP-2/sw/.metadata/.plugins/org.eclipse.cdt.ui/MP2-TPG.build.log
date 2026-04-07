@@ -1,4 +1,4 @@
-19:17:43 **** Incremental Build of configuration Debug for project MP2-TPG ****
+16:35:21 **** Incremental Build of configuration Debug for project MP2-TPG ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
@@ -20,31 +20,51 @@ C:/Users/cihem/CPRE-488-Labs/MP-2/sw/TPG/export/TPG/sw/TPG/standalone_domain/bsp
    65 | #pragma message ("For the sleep routines, Global timer is being used")
       |                                                                      ^
 ../src/camera_app.cc: In function 'void capture_current_frame_to_slot(int)':
-../src/camera_app.cc:354:28: warning: comparison of integer expressions of different signedness: 'int' and 'unsigned int' [-Wsign-compare]
-  354 |   if (rd_idx < 0 || rd_idx >= XPAR_AXIVDMA_0_NUM_FSTORES) {
+../src/camera_app.cc:361:28: warning: comparison of integer expressions of different signedness: 'int' and 'unsigned int' [-Wsign-compare]
+  361 |   if (rd_idx < 0 || rd_idx >= XPAR_AXIVDMA_0_NUM_FSTORES) {
 ../src/camera_app.cc: In function 'int latest_completed_write_frame_index()':
-../src/camera_app.cc:365:28: warning: comparison of integer expressions of different signedness: 'int' and 'unsigned int' [-Wsign-compare]
-  365 |   if (wr_idx < 0 || wr_idx >= XPAR_AXIVDMA_0_NUM_FSTORES) {
+../src/camera_app.cc:372:28: warning: comparison of integer expressions of different signedness: 'int' and 'unsigned int' [-Wsign-compare]
+  372 |   if (wr_idx < 0 || wr_idx >= XPAR_AXIVDMA_0_NUM_FSTORES) {
 ../src/camera_app.cc: In function 'void render_zoomed_live_frame()':
-../src/camera_app.cc:411:28: warning: comparison of integer expressions of different signedness: 'int' and 'unsigned int' [-Wsign-compare]
-  411 |   if (rd_idx < 0 || rd_idx >= XPAR_AXIVDMA_0_NUM_FSTORES) {
+../src/camera_app.cc:545:28: warning: comparison of integer expressions of different signedness: 'int' and 'unsigned int' [-Wsign-compare]
+  545 |   if (rd_idx < 0 || rd_idx >= XPAR_AXIVDMA_0_NUM_FSTORES) {
+../src/camera_app.cc: In function 'void camera_interface_step()':
+../src/camera_app.cc:591:14: warning: variable 'prev_sw7' set but not used [-Wunused-but-set-variable]
+  591 |   static int prev_sw7 = 0;
+      |              ^~~~~~~~
 ../src/camera_app.cc: In function 'void camera_loop()':
-../src/camera_app.cc:932:7: warning: variable 'prev_sw2' set but not used [-Wunused-but-set-variable]
-  932 |   int prev_sw2 = 0;
+../src/camera_app.cc:1932:7: warning: variable 'prev_sw2' set but not used [-Wunused-but-set-variable]
+ 1932 |   int prev_sw2 = 0;
       |       ^~~~~~~~
+../src/camera_app.cc: At global scope:
+../src/camera_app.cc:1723:13: warning: 'bool detect_red_target_cross_from_yuv_frame(volatile Xuint16*, int, int, TargetCross&)' defined but not used [-Wunused-function]
+ 1723 | static bool detect_red_target_cross_from_yuv_frame(volatile Xuint16 *src, int width, int height, TargetCross &cross)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/camera_app.cc:1590:13: warning: 'bool detect_red_target_box_from_yuv_frame(volatile Xuint16*, int, int, TargetBox&)' defined but not used [-Wunused-function]
+ 1590 | static bool detect_red_target_box_from_yuv_frame(volatile Xuint16 *src, int width, int height, TargetBox &box)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/camera_app.cc:1192:13: warning: 'bool detect_red_target_box(volatile Xuint16*, int, int, BayerPattern, bool, const PageBox&, TargetBox&)' defined but not used [-Wunused-function]
+ 1192 | static bool detect_red_target_box(volatile Xuint16 *pS2MM_Mem, int width, int height,
+      |             ^~~~~~~~~~~~~~~~~~~~~
+../src/camera_app.cc:1149:13: warning: 'bool detect_white_page_box(volatile Xuint16*, int, int, BayerPattern, bool, PageBox&)' defined but not used [-Wunused-function]
+ 1149 | static bool detect_white_page_box(volatile Xuint16 *pS2MM_Mem, int width, int height,
+      |             ^~~~~~~~~~~~~~~~~~~~~
+../src/camera_app.cc:294:13: warning: 'bool switch_display_to_sw()' defined but not used [-Wunused-function]
+  294 | static bool switch_display_to_sw(void)
+      |             ^~~~~~~~~~~~~~~~~~~~
 'Finished building: ../src/camera_app.cc'
 ' '
 'Building target: MP2-TPG.elf'
 'Invoking: ARM v7 g++ linker'
-arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/cihem/CPRE-488-Labs/MP-2/sw/TPG/export/TPG/sw/TPG/standalone_domain/bsplib/lib -o "MP2-TPG.elf"  ./src/verbose/verbose.o  ./src/uart/uart_ps.o  ./src/platform/platform.o  ./src/hdmi/hdmi_config.o  ./src/camera_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/cihem/CPRE-488-Labs/MP-2/sw/TPG/export/TPG/sw/TPG/standalone_domain/bsplib/lib -o "MP2-TPG.elf"  ./src/verbose/verbose.o  ./src/uart/uart_ps.o  ./src/platform/platform.o  ./src/hdmi/hdmi_config.o  ./src/camera_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
 'Finished building target: MP2-TPG.elf'
 ' '
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size MP2-TPG.elf  |tee "MP2-TPG.elf.size"
    text	   data	    bss	    dec	    hex	filename
- 606955	   4392	 308304	 919651	  e0863	MP2-TPG.elf
+ 648581	   4436	 323088	 976105	  ee4e9	MP2-TPG.elf
 'Finished building: MP2-TPG.elf.size'
 ' '
 
-19:17:44 Build Finished (took 1s.356ms)
+16:35:23 Build Finished (took 1s.380ms)
 

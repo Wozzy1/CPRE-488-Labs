@@ -1,10 +1,131 @@
-19:55:07 **** Incremental Build of configuration Debug for project cannon-camera ****
+18:29:49 **** Build of configuration Debug for project cannon-camera ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
 ' '
 make --no-print-directory main-build
-make[1]: Nothing to be done for 'main-build'.
+'Building file: ../src/camera_app.cc'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -c -Os -g0 -fno-exceptions -fno-rtti -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -fmessage-length=0 -MT"src/camera_app.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/cihem/CPRE-488-Labs/MP-2/sw/TPG/export/TPG/sw/TPG/standalone_domain/bspinclude/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.o" -o "src/camera_app.o" "../src/camera_app.cc"
+'Finished building: ../src/camera_app.cc'
+' '
+'Building file: ../src/fsbl_handoff.S'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -c -Os -g0 -fno-exceptions -fno-rtti -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -fmessage-length=0 -MT"src/fsbl_handoff.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/cihem/CPRE-488-Labs/MP-2/sw/TPG/export/TPG/sw/TPG/standalone_domain/bspinclude/include -MMD -MP -MF"src/fsbl_handoff.d" -MT"src/fsbl_handoff.o" -o "src/fsbl_handoff.o" "../src/fsbl_handoff.S"
+'Finished building: ../src/fsbl_handoff.S'
+' '
+'Building file: ../src/fsbl_hooks.c'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -c -Os -g0 -fno-exceptions -fno-rtti -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -fmessage-length=0 -MT"src/fsbl_hooks.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/cihem/CPRE-488-Labs/MP-2/sw/TPG/export/TPG/sw/TPG/standalone_domain/bspinclude/include -MMD -MP -MF"src/fsbl_hooks.d" -MT"src/fsbl_hooks.o" -o "src/fsbl_hooks.o" "../src/fsbl_hooks.c"
+'Finished building: ../src/fsbl_hooks.c'
+' '
+'Building file: ../src/image_mover.c'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -c -Os -g0 -fno-exceptions -fno-rtti -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -fmessage-length=0 -MT"src/image_mover.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/cihem/CPRE-488-Labs/MP-2/sw/TPG/export/TPG/sw/TPG/standalone_domain/bspinclude/include -MMD -MP -MF"src/image_mover.d" -MT"src/image_mover.o" -o "src/image_mover.o" "../src/image_mover.c"
+'Finished building: ../src/image_mover.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -c -Os -g0 -fno-exceptions -fno-rtti -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/cihem/CPRE-488-Labs/MP-2/sw/TPG/export/TPG/sw/TPG/standalone_domain/bspinclude/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:112:
+C:/Users/cihem/CPRE-488-Labs/MP-2/sw/TPG/export/TPG/sw/TPG/standalone_domain/bspinclude/include/xtime_l.h:65:70: note: #pragma message: For the sleep routines, Global timer is being used
+   65 | #pragma message ("For the sleep routines, Global timer is being used")
+      |                                                                      ^
+'Finished building: ../src/main.c'
+' '
+'Building file: ../src/md5.c'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -c -Os -g0 -fno-exceptions -fno-rtti -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -fmessage-length=0 -MT"src/md5.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/cihem/CPRE-488-Labs/MP-2/sw/TPG/export/TPG/sw/TPG/standalone_domain/bspinclude/include -MMD -MP -MF"src/md5.d" -MT"src/md5.o" -o "src/md5.o" "../src/md5.c"
+'Finished building: ../src/md5.c'
+' '
+'Building file: ../src/nand.c'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -c -Os -g0 -fno-exceptions -fno-rtti -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -fmessage-length=0 -MT"src/nand.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/cihem/CPRE-488-Labs/MP-2/sw/TPG/export/TPG/sw/TPG/standalone_domain/bspinclude/include -MMD -MP -MF"src/nand.d" -MT"src/nand.o" -o "src/nand.o" "../src/nand.c"
+'Finished building: ../src/nand.c'
+' '
+'Building file: ../src/nor.c'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -c -Os -g0 -fno-exceptions -fno-rtti -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -fmessage-length=0 -MT"src/nor.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/cihem/CPRE-488-Labs/MP-2/sw/TPG/export/TPG/sw/TPG/standalone_domain/bspinclude/include -MMD -MP -MF"src/nor.d" -MT"src/nor.o" -o "src/nor.o" "../src/nor.c"
+'Finished building: ../src/nor.c'
+' '
+'Building file: ../src/pcap.c'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -c -Os -g0 -fno-exceptions -fno-rtti -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -fmessage-length=0 -MT"src/pcap.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/cihem/CPRE-488-Labs/MP-2/sw/TPG/export/TPG/sw/TPG/standalone_domain/bspinclude/include -MMD -MP -MF"src/pcap.d" -MT"src/pcap.o" -o "src/pcap.o" "../src/pcap.c"
+In file included from ../src/pcap.c:78:
+C:/Users/cihem/CPRE-488-Labs/MP-2/sw/TPG/export/TPG/sw/TPG/standalone_domain/bspinclude/include/xtime_l.h:65:70: note: #pragma message: For the sleep routines, Global timer is being used
+   65 | #pragma message ("For the sleep routines, Global timer is being used")
+      |                                                                      ^
+'Finished building: ../src/pcap.c'
+' '
+'Building file: ../src/ps7_init.c'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -c -Os -g0 -fno-exceptions -fno-rtti -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -fmessage-length=0 -MT"src/ps7_init.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/cihem/CPRE-488-Labs/MP-2/sw/TPG/export/TPG/sw/TPG/standalone_domain/bspinclude/include -MMD -MP -MF"src/ps7_init.d" -MT"src/ps7_init.o" -o "src/ps7_init.o" "../src/ps7_init.c"
+../src/ps7_init.c: In function 'char* getPS7MessageInfo(unsigned int)':
+../src/ps7_init.c:11789:19: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+11789 |   char* err_msg = "";
+      |                   ^~
+../src/ps7_init.c:11791:55: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+11791 |     case PS7_INIT_SUCCESS:                  err_msg = "PS7 initialization successful"; break;
+      |                                                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/ps7_init.c:11792:55: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+11792 |     case PS7_INIT_CORRUPT:                  err_msg = "PS7 init Data Corrupted"; break;
+      |                                                       ^~~~~~~~~~~~~~~~~~~~~~~~~
+../src/ps7_init.c:11793:55: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+11793 |     case PS7_INIT_TIMEOUT:                  err_msg = "PS7 init mask poll timeout"; break;
+      |                                                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/ps7_init.c:11794:55: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+11794 |     case PS7_POLL_FAILED_DDR_INIT:          err_msg = "Mask Poll failed for DDR Init"; break;
+      |                                                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/ps7_init.c:11795:55: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+11795 |     case PS7_POLL_FAILED_DMA:               err_msg = "Mask Poll failed for PLL Init"; break;
+      |                                                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/ps7_init.c:11796:55: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+11796 |     case PS7_POLL_FAILED_PLL:               err_msg = "Mask Poll failed for DMA done bit"; break;
+      |                                                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/ps7_init.c:11797:55: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+11797 |     default:                                err_msg = "Undefined error status"; break;
+      |                                                       ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/ps7_init.c: In function 'int ps7_config(long unsigned int*)':
+../src/ps7_init.c:11908:21: warning: comparison of integer expressions of different signedness: 'volatile long unsigned int' and 'int' [-Wsign-compare]
+11908 |       while ((*addr < delay)) {
+      |               ~~~~~~^~~~~~~
+'Finished building: ../src/ps7_init.c'
+' '
+'Building file: ../src/qspi.c'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -c -Os -g0 -fno-exceptions -fno-rtti -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -fmessage-length=0 -MT"src/qspi.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/cihem/CPRE-488-Labs/MP-2/sw/TPG/export/TPG/sw/TPG/standalone_domain/bspinclude/include -MMD -MP -MF"src/qspi.d" -MT"src/qspi.o" -o "src/qspi.o" "../src/qspi.c"
+'Finished building: ../src/qspi.c'
+' '
+'Building file: ../src/rsa.c'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -c -Os -g0 -fno-exceptions -fno-rtti -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -fmessage-length=0 -MT"src/rsa.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/cihem/CPRE-488-Labs/MP-2/sw/TPG/export/TPG/sw/TPG/standalone_domain/bspinclude/include -MMD -MP -MF"src/rsa.d" -MT"src/rsa.o" -o "src/rsa.o" "../src/rsa.c"
+'Finished building: ../src/rsa.c'
+' '
+'Building file: ../src/sd.c'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -c -Os -g0 -fno-exceptions -fno-rtti -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -fmessage-length=0 -MT"src/sd.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/cihem/CPRE-488-Labs/MP-2/sw/TPG/export/TPG/sw/TPG/standalone_domain/bspinclude/include -MMD -MP -MF"src/sd.d" -MT"src/sd.o" -o "src/sd.o" "../src/sd.c"
+../src/sd.c: In function 'u32 InitSD(const char*)':
+../src/sd.c:80:16: warning: ISO C++ forbids converting a string constant to 'TCHAR*' {aka 'char*'} [-Wwrite-strings]
+   80 |  TCHAR *path = "0:/"; /* Logical drive number is 0 */
+      |                ^~~~~
+'Finished building: ../src/sd.c'
+' '
+'Building file: ../src/syscalls.cpp'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -c -Os -g0 -fno-exceptions -fno-rtti -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -fmessage-length=0 -MT"src/syscalls.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/cihem/CPRE-488-Labs/MP-2/sw/TPG/export/TPG/sw/TPG/standalone_domain/bspinclude/include -MMD -MP -MF"src/syscalls.d" -MT"src/syscalls.o" -o "src/syscalls.o" "../src/syscalls.cpp"
+'Finished building: ../src/syscalls.cpp'
+' '
+'Building target: cannon-camera.elf'
+'Invoking: ARM v7 g++ linker'
+arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -Wl,--gc-sections -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/cihem/CPRE-488-Labs/MP-2/sw/TPG/export/TPG/sw/TPG/standalone_domain/bsplib/lib -o "cannon-camera.elf"  ./src/camera_app.o ./src/fsbl_handoff.o ./src/fsbl_hooks.o ./src/image_mover.o ./src/main.o ./src/md5.o ./src/nand.o ./src/nor.o ./src/pcap.o ./src/ps7_init.o ./src/qspi.o ./src/rsa.o ./src/sd.o ./src/syscalls.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: cannon-camera.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size cannon-camera.elf  |tee "cannon-camera.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  86096	  11184	  73800	 171080	  29c48	cannon-camera.elf
+'Finished building: cannon-camera.elf.size'
+' '
 
-19:55:07 Build Finished (took 267ms)
+18:29:53 Build Finished (took 3s.839ms)
 
